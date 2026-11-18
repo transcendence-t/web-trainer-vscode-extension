@@ -4,8 +4,10 @@
 
 - [x] 补齐中英文 README 与语言切换入口，添加源码构建和安装说明。
 - [x] 配置 GitHub 仓库、问题反馈和主页地址。
-- [ ] 创建公开仓库并推送源码、课程和测试。
-- [ ] 发布 1.2.0 安装包，并核对远程文件、可见性和版本。
+- [x] 创建公开仓库 `q634875942/web-trainer-vscode-extension`，将源码、课程和测试推送到 `main`。
+- [x] 发布 1.2.0 安装包，核对匿名公开访问、中英文 README、1536 份文件及安装包的 SHA-256。
+
+仓库地址为 https://github.com/q634875942/web-trainer-vscode-extension，下载版本见 Releases。使用仓库本地的 GitHub noreply 提交邮箱，安装包已包含双语 README 与仓库信息。`npm run package` 及其类型检查、构建流程通过。
 
 ## 1.2.0 核心课程补全
 
