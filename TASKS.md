@@ -4,8 +4,9 @@
 
 - [x] Make English the default repository README and link to the Simplified Chinese guide.
 - [x] Verify both editions with 269 automated tests each. Each course has 240 lessons and 1,106 assessment rules.
-- [ ] Verify both VSIX files in desktop VS Code, including recovery of answers and progress from the earlier Chinese edition.
-- [ ] Publish both VSIX files to the same GitHub release.
+- [x] Run the full Chinese desktop regression, including recovery of answers and progress from 1.0.0.
+- [x] Verify English installation, representative lessons, offline Fetch, restart recovery, and teacher import and export in desktop VS Code. The extended desktop automation encountered control and editor tab locator timeouts.
+- [x] Publish both VSIX files to the same release and verify their SHA-256 digests against the local packages. [Web Trainer 1.3.0 release](https://github.com/q634875942/web-trainer-vscode-extension/releases/tag/v1.3.0)
 
 ## 1.2.0 Public GitHub release
 
