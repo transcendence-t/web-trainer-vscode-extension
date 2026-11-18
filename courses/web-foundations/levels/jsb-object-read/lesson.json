@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "读取场地空位数",
+  "goal": "用点号读取对象属性，区分已记录的数字 0 和缺少属性。",
+  "summary": "场地预约数据有时没有提供空位数。空位数为 0 表示已满，缺少该字段表示当前未知。",
+  "tasks": [
+    "完成 readFreeSeats(room)，读取场地对象的 freeSeats 属性。",
+    "提供了 freeSeats 时直接返回这个数字，包括 0。没有提供时返回 null。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const sensor = { zone: '冷藏柜', temperature: 0 };\nconst current = sensor.temperature;      // 0\nconst previous = sensor.lastTemperature; // undefined",
+    "note": "属性名写在点号后面。缺少属性时读到 undefined。已记录的 0 仍是一个有效数字。"
+  },
+  "hint": "用 || 提供默认值也会替换掉数字 0。可以先判断 freeSeats 是否等于 undefined。"
+}

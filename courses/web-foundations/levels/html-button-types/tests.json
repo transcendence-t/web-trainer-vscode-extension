@@ -1,0 +1,40 @@
+[
+  {
+    "label": "保留保存按钮的提交类型",
+    "expect": {
+      "type": "property",
+      "selector": "button#send",
+      "name": "type",
+      "value": "submit"
+    }
+  },
+  {
+    "label": "恢复按钮的类型为 reset",
+    "expect": {
+      "type": "property",
+      "selector": "button#restore",
+      "name": "type",
+      "value": "reset"
+    }
+  },
+  {
+    "label": "编辑后点击恢复得到预填的名称",
+    "expect": {
+      "type": "property",
+      "selector": "#alias",
+      "name": "value",
+      "value": "模型 A"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#alias",
+        "value": "模型 B"
+      },
+      {
+        "type": "click",
+        "selector": "#restore"
+      }
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "label": "文本输入关联相同 ID 的建议清单",
+    "expect": {
+      "type": "exists",
+      "selector": "input#building-input[type=\"text\"][list=\"building-options\"] ~ datalist#building-options"
+    }
+  },
+  {
+    "label": "候选值共三项",
+    "expect": {
+      "type": "count",
+      "selector": "#building-options option",
+      "value": 3
+    }
+  },
+  {
+    "label": "候选包含 笃行楼",
+    "expect": {
+      "type": "exists",
+      "selector": "datalist#building-options > option[value=\"笃行楼\"]"
+    }
+  },
+  {
+    "label": "候选包含 明德楼",
+    "expect": {
+      "type": "exists",
+      "selector": "datalist#building-options > option[value=\"明德楼\"]"
+    }
+  },
+  {
+    "label": "候选包含 求知楼",
+    "expect": {
+      "type": "exists",
+      "selector": "datalist#building-options > option[value=\"求知楼\"]"
+    }
+  }
+]

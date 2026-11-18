@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "让输入框填满剩余空间",
+  "goal": "在馆藏检索栏里，让输入框占据剩余宽度，查询按钮保持固定宽度。",
+  "summary": "Flexbox 先考虑各项的初始尺寸，再按 flex-grow 分配剩余空间。某个项目的值为 0 时，它不会分到多余的空间。",
+  "tasks": [
+    "把关键词输入框 #book-query 的 flex-grow 设置为 1。",
+    "让输入框随窗口变宽而增宽，查询按钮维持 80px，原有的 12px 间距继续生效。"
+  ],
+  "hint": "在要变宽的项目上写 flex-grow。留意查询按钮已有的固定尺寸设置。",
+  "example": {
+    "language": "css",
+    "code": ".lesson-meta {\n  display: flex;\n  gap: 10px;\n}\n\n.lesson-name {\n  flex-grow: 1;\n}",
+    "note": "课程条目中，课程名称占据多余的宽度，右边只标出课时数。"
+  }
+}

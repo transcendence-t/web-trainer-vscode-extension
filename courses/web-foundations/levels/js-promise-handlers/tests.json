@@ -1,0 +1,48 @@
+[
+  {
+    "label": "成功后展示窗口",
+    "expect": {
+      "type": "text",
+      "selector": "#desk",
+      "value": "请到 窗口 2"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#ready"
+      }
+    ]
+  },
+  {
+    "label": "失败时展示原因",
+    "expect": {
+      "type": "text",
+      "selector": "#desk",
+      "value": "暂时无法分配"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#busy"
+      }
+    ]
+  },
+  {
+    "label": "可以在显示错误之后重试",
+    "expect": {
+      "type": "text",
+      "selector": "#desk",
+      "value": "请到 窗口 2"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#busy"
+      },
+      {
+        "type": "click",
+        "selector": "#ready"
+      }
+    ]
+  }
+]

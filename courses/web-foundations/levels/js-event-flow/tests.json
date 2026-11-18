@@ -1,0 +1,52 @@
+[
+  {
+    "label": "按钮点击按三阶段顺序输出",
+    "expect": {
+      "type": "text",
+      "selector": "#trace",
+      "value": "外层捕获 → 按钮 → 外层冒泡"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#tap"
+      }
+    ]
+  },
+  {
+    "label": "只点击外层时没有按钮阶段",
+    "expect": {
+      "type": "text",
+      "selector": "#trace",
+      "value": "外层捕获 → 外层冒泡"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#pad"
+      }
+    ]
+  },
+  {
+    "label": "重复点击独立记录",
+    "expect": {
+      "type": "text",
+      "selector": "#trace",
+      "value": "外层捕获 → 按钮 → 外层冒泡"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#pad"
+      },
+      {
+        "type": "click",
+        "selector": "#tap"
+      },
+      {
+        "type": "click",
+        "selector": "#tap"
+      }
+    ]
+  }
+]

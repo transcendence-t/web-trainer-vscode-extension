@@ -1,0 +1,56 @@
+[
+  {
+    "label": "概况卡片使用 overview 区域",
+    "expect": {
+      "type": "style",
+      "selector": ".show-overview",
+      "property": "grid-area",
+      "value": "overview"
+    }
+  },
+  {
+    "label": "舞台卡片使用 stage 区域",
+    "expect": {
+      "type": "style",
+      "selector": ".stage-crew",
+      "property": "grid-area",
+      "value": "stage"
+    }
+  },
+  {
+    "label": "检票卡片使用 tickets 区域",
+    "expect": {
+      "type": "style",
+      "selector": ".front-desk",
+      "property": "grid-area",
+      "value": "tickets"
+    }
+  },
+  {
+    "label": "概况卡片占满第一行",
+    "expect": {
+      "type": "layout",
+      "selector": ".show-overview",
+      "relativeTo": ".show-board",
+      "relation": "equal-width"
+    }
+  },
+  {
+    "label": "舞台卡片位于概况下方",
+    "expect": {
+      "type": "layout",
+      "selector": ".stage-crew",
+      "relativeTo": ".show-overview",
+      "relation": "below"
+    }
+  },
+  {
+    "label": "检票卡片位于舞台卡片右侧",
+    "expect": {
+      "type": "layout",
+      "selector": ".front-desk",
+      "relativeTo": ".stage-crew",
+      "relation": "right-of"
+    }
+  }
+]

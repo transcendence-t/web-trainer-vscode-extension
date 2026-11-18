@@ -1,0 +1,16 @@
+{
+  "focus": "index.html",
+  "title": "为演示视频打开播放控件和字幕",
+  "goal": "通过 video 和 WebVTT track 让操作演示支持手动播放与无声观看。",
+  "summary": "设备操作演示包含短提示音。素材与一条 WebVTT 字幕已经准备好，用视频属性和 track 声明把它们交给浏览器。",
+  "tasks": [
+    "给已有 video 添加 controls，保留现成的 source 和 track 地址。",
+    "让 track 使用 kind=\"captions\"、srclang=\"zh\"、label=\"简体中文\"，通过 default 默认启用。"
+  ],
+  "example": {
+    "language": "html",
+    "code": "<video controls src=\"opening.webm\">\n  <track src=\"opening-zh.vtt\" kind=\"captions\" srclang=\"zh\" label=\"简体中文\" default>\n</video>",
+    "note": "captions 可记录对话和有意义的声音。vtt 文件中每条字幕都规定开始和结束时间。"
+  },
+  "hint": "default 写在 track 上，controls 写在 video 上。保留跨域属性，以便浏览器读取本题内嵌的字幕。"
+}

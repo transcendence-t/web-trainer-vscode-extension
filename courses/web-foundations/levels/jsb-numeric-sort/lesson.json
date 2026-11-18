@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "按数字大小排序并保留旧顺序",
+  "goal": "给 sort 或 toSorted 提供数值比较函数，并避免修改输入。",
+  "summary": "测量值需要从小到大展示，同一份原始记录仍应保留采集顺序。",
+  "tasks": [
+    "完成 sortReadings(readings)，返回升序数组，不改动输入。",
+    "按数值比较，保留相同的数值与负数。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const raw = [30, 4, 12];\nconst sorted = raw.toSorted((a, b) => a - b);\n// sorted 为 [4, 12, 30]",
+    "note": "不传比较函数会按字符串次序排序。toSorted 返回新数组，也可以复制后再使用 sort。"
+  },
+  "hint": "比较函数返回 a - b；若用 sort，先复制数组。"
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "label": "状态卡采用新底色",
+    "expect": {
+      "type": "style",
+      "selector": ".status",
+      "property": "background-color",
+      "value": "rgb(230, 244, 238)"
+    }
+  },
+  {
+    "label": "旧规则的内边距仍生效",
+    "expect": {
+      "type": "style",
+      "selector": ".status",
+      "property": "padding-top",
+      "value": "12px"
+    }
+  },
+  {
+    "label": "其他段落没有状态底色",
+    "expect": {
+      "type": "style",
+      "selector": ".note",
+      "property": "background-color",
+      "value": "rgba(0, 0, 0, 0)"
+    }
+  }
+]

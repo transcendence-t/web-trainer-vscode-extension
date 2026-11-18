@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "按重量选择包装标签",
+  "goal": "用 if 处理达到重量门槛的包裹。",
+  "summary": "if 的条件为真时会执行大括号中的语句。分支执行 return 后，函数立即结束。其他包裹继续走到函数末尾的 return。",
+  "tasks": [
+    "补全 packingLabel(weightKg)，参数是非负的包裹重量，单位为千克。",
+    "如果重量达到 10 千克，返回字符串「加固包装」。低于 10 千克时返回「普通包装」。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "function printNotice(pages) {\n  if (pages > 20) {\n    return '请分批打印';\n  }\n  return '直接打印';\n}",
+    "note": "打印服务在页数超过 20 时给出分批提醒。刚好 20 页会走到最后一行的 return。"
+  },
+  "hint": "把 10 代入条件试一下。题目说达到 10 千克就贴加固标签，比较符号要包含等于。"
+}

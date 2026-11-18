@@ -1,0 +1,54 @@
+[
+  {
+    "label": "两个选项都属于 activity 字段",
+    "expect": {
+      "type": "count",
+      "selector": "input[type=\"checkbox\"][name=\"activity\"]",
+      "value": 2
+    }
+  },
+  {
+    "label": "共读的提交值正确",
+    "expect": {
+      "type": "attribute",
+      "selector": "#reading",
+      "name": "value",
+      "value": "reading"
+    }
+  },
+  {
+    "label": "工作坊的提交值正确",
+    "expect": {
+      "type": "attribute",
+      "selector": "#repair",
+      "name": "value",
+      "value": "repair"
+    }
+  },
+  {
+    "label": "两个选项初始均未勾选",
+    "expect": {
+      "type": "count",
+      "selector": "fieldset input:checked",
+      "value": 0
+    }
+  },
+  {
+    "label": "两次点击后可同时选中",
+    "expect": {
+      "type": "count",
+      "selector": "fieldset input:checked",
+      "value": 2
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#reading"
+      },
+      {
+        "type": "click",
+        "selector": "#repair"
+      }
+    ]
+  }
+]

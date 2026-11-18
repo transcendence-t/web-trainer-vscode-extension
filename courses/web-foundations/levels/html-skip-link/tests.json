@@ -1,0 +1,39 @@
+[
+  {
+    "label": "入口位于页眉之前",
+    "expect": {
+      "type": "exists",
+      "selector": "body > a#skip:first-child + header"
+    }
+  },
+  {
+    "label": "跳过链接文字清楚",
+    "expect": {
+      "type": "text",
+      "selector": "a#skip",
+      "value": "跳到主要内容"
+    }
+  },
+  {
+    "label": "正文标记为焦点目标",
+    "expect": {
+      "type": "attribute",
+      "selector": "main#main-content",
+      "name": "tabindex",
+      "value": "-1"
+    }
+  },
+  {
+    "label": "点击后定位到正文",
+    "expect": {
+      "type": "exists",
+      "selector": "main#main-content:target"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#skip"
+      }
+    ]
+  }
+]

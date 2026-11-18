@@ -1,0 +1,47 @@
+[
+  {
+    "label": "移动最后一组",
+    "expect": {
+      "type": "function",
+      "name": "rotateLast",
+      "args": [
+        [
+          "一组",
+          "二组",
+          "三组"
+        ]
+      ],
+      "value": [
+        "三组",
+        "一组",
+        "二组"
+      ]
+    }
+  },
+  {
+    "label": "保留单项",
+    "expect": {
+      "type": "function",
+      "name": "rotateLast",
+      "args": [
+        [
+          "A"
+        ]
+      ],
+      "value": [
+        "A"
+      ]
+    }
+  },
+  {
+    "label": "空队列不插入 undefined",
+    "expect": {
+      "type": "function",
+      "name": "rotateLast",
+      "args": [
+        []
+      ],
+      "value": []
+    }
+  }
+]

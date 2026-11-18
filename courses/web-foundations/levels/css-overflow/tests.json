@@ -1,0 +1,35 @@
+[
+  {
+    "label": "记录区域保持指定高度",
+    "expect": {
+      "type": "style",
+      "selector": ".history",
+      "property": "height",
+      "value": "124px"
+    }
+  },
+  {
+    "label": "内容超出时允许垂直滚动",
+    "expect": {
+      "type": "style",
+      "selector": ".history",
+      "property": "overflow-y",
+      "value": "auto"
+    }
+  },
+  {
+    "label": "点击链接后最后一条记录进入框内",
+    "expect": {
+      "type": "layout",
+      "selector": "#last-record",
+      "relativeTo": ".history",
+      "relation": "inside"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#jump-last-record"
+      }
+    ]
+  }
+]

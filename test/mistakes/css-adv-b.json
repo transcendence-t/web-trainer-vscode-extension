@@ -1,0 +1,32 @@
+{
+  "css-grid": {
+    "name": "给列间距写了另一个数值",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  padding: 24px 16px;\n  min-height: 100vh;\n  font: 16px/1.5 system-ui, sans-serif;\n  color: #243447;\n  background: #edf5f2;\n}\n.sheet {\n  max-width: 420px;\n  margin: 0 auto;\n  padding: 22px;\n  border: 1px solid #cddfd8;\n  border-radius: 14px;\n  background: #fff;\n}\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.25; }\nh2 { font-size: 1.125rem; }\np, ul, figure { margin: .6em 0; }\nbutton, input { font: inherit; }\nbutton { cursor: pointer; }\na { color: #125a46; }\n.gallery { width: min(260px, 100%); }\n.gallery article {\n  padding: 12px;\n  border-radius: 8px;\n  background: #e2f1eb;\n}\n\n.gallery {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  gap: 12px 6px;\n}\n"
+    }
+  },
+  "css-grid-span": {
+    "name": "让公告只占一列",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.card {\n  padding: 12px;\n  border-radius: 8px;\n  background: #eaf4f0;\n}\n.card h2 { margin: 0 0 .35em; font-size: 1.05rem; }\n.card p { margin: 0; }\n\n.route-board {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 12px;\n}\n.route-notice { background: #fff1cf; }\n\n/* 在下面编写本关样式。 */\n\n.route-notice {\n  grid-column: span 1;\n}\n"
+    }
+  },
+  "css-grid-area": {
+    "name": "交换第二行的两个区域",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.card {\n  padding: 12px;\n  border-radius: 8px;\n  background: #eaf4f0;\n}\n.card h2 { margin: 0 0 .35em; font-size: 1.05rem; }\n.card p { margin: 0; }\n\n.show-board {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 12px;\n}\n.show-overview { background: #dceee8; }\n\n/* 在下面编写本关样式。 */\n\n.show-board {\n  grid-template-areas:\n    \"overview overview\"\n    \"tickets stage\";\n}\n\n.show-overview { grid-area: overview; }\n.stage-crew { grid-area: stage; }\n.front-desk { grid-area: tickets; }\n"
+    }
+  },
+  "css-grid-fluid": {
+    "name": "用 auto-fill 保留了宽屏空列",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.card {\n  padding: 12px;\n  border-radius: 8px;\n  background: #eaf4f0;\n}\n.card h2 { margin: 0 0 .35em; font-size: 1.05rem; }\n.card p { margin: 0; }\n\n.stations {\n  display: grid;\n  gap: 12px;\n}\n\n/* 在下面编写本关样式。 */\n\n.stations {\n  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));\n}\n"
+    }
+  },
+  "css-sticky": {
+    "name": "设置 sticky 后没给出吸顶距离",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.log-panel {\n  height: 220px;\n  overflow-y: auto;\n  border: 1px solid #bad6cb;\n  border-radius: 8px;\n}\n.log-toolbar {\n  display: grid;\n  grid-template-columns: 1fr auto;\n  align-items: center;\n  gap: 8px;\n  padding: 10px 12px;\n  background: #e5f2ec;\n}\n.log-toolbar h2 { margin: 0; font-size: 1rem; }\n.log-entries { margin: 0; padding: 0 12px 0 2.5em; }\n.log-entries li { padding: 12px 0; border-bottom: 1px solid #dcebe5; }\n\n/* 在下面编写本关样式。 */\n\n.log-toolbar {\n  position: sticky;\n}\n"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "label": "通知上方留出 24px 外边距",
+    "expect": {
+      "type": "style",
+      "selector": ".stop-note",
+      "property": "margin-top",
+      "value": "24px"
+    }
+  },
+  {
+    "label": "通知原有内边距为 12px",
+    "expect": {
+      "type": "style",
+      "selector": ".stop-note",
+      "property": "padding",
+      "value": "12px"
+    }
+  },
+  {
+    "label": "通知块在卡片内水平居中",
+    "expect": {
+      "type": "layout",
+      "selector": ".stop-note",
+      "relativeTo": ".sheet",
+      "relation": "center-x"
+    }
+  }
+]

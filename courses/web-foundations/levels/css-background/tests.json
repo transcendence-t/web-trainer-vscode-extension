@@ -1,0 +1,38 @@
+[
+  {
+    "label": "东段关闭公告使用浅黄底",
+    "expect": {
+      "type": "style",
+      "selector": ".status:nth-of-type(1)",
+      "property": "background-color",
+      "value": "rgb(255, 241, 194)"
+    }
+  },
+  {
+    "label": "木栈道关闭公告使用浅黄底",
+    "expect": {
+      "type": "style",
+      "selector": ".status:nth-of-type(3)",
+      "property": "background-color",
+      "value": "rgb(255, 241, 194)"
+    }
+  },
+  {
+    "label": "开放公告保持透明背景",
+    "expect": {
+      "type": "style",
+      "selector": ".status:nth-of-type(2)",
+      "property": "background-color",
+      "value": "rgba(0, 0, 0, 0)"
+    }
+  },
+  {
+    "label": "关闭公告保留原文字颜色",
+    "expect": {
+      "type": "style",
+      "selector": ".closure",
+      "property": "color",
+      "value": "rgb(36, 52, 71)"
+    }
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "name": "web-trainer",
+  "displayName": "网页闯关",
+  "description": "在 VS Code 中离线学习 HTML、CSS 和 JavaScript。",
+  "publisher": "webclassroom",
+  "version": "1.2.0",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/q634875942/web-trainer-vscode-extension.git"
+  },
+  "homepage": "https://github.com/q634875942/web-trainer-vscode-extension#readme",
+  "bugs": { "url": "https://github.com/q634875942/web-trainer-vscode-extension/issues" },
+  "engines": { "vscode": "^1.96.0" },
+  "categories": ["Education"],
+  "keywords": ["html", "css", "javascript", "education", "离线", "闯关"],
+  "main": "./out/extension.js",
+  "extensionKind": ["ui"],
+  "capabilities": {
+    "untrustedWorkspaces": { "supported": true },
+    "virtualWorkspaces": { "supported": true }
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node --test .test-dist/domain.test.cjs .test-dist/browser.test.cjs",
+    "test:vscode": "node test/vscode.mjs",
+    "package": "vsce package --no-dependencies --allow-missing-repository",
+    "vscode:prepublish": "npm run typecheck && npm run build"
+  },
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [{ "id": "webTrainer", "title": "WEB闯关练习", "icon": "media/activity.svg" }]
+    },
+    "views": {
+      "webTrainer": [{ "id": "webTrainer.courses", "name": "课程关卡" }]
+    },
+    "commands": [
+      { "command": "webTrainer.start", "category": "网页闯关", "title": "开始或继续学习", "icon": "$(play)" },
+      { "command": "webTrainer.check", "category": "网页闯关", "title": "检查答案" },
+      { "command": "webTrainer.importCourse", "category": "网页闯关", "title": "导入课程", "icon": "$(folder-opened)" },
+      { "command": "webTrainer.exportCourse", "category": "网页闯关", "title": "导出课程" },
+      { "command": "webTrainer.revealFiles", "category": "网页闯关", "title": "查看当前练习文件夹" }
+    ],
+    "menus": {
+      "view/title": [
+        { "command": "webTrainer.start", "when": "view == webTrainer.courses", "group": "navigation@1" },
+        { "command": "webTrainer.importCourse", "when": "view == webTrainer.courses", "group": "navigation@2" },
+        { "command": "webTrainer.exportCourse", "when": "view == webTrainer.courses", "group": "2_courses@1" }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@types/node": "22.19.11",
+    "@types/vscode": "1.96.0",
+    "@vscode/vsce": "4.1.1",
+    "acorn": "8.19.0",
+    "acorn-walk": "8.3.5",
+    "debounce": "2.2.0",
+    "esbuild": "0.28.2",
+    "parse5": "8.1.1",
+    "playwright-core": "1.65.1",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,113 @@
+[
+  {
+    "label": "首次打开显示全部四项",
+    "expect": {
+      "type": "text",
+      "selector": "#count",
+      "value": "共 4 项"
+    }
+  },
+  {
+    "label": "首次按用时升序",
+    "expect": {
+      "type": "text",
+      "selector": "#equipment li:first-child",
+      "value": "Tripod Kit · 10 分钟"
+    }
+  },
+  {
+    "label": "文字搜索保留三个 Kit",
+    "expect": {
+      "type": "count",
+      "selector": "#equipment li",
+      "value": 3
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#query",
+        "value": " KIT "
+      }
+    ]
+  },
+  {
+    "label": "同时搜索 Kit 和摄影室只出一项",
+    "expect": {
+      "type": "text",
+      "selector": "#count",
+      "value": "共 1 项"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#query",
+        "value": "kit"
+      },
+      {
+        "type": "input",
+        "selector": "#room",
+        "value": "photo"
+      }
+    ]
+  },
+  {
+    "label": "叠加设计室筛选和降序",
+    "expect": {
+      "type": "text",
+      "selector": "#equipment li:first-child",
+      "value": "Laser Kit · 35 分钟"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#query",
+        "value": "kit"
+      },
+      {
+        "type": "input",
+        "selector": "#room",
+        "value": "design"
+      },
+      {
+        "type": "input",
+        "selector": "#order",
+        "value": "desc"
+      }
+    ]
+  },
+  {
+    "label": "空结果清除列表并提示",
+    "expect": {
+      "type": "text",
+      "selector": "#count",
+      "value": "没有匹配器材"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#query",
+        "value": "Recorder"
+      }
+    ]
+  },
+  {
+    "label": "清空搜索从原始数据恢复",
+    "expect": {
+      "type": "count",
+      "selector": "#equipment li",
+      "value": 4
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#query",
+        "value": "Recorder"
+      },
+      {
+        "type": "input",
+        "selector": "#query",
+        "value": ""
+      }
+    ]
+  }
+]

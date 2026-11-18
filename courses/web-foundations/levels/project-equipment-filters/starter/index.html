@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>筛选和排序可借用的工坊器材</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="sheet">
+    <h1>筛选和排序可借用的工坊器材</h1>
+    <p><label for="query">器材名称</label> <input id="query" type="search"></p>
+    <p><label for="room">实训室</label> <select id="room"><option value="all">全部</option><option value="design">设计室</option><option value="photo">摄影室</option></select></p>
+    <p><label for="order">排序</label> <select id="order"><option value="asc">时间从短到长</option><option value="desc">时间从长到短</option></select></p>
+    <p id="count" role="status">等待显示</p>
+    <ul id="equipment"></ul>
+  </main>
+</body>
+</html>

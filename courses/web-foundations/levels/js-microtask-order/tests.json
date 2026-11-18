@@ -1,0 +1,54 @@
+[
+  {
+    "label": "点击前没有启动任务",
+    "expect": {
+      "type": "text",
+      "selector": "#order",
+      "value": "尚未运行"
+    }
+  },
+  {
+    "label": "同步、微任务和计时器严格依次运行",
+    "expect": {
+      "type": "text",
+      "selector": "#order",
+      "value": "同步 → 微任务 → 计时器"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#run"
+      },
+      {
+        "type": "wait",
+        "ms": 80
+      }
+    ]
+  },
+  {
+    "label": "再次点击不会重复累计上一次的步骤",
+    "expect": {
+      "type": "text",
+      "selector": "#order",
+      "value": "同步 → 微任务 → 计时器"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#run"
+      },
+      {
+        "type": "wait",
+        "ms": 70
+      },
+      {
+        "type": "click",
+        "selector": "#run"
+      },
+      {
+        "type": "wait",
+        "ms": 80
+      }
+    ]
+  }
+]

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>等待预约信息并返回可显示的结果</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="sheet">
+    <h1>等待预约信息并返回可显示的结果</h1>
+    <p>试一试 <code>reservationLabel("A-6")</code></p>
+    <p>运行结果 <output id="example-result" aria-live="polite">待填写函数</output></p>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const result = await reservationLabel("A-6");
+        if (result !== undefined) {
+          document.querySelector("#example-result").textContent = JSON.stringify(result);
+        }
+      });
+    </script>
+  </main>
+</body>
+</html>

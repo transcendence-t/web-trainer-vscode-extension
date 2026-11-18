@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "使用 Fetch 加载本地活动清单",
+  "goal": "串联 fetch、Response.ok、Response.json() 与界面渲染。",
+  "summary": "下拉框内置三份 Data URL 数据。fetch 直接读取本地样例，在断网课堂里也能练习一样的解析流程。",
+  "tasks": [
+    "点击 #load 时清空 #events，然后 fetch 当前 #dataset 的 value。检查 response.ok，再 await response.json()。",
+    "用返回的 activities 数组渲染 li。成功显示「活动已更新」，空数组显示「暂无活动」，读取或解析失败显示「数据无法读取」。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const response = await fetch(url);\nif (!response.ok) throw new Error('读取失败');\nconst data = await response.json();",
+    "note": "fetch 成功返回 Response。json() 还需独立等待，解析错误可以交给同一个 catch。"
+  },
+  "hint": "用 try…catch 包住请求、状态检查和 JSON 解析；每次加载前清空旧列表。"
+}

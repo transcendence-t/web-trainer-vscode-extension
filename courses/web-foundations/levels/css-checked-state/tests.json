@@ -1,0 +1,41 @@
+[
+  {
+    "label": "初始未选中的工作灯保持普通文字",
+    "expect": {
+      "type": "style",
+      "selector": "#lamp + span",
+      "property": "font-weight",
+      "value": "400"
+    }
+  },
+  {
+    "label": "点击后加粗文字",
+    "expect": {
+      "type": "style",
+      "selector": "#lamp + span",
+      "property": "font-weight",
+      "value": "700"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#lamp"
+      }
+    ]
+  },
+  {
+    "label": "取消默认选择后恢复普通字重",
+    "expect": {
+      "type": "style",
+      "selector": "#gloves + span",
+      "property": "font-weight",
+      "value": "400"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#gloves"
+      }
+    ]
+  }
+]

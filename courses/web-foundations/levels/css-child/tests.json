@@ -1,0 +1,57 @@
+[
+  {
+    "label": "公开讲座目录项有蓝色左边框",
+    "expect": {
+      "type": "style",
+      "selector": "#talks-entry",
+      "property": "border-left",
+      "value": "4px solid rgb(38, 74, 124)"
+    }
+  },
+  {
+    "label": "作品展览目录项有蓝色左边框",
+    "expect": {
+      "type": "style",
+      "selector": "#exhibitions-entry",
+      "property": "border-left",
+      "value": "4px solid rgb(38, 74, 124)"
+    }
+  },
+  {
+    "label": "一级目录项留出 12px 内边距",
+    "expect": {
+      "type": "style",
+      "selector": "#talks-entry",
+      "property": "padding-left",
+      "value": "12px"
+    }
+  },
+  {
+    "label": "另一项也留出 12px 内边距",
+    "expect": {
+      "type": "style",
+      "selector": "#exhibitions-entry",
+      "property": "padding-left",
+      "value": "12px"
+    }
+  },
+  {
+    "label": "嵌套项目的左边框仍为默认样式",
+    "expect": {
+      "type": "style",
+      "selector": "#talk-schedule",
+      "property": "border-left-style",
+      "value": "none"
+    },
+    "hint": "用 > 选择 .agenda 的直接子元素。"
+  },
+  {
+    "label": "另一嵌套项目保留原内边距",
+    "expect": {
+      "type": "style",
+      "selector": "#exhibition-schedule",
+      "property": "padding-left",
+      "value": "0px"
+    }
+  }
+]

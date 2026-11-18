@@ -1,0 +1,67 @@
+[
+  {
+    "label": "累加对象中的重量",
+    "expect": {
+      "type": "function",
+      "name": "totalGrams",
+      "args": [
+        [
+          {
+            "grams": 80
+          },
+          {
+            "grams": 120
+          }
+        ]
+      ],
+      "value": 200
+    }
+  },
+  {
+    "label": "支持单条记录",
+    "expect": {
+      "type": "function",
+      "name": "totalGrams",
+      "args": [
+        [
+          {
+            "grams": 12
+          }
+        ]
+      ],
+      "value": 12
+    }
+  },
+  {
+    "label": "零重量保留为有效项",
+    "expect": {
+      "type": "function",
+      "name": "totalGrams",
+      "args": [
+        [
+          {
+            "grams": 0
+          },
+          {
+            "grams": 7
+          },
+          {
+            "grams": 5
+          }
+        ]
+      ],
+      "value": 12
+    }
+  },
+  {
+    "label": "空列表合计为零",
+    "expect": {
+      "type": "function",
+      "name": "totalGrams",
+      "args": [
+        []
+      ],
+      "value": 0
+    }
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "label": "文件名区域限宽",
+    "expect": {
+      "type": "style",
+      "selector": ".filename",
+      "property": "max-width",
+      "value": "180px"
+    }
+  },
+  {
+    "label": "文字占一行",
+    "expect": {
+      "type": "style",
+      "selector": ".filename",
+      "property": "white-space",
+      "value": "nowrap"
+    }
+  },
+  {
+    "label": "隐藏溢出文字",
+    "expect": {
+      "type": "style",
+      "selector": ".filename",
+      "property": "overflow-x",
+      "value": "hidden"
+    }
+  },
+  {
+    "label": "绘制溢出省略号",
+    "expect": {
+      "type": "style",
+      "selector": ".filename",
+      "property": "text-overflow",
+      "value": "ellipsis"
+    }
+  },
+  {
+    "label": "缩短仅发生在视觉上",
+    "expect": {
+      "type": "property",
+      "selector": ".filename",
+      "name": "textContent",
+      "value": "校园主题展陈列清单与最新物料采购记录.pdf"
+    }
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "把记录时间转换成统一的 UTC 日期",
+  "goal": "使用 Date 与 toISOString 处理带时区的时间。",
+  "summary": "服务日志来自多个时区。归档目录统一用 UTC 的 YYYY-MM-DD 创建。",
+  "tasks": [
+    "完成 archiveDay(timestamp)，输入为带时区的有效 ISO 日期时间。",
+    "返回对应的 UTC 日期字符串，格式 YYYY-MM-DD。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const stamp = new Date('2027-03-10T01:00:00+08:00');\nstamp.toISOString(); // '2027-03-09T17:00:00.000Z'",
+    "note": "Z 表示 UTC，转换后有时会跨过午夜而改变日期。"
+  },
+  "hint": "先 new Date(timestamp)，将其转成 ISO 字符串，再截取前十个字符。"
+}

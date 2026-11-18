@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "实时问候",
+  "summary": "用户打字、粘贴或删除内容时会触发 input 事件。在回调里读取输入框的 value，就能拿到当前文字。",
+  "tasks": [
+    "监听 #student 输入框的 input 事件，读取去掉首尾空格的姓名。",
+    "把 #greeting 改成「你好，姓名！」。姓名为空时显示「你好，同学！」。"
+  ],
+  "hint": "用 field.value.trim() 取得姓名，用 if 或 || 处理空内容。留意全角标点。",
+  "goal": "让问候文字随输入框实时更新，清空时恢复通用问候。",
+  "example": {
+    "language": "javascript",
+    "code": "const teamField = document.querySelector('#team-name');\nconst teamCaption = document.querySelector('#team-caption');\n\nteamField.addEventListener('input', () => {\n  teamCaption.textContent = teamField.value.trim() || '未命名队伍';\n});",
+    "note": "报名页随输入更新队名预览。清空队名后，预览显示「未命名队伍」。"
+  }
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "label": "点击前保留原状态",
+    "expect": {
+      "type": "text",
+      "selector": "#status",
+      "value": "尚未报名"
+    }
+  },
+  {
+    "label": "点击后显示报名成功",
+    "expect": {
+      "type": "text",
+      "selector": "#status",
+      "value": "报名成功"
+    },
+    "hint": "在 click 回调里更新状态。",
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#reserve"
+      }
+    ]
+  }
+]

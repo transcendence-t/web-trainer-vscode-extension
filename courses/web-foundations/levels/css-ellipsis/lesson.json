@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "把长文件名限制为一行并显示省略号",
+  "goal": "组合可用宽度、white-space、overflow 和 text-overflow。",
+  "summary": "展览下载清单宽度固定。长文件名在行尾显示省略号，短文件名保持原样。",
+  "tasks": [
+    "把 .filename 的最大宽度限制为 180px，禁止换行，并隐藏溢出。",
+    "用 text-overflow 显示省略号，保留 HTML 中的完整文件名。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".label {\n  max-width: 12rem;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}",
+    "note": "省略号只在有可用宽度且行内文字溢出时显示。"
+  },
+  "hint": "单写 text-overflow 无法产生省略号；还要防止文本换行并隐藏溢出。"
+}

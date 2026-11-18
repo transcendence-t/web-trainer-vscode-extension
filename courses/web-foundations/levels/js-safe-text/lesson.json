@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "把含标签字符的用户输入当作文本",
+  "goal": "用 textContent 显示原始文本，避免把用户输入解析成 HTML。",
+  "summary": "标签制作工具需要显示学生输入的代码片段。原样保留尖括号、与号和引号。",
+  "tasks": [
+    "监听 #draft 的 input 事件，用用户输入更新 #literal。",
+    "原样显示输入，不创建新的 HTML 元素。输入清空时恢复「等待输入」。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const raw = '<strong>示例</strong>';\noutput.textContent = raw;",
+    "note": "textContent 按文本设置元素内容。innerHTML 会把尖括号内的内容当作标记解析。"
+  },
+  "hint": "读取输入框的 value 后，直接赋值给 #literal 的 textContent。"
+}

@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "读取表单中的单值与多值字段",
+  "goal": "用 FormData 读取成功提交的控件，并用 getAll 取得全部同名值。",
+  "summary": "活动报名可勾选多个场次。提交后在本页生成简短回执，输入内容和浏览位置都保留。",
+  "tasks": [
+    "在 #application 的 submit 监听里阻止默认提交，再用 FormData 读取 visitor 与所有 session。",
+    "修剪姓名首尾空格，将 #receipt 写成「姓名：选项」，多个选项用「、」连接。未勾选时写「未选场次」。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const fields = new FormData(form);\nconst name = fields.get('name');\nconst items = fields.getAll('activity');",
+    "note": "FormData 按控件的 name 取值，同名复选框要使用 getAll。"
+  },
+  "hint": "只有已勾选的复选框进入 FormData。数组为空时显示未选场次。"
+}

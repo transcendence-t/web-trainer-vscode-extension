@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "把单枚标签对齐到网格区域右下角",
+  "goal": "用 justify-self 和 align-self 调整单个 Grid 项。",
+  "summary": "模型展台用网格显示说明和状态。说明保持在上方，状态标签只对齐自己的单元格。",
+  "tasks": [
+    "将 .badge 沿网格行内轴与块轴都对齐到末端。",
+    "不改网格容器的默认对齐，说明的位置保持原样。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".label { place-self: end; }",
+    "note": "place-self 同时设置 align-self 和 justify-self，可以只作用到一个项目。"
+  },
+  "hint": "也可分别写 justify-self: end 与 align-self: end。"
+}

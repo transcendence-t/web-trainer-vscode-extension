@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "让缺省的包数使用预设数量",
+  "goal": "在函数签名中为缺少的参数指定默认值。",
+  "summary": "材料按每包 6 个计。调用方通常领取一包，仍可明确领取零包或更多包。",
+  "tasks": [
+    "完成 supplyUnits(packs)，packs 不传时按 1 包计算。",
+    "返回 packs × 6，显式传入 0 时返回 0。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "function pages(copies = 1) {\n  return 12 * copies;\n}\npages(); // 12",
+    "note": "默认参数只对缺少的参数或 undefined 生效。"
+  },
+  "hint": "在参数列表里写 packs = 1，不要在函数体里用 || 替换参数。"
+}

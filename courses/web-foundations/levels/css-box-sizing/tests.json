@@ -1,0 +1,47 @@
+[
+  {
+    "label": "宽度包含边框和内边距",
+    "expect": {
+      "type": "style",
+      "selector": ".parcel-label",
+      "property": "box-sizing",
+      "value": "border-box"
+    }
+  },
+  {
+    "label": "内边距保持 10px",
+    "expect": {
+      "type": "style",
+      "selector": ".parcel-label",
+      "property": "padding",
+      "value": "10px"
+    }
+  },
+  {
+    "label": "保留原有 2px 实线边框",
+    "expect": {
+      "type": "style",
+      "selector": ".parcel-label",
+      "property": "border",
+      "value": "2px solid rgb(53, 87, 119)"
+    }
+  },
+  {
+    "label": "标签完整落在托盘内",
+    "expect": {
+      "type": "layout",
+      "selector": ".parcel-label",
+      "relativeTo": ".parcel-slot",
+      "relation": "inside"
+    }
+  },
+  {
+    "label": "标签与托盘实际等宽",
+    "expect": {
+      "type": "layout",
+      "selector": ".parcel-label",
+      "relativeTo": ".parcel-slot",
+      "relation": "equal-width"
+    }
+  }
+]

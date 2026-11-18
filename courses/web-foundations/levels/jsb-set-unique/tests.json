@@ -1,0 +1,52 @@
+[
+  {
+    "label": "首次出现顺序保持不变",
+    "expect": {
+      "type": "function",
+      "name": "uniqueCodes",
+      "args": [
+        [
+          "B",
+          "A",
+          "B",
+          "C",
+          "A"
+        ]
+      ],
+      "value": [
+        "B",
+        "A",
+        "C"
+      ]
+    }
+  },
+  {
+    "label": "不同类型是不同编码",
+    "expect": {
+      "type": "function",
+      "name": "uniqueCodes",
+      "args": [
+        [
+          4,
+          "4",
+          4
+        ]
+      ],
+      "value": [
+        4,
+        "4"
+      ]
+    }
+  },
+  {
+    "label": "空列表返回空数组",
+    "expect": {
+      "type": "function",
+      "name": "uniqueCodes",
+      "args": [
+        []
+      ],
+      "value": []
+    }
+  }
+]

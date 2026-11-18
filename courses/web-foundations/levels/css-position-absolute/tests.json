@@ -1,0 +1,47 @@
+[
+  {
+    "label": "卡片提供定位参照",
+    "expect": {
+      "type": "style",
+      "selector": ".branch-card",
+      "property": "position",
+      "value": "relative"
+    }
+  },
+  {
+    "label": "角标使用绝对定位",
+    "expect": {
+      "type": "style",
+      "selector": ".branch-badge",
+      "property": "position",
+      "value": "absolute"
+    }
+  },
+  {
+    "label": "角标距上边 10px",
+    "expect": {
+      "type": "style",
+      "selector": ".branch-badge",
+      "property": "top",
+      "value": "10px"
+    }
+  },
+  {
+    "label": "角标距右边 12px",
+    "expect": {
+      "type": "style",
+      "selector": ".branch-badge",
+      "property": "right",
+      "value": "12px"
+    }
+  },
+  {
+    "label": "角标实际落在分馆卡片内",
+    "expect": {
+      "type": "layout",
+      "selector": ".branch-badge",
+      "relativeTo": ".branch-card",
+      "relation": "inside"
+    }
+  }
+]

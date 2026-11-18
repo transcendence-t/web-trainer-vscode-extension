@@ -1,0 +1,57 @@
+[
+  {
+    "label": "左右空格不会影响有效小数",
+    "expect": {
+      "type": "function",
+      "name": "readAmount",
+      "args": [
+        " -2.75 "
+      ],
+      "value": -2.75
+    }
+  },
+  {
+    "label": "保留零",
+    "expect": {
+      "type": "function",
+      "name": "readAmount",
+      "args": [
+        "0"
+      ],
+      "value": 0
+    }
+  },
+  {
+    "label": "空白无效",
+    "expect": {
+      "type": "function",
+      "name": "readAmount",
+      "args": [
+        " \t "
+      ],
+      "value": null
+    }
+  },
+  {
+    "label": "拒绝仅前部是数字的字符串",
+    "expect": {
+      "type": "function",
+      "name": "readAmount",
+      "args": [
+        "18kg"
+      ],
+      "value": null
+    }
+  },
+  {
+    "label": "Infinity 无效",
+    "expect": {
+      "type": "function",
+      "name": "readAmount",
+      "args": [
+        "Infinity"
+      ],
+      "value": null
+    }
+  }
+]

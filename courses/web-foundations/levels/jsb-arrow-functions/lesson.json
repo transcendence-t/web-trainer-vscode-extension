@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "用箭头函数返回一条工单记录",
+  "goal": "使用箭头函数的表达式返回一个对象。",
+  "summary": "创建工单时需要用传入的编号和初始状态生成一条新记录。",
+  "tasks": [
+    "将起始声明改写成名为 buildTicket 的箭头函数。",
+    "返回 { id, status: \"待处理\" }，id 保留传入值及其类型。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const createTag = (code) => ({ code, visible: true });",
+    "note": "直接返回对象时用圆括号包住对象字面量，以便与函数体区分。"
+  },
+  "hint": "也可以在带花括号的函数体里显式写 return。"
+}

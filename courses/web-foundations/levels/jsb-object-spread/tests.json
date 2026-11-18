@@ -1,0 +1,81 @@
+[
+  {
+    "label": "值为零的覆盖也生效",
+    "expect": {
+      "type": "function",
+      "name": "mergeSettings",
+      "args": [
+        {
+          "mode": "列表",
+          "count": 10
+        },
+        {
+          "count": 0
+        }
+      ],
+      "value": {
+        "mode": "列表",
+        "count": 0
+      }
+    }
+  },
+  {
+    "label": "自定义键加入新对象",
+    "expect": {
+      "type": "function",
+      "name": "mergeSettings",
+      "args": [
+        {
+          "enabled": true
+        },
+        {
+          "enabled": false,
+          "accent": "jade"
+        }
+      ],
+      "value": {
+        "enabled": false,
+        "accent": "jade"
+      }
+    }
+  },
+  {
+    "label": "允许任一方为空",
+    "expect": {
+      "type": "function",
+      "name": "mergeSettings",
+      "args": [
+        {},
+        {
+          "count": 2
+        }
+      ],
+      "value": {
+        "count": 2
+      }
+    }
+  },
+  {
+    "label": "合并后默认配置尚未改变",
+    "expect": {
+      "type": "function",
+      "name": "checkSettings",
+      "args": [
+        {
+          "mode": "列表"
+        },
+        {
+          "mode": "网格"
+        }
+      ],
+      "value": {
+        "defaults": {
+          "mode": "列表"
+        },
+        "merged": {
+          "mode": "网格"
+        }
+      }
+    }
+  }
+]

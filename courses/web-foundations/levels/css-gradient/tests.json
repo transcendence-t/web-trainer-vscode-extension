@@ -1,0 +1,20 @@
+[
+  {
+    "label": "展板显示指定方向和色标",
+    "expect": {
+      "type": "style",
+      "selector": ".banner",
+      "property": "background-image",
+      "value": "linear-gradient(to right, rgb(230, 244, 238), rgb(255, 242, 213))"
+    }
+  },
+  {
+    "label": "文字仍采用原深色",
+    "expect": {
+      "type": "style",
+      "selector": ".banner",
+      "property": "color",
+      "value": "rgb(36, 52, 71)"
+    }
+  }
+]

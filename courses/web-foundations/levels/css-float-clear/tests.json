@@ -1,0 +1,29 @@
+[
+  {
+    "label": "插图向左浮动",
+    "expect": {
+      "type": "style",
+      "selector": ".diagram",
+      "property": "float",
+      "value": "left"
+    }
+  },
+  {
+    "label": "图文留有 12px 间隔",
+    "expect": {
+      "type": "style",
+      "selector": ".diagram",
+      "property": "margin-right",
+      "value": "12px"
+    }
+  },
+  {
+    "label": "下一节标题完全在插图下方",
+    "expect": {
+      "type": "layout",
+      "selector": ".next-section",
+      "relativeTo": ".diagram",
+      "relation": "below"
+    }
+  }
+]

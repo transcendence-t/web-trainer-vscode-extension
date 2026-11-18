@@ -1,0 +1,56 @@
+[
+  {
+    "label": "取货地址链接变为紫色",
+    "expect": {
+      "type": "style",
+      "selector": "#address-link",
+      "property": "color",
+      "value": "rgb(107, 63, 135)"
+    }
+  },
+  {
+    "label": "段落里的值班链接也变紫",
+    "expect": {
+      "type": "style",
+      "selector": "#hours-link",
+      "property": "color",
+      "value": "rgb(107, 63, 135)"
+    }
+  },
+  {
+    "label": "取货地址链接字重为 600",
+    "expect": {
+      "type": "style",
+      "selector": "#address-link",
+      "property": "font-weight",
+      "value": "600"
+    }
+  },
+  {
+    "label": "值班链接字重为 600",
+    "expect": {
+      "type": "style",
+      "selector": "#hours-link",
+      "property": "font-weight",
+      "value": "600"
+    }
+  },
+  {
+    "label": "卡片外的链接保留原色",
+    "expect": {
+      "type": "style",
+      "selector": "#help-link",
+      "property": "color",
+      "value": "rgb(18, 90, 70)"
+    }
+  },
+  {
+    "label": "卡片外的链接保留原字重",
+    "expect": {
+      "type": "style",
+      "selector": "#help-link",
+      "property": "font-weight",
+      "value": "400"
+    }
+  }
+]

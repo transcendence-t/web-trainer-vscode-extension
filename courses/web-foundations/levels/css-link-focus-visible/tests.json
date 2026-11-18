@@ -1,0 +1,71 @@
+[
+  {
+    "label": "未聚焦时没有自定义轮廓",
+    "expect": {
+      "type": "style",
+      "selector": ".guide",
+      "property": "outline-style",
+      "value": "none"
+    }
+  },
+  {
+    "label": "聚焦后的轮廓为实线",
+    "expect": {
+      "type": "style",
+      "selector": ".guide",
+      "property": "outline-style",
+      "value": "solid"
+    },
+    "actions": [
+      {
+        "type": "focus",
+        "selector": ".guide"
+      }
+    ]
+  },
+  {
+    "label": "聚焦后轮廓颜色正确",
+    "expect": {
+      "type": "style",
+      "selector": ".guide",
+      "property": "outline-color",
+      "value": "rgb(18, 90, 70)"
+    },
+    "actions": [
+      {
+        "type": "focus",
+        "selector": ".guide"
+      }
+    ]
+  },
+  {
+    "label": "聚焦后的轮廓宽 3px",
+    "expect": {
+      "type": "style",
+      "selector": ".guide",
+      "property": "outline-width",
+      "value": "3px"
+    },
+    "actions": [
+      {
+        "type": "focus",
+        "selector": ".guide"
+      }
+    ]
+  },
+  {
+    "label": "轮廓与元素相距 3px",
+    "expect": {
+      "type": "style",
+      "selector": ".guide",
+      "property": "outline-offset",
+      "value": "3px"
+    },
+    "actions": [
+      {
+        "type": "focus",
+        "selector": ".guide"
+      }
+    ]
+  }
+]

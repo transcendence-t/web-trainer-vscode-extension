@@ -1,0 +1,16 @@
+{
+  "focus": "index.html",
+  "title": "让键盘用户跳过重复导航",
+  "goal": "提供位于导航之前的跳转链接，并标记可接收焦点的正文。",
+  "summary": "用键盘阅读时，一进页面即可通过短链接越过重复的导航项。",
+  "tasks": [
+    "在 header 之前添加链接，ID 为 skip，文字为「跳到主要内容」，href 指向 #main-content。",
+    "给已有 main 设置 ID main-content 和 tabindex=\"-1\"。"
+  ],
+  "example": {
+    "language": "html",
+    "code": "<a href=\"#article-body\">跳到正文</a>\n<nav aria-label=\"站点\">…</nav>\n<main id=\"article-body\" tabindex=\"-1\">…</main>",
+    "note": "入口在导航前。tabindex=\"-1\" 让正文可接收焦点，同时保持正常 Tab 顺序。"
+  },
+  "hint": "href 的 # 只出现在链接目标地址里，正文的 id 不带 #。"
+}

@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "查找不区分大小写的关键字",
+  "goal": "组合 trim、大小写转换和 includes 实现子串查找。",
+  "summary": "设备查询允许输入型号的一部分。搜索词两端的空白可以忽略，空查询显示全部。",
+  "tasks": [
+    "完成 matchesKeyword(text, query)，找出 text 是否包含清理并忽略大小写后的 query。",
+    "返回布尔值。空查询或纯空白查询返回 true。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "'Lab Station'.toLowerCase().includes('station'); // true",
+    "note": "includes 判断有没有子串，返回 true 或 false。统一两边大小写后再比较。"
+  },
+  "hint": "query 要先 trim()，text 和 query 都要转成同一种大小写。"
+}

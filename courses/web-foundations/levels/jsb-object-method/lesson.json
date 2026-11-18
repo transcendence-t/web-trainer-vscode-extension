@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "让对象方法读取本条记录的属性",
+  "goal": "在通过对象调用的方法中使用 this。",
+  "summary": "标签对象能用自己的前缀与编号生成标签文字。起始函数创建一个带 label 方法的对象。",
+  "tasks": [
+    "补齐 rackLabel(prefix, number) 里的 record.label 方法，返回由 prefix、连字符和 number 组成的字符串。",
+    "通过 record.label() 取得返回值，方法从 this 读取当前对象的两个属性。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const item = { name: '灯架', label() { return this.name; } };\nitem.label(); // '灯架'",
+    "note": "通过 item.label() 调用时，this 指向 item。对象方法使用普通方法语法即可。"
+  },
+  "hint": "方法里访问 this.prefix 和 this.number，不要把普通方法写成箭头函数。"
+}

@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "安全读取可能缺失的嵌套联系方式",
+  "goal": "用可选链停止读取缺少的中间属性。",
+  "summary": "活动记录可能没有联系人，联系人也可能没有填写电话。无法取得电话时显示「待登记」。",
+  "tasks": [
+    "完成 contactPhone(record)，读取 record.contact.phone。",
+    "record、contact 或 phone 缺少或为 null 时返回「待登记」。已填写的空字符串按原值返回。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const room = { owner: null };\nroom.owner?.name ?? '未分配'; // '未分配'",
+    "note": "可选链在左侧为 null 或 undefined 时返回 undefined，用 ?? 提供显示用的默认值。"
+  },
+  "hint": "可能为空的每一层都要加 ?.，包括 record 和 record.contact。"
+}

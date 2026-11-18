@@ -1,0 +1,91 @@
+[
+  {
+    "label": "两项都写入回执",
+    "expect": {
+      "type": "text",
+      "selector": "#receipt",
+      "value": "小冯：上午、下午"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#visitor",
+        "value": " 小冯 "
+      },
+      {
+        "type": "click",
+        "selector": "#afternoon"
+      },
+      {
+        "type": "click",
+        "selector": "#morning"
+      },
+      {
+        "type": "click",
+        "selector": "#application button"
+      }
+    ]
+  },
+  {
+    "label": "一项有效",
+    "expect": {
+      "type": "text",
+      "selector": "#receipt",
+      "value": "小林：下午"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#visitor",
+        "value": "小林"
+      },
+      {
+        "type": "click",
+        "selector": "#afternoon"
+      },
+      {
+        "type": "click",
+        "selector": "#application button"
+      }
+    ]
+  },
+  {
+    "label": "空选择有明确提示",
+    "expect": {
+      "type": "text",
+      "selector": "#receipt",
+      "value": "小林：未选场次"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#visitor",
+        "value": "小林"
+      },
+      {
+        "type": "click",
+        "selector": "#application button"
+      }
+    ]
+  },
+  {
+    "label": "脚本拦截默认跳转",
+    "expect": {
+      "type": "attribute",
+      "selector": "#receipt",
+      "name": "data-in-place",
+      "value": "true"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#visitor",
+        "value": "小林"
+      },
+      {
+        "type": "click",
+        "selector": "#application button"
+      }
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "focus": "script.js",
+  "title": "保存并恢复装备清单",
+  "goal": "用 JSON.stringify 和 JSON.parse 在数组与可保存的 JSON 字符串之间转换。",
+  "summary": "野外巡查的装备名称需要存成一份清单。再打开页面后，原来的顺序、名称和标点都应恢复。",
+  "tasks": [
+    "页面打开时读取 fieldGear，使用 JSON.parse 恢复数组。没有记录时以空数组开始。",
+    "每次添加非空装备后，用 JSON.stringify(items) 转换整个清单并保存到 fieldGear。",
+    "保留现有的界面渲染。输入含逗号的装备名称，确认整段文字仍显示为同一项。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const cities = ['昆明', '南宁'];\nlocalStorage.setItem('tripCities', JSON.stringify(cities));\nconst saved = localStorage.getItem('tripCities');\nconst trip = JSON.parse(saved ?? '[]');",
+    "note": "路线编辑器会把城市数组存成 JSON 文本，读回后再用 parse 还原数组。没有旧值时解析空数组的文本。"
+  },
+  "hint": "直接把数组传给 setItem 会得到逗号分隔的字符串。使用 JSON.stringify 可以保存每个项目的边界，即使名称本身也有逗号。"
+}

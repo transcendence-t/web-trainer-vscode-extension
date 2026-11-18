@@ -1,0 +1,38 @@
+[
+  {
+    "label": "大展签的字号为 24px",
+    "expect": {
+      "type": "style",
+      "selector": ".large-label",
+      "property": "font-size",
+      "value": "24px"
+    }
+  },
+  {
+    "label": "小展签的字号为 16px",
+    "expect": {
+      "type": "style",
+      "selector": ".small-label",
+      "property": "font-size",
+      "value": "16px"
+    }
+  },
+  {
+    "label": "大展签的半字内边距为 12px",
+    "expect": {
+      "type": "style",
+      "selector": ".large-label",
+      "property": "padding-top",
+      "value": "12px"
+    }
+  },
+  {
+    "label": "小展签的半字内边距为 8px",
+    "expect": {
+      "type": "style",
+      "selector": ".small-label",
+      "property": "padding-top",
+      "value": "8px"
+    }
+  }
+]

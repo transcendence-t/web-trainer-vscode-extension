@@ -1,0 +1,237 @@
+[
+  {
+    "label": "类别中可以选择导览",
+    "expect": {
+      "type": "text",
+      "selector": "#event-category option[value=\"tour\"]",
+      "value": "导览"
+    }
+  },
+  {
+    "label": "最初显示四场活动",
+    "expect": {
+      "type": "count",
+      "selector": "#event-list > li",
+      "value": 4
+    }
+  },
+  {
+    "label": "选中工作坊后显示两场活动",
+    "expect": {
+      "type": "count",
+      "selector": "#event-list > li",
+      "value": 2
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#event-category",
+        "value": "workshop"
+      }
+    ]
+  },
+  {
+    "label": "再切换到导览后工作坊都被移除",
+    "expect": {
+      "type": "count",
+      "selector": "#event-list > li[data-category=\"workshop\"]",
+      "value": 0
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#event-category",
+        "value": "workshop"
+      },
+      {
+        "type": "input",
+        "selector": "#event-category",
+        "value": "tour"
+      }
+    ]
+  },
+  {
+    "label": "切换到导览后显示植物园活动",
+    "expect": {
+      "type": "text",
+      "selector": "#event-list [data-event-id=\"garden\"] h2",
+      "value": "植物园导览"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#event-category",
+        "value": "workshop"
+      },
+      {
+        "type": "input",
+        "selector": "#event-category",
+        "value": "tour"
+      }
+    ]
+  },
+  {
+    "label": "切回全部后恢复四场活动",
+    "expect": {
+      "type": "count",
+      "selector": "#event-list > li",
+      "value": 4
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#event-category",
+        "value": "tour"
+      },
+      {
+        "type": "input",
+        "selector": "#event-category",
+        "value": "all"
+      }
+    ]
+  },
+  {
+    "label": "收藏后应用深绿色背景",
+    "expect": {
+      "type": "style",
+      "selector": "#event-list [data-event-id=\"print\"] .favorite-button",
+      "property": "background-color",
+      "value": "rgb(18, 90, 70)"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#event-list [data-event-id=\"print\"] .favorite-button"
+      }
+    ]
+  },
+  {
+    "label": "收藏后应用白色文字",
+    "expect": {
+      "type": "style",
+      "selector": "#event-list [data-event-id=\"print\"] .favorite-button",
+      "property": "color",
+      "value": "rgb(255, 255, 255)"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#event-list [data-event-id=\"print\"] .favorite-button"
+      }
+    ]
+  },
+  {
+    "label": "切换分类再回来时收藏状态仍存在",
+    "expect": {
+      "type": "attribute",
+      "selector": "#event-list [data-event-id=\"print\"] .favorite-button",
+      "name": "aria-pressed",
+      "value": "true"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#event-list [data-event-id=\"print\"] .favorite-button"
+      },
+      {
+        "type": "input",
+        "selector": "#event-category",
+        "value": "tour"
+      },
+      {
+        "type": "input",
+        "selector": "#event-category",
+        "value": "workshop"
+      }
+    ]
+  },
+  {
+    "label": "两次收藏写入两个完整 ID",
+    "expect": {
+      "type": "storage",
+      "key": "campusEventFavorites",
+      "value": "[\"print\",\"sound\"]"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#event-list [data-event-id=\"print\"] .favorite-button"
+      },
+      {
+        "type": "click",
+        "selector": "#event-list [data-event-id=\"sound\"] .favorite-button"
+      }
+    ]
+  },
+  {
+    "label": "再次点击同一活动可取消收藏",
+    "expect": {
+      "type": "storage",
+      "key": "campusEventFavorites",
+      "value": "[]"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#event-list [data-event-id=\"print\"] .favorite-button"
+      },
+      {
+        "type": "click",
+        "selector": "#event-list [data-event-id=\"print\"] .favorite-button"
+      }
+    ]
+  },
+  {
+    "label": "取消收藏后按钮回到未选中状态",
+    "expect": {
+      "type": "attribute",
+      "selector": "#event-list [data-event-id=\"print\"] .favorite-button",
+      "name": "aria-pressed",
+      "value": "false"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#event-list [data-event-id=\"print\"] .favorite-button"
+      },
+      {
+        "type": "click",
+        "selector": "#event-list [data-event-id=\"print\"] .favorite-button"
+      }
+    ]
+  },
+  {
+    "label": "打开时显示原来收藏的活动",
+    "expect": {
+      "type": "attribute",
+      "selector": "#event-list [data-event-id=\"museum\"] .favorite-button",
+      "name": "aria-pressed",
+      "value": "true"
+    },
+    "storage": {
+      "campusEventFavorites": "[\"museum\",\"print\"]"
+    }
+  },
+  {
+    "label": "取消旧收藏后保留另一场活动",
+    "expect": {
+      "type": "storage",
+      "key": "campusEventFavorites",
+      "value": "[\"print\"]"
+    },
+    "storage": {
+      "campusEventFavorites": "[\"museum\",\"print\"]"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#event-category",
+        "value": "tour"
+      },
+      {
+        "type": "click",
+        "selector": "#event-list [data-event-id=\"museum\"] .favorite-button"
+      }
+    ]
+  }
+]

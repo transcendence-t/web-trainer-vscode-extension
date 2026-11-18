@@ -1,0 +1,17 @@
+{
+  "focus": "index.html",
+  "title": "让两层表头正确对齐",
+  "goal": "使用 rowspan 和 colspan 组织分组表头。",
+  "summary": "场馆列用一格表头跨两行。周末的两个日期由同一格总标题统领。",
+  "tasks": [
+    "让「场馆」向下跨两行，并为它写 scope=\"col\"。",
+    "让「周六与周日」横跨两列。",
+    "删除第二行的空 th，留下「周六」「周日」两个列标题。"
+  ],
+  "example": {
+    "language": "html",
+    "code": "<tr><th rowspan=\"2\">设备</th><th colspan=\"2\">检查</th></tr>\n<tr><th>上午</th><th>下午</th></tr>",
+    "note": "被 rowspan 占据的位置在下一行自动保留，无需另插空格。"
+  },
+  "hint": "rowspan 的 row 是行，colspan 的 col 是列。"
+}

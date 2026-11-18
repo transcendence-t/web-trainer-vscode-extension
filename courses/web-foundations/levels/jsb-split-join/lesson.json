@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "把文本标签转换为易读清单",
+  "goal": "用 split 拆分文本、过滤空项，再用 join 合并。",
+  "summary": "活动资料的标签以逗号分隔，录入时可能出现重复逗号或空格。显示时用「 / 」分隔有内容的标签。",
+  "tasks": [
+    "完成 labelLine(text)，按英文逗号拆分并去掉每项的首尾空白。",
+    "移除空项，按原顺序用 \" / \" 重新连接。没有标签时返回空字符串。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const words = '木工, 绘画'.split(',');\nwords.map((word) => word.trim()).join(' / '); // '木工 / 绘画'",
+    "note": "split 返回数组。join 只把分隔符放在相邻项之间。"
+  },
+  "hint": "先 trim 再 filter，否则一项只含空格时可能没有被过滤。"
+}

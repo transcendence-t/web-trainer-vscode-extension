@@ -1,0 +1,17 @@
+{
+  "focus": "index.html",
+  "title": "搭建适合手机和桌面的工坊看板",
+  "goal": "用语义导航和两层响应式 Grid 组织信息看板。",
+  "summary": "小屏先看标题、再看目录与状态卡；较宽的窗口显示左侧目录和右侧内容。",
+  "tasks": [
+    "将 #top 和 #links 分别改用 header 和 nav，保留链接。",
+    "编辑 style.css，为 .dashboard 和 .cards 设置网格。窄屏各区和卡片竖排。",
+    "宽度至少 700px 时，页眉横跨两列。目录列宽 160px，状态区填满剩余空间，两张状态卡等宽并排。"
+  ],
+  "example": {
+    "language": "html",
+    "code": ".layout { display: grid; gap: 12px; }\n@media (min-width: 680px) {\n  .layout { grid-template-columns: 160px minmax(0, 1fr); }\n  .heading { grid-column: 1 / -1; }\n}",
+    "note": "外层网格决定页眉和内容区域的位置；卡片网格可以独立选择布局。"
+  },
+  "hint": "用一条媒体查询同时调整 .dashboard 和 .cards。页眉可使用命名区域或 grid-column 横跨两列。"
+}

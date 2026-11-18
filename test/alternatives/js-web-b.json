@@ -1,0 +1,5 @@
+{
+  "js-keys": {
+    "script.js": "const tableName = document.querySelector('#table-name');\nconst tableCard = document.querySelector('#table-card');\n\ntableName.addEventListener('keydown', (event) => {\n  if (event.key === 'Enter') {\n    tableCard.textContent = tableName.value;\n  }\n});\n"
+  }
+}

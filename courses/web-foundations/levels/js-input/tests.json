@@ -1,0 +1,52 @@
+[
+  {
+    "label": "输入姓名后问候对应同学",
+    "expect": {
+      "type": "text",
+      "selector": "#greeting",
+      "value": "你好，小林！"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#student",
+        "value": "小林"
+      }
+    ]
+  },
+  {
+    "label": "去掉姓名首尾的空格",
+    "expect": {
+      "type": "text",
+      "selector": "#greeting",
+      "value": "你好，小周！"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#student",
+        "value": " 小周 "
+      }
+    ]
+  },
+  {
+    "label": "清空后恢复通用问候",
+    "expect": {
+      "type": "text",
+      "selector": "#greeting",
+      "value": "你好，同学！"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#student",
+        "value": "小林"
+      },
+      {
+        "type": "input",
+        "selector": "#student",
+        "value": ""
+      }
+    ]
+  }
+]

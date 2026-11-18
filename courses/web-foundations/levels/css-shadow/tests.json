@@ -1,0 +1,20 @@
+[
+  {
+    "label": "阴影的偏移、模糊与透明度正确",
+    "expect": {
+      "type": "style",
+      "selector": ".raised",
+      "property": "box-shadow",
+      "value": "rgba(25, 65, 57, 0.25) 0px 4px 10px 0px"
+    }
+  },
+  {
+    "label": "卡片本身保持不透明",
+    "expect": {
+      "type": "style",
+      "selector": ".raised",
+      "property": "opacity",
+      "value": "1"
+    }
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "focus": "script.js",
+  "title": "让新增的曲目也能被选中",
+  "goal": "给曲目列表设置一个点击监听，让原有按钮和后来加入的按钮都能更新选择。",
+  "summary": "按钮或其内部文字被点击时，点击事件会向祖先元素冒泡。列表能收到这类事件。closest() 从点击目标开始向上查找按钮，因此点击按钮里的 span 也能找到曲目信息。",
+  "tasks": [
+    "在父容器 #song-list 上监听 click。用 event.target.closest() 查找带 data-title 的 button。",
+    "找到按钮时，将它的 dataset.title 写入 #selected-song。点击列表空白处时保留当前曲目。",
+    "用已有的「加入备用曲目」按钮新增一首曲目，再点击新按钮内的文字，确认它也能选中。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const categories = document.querySelector('#categories');\nconst active = document.querySelector('#active-category');\n\ncategories.addEventListener('click', (event) => {\n  const button = event.target.closest('button[data-category]');\n  if (button) {\n    active.textContent = button.dataset.category;\n  }\n});",
+    "note": "商品分类栏将监听装在父容器上。新插入的分类按钮和原来的按钮会经过同一段处理。"
+  },
+  "hint": "点按钮边缘有效、点文字无效时，检查你是不是直接从 event.target 读取 data-title。用 closest 找到文字所在的按钮，再读取按钮的数据。"
+}

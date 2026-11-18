@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "尊重系统的减少动效偏好",
+  "goal": "用 prefers-reduced-motion 为状态提示保留静态替代。",
+  "summary": "归档提示默认有一次淡入动效。读者请求减少动效时直接显示文字与底色。",
+  "tasks": [
+    "添加 @media (prefers-reduced-motion: reduce)，关闭 .signal 的动画。",
+    "在没有减少动效偏好时保留 fade-in 动画。"
+  ],
+  "example": {
+    "language": "css",
+    "code": "@media (prefers-reduced-motion: reduce) {\n  .stamp { animation: none; }\n}",
+    "note": "动效可作为补充提示。减少动效时可直接展示相同状态，信息仍然可读。"
+  },
+  "hint": "保留普通的 animation 声明，在媒体查询内覆盖为 none。"
+}

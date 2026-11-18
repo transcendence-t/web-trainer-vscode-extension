@@ -1,0 +1,84 @@
+[
+  {
+    "label": "读取带连字符的字段",
+    "expect": {
+      "type": "function",
+      "name": "readField",
+      "args": [
+        {
+          "rack-id": "B7"
+        },
+        "rack-id"
+      ],
+      "value": "B7"
+    }
+  },
+  {
+    "label": "零是已有值",
+    "expect": {
+      "type": "function",
+      "name": "readField",
+      "args": [
+        {
+          "count": 0
+        },
+        "count"
+      ],
+      "value": 0
+    }
+  },
+  {
+    "label": "保留 false",
+    "expect": {
+      "type": "function",
+      "name": "readField",
+      "args": [
+        {
+          "done": false
+        },
+        "done"
+      ],
+      "value": false
+    }
+  },
+  {
+    "label": "空字符串也是数据",
+    "expect": {
+      "type": "function",
+      "name": "readField",
+      "args": [
+        {
+          "note": ""
+        },
+        "note"
+      ],
+      "value": ""
+    }
+  },
+  {
+    "label": "不存在的字段",
+    "expect": {
+      "type": "function",
+      "name": "readField",
+      "args": [
+        {
+          "id": 3
+        },
+        "name"
+      ],
+      "value": null
+    }
+  },
+  {
+    "label": "继承的成员不算数据",
+    "expect": {
+      "type": "function",
+      "name": "readField",
+      "args": [
+        {},
+        "constructor"
+      ],
+      "value": null
+    }
+  }
+]

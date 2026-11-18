@@ -1,0 +1,64 @@
+[
+  {
+    "label": "几个不同编号按原顺序转换",
+    "expect": {
+      "type": "function",
+      "name": "labelTickets",
+      "args": [
+        [
+          12,
+          3,
+          28
+        ]
+      ],
+      "value": [
+        "Q-12",
+        "Q-3",
+        "Q-28"
+      ]
+    }
+  },
+  {
+    "label": "数字 0 也转换为一个标签",
+    "expect": {
+      "type": "function",
+      "name": "labelTickets",
+      "args": [
+        [
+          0
+        ]
+      ],
+      "value": [
+        "Q-0"
+      ]
+    }
+  },
+  {
+    "label": "重复编号转换成各自的标签",
+    "expect": {
+      "type": "function",
+      "name": "labelTickets",
+      "args": [
+        [
+          4,
+          4
+        ]
+      ],
+      "value": [
+        "Q-4",
+        "Q-4"
+      ]
+    }
+  },
+  {
+    "label": "没有编号时返回空数组",
+    "expect": {
+      "type": "function",
+      "name": "labelTickets",
+      "args": [
+        []
+      ],
+      "value": []
+    }
+  }
+]

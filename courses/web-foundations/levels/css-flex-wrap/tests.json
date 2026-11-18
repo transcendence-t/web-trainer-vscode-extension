@@ -1,0 +1,51 @@
+[
+  {
+    "label": "容器使用正常顺序换行",
+    "expect": {
+      "type": "style",
+      "selector": ".session-list",
+      "property": "flex-wrap",
+      "value": "wrap"
+    }
+  },
+  {
+    "label": "窄窗口前两张卡片仍然并排",
+    "expect": {
+      "type": "layout",
+      "selector": "#friday-pm",
+      "relativeTo": "#friday-am",
+      "relation": "right-of"
+    },
+    "viewport": 320
+  },
+  {
+    "label": "窄窗口第三张卡片换到第二行",
+    "expect": {
+      "type": "layout",
+      "selector": "#saturday-am",
+      "relativeTo": "#friday-am",
+      "relation": "below"
+    },
+    "viewport": 320
+  },
+  {
+    "label": "窄窗口第三张卡片留在容器内",
+    "expect": {
+      "type": "layout",
+      "selector": "#saturday-am",
+      "relativeTo": ".session-list",
+      "relation": "inside"
+    },
+    "viewport": 320
+  },
+  {
+    "label": "宽窗口第三张卡片接在第二张右侧",
+    "expect": {
+      "type": "layout",
+      "selector": "#saturday-am",
+      "relativeTo": "#friday-pm",
+      "relation": "right-of"
+    },
+    "viewport": 720
+  }
+]

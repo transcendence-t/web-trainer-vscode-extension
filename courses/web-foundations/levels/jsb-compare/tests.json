@@ -1,0 +1,62 @@
+[
+  {
+    "label": "高于达标线时通过",
+    "expect": {
+      "type": "function",
+      "name": "meetsScore",
+      "args": [
+        72,
+        70
+      ],
+      "value": true
+    }
+  },
+  {
+    "label": "恰好达到及格线时也通过",
+    "expect": {
+      "type": "function",
+      "name": "meetsScore",
+      "args": [
+        60,
+        60
+      ],
+      "value": true
+    }
+  },
+  {
+    "label": "差一分时未达到",
+    "expect": {
+      "type": "function",
+      "name": "meetsScore",
+      "args": [
+        59,
+        60
+      ],
+      "value": false
+    }
+  },
+  {
+    "label": "分数为 0 时可以判为未达标",
+    "expect": {
+      "type": "function",
+      "name": "meetsScore",
+      "args": [
+        0,
+        1
+      ],
+      "value": false
+    }
+  },
+  {
+    "label": "满分门槛也接受相等的分数",
+    "expect": {
+      "type": "function",
+      "name": "meetsScore",
+      "args": [
+        100,
+        100
+      ],
+      "value": true
+    }
+  }
+]

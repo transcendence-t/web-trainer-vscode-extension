@@ -1,0 +1,70 @@
+[
+  {
+    "label": "关键词输入框参与分配剩余空间",
+    "expect": {
+      "type": "style",
+      "selector": "#book-query",
+      "property": "flex-grow",
+      "value": "1"
+    }
+  },
+  {
+    "label": "窄窗口的输入框填满空余宽度",
+    "expect": {
+      "type": "style",
+      "selector": "#book-query",
+      "property": "width",
+      "value": "160px"
+    },
+    "viewport": 320
+  },
+  {
+    "label": "宽窗口的输入框继续伸展",
+    "expect": {
+      "type": "style",
+      "selector": "#book-query",
+      "property": "width",
+      "value": "560px"
+    },
+    "viewport": 720
+  },
+  {
+    "label": "窄窗口查询按钮仍宽 80px",
+    "expect": {
+      "type": "style",
+      "selector": "#query-button",
+      "property": "width",
+      "value": "80px"
+    },
+    "viewport": 320
+  },
+  {
+    "label": "宽窗口查询按钮仍宽 80px",
+    "expect": {
+      "type": "style",
+      "selector": "#query-button",
+      "property": "width",
+      "value": "80px"
+    },
+    "viewport": 720
+  },
+  {
+    "label": "输入框和按钮之间保留 12px 间距",
+    "expect": {
+      "type": "style",
+      "selector": ".query-bar",
+      "property": "column-gap",
+      "value": "12px"
+    }
+  },
+  {
+    "label": "窄窗口查询按钮排在输入框右边",
+    "expect": {
+      "type": "layout",
+      "selector": "#query-button",
+      "relativeTo": "#book-query",
+      "relation": "right-of"
+    },
+    "viewport": 320
+  }
+]

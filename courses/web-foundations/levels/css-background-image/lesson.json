@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "把背景图定位到卡片右下角",
+  "goal": "独立设置背景图的重复方式、位置和大小。",
+  "summary": "导览卡已有一张内嵌的装饰图。把它缩小到 96px 宽，放到卡片右下角，只画一次。",
+  "tasks": [
+    "让 .map-card 的背景图不重复，位置为右下角，宽 96px，高度保持比例。",
+    "保留起始样式中已经写好的 background-image。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".ticket {\n  background-repeat: no-repeat;\n  background-position: right top;\n  background-size: 48px auto;\n}",
+    "note": "位置用水平和垂直方向描述。高度设为 auto 时保持原图比例。"
+  },
+  "hint": "保留 background-image；用另外三条属性覆盖位置、大小和重复。"
+}

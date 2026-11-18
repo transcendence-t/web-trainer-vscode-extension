@@ -1,0 +1,38 @@
+[
+  {
+    "label": "卡片的父级可测量行内尺寸",
+    "expect": {
+      "type": "style",
+      "selector": ".slot",
+      "property": "container-type",
+      "value": "inline-size"
+    }
+  },
+  {
+    "label": "同屏窄栏仍然纵向",
+    "expect": {
+      "type": "layout",
+      "selector": "#small a",
+      "relativeTo": "#small span",
+      "relation": "below"
+    }
+  },
+  {
+    "label": "同屏宽栏切换到横排",
+    "expect": {
+      "type": "layout",
+      "selector": "#large a",
+      "relativeTo": "#large span",
+      "relation": "right-of"
+    }
+  },
+  {
+    "label": "宽栏应用实际弹性布局",
+    "expect": {
+      "type": "style",
+      "selector": "#large",
+      "property": "display",
+      "value": "flex"
+    }
+  }
+]

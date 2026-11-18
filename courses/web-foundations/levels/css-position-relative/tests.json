@@ -1,0 +1,47 @@
+[
+  {
+    "label": "展签使用相对定位",
+    "expect": {
+      "type": "style",
+      "selector": ".featured-tag",
+      "property": "position",
+      "value": "relative"
+    }
+  },
+  {
+    "label": "展签下移 8px",
+    "expect": {
+      "type": "style",
+      "selector": ".featured-tag",
+      "property": "top",
+      "value": "8px"
+    }
+  },
+  {
+    "label": "展签右移 16px",
+    "expect": {
+      "type": "style",
+      "selector": ".featured-tag",
+      "property": "left",
+      "value": "16px"
+    }
+  },
+  {
+    "label": "第一张展签仍在虚线框内",
+    "expect": {
+      "type": "layout",
+      "selector": ".featured-tag",
+      "relativeTo": ".tag-stack",
+      "relation": "inside"
+    }
+  },
+  {
+    "label": "编号展签仍在下方",
+    "expect": {
+      "type": "layout",
+      "selector": ".shelf-note",
+      "relativeTo": ".featured-tag",
+      "relation": "below"
+    }
+  }
+]

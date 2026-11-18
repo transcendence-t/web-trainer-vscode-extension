@@ -1,0 +1,50 @@
+[
+  {
+    "label": "相同数字编号",
+    "expect": {
+      "type": "function",
+      "name": "sameSerial",
+      "args": [
+        7,
+        7
+      ],
+      "value": true
+    }
+  },
+  {
+    "label": "类型不同的编号",
+    "expect": {
+      "type": "function",
+      "name": "sameSerial",
+      "args": [
+        7,
+        "7"
+      ],
+      "value": false
+    }
+  },
+  {
+    "label": "不同的前导零",
+    "expect": {
+      "type": "function",
+      "name": "sameSerial",
+      "args": [
+        "07",
+        "7"
+      ],
+      "value": false
+    }
+  },
+  {
+    "label": "相同字符串编号",
+    "expect": {
+      "type": "function",
+      "name": "sameSerial",
+      "args": [
+        "A3",
+        "A3"
+      ],
+      "value": true
+    }
+  }
+]

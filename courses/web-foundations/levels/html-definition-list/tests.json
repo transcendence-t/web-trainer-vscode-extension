@@ -1,0 +1,58 @@
+[
+  {
+    "label": "页面有一个描述列表",
+    "expect": {
+      "type": "count",
+      "selector": "dl",
+      "value": 1
+    }
+  },
+  {
+    "label": "列表包含两个术语",
+    "expect": {
+      "type": "count",
+      "selector": "dl > dt, dl > div > dt",
+      "value": 2
+    }
+  },
+  {
+    "label": "列表包含两条解释",
+    "expect": {
+      "type": "count",
+      "selector": "dl > dd, dl > div > dd",
+      "value": 2
+    }
+  },
+  {
+    "label": "第一个术语是翼展",
+    "expect": {
+      "type": "text",
+      "selector": "dl > dt:first-of-type, dl > div:first-child > dt",
+      "value": "翼展"
+    }
+  },
+  {
+    "label": "翼展后紧跟它的解释",
+    "expect": {
+      "type": "text",
+      "selector": "dl > dt:first-of-type + dd, dl > div:first-child > dt + dd",
+      "value": "两翼展开时，两侧翼尖之间的距离。"
+    }
+  },
+  {
+    "label": "第二个术语是留鸟",
+    "expect": {
+      "type": "text",
+      "selector": "dl > dt:last-of-type, dl > div:last-child > dt",
+      "value": "留鸟"
+    }
+  },
+  {
+    "label": "留鸟后紧跟它的解释",
+    "expect": {
+      "type": "text",
+      "selector": "dl > dt:last-of-type + dd, dl > div:last-child > dt + dd",
+      "value": "全年留在同一地区生活的鸟。"
+    }
+  }
+]

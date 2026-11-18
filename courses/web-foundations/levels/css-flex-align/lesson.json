@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "在纵向面板中沿两轴居中",
+  "goal": "将签到结果和记录链接作为一组上下居中，每项同时左右居中。",
+  "summary": "flex-direction 决定主轴。column 的主轴是上下方向。justify-content 沿主轴摆放整组内容，align-items 沿交叉轴对齐每项。",
+  "tasks": [
+    "保留 .arrival-panel 的纵向排列，把面板里的两项作为整体放在上下方向的中间。",
+    "使状态提示和记录链接各自左右居中，并保留原有间距。"
+  ],
+  "hint": "主轴由 flex-direction 决定。面板用的是 column，沿主轴居中时，留白会出现在内容上方和下方。",
+  "example": {
+    "language": "css",
+    "code": ".upload-status {\n  display: flex;\n  flex-direction: column;\n  min-height: 120px;\n  justify-content: center;\n  align-items: center;\n}",
+    "note": "文件上传页可以将进度提示和取消按钮放到面板中央，两个控件保持上下排列。"
+  }
+}

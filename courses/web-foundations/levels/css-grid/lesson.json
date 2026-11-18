@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "网格布局",
+  "summary": "display: grid 建立网格，grid-template-columns 定义列。两列都用 1fr 时，两列平分扣除列间距后的可用空间。",
+  "tasks": [
+    "让 .gallery 使用 Grid 布局。",
+    "设置两列等宽，行与列的间距都设为 12px。"
+  ],
+  "hint": "gap 只填一个 12px，两种间距都会使用这个值。repeat(2, 1fr) 表示重复两次相同的列宽。",
+  "goal": "把四件课程作品均匀地排成两列，给每行和每列留出相同的间距。",
+  "example": {
+    "language": "css",
+    "code": ".room-links {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 8px;\n}",
+    "note": "图书馆的阅览室入口可以排成三列，每行和每列都留出 8px 的间距。"
+  }
+}

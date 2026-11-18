@@ -1,0 +1,16 @@
+{
+  "focus": "index.html",
+  "title": "标记长引文、短引文和出处",
+  "goal": "为整段引用、句内引用和作品名称选用合适标签。",
+  "summary": "社区记录页有一段摘录和一处短引语。给读者显示作品名，并记录整段引文的网址。",
+  "tasks": [
+    "用 blockquote 包住「先记录发现，再讨论解释。」所在的段落，并给 blockquote 的 cite 属性填 https://example.org/observation。",
+    "用 cite 元素包住「《社区观察手册》」，用 q 包住「留意身边的变化」。"
+  ],
+  "example": {
+    "language": "html",
+    "code": "<blockquote cite=\"https://example.org/notes\"><p>先核对实物，再写说明。</p></blockquote>\n<p>摘自<cite>《展馆工作记录》</cite>，本章主题是<q>交接</q>。</p>",
+    "note": "blockquote 的 cite 属性记录网址，cite 元素在正文里显示作品名。"
+  },
+  "hint": "blockquote 用来包住块级引文，q 写在原段落内部。"
+}

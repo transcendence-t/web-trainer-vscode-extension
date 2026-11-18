@@ -1,0 +1,41 @@
+[
+  {
+    "label": "默认图片仍有替代文字",
+    "expect": {
+      "type": "attribute",
+      "selector": "picture img",
+      "name": "alt",
+      "value": "校园步道与入口"
+    }
+  },
+  {
+    "label": "小屏加载 100px 近景",
+    "expect": {
+      "type": "property",
+      "selector": "picture img",
+      "name": "naturalWidth",
+      "value": 100
+    },
+    "viewport": 390
+  },
+  {
+    "label": "600px 起加载 192px 全景",
+    "expect": {
+      "type": "property",
+      "selector": "picture img",
+      "name": "naturalWidth",
+      "value": 192
+    },
+    "viewport": 600
+  },
+  {
+    "label": "宽屏仍使用全景",
+    "expect": {
+      "type": "property",
+      "selector": "picture img",
+      "name": "naturalWidth",
+      "value": 192
+    },
+    "viewport": 780
+  }
+]

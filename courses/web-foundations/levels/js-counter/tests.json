@@ -1,0 +1,47 @@
+[
+  {
+    "label": "开始显示 0",
+    "expect": {
+      "type": "text",
+      "selector": "#count",
+      "value": "0"
+    }
+  },
+  {
+    "label": "点击一次显示 1",
+    "expect": {
+      "type": "text",
+      "selector": "#count",
+      "value": "1"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#add"
+      }
+    ]
+  },
+  {
+    "label": "连续点击三次显示 3",
+    "expect": {
+      "type": "text",
+      "selector": "#count",
+      "value": "3"
+    },
+    "hint": "计数变量应该在回调外保存。",
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#add"
+      },
+      {
+        "type": "click",
+        "selector": "#add"
+      },
+      {
+        "type": "click",
+        "selector": "#add"
+      }
+    ]
+  }
+]

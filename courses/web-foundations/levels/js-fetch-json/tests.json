@@ -1,0 +1,115 @@
+[
+  {
+    "label": "根据返回数据生成两项",
+    "expect": {
+      "type": "count",
+      "selector": "#events > li",
+      "value": 2
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#load"
+      },
+      {
+        "type": "wait",
+        "ms": 100
+      }
+    ]
+  },
+  {
+    "label": "首项文字来自 JSON",
+    "expect": {
+      "type": "text",
+      "selector": "#events > li:first-child",
+      "value": "陶艺开放"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#load"
+      },
+      {
+        "type": "wait",
+        "ms": 100
+      }
+    ]
+  },
+  {
+    "label": "空清单有明确反馈",
+    "expect": {
+      "type": "text",
+      "selector": "#notice",
+      "value": "暂无活动"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#dataset",
+        "value": "data:application/json;charset=utf-8,%7B%22activities%22%3A%5B%5D%7D"
+      },
+      {
+        "type": "click",
+        "selector": "#load"
+      },
+      {
+        "type": "wait",
+        "ms": 100
+      }
+    ]
+  },
+  {
+    "label": "切换样例清除旧结果",
+    "expect": {
+      "type": "count",
+      "selector": "#events > li",
+      "value": 0
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#load"
+      },
+      {
+        "type": "wait",
+        "ms": 100
+      },
+      {
+        "type": "input",
+        "selector": "#dataset",
+        "value": "data:application/json;charset=utf-8,%7B%22activities%22%3A%5B%5D%7D"
+      },
+      {
+        "type": "click",
+        "selector": "#load"
+      },
+      {
+        "type": "wait",
+        "ms": 100
+      }
+    ]
+  },
+  {
+    "label": "损坏的 JSON 有失败反馈",
+    "expect": {
+      "type": "text",
+      "selector": "#notice",
+      "value": "数据无法读取"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#dataset",
+        "value": "data:application/json,%7B"
+      },
+      {
+        "type": "click",
+        "selector": "#load"
+      },
+      {
+        "type": "wait",
+        "ms": 100
+      }
+    ]
+  }
+]

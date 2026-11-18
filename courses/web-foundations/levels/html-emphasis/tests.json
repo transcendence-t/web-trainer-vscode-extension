@@ -1,0 +1,20 @@
+[
+  {
+    "label": "操作警告使用 strong",
+    "expect": {
+      "type": "text",
+      "selector": "p#power-note strong",
+      "value": "切断电源"
+    },
+    "hint": "只用 strong 包住「切断电源」。"
+  },
+  {
+    "label": "盖板方向使用 em",
+    "expect": {
+      "type": "text",
+      "selector": "p#cover-note em",
+      "value": "正面"
+    },
+    "hint": "只用 em 包住「正面」。"
+  }
+]

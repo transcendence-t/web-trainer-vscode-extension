@@ -1,0 +1,123 @@
+[
+  {
+    "label": "初次打开时显示空清单",
+    "expect": {
+      "type": "text",
+      "selector": "#gear-empty:not([hidden])",
+      "value": "清单为空"
+    }
+  },
+  {
+    "label": "已有两项时重新打开会恢复两项",
+    "expect": {
+      "type": "count",
+      "selector": "#gear-list > li",
+      "value": 2
+    },
+    "storage": {
+      "fieldGear": "[\"水壶\",\"地图,潮位记录\"]"
+    }
+  },
+  {
+    "label": "恢复时保留名称中的逗号",
+    "expect": {
+      "type": "text",
+      "selector": "#gear-list > li:nth-child(2)",
+      "value": "地图,潮位记录"
+    },
+    "storage": {
+      "fieldGear": "[\"水壶\",\"地图,潮位记录\"]"
+    }
+  },
+  {
+    "label": "在已有清单末尾添加并保存完整 JSON",
+    "expect": {
+      "type": "storage",
+      "key": "fieldGear",
+      "value": "[\"水壶\",\"地图,潮位记录\",\"手电筒\"]"
+    },
+    "storage": {
+      "fieldGear": "[\"水壶\",\"地图,潮位记录\"]"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#gear-item",
+        "value": "手电筒"
+      },
+      {
+        "type": "click",
+        "selector": "#add-gear"
+      }
+    ]
+  },
+  {
+    "label": "追加项目同时更新界面",
+    "expect": {
+      "type": "text",
+      "selector": "#gear-list > li:nth-child(3)",
+      "value": "手电筒"
+    },
+    "storage": {
+      "fieldGear": "[\"水壶\",\"地图,潮位记录\"]"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#gear-item",
+        "value": "手电筒"
+      },
+      {
+        "type": "click",
+        "selector": "#add-gear"
+      }
+    ]
+  },
+  {
+    "label": "连续添加的两项按顺序保存",
+    "expect": {
+      "type": "storage",
+      "key": "fieldGear",
+      "value": "[\"指南针\",\"防潮袋\"]"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#gear-item",
+        "value": "指南针"
+      },
+      {
+        "type": "click",
+        "selector": "#add-gear"
+      },
+      {
+        "type": "input",
+        "selector": "#gear-item",
+        "value": "防潮袋"
+      },
+      {
+        "type": "click",
+        "selector": "#add-gear"
+      }
+    ]
+  },
+  {
+    "label": "空白项目不创建存储记录",
+    "expect": {
+      "type": "storage",
+      "key": "fieldGear",
+      "value": null
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#gear-item",
+        "value": "   "
+      },
+      {
+        "type": "click",
+        "selector": "#add-gear"
+      }
+    ]
+  }
+]

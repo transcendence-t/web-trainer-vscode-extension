@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>双数计算器</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<main class="sheet">
+  <h1>双数计算器</h1>
+  <div class="calculator">
+    <div class="number-fields">
+      <div class="field">
+        <label for="first-number">第一个数</label>
+        <input id="first-number" type="text" inputmode="decimal" placeholder="例如 8">
+      </div>
+      <div class="field">
+        <label for="second-number">第二个数</label>
+        <input id="second-number" type="text" inputmode="decimal" placeholder="例如 5">
+      </div>
+    </div>
+    <div class="operations">
+      <button id="calc-add" type="button">加法</button>
+      <button id="calc-subtract" type="button">减法</button>
+    </div>
+    <p class="result">结果 <output id="calc-result" for="first-number second-number" aria-live="polite">等待计算</output></p>
+  </div>
+</main>
+</body>
+</html>

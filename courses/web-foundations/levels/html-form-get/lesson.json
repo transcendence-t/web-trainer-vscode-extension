@@ -1,0 +1,16 @@
+{
+  "focus": "index.html",
+  "title": "给搜索表单配置请求地址",
+  "goal": "设置搜索表单的 action、method 和可提交字段名。",
+  "summary": "服务端约定通过 GET /catalog 接收关键字参数 q。预览会保留在当前练习，判题读取表单配置。",
+  "tasks": [
+    "将 #catalog-search 的 action 设为 /catalog，显式写 method=\"get\"。",
+    "为 #query 设置 type=\"search\" 和 name=\"q\"，保留标签与提交按钮。"
+  ],
+  "example": {
+    "language": "html",
+    "code": "<form action=\"/find\" method=\"get\">\n  <input type=\"search\" name=\"term\" aria-label=\"查找关键字\">\n  <button type=\"submit\">查找</button>\n</form>",
+    "note": "输入 css 并提交时，查询会成为 /find?term=css。变量名来自 name 属性。"
+  },
+  "hint": "id 用来关联标签和定位元素，name 决定提交给服务端的字段名。"
+}

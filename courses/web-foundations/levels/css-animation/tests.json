@@ -1,0 +1,67 @@
+[
+  {
+    "label": "急件签的一次动画用时 400ms",
+    "expect": {
+      "type": "style",
+      "selector": ".dispatch-stamp",
+      "property": "animation-duration",
+      "value": "0.4s"
+    }
+  },
+  {
+    "label": "暂停在起始关键帧时不透明度为 0.3",
+    "expect": {
+      "type": "style",
+      "selector": ".dispatch-stamp",
+      "property": "opacity",
+      "value": "0.3"
+    }
+  },
+  {
+    "label": "暂停在起始关键帧时急件签高出原位 18px",
+    "expect": {
+      "type": "style",
+      "selector": ".dispatch-stamp",
+      "property": "transform",
+      "value": "matrix(1, 0, 0, 1, 0, -18)"
+    }
+  },
+  {
+    "label": "动画播完后急件签保持完全可见",
+    "expect": {
+      "type": "style",
+      "selector": ".dispatch-stamp",
+      "property": "opacity",
+      "value": "1"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#play-stamp"
+      },
+      {
+        "type": "finish-motion",
+        "selector": ".dispatch-stamp"
+      }
+    ]
+  },
+  {
+    "label": "动画播完后急件签留在虚线框内",
+    "expect": {
+      "type": "layout",
+      "selector": ".dispatch-stamp",
+      "relativeTo": ".stamp-slot",
+      "relation": "inside"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#play-stamp"
+      },
+      {
+        "type": "finish-motion",
+        "selector": ".dispatch-stamp"
+      }
+    ]
+  }
+]

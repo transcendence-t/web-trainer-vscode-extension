@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>使用 Fetch 加载本地活动清单</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="sheet">
+    <h1>使用 Fetch 加载本地活动清单</h1>
+    <label for="dataset">本地数据样例</label>
+    <select id="dataset">
+      <option value="data:application/json;charset=utf-8,%7B%22activities%22%3A%5B%22%E9%99%B6%E8%89%BA%E5%BC%80%E6%94%BE%22%2C%22%E6%9C%A8%E4%BD%9C%E5%B1%95%E7%A4%BA%22%5D%7D">两项活动</option>
+      <option value="data:application/json;charset=utf-8,%7B%22activities%22%3A%5B%5D%7D">空清单</option>
+      <option value="data:application/json,%7B">损坏的数据</option>
+    </select>
+    <button type="button" id="load">加载活动</button>
+    <p id="notice" role="status">等待加载</p>
+    <ul id="events"></ul>
+  </main>
+</body>
+</html>

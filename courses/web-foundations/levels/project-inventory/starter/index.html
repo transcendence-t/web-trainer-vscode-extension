@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>设备借用清单</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<main class="sheet">
+  <h1>设备借用清单</h1>
+  <div class="search-field">
+    <span>设备名称</span>
+    <input id="equipment-query" type="search" placeholder="例如：录音">
+  </div>
+  <p id="equipment-count" role="status"></p>
+  <ul id="equipment-results" aria-label="匹配的设备"></ul>
+  <p id="equipment-empty" hidden>没有匹配的设备</p>
+</main>
+</body>
+</html>

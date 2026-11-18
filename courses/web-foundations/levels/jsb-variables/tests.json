@@ -1,0 +1,54 @@
+[
+  {
+    "label": "先入库再出库",
+    "expect": {
+      "type": "function",
+      "name": "updateStock",
+      "args": [
+        12,
+        5,
+        3
+      ],
+      "value": 14
+    }
+  },
+  {
+    "label": "从零库存开始入库",
+    "expect": {
+      "type": "function",
+      "name": "updateStock",
+      "args": [
+        0,
+        7,
+        0
+      ],
+      "value": 7
+    }
+  },
+  {
+    "label": "全部出库后返回数值 0",
+    "expect": {
+      "type": "function",
+      "name": "updateStock",
+      "args": [
+        8,
+        0,
+        8
+      ],
+      "value": 0
+    }
+  },
+  {
+    "label": "入库的货也可以在本次出库",
+    "expect": {
+      "type": "function",
+      "name": "updateStock",
+      "args": [
+        2,
+        6,
+        5
+      ],
+      "value": 3
+    }
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "label": "只使用一个表格",
+    "expect": {
+      "type": "count",
+      "selector": "table",
+      "value": 1
+    }
+  },
+  {
+    "label": "表格有两条记录",
+    "expect": {
+      "type": "count",
+      "selector": "table > tbody > tr",
+      "value": 2
+    }
+  },
+  {
+    "label": "两行共有四个数据单元格",
+    "expect": {
+      "type": "count",
+      "selector": "table > tbody > tr > td",
+      "value": 4
+    }
+  },
+  {
+    "label": "第一行第一列是薄荷",
+    "expect": {
+      "type": "text",
+      "selector": "table > tbody > tr:first-child > td:nth-child(1)",
+      "value": "薄荷"
+    }
+  },
+  {
+    "label": "第一行第二列是 6 盆",
+    "expect": {
+      "type": "text",
+      "selector": "table > tbody > tr:first-child > td:nth-child(2)",
+      "value": "6 盆"
+    }
+  },
+  {
+    "label": "第二行第一列是罗勒",
+    "expect": {
+      "type": "text",
+      "selector": "table > tbody > tr:last-child > td:nth-child(1)",
+      "value": "罗勒"
+    }
+  },
+  {
+    "label": "第二行第二列是 4 盆",
+    "expect": {
+      "type": "text",
+      "selector": "table > tbody > tr:last-child > td:nth-child(2)",
+      "value": "4 盆"
+    }
+  }
+]

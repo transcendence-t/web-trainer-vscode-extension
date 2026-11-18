@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>保护已分配的编号和停用字段</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="sheet">
+    <h1>保护已分配的编号和停用字段</h1>
+    <form>
+      <label for="record-id">档案编号</label>
+      <input id="record-id" name="recordId" value="A-031" readonly>
+      <label for="future">校外备注</label>
+      <input id="future" name="future" disabled>
+      <button type="submit">提交</button>
+    </form>
+  </main>
+</body>
+</html>

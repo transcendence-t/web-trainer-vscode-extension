@@ -1,0 +1,17 @@
+{
+  "focus": "style.css",
+  "title": "让急件签落到包裹上",
+  "goal": "用 @keyframes 同时控制位移和透明度，并在播放结束后保留最后一帧。",
+  "summary": "急件签应从包裹上方滑入虚线框。预览会暂停在起点，可以点击「播放」查看或重播。",
+  "tasks": [
+    "定义一组关键帧。起点在原位置上方 18px、opacity 为 0.3，终点回到原位置、opacity 为 1。",
+    "让 .dispatch-stamp 使用这组关键帧播放一次，用时 400ms，并保持结尾样式。",
+    "保留已有的暂停规则，点击「播放」确认急件签落进虚线框后停住。"
+  ],
+  "example": {
+    "language": "css",
+    "code": "@keyframes fade-note {\n  from { opacity: 0; }\n  to { opacity: 1; }\n}\n.upload-tip { animation: fade-note 500ms ease-in forwards; }",
+    "note": "文件上传提示从透明淡入到可见。forwards 会让提示在动画结束后保持最后一帧。"
+  },
+  "hint": "动画结束后如果标签退回原样，检查 animation-fill-mode。forwards 可以保留最后一帧的位移和透明度。"
+}

@@ -1,0 +1,17 @@
+{
+  "focus": "script.js",
+  "title": "判断活动余位状态",
+  "goal": "用 if、else if 和 else 为三段余位数量返回对应状态。",
+  "summary": "分支条件按顺序检查。找到第一个为真的条件后，就执行对应分支。前面的条件都不满足时执行 else。",
+  "tasks": [
+    "补全 seatStatus(seatsLeft)，参数为非负整数，表示活动剩余名额。",
+    "0 个名额返回「额满」，1 到 3 个返回「即将满员」，4 个及以上返回「可报名」。",
+    "先判断 0 个名额，再判断是否落在即将满员的范围。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "function audioLevelLabel(level) {\n  if (level >= 90) {\n    return '峰值过高';\n  } else if (level >= 60) {\n    return '录音电平正常';\n  } else {\n    return '录音电平偏低';\n  }\n}",
+    "note": "调音面板先筛出 90 及以上的数值。第二个分支处理达到 60 且低于 90 的数值。"
+  },
+  "hint": "如果 1 个名额显示额满，检查第一个条件是否包含了 1。额满的条件是剩余名额恰好为 0。"
+}

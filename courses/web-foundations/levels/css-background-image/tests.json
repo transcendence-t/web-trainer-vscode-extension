@@ -1,0 +1,38 @@
+[
+  {
+    "label": "仍使用内嵌的装饰图",
+    "expect": {
+      "type": "style",
+      "selector": ".map-card",
+      "property": "background-image",
+      "value": "url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAABUCAYAAADUKzhSAAAEI0lEQVR4AeyWsWpVQRCGl1tY2FinEu3S2vsUvkJAfYaYKhCw8gG0CViIRTqrgEZQVFLYiSFgJykstBAsLPQOYcJyOOfuPffs7tnd+cRhNjuze2a+2Z9k8f33z38YDKy+gYXjHwQME0AAhodP684hAF6BaQIIwPT4ad6wABg+BPgTiDdgnAC/AYw/AOvtIwDrL8B4/wjA+AOw3j4CsPgC6PmKgGkBfD4/c9jZ1WOwuDAtgKO3r93O433TJgwsPnzt2bQAFALeLgEEYHf2dL4kgACWEPhvh0C3UwTQJcLPpgggAFPjptkugewC+HZx4V6cnCSzboP8HJdAytnJ24hbbfi27AKQko7ev3Mp7NPZV7keS0hAGKeYndyZsOzBq2cRwGA1BCCQmYAhAWQmy+eqIIAAqhgTRaYigABSkeXeKggggCrGRJGpCCCAVGS5twoCCKCKMU0skuODBBDAIBoCFgggAAtTpsdBAghgEA0BCwQQgIUp0+MgAQQwiIZACwRCPSCAECHiTRNAAE2Pl+ZCBBBAiBDxpgkggKbHS3MhAgggRIh40wQaFsB6c9u+ectZtvUotZtlWgD7Ow/d87190yYM2n3e4c5MCyCMh4zWCSCA1idMfysJIICVeAi2TiC7AG5vbbmXu4+S2JP7D1qf13r9JcwSxqnmJ28jYem9V2cXQG8VbEJgJgIIYCbwfLYMAouDw2fu4PDp0nyva9lX0z3f61pzxOten9c9yVPTPd/rWnN8rzHf69rP07XGxPumcfUSk7XvdS37XdOYeN+6efqz5MhavJis+0xifdaXK3vdXNnDLt90mMPi+PSDOz79uDTf61r21XTP97rWHPG61+d1T/LUdM/3utYc32vM97r283StMfG+aVy9xGTte13Lftc0Jt63bp7+LDmyFi8m6z6TWJ/15cpeN1f2sMs3HebAn0Bl/CamikgExl6DAMYSI78pAgigqXHSzFgCCGAssYn5e3dvuFU28XqOjySAAEYCm5p+Z+uau7d9vdckNvV+zo8jgADG8SK7MQINCaCxydBOFgIIIAtmPlIqAQRQ6mSoKwsBBJAFMx8plQACKHUy1JWFAALIgjnxR7h+YwIIYGN0HGyBAAJoYYr0sDEBBLAxOg62QAABtDBFetiYAALYGB0HSyAwtQYEMJUg56smgACqHh/FTyWAAKYS5HzVBBBA1eOj+KkEEMBUgpyvmkDFAqiaO8UXQgABFDIIypiHAAKYhztfLYQAAihkEJQxDwEEMA93vloIAQRQyCBGlUFyNAIIIBpKLqqRAAKocWrUHI0AAoiGkotqJIAAapwaNUcjgACioeSiHARifwMBxCYauO/Lj7/u1fmfXpNY4DjhyAQQQGSgoet23/xyqyx0nnhcAgggLk9uq4wAAqhsYJQbl8B/AAAA//9yKLMIAAAABklEQVQDALv9uGHXpDcIAAAAAElFTkSuQmCC\")"
+    }
+  },
+  {
+    "label": "背景图只显示一次",
+    "expect": {
+      "type": "style",
+      "selector": ".map-card",
+      "property": "background-repeat",
+      "value": "no-repeat"
+    }
+  },
+  {
+    "label": "图位于右下角",
+    "expect": {
+      "type": "style",
+      "selector": ".map-card",
+      "property": "background-position",
+      "value": "100% 100%"
+    }
+  },
+  {
+    "label": "背景图保持比例并限宽",
+    "expect": {
+      "type": "style",
+      "selector": ".map-card",
+      "property": "background-size",
+      "value": "96px auto"
+    }
+  }
+]

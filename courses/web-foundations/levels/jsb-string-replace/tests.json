@@ -1,0 +1,38 @@
+[
+  {
+    "label": "两处名称都被更新",
+    "expect": {
+      "type": "function",
+      "name": "fillRoom",
+      "args": [
+        "{room}今天开放。请到{room}签到。",
+        "光影室"
+      ],
+      "value": "光影室今天开放。请到光影室签到。"
+    }
+  },
+  {
+    "label": "普通通知保持原样",
+    "expect": {
+      "type": "function",
+      "name": "fillRoom",
+      "args": [
+        "今日暂停预约",
+        "光影室"
+      ],
+      "value": "今日暂停预约"
+    }
+  },
+  {
+    "label": "替换内容按字面插入",
+    "expect": {
+      "type": "function",
+      "name": "fillRoom",
+      "args": [
+        "当前{room}",
+        "A$&B"
+      ],
+      "value": "当前A$&B"
+    }
+  }
+]

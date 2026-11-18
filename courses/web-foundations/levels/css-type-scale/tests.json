@@ -1,0 +1,38 @@
+[
+  {
+    "label": "编码字重为 600",
+    "expect": {
+      "type": "style",
+      "selector": ".serial",
+      "property": "font-weight",
+      "value": "600"
+    }
+  },
+  {
+    "label": "字符间隔增加 2px",
+    "expect": {
+      "type": "style",
+      "selector": ".serial",
+      "property": "letter-spacing",
+      "value": "2px"
+    }
+  },
+  {
+    "label": "编码仍为 16px",
+    "expect": {
+      "type": "style",
+      "selector": ".serial",
+      "property": "font-size",
+      "value": "16px"
+    }
+  },
+  {
+    "label": "说明不额外增加字距",
+    "expect": {
+      "type": "style",
+      "selector": ".description",
+      "property": "letter-spacing",
+      "value": "normal"
+    }
+  }
+]

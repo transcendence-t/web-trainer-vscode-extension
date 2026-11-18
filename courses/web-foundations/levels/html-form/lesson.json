@@ -1,0 +1,17 @@
+{
+  "focus": "index.html",
+  "title": "报名表单",
+  "summary": "表单标签告诉用户该填什么，required 提醒用户填写必填项。",
+  "tasks": [
+    "在 form 中添加 label，文字为「姓名」，for 值为 student-name。",
+    "添加文本输入框，设置 id=\"student-name\"、name=\"student\" 和 required。",
+    "添加提交按钮，设置 type=\"submit\"，文字为「提交报名」。"
+  ],
+  "hint": "label 的 for 要和输入框的 id 相同。name 是表单提交时使用的字段名。",
+  "goal": "给报名表添加有标签的必填文本框和提交按钮。",
+  "example": {
+    "language": "html",
+    "code": "<form>\n  <label for=\"book-title\">书名</label>\n  <input type=\"text\" id=\"book-title\" name=\"title\" required>\n  <button type=\"submit\">加入书单</button>\n</form>",
+    "note": "点击标签可以聚焦对应的输入框。留空并提交时，浏览器会提示填写书名。"
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "label": "有记录和零记录的时段共同累加",
+    "expect": {
+      "type": "function",
+      "name": "totalCheckouts",
+      "args": [
+        [
+          4,
+          0,
+          7
+        ]
+      ],
+      "value": 11
+    }
+  },
+  {
+    "label": "只记录一个时段时返回该时段的值",
+    "expect": {
+      "type": "function",
+      "name": "totalCheckouts",
+      "args": [
+        [
+          13
+        ]
+      ],
+      "value": 13
+    }
+  },
+  {
+    "label": "空数组的总量为 0",
+    "expect": {
+      "type": "function",
+      "name": "totalCheckouts",
+      "args": [
+        []
+      ],
+      "value": 0
+    }
+  },
+  {
+    "label": "相同的借出量仍分别计入总数",
+    "expect": {
+      "type": "function",
+      "name": "totalCheckouts",
+      "args": [
+        [
+          2,
+          2,
+          4
+        ]
+      ],
+      "value": 8
+    }
+  }
+]

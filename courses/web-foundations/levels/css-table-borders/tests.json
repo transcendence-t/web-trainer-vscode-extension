@@ -1,0 +1,38 @@
+[
+  {
+    "label": "相邻边框合并",
+    "expect": {
+      "type": "style",
+      "selector": "table",
+      "property": "border-collapse",
+      "value": "collapse"
+    }
+  },
+  {
+    "label": "表头有单元格边框",
+    "expect": {
+      "type": "style",
+      "selector": "th",
+      "property": "border-top",
+      "value": "1px solid rgb(154, 169, 181)"
+    }
+  },
+  {
+    "label": "数据格留出内边距",
+    "expect": {
+      "type": "style",
+      "selector": "td",
+      "property": "padding-left",
+      "value": "8px"
+    }
+  },
+  {
+    "label": "编号列右对齐",
+    "expect": {
+      "type": "style",
+      "selector": "td.code",
+      "property": "text-align",
+      "value": "right"
+    }
+  }
+]

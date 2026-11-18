@@ -1,0 +1,32 @@
+[
+  {
+    "label": "344px 视口扣除 24px",
+    "expect": {
+      "type": "style",
+      "selector": ".route",
+      "property": "width",
+      "value": "320px"
+    },
+    "viewport": 344
+  },
+  {
+    "label": "700px 视口仍保持限宽",
+    "expect": {
+      "type": "style",
+      "selector": ".route",
+      "property": "width",
+      "value": "360px"
+    },
+    "viewport": 700
+  },
+  {
+    "label": "宽视口居中",
+    "expect": {
+      "type": "layout",
+      "selector": ".route",
+      "relativeTo": "body",
+      "relation": "center-x"
+    },
+    "viewport": 700
+  }
+]

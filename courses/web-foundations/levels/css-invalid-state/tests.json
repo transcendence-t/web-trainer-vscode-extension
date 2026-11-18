@@ -1,0 +1,43 @@
+[
+  {
+    "label": "空的必填邮箱显示警示色",
+    "expect": {
+      "type": "style",
+      "selector": "#contact",
+      "property": "border-top-color",
+      "value": "rgb(124, 70, 14)"
+    }
+  },
+  {
+    "label": "错误格式仍显示警示色",
+    "expect": {
+      "type": "style",
+      "selector": "#contact",
+      "property": "border-top-color",
+      "value": "rgb(124, 70, 14)"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#contact",
+        "value": "bad-address"
+      }
+    ]
+  },
+  {
+    "label": "输入有效邮箱后恢复原边框",
+    "expect": {
+      "type": "style",
+      "selector": "#contact",
+      "property": "border-top-color",
+      "value": "rgb(154, 169, 181)"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#contact",
+        "value": "service@example.org"
+      }
+    ]
+  }
+]

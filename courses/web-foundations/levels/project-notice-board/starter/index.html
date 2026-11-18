@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>制作离线工坊通知板</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="sheet">
+    <h1>制作离线工坊通知板</h1>
+    <label for="demo">响应样例</label>
+    <select id="demo">
+      <option value="main">本周通知</option>
+      <option value="empty">空列表</option>
+      <option value="error">坏数据</option>
+    </select>
+    <button id="refresh" type="button">加载通知</button>
+    <p id="state" role="status">等待加载</p>
+    <ul id="notices"></ul>
+  </main>
+</body>
+</html>

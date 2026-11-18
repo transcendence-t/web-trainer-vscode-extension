@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "把返回入口固定在视口一角",
+  "goal": "用 fixed 把操作入口定位在视口上。",
+  "summary": "页面内容较长，底部入口应始终位于视口右下方，让读者便于返回顶部。",
+  "tasks": [
+    "把 #back 固定在视口右下角，右侧和底部各留 12px。",
+    "保留到 #top 的页内链接。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".help { position: fixed; right: 8px; bottom: 8px; }",
+    "note": "fixed 元素通常相对于视口定位。页面滚动时，入口继续留在同一位置。"
+  },
+  "hint": "position 填 fixed，再设 right 与 bottom。"
+}

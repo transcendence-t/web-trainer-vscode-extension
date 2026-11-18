@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>让读者手动播放提示音</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="sheet">
+    <h1>让读者手动播放提示音</h1>
+    <p>试听报到提示音。</p>
+    <audio id="arrival" controls preload="metadata" aria-describedby="transcript">
+      <source src="data:audio/wav;base64,UklGRmQGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YUAGAACAgICAgICAgICAgIB/f39/f4CAgIGBgYGBgYGAgH9+fn5+fn+AgYGCgoOCgoGAf35+fX19fX5/gYKDg4SEg4KBf359fHx8fH5/gIKDhIWFhIOBgH58e3t7e31+gIKEhYaGhYSCgH58enp6enx+gIKEhoeHhoWDgH58enl4eXt9f4KFh4iIiIaEgX57eXh3eHl8f4KFh4mJiYeFgn57eXd2d3h7foGFh4mKioiGg397eHZ1dXd5fYGEiIqLi4qHhIB8eHZ0dHZ4fICEiIuMjIuIhYB8eHVzc3R3e3+EiIuNjoyKhoF9eHVzcnN2en6DiIuOj46Lh4J9eHRycXJ0eH2Ch4yOkI+MiIN+eXRxcHFzd3yCh4yPkJCOioV/eXRxb29ydXuBhoyPkZGPi4aAenVxbm5wdHl/houQkpKRjYeBe3Vwbm1vc3h+hYuQk5OSjomCfHVwbWxtcXZ9hIqQk5STkIqEfXZxbWtscHV7g4qPk5WUkYyFfndxbWtrbnN6gYmPlJaWk46Hf3hxbGpqbXJ4gIiOlJaXlI+IgXlybGlpa3B3f4eOk5eYlZGKgnpzbWloam51fYWNk5eYl5KMhHtzbWlnaW1ze4SMk5eZmJSOhn11bmlnaGtyeoKLkpeamZWPh352bmlmZmpweIGKkZeampeRiYB3b2lmZmludn+IkZeam5iTi4J4cGlmZWdtdH2Hj5abnJmUjYN6cWplZGZrcnyFjpabnJuWjoV8cmtmZGVpcXqEjZWanZyXkId9dGxmY2Rob3iCjJSanZ2Zkol/dW1mY2NnbXaAipOanZ2alIuBd25nY2JlbHR+iJKZnZ6blY2DeG9oY2JkanJ8h5CYnZ6cl4+FenBoY2FjaHB6hY+XnZ+dmJGHfHJpZGFiZ294g42WnJ+empKJfnRrZGFiZm12gYyVm5+fm5SLgHVsZWFhZGt0f4qTm5+fnJaNgndtZmFhY2pzfYiSmp6gnZeOhHlvZ2JgYmhxe4aQmZ6gnpmQhntxaGJgYmdveYSOl52gn5qSiH1yaWNgYWZtd4KNlpygn5uUin90a2RgYWRsdYCLlJyfoJyVjIF2bGVhYGRqc36Jk5qfoJ2XjoN4bmZhYGNpcnyHkZmeoJ6Yj4V6cGdiYGJncHqFj5ieoJ6ZkYd8cmljYGJmbniDjZadn5+ak4l+c2pkYWFlbXaBjJWcn5+blIuAdWxlYWFla3R/ipOanp+clYyCd25mYmFkanN9iJGZnp+cl46EeW9oY2FjaXF7hpCYnZ+dmJCGe3FpZGJjaHB5hI6WnJ6dmJGIfXNrZWJjZ254goyUm56dmZKJf3VsZmNjZm12gIqTmZ2dmpOLgXduZ2NjZmx0foiRmJydmpSMg3lwaWRjZmtzfIaPl5ucmpWOhHtyamVkZWpye4SOlZqcm5aPhn1zbGdkZWpxeYOMk5mbmpeQiH51bWhlZmlveIGKkpeampeRiYB3b2lmZmlvdn+IkJaampeSioJ5cWtnZmludX6GjpWYmZeSi4N6cmxoZ2ltdHyFjZOXmZeTjYV8dG5paGltc3uDi5KWmJeTjYZ+dm9raGltcnmBiZCVl5eUjod/eHFsaWpscniAiI6TlpaUj4iBeXJtampscXd/ho2SlZWTj4mCe3RvbGttcXZ9hYuQlJWTj4qDfHZwbWxtcHZ8g4qPk5STkIuEfndybm1tcHV7goiNkZOSkIuFf3lzb25ucHV6gYeMkJKSj4uGgHp1cW9vcXR6f4WLjpGRj4yHgXt2cnBwcXR5foSJjY+Qj4yHgn14dHFwcnR5foOIjI6PjoyIg355dXJxcnV4fYKGio2OjYuIg396dnRyc3V4fIGFiYyNjYuIhIB7eHV0dHV4fICEiIqMjIqIhIB8eXZ1dXZ4fH+Dh4mLi4qIhYF9enh2dnd5e3+ChYiJiomHhYJ+e3l3d3d5e36BhIeIiYiHhYJ/fHp4eHh5e36Bg4WHiIeGhIKAfXt6eXl6fH6AgoSGhoaGhIKAfnx7enp7fH6AgoOFhYWFhIKAf318e3t8fX6AgYKEhISEg4KBf359fHx9fX5/gYKDg4ODgoKBgH9+fn1+fn9/gIGCgoKCgoGAgH9/f39/f3+AgICBgYGBgYCAgICAgICAgICA" type="audio/wav">
+    </audio>
+    <p id="transcript">声音说明：一次短提示音，表示报到已记录。</p>
+  </main>
+</body>
+</html>

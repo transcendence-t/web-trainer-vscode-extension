@@ -1,0 +1,25 @@
+[
+  {
+    "label": "aside 属于实验文章",
+    "expect": {
+      "type": "exists",
+      "selector": "article > aside#extension"
+    }
+  },
+  {
+    "label": "补充部分有三级标题",
+    "expect": {
+      "type": "text",
+      "selector": "#extension > h3",
+      "value": "延伸阅读"
+    }
+  },
+  {
+    "label": "实验主体说明仍在文章直属段落",
+    "expect": {
+      "type": "text",
+      "selector": "article > p",
+      "value": "折叠纸板能够改变受力方式。"
+    }
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "核对忽略空格的镜像口令",
+  "goal": "组合清理、数组反转与比较解决一个短算法任务。",
+  "summary": "校验英文工位口令时忽略大小写和普通空格。比较清理后的字符串与它的逆序。",
+  "tasks": [
+    "完成 isMirrorCode(text)，将英文字母统一大小写，去掉所有普通空格，再检查正反顺序是否相同。",
+    "没有剩余字符时返回 false。数字与其他 ASCII 符号仍参与比较。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "'AbBa'.toLowerCase().split('').reverse().join(''); // 'abba'",
+    "note": "字符串没有 reverse 方法。先转成字符数组，再把反转的字符连回字符串。"
+  },
+  "hint": "清理后的字符串必须非空。不要仅删除两端的空格。"
+}

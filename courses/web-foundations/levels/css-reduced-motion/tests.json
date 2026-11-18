@@ -1,0 +1,41 @@
+[
+  {
+    "label": "减少动效时静态显示",
+    "expect": {
+      "type": "style",
+      "selector": ".signal",
+      "property": "animation-name",
+      "value": "none",
+      "media": {
+        "query": "(prefers-reduced-motion: reduce)",
+        "matches": true
+      }
+    }
+  },
+  {
+    "label": "常规状态仍有淡入动画",
+    "expect": {
+      "type": "style",
+      "selector": ".signal",
+      "property": "animation-name",
+      "value": "fade-in",
+      "media": {
+        "query": "(prefers-reduced-motion: reduce)",
+        "matches": false
+      }
+    }
+  },
+  {
+    "label": "减少动效时状态保持可读",
+    "expect": {
+      "type": "style",
+      "selector": ".signal",
+      "property": "opacity",
+      "value": "1",
+      "media": {
+        "query": "(prefers-reduced-motion: reduce)",
+        "matches": true
+      }
+    }
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "focus": "style.css",
+  "title": "制作双数计算器",
+  "goal": "做出有两列操作区的计算器，支持加减法并在输入无效时给出提示。",
+  "summary": "用 CSS 把两个数字输入框和运算按钮分别排成一行。在 JavaScript 中读取当前输入、检查数值，再按按钮选择的方式计算并显示结果。",
+  "tasks": [
+    "在 style.css 将 .number-fields 和 .operations 分别排成两列，每列等宽，左右相隔 12px。结果区域放在两组控件下方。",
+    "在 script.js 补全 calculate。读取两个输入并去掉首尾空格，用 Number 转成数字。任何一项为空或无法转为有限数值时，显示「请输入两个有效数字。」。",
+    "点击加法按钮时显示两个数相加的结果。点击减法按钮时显示第一个数减第二个数。结果输出在 #calc-result。"
+  ],
+  "hint": "Number 会把空字符串转为数值 0。先识别空输入，再用 Number.isFinite 验证数值。用 3 减 8 可以核对减法操作数的顺序。",
+  "example": {
+    "language": "css",
+    "code": ".ticket-options {\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  gap: 12px;\n}",
+    "note": "订票页把两种票的选项排成等宽两列。minmax(0, 1fr) 让两列在窄窗口里也能一起缩小。"
+  }
+}

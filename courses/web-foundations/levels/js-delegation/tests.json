@@ -1,0 +1,78 @@
+[
+  {
+    "label": "页面开始时没有选中曲目",
+    "expect": {
+      "type": "text",
+      "selector": "#selected-song",
+      "value": "尚未选择"
+    }
+  },
+  {
+    "label": "直接点击按钮可以选中曲目",
+    "expect": {
+      "type": "text",
+      "selector": "#selected-song",
+      "value": "山间小调"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#song-list button[data-title=\"山间小调\"]"
+      }
+    ]
+  },
+  {
+    "label": "点击按钮里的 span 也能选中曲目",
+    "expect": {
+      "type": "text",
+      "selector": "#selected-song",
+      "value": "海边序曲"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#song-list button[data-title=\"山间小调\"]"
+      },
+      {
+        "type": "click",
+        "selector": "#song-list button[data-title=\"海边序曲\"] span"
+      }
+    ]
+  },
+  {
+    "label": "点击列表空白处保留已选曲目",
+    "expect": {
+      "type": "text",
+      "selector": "#selected-song",
+      "value": "山间小调"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#song-list button[data-title=\"山间小调\"]"
+      },
+      {
+        "type": "click",
+        "selector": "#song-list"
+      }
+    ]
+  },
+  {
+    "label": "新增后点击新曲目内层文字可以选中",
+    "expect": {
+      "type": "text",
+      "selector": "#selected-song",
+      "value": "蓝桥进行曲"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#add-song"
+      },
+      {
+        "type": "click",
+        "selector": "#song-list button[data-title=\"蓝桥进行曲\"] span"
+      }
+    ]
+  }
+]

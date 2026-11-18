@@ -1,0 +1,69 @@
+[
+  {
+    "label": "联系人电话存在",
+    "expect": {
+      "type": "function",
+      "name": "contactPhone",
+      "args": [
+        {
+          "contact": {
+            "phone": "010-78430001"
+          }
+        }
+      ],
+      "value": "010-78430001"
+    }
+  },
+  {
+    "label": "活动记录为空",
+    "expect": {
+      "type": "function",
+      "name": "contactPhone",
+      "args": [
+        null
+      ],
+      "value": "待登记"
+    }
+  },
+  {
+    "label": "联系人缺失",
+    "expect": {
+      "type": "function",
+      "name": "contactPhone",
+      "args": [
+        {}
+      ],
+      "value": "待登记"
+    }
+  },
+  {
+    "label": "显式空电话仍保留",
+    "expect": {
+      "type": "function",
+      "name": "contactPhone",
+      "args": [
+        {
+          "contact": {
+            "phone": ""
+          }
+        }
+      ],
+      "value": ""
+    }
+  },
+  {
+    "label": "联系人存在但没有号码",
+    "expect": {
+      "type": "function",
+      "name": "contactPhone",
+      "args": [
+        {
+          "contact": {
+            "name": "小周"
+          }
+        }
+      ],
+      "value": "待登记"
+    }
+  }
+]

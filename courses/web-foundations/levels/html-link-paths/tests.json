@@ -1,0 +1,29 @@
+[
+  {
+    "label": "借用规则从上一级进入 guides",
+    "expect": {
+      "type": "attribute",
+      "selector": "a#rules",
+      "name": "href",
+      "value": "../guides/loan.html"
+    }
+  },
+  {
+    "label": "站外链接含协议和主机",
+    "expect": {
+      "type": "attribute",
+      "selector": "a#library",
+      "name": "href",
+      "value": "https://example.org/catalog/"
+    }
+  },
+  {
+    "label": "咨询链接采用 mailto",
+    "expect": {
+      "type": "attribute",
+      "selector": "a#write",
+      "name": "href",
+      "value": "mailto:desk@example.org"
+    }
+  }
+]

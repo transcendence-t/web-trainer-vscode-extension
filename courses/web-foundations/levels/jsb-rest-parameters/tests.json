@@ -1,0 +1,54 @@
+[
+  {
+    "label": "累计不同批次",
+    "expect": {
+      "type": "function",
+      "name": "shippedCount",
+      "args": [
+        6,
+        4,
+        9,
+        0
+      ],
+      "value": 19
+    }
+  },
+  {
+    "label": "没有新出库时保留登记数量",
+    "expect": {
+      "type": "function",
+      "name": "shippedCount",
+      "args": [
+        5
+      ],
+      "value": 5
+    }
+  },
+  {
+    "label": "可只传一个新批次",
+    "expect": {
+      "type": "function",
+      "name": "shippedCount",
+      "args": [
+        0,
+        7
+      ],
+      "value": 7
+    }
+  },
+  {
+    "label": "也能处理四个新批次",
+    "expect": {
+      "type": "function",
+      "name": "shippedCount",
+      "args": [
+        0,
+        1,
+        3,
+        2,
+        4
+      ],
+      "value": 10
+    }
+  }
+]

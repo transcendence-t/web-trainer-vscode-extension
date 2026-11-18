@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "识别表单必填项",
+  "goal": "按属性给场馆申请表的必填输入框加上统一标记。",
+  "summary": "方括号里的属性名检查元素是否具有该属性。input[required] 会选中带 required 的输入框。",
+  "tasks": [
+    "用属性选择器选中有 required 属性的 input。",
+    "把必填输入框的背景设为 #fff9eb、边框颜色设为 #ad6822。联系电话输入框保留原样式。"
+  ],
+  "hint": "在方括号里写 required，浏览器会检查属性是否存在。刷新预览后对照「联系电话（选填）」。",
+  "example": {
+    "language": "css",
+    "code": "a[download] {\n  font-weight: 700;\n}",
+    "note": "资源清单中，带 download 属性的链接用于下载讲义。这条规则将这类链接加粗。"
+  }
+}

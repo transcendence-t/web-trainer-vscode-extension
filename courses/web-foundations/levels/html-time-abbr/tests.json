@@ -1,0 +1,36 @@
+[
+  {
+    "label": "日期使用 time 且文字保留",
+    "expect": {
+      "type": "text",
+      "selector": "time",
+      "value": "5 月 18 日"
+    }
+  },
+  {
+    "label": "日期用 ISO 格式",
+    "expect": {
+      "type": "attribute",
+      "selector": "time",
+      "name": "datetime",
+      "value": "2027-05-18"
+    }
+  },
+  {
+    "label": "CAD 使用 abbr",
+    "expect": {
+      "type": "text",
+      "selector": "abbr",
+      "value": "CAD"
+    }
+  },
+  {
+    "label": "提供缩写全称",
+    "expect": {
+      "type": "attribute",
+      "selector": "abbr",
+      "name": "title",
+      "value": "计算机辅助设计"
+    }
+  }
+]

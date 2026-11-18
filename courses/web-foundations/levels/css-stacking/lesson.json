@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "把状态签叠在卡片前面",
+  "goal": "对同一层叠上下文里的定位元素设置 z-index。",
+  "summary": "状态签在 DOM 中排在背景卡前面，但视觉上应覆盖卡片的右上边缘。",
+  "tasks": [
+    "把 .status 层的 z-index 设为 2，把 .card-face 设为 1。",
+    "保留已有的定位与重叠位置。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".back { position: absolute; z-index: 1; }\n.front { position: absolute; z-index: 2; }",
+    "note": "在同一层叠上下文中，较高层级的定位元素绘制在较低层级之上。"
+  },
+  "hint": "起始样式已经给两层添加定位，在各自规则里声明 z-index。"
+}

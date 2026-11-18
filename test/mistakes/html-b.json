@@ -1,0 +1,38 @@
+{
+  "html-definition-list": {
+    "name": "用普通段落写留鸟的释义",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>观鸟术语表</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>观鸟术语表</h1>\n  <dl>\n    <dt>翼展</dt>\n    <dd>两翼展开时，两侧翼尖之间的距离。</dd>\n    <dt>留鸟</dt>\n    <p>全年留在同一地区生活的鸟。</p>\n  </dl>\n</main>\n</body>\n</html>\n"
+    }
+  },
+  "html-link": {
+    "name": "锚点链接的 href 漏写井号",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>页内导航</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>校园实训导览</h1>\n    <nav aria-label=\"页内导航\">\n      <a href=\"lab\">查看实训室</a>\n    </nav>\n    <section id=\"lab\">\n      <h2>网页设计实训室</h2>\n      <p>这里可以练习制作和调试网页。</p>\n    </section>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-image": {
+    "name": "把图片描述写进 title 属性",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>图片与替代文字</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>认识实训楼</h1>\n    <figure>\n      <img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAABMCAYAAACCuj7sAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALESURBVHhe7dKxcRRBEEZhRQShyCQGxUKCmJhYFBkcbutpmBLb0j87u8/4HFW35q7vPf34/eshHfXEP0j/w4DUYkBqMSC1GJBaDEgtBqQWA1KLAanFgNRiQP/w9fn5Dc7IgF5hMDPcvavbB8QwjuD/vJNbBsQAPhLfurrbBMQfOoGf4YouHxB/1BX4ma7kkgHxBzwTftbdXSYg/lA74HfY0dYB8QfZGb/bLrYLiIe/In7nM9siIB74TniLszl1QDzmnfE2Z3G6gHg4vcWbrXSKgHggvR9vmbYsIB5CfbxxQjQgfmF9Ht7+s0QDGnl5eVED75lmQJvjPdMMaHO8Z5oBbY73TDOgzfGeaQa0Od4zzYA2x3umGdDmeM80A9oc75l2+oB+Ph5TnCfOE+c/At8gzhPnqc7ynmkGNNjp4hvEeeI81VneM82ABjtdfIM4T5ynOst7phnQYKeLbxDnifNUZ3nPNAMa7HTxDeI8cZ7qLO+ZZkCDnS6+QZwnzlOd5T3TDGiw08U3iPPEeaqzvGeaAQ12uvgGcZ44T3WW90wzoMFOF98gzhPnqc7ynmkGVGYfjz/vxneOvjnCeaqzvGeaAZVZRjLDd46+OcJ5qrO8Z5oBlVlGMsN3jr45wnmqs7xnmgGVWUYyw3eOvjnCeaqzvGfa6QNKYiQz3F2F90wzoIKRzHB3Fd4zzYAKRjLD3VV4zzQDKhjJDHdX4T3TDKhgJDPcXYX3TDOggpHMcHcV3jPNgApGMsPdVXjPNAMqGMkMd1fhPdMMqGAkM9xdhfdMM6CCkcxwdxXeM82ACkYyw91VeM80AyoYyQx3V+E90wyoYCQz3F2F90wzoIKRzHB3Fd4zzYAKRjLD3VV4zzQDKhjJDHdX4T3TDKhgJDPcXYX3THv68v3bQzrKgNRiQGoxILUYkFoMSC0GpBYDUosBqcWA1PIXDwj3VuNdWsYAAAAASUVORK5CYII=\" width=\"144\" height=\"76\" title=\"实训楼示意图\">\n      <figcaption>网页设计实训室</figcaption>\n    </figure>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-table": {
+    "name": "将薄荷和数量写进同一个单元格",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>本周育苗记录</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>本周育苗记录</h1>\n  <table>\n    <tr>\n      <td>薄荷 6 盆</td>\n    </tr>\n    <tr>\n      <td>罗勒</td>\n      <td>4 盆</td>\n    </tr>\n  </table>\n</main>\n</body>\n</html>\n"
+    }
+  },
+  "html-table-head": {
+    "name": "把书画室的行表头标记为列标题",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>社区活动中心</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>社区活动中心</h1>\n  <table>\n    <caption>场地开放时间</caption>\n    <thead>\n      <tr><th scope=\"col\">场地</th><th scope=\"col\">开放时间</th></tr>\n    </thead>\n    <tbody>\n      <tr><th scope=\"row\">乒乓球室</th><td>09:00–12:00</td></tr>\n      <tr><th scope=\"col\">书画室</th><td>13:30–17:00</td></tr>\n    </tbody>\n  </table>\n</main>\n</body>\n</html>\n"
+    }
+  },
+  "html-landmarks": {
+    "name": "把整页页脚放进 main",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>河畔夜跑</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<div class=\"sheet\">\n  <header>\n    <h1>河畔夜跑</h1>\n    <nav>\n      <a href=\"#meeting\">查看集合点</a>\n    </nav>\n  </header>\n  <main>\n    <h2 id=\"meeting\">集合点</h2>\n    <p>周五 19:30 在滨河公园东门签到。</p>\n    <footer>\n      <p>河畔跑团维护</p>\n    </footer>\n  </main>\n</div>\n</body>\n</html>\n"
+    }
+  }
+}

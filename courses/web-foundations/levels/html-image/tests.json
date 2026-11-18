@@ -1,0 +1,19 @@
+[
+  {
+    "label": "图片有描述性的替代文字",
+    "expect": {
+      "type": "attribute",
+      "selector": "figure > img",
+      "name": "alt",
+      "value": "实训楼示意图"
+    }
+  },
+  {
+    "label": "图片后有图注",
+    "expect": {
+      "type": "text",
+      "selector": "figure > img + figcaption",
+      "value": "网页设计实训室"
+    }
+  }
+]

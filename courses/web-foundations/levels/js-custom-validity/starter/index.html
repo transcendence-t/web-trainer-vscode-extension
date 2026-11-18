@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>把两个口令字段的匹配结果交给浏览器</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="sheet">
+    <h1>把两个口令字段的匹配结果交给浏览器</h1>
+    <form>
+    <p><label for="password">新口令</label> <input id="password" type="password" required></p>
+    <p><label for="confirm">确认口令</label> <input id="confirm" type="password" required aria-describedby="feedback"></p>
+    <p id="feedback" role="status"></p><button type="submit">设置</button>
+    </form>
+  </main>
+</body>
+</html>

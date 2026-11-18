@@ -1,0 +1,70 @@
+[
+  {
+    "label": "模板初始不显示卡片",
+    "expect": {
+      "type": "count",
+      "selector": "#cards > li",
+      "value": 0
+    }
+  },
+  {
+    "label": "生成两张带标题的卡",
+    "expect": {
+      "type": "count",
+      "selector": "#cards > li .model",
+      "value": 2
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#build"
+      }
+    ]
+  },
+  {
+    "label": "第一张卡使用第一个名称",
+    "expect": {
+      "type": "text",
+      "selector": "#cards > li:first-child .model",
+      "value": "测距仪"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#build"
+      }
+    ]
+  },
+  {
+    "label": "第二张卡关联正确编号",
+    "expect": {
+      "type": "text",
+      "selector": "#cards > li:nth-child(2) .code",
+      "value": "R16"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#build"
+      }
+    ]
+  },
+  {
+    "label": "重复生成后仍是两张卡",
+    "expect": {
+      "type": "count",
+      "selector": "#cards > li",
+      "value": 2
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#build"
+      },
+      {
+        "type": "click",
+        "selector": "#build"
+      }
+    ]
+  }
+]

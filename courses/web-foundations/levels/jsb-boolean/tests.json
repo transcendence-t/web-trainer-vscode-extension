@@ -1,0 +1,57 @@
+[
+  {
+    "label": "普通备注可以清空",
+    "expect": {
+      "type": "function",
+      "name": "canClearNote",
+      "args": [
+        "放在前台"
+      ],
+      "value": true
+    }
+  },
+  {
+    "label": "空字符串返回 false",
+    "expect": {
+      "type": "function",
+      "name": "canClearNote",
+      "args": [
+        ""
+      ],
+      "value": false
+    }
+  },
+  {
+    "label": "字符串 0 也是已经输入的字符",
+    "expect": {
+      "type": "function",
+      "name": "canClearNote",
+      "args": [
+        "0"
+      ],
+      "value": true
+    }
+  },
+  {
+    "label": "仅有空格时仍可清空",
+    "expect": {
+      "type": "function",
+      "name": "canClearNote",
+      "args": [
+        " "
+      ],
+      "value": true
+    }
+  },
+  {
+    "label": "字符串 false 也是已经输入的文字",
+    "expect": {
+      "type": "function",
+      "name": "canClearNote",
+      "args": [
+        "false"
+      ],
+      "value": true
+    }
+  }
+]

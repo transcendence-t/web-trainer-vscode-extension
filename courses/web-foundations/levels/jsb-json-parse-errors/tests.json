@@ -1,0 +1,64 @@
+[
+  {
+    "label": "合法数组按原内容读取",
+    "expect": {
+      "type": "function",
+      "name": "readChecklist",
+      "args": [
+        "[\"纸张\",\"笔\"]"
+      ],
+      "value": [
+        "纸张",
+        "笔"
+      ]
+    }
+  },
+  {
+    "label": "不同类型的元素仍保留",
+    "expect": {
+      "type": "function",
+      "name": "readChecklist",
+      "args": [
+        "[0,false,null]"
+      ],
+      "value": [
+        0,
+        false,
+        null
+      ]
+    }
+  },
+  {
+    "label": "未闭合文本得到空数组",
+    "expect": {
+      "type": "function",
+      "name": "readChecklist",
+      "args": [
+        "[\"纸张\""
+      ],
+      "value": []
+    }
+  },
+  {
+    "label": "普通对象也不符合导入格式",
+    "expect": {
+      "type": "function",
+      "name": "readChecklist",
+      "args": [
+        "{\"name\":\"笔\"}"
+      ],
+      "value": []
+    }
+  },
+  {
+    "label": "单独的 null 不是数组",
+    "expect": {
+      "type": "function",
+      "name": "readChecklist",
+      "args": [
+        "null"
+      ],
+      "value": []
+    }
+  }
+]

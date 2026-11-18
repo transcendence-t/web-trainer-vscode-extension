@@ -1,0 +1,42 @@
+[
+  {
+    "label": "主清单有两个步骤",
+    "expect": {
+      "type": "count",
+      "selector": "ol#checklist > li",
+      "value": 2
+    }
+  },
+  {
+    "label": "子清单位于第一步骤内部",
+    "expect": {
+      "type": "count",
+      "selector": "#checklist > li:first-child > ul > li",
+      "value": 2
+    }
+  },
+  {
+    "label": "先检查电源线",
+    "expect": {
+      "type": "text",
+      "selector": "#checklist li:first-child > ul > li:first-child",
+      "value": "电源线"
+    }
+  },
+  {
+    "label": "后检查保护套",
+    "expect": {
+      "type": "text",
+      "selector": "#checklist li:first-child > ul > li:last-child",
+      "value": "保护套"
+    }
+  },
+  {
+    "label": "最后一步提交记录",
+    "expect": {
+      "type": "text",
+      "selector": "#checklist > li:last-child",
+      "value": "提交记录"
+    }
+  }
+]

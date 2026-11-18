@@ -1,0 +1,50 @@
+[
+  {
+    "label": "零个余位必须保留",
+    "expect": {
+      "type": "function",
+      "name": "availableSeats",
+      "args": [
+        0,
+        20
+      ],
+      "value": 0
+    }
+  },
+  {
+    "label": "空值使用计划数",
+    "expect": {
+      "type": "function",
+      "name": "availableSeats",
+      "args": [
+        null,
+        18
+      ],
+      "value": 18
+    }
+  },
+  {
+    "label": "已记录数量优先",
+    "expect": {
+      "type": "function",
+      "name": "availableSeats",
+      "args": [
+        6,
+        18
+      ],
+      "value": 6
+    }
+  },
+  {
+    "label": "两项都未记录时可返回 null",
+    "expect": {
+      "type": "function",
+      "name": "availableSeats",
+      "args": [
+        null,
+        null
+      ],
+      "value": null
+    }
+  }
+]

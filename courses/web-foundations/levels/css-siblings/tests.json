@@ -1,0 +1,29 @@
+[
+  {
+    "label": "第一个引言加粗",
+    "expect": {
+      "type": "style",
+      "selector": "#lead-one",
+      "property": "font-weight",
+      "value": "700"
+    }
+  },
+  {
+    "label": "第二个引言也加粗",
+    "expect": {
+      "type": "style",
+      "selector": "#lead-two",
+      "property": "font-weight",
+      "value": "700"
+    }
+  },
+  {
+    "label": "正文保持普通粗细",
+    "expect": {
+      "type": "style",
+      "selector": "#detail",
+      "property": "font-weight",
+      "value": "400"
+    }
+  }
+]

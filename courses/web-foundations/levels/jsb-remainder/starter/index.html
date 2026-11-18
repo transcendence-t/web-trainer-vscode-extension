@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>求分组后剩下的人数</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<main class="sheet">
+  <h1>求分组后剩下的人数</h1>
+  <p>示例调用 <code>ungroupedCount(22, 6)</code></p>
+  <p>运行结果 <output id="example-result">待填写函数</output></p>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const result = ungroupedCount(22, 6);
+      if (result !== undefined) {
+        document.querySelector('#example-result').textContent = JSON.stringify(result);
+      }
+    });
+  </script>
+</main>
+</body>
+</html>

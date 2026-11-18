@@ -1,0 +1,44 @@
+[
+  {
+    "label": "首个工位已核对",
+    "expect": {
+      "type": "text",
+      "selector": "li:first-child",
+      "value": "已核对"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#mark"
+      }
+    ]
+  },
+  {
+    "label": "另一个工位也被更新",
+    "expect": {
+      "type": "text",
+      "selector": "li:last-child",
+      "value": "已核对"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#mark"
+      }
+    ]
+  },
+  {
+    "label": "暂停开放的状态保留",
+    "expect": {
+      "type": "text",
+      "selector": "li:nth-child(2)",
+      "value": "暂停开放"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#mark"
+      }
+    ]
+  }
+]

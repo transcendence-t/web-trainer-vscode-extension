@@ -1,0 +1,88 @@
+[
+  {
+    "label": "初始说明收起",
+    "expect": {
+      "type": "style",
+      "selector": "#loan-guide[hidden]",
+      "property": "display",
+      "value": "none"
+    }
+  },
+  {
+    "label": "初始按钮报告收起",
+    "expect": {
+      "type": "attribute",
+      "selector": "#toggle-guide",
+      "name": "aria-expanded",
+      "value": "false"
+    }
+  },
+  {
+    "label": "点击按钮后说明可见",
+    "expect": {
+      "type": "style",
+      "selector": "#loan-guide:not([hidden])",
+      "property": "display",
+      "value": "block"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#toggle-guide"
+      }
+    ]
+  },
+  {
+    "label": "打开后按钮报告展开",
+    "expect": {
+      "type": "attribute",
+      "selector": "#toggle-guide",
+      "name": "aria-expanded",
+      "value": "true"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#toggle-guide"
+      }
+    ]
+  },
+  {
+    "label": "再次点击后说明收起",
+    "expect": {
+      "type": "style",
+      "selector": "#loan-guide[hidden]",
+      "property": "display",
+      "value": "none"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#toggle-guide"
+      },
+      {
+        "type": "click",
+        "selector": "#toggle-guide"
+      }
+    ]
+  },
+  {
+    "label": "收起后同步恢复按钮状态",
+    "expect": {
+      "type": "attribute",
+      "selector": "#toggle-guide",
+      "name": "aria-expanded",
+      "value": "false"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#toggle-guide"
+      },
+      {
+        "type": "click",
+        "selector": "#toggle-guide"
+      }
+    ]
+  }
+]

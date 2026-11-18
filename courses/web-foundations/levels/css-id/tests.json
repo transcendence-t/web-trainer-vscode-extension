@@ -1,0 +1,38 @@
+[
+  {
+    "label": "闭馆通知的文字变为棕色",
+    "expect": {
+      "type": "style",
+      "selector": "#closure",
+      "property": "color",
+      "value": "rgb(117, 70, 25)"
+    }
+  },
+  {
+    "label": "闭馆通知采用浅黄背景",
+    "expect": {
+      "type": "style",
+      "selector": "#closure",
+      "property": "background-color",
+      "value": "rgb(255, 245, 218)"
+    }
+  },
+  {
+    "label": "开放时间文字保留原色",
+    "expect": {
+      "type": "style",
+      "selector": "#hours",
+      "property": "color",
+      "value": "rgb(36, 52, 71)"
+    }
+  },
+  {
+    "label": "开放时间背景保留原色",
+    "expect": {
+      "type": "style",
+      "selector": "#hours",
+      "property": "background-color",
+      "value": "rgb(241, 245, 249)"
+    }
+  }
+]

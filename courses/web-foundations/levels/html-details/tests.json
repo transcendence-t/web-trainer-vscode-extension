@@ -1,0 +1,48 @@
+[
+  {
+    "label": "问题是折叠项开头的 summary",
+    "expect": {
+      "type": "text",
+      "selector": "details#renew > summary:first-child",
+      "value": "如何延长借阅？"
+    }
+  },
+  {
+    "label": "打开页面时问答收起",
+    "expect": {
+      "type": "exists",
+      "selector": "details#renew:not([open])"
+    }
+  },
+  {
+    "label": "点击问题后显示容器里的回答",
+    "expect": {
+      "type": "text",
+      "selector": "details#renew[open] p",
+      "value": "在到期前到服务台续借一次。"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#renew > summary"
+      }
+    ]
+  },
+  {
+    "label": "再次点击问题后问答重新收起",
+    "expect": {
+      "type": "exists",
+      "selector": "details#renew:not([open])"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#renew > summary"
+      },
+      {
+        "type": "click",
+        "selector": "#renew > summary"
+      }
+    ]
+  }
+]

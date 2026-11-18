@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "让标题字号跟随屏幕且限制上下界",
+  "goal": "用 clamp 在最小值、流式计算值和最大值之间取值。",
+  "summary": "展览标题在窄屏至少 20px，宽屏最多 36px，中间用视口宽度的 4% 平滑变化。",
+  "tasks": [
+    "用 clamp 设置 .exhibition 的字号。",
+    "分别用 360px、700px 和 1100px 视口核对最小值、中间值和最大值。"
+  ],
+  "example": {
+    "language": "css",
+    "code": "h2 { font-size: clamp(18px, 3vw, 30px); }",
+    "note": "在范围内时使用中间的计算值，超出时限制到最近的边界。"
+  },
+  "hint": "clamp 的顺序是最小值、首选值、最大值。"
+}

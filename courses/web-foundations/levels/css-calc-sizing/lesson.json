@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "用 calc 为图卡扣除两侧留白",
+  "goal": "在 CSS 计算中组合百分比与固定长度。",
+  "summary": "导览图卡在小屏需要两侧各留 12px，屏幕较宽时宽度最大 360px。",
+  "tasks": [
+    "使用 calc 让 .route 的宽度为可用宽度减去 24px。",
+    "保持左右居中，最大宽度为 360px。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".card { width: calc(100% - 2rem); max-width: 32rem; margin-inline: auto; }",
+    "note": "calc 可以混合百分比和长度。加号、减号的两边需要空格。"
+  },
+  "hint": "两侧留白合计 24px。用 max-width 设上限，用自动外边距居中。"
+}

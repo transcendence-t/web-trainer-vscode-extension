@@ -1,0 +1,38 @@
+[
+  {
+    "label": "按钮背景为绿色",
+    "expect": {
+      "type": "style",
+      "selector": ".signup",
+      "property": "background-color",
+      "value": "rgb(18, 90, 70)"
+    }
+  },
+  {
+    "label": "按钮文字为白色",
+    "expect": {
+      "type": "style",
+      "selector": ".signup",
+      "property": "color",
+      "value": "rgb(255, 255, 255)"
+    }
+  },
+  {
+    "label": "内边距随方向变化",
+    "expect": {
+      "type": "style",
+      "selector": ".signup",
+      "property": "padding",
+      "value": "8px 16px"
+    }
+  },
+  {
+    "label": "按钮具有胶囊形圆角",
+    "expect": {
+      "type": "style",
+      "selector": ".signup",
+      "property": "border-radius",
+      "value": "999px"
+    }
+  }
+]

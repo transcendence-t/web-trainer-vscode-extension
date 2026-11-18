@@ -1,0 +1,20 @@
+[
+  {
+    "label": "一级标题文字正确",
+    "expect": {
+      "type": "text",
+      "selector": "main > h1",
+      "value": "我的第一张网页"
+    },
+    "hint": "在 main 内使用 <h1>。"
+  },
+  {
+    "label": "段落紧接标题",
+    "expect": {
+      "type": "text",
+      "selector": "main > h1 + p",
+      "value": "我正在学习网页设计。"
+    },
+    "hint": "把 <p> 写在 </h1> 后面，留意句号。"
+  }
+]

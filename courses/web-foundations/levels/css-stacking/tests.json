@@ -1,0 +1,29 @@
+[
+  {
+    "label": "标签绘制在较高层",
+    "expect": {
+      "type": "style",
+      "selector": ".status",
+      "property": "z-index",
+      "value": "2"
+    }
+  },
+  {
+    "label": "背景卡位于下面一层",
+    "expect": {
+      "type": "style",
+      "selector": ".card-face",
+      "property": "z-index",
+      "value": "1"
+    }
+  },
+  {
+    "label": "状态签保留定位",
+    "expect": {
+      "type": "style",
+      "selector": ".status",
+      "property": "position",
+      "value": "absolute"
+    }
+  }
+]

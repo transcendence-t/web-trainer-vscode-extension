@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "处理格式错误或类型不符的 JSON",
+  "goal": "用 try…catch 处理 JSON.parse 的异常，并检查解析结果。",
+  "summary": "导入功能接收 JSON 文本。只接受数组数据，其余格式返回空清单。",
+  "tasks": [
+    "完成 readChecklist(text)，将可解析成数组的 JSON 文本转换为数组。",
+    "JSON 损坏或解析结果不是数组时返回 []。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "try {\n  const data = JSON.parse(text);\n  console.log(data);\n} catch (error) {\n  console.log('读取失败');\n}",
+    "note": "JSON.parse 解析失败会抛出异常。解析成功只代表格式有效，还可以检查数据类型。"
+  },
+  "hint": "把 JSON.parse 写在 try 内。用 Array.isArray 区分数组和其他 JSON 值。"
+}

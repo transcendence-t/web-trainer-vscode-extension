@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "用模板字符串写余位提示",
+  "goal": "在一句提示里插入自习室名称和随时变化的座位数。",
+  "summary": "模板字符串使用反引号包裹。写在 ${} 里的变量或表达式会先求值，再放到文字中。",
+  "tasks": [
+    "在 seatMessage 的大括号内用模板字符串插入 roomName 和 seatsLeft。",
+    "用 return 返回整句提示，形如「南楼自习室还有 8 个空位。」。在数字前后各留一个空格，保留句号。"
+  ],
+  "hint": "检查字符串的两端是否用了反引号。看到 ${roomName} 原样出现在结果里时，就要检查这里。",
+  "example": {
+    "language": "javascript",
+    "code": "const route = '图书馆线';\nconst stops = 5;\nconst description = `${route}共 ${stops} 站`;",
+    "note": "路线卡片用同一个模板生成「图书馆线共 5 站」，只需把路线名和站数传给模板。"
+  }
+}

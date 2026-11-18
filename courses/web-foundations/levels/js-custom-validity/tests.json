@@ -1,0 +1,114 @@
+[
+  {
+    "label": "不同口令使确认控件无效",
+    "expect": {
+      "type": "exists",
+      "selector": "#confirm:invalid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#password",
+        "value": "demo-12"
+      },
+      {
+        "type": "input",
+        "selector": "#confirm",
+        "value": "demo-13"
+      }
+    ]
+  },
+  {
+    "label": "指出不一致的原因",
+    "expect": {
+      "type": "text",
+      "selector": "#feedback",
+      "value": "两次口令不一致"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#password",
+        "value": "demo-12"
+      },
+      {
+        "type": "input",
+        "selector": "#confirm",
+        "value": "demo-13"
+      }
+    ]
+  },
+  {
+    "label": "修改第一项后立即重新检查",
+    "expect": {
+      "type": "exists",
+      "selector": "#confirm:valid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#password",
+        "value": "old"
+      },
+      {
+        "type": "input",
+        "selector": "#confirm",
+        "value": "new"
+      },
+      {
+        "type": "input",
+        "selector": "#password",
+        "value": "new"
+      }
+    ]
+  },
+  {
+    "label": "清空确认框时保留原生必填",
+    "expect": {
+      "type": "exists",
+      "selector": "#confirm:invalid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#password",
+        "value": "demo"
+      },
+      {
+        "type": "input",
+        "selector": "#confirm",
+        "value": "other"
+      },
+      {
+        "type": "input",
+        "selector": "#confirm",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "label": "清空后没有旧的匹配错误",
+    "expect": {
+      "type": "text",
+      "selector": "#feedback",
+      "value": ""
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#password",
+        "value": "demo"
+      },
+      {
+        "type": "input",
+        "selector": "#confirm",
+        "value": "other"
+      },
+      {
+        "type": "input",
+        "selector": "#confirm",
+        "value": ""
+      }
+    ]
+  }
+]

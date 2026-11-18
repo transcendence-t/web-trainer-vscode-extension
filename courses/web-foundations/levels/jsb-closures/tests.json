@@ -1,0 +1,53 @@
+[
+  {
+    "label": "交替取号独立增加",
+    "expect": {
+      "type": "function",
+      "name": "showTickets",
+      "args": [
+        10,
+        30
+      ],
+      "value": [
+        10,
+        30,
+        11,
+        31
+      ]
+    }
+  },
+  {
+    "label": "两个初始号相同也各自增长",
+    "expect": {
+      "type": "function",
+      "name": "showTickets",
+      "args": [
+        7,
+        7
+      ],
+      "value": [
+        7,
+        7,
+        8,
+        8
+      ]
+    }
+  },
+  {
+    "label": "可从零开始编号",
+    "expect": {
+      "type": "function",
+      "name": "showTickets",
+      "args": [
+        0,
+        100
+      ],
+      "value": [
+        0,
+        100,
+        1,
+        101
+      ]
+    }
+  }
+]

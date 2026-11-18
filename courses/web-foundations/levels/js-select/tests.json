@@ -1,0 +1,80 @@
+[
+  {
+    "label": "请选择场次时显示初始提示",
+    "expect": {
+      "type": "text",
+      "selector": "#meeting-point",
+      "value": "请先选择导览场次。"
+    }
+  },
+  {
+    "label": "选择陶艺馆显示门口集合",
+    "expect": {
+      "type": "text",
+      "selector": "#meeting-point",
+      "value": "10:00 在陶艺馆门口集合。"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#tour",
+        "value": "ceramics"
+      }
+    ]
+  },
+  {
+    "label": "从陶艺馆改到钟表馆后更新地点",
+    "expect": {
+      "type": "text",
+      "selector": "#meeting-point",
+      "value": "14:00 在钟表馆咨询台集合。"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#tour",
+        "value": "ceramics"
+      },
+      {
+        "type": "input",
+        "selector": "#tour",
+        "value": "clocks"
+      }
+    ]
+  },
+  {
+    "label": "版画馆有自己的集合地点",
+    "expect": {
+      "type": "text",
+      "selector": "#meeting-point",
+      "value": "16:00 在版画馆大厅集合。"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#tour",
+        "value": "prints"
+      }
+    ]
+  },
+  {
+    "label": "切回空选项时恢复提示",
+    "expect": {
+      "type": "text",
+      "selector": "#meeting-point",
+      "value": "请先选择导览场次。"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#tour",
+        "value": "clocks"
+      },
+      {
+        "type": "input",
+        "selector": "#tour",
+        "value": ""
+      }
+    ]
+  }
+]

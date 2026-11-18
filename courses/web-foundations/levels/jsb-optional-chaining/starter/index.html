@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>安全读取可能缺失的嵌套联系方式</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="sheet">
+    <h1>安全读取可能缺失的嵌套联系方式</h1>
+    <p>试一试 <code>contactPhone({"contact":null})</code></p>
+    <p>运行结果 <output id="example-result" aria-live="polite">待填写函数</output></p>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const result = contactPhone({"contact":null});
+        if (result !== undefined) {
+          document.querySelector("#example-result").textContent = JSON.stringify(result);
+        }
+      });
+    </script>
+  </main>
+</body>
+</html>

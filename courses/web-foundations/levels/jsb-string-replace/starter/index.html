@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>填充通知里的每一处占位符</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="sheet">
+    <h1>填充通知里的每一处占位符</h1>
+    <p>试一试 <code>fillRoom("{room}今天开放。请到{room}签到。", "光影室")</code></p>
+    <p>运行结果 <output id="example-result" aria-live="polite">待填写函数</output></p>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const result = fillRoom("{room}今天开放。请到{room}签到。", "光影室");
+        if (result !== undefined) {
+          document.querySelector("#example-result").textContent = JSON.stringify(result);
+        }
+      });
+    </script>
+  </main>
+</body>
+</html>

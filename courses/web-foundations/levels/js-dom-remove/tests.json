@@ -1,0 +1,62 @@
+[
+  {
+    "label": "可点击内部文字删除对应行",
+    "expect": {
+      "type": "count",
+      "selector": "#stand",
+      "value": 0
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#stand .remove span"
+      }
+    ]
+  },
+  {
+    "label": "保留未点击的两行",
+    "expect": {
+      "type": "count",
+      "selector": "#rows > li",
+      "value": 2
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#stand .remove"
+      }
+    ]
+  },
+  {
+    "label": "点击普通行文字不会删除",
+    "expect": {
+      "type": "count",
+      "selector": "#rows > li",
+      "value": 3
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#stand"
+      }
+    ]
+  },
+  {
+    "label": "连续删除只影响相应项目",
+    "expect": {
+      "type": "count",
+      "selector": "#rows > li#stand:only-child",
+      "value": 1
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#camera .remove span"
+      },
+      {
+        "type": "click",
+        "selector": "#lamp .remove"
+      }
+    ]
+  }
+]

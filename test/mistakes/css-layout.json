@@ -1,0 +1,116 @@
+{
+  "css-flex-basis": {
+    "name": "只让它们增长，保留了不同的基准宽度",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.flow { display: flex; gap: 8px; }\n.flow > span { padding: 4px; background: #e6f4ee; }\n#step-a { width: 60px; }\n#step-b { width: 128px; }\n.detail { flex: 1; }\n\n.phase { flex-grow: 1; }\n"
+    }
+  },
+  "css-flex-shrink": {
+    "name": "让两个项目一起收缩，按钮也变窄",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.file-bar { display: flex; width: 260px; gap: 12px; }\n.file-label { width: 200px; white-space: nowrap; overflow: clip; text-overflow: ellipsis; }\n.download { width: 120px; }\n\n.file-label { min-width: 0; }\n"
+    }
+  },
+  "css-flex-auto-margin": {
+    "name": "将所有按钮平均分开，左边按钮不再成组",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.toolbar { display: flex; width: 296px; gap: 8px; }\n.toolbar button { width: 64px; flex-shrink: 0; }\n\n.toolbar { justify-content: space-between; }\n"
+    }
+  },
+  "css-flex-align-content": {
+    "name": "把行分布误写成 align-items",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.cabinet { display: flex; flex-wrap: wrap; gap: 12px; width: 216px; height: 160px; background: #edf5f2; }\n.cabinet > div { width: 100px; height: 36px; padding: 4px; background: #b9dfd0; }\n\n.cabinet { align-items: flex-start; }\n"
+    }
+  },
+  "css-grid-implicit-rows": {
+    "name": "只追加一个显式行，下一行又回到默认高度",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.duties { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 64px; gap: 8px; }\n.duties > div { background: #e6f4ee; padding: 4px; }\n\n.duties { grid-template-rows: 64px 40px; }\n"
+    }
+  },
+  "css-grid-min-content": {
+    "name": "只压缩列宽，长文件名仍溢出",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.documents { display: grid; width: 270px; grid-template-columns: 1fr 1fr; gap: 10px; }\n.document { margin: 0; padding: 6px; background: #e6f4ee; }\n\n.documents { grid-template-columns: repeat(2, minmax(0, 1fr)); }\n"
+    }
+  },
+  "css-grid-self-alignment": {
+    "name": "只做水平对齐，垂直方向仍被拉伸",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.tray { display: grid; width: 240px; height: 112px; grid-template-columns: 1fr 1fr; background: #edf5f2; }\n.tray > * { margin: 0; }\n.badge { padding: 4px 8px; background: #b9dfd0; }\n\n.badge { justify-self: end; }\n"
+    }
+  },
+  "css-float-clear": {
+    "name": "只让图浮动，下一节标题仍从图旁开始",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.figure-story { display: flow-root; }\n.diagram { width: 124px; height: auto; }\n\n.diagram { float: left; margin: 0 12px 0 0; }\n"
+    }
+  },
+  "css-fixed-position": {
+    "name": "使用 absolute 让链接随正文滚动",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\narticle { min-height: 640px; }\n#back { padding: 4px 8px; border-radius: 6px; background: #e6f4ee; }\n\n#back { position: absolute; right: 12px; bottom: 12px; }\n"
+    }
+  },
+  "css-stacking": {
+    "name": "背景层层级高于状态签",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.stack { position: relative; isolation: isolate; width: 228px; height: 114px; }\n.status { position: absolute; top: 12px; right: 12px; background: #f6c66b; padding: 4px; }\n.card-face { position: absolute; inset: 24px 0 0; margin: 0; padding: 12px; background: #e6f4ee; }\n\n.status { z-index: 1; }\n.card-face { z-index: 2; }\n"
+    }
+  },
+  "css-flex-footer": {
+    "name": "固定页脚使它脱离文档流",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\nbody { padding: 0; }\nheader, footer { padding: 12px; color: #fff; background: #125a46; }\nmain { padding: 12px; }\n\nbody { min-height: 100vh; }\nfooter { position: fixed; inset: auto 0 0; }\n"
+    }
+  },
+  "css-object-fit": {
+    "name": "使用 contain 留出盒子空白",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.thumbnail { width: 160px; height: 100px; display: block; }\n\n.thumbnail { object-fit: contain; object-position: center top; }\n"
+    }
+  },
+  "css-aspect-ratio": {
+    "name": "使用固定高度，只在其中一种宽度下正确",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.screen { width: min(50vw, 320px); background: #b9dfd0; }\n\n.screen { height: 180px; }\n"
+    }
+  },
+  "css-calc-sizing": {
+    "name": "不扣除留白，窄屏的卡片贴边",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\nbody { padding: 0; }\n.route { padding: 8px; background: #e6f4ee; }\n\n.route { width: 100%; max-width: 360px; margin-inline: auto; }\n"
+    }
+  },
+  "css-clamp-text": {
+    "name": "只写随视口变化的字号，缺少边界",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.exhibition { font-size: 4vw; }\n"
+    }
+  },
+  "css-container-query": {
+    "name": "用了视口媒体查询，窄栏也变横排",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.narrow { width: 176px; }\n.wide { width: 342px; }\n.entry { background: #e6f4ee; margin-bottom: 8px; padding: 8px; gap: 8px; }\n.entry > * { display: block; }\n\n.slot { container-type: inline-size; }\n@media (min-width: 320px) { .entry { display: flex; } }\n"
+    }
+  },
+  "css-logical-spacing": {
+    "name": "写死左侧，反向页面的起始边错误",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.callout { border-left: 3px solid #125a46; padding-left: 12px; }\n"
+    }
+  },
+  "css-reduced-motion": {
+    "name": "反过来关闭了没有减少偏好时的动画",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.signal { padding: 8px; background: #e6f4ee; animation: fade-in .6s ease-out; }\n@keyframes fade-in { from { opacity: .45; } to { opacity: 1; } }\n\n@media (prefers-reduced-motion: no-preference) { .signal { animation: none; } }\n"
+    }
+  },
+  "css-print-layout": {
+    "name": "全局隐藏了屏幕导航",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nimg, video { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.site-nav { display: block; }\n.paper { padding: 12px; background: #e6f4ee; }\n\n@media print { .paper { background: white; } }\n.site-nav { display: none; }\n"
+    }
+  }
+}

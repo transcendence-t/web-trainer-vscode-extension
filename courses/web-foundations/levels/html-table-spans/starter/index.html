@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>让两层表头正确对齐</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="sheet">
+    <h1>让两层表头正确对齐</h1>
+    <table>
+      <caption>周末场馆值班</caption>
+      <thead>
+        <tr><th>场馆</th><th>周六与周日</th></tr>
+        <tr><th></th><th scope="col">周六</th><th scope="col">周日</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">木工坊</th><td>上午</td><td>下午</td></tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "focus": "index.html",
+  "title": "把问答做成可展开的折叠项",
+  "goal": "用 details 和 summary 实现可点击展开、再次点击收起的问答。",
+  "summary": "读者可以先浏览阅览室的问题列表，再打开自己需要的答案。",
+  "tasks": [
+    "把问答容器改成 details，保留 id=\"renew\"。",
+    "将「如何延长借阅？」改为容器的第一个元素 summary，保留容器内的回答。",
+    "让问答在页面打开时处于收起状态。点击问题展开答案，再点一次收起。"
+  ],
+  "example": {
+    "language": "html",
+    "code": "<details>\n  <summary>纸盒怎么回收？</summary>\n  <p>先把纸盒压平，再投入纸类回收箱。</p>\n</details>",
+    "note": "summary 始终可见，点击它会切换 details 的展开状态。答案随之显示或隐藏。"
+  },
+  "hint": "要默认收起，删除 open 属性。写成 open=\"false\" 时属性仍存在，页面打开时依然会展开。"
+}

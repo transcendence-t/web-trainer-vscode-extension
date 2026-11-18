@@ -1,0 +1,44 @@
+[
+  {
+    "label": "以字符串编号生成记录",
+    "expect": {
+      "type": "function",
+      "name": "buildTicket",
+      "args": [
+        "R-28"
+      ],
+      "value": {
+        "id": "R-28",
+        "status": "待处理"
+      }
+    }
+  },
+  {
+    "label": "数字编号保留数字类型",
+    "expect": {
+      "type": "function",
+      "name": "buildTicket",
+      "args": [
+        24
+      ],
+      "value": {
+        "id": 24,
+        "status": "待处理"
+      }
+    }
+  },
+  {
+    "label": "零也是有效编号",
+    "expect": {
+      "type": "function",
+      "name": "buildTicket",
+      "args": [
+        0
+      ],
+      "value": {
+        "id": 0,
+        "status": "待处理"
+      }
+    }
+  }
+]

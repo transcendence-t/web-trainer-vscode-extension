@@ -1,0 +1,38 @@
+[
+  {
+    "label": "中间一站已隐藏",
+    "expect": {
+      "type": "style",
+      "selector": "#middle-stop",
+      "property": "visibility",
+      "value": "hidden"
+    }
+  },
+  {
+    "label": "终点站仍然可见",
+    "expect": {
+      "type": "style",
+      "selector": "#last-stop",
+      "property": "visibility",
+      "value": "visible"
+    }
+  },
+  {
+    "label": "终点仍在中间站空位的右边",
+    "expect": {
+      "type": "layout",
+      "selector": "#last-stop",
+      "relativeTo": "#middle-stop",
+      "relation": "right-of"
+    }
+  },
+  {
+    "label": "中间站空位仍在起点右边",
+    "expect": {
+      "type": "layout",
+      "selector": "#middle-stop",
+      "relativeTo": "#first-stop",
+      "relation": "right-of"
+    }
+  }
+]

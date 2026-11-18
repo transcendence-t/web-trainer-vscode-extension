@@ -1,0 +1,29 @@
+[
+  {
+    "label": "四边内边距为 16px",
+    "expect": {
+      "type": "style",
+      "selector": ".card",
+      "property": "padding",
+      "value": "16px"
+    }
+  },
+  {
+    "label": "四边边框为绿色实线",
+    "expect": {
+      "type": "style",
+      "selector": ".card",
+      "property": "border",
+      "value": "2px solid rgb(59, 125, 104)"
+    }
+  },
+  {
+    "label": "四角圆角为 12px",
+    "expect": {
+      "type": "style",
+      "selector": ".card",
+      "property": "border-radius",
+      "value": "12px"
+    }
+  }
+]

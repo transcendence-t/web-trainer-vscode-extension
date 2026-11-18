@@ -1,0 +1,50 @@
+[
+  {
+    "label": "计算两笔小数的和",
+    "expect": {
+      "type": "function",
+      "name": "sumWeights",
+      "args": [
+        "2.5",
+        "0.75"
+      ],
+      "value": 3.25
+    }
+  },
+  {
+    "label": "第一笔留空按 0 计算",
+    "expect": {
+      "type": "function",
+      "name": "sumWeights",
+      "args": [
+        "",
+        "6"
+      ],
+      "value": 6
+    }
+  },
+  {
+    "label": "数字可带空格与前导零",
+    "expect": {
+      "type": "function",
+      "name": "sumWeights",
+      "args": [
+        " 04 ",
+        "2"
+      ],
+      "value": 6
+    }
+  },
+  {
+    "label": "第二笔留空时仍返回数值 0",
+    "expect": {
+      "type": "function",
+      "name": "sumWeights",
+      "args": [
+        "0",
+        ""
+      ],
+      "value": 0
+    }
+  }
+]

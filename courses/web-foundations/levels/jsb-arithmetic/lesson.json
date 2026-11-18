@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "计算打印与装订费用",
+  "goal": "按每页单价、页数和一次性装订费计算总费用。",
+  "summary": "乘号 * 计算页数对应的费用，加号 + 把各笔费用合起来。在没有括号改动顺序的表达式中，乘法先于加法。",
+  "tasks": [
+    "在 printCost 的大括号内用 pagePrice 乘以 pages 得出打印费，再加上一次 bindingFee。",
+    "用 return 返回总费用。单价和装订费都用分表示，可以为 0。"
+  ],
+  "hint": "先算打印费，再加装订费。若把两种费用加起来才乘以页数，装订费会按页重复收费。",
+  "example": {
+    "language": "javascript",
+    "code": "const chairsPerRow = 6;\nconst rows = 4;\nconst spareChairs = 2;\nconst totalChairs = chairsPerRow * rows + spareChairs;",
+    "note": "会议室排好四排椅子后再加两把备用椅，共需 26 把。"
+  }
+}

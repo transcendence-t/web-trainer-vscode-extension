@@ -1,0 +1,71 @@
+[
+  {
+    "label": "打开原生模态对话框",
+    "expect": {
+      "type": "exists",
+      "selector": "#rules-dialog:modal"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#open"
+      }
+    ]
+  },
+  {
+    "label": "关闭按钮获得焦点",
+    "expect": {
+      "type": "exists",
+      "selector": "#dismiss:focus"
+    },
+    "actions": [
+      {
+        "type": "focus",
+        "selector": "#open"
+      },
+      {
+        "type": "click",
+        "selector": "#open"
+      }
+    ]
+  },
+  {
+    "label": "关闭后不再打开",
+    "expect": {
+      "type": "count",
+      "selector": "#rules-dialog[open]",
+      "value": 0
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#open"
+      },
+      {
+        "type": "click",
+        "selector": "#dismiss"
+      }
+    ]
+  },
+  {
+    "label": "关闭时焦点返回入口",
+    "expect": {
+      "type": "exists",
+      "selector": "#open:focus"
+    },
+    "actions": [
+      {
+        "type": "focus",
+        "selector": "#open"
+      },
+      {
+        "type": "click",
+        "selector": "#open"
+      },
+      {
+        "type": "click",
+        "selector": "#dismiss"
+      }
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "label": "工作日段落采用绿色",
+    "expect": {
+      "type": "style",
+      "selector": "main > p:first-of-type",
+      "property": "color",
+      "value": "rgb(18, 90, 70)"
+    }
+  },
+  {
+    "label": "周五段落采用绿色",
+    "expect": {
+      "type": "style",
+      "selector": "main > p:nth-of-type(2)",
+      "property": "color",
+      "value": "rgb(18, 90, 70)"
+    }
+  },
+  {
+    "label": "第一段字号为 18px",
+    "expect": {
+      "type": "style",
+      "selector": "main > p:first-of-type",
+      "property": "font-size",
+      "value": "18px"
+    }
+  },
+  {
+    "label": "第二段字号为 18px",
+    "expect": {
+      "type": "style",
+      "selector": "main > p:nth-of-type(2)",
+      "property": "font-size",
+      "value": "18px"
+    }
+  },
+  {
+    "label": "页面标题保留原色",
+    "expect": {
+      "type": "style",
+      "selector": "main > h1",
+      "property": "color",
+      "value": "rgb(36, 52, 71)"
+    },
+    "hint": "把颜色设置在 p 上，避免影响标题。"
+  }
+]

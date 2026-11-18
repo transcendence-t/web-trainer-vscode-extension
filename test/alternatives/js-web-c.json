@@ -1,0 +1,14 @@
+{
+  "js-visibility": {
+    "script.js": "const toggle = document.querySelector('#toggle-guide');\nconst guide = document.querySelector('#loan-guide');\n\ntoggle.addEventListener('click', () => {\n  guide.toggleAttribute(\"hidden\");\n  toggle.setAttribute('aria-expanded', String(!guide.hidden));\n});"
+  },
+  "js-timeout": {
+    "script.js": "const generate = document.querySelector('#generate-receipt');\nconst receipt = document.querySelector('#receipt-status');\n\nfunction showReceipt() {\n  receipt.textContent = '回执已生成';\n  generate.disabled = false;\n}\n\ngenerate.addEventListener('click', () => {\n  receipt.textContent = '正在生成回执';\n  generate.disabled = true;\n  setTimeout(() => showReceipt(), 500);\n});"
+  },
+  "js-storage": {
+    "script.js": "const nicknameInput = document.querySelector('#nickname');\nconst save = document.querySelector('#save-name');\nconst savedName = document.querySelector('#saved-name');\nconst storageKey = 'visitorNickname';\n\nconst remembered = localStorage.getItem(storageKey);\nif (remembered !== null) {\n  savedName.textContent = remembered;\n}\n\nsave.addEventListener('click', () => {\n  const nickname = nicknameInput.value.trim();\n  if (!nickname) return;\n\n  localStorage.setItem(storageKey, nickname);\n  savedName.textContent = nickname;\n});"
+  },
+  "js-storage-json": {
+    "script.js": "const gearInput = document.querySelector('#gear-item');\nconst add = document.querySelector('#add-gear');\nconst list = document.querySelector('#gear-list');\nconst empty = document.querySelector('#gear-empty');\nconst storageKey = 'fieldGear';\nconst saved = localStorage.getItem(storageKey);\nconst items = saved === null ? [] : JSON.parse(saved);\n\nfunction renderList() {\n  list.replaceChildren();\n  for (const item of items) {\n    const row = document.createElement('li');\n    row.textContent = item;\n    list.append(row);\n  }\n  empty.hidden = items.length > 0;\n}\n\nadd.addEventListener('click', () => {\n  const item = gearInput.value.trim();\n  if (!item) return;\n\n  items.push(item);\n  localStorage.setItem(storageKey, JSON.stringify(items));\n  gearInput.value = '';\n  renderList();\n});\n\nrenderList();"
+  }
+}

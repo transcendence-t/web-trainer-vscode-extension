@@ -1,0 +1,18 @@
+{
+  "focus": "index.html",
+  "title": "班级活动预算记录器",
+  "goal": "校验金额输入，把每笔支出按分累计，并计算余额。",
+  "summary": "班级活动可用 300 元。每次记账后，页面都应更新支出和余额，方便看到超支金额。",
+  "tasks": [
+    "在 index.html 给 #expense-error 加 role=\"alert\"，让输入提示能被辅助技术感知。",
+    "在 style.css 把 .expense-summary 做成等宽两列，列间距为 12px。",
+    "记录金额前检查输入框有效性。空白、非正数和超过两位小数的金额都要拒绝，并显示「请输入大于 0 且最多两位小数的金额」。",
+    "通过校验后，把该金额按分记录。累加所有支出，用预算减去支出，按两位小数显示两个金额。超支时保留负余额。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const faresInCents = [1290, 2600];\nlet totalInCents = 0;\nfor (const fare of faresInCents) {\n  totalInCents += fare;\n}\nconst display = (totalInCents / 100).toFixed(2); // '38.90'",
+    "note": "车票金额先用整数分累加，最后才换算为元并用 toFixed(2) 显示。"
+  },
+  "hint": "输入不合法时，提示后马上 return。只更新错误提示却继续执行下面的代码，会把错误值也加入支出。"
+}

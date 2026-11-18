@@ -1,0 +1,17 @@
+{
+  "focus": "style.css",
+  "title": "微调橱窗展签的位置",
+  "goal": "用相对定位移动元素，同时保留元素在页面流中的原有空间。",
+  "summary": "「今日展品」需要在虚线框内稍微错开。下面的展签已摆好，原来的占位应该保留。",
+  "tasks": [
+    "给 .featured-tag 设置 position: relative。",
+    "用 top 让它向下移动 8px，用 left 让它向右移动 16px。",
+    "在预览中确认第一张展签仍在虚线框内，第二张展签还在它下方。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".caption-pin {\n  position: relative;\n  top: -3px;\n  left: 4px;\n}",
+    "note": "图注的图钉从原位置向上移 3px、向右移 4px，周围文字仍按图钉的原位置排版。"
+  },
+  "hint": "相对定位会留住原有占位。把 position 写成 absolute 时，第一张展签会脱离原来的排版。"
+}

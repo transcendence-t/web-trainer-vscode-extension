@@ -1,0 +1,5 @@
+{
+  "js-modules": {
+    "script.js": "const formatReceipt = (number) => `LAB-${String(number).padStart(3, '0')}`;\nexport { formatReceipt };\n"
+  }
+}

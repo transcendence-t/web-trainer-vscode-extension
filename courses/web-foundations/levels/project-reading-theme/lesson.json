@@ -1,0 +1,17 @@
+{
+  "focus": "style.css",
+  "title": "制作能记住选择的阅读主题",
+  "goal": "让 CSS 主题、按钮可访问状态和本地偏好同步。",
+  "summary": "为阅读面板增加深色模式。页面重新打开时恢复上次选择，并用按压状态可访问地表达当前模式。",
+  "tasks": [
+    "在 style.css 里为 #reader[data-theme=\"dark\"] 覆盖 --surface 为 #15243a、--ink 为 #f0f4f8。",
+    "在 script.js 中初始化并切换 #reader 的 data-theme，浅色用 light，深色用 dark。同步 #theme-toggle 的 aria-pressed。",
+    "把选择写入 reader-theme。初次没有记录时使用浅色，启动时恢复保存的主题。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".panel[data-theme='dark'] { --surface: #15243a; }\npanel.dataset.theme = 'dark';",
+    "note": "自定义属性负责主题视觉。data 属性把当前界面状态交给 CSS，存储键则负责页面关闭后的恢复。"
+  },
+  "hint": "用一个函数同时更新 data-theme 与 aria-pressed，页面初始化以及点击按钮时都调用它。"
+}

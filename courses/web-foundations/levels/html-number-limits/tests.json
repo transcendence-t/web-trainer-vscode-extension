@@ -1,0 +1,72 @@
+[
+  {
+    "label": "2 份有效",
+    "expect": {
+      "type": "exists",
+      "selector": "#copies:valid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#copies",
+        "value": "2"
+      }
+    ]
+  },
+  {
+    "label": "20 份有效",
+    "expect": {
+      "type": "exists",
+      "selector": "#copies:valid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#copies",
+        "value": "20"
+      }
+    ]
+  },
+  {
+    "label": "1 份被拒绝",
+    "expect": {
+      "type": "exists",
+      "selector": "#copies:invalid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#copies",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "label": "9 份被拒绝",
+    "expect": {
+      "type": "exists",
+      "selector": "#copies:invalid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#copies",
+        "value": "9"
+      }
+    ]
+  },
+  {
+    "label": "22 份被拒绝",
+    "expect": {
+      "type": "exists",
+      "selector": "#copies:invalid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#copies",
+        "value": "22"
+      }
+    ]
+  }
+]

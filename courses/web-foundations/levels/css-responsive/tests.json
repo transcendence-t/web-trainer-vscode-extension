@@ -1,0 +1,72 @@
+[
+  {
+    "label": "手机宽度下第二张卡排在第一张下方",
+    "expect": {
+      "type": "layout",
+      "selector": "#recorder",
+      "relativeTo": "#projector",
+      "relation": "below"
+    },
+    "viewport": 360
+  },
+  {
+    "label": "手机宽度下卡片宽度贴合区域",
+    "expect": {
+      "type": "layout",
+      "selector": "#projector",
+      "relativeTo": ".equipment-stage",
+      "relation": "equal-width"
+    },
+    "viewport": 360
+  },
+  {
+    "label": "平板宽度下卡片区随容器变宽",
+    "expect": {
+      "type": "layout",
+      "selector": ".equipment-grid",
+      "relativeTo": ".equipment-stage",
+      "relation": "equal-width"
+    },
+    "viewport": 560
+  },
+  {
+    "label": "断点处第二张卡与第一张并排",
+    "expect": {
+      "type": "layout",
+      "selector": "#recorder",
+      "relativeTo": "#projector",
+      "relation": "right-of"
+    },
+    "viewport": 680
+  },
+  {
+    "label": "宽窗口的两张设备卡等宽",
+    "expect": {
+      "type": "layout",
+      "selector": "#recorder",
+      "relativeTo": "#projector",
+      "relation": "equal-width"
+    },
+    "viewport": 840
+  },
+  {
+    "label": "宽窗口保留 12px 列间隔",
+    "expect": {
+      "type": "style",
+      "selector": ".equipment-grid",
+      "property": "column-gap",
+      "value": "12px"
+    },
+    "viewport": 840
+  },
+  {
+    "label": "宽窗口的右侧设备卡完整落在区域内",
+    "expect": {
+      "type": "layout",
+      "selector": "#recorder",
+      "relativeTo": ".equipment-stage",
+      "relation": "inside"
+    },
+    "viewport": 840
+  }
+]

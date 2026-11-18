@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>网页知识测验</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<main class="sheet">
+  <h1>网页知识测验</h1>
+  <p>得分 <output id="quiz-score">0</output> / 2</p>
+  <h2 id="quiz-question"></h2>
+  <div id="quiz-options" class="quiz-options" role="group" aria-labelledby="quiz-question"></div>
+  <output id="quiz-feedback"></output>
+  <button id="quiz-next" type="button" disabled>下一题</button>
+</main>
+</body>
+</html>

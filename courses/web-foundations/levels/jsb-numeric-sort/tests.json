@@ -1,0 +1,76 @@
+[
+  {
+    "label": "数值顺序区别于字典序",
+    "expect": {
+      "type": "function",
+      "name": "sortReadings",
+      "args": [
+        [
+          30,
+          4,
+          -2,
+          12
+        ]
+      ],
+      "value": [
+        -2,
+        4,
+        12,
+        30
+      ]
+    }
+  },
+  {
+    "label": "排序保留重复值",
+    "expect": {
+      "type": "function",
+      "name": "sortReadings",
+      "args": [
+        [
+          2,
+          0,
+          2
+        ]
+      ],
+      "value": [
+        0,
+        2,
+        2
+      ]
+    }
+  },
+  {
+    "label": "空列表仍返回数组",
+    "expect": {
+      "type": "function",
+      "name": "sortReadings",
+      "args": [
+        []
+      ],
+      "value": []
+    }
+  },
+  {
+    "label": "排序不会改动原顺序",
+    "expect": {
+      "type": "function",
+      "name": "compareOrder",
+      "args": [
+        [
+          18,
+          4
+        ]
+      ],
+      "value": [
+        [
+          4,
+          18
+        ],
+        [
+          18,
+          4
+        ]
+      ]
+    }
+  }
+]

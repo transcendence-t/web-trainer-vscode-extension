@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "把输入文字转换成数值",
+  "goal": "把表单里的两次称重读数转换为数字，再计算总重量。",
+  "summary": "输入框提供的内容是字符串。Number 可以把数字文本转换为数值，也会把空字符串转换为 0。两项转换完成后，+ 就会执行数值加法。",
+  "tasks": [
+    "在 sumWeights 的大括号内，把 firstText 和 secondText 分别转换为数值。参数是非负数的文本或空字符串，数字两侧可能有空格。",
+    "用 return 返回两次读数的和。空读数按 0 计算。"
+  ],
+  "hint": "两个参数都需要转换。只要参与 + 的一项是字符串，结果就会拼接成文字。",
+  "example": {
+    "language": "javascript",
+    "code": "const temperatureText = ' 18.5 ';\nconst temperature = Number(temperatureText);",
+    "note": "温度面板把读到的文本换成数值 18.5，接下来就能与温度阈值比较。"
+  }
+}

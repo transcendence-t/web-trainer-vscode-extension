@@ -1,0 +1,90 @@
+[
+  {
+    "label": "统计次数并保留首次出现顺序",
+    "expect": {
+      "type": "function",
+      "name": "countMaterials",
+      "args": [
+        [
+          "绳子",
+          "面料",
+          "绳子",
+          "染料"
+        ]
+      ],
+      "value": [
+        [
+          "绳子",
+          2
+        ],
+        [
+          "面料",
+          1
+        ],
+        [
+          "染料",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "label": "特殊字符串仍是合法材料名",
+    "expect": {
+      "type": "function",
+      "name": "countMaterials",
+      "args": [
+        [
+          "__proto__",
+          "纸",
+          "__proto__"
+        ]
+      ],
+      "value": [
+        [
+          "__proto__",
+          2
+        ],
+        [
+          "纸",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "label": "材料名为数字字符串时保留登记次序",
+    "expect": {
+      "type": "function",
+      "name": "countMaterials",
+      "args": [
+        [
+          "7",
+          "2",
+          "7"
+        ]
+      ],
+      "value": [
+        [
+          "7",
+          2
+        ],
+        [
+          "2",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "label": "空输入",
+    "expect": {
+      "type": "function",
+      "name": "countMaterials",
+      "args": [
+        []
+      ],
+      "value": []
+    }
+  }
+]

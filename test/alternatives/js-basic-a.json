@@ -1,0 +1,29 @@
+{
+  "jsb-variables": {
+    "script.js": "const updateStock = (initialStock, received, shipped) => {\n  let stock = initialStock;\n  stock += received;\n  stock -= shipped;\n  return stock;\n};"
+  },
+  "jsb-strings": {
+    "script.js": "function labelTopic(topic) {\n  const tag = '【' + topic + '】';\n  return tag;\n}"
+  },
+  "jsb-number": {
+    "script.js": "function sumWeights(firstText, secondText) {\n  return Number(firstText) + Number(secondText);\n}"
+  },
+  "jsb-boolean": {
+    "script.js": "function canClearNote(note) {\n  return note.length > 0;\n}"
+  },
+  "jsb-template": {
+    "script.js": "function seatMessage(roomName, seatsLeft) {\n  return roomName + '还有 ' + seatsLeft + ' 个空位。';\n}"
+  },
+  "jsb-arithmetic": {
+    "script.js": "function printCost(pagePrice, pages, bindingFee) {\n  const printing = pagePrice * pages;\n  return printing + bindingFee;\n}"
+  },
+  "jsb-remainder": {
+    "script.js": "function ungroupedCount(volunteers, groupSize) {\n  const fullGroups = Math.floor(volunteers / groupSize);\n  return volunteers - fullGroups * groupSize;\n}"
+  },
+  "jsb-compare": {
+    "script.js": "function meetsScore(score, minimumScore) {\n  return minimumScore <= score;\n}"
+  },
+  "jsb-logical": {
+    "script.js": "function canEnterHall(isOpen, hasTicket, hasStaffPass) {\n  return (isOpen && hasTicket) || (isOpen && hasStaffPass);\n}"
+  }
+}

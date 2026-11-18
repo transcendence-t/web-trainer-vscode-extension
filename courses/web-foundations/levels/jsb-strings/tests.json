@@ -1,0 +1,46 @@
+[
+  {
+    "label": "包住中文话题",
+    "expect": {
+      "type": "function",
+      "name": "labelTopic",
+      "args": [
+        "网页布局"
+      ],
+      "value": "【网页布局】"
+    }
+  },
+  {
+    "label": "文字中的前导零仍可见",
+    "expect": {
+      "type": "function",
+      "name": "labelTopic",
+      "args": [
+        "007"
+      ],
+      "value": "【007】"
+    }
+  },
+  {
+    "label": "空话题也有一对括号",
+    "expect": {
+      "type": "function",
+      "name": "labelTopic",
+      "args": [
+        ""
+      ],
+      "value": "【】"
+    }
+  },
+  {
+    "label": "保留话题两侧的空格",
+    "expect": {
+      "type": "function",
+      "name": "labelTopic",
+      "args": [
+        " 展示作业 "
+      ],
+      "value": "【 展示作业 】"
+    }
+  }
+]

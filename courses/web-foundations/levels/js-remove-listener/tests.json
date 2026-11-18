@@ -1,0 +1,60 @@
+[
+  {
+    "label": "可连续两次累加",
+    "expect": {
+      "type": "text",
+      "selector": "#served",
+      "value": "2"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#serve"
+      },
+      {
+        "type": "click",
+        "selector": "#serve"
+      }
+    ]
+  },
+  {
+    "label": "结束后保持原计数",
+    "expect": {
+      "type": "text",
+      "selector": "#served",
+      "value": "1"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#serve"
+      },
+      {
+        "type": "click",
+        "selector": "#stop"
+      },
+      {
+        "type": "click",
+        "selector": "#serve"
+      }
+    ]
+  },
+  {
+    "label": "可在未取阅时结束",
+    "expect": {
+      "type": "text",
+      "selector": "#served",
+      "value": "0"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#stop"
+      },
+      {
+        "type": "click",
+        "selector": "#serve"
+      }
+    ]
+  }
+]

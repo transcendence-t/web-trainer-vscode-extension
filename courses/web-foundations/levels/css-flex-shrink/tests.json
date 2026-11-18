@@ -1,0 +1,29 @@
+[
+  {
+    "label": "下载按钮仍为 120px",
+    "expect": {
+      "type": "style",
+      "selector": ".download",
+      "property": "width",
+      "value": "120px"
+    }
+  },
+  {
+    "label": "文件名占用剩余 128px",
+    "expect": {
+      "type": "style",
+      "selector": ".file-label",
+      "property": "width",
+      "value": "128px"
+    }
+  },
+  {
+    "label": "按钮没有被挤出工具条",
+    "expect": {
+      "type": "layout",
+      "selector": ".download",
+      "relativeTo": ".file-bar",
+      "relation": "inside"
+    }
+  }
+]

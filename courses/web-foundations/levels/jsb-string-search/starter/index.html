@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>查找不区分大小写的关键字</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="sheet">
+    <h1>查找不区分大小写的关键字</h1>
+    <p>试一试 <code>matchesKeyword("Portable Mixer", " MIX ")</code></p>
+    <p>运行结果 <output id="example-result" aria-live="polite">待填写函数</output></p>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const result = matchesKeyword("Portable Mixer", " MIX ");
+        if (result !== undefined) {
+          document.querySelector("#example-result").textContent = JSON.stringify(result);
+        }
+      });
+    </script>
+  </main>
+</body>
+</html>

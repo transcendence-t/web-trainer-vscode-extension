@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "合计各时段借出量",
+  "goal": "用循环遍历数字数组，从初始值 0 开始逐项累加。",
+  "summary": "阅览室记录了各时段借出的书本数。把数字合起来，就能得到当天的借出总量。",
+  "tasks": [
+    "完成 totalCheckouts(counts)。counts 的每一项都是一个时段借出的书本数。",
+    "遍历整个数组并返回所有数字的和。没有记录时返回数字 0。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const boxes = ['灯具', '线材', '标牌'];\nlet labels = '';\nfor (const box of boxes) {\n  labels += '【' + box + '】';\n}\n// labels 是 '【灯具】【线材】【标牌】'",
+    "note": "累积结果的变量放在循环外。每一轮把一个箱子名称接到上一次的结果末尾。"
+  },
+  "hint": "如果用下标遍历，第一轮应从 0 开始，并在下标到达 counts.length 前停止。把求和的初始值设为 0。"
+}

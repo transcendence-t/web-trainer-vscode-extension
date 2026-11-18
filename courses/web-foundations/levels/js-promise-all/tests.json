@@ -1,0 +1,56 @@
+[
+  {
+    "label": "数量先到也不会与标题交换",
+    "expect": {
+      "type": "function",
+      "name": "catalogCard",
+      "args": [
+        "手持电钻",
+        3
+      ],
+      "value": {
+        "title": "手持电钻",
+        "total": 3
+      }
+    }
+  },
+  {
+    "label": "保留零库存",
+    "expect": {
+      "type": "function",
+      "name": "catalogCard",
+      "args": [
+        "护目镜",
+        0
+      ],
+      "value": {
+        "title": "护目镜",
+        "total": 0
+      }
+    }
+  },
+  {
+    "label": "第一项拒绝",
+    "expect": {
+      "type": "function",
+      "name": "catalogCard",
+      "args": [
+        "",
+        3
+      ],
+      "value": null
+    }
+  },
+  {
+    "label": "第二项拒绝",
+    "expect": {
+      "type": "function",
+      "name": "catalogCard",
+      "args": [
+        "钳子",
+        -1
+      ],
+      "value": null
+    }
+  }
+]

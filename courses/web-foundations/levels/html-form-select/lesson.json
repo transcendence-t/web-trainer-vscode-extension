@@ -1,0 +1,17 @@
+{
+  "focus": "index.html",
+  "title": "给维修工位设置默认选项",
+  "goal": "给 select 添加标签和选项，通过 selected 指定初次打开时选中的项目。",
+  "summary": "维修角有三种工位。用下拉框收集预约时选择的工位，页面打开时先显示电子台。",
+  "tasks": [
+    "把「维修工位」改为 label，用 for=\"bench\" 关联下拉框。",
+    "创建 id 和 name 都为 bench 的 select，添加木工台（wood）、电子台（electronics）、自行车台（bike）三个选项。",
+    "给电子台设 selected。打开预览后确认下拉框默认显示电子台。"
+  ],
+  "example": {
+    "language": "html",
+    "code": "<label for=\"pickup-point\">领取地点</label>\n<select id=\"pickup-point\" name=\"pickup-point\">\n  <option value=\"north\">北门</option>\n  <option value=\"hall\" selected>大厅</option>\n</select>",
+    "note": "option 的文字显示在菜单里，value 用于提交。selected 写在要默认选中的 option 上。"
+  },
+  "hint": "把 selected 写到电子台的 option 上。单选下拉框有可用选项时，浏览器通常会默认选中第一项。"
+}

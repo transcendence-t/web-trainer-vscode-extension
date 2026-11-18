@@ -1,0 +1,38 @@
+[
+  {
+    "label": "图片覆盖整个盒子",
+    "expect": {
+      "type": "style",
+      "selector": ".thumbnail",
+      "property": "object-fit",
+      "value": "cover"
+    }
+  },
+  {
+    "label": "对齐图片顶部",
+    "expect": {
+      "type": "style",
+      "selector": ".thumbnail",
+      "property": "object-position",
+      "value": "50% 0%"
+    }
+  },
+  {
+    "label": "盒子宽度保留",
+    "expect": {
+      "type": "style",
+      "selector": ".thumbnail",
+      "property": "width",
+      "value": "160px"
+    }
+  },
+  {
+    "label": "盒子高度保留",
+    "expect": {
+      "type": "style",
+      "selector": ".thumbnail",
+      "property": "height",
+      "value": "100px"
+    }
+  }
+]

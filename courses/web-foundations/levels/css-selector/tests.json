@@ -1,0 +1,30 @@
+[
+  {
+    "label": "课程标题变为绿色",
+    "expect": {
+      "type": "style",
+      "selector": ".card-title",
+      "property": "color",
+      "value": "rgb(18, 90, 70)"
+    }
+  },
+  {
+    "label": "课程标题字号为 24px",
+    "expect": {
+      "type": "style",
+      "selector": ".card-title",
+      "property": "font-size",
+      "value": "24px"
+    }
+  },
+  {
+    "label": "说明标题保留原颜色",
+    "expect": {
+      "type": "style",
+      "selector": ".guide-title",
+      "property": "color",
+      "value": "rgb(36, 52, 71)"
+    },
+    "hint": "用类选择器限定修改范围。"
+  }
+]

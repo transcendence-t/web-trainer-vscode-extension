@@ -1,0 +1,11 @@
+**
+!package.json
+!README.md
+!README.en.md
+!LICENSE.txt
+!THIRD_PARTY_NOTICES.txt
+!out/extension.js
+!out/ui.js
+!out/runner.js
+!media/**
+!courses/**

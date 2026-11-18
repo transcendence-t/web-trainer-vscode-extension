@@ -1,0 +1,42 @@
+[
+  {
+    "label": "标签指向工位下拉框",
+    "expect": {
+      "type": "text",
+      "selector": "form label[for=\"bench\"]",
+      "value": "维修工位"
+    }
+  },
+  {
+    "label": "下拉框包含三个可供单选的项目",
+    "expect": {
+      "type": "count",
+      "selector": "form select#bench[name=\"bench\"]:not([multiple]) option",
+      "value": 3
+    }
+  },
+  {
+    "label": "木工台有对应的值",
+    "expect": {
+      "type": "text",
+      "selector": "#bench option[value=\"wood\"]",
+      "value": "木工台"
+    }
+  },
+  {
+    "label": "电子台有对应的值并且打开时选中",
+    "expect": {
+      "type": "text",
+      "selector": "#bench option[value=\"electronics\"][selected]:checked",
+      "value": "电子台"
+    }
+  },
+  {
+    "label": "自行车台有对应的值",
+    "expect": {
+      "type": "text",
+      "selector": "#bench option[value=\"bike\"]",
+      "value": "自行车台"
+    }
+  }
+]

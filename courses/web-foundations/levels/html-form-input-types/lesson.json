@@ -1,0 +1,16 @@
+{
+  "focus": "index.html",
+  "title": "让浏览器检查邮箱和网址格式",
+  "goal": "为联系方式和作品地址选择 email 与 url 控件。",
+  "summary": "作品提交表需要一个邮箱和一个完整网址。控件类型可以让浏览器先检查常见格式，并适配移动设备键盘。",
+  "tasks": [
+    "把 #email 的类型设为 email，把 #work 的类型设为 url。",
+    "保留已有标签、name 和 required。试试输入缺少 @ 的邮箱与缺少协议的作品网址。"
+  ],
+  "example": {
+    "language": "html",
+    "code": "<label for=\"site\">个人网站</label>\n<input id=\"site\" type=\"url\" name=\"site\" required>",
+    "note": "url 类型检查输入是否是有效的绝对 URL。required 负责判断是否留空。"
+  },
+  "hint": "给每个 input 添加 type 属性，两个控件应使用不同的类型。"
+}

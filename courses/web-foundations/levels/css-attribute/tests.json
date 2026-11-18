@@ -1,0 +1,56 @@
+[
+  {
+    "label": "姓名输入框采用浅黄背景",
+    "expect": {
+      "type": "style",
+      "selector": "#applicant-name",
+      "property": "background-color",
+      "value": "rgb(255, 249, 235)"
+    }
+  },
+  {
+    "label": "邮箱输入框采用浅黄背景",
+    "expect": {
+      "type": "style",
+      "selector": "#applicant-email",
+      "property": "background-color",
+      "value": "rgb(255, 249, 235)"
+    }
+  },
+  {
+    "label": "姓名输入框边框变为棕色",
+    "expect": {
+      "type": "style",
+      "selector": "#applicant-name",
+      "property": "border-top-color",
+      "value": "rgb(173, 104, 34)"
+    }
+  },
+  {
+    "label": "邮箱输入框边框变为棕色",
+    "expect": {
+      "type": "style",
+      "selector": "#applicant-email",
+      "property": "border-top-color",
+      "value": "rgb(173, 104, 34)"
+    }
+  },
+  {
+    "label": "联系电话输入框背景保留白色",
+    "expect": {
+      "type": "style",
+      "selector": "#phone-number",
+      "property": "background-color",
+      "value": "rgb(255, 255, 255)"
+    }
+  },
+  {
+    "label": "联系电话输入框边框保留原色",
+    "expect": {
+      "type": "style",
+      "selector": "#phone-number",
+      "property": "border-top-color",
+      "value": "rgb(163, 175, 185)"
+    }
+  }
+]

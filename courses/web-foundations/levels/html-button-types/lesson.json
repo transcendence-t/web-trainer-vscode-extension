@@ -1,0 +1,16 @@
+{
+  "focus": "index.html",
+  "title": "把恢复按钮设为表单重置",
+  "goal": "选择按钮类型，使用原生 reset 恢复控件初始值。",
+  "summary": "展签编辑器需要同时提供保存和恢复。恢复时输入框应回到 value 属性写好的名称。",
+  "tasks": [
+    "给 #restore 设置正确的 type，使它恢复表单初始值。",
+    "保留 #send 的提交行为。试着输入另一个名称再按恢复按钮。"
+  ],
+  "example": {
+    "language": "html",
+    "code": "<button type=\"submit\">发送</button>\n<button type=\"reset\">清除更改</button>\n<button type=\"button\">打开帮助</button>",
+    "note": "表单内没有 type 的 button 默认尝试提交。给每个不同用途的按钮写明类型。"
+  },
+  "hint": "reset 按钮会恢复默认值，默认值非空时，恢复后仍有文字。"
+}

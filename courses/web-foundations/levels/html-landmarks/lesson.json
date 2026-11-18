@@ -1,0 +1,17 @@
+{
+  "focus": "index.html",
+  "title": "给夜跑集合页划分区域",
+  "goal": "用语义标签标记页眉、导航、正文和页脚，让读者可以按页面区域定位。",
+  "summary": "这张活动页的页眉 header、正文 main 和页脚 footer 位于同一层。页内导航 nav 放在 header 内，方便读者直接跳到正文里的集合点。",
+  "tasks": [
+    "保留 class=\"sheet\" 的外层 div，把包含标题的 div 改为 header。",
+    "把链接外面的 div 改为 nav，使导航位于 header 内，保留链接文字和 href。",
+    "把包含集合点的 div 改为页面唯一的 main，把包含维护者信息的 div 改为 footer。它们和 header 在同一层，沿用原来的顺序。"
+  ],
+  "example": {
+    "language": "html",
+    "code": "<header>\n  <h1>共享工具房</h1>\n  <nav><a href=\"#hours\">查看开放时间</a></nav>\n</header>\n<main>\n  <h2 id=\"hours\">开放时间</h2>\n  <p>周日 10:00 到 16:00。</p>\n</main>\n<footer><p>社区志愿者维护</p></footer>",
+    "note": "工具房页面把开放时间放入 main，把负责维护的人写在同层的 footer 中。"
+  },
+  "hint": "如果页脚被包进正文，检查 main 的结束标签是否写在 footer 前面。"
+}

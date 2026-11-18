@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>放映区座位</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<main class="sheet">
+  <h1>放映区座位</h1>
+  <p>示例调用 <code>screeningCapacity(4)</code></p>
+  <p>运行结果 <output id="example-result">待填写函数</output></p>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const result = screeningCapacity(4);
+      if (result !== undefined) {
+        document.querySelector('#example-result').textContent = JSON.stringify(result);
+      }
+    });
+  </script>
+</main>
+</body>
+</html>

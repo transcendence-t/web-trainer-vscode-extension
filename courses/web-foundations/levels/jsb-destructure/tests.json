@@ -1,0 +1,69 @@
+[
+  {
+    "label": "字段名映射",
+    "expect": {
+      "type": "function",
+      "name": "tagFields",
+      "args": [
+        {
+          "name": "网络板",
+          "count": 3
+        }
+      ],
+      "value": {
+        "title": "网络板",
+        "quantity": 3
+      }
+    }
+  },
+  {
+    "label": "缺失数量使用 1",
+    "expect": {
+      "type": "function",
+      "name": "tagFields",
+      "args": [
+        {
+          "name": "面板"
+        }
+      ],
+      "value": {
+        "title": "面板",
+        "quantity": 1
+      }
+    }
+  },
+  {
+    "label": "显式的零保持为零",
+    "expect": {
+      "type": "function",
+      "name": "tagFields",
+      "args": [
+        {
+          "name": "底板",
+          "count": 0
+        }
+      ],
+      "value": {
+        "title": "底板",
+        "quantity": 0
+      }
+    }
+  },
+  {
+    "label": "显式空值不会触发解构默认值",
+    "expect": {
+      "type": "function",
+      "name": "tagFields",
+      "args": [
+        {
+          "name": "底板",
+          "count": null
+        }
+      ],
+      "value": {
+        "title": "底板",
+        "quantity": null
+      }
+    }
+  }
+]

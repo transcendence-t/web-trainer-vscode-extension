@@ -1,0 +1,42 @@
+[
+  {
+    "label": "低于 640px 时图例收起",
+    "expect": {
+      "type": "style",
+      "selector": ".walk-legend",
+      "property": "display",
+      "value": "none"
+    },
+    "viewport": 639
+  },
+  {
+    "label": "低于 640px 时路线卡仍显示",
+    "expect": {
+      "type": "style",
+      "selector": ".walk-card",
+      "property": "display",
+      "value": "block"
+    },
+    "viewport": 639
+  },
+  {
+    "label": "正好 640px 时图例出现",
+    "expect": {
+      "type": "style",
+      "selector": ".walk-legend",
+      "property": "display",
+      "value": "block"
+    },
+    "viewport": 640
+  },
+  {
+    "label": "宽窗口的图例仍在路线卡内",
+    "expect": {
+      "type": "layout",
+      "selector": ".walk-legend",
+      "relativeTo": ".walk-card",
+      "relation": "inside"
+    },
+    "viewport": 840
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "focus": "index.html",
+  "title": "把合计放进表格页脚",
+  "goal": "用 tfoot 将汇总行从明细行中分组。",
+  "summary": "领用记录已经有表头与表身，合计行属于单独的表格区域。",
+  "tasks": [
+    "把「合计 10」整行移到新建的 tfoot，保留行表头的 scope=\"row\"。",
+    "tbody 中只留下帆布与织带两条明细。"
+  ],
+  "example": {
+    "language": "html",
+    "code": "<tfoot>\n  <tr><th scope=\"row\">总人数</th><td>24</td></tr>\n</tfoot>",
+    "note": "tfoot 放在 table 内，可用来存放一行或多行汇总数据。"
+  },
+  "hint": "把整行 tr 移到 tbody 结束之后、table 结束之前。"
+}

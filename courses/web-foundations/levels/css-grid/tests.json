@@ -1,0 +1,30 @@
+[
+  {
+    "label": "作品区采用 Grid",
+    "expect": {
+      "type": "style",
+      "selector": ".gallery",
+      "property": "display",
+      "value": "grid"
+    }
+  },
+  {
+    "label": "作品区有两列等宽网格",
+    "expect": {
+      "type": "style",
+      "selector": ".gallery",
+      "property": "grid-template-columns",
+      "value": "124px 124px"
+    },
+    "hint": "在题目给定的 260px 宽度下，两列各 124px，中间留 12px。"
+  },
+  {
+    "label": "行与列的间距均为 12px",
+    "expect": {
+      "type": "style",
+      "selector": ".gallery",
+      "property": "gap",
+      "value": "12px"
+    }
+  }
+]
