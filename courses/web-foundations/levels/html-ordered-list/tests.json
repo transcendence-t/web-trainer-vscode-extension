@@ -1,35 +1,35 @@
 [
   {
-    "label": "标题后有三个有序列表项",
+    "label": "There are three ordered list items after the title",
     "expect": {
       "type": "count",
       "selector": "main > h1 + ol > li",
       "value": 3
     },
-    "hint": "用 ol 替换标题下的 p，将每一步写成 ol 的一个 li。"
+    "hint": "Replace p under the title with ol and write each step as a li of ol."
   },
   {
-    "label": "第 1 步文字正确",
+    "label": "Step 1 text is correct",
     "expect": {
       "type": "text",
       "selector": "main > h1 + ol > li:nth-child(1)",
-      "value": "找到还车点"
+      "value": "Find the return point"
     }
   },
   {
-    "label": "第 2 步文字正确",
+    "label": "Step 2 text is correct",
     "expect": {
       "type": "text",
       "selector": "main > h1 + ol > li:nth-child(2)",
-      "value": "把单车停进空位"
+      "value": "Park the bicycle into the empty space"
     }
   },
   {
-    "label": "第 3 步文字正确",
+    "label": "Step 3 text is correct",
     "expect": {
       "type": "text",
       "selector": "main > h1 + ol > li:nth-child(3)",
-      "value": "锁车并确认归还"
+      "value": "Lock the car and confirm the return"
     }
   }
 ]

@@ -1,53 +1,53 @@
 [
   {
-    "label": "把新预约放在现有两项之后",
+    "label": "Place the new appointment after the existing two",
     "expect": {
       "type": "function",
       "name": "addBooking",
       "args": [
         [
-          "梁安",
-          "孔嘉"
+          "Liang An",
+          "Kong Jia"
         ],
-        "姜川"
+        "Jiang Chuan"
       ],
       "value": [
-        "梁安",
-        "孔嘉",
-        "姜川"
+        "Liang An",
+        "Kong Jia",
+        "Jiang Chuan"
       ]
     }
   },
   {
-    "label": "空名单能加入第一位访客",
+    "label": "The first visitor can be added to the empty list",
     "expect": {
       "type": "function",
       "name": "addBooking",
       "args": [
         [],
-        "林歆"
+        "Lin Xin"
       ],
       "value": [
-        "林歆"
+        "Lin Xin"
       ]
     }
   },
   {
-    "label": "同名访客也追加一项",
+    "label": "Visitor with the same name also added an item",
     "expect": {
       "type": "function",
       "name": "addBooking",
       "args": [
         [
-          "吴双",
-          "宋林"
+          "Wu Shuang",
+          "Song Lin"
         ],
-        "吴双"
+        "Wu Shuang"
       ],
       "value": [
-        "吴双",
-        "宋林",
-        "吴双"
+        "Wu Shuang",
+        "Song Lin",
+        "Wu Shuang"
       ]
     }
   }

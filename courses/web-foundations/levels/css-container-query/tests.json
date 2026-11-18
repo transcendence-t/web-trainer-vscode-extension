@@ -1,6 +1,6 @@
 [
   {
-    "label": "卡片的父级可测量行内尺寸",
+    "label": "card's parent measurable inline size",
     "expect": {
       "type": "style",
       "selector": ".slot",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "同屏窄栏仍然纵向",
+    "label": "Narrow columns on the same screen are still vertical",
     "expect": {
       "type": "layout",
       "selector": "#small a",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "同屏宽栏切换到横排",
+    "label": "Switch the wide column to horizontal on the same screen",
     "expect": {
       "type": "layout",
       "selector": "#large a",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "宽栏应用实际弹性布局",
+    "label": "Actual flexible layout for wide column applications",
     "expect": {
       "type": "style",
       "selector": "#large",

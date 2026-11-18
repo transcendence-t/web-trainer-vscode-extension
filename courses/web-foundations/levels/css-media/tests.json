@@ -1,6 +1,6 @@
 [
   {
-    "label": "低于 640px 时图例收起",
+    "label": "The legend is collapsed when it is lower than 640px",
     "expect": {
       "type": "style",
       "selector": ".walk-legend",
@@ -10,7 +10,7 @@
     "viewport": 639
   },
   {
-    "label": "低于 640px 时路线卡仍显示",
+    "label": "The route card is still displayed when it is lower than 640px",
     "expect": {
       "type": "style",
       "selector": ".walk-card",
@@ -20,7 +20,7 @@
     "viewport": 639
   },
   {
-    "label": "正好 640px 时图例出现",
+    "label": "is exactly 640px",
     "expect": {
       "type": "style",
       "selector": ".walk-legend",
@@ -30,7 +30,7 @@
     "viewport": 640
   },
   {
-    "label": "宽窗口的图例仍在路线卡内",
+    "label": "The legend of the wide window is still in the route card",
     "expect": {
       "type": "layout",
       "selector": ".walk-legend",

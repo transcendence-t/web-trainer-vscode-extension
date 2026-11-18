@@ -1,0 +1,54 @@
+[
+  {
+    "label": "把新预约放在现有两项之后",
+    "expect": {
+      "type": "function",
+      "name": "addBooking",
+      "args": [
+        [
+          "梁安",
+          "孔嘉"
+        ],
+        "姜川"
+      ],
+      "value": [
+        "梁安",
+        "孔嘉",
+        "姜川"
+      ]
+    }
+  },
+  {
+    "label": "空名单能加入第一位访客",
+    "expect": {
+      "type": "function",
+      "name": "addBooking",
+      "args": [
+        [],
+        "林歆"
+      ],
+      "value": [
+        "林歆"
+      ]
+    }
+  },
+  {
+    "label": "同名访客也追加一项",
+    "expect": {
+      "type": "function",
+      "name": "addBooking",
+      "args": [
+        [
+          "吴双",
+          "宋林"
+        ],
+        "吴双"
+      ],
+      "value": [
+        "吴双",
+        "宋林",
+        "吴双"
+      ]
+    }
+  }
+]

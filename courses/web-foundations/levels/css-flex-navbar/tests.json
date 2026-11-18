@@ -1,6 +1,6 @@
 [
   {
-    "label": "导航栏使用 Flexbox",
+    "label": "navigation bar uses Flexbox",
     "expect": {
       "type": "style",
       "selector": ".site-nav",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "链接组也使用 Flexbox",
+    "label": "link group also uses Flexbox",
     "expect": {
       "type": "style",
       "selector": ".nav-links",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "导航栏把站名和链接组分到两端",
+    "label": "The navigation bar divides the site name and link components into two ends",
     "expect": {
       "type": "style",
       "selector": ".site-nav",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "站名和链接组沿交叉轴居中",
+    "label": "Station name and link group are centered along the cross axis",
     "expect": {
       "type": "style",
       "selector": ".site-nav",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "链接之间保持 16px 间距",
+    "label": "Maintain 16px spacing between links",
     "expect": {
       "type": "style",
       "selector": ".nav-links",
@@ -45,7 +45,7 @@
     }
   },
   {
-    "label": "宽窗口里链接组位于站名右边",
+    "label": "The link group is located to the right of the station name in the wide window",
     "expect": {
       "type": "layout",
       "selector": ".nav-links",
@@ -55,7 +55,7 @@
     "viewport": 720
   },
   {
-    "label": "窄窗口里链接组仍位于站名右边",
+    "label": "In the narrow window, the link group is still located to the right of the station name.",
     "expect": {
       "type": "layout",
       "selector": ".nav-links",
@@ -65,7 +65,7 @@
     "viewport": 320
   },
   {
-    "label": "窄窗口里作品链接排在活动链接右边",
+    "label": "In the narrow window, the work links are arranged to the right of the active links.",
     "expect": {
       "type": "layout",
       "selector": "#gallery-link",
@@ -75,7 +75,7 @@
     "viewport": 320
   },
   {
-    "label": "窄窗口里链接组保持在导航栏内",
+    "label": "The link group remains in the navigation bar in a narrow window",
     "expect": {
       "type": "layout",
       "selector": ".nav-links",

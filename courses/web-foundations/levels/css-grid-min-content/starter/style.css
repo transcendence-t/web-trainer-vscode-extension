@@ -9,4 +9,4 @@ a { color: #125a46; }
 .documents { display: grid; width: 270px; grid-template-columns: 1fr 1fr; gap: 10px; }
 .document { margin: 0; padding: 6px; background: #e6f4ee; }
 
-/* 在这里编写本关样式。 */
+/* Write the style of this level here. */

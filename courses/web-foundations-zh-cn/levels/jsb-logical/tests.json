@@ -1,0 +1,106 @@
+[
+  {
+    "label": "展厅开放且有工作证",
+    "expect": {
+      "type": "function",
+      "name": "canEnterHall",
+      "args": [
+        true,
+        false,
+        true
+      ],
+      "value": true
+    }
+  },
+  {
+    "label": "展厅开放且有门票",
+    "expect": {
+      "type": "function",
+      "name": "canEnterHall",
+      "args": [
+        true,
+        true,
+        false
+      ],
+      "value": true
+    }
+  },
+  {
+    "label": "展厅开放且两种凭证都有",
+    "expect": {
+      "type": "function",
+      "name": "canEnterHall",
+      "args": [
+        true,
+        true,
+        true
+      ],
+      "value": true
+    }
+  },
+  {
+    "label": "展厅开放但没有凭证",
+    "expect": {
+      "type": "function",
+      "name": "canEnterHall",
+      "args": [
+        true,
+        false,
+        false
+      ],
+      "value": false
+    }
+  },
+  {
+    "label": "闭馆时工作证也无法入场",
+    "expect": {
+      "type": "function",
+      "name": "canEnterHall",
+      "args": [
+        false,
+        false,
+        true
+      ],
+      "value": false
+    }
+  },
+  {
+    "label": "闭馆时门票也无法入场",
+    "expect": {
+      "type": "function",
+      "name": "canEnterHall",
+      "args": [
+        false,
+        true,
+        false
+      ],
+      "value": false
+    }
+  },
+  {
+    "label": "闭馆且两种凭证都有",
+    "expect": {
+      "type": "function",
+      "name": "canEnterHall",
+      "args": [
+        false,
+        true,
+        true
+      ],
+      "value": false
+    }
+  },
+  {
+    "label": "闭馆且没有凭证",
+    "expect": {
+      "type": "function",
+      "name": "canEnterHall",
+      "args": [
+        false,
+        false,
+        false
+      ],
+      "value": false
+    }
+  }
+]

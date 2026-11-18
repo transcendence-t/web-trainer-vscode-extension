@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "把开放标记放到卡片右上角",
+  "goal": "用相对定位的容器作为参照，把绝对定位的子元素放到指定角落。",
+  "summary": "分馆卡片的开放标记目前挤在开放时间下面。把它移到卡片右上角，读者可以一眼看到。",
+  "tasks": [
+    "给 .branch-card 设置 position: relative，作为角标的定位参照。",
+    "用 position: absolute 放置 .branch-badge，让它距离卡片上侧 10px、右侧 12px。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".album-cover { position: relative; }\n.caption-sticker {\n  position: absolute;\n  bottom: 6px;\n  left: 8px;\n}",
+    "note": "封面里的贴纸以 .album-cover 为定位参照，贴在它的左下角。"
+  },
+  "hint": "给父容器加上 position: relative，角标就能相对卡片定位。遗漏这句时，它可能跑到整个页面的右上角。"
+}

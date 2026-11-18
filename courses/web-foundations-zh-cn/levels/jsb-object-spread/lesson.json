@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "合并局部设置并保存默认配置",
+  "goal": "用对象展开创建浅拷贝，再按顺序覆盖字段。",
+  "summary": "页面有一份默认设置，每个工作区可只定义要覆盖的字段。默认设置还需继续服务其他工作区。",
+  "tasks": [
+    "完成 mergeSettings(defaults, overrides)，创建一个包含两者自有字段的新对象。",
+    "字段重名时 overrides 优先，不改动 defaults。布尔 false 和数字 0 都能覆盖。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const defaults = { mode: '列表', dense: false };\nconst merged = { ...defaults, dense: true };",
+    "note": "后面的同名属性会覆盖前面的值。展开只拷贝外层字段。"
+  },
+  "hint": "先展开 defaults，再展开 overrides。"
+}

@@ -1,13 +1,13 @@
 [
   {
-    "label": "文本输入关联相同 ID 的建议清单",
+    "label": "Text input associated suggestion list with the same ID",
     "expect": {
       "type": "exists",
       "selector": "input#building-input[type=\"text\"][list=\"building-options\"] ~ datalist#building-options"
     }
   },
   {
-    "label": "候选值共三项",
+    "label": "The list offers exactly three suggestions",
     "expect": {
       "type": "count",
       "selector": "#building-options option",
@@ -15,24 +15,24 @@
     }
   },
   {
-    "label": "候选包含 笃行楼",
+    "label": "candidates include Duxinglou",
     "expect": {
       "type": "exists",
-      "selector": "datalist#building-options > option[value=\"笃行楼\"]"
+      "selector": "datalist#building-options > option[value=\"Duxing Building\"]"
     }
   },
   {
-    "label": "候选包含 明德楼",
+    "label": "Candidates include Mingde House",
     "expect": {
       "type": "exists",
-      "selector": "datalist#building-options > option[value=\"明德楼\"]"
+      "selector": "datalist#building-options > option[value=\"Mingde Building\"]"
     }
   },
   {
-    "label": "候选包含 求知楼",
+    "label": "candidates include Qiuzhilou",
     "expect": {
       "type": "exists",
-      "selector": "datalist#building-options > option[value=\"求知楼\"]"
+      "selector": "datalist#building-options > option[value=\"Qiuzhi Building\"]"
     }
   }
 ]

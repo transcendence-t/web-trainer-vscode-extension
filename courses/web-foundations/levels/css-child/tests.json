@@ -1,6 +1,6 @@
 [
   {
-    "label": "公开讲座目录项有蓝色左边框",
+    "label": "Public lecture catalog items have a blue left border",
     "expect": {
       "type": "style",
       "selector": "#talks-entry",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "作品展览目录项有蓝色左边框",
+    "label": "Works exhibition catalog items have a blue left border",
     "expect": {
       "type": "style",
       "selector": "#exhibitions-entry",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "一级目录项留出 12px 内边距",
+    "label": "Leave 12px padding for first-level directory items",
     "expect": {
       "type": "style",
       "selector": "#talks-entry",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "另一项也留出 12px 内边距",
+    "label": "Another item also leaves 12px padding",
     "expect": {
       "type": "style",
       "selector": "#exhibitions-entry",
@@ -36,17 +36,17 @@
     }
   },
   {
-    "label": "嵌套项目的左边框仍为默认样式",
+    "label": "The left border of nested items is still the default style",
     "expect": {
       "type": "style",
       "selector": "#talk-schedule",
       "property": "border-left-style",
       "value": "none"
     },
-    "hint": "用 > 选择 .agenda 的直接子元素。"
+    "hint": "Use > to select the direct child elements of .agenda."
   },
   {
-    "label": "另一嵌套项目保留原内边距",
+    "label": "Another nested item retains the original padding",
     "expect": {
       "type": "style",
       "selector": "#exhibition-schedule",

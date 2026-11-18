@@ -1,6 +1,6 @@
 [
   {
-    "label": "行之间分配空白",
+    "label": "Allocate white space between lines",
     "expect": {
       "type": "style",
       "selector": ".cabinet",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "前两盒仍在一行",
+    "label": "The first two boxes are still in one row",
     "expect": {
       "type": "layout",
       "selector": "#mask",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "第三盒另起一行",
+    "label": "Start a new line in the third box",
     "expect": {
       "type": "layout",
       "selector": "#cloth",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "底排保留在柜体内",
+    "label": "bottom row remains in the cabinet",
     "expect": {
       "type": "layout",
       "selector": "#goggles",

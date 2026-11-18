@@ -1,6 +1,6 @@
 [
   {
-    "label": "窄屏保持 20px 下限",
+    "label": "narrow screen maintains 20px lower limit",
     "expect": {
       "type": "style",
       "selector": ".exhibition",
@@ -10,7 +10,7 @@
     "viewport": 360
   },
   {
-    "label": "中间宽度按 4vw 得到 28px",
+    "label": "press 4vw for the middle width to get 28px",
     "expect": {
       "type": "style",
       "selector": ".exhibition",
@@ -20,7 +20,7 @@
     "viewport": 700
   },
   {
-    "label": "宽屏保持 36px 上限",
+    "label": "widescreen maintains 36px upper limit",
     "expect": {
       "type": "style",
       "selector": ".exhibition",

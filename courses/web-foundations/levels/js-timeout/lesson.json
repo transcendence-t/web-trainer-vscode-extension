@@ -1,17 +1,17 @@
 {
   "focus": "script.js",
-  "title": "半秒后显示回执生成结果",
-  "goal": "用 setTimeout 在点击后安排只执行一次的延时回调。",
-  "summary": "用户点「生成回执」后先看到正在处理。半秒后换成完成提示，并恢复按钮。",
+  "title": "Display the receipt generation result after half a second",
+  "goal": "Use setTimeout to schedule a delay callback that is executed only once after clicking.",
+  "summary": "User clicks \"Generate receipt\" to see that it is being processed first. After half a second, it changes to the completion prompt and restores the button.",
   "tasks": [
-    "保持页面初始文字「等待生成」。点击「生成回执」时显示「正在生成回执」，且暂时禁用按钮。",
-    "在点击处理函数中用 setTimeout 安排 500ms 后调用 showReceipt。",
-    "确认半秒后出现「回执已生成」，并且按钮可以再次点击。"
+    "keeps the initial text of the page \"waiting to be generated\". Displays \"Generating receipt\" when \"Generate receipt\" is clicked, with the button temporarily disabled.",
+    "Use setTimeout in the click processing function to schedule 500ms before calling showReceipt.",
+    "Confirm \"receipt has been generated\" appears half a second later, and the button can be clicked again."
   ],
   "example": {
     "language": "javascript",
-    "code": "function showHint() {\n  console.log('索引刷新完成');\n}\n\nsetTimeout(showHint, 800);",
-    "note": "刷新索引的提示在 800ms 后出现。setTimeout 的第一个参数是稍后执行的函数，第二个参数是毫秒数。"
+    "code": "function showHint() {\n  console.log('index refresh completed');\n}\n\nsetTimeout(showHint, 800);",
+    "note": "The prompt to refresh the index appears after 800ms. The first parameter of setTimeout is a function to be executed later, and the second parameter is the number of milliseconds."
   },
-  "hint": "把 showReceipt 作为函数传进去。写成 showReceipt() 会立即调用，等待中的提示一闪而过。"
+  "hint": "Pass showReceipt as a function. Written as showReceipt(), it will be called immediately, and the waiting prompt will flash by."
 }

@@ -1,6 +1,6 @@
 [
   {
-    "label": "空的必填邮箱显示警示色",
+    "label": "Empty required email addresses display a warning color",
     "expect": {
       "type": "style",
       "selector": "#contact",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "错误格式仍显示警示色",
+    "label": "Error format still displays warning color",
     "expect": {
       "type": "style",
       "selector": "#contact",
@@ -25,7 +25,7 @@
     ]
   },
   {
-    "label": "输入有效邮箱后恢复原边框",
+    "label": "Restore the original frame after entering a valid email address",
     "expect": {
       "type": "style",
       "selector": "#contact",

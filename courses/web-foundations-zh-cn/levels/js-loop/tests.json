@@ -1,0 +1,104 @@
+[
+  {
+    "label": "生成前列表为空",
+    "expect": {
+      "type": "count",
+      "selector": "#days > li",
+      "value": 0
+    }
+  },
+  {
+    "label": "点击后有五项",
+    "expect": {
+      "type": "count",
+      "selector": "#days > li",
+      "value": 5
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#make-list"
+      }
+    ]
+  },
+  {
+    "label": "第一项从第 1 天开始",
+    "expect": {
+      "type": "text",
+      "selector": "#days > li:first-child",
+      "value": "第 1 天"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#make-list"
+      }
+    ]
+  },
+  {
+    "label": "第二项是第 2 天",
+    "expect": {
+      "type": "text",
+      "selector": "#days > li:nth-child(2)",
+      "value": "第 2 天"
+    },
+    "actions": [
+      { "type": "click", "selector": "#make-list" }
+    ]
+  },
+  {
+    "label": "第三项是第 3 天",
+    "expect": {
+      "type": "text",
+      "selector": "#days > li:nth-child(3)",
+      "value": "第 3 天"
+    },
+    "actions": [
+      { "type": "click", "selector": "#make-list" }
+    ]
+  },
+  {
+    "label": "第四项是第 4 天",
+    "expect": {
+      "type": "text",
+      "selector": "#days > li:nth-child(4)",
+      "value": "第 4 天"
+    },
+    "actions": [
+      { "type": "click", "selector": "#make-list" }
+    ]
+  },
+  {
+    "label": "第五项是第 5 天",
+    "expect": {
+      "type": "text",
+      "selector": "#days > li:nth-child(5)",
+      "value": "第 5 天"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#make-list"
+      }
+    ]
+  },
+  {
+    "label": "重复生成仍只有五项",
+    "expect": {
+      "type": "count",
+      "selector": "#days > li",
+      "value": 5
+    },
+    "hint": "每次生成前先清空旧项目。",
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#make-list"
+      },
+      {
+        "type": "click",
+        "selector": "#make-list"
+      }
+    ]
+  }
+]

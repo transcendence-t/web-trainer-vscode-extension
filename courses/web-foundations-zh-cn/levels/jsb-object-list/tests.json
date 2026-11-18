@@ -1,0 +1,84 @@
+[
+  {
+    "label": "准备好的包裹返回标签字符串",
+    "expect": {
+      "type": "function",
+      "name": "listReadyPickups",
+      "args": [
+        [
+          {
+            "label": "北柜-03",
+            "ready": true
+          },
+          {
+            "label": "北柜-04",
+            "ready": false
+          },
+          {
+            "label": "南柜-12",
+            "ready": true
+          }
+        ]
+      ],
+      "value": [
+        "北柜-03",
+        "南柜-12"
+      ]
+    }
+  },
+  {
+    "label": "保留顺序和同名标签",
+    "expect": {
+      "type": "function",
+      "name": "listReadyPickups",
+      "args": [
+        [
+          {
+            "label": "西柜-08",
+            "ready": true
+          },
+          {
+            "label": "西柜-01",
+            "ready": true
+          },
+          {
+            "label": "西柜-08",
+            "ready": true
+          }
+        ]
+      ],
+      "value": [
+        "西柜-08",
+        "西柜-01",
+        "西柜-08"
+      ]
+    }
+  },
+  {
+    "label": "都在备货时返回空列表",
+    "expect": {
+      "type": "function",
+      "name": "listReadyPickups",
+      "args": [
+        [
+          {
+            "label": "东柜-01",
+            "ready": false
+          }
+        ]
+      ],
+      "value": []
+    }
+  },
+  {
+    "label": "空包裹列表返回空标签列表",
+    "expect": {
+      "type": "function",
+      "name": "listReadyPickups",
+      "args": [
+        []
+      ],
+      "value": []
+    }
+  }
+]

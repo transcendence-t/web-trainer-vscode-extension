@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "给弹性项目设置一致的起始宽度",
+  "goal": "理解 flex-basis 在弹性空间分配之前设定项目尺寸。",
+  "summary": "流程条中两个标题的旧宽度不同。统一它们的初始尺寸，让步骤提示占满剩余宽度。",
+  "tasks": [
+    "让 .phase 两项各以 104px 为起始宽度并保持该宽度。",
+    "保留 .detail 填充剩余空间。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".tab { flex: 0 0 96px; }\n.info { flex: 1; }",
+    "note": "flex 的第三项是 flex-basis，前两项决定可否增长和收缩。"
+  },
+  "hint": "让 .phase 使用 flex: 0 0 104px，覆盖旧的 width 对 Flex 主轴的作用。"
+}

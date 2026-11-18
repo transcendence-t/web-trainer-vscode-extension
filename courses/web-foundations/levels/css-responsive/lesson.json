@@ -1,17 +1,17 @@
 {
   "focus": "style.css",
-  "title": "让设备卡随窗口宽度重排",
-  "goal": "结合可伸缩的容器宽度和媒体查询，在窄屏堆叠卡片，在宽屏并排。",
-  "summary": "设备预约页的卡片区使用固定宽度，小窗口内容会溢出，大窗口也没有利用好空间。",
+  "title": "Allows device cards to rearrange with the window width",
+  "goal": "combines scalable container width and media queries to stack cards in narrow screens and side by side in wide screens.",
+  "summary": "device reservation page uses a fixed width. The content of the small window will overflow, and the space of the large window will not be used well.",
   "tasks": [
-    "让 .equipment-grid 的宽度随 .equipment-stage 变化，始终填满这块区域。",
-    "视口小于 680px 时，让两张卡片各占一行。",
-    "从 680px 开始，把两张卡片排成等宽的两列，保留 12px 间隔，并让两列都落在区域内。"
+    "Let the width of .equipment-grid change with .equipment-stage and always fill this area.",
+    "When the viewport is less than 680px, let the two cards occupy one line each.",
+    "Starting from 680px, arrange the two cards into two columns of equal width, leaving a 12px gap and making both columns fall within the area."
   ],
   "example": {
     "language": "css",
     "code": ".menu-grid {\n  display: grid;\n  width: 100%;\n  grid-template-columns: 1fr;\n  gap: 1rem;\n}\n\n@media (min-width: 48rem) {\n  .menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }\n}",
-    "note": "取餐菜单先按一列显示。达到断点后，两条 1fr 轨道平分扣掉间隔后剩余的宽度。"
+    "note": "The ordering menu is first displayed in one column. After reaching the break point, the two 1fr tracks bisect the remaining width after deducting the gap."
   },
-  "hint": "两列都设为 50% 时，两列已占满整个宽度，再加 gap 会溢出。用 fr 给间隔留出空间。"
+  "hint": "When both columns are set to 50%, the two columns have occupied the entire width, and if the gap is added, they will overflow. Use fr to leave space for intervals."
 }

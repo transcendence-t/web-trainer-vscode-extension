@@ -1,6 +1,6 @@
 [
   {
-    "label": "先入库再出库",
+    "label": "Put into storage first and then out of storage",
     "expect": {
       "type": "function",
       "name": "updateStock",
@@ -13,7 +13,7 @@
     }
   },
   {
-    "label": "从零库存开始入库",
+    "label": "starts warehousing from zero inventory",
     "expect": {
       "type": "function",
       "name": "updateStock",
@@ -26,7 +26,7 @@
     }
   },
   {
-    "label": "全部出库后返回数值 0",
+    "label": "Returns value 0 after all goods are shipped out of the warehouse",
     "expect": {
       "type": "function",
       "name": "updateStock",
@@ -39,7 +39,7 @@
     }
   },
   {
-    "label": "入库的货也可以在本次出库",
+    "label": "The goods entering the warehouse can also be shipped out this time.",
     "expect": {
       "type": "function",
       "name": "updateStock",

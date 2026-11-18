@@ -1,0 +1,17 @@
+{
+  "jsb-array-index": {
+    "script.js": "const readStop = (stops, index) => stops[index] ?? null;"
+  },
+  "jsb-array-for": {
+    "script.js": "function totalCheckouts(counts) {\n  let total = 0;\n  for (const count of counts) {\n    total += count;\n  }\n  return total;\n}"
+  },
+  "jsb-object-read": {
+    "script.js": "const readFreeSeats = (room) => room[\"freeSeats\"] ?? null;"
+  },
+  "jsb-object-build": {
+    "script.js": "function makeRepairOrder(issue, minutes, urgent) {\n  return { urgent: urgent, issue: issue, minutes: minutes };\n}"
+  },
+  "jsb-object-list": {
+    "script.js": "function listReadyPickups(parcels) {\n  const labels = [];\n  for (const parcel of parcels) {\n    if (parcel.ready) {\n      labels.push(parcel.label);\n    }\n  }\n  return labels;\n}"
+  }
+}

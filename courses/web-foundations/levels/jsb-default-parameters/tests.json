@@ -1,6 +1,6 @@
 [
   {
-    "label": "省略参数时领取一包",
+    "label": "Get one pack when omitting parameters",
     "expect": {
       "type": "function",
       "name": "supplyUnits",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "两包有十二个",
+    "label": "Two packs of twelve",
     "expect": {
       "type": "function",
       "name": "supplyUnits",
@@ -20,7 +20,7 @@
     }
   },
   {
-    "label": "明确指定零包",
+    "label": "explicitly specifies zero package",
     "expect": {
       "type": "function",
       "name": "supplyUnits",

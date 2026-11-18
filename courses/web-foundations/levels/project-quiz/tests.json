@@ -1,6 +1,6 @@
 [
   {
-    "label": "第一题有三个可选答案",
+    "label": "The first question has three optional answers",
     "expect": {
       "type": "count",
       "selector": "#quiz-options button",
@@ -8,11 +8,11 @@
     }
   },
   {
-    "label": "未回答时点下一题无法跳过第一题",
+    "label": "If you click the next question when you have not answered the question, you cannot skip the first question.",
     "expect": {
       "type": "text",
       "selector": "#quiz-question",
-      "value": "哪个链接地址能跳到 id 为 gallery 的区块？"
+      "value": "Which link address can jump to the block with the id of gallery?"
     },
     "actions": [
       {
@@ -22,11 +22,11 @@
     ]
   },
   {
-    "label": "第一题答对给出正确反馈",
+    "label": "Give correct feedback for the first correct answer",
     "expect": {
       "type": "text",
       "selector": "#quiz-feedback",
-      "value": "回答正确。"
+      "value": "answered correctly."
     },
     "actions": [
       {
@@ -36,11 +36,11 @@
     ]
   },
   {
-    "label": "第一题答错时展示正确选项",
+    "label": "Display the correct option when the first question is answered incorrectly",
     "expect": {
       "type": "text",
       "selector": "#quiz-feedback",
-      "value": "正确答案是「#gallery」。"
+      "value": "The correct answer is \"#gallery\"."
     },
     "actions": [
       {
@@ -50,7 +50,7 @@
     ]
   },
   {
-    "label": "作答后本题三个选项都禁用",
+    "label": "After answering, all three options of this question are disabled.",
     "expect": {
       "type": "count",
       "selector": "#quiz-options button:disabled",
@@ -64,7 +64,7 @@
     ]
   },
   {
-    "label": "答错后再点正确答案也不会补分",
+    "label": "No points will be compensated if you click on the correct answer after making an incorrect answer.",
     "expect": {
       "type": "text",
       "selector": "#quiz-score",
@@ -82,7 +82,7 @@
     ]
   },
   {
-    "label": "重复点击正确选项也只获得一分",
+    "label": "Only one point will be awarded if you click the correct option repeatedly.",
     "expect": {
       "type": "text",
       "selector": "#quiz-score",
@@ -100,11 +100,11 @@
     ]
   },
   {
-    "label": "下一题换成图片替代文字题",
+    "label": "The next question is replaced by pictures instead of text.",
     "expect": {
       "type": "text",
       "selector": "#quiz-question",
-      "value": "哪个属性为图片提供替代文字？"
+      "value": "Which attribute provides alt text for an image?"
     },
     "actions": [
       {
@@ -118,11 +118,11 @@
     ]
   },
   {
-    "label": "换题后提示重新等待作答",
+    "label": "After changing the question, you will be prompted to wait for the answer again.",
     "expect": {
       "type": "text",
       "selector": "#quiz-feedback",
-      "value": "请选择一个答案。"
+      "value": "Please select an answer."
     },
     "actions": [
       {
@@ -136,11 +136,11 @@
     ]
   },
   {
-    "label": "答对两题后保留累计分数",
+    "label": "Keep the accumulated score after answering two questions correctly",
     "expect": {
       "type": "text",
       "selector": "#quiz-feedback",
-      "value": "共答对 2 题。"
+      "value": "Score: 2 / 2"
     },
     "actions": [
       {
@@ -162,11 +162,11 @@
     ]
   },
   {
-    "label": "第一题错第二题对时共计一分",
+    "label": "If the first question is wrong and the second question is correct, a total of one point will be awarded.",
     "expect": {
       "type": "text",
       "selector": "#quiz-feedback",
-      "value": "共答对 1 题。"
+      "value": "Score: 1 / 2"
     },
     "actions": [
       {
@@ -188,11 +188,11 @@
     ]
   },
   {
-    "label": "两题都答错也能查看零分结果",
+    "label": "Even if you answer both questions incorrectly, you can still view the zero score result.",
     "expect": {
       "type": "text",
       "selector": "#quiz-feedback",
-      "value": "共答对 0 题。"
+      "value": "Score: 0 / 2"
     },
     "actions": [
       {
@@ -214,7 +214,7 @@
     ]
   },
   {
-    "label": "查看结果后清空选项",
+    "label": "Clear options after viewing results",
     "expect": {
       "type": "count",
       "selector": "#quiz-options button",

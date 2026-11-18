@@ -1,0 +1,19 @@
+[
+  {
+    "label": "示例放进 pre 里的 code，并保留小于号",
+    "expect": {
+      "type": "text",
+      "selector": "#sample pre code",
+      "value": "if (count < 3) { console.log(count); }"
+    }
+  },
+  {
+    "label": "代码区域的排版保留空格和换行",
+    "expect": {
+      "type": "style",
+      "selector": "#sample code",
+      "property": "white-space",
+      "value": "pre"
+    }
+  }
+]

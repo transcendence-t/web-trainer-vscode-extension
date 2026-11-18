@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "用边框区分货签状态",
-  "goal": "用虚线标出待清点的货签，保留已清点货签的实线。",
-  "summary": "border-style 决定边框的线型。solid 是实线，dashed 是虚线。默认值 none 会让边框不显示。",
+  "title": "Use borders to distinguish cargo label status",
+  "goal": "Use dotted lines to mark the labels of goods to be counted, and keep the solid lines of the labels of goods that have been counted.",
+  "summary": "border-style determines the line style of the border. solid is a solid line and dashed is a dashed line. The default value none causes the border to not be displayed.",
   "tasks": [
-    "只给带 pending 类的货签设置 border-style: dashed。",
-    "保留已清点货签的实线，并沿用两张货签的绿色 2px 边框设置。"
+    "Only set border-style: dashed for cargo labels with pending class.",
+    "retains the solid line of the counted cargo tag and uses the green 2px border setting of the two cargo tags."
   ],
   "example": {
     "language": "css",
     "code": ".enlargement-frame {\n  border-width: 2px;\n  border-color: #40597a;\n  border-style: dotted;\n}",
-    "note": "地图的局部放大区域可以用 dotted 画成一圈点线。"
+    "note": "map can be drawn as a circle of dotted lines using dotted."
   },
-  "hint": "货签已设置边框宽度和颜色。如果边框仍然看不见，检查 pending 的 border-style 是否已设置为 dashed。"
+  "hint": "The border width and color of the cargo label have been set. If the border is still invisible, check to see if the pending border-style is set to dashed."
 }

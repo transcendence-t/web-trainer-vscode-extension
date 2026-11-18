@@ -1,6 +1,6 @@
 [
   {
-    "label": "状态卡采用新底色",
+    "label": "status card adopts new background color",
     "expect": {
       "type": "style",
       "selector": ".status",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "旧规则的内边距仍生效",
+    "label": "The padding of the old rules still takes effect",
     "expect": {
       "type": "style",
       "selector": ".status",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "其他段落没有状态底色",
+    "label": "Other paragraphs have no status background color",
     "expect": {
       "type": "style",
       "selector": ".note",

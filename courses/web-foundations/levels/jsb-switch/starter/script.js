@@ -1,8 +1,8 @@
 
 function stationName(code) {
   switch (code) {
-    // 在 default 前补上各个工位代号的 case。
+    // Add the case of each station code before default.
     default:
-      return '未知工位';
+      return 'Unknown workstation';
   }
 }

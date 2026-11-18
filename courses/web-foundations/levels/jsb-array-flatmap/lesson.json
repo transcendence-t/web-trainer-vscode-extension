@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "合并教室分组的参会名单",
-  "goal": "将嵌套列表映射并合并为一级数组。",
-  "summary": "每个教室有一组报名姓名，签到系统接收扁平的名单。先按教室顺序，再按其内的报名顺序排列。",
+  "title": "Merged classroom group participant list",
+  "goal": "Maps and merges nested lists into one-level arrays.",
+  "summary": "Each classroom has a set of registration names, and the sign-in system receives a flat list. Arrange by classroom order first, then by registration order within it.",
   "tasks": [
-    "完成 participantNames(rooms)，每个 rooms 元素含有一个 names 数组。",
-    "合并所有 names，保留顺序与重名。空教室与空列表不会增加条目。"
+    "completes participantNames(rooms), each rooms element contains a names array.",
+    "merges all names, preserving order and duplicate names. Empty classrooms and empty lists will not add entries."
   ],
   "example": {
     "language": "javascript",
-    "code": "const groups = [{ items: ['木料'] }, { items: ['胶带', '纸'] }];\ngroups.flatMap((group) => group.items); // ['木料', '胶带', '纸']",
-    "note": "flatMap 先为每一项得到一个数组，再把结果展平一层。"
+    "code": "const groups = [{ items: ['wood'] }, { items: ['tape', 'paper'] }];\ngroups.flatMap((group) => group.items); // ['wood', 'tape', 'paper']",
+    "note": "flatMap first gets an array for each item, and then flattens the result."
   },
-  "hint": "回调返回 room.names，避免再用额外的 [] 包住它。"
+  "hint": "callback returns room.names to avoid wrapping it with extra []."
 }

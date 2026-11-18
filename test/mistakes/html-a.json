@@ -1,44 +1,44 @@
 {
   "html-document": {
-    "name": "把 title 写进正文",
+    "name": "Write title into the text",
     "files": {
-      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"sheet\">\n    <title>社区图书角</title>\n    <p>周六下午开放。</p>\n  </main>\n</body>\n</html>"
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"sheet\">\n    <title>Community Book Corner</title>\n    <p>Open Saturday afternoon.</p>\n  </main>\n</body>\n</html>"
     }
   },
   "html-heading": {
-    "name": "把介绍段落写在主标题前面",
+    "name": "Write the introductory paragraph before the main title",
     "files": {
-      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>标题与段落</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <p>我正在学习网页设计。</p>\n    <h1>我的第一张网页</h1>\n  </main>\n</body>\n</html>\n"
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Title and Paragraph</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <p>I am learning web design.</p>\n    <h1>My first webpage</h1>\n  </main>\n</body>\n</html>\n"
     }
   },
   "html-emphasis": {
-    "name": "只用 b 和 i 改变字形",
+    "name": "only uses b and i to change the glyph",
     "files": {
-      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>设备检查须知</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>设备检查须知</h1>\n  <p id=\"power-note\">维修前务必<b>切断电源</b>。</p>\n  <p id=\"cover-note\">请从<i>正面</i>打开盖板。</p>\n</main>\n</body>\n</html>\n"
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Equipment Inspection Instructions</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>Equipment Inspection Instructions</h1>\n  <p id=\"power-note\">Before repairing, be sure to<b>cut off the power</b>。</p>\n  <p id=\"cover-note\">Please download from<i>front</i>Open the cover.</p>\n</main>\n</body>\n</html>\n"
     }
   },
   "html-line-break": {
-    "name": "把换行放在房间号后面",
+    "name": "Put the line break after the room number",
     "files": {
-      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>设计社联系地址</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>设计社联系地址</h1>\n  <address id=\"club-address\">\n    <span>大学路 16 号</span>\n    <span>实训楼 B 座 204 室</span><br>\n  </address>\n</main>\n</body>\n</html>\n"
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Design agency contact address</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>Design agency contact address</h1>\n  <address id=\"club-address\">\n    <span>No. 16 Daxue Road</span>\n    <span>Training Building</span><br>\n  </address>\n</main>\n</body>\n</html>\n"
     }
   },
   "html-entities": {
-    "name": "转义了标签，版权字符引用仍被解析",
+    "name": "escapes tags, copyright character references are still parsed",
     "files": {
-      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>版权代码速查</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>版权代码速查</h1>\n  <p>页脚的版权代码 <code id=\"copyright-code\">&lt;p&gt;&copy;&lt;/p&gt;</code></p>\n</main>\n</body>\n</html>\n"
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Copyright code quick check</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>Copyright code quick check</h1>\n  <p>Copyright code for footer <code id=\"copyright-code\">&lt;p&gt;&copy;&lt;/p&gt;</code></p>\n</main>\n</body>\n</html>\n"
     }
   },
   "html-list": {
-    "name": "把鼠标和显示器合成一项",
+    "name": "combines mouse and monitor into one",
     "files": {
-      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>三项设备清单</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>实训室设备</h1>\n    <ul id=\"equipment\">\n      <li>键盘</li>\n      <li>鼠标、显示器</li>\n    </ul>\n  </main>\n</body>\n</html>\n"
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>three equipment lists</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>training room equipment</h1>\n    <ul id=\"equipment\">\n      <li>keyboard</li>\n      <li>mouse, monitor</li>\n    </ul>\n  </main>\n</body>\n</html>\n"
     }
   },
   "html-ordered-list": {
-    "name": "停好单车之前就锁车",
+    "name": "Lock the bike before parking it",
     "files": {
-      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>共享单车归还</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>共享单车归还</h1>\n  <ol>\n    <li>找到还车点</li>\n    <li>锁车并确认归还</li>\n    <li>把单车停进空位</li>\n  </ol>\n</main>\n</body>\n</html>\n"
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Shared bicycle return</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>Shared bicycle return</h1>\n  <ol>\n    <li>Find the return point</li>\n    <li>Lock the car and confirm the return</li>\n    <li>Park the bicycle into the empty space</li>\n  </ol>\n</main>\n</body>\n</html>\n"
     }
   }
 }

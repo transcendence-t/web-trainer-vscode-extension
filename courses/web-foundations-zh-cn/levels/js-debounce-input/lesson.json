@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "等输入暂停再执行本地搜索",
+  "goal": "用 clearTimeout 与 setTimeout 把高频输入合并成一次操作。",
+  "summary": "搜索框每输入一个字符就会触发事件。用户暂停 220 毫秒后再用最后一次输入执行查询。",
+  "tasks": [
+    "监听 #filter 的 input。每次输入先取消上一个计时器，再安排 220 毫秒后运行现有的 runSearch。",
+    "查询文字采用最新输入。连续输入只查询一次，停顿后再输入可以发起新查询。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "let timeoutId;\ninput.addEventListener('input', () => {\n  clearTimeout(timeoutId);\n  timeoutId = setTimeout(update, 200);\n});",
+    "note": "计时器编号需要保存在回调外，这样下一次事件才能取消上一次安排。"
+  },
+  "hint": "把数组筛选或结果更新放在延时回调内。每次输入都更新保存的计时器编号。"
+}

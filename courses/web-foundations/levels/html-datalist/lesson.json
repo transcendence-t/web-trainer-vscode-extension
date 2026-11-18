@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "为文本输入提供可编辑的建议",
-  "goal": "将 datalist 绑定到文本输入框，保留自定义输入能力。",
-  "summary": "大多数申请来自三栋常用教学楼。添加候选值方便选择，也允许填写其他楼栋。",
+  "title": "Provides editable suggestions for text input",
+  "goal": "Bind the datalist to the text input box, retaining custom input capabilities.",
+  "summary": "Most applications come from three commonly used academic buildings. Add candidate values ​​to facilitate selection, and also allow other buildings to be filled in.",
   "tasks": [
-    "为 #building-input 设置 list=\"building-options\"。",
-    "创建 ID 为 building-options 的 datalist，加入值为「笃行楼」「明德楼」「求知楼」的三个 option。"
+    "Set list=\"building-options\" for #building-input.",
+    "creates a datalist with the ID building-options and adds three options with the values ​​ \"Duxing Building\" \"Mingde Building\" \"Qiuzhi Building\"."
   ],
   "example": {
     "language": "html",
-    "code": "<input list=\"campuses\">\n<datalist id=\"campuses\"><option value=\"东区\"></option></datalist>",
-    "note": "list 的值指向 datalist 的 ID。与 select 相比，输入框仍允许填写候选之外的值。"
+    "code": "<input list=\"campuses\">\n<datalist id=\"campuses\"><option value=\"East District\"></option></datalist>",
+    "note": "list points to the ID of datalist. Compared with select, the input box still allows filling in values ​​other than candidates."
   },
-  "hint": "建议值写在 option 的 value 属性里，input 的类型仍为 text。"
+  "hint": "It is recommended that the value is written in the value attribute of option, and the type of input is still text."
 }

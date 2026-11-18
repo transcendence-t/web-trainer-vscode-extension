@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "按回车确认桌牌名称",
-  "goal": "用键盘事件把桌牌名称的确认操作绑定到 Enter。",
-  "summary": "用户按键时会触发 keydown。事件的 key 属性保存按键名称，可以据此决定是否执行确认动作。",
+  "title": "Press Enter to confirm the table name",
+  "goal": "uses keyboard events to bind the confirmation operation of the table card name to Enter.",
+  "summary": "keydown is triggered when the user presses a key. The key attribute of the event saves the key name, which can be used to decide whether to perform the confirmation action.",
   "tasks": [
-    "在 #table-name 输入框上监听 keydown。",
-    "当 event.key 是 Enter 时，将输入框的当前值写入 #table-card。普通输入和其他按键都保持已确认的桌牌文本。"
+    "listens for keydown on the #table-name input box.",
+    "When event.key is Enter, write the current value of the input box to #table-card. Normal input and other keystrokes retain the confirmed table text."
   ],
   "example": {
     "language": "javascript",
     "code": "const tip = document.querySelector('#reading-tip');\ndocument.addEventListener('keydown', (event) => {\n  if (event.key === 'Escape') {\n    tip.hidden = true;\n  }\n});",
-    "note": "阅读页监听 Escape，用它关闭附加提示。"
+    "note": "Reading page monitors Escape and uses it to close additional prompts."
   },
-  "hint": "按字母键也更新桌牌时，检查更新代码是否只在 event.key 等于 Enter 时运行。Enter 的首字母大写。"
+  "hint": "When pressing the letter key to update the table card, check whether the update code is only run when event.key is equal to Enter. The first letter of Enter is capitalized."
 }

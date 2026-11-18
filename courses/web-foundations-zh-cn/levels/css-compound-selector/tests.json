@@ -1,0 +1,29 @@
+[
+  {
+    "label": "符合两个类时使用警示色",
+    "expect": {
+      "type": "style",
+      "selector": "#urgent-notice",
+      "property": "color",
+      "value": "rgb(124, 70, 14)"
+    }
+  },
+  {
+    "label": "普通公告仍用默认色",
+    "expect": {
+      "type": "style",
+      "selector": "#plain-notice",
+      "property": "color",
+      "value": "rgb(36, 52, 71)"
+    }
+  },
+  {
+    "label": "单独的 urgent 不受影响",
+    "expect": {
+      "type": "style",
+      "selector": "#plain-urgent",
+      "property": "color",
+      "value": "rgb(36, 52, 71)"
+    }
+  }
+]

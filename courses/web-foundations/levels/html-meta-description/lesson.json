@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "为活动页写页面元数据",
-  "goal": "区分标签页标题、页面摘要和正文标题。",
-  "summary": "校园开放日的介绍页需要一条供搜索工具读取的摘要。用 head 中的元数据描述页面。",
+  "title": "Write page metadata for the active page",
+  "goal": "distinguishes between tab title, page summary and text title.",
+  "summary": "The introductory page for the Campus Open House requires an abstract that can be read by search tools. Describe the page using metadata in the head.",
   "tasks": [
-    "在 head 添加 name=\"description\" 的 meta，content 写「查询校园开放日的日期、地点和参观安排」。",
-    "保留已有的标签页标题和正文标题。"
+    "Add the meta with name=\"description\" in the head, and write \"Check the date, location and visit schedule of the campus open day\" in the content.",
+    "retains the existing tab title and text title."
   ],
   "example": {
     "language": "html",
-    "code": "<title>社区文化馆 | 活动安排</title>\n<meta name=\"description\" content=\"查询本月展览与工作坊\">",
-    "note": "title 给页面命名，meta 的 content 存放摘要。摘要通常不会显示在正文里。"
+    "code": "<title>Community Cultural Center | Event Arrangement</title>\n<meta name=\"description\" content=\"Check this month’s exhibitions and workshops\">",
+    "note": "title names the page, and the content of meta stores the summary. Abstracts are usually not included in the text."
   },
-  "hint": "meta 是空元素，直接在开始标签上写 name 和 content 两个属性。"
+  "hint": "meta is an empty element, and the name and content attributes are written directly on the start tag."
 }

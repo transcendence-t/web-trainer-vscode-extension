@@ -1,0 +1,36 @@
+[
+  {
+    "label": "显示浏览器播放控件",
+    "expect": {
+      "type": "property",
+      "selector": "audio#arrival",
+      "name": "controls",
+      "value": true
+    }
+  },
+  {
+    "label": "不自动播放",
+    "expect": {
+      "type": "property",
+      "selector": "audio#arrival",
+      "name": "autoplay",
+      "value": false
+    }
+  },
+  {
+    "label": "关联声音说明",
+    "expect": {
+      "type": "attribute",
+      "selector": "audio#arrival",
+      "name": "aria-describedby",
+      "value": "transcript"
+    }
+  },
+  {
+    "label": "保留 WAV 音源",
+    "expect": {
+      "type": "exists",
+      "selector": "audio#arrival > source[type=\"audio/wav\"][src^=\"data:audio/wav\"]"
+    }
+  }
+]

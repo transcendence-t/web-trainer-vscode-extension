@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>区分当前进度与容量读数</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="sheet">
+    <h1>区分当前进度与容量读数</h1>
+    <label for="upload">上传进度</label> <progress id="upload" value="6" max="10">6 / 10</progress>
+    <br>
+    <label for="capacity">存储使用量</label> <meter id="capacity" min="0" max="100" value="65">65 / 100</meter>
+  </main>
+</body>
+</html>

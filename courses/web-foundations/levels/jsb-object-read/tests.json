@@ -1,12 +1,12 @@
 [
   {
-    "label": "读出已登记的正数空位",
+    "label": "Read out the registered positive vacancies",
     "expect": {
       "type": "function",
       "name": "readFreeSeats",
       "args": [
         {
-          "name": "静音区",
+          "name": "silent zone",
           "freeSeats": 7
         }
       ],
@@ -14,13 +14,13 @@
     }
   },
   {
-    "label": "已满时保留数字 0",
+    "label": "retains number 0 when full",
     "expect": {
       "type": "function",
       "name": "readFreeSeats",
       "args": [
         {
-          "name": "讨论区",
+          "name": "Discussion Forum",
           "freeSeats": 0
         }
       ],
@@ -28,13 +28,13 @@
     }
   },
   {
-    "label": "只有总座位数时空位仍未知",
+    "label": "The available seats are still unknown when only the total number of seats is available",
     "expect": {
       "type": "function",
       "name": "readFreeSeats",
       "args": [
         {
-          "name": "南自习室",
+          "name": "South Study Room",
           "capacity": 12
         }
       ],
@@ -42,7 +42,7 @@
     }
   },
   {
-    "label": "空对象没有空位记录",
+    "label": "Empty object has no empty records",
     "expect": {
       "type": "function",
       "name": "readFreeSeats",

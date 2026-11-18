@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "让读者手动播放提示音",
-  "goal": "给音频提供原生播放控件及文字说明。",
-  "summary": "报到介绍页有一段离线音频。让访问者自己决定播放时间，并能阅读提示音代表的含义。",
+  "title": "Allows readers to manually play the prompt sound",
+  "goal": "provides native playback controls and text descriptions for audio.",
+  "summary": "There is an offline audio section on the registration introduction page. Allow visitors to decide when to play and read what the beep means.",
   "tasks": [
-    "给 #arrival 添加 controls，并保留现成的 source。",
-    "添加 aria-describedby 关联 #transcript，页面打开时等待读者播放。"
+    "Add controls to #arrival and keep the ready-made source.",
+    "Add aria-describedby association #transcript, wait for readers to play when the page is opened."
   ],
   "example": {
     "language": "html",
-    "code": "<audio controls aria-describedby=\"sound-note\" src=\"notice.wav\"></audio>\n<p id=\"sound-note\">声音说明：两次铃声代表休息结束。</p>",
-    "note": "controls 提供播放和暂停。文字说明帮助听不到音频的读者获取相同信息。"
+    "code": "<audio controls aria-describedby=\"sound-note\" src=\"notice.wav\"></audio>\n<p id=\"sound-note\">Sound description: Two bells represent the end of the break.</p>",
+    "note": "controls provide play and pause. Text descriptions help readers who cannot hear the audio access the same information."
   },
-  "hint": "controls 是布尔属性。保留声音文件地址，用 aria-describedby 写说明段落的 ID。"
+  "hint": "controls is a Boolean attribute. Keep the sound file address and use aria-describedby to write the ID of the description paragraph."
 }

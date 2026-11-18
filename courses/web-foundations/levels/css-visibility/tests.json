@@ -1,6 +1,6 @@
 [
   {
-    "label": "中间一站已隐藏",
+    "label": "The middle station has been hidden",
     "expect": {
       "type": "style",
       "selector": "#middle-stop",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "终点站仍然可见",
+    "label": "terminal is still visible",
     "expect": {
       "type": "style",
       "selector": "#last-stop",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "终点仍在中间站空位的右边",
+    "label": "The end point is still on the right side of the empty space in the middle station",
     "expect": {
       "type": "layout",
       "selector": "#last-stop",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "中间站空位仍在起点右边",
+    "label": "The empty space at the intermediate station is still on the right side of the starting point",
     "expect": {
       "type": "layout",
       "selector": "#middle-stop",

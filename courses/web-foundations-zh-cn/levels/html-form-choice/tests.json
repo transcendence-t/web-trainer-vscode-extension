@@ -1,0 +1,53 @@
+[
+  {
+    "label": "场次组有 legend 标题",
+    "expect": {
+      "type": "text",
+      "selector": "form fieldset > legend:first-child",
+      "value": "到场时段"
+    }
+  },
+  {
+    "label": "组内有两个同名的单选按钮",
+    "expect": {
+      "type": "count",
+      "selector": "form fieldset:has(> legend) input[type=\"radio\"][name=\"slot\"]",
+      "value": 2
+    }
+  },
+  {
+    "label": "最后点击的下午场被选中",
+    "expect": {
+      "type": "exists",
+      "selector": "form fieldset input[type=\"radio\"][value=\"afternoon\"]:checked"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "input[value=\"morning\"]"
+      },
+      {
+        "type": "click",
+        "selector": "input[value=\"afternoon\"]"
+      }
+    ]
+  },
+  {
+    "label": "先后点击两个时段仍只有一项被选中",
+    "expect": {
+      "type": "count",
+      "selector": "form fieldset input[type=\"radio\"]:checked",
+      "value": 1
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "input[value=\"morning\"]"
+      },
+      {
+        "type": "click",
+        "selector": "input[value=\"afternoon\"]"
+      }
+    ]
+  }
+]

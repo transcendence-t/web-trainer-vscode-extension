@@ -1,48 +1,48 @@
 {
   "jsb-array-index": {
-    "name": "把越界上界写成大于长度，漏掉等于长度的情况",
+    "name": "Write the out-of-bounds upper limit as greater than the length, and miss the case of being equal to the length.",
     "files": {
       "script.js": "function readStop(stops, index) {\n  if (index < 0 || index > stops.length) {\n    return null;\n  }\n  return stops[index];\n}"
     }
   },
   "jsb-array-push": {
-    "name": "把 push 返回的新长度直接交给调用方",
+    "name": "gives the new length returned by push directly to the caller",
     "files": {
       "script.js": "function addBooking(bookings, guest) {\n  return bookings.push(guest);\n}"
     }
   },
   "jsb-array-for": {
-    "name": "循环从下标 1 开始，漏掉第一个时段",
+    "name": "loop starts from index 1, missing the first period",
     "files": {
       "script.js": "function totalCheckouts(counts) {\n  let total = 0;\n  for (let index = 1; index < counts.length; index += 1) {\n    total += counts[index];\n  }\n  return total;\n}"
     }
   },
   "jsb-array-map": {
-    "name": "回调加了花括号却漏写 return",
+    "name": "The callback adds curly braces but misses return",
     "files": {
       "script.js": "function labelTickets(numbers) {\n  return numbers.map((number) => { 'Q-' + number; });\n}"
     }
   },
   "jsb-array-filter": {
-    "name": "使用严格大于，恰好达标的批次被过滤",
+    "name": "uses strict greater than, and the batches that just meet the standard are filtered",
     "files": {
       "script.js": "function selectReadyBatches(counts, minimum) {\n  return counts.filter((count) => count > minimum);\n}"
     }
   },
   "jsb-object-read": {
-    "name": "用 || 默认值，把已满的 0 误改为 null",
+    "name": "uses || default value and changes the full 0 to null by mistake",
     "files": {
       "script.js": "function readFreeSeats(room) {\n  return room.freeSeats || null;\n}"
     }
   },
   "jsb-object-build": {
-    "name": "把布尔型的紧急状态转成字符串",
+    "name": "Convert Boolean emergency status into string",
     "files": {
       "script.js": "function makeRepairOrder(issue, minutes, urgent) {\n  return { issue, minutes, urgent: String(urgent) };\n}"
     }
   },
   "jsb-object-list": {
-    "name": "筛出已备货的对象后忘记提取 label",
+    "name": "Forgot to extract the label after filtering out the stocked objects",
     "files": {
       "script.js": "function listReadyPickups(parcels) {\n  const ready = parcels.filter((parcel) => parcel.ready);\n  return ready;\n}"
     }

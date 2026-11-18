@@ -1,0 +1,90 @@
+[
+  {
+    "label": "四杯饮料计算出分装量",
+    "expect": {
+      "type": "function",
+      "name": "drinkVolume",
+      "args": [
+        4,
+        125
+      ],
+      "value": 500
+    }
+  },
+  {
+    "label": "零杯的分装量为零",
+    "expect": {
+      "type": "function",
+      "name": "drinkVolume",
+      "args": [
+        0,
+        125
+      ],
+      "value": 0
+    }
+  },
+  {
+    "label": "一杯的分装量等于单杯容量",
+    "expect": {
+      "type": "function",
+      "name": "drinkVolume",
+      "args": [
+        1,
+        220
+      ],
+      "value": 220
+    }
+  },
+  {
+    "label": "八杯分装量再加 200 毫升备用",
+    "expect": {
+      "type": "function",
+      "name": "prepareVolume",
+      "args": [
+        8,
+        150,
+        200
+      ],
+      "value": 1400
+    }
+  },
+  {
+    "label": "零杯时仍然计入备用量",
+    "expect": {
+      "type": "function",
+      "name": "prepareVolume",
+      "args": [
+        0,
+        180,
+        300
+      ],
+      "value": 300
+    }
+  },
+  {
+    "label": "备用量为零时只计算分装量",
+    "expect": {
+      "type": "function",
+      "name": "prepareVolume",
+      "args": [
+        3,
+        200,
+        0
+      ],
+      "value": 600
+    }
+  },
+  {
+    "label": "一杯的分装量与备用量分别计入",
+    "expect": {
+      "type": "function",
+      "name": "prepareVolume",
+      "args": [
+        1,
+        80,
+        30
+      ],
+      "value": 110
+    }
+  }
+]

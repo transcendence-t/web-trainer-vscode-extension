@@ -1,9 +1,9 @@
 
 function pageLabels(title, preview) {
-  let label = '归档-' + title;
+  let label = 'Archive-' + title;
   let banner = label;
   if (preview) {
-    const label = '预览-' + title;
+    const label = 'Preview-' + title;
     banner = label;
   }
   return banner + ' / ' + label;

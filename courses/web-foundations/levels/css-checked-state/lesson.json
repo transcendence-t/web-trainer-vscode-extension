@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "让已勾选的器材文字变粗",
-  "goal": "把 :checked 与相邻兄弟选择器组合，跟踪真实勾选状态。",
-  "summary": "复选框本身保留原生外观，勾选后再加粗旁边的标签文字便于扫读。",
+  "title": "Make the text of the selected equipment bolder",
+  "goal": "Combine :checked with adjacent sibling selectors to track the true check status.",
+  "summary": "The checkbox itself retains the original appearance. After checking, the label text next to it is bolded for easy reading.",
   "tasks": [
-    "当复选框选中时，将和它相邻的 span 字重设为 700。",
-    "未勾选或再次取消时，文字恢复普通字重。"
+    "When the check box is selected, reset the span word adjacent to it to 700.",
+    "When unchecked or canceled again, the text returns to normal font weight."
   ],
   "example": {
     "language": "css",
     "code": "input:checked + span { color: #125a46; }",
-    "note": "当 input 处于选中状态，紧随它的 span 才会匹配。"
+    "note": "When the input is selected, the span immediately following it will match."
   },
-  "hint": "用 :checked 检测实时状态，属性选择器 [checked] 只检查初始属性。"
+  "hint": "uses :checked to detect the real-time status, and the attribute selector [checked] only checks the initial attributes."
 }

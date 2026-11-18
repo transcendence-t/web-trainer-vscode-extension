@@ -1,0 +1,86 @@
+[
+  {
+    "label": "未点击时页面仍等待生成",
+    "expect": {
+      "type": "text",
+      "selector": "#receipt-status",
+      "value": "等待生成"
+    },
+    "actions": [
+      {
+        "type": "wait",
+        "ms": 700
+      }
+    ]
+  },
+  {
+    "label": "点击后短时间内呈现等待过程",
+    "expect": {
+      "type": "text",
+      "selector": "#receipt-status",
+      "value": "正在生成回执"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#generate-receipt"
+      },
+      {
+        "type": "wait",
+        "ms": 60
+      }
+    ]
+  },
+  {
+    "label": "等待期间锁住生成按钮",
+    "expect": {
+      "type": "exists",
+      "selector": "#generate-receipt[disabled]"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#generate-receipt"
+      },
+      {
+        "type": "wait",
+        "ms": 60
+      }
+    ]
+  },
+  {
+    "label": "延时后出现完成提示",
+    "expect": {
+      "type": "text",
+      "selector": "#receipt-status",
+      "value": "回执已生成"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#generate-receipt"
+      },
+      {
+        "type": "wait",
+        "ms": 1100
+      }
+    ]
+  },
+  {
+    "label": "回执生成后按钮可重试",
+    "expect": {
+      "type": "exists",
+      "selector": "#generate-receipt:not([disabled])"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#generate-receipt"
+      },
+      {
+        "type": "wait",
+        "ms": 1100
+      }
+    ]
+  }
+]

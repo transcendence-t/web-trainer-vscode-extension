@@ -1,21 +1,21 @@
 [
   {
-    "label": "入口位于页眉之前",
+    "label": "entry is before the header",
     "expect": {
       "type": "exists",
       "selector": "body > a#skip:first-child + header"
     }
   },
   {
-    "label": "跳过链接文字清楚",
+    "label": "Skip link text is clear",
     "expect": {
       "type": "text",
       "selector": "a#skip",
-      "value": "跳到主要内容"
+      "value": "Skip to main content"
     }
   },
   {
-    "label": "正文标记为焦点目标",
+    "label": "The text is marked as the focus target",
     "expect": {
       "type": "attribute",
       "selector": "main#main-content",
@@ -24,7 +24,7 @@
     }
   },
   {
-    "label": "点击后定位到正文",
+    "label": "Click to navigate to the text",
     "expect": {
       "type": "exists",
       "selector": "main#main-content:target"

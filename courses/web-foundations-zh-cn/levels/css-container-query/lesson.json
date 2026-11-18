@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "让组件按所在栏宽度重排",
+  "goal": "用容器查询区分同一视口里的宽栏卡片和窄栏卡片。",
+  "summary": "两个目录卡组件出现在同一页面。窄栏纵向放置标题与入口，宽栏横向排列。",
+  "tasks": [
+    "为 .slot 启用容器的 inline-size 查询。",
+    "当 .slot 宽度至少 320px 时，让内部 .entry 使用 Flex 排列；更窄时保留上下布局。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".rail { container-type: inline-size; }\n@container (min-width: 280px) {\n  .item { display: flex; }\n}",
+    "note": "先指定容器，再为它的后代添加条件规则。条件检查容器宽度。"
+  },
+  "hint": "@container 内的选择器写 .entry，容器类型写在它的父级 .slot。"
+}

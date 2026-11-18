@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "让表格内边框共享一条边",
-  "goal": "用 border-collapse、单元格 padding 与对齐样式提高表格可读性。",
-  "summary": "设备编号表格需要清楚的格线，单元格里留一点空间。编号列单独右对齐。",
+  "title": "Allows the borders within the table to share an edge",
+  "goal": "uses border-collapse, cell padding and alignment styles to improve table readability.",
+  "summary": "The equipment number table requires clear grid lines and a little space in the cells. Numbered columns are individually right aligned.",
   "tasks": [
-    "为 table 使用折叠边框。为 th、td 设置 1px 实线 #9aa9b5 和 8px 内边距。",
-    "编号列的 .code 数字和标题都右对齐。"
+    "uses collapsing borders for the table. Set 1px solid line #9aa9b5 and 8px padding for th, td.",
+    "The .code number and title of the number column are right aligned."
   ],
   "example": {
     "language": "css",
     "code": "table { border-collapse: collapse; }\nth, td { border: 1px solid #999; padding: .5rem; }",
-    "note": "折叠模型让相邻单元格的格线合并。padding 决定内容到边线的距离。"
+    "note": "folding model allows the grid lines of adjacent cells to merge. padding determines the distance from the content to the edge."
   },
-  "hint": "边框折叠设置在 table；格线设置在每个 th 和 td。"
+  "hint": "border folding is set in table; grid is set in each th and td."
 }

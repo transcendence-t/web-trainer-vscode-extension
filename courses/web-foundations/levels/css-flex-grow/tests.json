@@ -1,6 +1,6 @@
 [
   {
-    "label": "关键词输入框参与分配剩余空间",
+    "label": "Keyword input box participates in allocating remaining space",
     "expect": {
       "type": "style",
       "selector": "#book-query",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "窄窗口的输入框填满空余宽度",
+    "label": "The narrow window input box fills the empty width",
     "expect": {
       "type": "style",
       "selector": "#book-query",
@@ -19,7 +19,7 @@
     "viewport": 320
   },
   {
-    "label": "宽窗口的输入框继续伸展",
+    "label": "The input box of the wide window continues to expand",
     "expect": {
       "type": "style",
       "selector": "#book-query",
@@ -29,7 +29,7 @@
     "viewport": 720
   },
   {
-    "label": "窄窗口查询按钮仍宽 80px",
+    "label": "narrow window query button is still 80px wide",
     "expect": {
       "type": "style",
       "selector": "#query-button",
@@ -39,7 +39,7 @@
     "viewport": 320
   },
   {
-    "label": "宽窗口查询按钮仍宽 80px",
+    "label": "wide window query button is still 80px wide",
     "expect": {
       "type": "style",
       "selector": "#query-button",
@@ -49,7 +49,7 @@
     "viewport": 720
   },
   {
-    "label": "输入框和按钮之间保留 12px 间距",
+    "label": "Leave 12px spacing between the input box and the button",
     "expect": {
       "type": "style",
       "selector": ".query-bar",
@@ -58,7 +58,7 @@
     }
   },
   {
-    "label": "窄窗口查询按钮排在输入框右边",
+    "label": "The narrow window query button is arranged on the right side of the input box",
     "expect": {
       "type": "layout",
       "selector": "#query-button",

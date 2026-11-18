@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "让提示框随阅读方向翻转",
-  "goal": "用逻辑属性表达行内起点的内边距与边框。",
-  "summary": "同一个说明组件需要用于中文与从右向左书写的页面。两个版本都在阅读起始的一侧显示强调线。",
+  "title": "Let the prompt box flip with the reading direction",
+  "goal": "uses logical attributes to express the padding and border of the starting point within the line.",
+  "summary": "The same description component needs to be used for Chinese and right-to-left pages. Both versions display an emphasis line on the side where reading begins.",
   "tasks": [
-    "给 .callout 的行内起始边设置 3px 实线 #125a46。",
-    "只给行内起始边增加 12px 内边距。"
+    "gives .callout’s inline starting edge a 3px solid line #125a46.",
+    "only adds 12px padding to the starting edge of the line."
   ],
   "example": {
     "language": "css",
     "code": ".note { border-inline-start: 3px solid currentColor; padding-inline-start: 1rem; }",
-    "note": "横向书写中，方向为 ltr 时起点为左，方向为 rtl 时起点为右。"
+    "note": "In horizontal writing, when the direction is ltr, the starting point is left, and when the direction is rtl, the starting point is right."
   },
-  "hint": "属性名用 inline-start，让规则对方向自适应。"
+  "hint": "uses inline-start as the attribute name to make the rules adaptive to the direction."
 }

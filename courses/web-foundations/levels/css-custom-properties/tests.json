@@ -1,6 +1,6 @@
 [
   {
-    "label": "已登记卡拥有局部主题变量",
+    "label": "Registered card has local theme variable",
     "expect": {
       "type": "style",
       "selector": ".registered",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "已登记卡的文字跟随变量",
+    "label": "Text following variable of registered card",
     "expect": {
       "type": "style",
       "selector": ".registered",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "已登记卡的边框跟随变量",
+    "label": "Registered card border following variable",
     "expect": {
       "type": "style",
       "selector": ".registered",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "待核对卡使用默认色",
+    "label": "The card to be verified uses the default color",
     "expect": {
       "type": "style",
       "selector": ".waiting",

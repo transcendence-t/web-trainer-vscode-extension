@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "批量更新同一组状态标签",
-  "goal": "用 querySelectorAll 选择多个元素并逐个更新。",
-  "summary": "三个工位中有两个准备就绪。点击按钮时让两张待更新标签一起显示「已核对」。",
+  "title": "Batch update the same group of status labels",
+  "goal": "Use querySelectorAll to select multiple elements and update them one by one.",
+  "summary": "Two of the three stations are ready. When the button is clicked, the two labels to be updated will display \"checked\" together.",
   "tasks": [
-    "点击 #mark 后，将 .pending 标签的文字改为「已核对」。",
-    "不改变没有 .pending 类的标签。"
+    "After clicking #mark, change the text of the .pending label to \"checked\".",
+    "does not change tags without .pending class."
   ],
   "example": {
     "language": "javascript",
-    "code": "for (const item of document.querySelectorAll('.notice')) {\n  item.textContent = '已阅读';\n}",
-    "note": "querySelectorAll 返回所有匹配项，可用 for…of 或 forEach 遍历。"
+    "code": "for (const item of document.querySelectorAll('.notice')) {\n  item.textContent = 'Read';\n}",
+    "note": "querySelectorAll returns all matching items, which can be traversed using for…of or forEach."
   },
-  "hint": "querySelector 只有第一个结果。用 querySelectorAll 获取整组要更新的标签。"
+  "hint": "querySelector has only the first result. Use querySelectorAll to get the entire set of tags to update."
 }

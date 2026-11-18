@@ -1,6 +1,6 @@
 [
   {
-    "label": "联系人电话存在",
+    "label": "contact phone number exists",
     "expect": {
       "type": "function",
       "name": "contactPhone",
@@ -15,29 +15,29 @@
     }
   },
   {
-    "label": "活动记录为空",
+    "label": "activity record is empty",
     "expect": {
       "type": "function",
       "name": "contactPhone",
       "args": [
         null
       ],
-      "value": "待登记"
+      "value": "pending registration"
     }
   },
   {
-    "label": "联系人缺失",
+    "label": "Missing contact",
     "expect": {
       "type": "function",
       "name": "contactPhone",
       "args": [
         {}
       ],
-      "value": "待登记"
+      "value": "pending registration"
     }
   },
   {
-    "label": "显式空电话仍保留",
+    "label": "explicit null call remains",
     "expect": {
       "type": "function",
       "name": "contactPhone",
@@ -52,18 +52,18 @@
     }
   },
   {
-    "label": "联系人存在但没有号码",
+    "label": "The contact exists but there is no number",
     "expect": {
       "type": "function",
       "name": "contactPhone",
       "args": [
         {
           "contact": {
-            "name": "小周"
+            "name": "Xiao Zhou"
           }
         }
       ],
-      "value": "待登记"
+      "value": "pending registration"
     }
   }
 ]

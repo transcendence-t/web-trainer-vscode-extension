@@ -1,0 +1,62 @@
+[
+  {
+    "label": "起点等于目标时无须继续",
+    "expect": {
+      "type": "function",
+      "name": "archiveDays",
+      "args": [
+        9,
+        9
+      ],
+      "value": 0
+    }
+  },
+  {
+    "label": "起点超过目标时无须继续",
+    "expect": {
+      "type": "function",
+      "name": "archiveDays",
+      "args": [
+        12,
+        9
+      ],
+      "value": 0
+    }
+  },
+  {
+    "label": "还差一箱时需要一天",
+    "expect": {
+      "type": "function",
+      "name": "archiveDays",
+      "args": [
+        8,
+        9
+      ],
+      "value": 1
+    }
+  },
+  {
+    "label": "三天刚好达到目标",
+    "expect": {
+      "type": "function",
+      "name": "archiveDays",
+      "args": [
+        2,
+        11
+      ],
+      "value": 3
+    }
+  },
+  {
+    "label": "最后一天超过目标也结束",
+    "expect": {
+      "type": "function",
+      "name": "archiveDays",
+      "args": [
+        2,
+        10
+      ],
+      "value": 3
+    }
+  }
+]

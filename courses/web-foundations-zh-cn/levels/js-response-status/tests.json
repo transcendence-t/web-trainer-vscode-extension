@@ -1,0 +1,50 @@
+[
+  {
+    "label": "读取 200 的有效 JSON",
+    "expect": {
+      "type": "function",
+      "name": "makeResponseMessage",
+      "args": [
+        200,
+        "{\"message\":\"记录已更新\"}"
+      ],
+      "value": "记录已更新"
+    }
+  },
+  {
+    "label": "其他 2xx 成功状态同样读取",
+    "expect": {
+      "type": "function",
+      "name": "makeResponseMessage",
+      "args": [
+        201,
+        "{\"message\":\"已添加\"}"
+      ],
+      "value": "已添加"
+    }
+  },
+  {
+    "label": "404 无需读取非 JSON 正文",
+    "expect": {
+      "type": "function",
+      "name": "makeResponseMessage",
+      "args": [
+        404,
+        "missing"
+      ],
+      "value": "读取失败：404"
+    }
+  },
+  {
+    "label": "503 即使正文合法也显示状态码",
+    "expect": {
+      "type": "function",
+      "name": "makeResponseMessage",
+      "args": [
+        503,
+        "{\"message\":\"稍后再试\"}"
+      ],
+      "value": "读取失败：503"
+    }
+  }
+]

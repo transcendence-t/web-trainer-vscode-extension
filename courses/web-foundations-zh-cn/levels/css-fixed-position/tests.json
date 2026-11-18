@@ -1,0 +1,29 @@
+[
+  {
+    "label": "返回入口固定到视口",
+    "expect": {
+      "type": "style",
+      "selector": "#back",
+      "property": "position",
+      "value": "fixed"
+    }
+  },
+  {
+    "label": "距离右边 12px",
+    "expect": {
+      "type": "style",
+      "selector": "#back",
+      "property": "right",
+      "value": "12px"
+    }
+  },
+  {
+    "label": "距离底边 12px",
+    "expect": {
+      "type": "style",
+      "selector": "#back",
+      "property": "bottom",
+      "value": "12px"
+    }
+  }
+]

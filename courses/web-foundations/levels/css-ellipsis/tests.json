@@ -1,6 +1,6 @@
 [
   {
-    "label": "文件名区域限宽",
+    "label": "File name area limit",
     "expect": {
       "type": "style",
       "selector": ".filename",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "文字占一行",
+    "label": "text occupies one line",
     "expect": {
       "type": "style",
       "selector": ".filename",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "隐藏溢出文字",
+    "label": "Hide overflow text",
     "expect": {
       "type": "style",
       "selector": ".filename",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "绘制溢出省略号",
+    "label": "Draw overflow ellipsis",
     "expect": {
       "type": "style",
       "selector": ".filename",
@@ -36,12 +36,12 @@
     }
   },
   {
-    "label": "缩短仅发生在视觉上",
+    "label": "shortening occurs only visually",
     "expect": {
       "type": "property",
       "selector": ".filename",
       "name": "textContent",
-      "value": "校园主题展陈列清单与最新物料采购记录.pdf"
+      "value": "Campus theme exhibition display list and latest material procurement record.pdf"
     }
   }
 ]

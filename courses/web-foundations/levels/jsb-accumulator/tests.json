@@ -1,6 +1,6 @@
 [
   {
-    "label": "零排的总座位数为零",
+    "label": "The total number of seats in row zero is zero",
     "expect": {
       "type": "function",
       "name": "screeningCapacity",
@@ -11,7 +11,7 @@
     }
   },
   {
-    "label": "一排共有四个座位",
+    "label": "There are four seats in one row",
     "expect": {
       "type": "function",
       "name": "screeningCapacity",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "label": "两排累加为十个座位",
+    "label": "Two rows add up to ten seats",
     "expect": {
       "type": "function",
       "name": "screeningCapacity",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "label": "四排累加为二十八个座位",
+    "label": "Four rows add up to 28 seats",
     "expect": {
       "type": "function",
       "name": "screeningCapacity",

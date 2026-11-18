@@ -1,6 +1,6 @@
 [
   {
-    "label": "列表含三个项目",
+    "label": "list contains three items",
     "expect": {
       "type": "count",
       "selector": "#equipment > li",
@@ -8,27 +8,27 @@
     }
   },
   {
-    "label": "第一项是键盘",
+    "label": "The first item is the keyboard",
     "expect": {
       "type": "text",
       "selector": "#equipment > li:nth-child(1)",
-      "value": "键盘"
+      "value": "keyboard"
     }
   },
   {
-    "label": "第二项是鼠标",
+    "label": "The second item is the mouse",
     "expect": {
       "type": "text",
       "selector": "#equipment > li:nth-child(2)",
-      "value": "鼠标"
+      "value": "mouse"
     }
   },
   {
-    "label": "第三项是显示器",
+    "label": "The third item is the monitor",
     "expect": {
       "type": "text",
       "selector": "#equipment > li:nth-child(3)",
-      "value": "显示器"
+      "value": "monitor"
     }
   }
 ]

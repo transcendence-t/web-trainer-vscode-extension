@@ -1,6 +1,6 @@
 [
   {
-    "label": "卡号输入跟随 20px 的区域",
+    "label": "Card number input follows 20px area",
     "expect": {
       "type": "style",
       "selector": "#card-id",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "卡号输入继承等宽字体",
+    "label": "card number input inherits fixed-width font",
     "expect": {
       "type": "style",
       "selector": "#card-id",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "登记按钮跟随 17px 的区域",
+    "label": "registration button follows 17px area",
     "expect": {
       "type": "style",
       "selector": "button",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "两种控件继承各自的行高",
+    "label": "The two controls inherit their respective row heights",
     "expect": {
       "type": "style",
       "selector": "#card-id",

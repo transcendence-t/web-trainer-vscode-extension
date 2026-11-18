@@ -21,10 +21,10 @@ function render() {
   listing.replaceChildren();
   for (const item of sorted) {
     const row = document.createElement('li');
-    row.textContent = item.name + ' · ' + item.minutes + ' 分钟';
+    row.textContent = item.name + ' · ' + item.minutes + ' minutes';
     listing.append(row);
   }
-  count.textContent = sorted.length ? `共 ${sorted.length} 项` : '没有匹配器材';
+  count.textContent = sorted.length ? `${sorted.length} items in total` : 'No matching equipment';
 }
 
 query.addEventListener('input', render);

@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "给展板加上左右渐变背景",
-  "goal": "使用 linear-gradient 表示方向和两个色标。",
-  "summary": "展板背景从左侧淡绿过渡到右侧浅黄，原有文字保持深色以便阅读。",
+  "title": "Add left and right gradient background to the exhibition board",
+  "goal": "uses linear-gradient to represent the direction and two color scales.",
+  "summary": "exhibition board transitions from light green on the left to light yellow on the right, and the original text remains dark for easy reading.",
   "tasks": [
-    "把 .banner 的背景图像设为线性渐变，方向写 to right，左端 #e6f4ee，右端 #fff2d5。",
-    "保留现有深色文字。"
+    "Set the background image of .banner to a linear gradient, write the direction to right, #e6f4ee on the left and #fff2d5 on the right.",
+    "retains existing dark text."
   ],
   "example": {
     "language": "css",
     "code": ".poster { background: linear-gradient(to bottom, #ffffff, #eeeeee); }",
-    "note": "to bottom 指向终点，颜色按列出的顺序依次过渡。"
+    "note": "to bottom points to the end point, and the colors transition in the order listed."
   },
-  "hint": "渐变作为 background-image 的值。方向之后先写起点颜色，再写终点颜色。"
+  "hint": "gradient as the value of background-image. After the direction, write the starting point color first, and then the ending color."
 }

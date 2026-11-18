@@ -1,0 +1,38 @@
+[
+  {
+    "label": "末端按钮吸收 88px 剩余空间",
+    "expect": {
+      "type": "style",
+      "selector": ".export",
+      "property": "margin-left",
+      "value": "88px"
+    }
+  },
+  {
+    "label": "第二个仍紧随第一个",
+    "expect": {
+      "type": "style",
+      "selector": ".toolbar button:nth-child(2)",
+      "property": "margin-left",
+      "value": "0px"
+    }
+  },
+  {
+    "label": "三个按钮仍一行",
+    "expect": {
+      "type": "layout",
+      "selector": ".export",
+      "relativeTo": ".toolbar button:first-child",
+      "relation": "same-row"
+    }
+  },
+  {
+    "label": "末端按钮仍在工具栏内",
+    "expect": {
+      "type": "layout",
+      "selector": ".export",
+      "relativeTo": ".toolbar",
+      "relation": "inside"
+    }
+  }
+]

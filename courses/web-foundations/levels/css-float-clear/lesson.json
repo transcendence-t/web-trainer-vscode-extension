@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "让说明环绕插图并在下方继续",
-  "goal": "用 float 让正文环绕，并用 clear 清除下一节的环绕。",
-  "summary": "器材卡的上半部分是一张插图和图旁说明，下一节标题要从插图下方起行。",
+  "title": "Let the description wrap around the illustration and continue below",
+  "goal": "Use float to wrap the text, and use clear to clear the wrapping of the next section.",
+  "summary": "equipment card is an illustration and a description next to the illustration. The title of the next section should start from below the illustration.",
   "tasks": [
-    "将 .diagram 向左浮动，在右侧保留 12px 间隙。",
-    "让 .next-section 清除左浮动并从插图下方开始。"
+    "Floats the .diagram to the left, leaving a 12px gap on the right.",
+    "Make .next-section clear the left float and start below the illustration."
   ],
   "example": {
     "language": "css",
     "code": ".figure { float: left; margin-right: 12px; }\n.next { clear: left; }",
-    "note": "浮动给正文让出环绕位置。clear 让某个后续块从浮动盒下方开始。"
+    "note": "floats to give way to the surrounding text. clear causes some subsequent block to start below the floated box."
   },
-  "hint": "float 与 clear 写在不同的元素上。"
+  "hint": "float and clear are written on different elements."
 }

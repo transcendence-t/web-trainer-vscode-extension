@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "设置盒模型",
-  "summary": "padding 控制内容与边框之间的距离。border 可以同时设置边框的宽度、线型和颜色，border-radius 决定四个转角的圆角大小。",
+  "title": "Setting box model",
+  "summary": "padding controls the distance between content and border. border can set the width, line style and color of the border at the same time, and border-radius determines the rounded size of the four corners.",
   "tasks": [
-    "给 .card 设置四边 16px 的内边距。",
-    "设置 2px 的实线边框，颜色为 #3b7d68，四角圆角为 12px。"
+    "Set 16px padding on all four sides of .card.",
+    "sets a solid border of 2px, color #3b7d68, and rounded corners of 12px."
   ],
-  "hint": "卡片与周围元素隔开了，内容却仍贴着边框时，检查是否写了 margin。内容和边框之间的留白由 padding 控制。",
-  "goal": "给实训提醒卡片留出内部空间，并用圆角边框围住内容。",
+  "hint": "When the card is separated from surrounding elements but the content is still close to the border, check whether margin is written. The space between the content and the border is controlled by padding.",
+  "goal": "Leave internal space for the training reminder card and surround the content with a rounded border.",
   "example": {
     "language": "css",
     "code": ".booking-confirmation {\n  padding: 10px 14px;\n  border: 1px solid #40597a;\n  border-radius: 6px;\n}",
-    "note": "球场预约凭证的上下各留 10px，左右各留 14px，给较长的预约编号多留一点空间。"
+    "note": "Leave 10px on the top and bottom of the stadium reservation voucher and 14px on the left and right to leave a little more space for the longer reservation number."
   }
 }

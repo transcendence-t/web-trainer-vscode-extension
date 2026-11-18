@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "给体验票原价加删除线",
-  "goal": "用 text-decoration 画出删除线，清楚区分原价和现价。",
-  "summary": "text-decoration 可以给文字添加下划线或删除线。line-through 会让一条线从文字中间穿过。",
+  "title": "Strikethrough the original price of the experience ticket",
+  "goal": "uses text-decoration to draw a strikethrough to clearly distinguish the original price and current price.",
+  "summary": "text-decoration can add underline or strikethrough to text. line-through will cause a line to pass through the middle of the text.",
   "tasks": [
-    "给两张体验票中带 old-price 类的原价加上 line-through 删除线。",
-    "让现价和同一行里的其他文字保持原样。"
+    "Add line-through strikethrough to the original price with old-price category in the two experience tickets.",
+    "leaves the current price and other text on the same line as is."
   ],
   "example": {
     "language": "css",
     "code": ".more-details {\n  text-decoration: underline;\n}",
-    "note": "展品介绍页可以用下划线标明「查看详情」链接。"
+    "note": "exhibit introduction page can underline the \"View details\" link."
   },
-  "hint": "线出现在文字下方时，检查是否写成了 underline。整行都被划掉时，检查是否把样式加到了外层段落。"
+  "hint": "line appears below the text, check whether it is written underline. When an entire line is crossed out, check to see if the style has been added to the outer paragraph."
 }

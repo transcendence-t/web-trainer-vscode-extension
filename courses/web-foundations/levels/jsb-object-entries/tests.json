@@ -1,30 +1,30 @@
 [
   {
-    "label": "过滤零库存并保留数量顺序",
+    "label": "Filter zero inventory and retain quantity order",
     "expect": {
       "type": "function",
       "name": "inventoryRows",
       "args": [
         {
-          "布料": 6,
-          "圆珠笔": 0,
-          "纸张": 13
+          "fabric": 6,
+          "ballpoint pen": 0,
+          "paper": 13
         }
       ],
       "value": [
         {
-          "name": "布料",
+          "name": "fabric",
           "quantity": 6
         },
         {
-          "name": "纸张",
+          "name": "paper",
           "quantity": 13
         }
       ]
     }
   },
   {
-    "label": "空对象返回空列表",
+    "label": "empty object returns empty list",
     "expect": {
       "type": "function",
       "name": "inventoryRows",
@@ -35,13 +35,13 @@
     }
   },
   {
-    "label": "全部为零时无条目",
+    "label": "No entry when all zeros",
     "expect": {
       "type": "function",
       "name": "inventoryRows",
       "args": [
         {
-          "线轴": 0
+          "spool": 0
         }
       ],
       "value": []

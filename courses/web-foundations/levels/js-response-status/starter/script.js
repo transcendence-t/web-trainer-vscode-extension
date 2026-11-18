@@ -1,5 +1,5 @@
 async function responseMessage(response) {
-  // 判断状态，再决定是否解析正文。
+  // determines the status and then decides whether to parse the text.
 }
 
 function makeResponseMessage(status, body) {

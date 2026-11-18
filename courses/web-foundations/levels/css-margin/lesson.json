@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "给站点通知留出外边距",
-  "goal": "用 margin 调整元素外的间距，并让较窄的块水平居中。",
-  "summary": "校车临时改站。把站点通知移到卡片中间，并在说明和通知之间留出空间。",
+  "title": "Leave margins for site notifications",
+  "goal": "Use margin to adjust spacing outside elements and center narrower blocks horizontally.",
+  "summary": "The school bus temporarily changed its stop. Move the site notification to the middle of the card and leave space between the description and notification.",
   "tasks": [
-    "给 .stop-note 的上方设置 24px 外边距。",
-    "让通知块水平居中，保留已有的宽度和内边距。"
+    "Set a 24px margin above .stop-note.",
+    "Centers the notification block horizontally, retaining the existing width and padding."
   ],
   "example": {
     "language": "css",
     "code": ".photo-caption {\n  width: 14rem;\n  margin: 12px auto 0;\n}",
-    "note": "三个 margin 值依次对应上方、左右和下方。块比容器窄时，左右的 auto 会均分剩余空间。"
+    "note": "correspond to the top, left, and bottom in sequence. When the block is narrower than the container, the left and right autos will divide the remaining space equally."
   },
-  "hint": "padding 增加边框以内的空间。要拉开通知框和上方说明的距离，用 margin-top 或 margin。"
+  "hint": "padding increases the space within the border. To distance the notification box from the description above, use margin-top or margin."
 }

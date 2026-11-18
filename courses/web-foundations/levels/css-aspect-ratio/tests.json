@@ -1,6 +1,6 @@
 [
   {
-    "label": "窄屏宽度为 192px",
+    "label": "narrow screen width is 192px",
     "expect": {
       "type": "style",
       "selector": ".screen",
@@ -10,7 +10,7 @@
     "viewport": 384
   },
   {
-    "label": "窄屏高度为 108px",
+    "label": "narrow screen height is 108px",
     "expect": {
       "type": "style",
       "selector": ".screen",
@@ -20,7 +20,7 @@
     "viewport": 384
   },
   {
-    "label": "宽屏宽度为 320px",
+    "label": "wide screen width is 320px",
     "expect": {
       "type": "style",
       "selector": ".screen",
@@ -30,7 +30,7 @@
     "viewport": 740
   },
   {
-    "label": "宽屏高度为 180px",
+    "label": "wide screen height is 180px",
     "expect": {
       "type": "style",
       "selector": ".screen",

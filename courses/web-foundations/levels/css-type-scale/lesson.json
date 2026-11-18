@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "用字重和字距区分产品编码",
-  "goal": "在指定字号下控制 font-weight 和 letter-spacing。",
-  "summary": "设备编码需要逐字查看。给编码行提高字重，适当增加字母间距，普通说明保持原样。",
+  "title": "Uses character weight and character spacing to distinguish product codes",
+  "goal": "Controls font-weight and letter-spacing at a specified font size.",
+  "summary": "device code needs to be viewed verbatim. Increase the font weight of the coded lines and increase the letter spacing appropriately, but keep the general description as it is.",
   "tasks": [
-    "把 .serial 的字号设为 16px，字重设为 600，字距设为 2px。",
-    "说明段落保持原有字重和字距。"
+    "Set the font size of .serial to 16px, the font weight to 600, and the kerning to 2px.",
+    "The description paragraph maintains the original font weight and spacing."
   ],
   "example": {
     "language": "css",
     "code": ".code { font-weight: 600; letter-spacing: .1em; }",
-    "note": "字距是字符间额外的距离，使用 em 可以随字号调整。"
+    "note": "Kerning is the extra distance between characters, which can be adjusted with the font size using em."
   },
-  "hint": "控制字距使用 letter-spacing，line-height 用于行距。"
+  "hint": "uses letter-spacing to control character spacing, and line-height for line spacing."
 }

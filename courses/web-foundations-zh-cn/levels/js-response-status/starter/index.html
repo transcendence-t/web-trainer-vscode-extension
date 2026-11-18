@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>用 HTTP 状态决定是否读取响应正文</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="sheet">
+    <h1>用 HTTP 状态决定是否读取响应正文</h1>
+      <p>试一试 <code>makeResponseMessage(200, "{&quot;message&quot;:&quot;记录已更新&quot;}")</code></p>
+    <p>运行结果 <output id="example-result" aria-live="polite">待填写函数</output></p>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+          const result = await makeResponseMessage(200, "{\"message\":\"记录已更新\"}");
+        if (result !== undefined) {
+          document.querySelector("#example-result").textContent = JSON.stringify(result);
+        }
+      });
+    </script>
+  </main>
+</body>
+</html>

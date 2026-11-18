@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "组合开放时间与入场资格",
-  "goal": "用逻辑运算同时检查展厅是否开放，以及参观者是否有入场凭证。",
-  "summary": "对布尔条件，&& 要求两边都成立，|| 要求至少一边成立。用括号把可替代的条件归为一组。",
+  "title": "Combination opening hours and admission qualifications",
+  "goal": "uses logical operations to simultaneously check whether the exhibition hall is open and whether the visitor has an admission ticket.",
+  "summary": "For Boolean conditions, && requires both sides to be true, and || requires at least one side to be true. Use parentheses to group alternative conditions.",
   "tasks": [
-    "在 canEnterHall 的大括号内编写入场条件。展厅必须开放，参观者还需有门票或工作证，两种凭证有一种即可。",
-    "isOpen、hasTicket 和 hasStaffPass 都是布尔值。用 return 返回合并后的布尔结果。"
+    "Write the entry condition inside the curly braces of canEnterHall. The exhibition hall must be open, and visitors also need to have a ticket or a work permit. One of the two vouchers is sufficient.",
+    "isOpen, hasTicket, and hasStaffPass are all Boolean values. Use return to return the combined boolean result."
   ],
-  "hint": "把「有门票或工作证」先作为一条条件，再与「展厅开放」组合。闭馆时可以用有工作证的情况试一试。",
+  "hint": "takes \"has a ticket or work permit\" as a condition and then combines it with \"exhibition hall is open\". When the museum is closed, you can try it with a work permit.",
   "example": {
     "language": "javascript",
     "code": "const subscribed = true;\nconst startsSoon = false;\nconst roomChanged = true;\nconst sendReminder = subscribed && (startsSoon || roomChanged);",
-    "note": "已经订阅提醒的人，遇到活动即将开始或地点有变化时，会收到一条提醒。"
+    "note": "People who have subscribed to reminders will receive a reminder when an event is about to start or when the location changes."
   }
 }

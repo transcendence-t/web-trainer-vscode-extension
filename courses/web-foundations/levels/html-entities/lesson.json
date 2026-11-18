@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "在页面上显示标签字符",
-  "goal": "用 HTML 字符引用展示一行可供读者抄写的源码。",
-  "summary": "浏览器会解析标签和形如 &amp; 的字符引用。用 &lt;、&gt;、&amp; 可以在页面上显示 <、>、&。",
+  "title": "Display label characters on the page",
+  "goal": "uses HTML character quotation to display a line of source code for readers to copy.",
+  "summary": "The browser will parse tags and character references like &. Use <, >, & to display <, >, & on the page.",
   "tasks": [
-    "在已有的 code 中显示这段源码「<p>&copy;</p>」。",
-    "用字符引用保留标签尖括号和 &，让 code 内只有这段文字。"
+    "displays this source code \"<p>&copy;</p>\" in the existing code.",
+    "Use character references to retain the label angle brackets and &, so that there is only this text in the code."
   ],
-  "hint": "要让读者看到 &copy; 这六个字符，用 &amp; 写其中的 &，再接上 copy;。",
+  "hint": "If you want readers to see the six characters ©, use & to write the &, followed by copy;.",
   "example": {
     "language": "html",
-    "code": "<p>操作对象 <code>&lt;file&gt; &amp; &lt;folder&gt;</code></p>",
-    "note": "软件说明中的占位符会显示为 <file> & <folder>。读者可以看到它们的尖括号和连接符号。"
+    "code": "<p>operation object <code>&lt;file&gt; &amp; &lt;folder&gt;</code></p>",
+    "note": "software description will appear as <file> & <folder>. The reader can see their angle brackets and hyphens."
   }
 }

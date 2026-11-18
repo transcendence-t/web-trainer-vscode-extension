@@ -1,6 +1,6 @@
 [
   {
-    "label": "闭馆通知的文字变为棕色",
+    "label": "The text of the closing notice turns brown",
     "expect": {
       "type": "style",
       "selector": "#closure",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "闭馆通知采用浅黄背景",
+    "label": "The closing notice uses a light yellow background",
     "expect": {
       "type": "style",
       "selector": "#closure",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "开放时间文字保留原色",
+    "label": "Opening hours text retains original color",
     "expect": {
       "type": "style",
       "selector": "#hours",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "开放时间背景保留原色",
+    "label": "Keep the original color of the background during opening hours",
     "expect": {
       "type": "style",
       "selector": "#hours",

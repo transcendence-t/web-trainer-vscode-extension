@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "把最后一个队列成员移到开头",
+  "goal": "用 pop 与 unshift 更新数组，并处理空队列。",
+  "summary": "两组工作台轮换值班。交接时让排在最后的一组移到最前，其余组顺序不变。",
+  "tasks": [
+    "完成 rotateLast(queue)。非空时取出最后一项，放到开头，再返回整个队列。",
+    "允许直接修改原数组。空数组返回空数组。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const slots = ['白班', '夜班'];\nconst last = slots.pop();\nslots.unshift(last); // slots 变为 ['夜班', '白班']",
+    "note": "pop 返回末项，unshift 返回插入后的长度。返回整个队列要用数组本身。"
+  },
+  "hint": "先判断 length。对空数组调用 pop 会得到 undefined。"
+}

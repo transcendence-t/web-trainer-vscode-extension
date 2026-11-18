@@ -3,7 +3,7 @@
     "script.js": "const toggle = document.querySelector('#toggle-guide');\nconst guide = document.querySelector('#loan-guide');\n\ntoggle.addEventListener('click', () => {\n  guide.toggleAttribute(\"hidden\");\n  toggle.setAttribute('aria-expanded', String(!guide.hidden));\n});"
   },
   "js-timeout": {
-    "script.js": "const generate = document.querySelector('#generate-receipt');\nconst receipt = document.querySelector('#receipt-status');\n\nfunction showReceipt() {\n  receipt.textContent = '回执已生成';\n  generate.disabled = false;\n}\n\ngenerate.addEventListener('click', () => {\n  receipt.textContent = '正在生成回执';\n  generate.disabled = true;\n  setTimeout(() => showReceipt(), 500);\n});"
+    "script.js": "const generate = document.querySelector('#generate-receipt');\nconst receipt = document.querySelector('#receipt-status');\n\nfunction showReceipt() {\n  receipt.textContent = 'receipt has been generated';\n  generate.disabled = false;\n}\n\ngenerate.addEventListener('click', () => {\n  receipt.textContent = 'Generating receipt';\n  generate.disabled = true;\n  setTimeout(() => showReceipt(), 500);\n});"
   },
   "js-storage": {
     "script.js": "const nicknameInput = document.querySelector('#nickname');\nconst save = document.querySelector('#save-name');\nconst savedName = document.querySelector('#saved-name');\nconst storageKey = 'visitorNickname';\n\nconst remembered = localStorage.getItem(storageKey);\nif (remembered !== null) {\n  savedName.textContent = remembered;\n}\n\nsave.addEventListener('click', () => {\n  const nickname = nicknameInput.value.trim();\n  if (!nickname) return;\n\n  localStorage.setItem(storageKey, nickname);\n  savedName.textContent = nickname;\n});"

@@ -1,17 +1,17 @@
 {
   "focus": "script.js",
-  "title": "交给调用方选择计算规则",
-  "goal": "把函数作为参数传入，并在处理当前记录时调用它。",
-  "summary": "服务台可以按配置选择两倍积分或补发 3 分。现成的 scoreFor 演示会选择规则并传给 applyScore。",
+  "title": "Leave it to the caller to choose the calculation rules",
+  "goal": "Pass the function as a parameter and call it when processing the current record.",
+  "summary": "The service desk can choose to double the points or reissue 3 points according to the configuration. The ready-made scoreFor demo selects a rule and passes it to applyScore.",
   "tasks": [
-    "完成 applyScore(points, transform)。调用 transform，并把 points 当作它的参数。",
-    "当 transform 未传入时，保留起始文件中的两倍积分回调。",
-    "将回调返回的结果限制为不小于 0，再返回数值。"
+    "completes applyScore(points, transform). Call transform with points as its argument.",
+    "When transform is not passed in, keep the double points callback in the starting file.",
+    "limits the result returned by the callback to no less than 0, and then returns the value."
   ],
   "example": {
     "language": "javascript",
     "code": "function apply(value, convert) { return convert(value); }\napply(3, (value) => value * 4); // 12",
-    "note": "把函数名当参数传递时不加括号。调用发生在接收方。"
+    "note": "Pass the function name without parentheses. The receiving function calls it."
   },
-  "hint": "先获得 transform(points)，再用 Math.max(0, result) 限制下界。"
+  "hint": "Call transform(points), then use Math.max(0, result) to enforce the lower bound."
 }

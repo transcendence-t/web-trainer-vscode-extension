@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "标题与段落",
-  "summary": "用标题和段落写一张简单的课程介绍页。",
+  "title": "Title and Paragraph",
+  "summary": "Write a simple course introduction page using titles and paragraphs.",
   "tasks": [
-    "在 main 内添加一个 h1，文字为「我的第一张网页」。",
-    "在标题下方添加一个 p，文字为「我正在学习网页设计。」"
+    "Add an h1 in main with the text \"My first webpage\".",
+    "Add a p below the title with the text \"I am learning web design.\""
   ],
-  "hint": "把 h1 和 p 都写在 main 里。结束 h1 后紧接着写 p，保留段落末尾的句号。",
-  "goal": "用 h1 标记页面主题，再用段落补上一句介绍。",
+  "hint": "Write both h1 and p in main. End h1 by writing p immediately, leaving the period at the end of the paragraph.",
+  "goal": "Use h1 to mark the page topic, and then use a paragraph to add an introduction.",
   "example": {
     "language": "html",
-    "code": "<main>\n  <h1>周三维修工作坊</h1>\n  <p>下午两点在创客室集合。</p>\n</main>",
-    "note": "公告的主标题介绍活动名称，下面的段落给出集合时间和地点。"
+    "code": "<main>\n  <h1>Wednesday maintenance workshop</h1>\n  <p>Meet in the maker room at two o'clock in the afternoon.</p>\n</main>",
+    "note": "The main title of the announcement introduces the event name, and the following paragraphs give the gathering time and location."
   }
 }

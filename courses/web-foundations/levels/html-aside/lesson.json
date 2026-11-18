@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "标记文章里的延伸阅读",
-  "goal": "用 aside 标记与文章相关的补充内容。",
-  "summary": "纸桥实验是文章主体，比较其他梁形状是读者可以继续探索的补充内容。",
+  "title": "Marked article",
+  "goal": "Use aside to mark additional content related to the article.",
+  "summary": "paper bridge experiment is the main body of the article, and the comparison of other beam shapes is supplementary content that readers can continue to explore.",
   "tasks": [
-    "把现有 #extension 容器改为 aside，保留其在 article 内的位置。",
-    "延伸阅读保留 h3 标题和原有说明。"
+    "Change the existing #extension container to aside, retaining its position within article.",
+    "Keep the h3 heading \"Further reading\" and the original description."
   ],
   "example": {
     "language": "html",
-    "code": "<article>\n  <h2>制作风向标</h2>\n  <p>记录操场上的风向。</p>\n  <aside><h3>相关实验</h3><p>观察旗帜的摆动。</p></aside>\n</article>",
-    "note": "aside 标记相关补充信息，放在 article 里时补充该篇文章。"
+    "code": "<article>\n  <h2>Making a weathervane</h2>\n  <p>records the wind direction on the playground.</p>\n  <aside><h3>related experiments</h3><p>Watch the flag swing.</p></aside>\n</article>",
+    "note": "aside marks relevant supplementary information and adds the article when placed in article."
   },
-  "hint": "同时替换开始标签和结束标签。"
+  "hint": "Replaces both the start tag and the end tag."
 }

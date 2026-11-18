@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "画出一个可以清除的状态图标",
+  "goal": "使用 Canvas 2D 的 fillRect 和 clearRect，并分清画布坐标。",
+  "summary": "设备指示器需要在画布内部画一块绿色方标，也能通过按钮清除。已有 samplePixel 可帮助观察实际像素。",
+  "tasks": [
+    "点击 #draw 时，从坐标 (16, 12) 开始绘制 32×24 的纯色矩形，颜色为 #125a46。",
+    "点击 #clear 时清空整张画布，恢复透明像素。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const pen = canvas.getContext('2d');\npen.fillStyle = '#7c460e';\npen.fillRect(5, 5, 30, 20);\npen.clearRect(0, 0, canvas.width, canvas.height);",
+    "note": "画布坐标从左上角开始。fillRect 读取 fillStyle，clearRect 恢复区域的透明像素。"
+  },
+  "hint": "记得给两个按钮分别绑定监听。clearRect 的宽高可直接来自 canvas。"
+}

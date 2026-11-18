@@ -1,0 +1,26 @@
+[
+  {
+    "label": "姓名标签与输入框关联",
+    "expect": {
+      "type": "text",
+      "selector": "form label[for='student-name']",
+      "value": "姓名"
+    }
+  },
+  {
+    "label": "姓名是必填文本输入框",
+    "expect": {
+      "type": "exists",
+      "selector": "form input[type='text']#student-name[name='student'][required]"
+    },
+    "hint": "required 直接写在 input 开始标签内。"
+  },
+  {
+    "label": "存在提交按钮",
+    "expect": {
+      "type": "text",
+      "selector": "form button[type='submit']",
+      "value": "提交报名"
+    }
+  }
+]

@@ -1,6 +1,6 @@
 [
   {
-    "label": "遇到第一个超限项后停止",
+    "label": "Stop after encountering the first over-limit item",
     "expect": {
       "type": "function",
       "name": "fillCrate",
@@ -16,7 +16,7 @@
     }
   },
   {
-    "label": "跳过负数，允许恰好装满",
+    "label": "skips negative numbers and allows exactly full",
     "expect": {
       "type": "function",
       "name": "fillCrate",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "label": "第一项装不下直接结束",
+    "label": "If the first item cannot be installed, it will end immediately.",
     "expect": {
       "type": "function",
       "name": "fillCrate",
@@ -48,7 +48,7 @@
     }
   },
   {
-    "label": "空清单的总量为零",
+    "label": "The total amount of empty lists is zero",
     "expect": {
       "type": "function",
       "name": "fillCrate",

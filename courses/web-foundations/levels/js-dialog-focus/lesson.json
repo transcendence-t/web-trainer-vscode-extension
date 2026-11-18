@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "管理原生对话框的打开、关闭和焦点",
-  "goal": "用 showModal、close 和 focus 提供清晰的键盘操作路径。",
-  "summary": "借用规则用模态对话框展示。开窗时焦点移到「关闭说明」，关窗后回到打开说明按钮。",
+  "title": "Manage the opening, closing and focus of native dialog boxes",
+  "goal": "uses showModal, close and focus to provide clear keyboard operation paths.",
+  "summary": "Borrowing rules are displayed in a modal dialog box. When the window is opened, the focus moves to \"Close instructions\", and when the window is closed, it returns to the Open Description button.",
   "tasks": [
-    "点击 #open 时调用 #rules-dialog 的 showModal，并将焦点移到 #dismiss。",
-    "点击 #dismiss 时关闭对话框。对话框发生 close 时把焦点送回 #open。"
+    "When #open is clicked, showModal of #rules-dialog is called and the focus is moved to #dismiss.",
+    "Close the dialog box when #dismiss is clicked. When the dialog close occurs, the focus is returned to #open."
   ],
   "example": {
     "language": "javascript",
     "code": "openButton.addEventListener('click', () => dialog.showModal());\ndialog.addEventListener('close', () => openButton.focus());",
-    "note": "原生模态对话框把交互限制在当前弹窗。在 close 事件里安排返回焦点，也能覆盖用户按 Esc 的情况。"
+    "note": "The native modal dialog box limits interaction to the current pop-up window. Arranging to return focus in the close event can also cover the situation when the user presses Esc."
   },
-  "hint": "使用 dialog 的方法操作开关。focus() 用在应接收键盘输入的控件上。"
+  "hint": "Use the dialog method to operate the switch. focus() is used on controls that should receive keyboard input."
 }

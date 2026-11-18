@@ -1,6 +1,6 @@
 [
   {
-    "label": "解码空格并读取重复键",
+    "label": "Decode spaces and read duplicate keys",
     "expect": {
       "type": "function",
       "name": "readFilters",
@@ -17,15 +17,15 @@
     }
   },
   {
-    "label": "解码中文与连字符",
+    "label": "Decodes escaped spaces while preserving the hyphen in a tag",
     "expect": {
       "type": "function",
       "name": "readFilters",
       "args": [
-        "tag=A-1&q=%E6%9C%A8%E5%B7%A5"
+        "tag=A-1&q=Wood%20working"
       ],
       "value": {
-        "q": "木工",
+        "q": "Wood working",
         "tags": [
           "A-1"
         ]
@@ -33,7 +33,7 @@
     }
   },
   {
-    "label": "缺少关键字",
+    "label": "Missing keywords",
     "expect": {
       "type": "function",
       "name": "readFilters",
@@ -49,7 +49,7 @@
     }
   },
   {
-    "label": "空字符串",
+    "label": "empty string",
     "expect": {
       "type": "function",
       "name": "readFilters",

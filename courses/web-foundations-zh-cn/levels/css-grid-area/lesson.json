@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "给剧场看板分配命名区域",
+  "goal": "画出两行网格区域，用名字将三块信息放到对应位置。",
+  "summary": "grid-template-areas 每个字符串表示一行，字符串内每个名字对应一格。相邻格子用同一个名字可以组成更大的矩形区域，用 grid-area 把网格项放入该区域。",
+  "tasks": [
+    "为 .show-board 写两行 grid-template-areas。第一行是「overview overview」，第二行是「stage tickets」。",
+    "给 .show-overview、.stage-crew 和 .front-desk 设置 grid-area，依次使用 overview、stage 和 tickets。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".recipe {\n  display: grid;\n  grid-template-areas:\n    \"photo photo\"\n    \"ingredients method\";\n}\n.recipe-photo { grid-area: photo; }\n.recipe-ingredients { grid-area: ingredients; }\n.recipe-method { grid-area: method; }",
+    "note": "食谱配图占据第一行，食材和做法分别放在第二行左侧与右侧。"
+  },
+  "hint": "两个区域交换了位置时，检查第二个字符串里的顺序。每个 grid-area 的名称须与图中的对应格子一致。"
+}

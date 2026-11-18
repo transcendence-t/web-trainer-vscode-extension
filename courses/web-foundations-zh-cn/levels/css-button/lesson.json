@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "按钮圆角",
+  "summary": "用背景色和圆角突出页面上的主要操作。",
+  "tasks": [
+    "给 .signup 设置 #125a46 背景和 #ffffff 文字。",
+    "设置上下内边距 8px、左右内边距 16px，圆角 999px。"
+  ],
+  "hint": "padding 的第一个值控制上下，第二个值控制左右。调换 8px 和 16px 后，按钮会变得更高更窄。",
+  "goal": "结合按钮的颜色、内边距和圆角突出页面的主要操作。",
+  "example": {
+    "language": "css",
+    "code": ".print-ticket {\n  background: #284d6d;\n  color: #fff;\n  padding: 6px 14px;\n  border-radius: 20px;\n}",
+    "note": "给打印凭证按钮设亮色文字与深色背景。内边距的两个值分别控制上下和左右。"
+  }
+}

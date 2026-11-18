@@ -1,0 +1,55 @@
+[
+  {
+    "label": "读出已登记的正数空位",
+    "expect": {
+      "type": "function",
+      "name": "readFreeSeats",
+      "args": [
+        {
+          "name": "静音区",
+          "freeSeats": 7
+        }
+      ],
+      "value": 7
+    }
+  },
+  {
+    "label": "已满时保留数字 0",
+    "expect": {
+      "type": "function",
+      "name": "readFreeSeats",
+      "args": [
+        {
+          "name": "讨论区",
+          "freeSeats": 0
+        }
+      ],
+      "value": 0
+    }
+  },
+  {
+    "label": "只有总座位数时空位仍未知",
+    "expect": {
+      "type": "function",
+      "name": "readFreeSeats",
+      "args": [
+        {
+          "name": "南自习室",
+          "capacity": 12
+        }
+      ],
+      "value": null
+    }
+  },
+  {
+    "label": "空对象没有空位记录",
+    "expect": {
+      "type": "function",
+      "name": "readFreeSeats",
+      "args": [
+        {}
+      ],
+      "value": null
+    }
+  }
+]

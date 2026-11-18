@@ -1,6 +1,6 @@
 [
   {
-    "label": "正在展出的记录变绿",
+    "label": "The record on display turns green",
     "expect": {
       "type": "style",
       "selector": "#new",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "归档记录保留默认色",
+    "label": "archive records retain default color",
     "expect": {
       "type": "style",
       "selector": "#old",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "普通提示不受影响",
+    "label": "normal prompts are not affected",
     "expect": {
       "type": "style",
       "selector": "#plain",

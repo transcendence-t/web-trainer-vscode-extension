@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "选择卡片里的链接",
-  "goal": "给订单卡片内的所有链接做同样的标记，覆盖嵌在段落里的链接。",
-  "summary": "空格连接父级范围与目标选择器。只要目标位于这个范围里，隔着多层元素也能匹配。",
+  "title": "Select the link in the card",
+  "goal": "Mark all links in the order card equally, covering links embedded in paragraphs.",
+  "summary": "A space connects the parent range and the target selector. As long as the target is within this range, it can be matched across multiple layers of elements.",
   "tasks": [
-    "用后代选择器选中 .order 区域里的 a。",
-    "把订单链接的文字颜色设为 #6b3f87，字重设为 600。服务台链接保留原样式。"
+    "Use the descendant selector to select a in the .order area.",
+    "Set the text color of the order link to #6b3f87 and reset the font to 600. The service desk link retains its original style."
   ],
-  "hint": ".order 和 a 之间用一个空格。检查藏在段落里的「值班时间」是否也应用了样式。",
+  "hint": "Use a space between .order and a. Check whether the \"duty time\" hidden in the paragraph also has the style applied.",
   "example": {
     "language": "css",
     "code": ".catalog img {\n  border-radius: 8px;\n}",
-    "note": "商品目录里的图片有的紧挨目录容器，有的包在商品卡片里。这个选择器可以给目录内的图片都加上圆角。"
+    "note": "Some of the pictures in the product catalog are next to the catalog container, and some are wrapped in the product card. This selector can add rounded corners to images in the directory."
   }
 }

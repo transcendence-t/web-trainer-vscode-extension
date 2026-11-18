@@ -5,4 +5,4 @@ function runSearch(keyword) {
   document.querySelector('#hits').textContent = ++hits;
 }
 
-// 安排延迟搜索。
+// Schedules a delayed search.

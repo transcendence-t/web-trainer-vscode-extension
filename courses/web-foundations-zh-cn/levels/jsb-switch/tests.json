@@ -1,0 +1,57 @@
+[
+  {
+    "label": "大写 S 对应缝纫台",
+    "expect": {
+      "type": "function",
+      "name": "stationName",
+      "args": [
+        "S"
+      ],
+      "value": "缝纫台"
+    }
+  },
+  {
+    "label": "大写 C 对应裁纸台",
+    "expect": {
+      "type": "function",
+      "name": "stationName",
+      "args": [
+        "C"
+      ],
+      "value": "裁纸台"
+    }
+  },
+  {
+    "label": "大写 B 对应装订台",
+    "expect": {
+      "type": "function",
+      "name": "stationName",
+      "args": [
+        "B"
+      ],
+      "value": "装订台"
+    }
+  },
+  {
+    "label": "小写 c 落入默认分支",
+    "expect": {
+      "type": "function",
+      "name": "stationName",
+      "args": [
+        "c"
+      ],
+      "value": "未知工位"
+    }
+  },
+  {
+    "label": "空代号落入默认分支",
+    "expect": {
+      "type": "function",
+      "name": "stationName",
+      "args": [
+        ""
+      ],
+      "value": "未知工位"
+    }
+  }
+]

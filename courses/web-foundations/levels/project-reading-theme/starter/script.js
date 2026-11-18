@@ -1,1 +1,1 @@
-// 读取并切换阅读主题。
+// Read and switch reading topics.

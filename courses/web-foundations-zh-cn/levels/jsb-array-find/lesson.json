@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "取得第一条符合编号的登记记录",
+  "goal": "知道 find 返回单个匹配项，并处理找不到的情况。",
+  "summary": "登记清单按录入时间排列，重复编号只读取第一条。展示层需要一条对象或 null。",
+  "tasks": [
+    "完成 findRecord(records, serial)，按 id 严格匹配编号并返回第一条记录。",
+    "没有命中时返回 null。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const records = [{ name: '甲', done: false }, { name: '乙', done: true }];\nrecords.find((item) => item.done); // { name: '乙', done: true }",
+    "note": "find 成功时返回原项，若没有匹配项则返回 undefined。"
+  },
+  "hint": "把查找结果与 ?? null 组合。filter 的返回值始终是数组。"
+}

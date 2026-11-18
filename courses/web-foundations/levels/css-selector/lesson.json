@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "选择卡片标题",
-  "summary": "用类选择器给指定标题设置样式。",
+  "title": "Select card title",
+  "summary": "Use a class selector to style a specified title.",
   "tasks": [
-    "用 .card-title 选择课程卡片标题。",
-    "设置标题颜色为 #125a46，字号为 24px。保留「使用说明」的原样式。"
+    "Use .card-title to select the course card title.",
+    "Set the title color to #125a46 and the font size to 24px. Keep the original style of \"Instructions for Use\"."
   ],
-  "hint": "类名之前加点号，例如 .example { color: navy; }。",
-  "goal": "在使用相同标签的标题中，通过类名找到要调整的课程标题。",
+  "hint": "Add a period before the class name, for example .example { color: navy; }.",
+  "goal": "Among the titles using the same tag, find the course title you want to adjust by its class name.",
   "example": {
     "language": "css",
     "code": ".seat-available {\n  color: #365e2b;\n}",
-    "note": "在预约清单里，给可用座位的条目添加 class=\"seat-available\"，这条规则会统一它们的文字颜色。"
+    "note": "In the reservation list, add class=\"seat-available\" to the entries of available seats. This rule will unify their text colors."
   }
 }

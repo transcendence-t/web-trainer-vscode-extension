@@ -1,18 +1,18 @@
 {
   "focus": "index.html",
-  "title": "可以翻面的网页速记卡",
-  "goal": "管理当前卡片和当前面两个状态，让按钮同步更新可见内容。",
-  "summary": "每张卡先显示一道网页基础题。翻面核对答案，继续下一张时回到题目面。",
+  "title": "Reversible web shorthand card",
+  "goal": "manages the current card and the current two states, allowing the buttons to update the visible content synchronously.",
+  "summary": "Each card first displays a basic web page question. Turn over to check the answer and return to the question side when moving on to the next page.",
   "tasks": [
-    "在 index.html 给 #flip-card 添加 aria-controls=\"card-answer\"，关联它控制的答案。",
-    "在 style.css 设定 .study-card 的最小高度为 108px，短答案也有稳定的卡片区域。",
-    "点击 #flip-card 时切换 answerSide，调用 renderCard 刷新同一张卡。",
-    "点击 #next-card 时切换到下一张，最后一张之后回到第一张。每次换卡都先显示题目。"
+    "Add aria-controls=\"card-answer\" to #flip-card in index.html to associate the answers it controls.",
+    "sets the minimum height of .study-card in style.css to 108px, and the short answer also has a stable card area.",
+    "Switch answerSide when #flip-card is clicked and call renderCard to refresh the same card.",
+    "Switch to the next card when clicking #next-card, and return to the first card after the last card. Each time you change the card, the question will be displayed first."
   ],
   "example": {
     "language": "javascript",
-    "code": "const photos = ['剧场入口', '舞台', '展品'];\nlet current = 2;\ncurrent = (current + 1) % photos.length;\n// 再取 photos[current] 会得到 '剧场入口'",
-    "note": "照片播放到最后一个下标后，用数组长度取余，下一次就回到下标 0。"
+    "code": "const photos = ['Theater entrance', 'stage', 'Exhibits'];\nlet current = 2;\ncurrent = (current + 1) % photos.length;\n// If you retrieve photos[current] again, you will get 'theatre entrance'",
+    "note": "photo is played to the last subscript, the remainder is taken by the array length, and returns to subscript 0 next time."
   },
-  "hint": "换卡时需要同时更新 cardIndex 和 answerSide。只改下标会让下一张沿用上一张的答案面状态。"
+  "hint": "When changing cards, cardIndex and answerSide need to be updated at the same time. Changing only the subscript will cause the next page to inherit the answer page status of the previous page."
 }

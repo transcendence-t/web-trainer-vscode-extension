@@ -6,8 +6,8 @@ form.addEventListener('submit', (event) => {
   const data = new FormData(form);
   const name = data.get('name').trim();
   if (!name) {
-    reply.textContent = '请输入有效姓名';
+    reply.textContent = 'Please enter a valid name';
     return;
   }
-  reply.textContent = name + '，已报名' + data.get('course');
+  reply.textContent = name + ', registered for: ' + data.get('course');
 });

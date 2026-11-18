@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "把扫描头平移到虚线内",
+  "goal": "用 transform 平移元素的显示位置，保留原本的排版空间。",
+  "summary": "扫描头在轨道最左边。把它沿着横向轨道移到虚线标记处。",
+  "tasks": [
+    "给 .scanner-head 设置 transform，使它水平向右移动 80px。",
+    "预览中让扫描头与虚线框重合，保持纵向位置。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".map-marker {\n  transform: translateY(-6px);\n}",
+    "note": "地图标记从原位置向上移 6px。translateY 改变纵向位置，负值朝向页面顶部。"
+  },
+  "hint": "虚线位于扫描头右侧。用 translateX(80px) 沿水平轴向右移动，translateY 会沿纵向移出轨道。"
+}

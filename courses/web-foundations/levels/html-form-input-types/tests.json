@@ -1,6 +1,6 @@
 [
   {
-    "label": "两个输入框仍保留标签和名称",
+    "label": "The two input boxes still retain their labels and names.",
     "expect": {
       "type": "count",
       "selector": "label[for=\"email\"], label[for=\"work\"], input[name=\"email\"][required], input[name=\"work\"][required]",
@@ -8,7 +8,7 @@
     }
   },
   {
-    "label": "邮箱拒绝缺少 @ 的输入",
+    "label": "Email rejects input missing @",
     "expect": {
       "type": "exists",
       "selector": "#email:invalid"
@@ -22,7 +22,7 @@
     ]
   },
   {
-    "label": "正常邮箱有效",
+    "label": "Normal email is valid",
     "expect": {
       "type": "exists",
       "selector": "#email:valid"
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "label": "网址拒绝站内相对地址",
+    "label": "URL rejects site relative address",
     "expect": {
       "type": "exists",
       "selector": "#work:invalid"
@@ -50,7 +50,7 @@
     ]
   },
   {
-    "label": "完整网址有效",
+    "label": "full URL is valid",
     "expect": {
       "type": "exists",
       "selector": "#work:valid"

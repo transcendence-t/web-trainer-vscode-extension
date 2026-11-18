@@ -1,0 +1,20 @@
+[
+  {
+    "label": "待清点货签是绿色虚线",
+    "expect": {
+      "type": "style",
+      "selector": ".pending",
+      "property": "border",
+      "value": "2px dashed rgb(53, 116, 109)"
+    }
+  },
+  {
+    "label": "已清点货签保留绿色实线",
+    "expect": {
+      "type": "style",
+      "selector": ".checked",
+      "property": "border",
+      "value": "2px solid rgb(53, 116, 109)"
+    }
+  }
+]

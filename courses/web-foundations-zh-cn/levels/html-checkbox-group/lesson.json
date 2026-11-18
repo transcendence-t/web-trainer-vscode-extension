@@ -1,0 +1,16 @@
+{
+  "focus": "index.html",
+  "title": "让访客可以勾选多项活动",
+  "goal": "用同名且值不同的复选框表示一个可多选的字段。",
+  "summary": "报名表允许同时参加共读和修理工作坊。浏览器提交每项被勾选活动的 value。",
+  "tasks": [
+    "把 #reading 和 #repair 改为复选框。",
+    "保留 name=\"activity\"，两项的 value 分别保持 reading 和 repair，初始都未选中。"
+  ],
+  "example": {
+    "language": "html",
+    "code": "<label><input type=\"checkbox\" name=\"skill\" value=\"design\"> 设计</label>\n<label><input type=\"checkbox\" name=\"skill\" value=\"coding\"> 编程</label>",
+    "note": "每个被选中的复选框都会提交一组同名键值，value 用来区分选项。"
+  },
+  "hint": "checkbox 可以独立勾选。相同 name 的 radio 则只能选其中一项。"
+}

@@ -1,20 +1,20 @@
 const events = [
-  { id: 'print', title: '版画工作坊', category: 'workshop', showtime: '09:30 · 工作坊' },
-  { id: 'museum', title: '校史馆导览', category: 'tour', showtime: '10:00 · 导览' },
-  { id: 'sound', title: '声音剪辑体验', category: 'workshop', showtime: '13:30 · 工作坊' },
-  { id: 'garden', title: '植物园导览', category: 'tour', showtime: '14:00 · 导览' },
+  { id: 'print', title: 'Printmaking Workshop', category: 'workshop', showtime: '09:30 · Workshop' },
+  { id: 'museum', title: 'School History Museum Guide', category: 'tour', showtime: '10:00 · Tour' },
+  { id: 'sound', title: 'sound editing experience', category: 'workshop', showtime: '13:30 · Workshop' },
+  { id: 'garden', title: 'Botanical Garden Guide', category: 'tour', showtime: '14:00 · Tour' },
 ];
 const category = document.querySelector('#event-category');
 const list = document.querySelector('#event-list');
 const storageKey = 'campusEventFavorites';
-let favorites = []; // 读取已保存的活动 ID 数组。
+let favorites = []; // Reads the saved activity ID array.
 
 function toggleFavorite(id, button) {
-  // 追加或移除活动 ID，保存完整数组并同步按钮状态。
+  // Appends or removes activity IDs, saves the complete array and synchronizes button states.
 }
 
 function renderEvents() {
-  const visible = events; // 按选中的分类筛选。
+  const visible = events; // Filter by selected category.
   list.replaceChildren();
   for (const event of visible) {
     const row = document.createElement('li');
@@ -32,8 +32,8 @@ function renderEvents() {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'favorite-button';
-    button.textContent = '收藏';
-    button.setAttribute('aria-label', '收藏 ' + event.title);
+    button.textContent = 'Collection';
+    button.setAttribute('aria-label', 'Collection ' + event.title);
     button.setAttribute('aria-pressed', String(favorites.includes(event.id)));
     button.addEventListener('click', () => toggleFavorite(event.id, button));
     row.append(information, button);

@@ -1,6 +1,6 @@
 [
   {
-    "label": "暴雨提醒是深橙色",
+    "label": "Heavy rain reminder is dark orange",
     "expect": {
       "type": "style",
       "selector": "ul > li:nth-child(2)",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "下坡提醒是深橙色",
+    "label": "downhill reminder is dark orange",
     "expect": {
       "type": "style",
       "selector": "ul > li:nth-child(4)",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "轮胎检查保留原色",
+    "label": "tire inspection retains original color",
     "expect": {
       "type": "style",
       "selector": "ul > li:nth-child(1)",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "联系人事项保留原色",
+    "label": "Contact information retains original color",
     "expect": {
       "type": "style",
       "selector": "ul > li:nth-child(3)",

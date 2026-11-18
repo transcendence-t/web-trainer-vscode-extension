@@ -1,6 +1,6 @@
 [
   {
-    "label": "计算两笔小数的和",
+    "label": "Calculate the sum of two decimals",
     "expect": {
       "type": "function",
       "name": "sumWeights",
@@ -12,7 +12,7 @@
     }
   },
   {
-    "label": "第一笔留空按 0 计算",
+    "label": "If the first transaction is left blank, it will be calculated as 0",
     "expect": {
       "type": "function",
       "name": "sumWeights",
@@ -24,7 +24,7 @@
     }
   },
   {
-    "label": "数字可带空格与前导零",
+    "label": "numbers can contain spaces and leading zeros",
     "expect": {
       "type": "function",
       "name": "sumWeights",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "第二笔留空时仍返回数值 0",
+    "label": "The value 0 will still be returned when the second transaction is left blank.",
     "expect": {
       "type": "function",
       "name": "sumWeights",

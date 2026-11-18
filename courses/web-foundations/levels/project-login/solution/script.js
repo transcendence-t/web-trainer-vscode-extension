@@ -9,10 +9,10 @@ form.addEventListener('submit', (event) => {
   const password = passwordField.value;
 
   if (!username || !password) {
-    loginStatus.textContent = '请填写账号和密码。';
+    loginStatus.textContent = 'Please fill in your account number and password.';
   } else if (username === 'learner' && password === 'study123') {
-    loginStatus.textContent = '登录成功。';
+    loginStatus.textContent = 'Login successful.';
   } else {
-    loginStatus.textContent = '账号或密码有误。';
+    loginStatus.textContent = 'The account number or password is incorrect.';
   }
 });

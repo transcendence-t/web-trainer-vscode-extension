@@ -1,6 +1,6 @@
 [
   {
-    "label": "装饰图显式使用空 alt",
+    "label": "decorative image explicitly uses empty alt",
     "expect": {
       "type": "attribute",
       "selector": "#decoration",
@@ -9,26 +9,26 @@
     }
   },
   {
-    "label": "装饰图有预留尺寸",
+    "label": "decorative pictures have reserved dimensions",
     "expect": {
       "type": "exists",
       "selector": "img#decoration[width=\"24\"][height=\"20\"]"
     }
   },
   {
-    "label": "内容图保留两项尺寸",
+    "label": "content picture retains two dimensions",
     "expect": {
       "type": "exists",
       "selector": "img#building[width=\"144\"][height=\"76\"]"
     }
   },
   {
-    "label": "保留原有替代文字",
+    "label": "retain the original alternative text",
     "expect": {
       "type": "attribute",
       "selector": "#building",
       "name": "alt",
-      "value": "实训楼的正面示意图"
+      "value": "Front view of the training building"
     }
   }
 ]

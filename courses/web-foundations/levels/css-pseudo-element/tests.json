@@ -1,6 +1,6 @@
 [
   {
-    "label": "以空内容生成伪元素",
+    "label": "generates pseudo elements with empty content",
     "expect": {
       "type": "style",
       "selector": ".notice-title",
@@ -10,7 +10,7 @@
     }
   },
   {
-    "label": "可指定行内盒尺寸",
+    "label": "Inline box size can be specified",
     "expect": {
       "type": "style",
       "selector": ".notice-title",
@@ -20,7 +20,7 @@
     }
   },
   {
-    "label": "短条宽 6px",
+    "label": "short bar width 6px",
     "expect": {
       "type": "style",
       "selector": ".notice-title",
@@ -30,7 +30,7 @@
     }
   },
   {
-    "label": "短条高 16px",
+    "label": "short bar height 16px",
     "expect": {
       "type": "style",
       "selector": ".notice-title",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "label": "短条拥有指定底色",
+    "label": "short bar has specified background color",
     "expect": {
       "type": "style",
       "selector": ".notice-title",
@@ -50,7 +50,7 @@
     }
   },
   {
-    "label": "与标题留 8px 间隙",
+    "label": "Leave 8px gap between the title and the title",
     "expect": {
       "type": "style",
       "selector": ".notice-title",

@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "展示保留缩进的代码块",
-  "goal": "使用 pre 和 code 显示多行代码，保留示例里的换行和缩进。",
-  "summary": "网页预览把代码里的几行并排显示了。给示例加上标记，让读者看清哪一行在大括号里面。",
+  "title": "Shows code blocks that retain indentation",
+  "goal": "uses pre and code to display multiple lines of code, retaining the line breaks and indentation in the example.",
+  "summary": "The web page preview displays several lines of code side by side. Mark the examples so readers can see which lines are inside the braces.",
   "tasks": [
-    "用 pre 替换示例外层的 p，在 pre 内用 code 标记现有代码。",
-    "保留示例的三行和第二行开头的两个空格，继续用 &lt; 表示小于号。"
+    "Replace the p outside the example with pre and mark the existing code with code within pre.",
+    "Keep the three lines of the example and the two spaces at the beginning of the second line, and continue to use < to represent the less than sign."
   ],
   "example": {
     "language": "html",
-    "code": "<pre><code>&lt;ul&gt;\n  &lt;li&gt;报名&lt;/li&gt;\n&lt;/ul&gt;</code></pre>",
-    "note": "pre 保留换行和前导空格，code 标记代码内容。用 &lt; 和 &gt; 让读者看到标签的尖括号。"
+    "code": "<pre><code>&lt;ul&gt;\n  <li>Registration</li>\n&lt;/ul&gt;</code></pre>",
+    "note": "pre retains newlines and leading spaces, code marks code content. Use < and > to let readers see the angle brackets of a label."
   },
-  "hint": "只用 code 时，浏览器仍会合并普通空白。把 code 放进 pre，并让第一行紧跟在 code 开始标签后。"
+  "hint": "When using only code, the browser will still merge normal whitespace. Put code into pre and have the first line immediately after the code opening tag."
 }

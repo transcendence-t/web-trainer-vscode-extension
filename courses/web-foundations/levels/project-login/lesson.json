@@ -1,17 +1,17 @@
 {
   "focus": "index.html",
-  "title": "制作本地模拟登录",
-  "goal": "用密码输入框和提交流程区分未填写、凭证不匹配与登录成功三种状态。",
-  "summary": "密码控件会掩住输入的字符。表单提交时，在同一页读取账号和密码并显示结果。示例账号和密码专用于这次本地练习。",
+  "title": "Create local simulated login",
+  "goal": "uses the password input box and submission process to distinguish three states: unfilled, mismatched credentials and successful login.",
+  "summary": "Password control masks entered characters. When the form is submitted, the account number and password are read on the same page and the results are displayed. The sample account and password are specific to this local exercise.",
   "tasks": [
-    "在 index.html 把 #login-password 改成密码输入框，保留它的标签与提交按钮。",
-    "在 script.js 的 submit 回调内读取账号和密码。账号去掉首尾空格，密码按原样比较。任何一项为空时显示「请填写账号和密码。」。",
-    "账号为 learner 且密码为 study123 时显示「登录成功。」。其他已填写的组合显示「账号或密码有误。」。"
+    "Change #login-password into a password input box in index.html and keep its label and submit button.",
+    "reads the account number and password in the submit callback of script.js. The leading and trailing spaces are removed from the account number, and the password is compared as is. Displays \"Please fill in your account number and password.\" when any item is empty.",
+    "displays \"Login successful.\" when the account number is learner and the password is study123. Other filled combinations show \"The account number or password is incorrect.\"."
   ],
-  "hint": "先处理任意字段留空的情况。两个凭证都匹配才能显示成功，用 && 合并账号和密码的判断。",
+  "hint": "first handles the case where any field is left blank. Success will be displayed only if both credentials match. Use && to merge the judgment of the account number and password.",
   "example": {
     "language": "javascript",
-    "code": "pickupForm.addEventListener('submit', (event) => {\n  event.preventDefault();\n  if (pickupCode.value.trim() === '') {\n    pickupMessage.textContent = '请输入取件码。';\n  }\n});",
-    "note": "取件表单中的 pickupCode 是取件码输入框。拦住表单默认提交后，就能在当前页面提示缺少的内容。"
+    "code": "pickupForm.addEventListener('submit', (event) => {\n  event.preventDefault();\n  if (pickupCode.value.trim() === '') {\n    pickupMessage.textContent = 'Please enter the pickup code.';\n  }\n});",
+    "note": "pickup form is the pickup code input box. After preventing the form from being submitted by default, the missing content will be prompted on the current page."
   }
 }

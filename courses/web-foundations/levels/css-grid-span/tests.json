@@ -1,6 +1,6 @@
 [
   {
-    "label": "公告宽度与网格相同",
+    "label": "Announcement width is the same as the grid",
     "expect": {
       "type": "layout",
       "selector": ".route-notice",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "通栏公告仍在网格内部",
+    "label": "The banner announcement is still inside the grid",
     "expect": {
       "type": "layout",
       "selector": ".route-notice",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "路线安排位于公告下方",
+    "label": "route schedule is located below the announcement",
     "expect": {
       "type": "layout",
       "selector": ".route-map",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "装备清单与路线安排并排并靠右",
+    "label": "Equipment list and route arrangement side by side and to the right",
     "expect": {
       "type": "layout",
       "selector": ".gear-list",

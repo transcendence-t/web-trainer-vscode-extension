@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "清除一项保存的阅读偏好",
+  "goal": "用 removeItem 删除一个键，并同步恢复页面状态。",
+  "summary": "读者可以保存紧凑显示偏好，也可以恢复默认。其他个人设置继续保留。",
+  "tasks": [
+    "启动时读取 density，存在时写到 #density；无值时显示「标准」。",
+    "点击 #reset-density 删除 density，并在页面上立即显示「标准」。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const current = localStorage.getItem('layout') ?? '列表';\nlocalStorage.removeItem('layout');",
+    "note": "removeItem 只删除指定的键；不存在的键也可以安全地调用。"
+  },
+  "hint": "恢复按钮只处理 density。不要调用 clear() 清空其他键。"
+}

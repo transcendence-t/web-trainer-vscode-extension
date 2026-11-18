@@ -1,132 +1,132 @@
 {
   "jsb-queue-array": {
-    "name": "用 shift 取了第一项，整队顺序没变化",
+    "name": "used shift to take the first item, but the order of the whole team did not change.",
     "files": {
       "script.js": "function rotateLast(queue) { if (queue.length) queue.unshift(queue.shift()); return queue; }\n"
     }
   },
   "jsb-array-splice": {
-    "name": "把删除数量写成 0，只插入新件后留下了旧件",
+    "name": "Write the deletion quantity as 0, only insert new parts and leave old parts",
     "files": {
       "script.js": "function swapDevice(devices, index, replacement) { if (index >= 0 && index < devices.length) devices.splice(index, 0, replacement); return devices; }\n"
     }
   },
   "jsb-array-slice-copy": {
-    "name": "用 splice 取得相同的返回值，却改变了原队列",
+    "name": "Use splice to obtain the same return value, but change the original queue",
     "files": {
       "script.js": "function comparePreview(entries, count) {\n  const preview = peekLine(entries, count);\n  return { preview, entries };\n}\n\nfunction peekLine(entries, count) { return entries.splice(0, count); }\n"
     }
   },
   "jsb-array-find": {
-    "name": "筛选后返回数组，调用方无法直接读取 room",
+    "name": "returns an array after filtering, and the caller cannot read room directly.",
     "files": {
       "script.js": "function findRecord(records, serial) { return records.filter((item) => item.id === serial); }\n"
     }
   },
   "jsb-array-quantifiers": {
-    "name": "把 some 和 every 放到了相反的属性",
+    "name": "puts some and every into opposite attributes",
     "files": {
       "script.js": "function attendance(states) { return { any: states.every(Boolean), all: states.some(Boolean) }; }\n"
     }
   },
   "jsb-array-reduce": {
-    "name": "将输入对象直接加到总数上",
+    "name": "Add the input object directly to the total",
     "files": {
       "script.js": "function totalGrams(items) { return items.reduce((sum, item) => sum + item, 0); }\n"
     }
   },
   "jsb-numeric-sort": {
-    "name": "使用默认字典序，个位数和两位数的顺序错误",
+    "name": "uses the default dictionary order, and the order of single digits and two digits is wrong.",
     "files": {
       "script.js": "function compareOrder(readings) {\n  const sorted = sortReadings(readings);\n  return [sorted, readings];\n}\n\nfunction sortReadings(readings) { return readings.toSorted(); }\n"
     }
   },
   "jsb-array-flatmap": {
-    "name": "只 map 得到含有内层数组的结果",
+    "name": "only map results containing inner arrays",
     "files": {
       "script.js": "function participantNames(rooms) { return rooms.map((room) => room.names); }\n"
     }
   },
   "jsb-object-dynamic-key": {
-    "name": "用点号读取固定字面字段 field",
+    "name": "Use dot notation to read fixed literal field field",
     "files": {
       "script.js": "function readField(record, field) { return record.field ?? null; }\n"
     }
   },
   "jsb-destructure": {
-    "name": "用 || 设默认值，把显式的 0 和 null 也改成 1",
+    "name": "Use || to set the default value, and change the explicit 0 and null to 1",
     "files": {
       "script.js": "function tagFields({ name: title, count }) { return { title, quantity: count || 1 }; }\n"
     }
   },
   "jsb-object-spread": {
-    "name": "将字段覆盖到 defaults 本身",
+    "name": "Overwrite fields to defaults itself",
     "files": {
       "script.js": "function checkSettings(defaults, overrides) {\n  const merged = mergeSettings(defaults, overrides);\n  return { defaults, merged };\n}\n\nfunction mergeSettings(defaults, overrides) { return Object.assign(defaults, overrides); }\n"
     }
   },
   "jsb-optional-chaining": {
-    "name": "用 || 接后备值，错误替换了空字符串",
+    "name": "Use || to connect the backup value, and the empty string is mistakenly replaced",
     "files": {
-      "script.js": "function contactPhone(record) { return record?.contact?.phone || '待登记'; }\n"
+      "script.js": "function contactPhone(record) { return record?.contact?.phone || 'pending registration'; }\n"
     }
   },
   "jsb-object-method": {
-    "name": "箭头方法里的 this 不指向 record",
+    "name": "this in arrow method does not point to record",
     "files": {
       "script.js": "function rackLabel(prefix, number) {\n  const record = { prefix, number, label: () => this.prefix + '-' + this.number };\n  return record.label();\n}\n"
     }
   },
   "jsb-object-entries": {
-    "name": "用 Object.keys 拼出了名称，但漏掉数量",
+    "name": "uses Object.keys to spell out the name, but misses the quantity",
     "files": {
       "script.js": "function inventoryRows(inventory) { return Object.keys(inventory).map((name) => ({ name })); }\n"
     }
   },
   "jsb-set-unique": {
-    "name": "先排序后去重，改变了第一次出现的顺序",
+    "name": "Sort first and then remove duplicates, changing the order of first appearance",
     "files": {
       "script.js": "function uniqueCodes(codes) { return [...new Set(codes.toSorted())]; }\n"
     }
   },
   "jsb-map-count": {
-    "name": "普通对象继承了原型，特殊键无法当普通材料名统计",
+    "name": "Ordinary objects inherit the prototype, and special keys cannot be used as ordinary material names for statistics.",
     "files": {
       "script.js": "function countMaterials(names) {\n  const counts = {};\n  for (const name of names) counts[name] = (counts[name] ?? 0) + 1;\n  return Object.entries(counts);\n}\n"
     }
   },
   "jsb-classes": {
-    "name": "receive 用赋值代替累加，丢失此前数量",
+    "name": "receive uses assignment instead of accumulation and loses the previous quantity.",
     "files": {
       "script.js": "class SupplyBox {\n  constructor(initial) { this.quantity = initial; }\n  receive(count) { this.quantity = count; }\n  total() { return this.quantity; }\n}\nfunction runBoxes(left, right, leftAdd, rightAdd) {\n  const first = new SupplyBox(left);\n  const second = new SupplyBox(right);\n  first.receive(leftAdd);\n  second.receive(rightAdd);\n  first.receive(2);\n  return [first.total(), second.total()];\n}\n"
     }
   },
   "jsb-date-iso": {
-    "name": "直接截取输入，忽略 UTC 跨日",
+    "name": "directly intercepts the input and ignores UTC cross-day",
     "files": {
       "script.js": "function archiveDay(timestamp) { return timestamp.slice(0, 10); }\n"
     }
   },
   "jsb-regexp": {
-    "name": "忘加首尾边界，正确编码旁的多余字符也被放行",
+    "name": "Forgot to add the first and last boundaries, and the extra characters next to the correct encoding are also allowed.",
     "files": {
       "script.js": "function validLabel(text) { return /[A-Z]{2}-[0-9]{3}/.test(text); }\n"
     }
   },
   "jsb-json-parse-errors": {
-    "name": "只捕获异常，合法的普通对象也被误收",
+    "name": "only captures exceptions, legal ordinary objects are also collected by mistake",
     "files": {
       "script.js": "function readChecklist(text) { try { return JSON.parse(text); } catch { return []; } }\n"
     }
   },
   "jsb-debug-off-by-one": {
-    "name": "将终点补成 last + 1，导致多输出一个编号",
+    "name": "adds last + 1 to the end point, resulting in one more number being output.",
     "files": {
       "script.js": "function labelRange(first, last) {\n  const labels = [];\n  for (let number = first; number <= last + 1; number++) labels.push(number);\n  return labels;\n}\n"
     }
   },
   "jsb-palindrome": {
-    "name": "只使用 trim，不能忽略中间的空格",
+    "name": "only uses trim and cannot ignore the spaces in the middle.",
     "files": {
       "script.js": "function isMirrorCode(text) { const code = text.trim().toLowerCase(); return code.length > 0 && code === [...code].reverse().join(''); }\n"
     }

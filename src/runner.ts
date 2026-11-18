@@ -1,3 +1,4 @@
+import { localize } from './language';
 import { storageFits, type Action, type Check, type CheckResult, type Expectation, type Json, type LayoutRelation, type MediaCondition, type StorageEntries } from './model';
 
 const notify = parent.postMessage.bind(parent);
@@ -7,7 +8,7 @@ let values = new Map<string, string>(JSON.parse(bootstrap.storage ?? '[]') as St
 
 function changeStorage(next: Map<string, string>) {
   const entries = [...next];
-  if (!storageFits(entries)) throw new DOMException('本关本地存储已满。', 'QuotaExceededError');
+  if (!storageFits(entries)) throw new DOMException(localize('Local storage for this lesson is full.', '本关本地存储已满。'), 'QuotaExceededError');
   values = next;
   notify({ type: 'local-storage', entries }, '*');
 }
@@ -34,7 +35,7 @@ Object.defineProperty(window, tickName, { value: () => {
     setTimeout(() => { ticks = 0; }, 0);
   }
   if (++ticks > 100_000 || performance.now() > deadline) {
-    throw new Error('循环执行时间过长，请检查循环结束条件。');
+    throw new Error(localize('The loop took too long to run. Check its exit condition.', '循环执行时间过长，请检查循环结束条件。'));
   }
 } });
 
@@ -48,11 +49,12 @@ function reportError(message: string) {
 window.addEventListener('error', (event) => {
   if (!event.message) return;
   const file = event.filename.split('/').at(-1);
-  const position = file && !file.startsWith('data:') ? `${file} 第 ${event.lineno} 行：` : '';
+  const position = file && !file.startsWith('data:') ? localize(`${file}, line ${event.lineno}: `, `${file} 第 ${event.lineno} 行：`) : '';
   reportError(`${position}${event.message.replace(/^Uncaught (?:\(in promise\) )?/, '')}`);
 });
 window.addEventListener('unhandledrejection', (event) => {
-  reportError(`异步代码出错：${String(event.reason)}`);
+  const reason = String(event.reason);
+  reportError(localize(`Asynchronous code error: ${reason}`, `异步代码出错：${reason}`));
 });
 
 document.addEventListener('submit', (event) => event.preventDefault());
@@ -70,7 +72,10 @@ const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 async function waitForViewport(width: number): Promise<void> {
   const end = performance.now() + 1000;
   while (Math.abs(window.innerWidth - width) > 1) {
-    if (performance.now() >= end) throw new Error(`判题视口应为 ${width}px，实际为 ${window.innerWidth}px。`);
+    if (performance.now() >= end) throw new Error(localize(
+      `Expected a ${width}px viewport for the check, but it was ${window.innerWidth}px wide.`,
+      `判题视口应为 ${width}px，实际为 ${window.innerWidth}px。`,
+    ));
     await delay(20);
   }
 }
@@ -78,7 +83,7 @@ async function waitForViewport(width: number): Promise<void> {
 async function act(action: Action) {
   if (action.type === 'wait') return delay(action.ms);
   const target = findElements(action.selector)[0];
-  if (!(target instanceof HTMLElement)) throw new Error(`找不到可操作的元素 ${action.selector}。`);
+  if (!(target instanceof HTMLElement)) throw new Error(localize(`Could not find an interactive element matching ${action.selector}.`, `找不到可操作的元素 ${action.selector}。`));
   switch (action.type) {
     case 'click': target.click(); break;
     case 'focus': target.focus({ preventScroll: true }); break;
@@ -90,7 +95,7 @@ async function act(action: Action) {
       break;
     case 'input': {
       if (!(target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement || target instanceof HTMLSelectElement)) {
-        throw new Error(`${action.selector} 需要是 input、textarea 或 select。`);
+        throw new Error(localize(`${action.selector} must be an input, textarea, or select element.`, `${action.selector} 需要是 input、textarea 或 select。`));
       }
       target.value = action.value;
       target.dispatchEvent(new Event('input', { bubbles: true }));
@@ -107,14 +112,16 @@ function compact(text: string): string {
 
 function compare(expected: string | number, actual: string | number | null): CheckResult {
   if (expected === actual) return { passed: true };
-  return { passed: false, detail: `预期「${expected}」，实际${actual === null ? '缺少该属性' : `为「${String(actual).slice(0, 180)}」`}。` };
+  if (actual === null) return { passed: false, detail: localize(`Expected “${expected}”, but the attribute was missing.`, `预期「${expected}」，实际缺少该属性。`) };
+  const value = String(actual).slice(0, 180);
+  return { passed: false, detail: localize(`Expected “${expected}”, got “${value}”.`, `预期「${expected}」，实际为「${value}」。`) };
 }
 
 function findElements(selector: string): NodeListOf<Element> {
   try {
     return document.querySelectorAll(selector);
   } catch {
-    throw new Error(`课程判题规则中的选择器无效「${selector}」。`);
+    throw new Error(localize(`The course check uses an invalid selector: “${selector}”.`, `课程判题规则中的选择器无效「${selector}」。`));
   }
 }
 
@@ -138,7 +145,7 @@ function setMediaCondition({ query, matches }: MediaCondition): boolean {
 }
 
 function judgeStyle(target: Element, { property, value, pseudo, media }: Extract<Expectation, { type: 'style' }>): CheckResult {
-  if (media && !setMediaCondition(media)) return { passed: false, detail: `找不到 @media ${media.query}。` };
+  if (media && !setMediaCondition(media)) return { passed: false, detail: localize(`Could not find @media ${media.query}.`, `找不到 @media ${media.query}。`) };
   const style = getComputedStyle(target, pseudo);
   const actual = style.getPropertyValue(property).trim();
   const border = property === 'border' || /^border-(?:(?:top|right|bottom|left|block|inline)(?:-start|-end)?(?:-width)?|width)$/.test(property);
@@ -192,46 +199,68 @@ function describe(value: unknown): string {
 async function judge(expect: Expectation): Promise<CheckResult> {
   if (expect.type === 'storage') {
     const actual = localStorage.getItem(expect.key);
-    return actual === expect.value ? { passed: true } : { passed: false,
-      detail: `存储键「${expect.key}」预期 ${describe(expect.value)}，实际 ${describe(actual)}。`,
-    };
+    if (actual === expect.value) return { passed: true };
+    const expected = describe(expect.value);
+    const value = describe(actual);
+    return { passed: false, detail: localize(
+      `Expected storage key “${expect.key}” to contain ${expected}, got ${value}.`,
+      `存储键「${expect.key}」预期 ${expected}，实际 ${value}。`,
+    ) };
   }
   if (expect.type === 'function') {
     type FunctionReader = () => ((...args: Json[]) => unknown) | undefined;
     const globals = window as unknown as Record<string, Map<string, FunctionReader> | undefined>;
     const fn = globals[`${tickName}Resolve`]?.get(expect.name)?.();
-    if (!fn) return { passed: false, detail: `找不到函数 ${expect.name}，请在 script.js 顶层定义它。` };
+    if (!fn) return { passed: false, detail: localize(
+      `Could not find the function ${expect.name}. Define it at the top level of script.js.`,
+      `找不到函数 ${expect.name}，请在 script.js 顶层定义它。`,
+    ) };
     const args = expect.args.map(describe).join(', ');
     const result = await fn(...expect.args);
-    return sameValue(result, expect.value) ? { passed: true } : { passed: false,
-      detail: `${expect.name}(${args}) 预期返回 ${describe(expect.value)}，实际返回 ${describe(result)}。`,
-    };
+    if (sameValue(result, expect.value)) return { passed: true };
+    const expected = describe(expect.value);
+    const value = describe(result);
+    return { passed: false, detail: localize(
+      `Expected ${expect.name}(${args}) to return ${expected}, got ${value}.`,
+      `${expect.name}(${args}) 预期返回 ${expected}，实际返回 ${value}。`,
+    ) };
   }
   const targets = findElements(expect.selector);
   if (expect.type === 'count') return compare(expect.value, targets.length);
   const [element] = targets;
-  if (!element) return { passed: false, detail: `找不到 ${expect.selector}。` };
+  if (!element) return { passed: false, detail: localize(`Could not find ${expect.selector}.`, `找不到 ${expect.selector}。`) };
   switch (expect.type) {
     case 'exists': return { passed: true };
     case 'text': return compare(compact(expect.value), compact(element.textContent ?? ''));
     case 'attribute': return compare(expect.value, element.getAttribute(expect.name));
     case 'property': {
       const actual: unknown = Reflect.get(element, expect.name);
-      return sameValue(actual, expect.value) ? { passed: true } : { passed: false,
-        detail: `属性 ${expect.name} 预期 ${describe(expect.value)}，实际为 ${describe(actual)}。`,
-      };
+      if (sameValue(actual, expect.value)) return { passed: true };
+      const expected = describe(expect.value);
+      const value = describe(actual);
+      return { passed: false, detail: localize(
+        `Expected property ${expect.name} to be ${expected}, got ${value}.`,
+        `属性 ${expect.name} 预期 ${expected}，实际为 ${value}。`,
+      ) };
     }
     case 'style': return judgeStyle(element, expect);
     case 'layout': {
-      const other = findElements(expect.relativeTo)[0];
-      if (!other) return { passed: false, detail: `找不到参照元素 ${expect.relativeTo}。` };
+      const reference = expect.relativeTo;
+      const other = findElements(reference)[0];
+      if (!other) return { passed: false, detail: localize(`Could not find the reference element ${reference}.`, `找不到参照元素 ${reference}。`) };
+      if (layoutMatches(expect.relation, element.getBoundingClientRect(), other.getBoundingClientRect())) return { passed: true };
       const descriptions: Record<LayoutRelation, string> = {
-        'right-of': '在右侧并处于同一行', below: '在下方', 'same-row': '在同一行',
-        inside: '完全位于内部', 'center-x': '水平居中对齐', 'equal-width': '宽度相同',
+        'right-of': localize(`to the right of ${reference} on the same row`, '在右侧并处于同一行'),
+        below: localize(`below ${reference}`, '在下方'),
+        'same-row': localize(`on the same row as ${reference}`, '在同一行'),
+        inside: localize(`entirely inside ${reference}`, '完全位于内部'),
+        'center-x': localize(`horizontally centered with ${reference}`, '水平居中对齐'),
+        'equal-width': localize(`the same width as ${reference}`, '宽度相同'),
       };
-      return layoutMatches(expect.relation, element.getBoundingClientRect(), other.getBoundingClientRect())
-        ? { passed: true }
-        : { passed: false, detail: `预期 ${expect.selector} 相对于 ${expect.relativeTo} ${descriptions[expect.relation]}。` };
+      return { passed: false, detail: localize(
+        `Expected ${expect.selector} to be ${descriptions[expect.relation]}.`,
+        `预期 ${expect.selector} 相对于 ${reference} ${descriptions[expect.relation]}。`,
+      ) };
     }
   }
 }

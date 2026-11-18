@@ -1,9 +1,9 @@
 {
   "js-text": {
-    "script.js": "const message = '准备就绪';\ndocument.querySelector('#status').textContent = message;"
+    "script.js": "const message = 'Ready';\ndocument.querySelector('#status').textContent = message;"
   },
   "js-click": {
-    "script.js": "const button = document.querySelector('#reserve');\nconst status = document.querySelector('#status');\n\nfunction confirmReservation() {\n  status.textContent = '报名成功';\n}\n\nbutton.addEventListener('click', confirmReservation);"
+    "script.js": "const button = document.querySelector('#reserve');\nconst status = document.querySelector('#status');\n\nfunction confirmReservation() {\n  status.textContent = 'registration successful';\n}\n\nbutton.addEventListener('click', confirmReservation);"
   },
   "js-class-toggle": {
     "script.js": "const saveButton = document.querySelector('#save-resource');\n\nsaveButton.addEventListener('click', () => {\n  const next = !saveButton.classList.contains('is-saved');\n  saveButton.classList.toggle('is-saved', next);\n  saveButton.setAttribute('aria-pressed', String(next));\n});"
@@ -12,6 +12,6 @@
     "script.js": "const button = document.querySelector('#add');\nconst output = document.querySelector('#count');\nlet count = 0;\nbutton.addEventListener('click', () => {\n  output.textContent = ++count;\n});\n"
   },
   "js-input": {
-    "script.js": "const field = document.querySelector('#student');\nconst greeting = document.querySelector('#greeting');\n\nfield.addEventListener('input', (event) => {\n  const name = event.target.value.trim();\n  greeting.textContent = '你好，' + (name || '同学') + '！';\n});"
+    "script.js": "const field = document.querySelector('#student');\nconst greeting = document.querySelector('#greeting');\n\nfield.addEventListener('input', (event) => {\n  const name = event.target.value.trim();\n  greeting.textContent = 'Hello, ' + (name || 'classmate') + '!';\n});"
   }
 }

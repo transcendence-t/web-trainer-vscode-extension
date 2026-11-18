@@ -9,4 +9,4 @@ a { color: #125a46; }
 .signal { padding: 8px; background: #e6f4ee; animation: fade-in .6s ease-out; }
 @keyframes fade-in { from { opacity: .45; } to { opacity: 1; } }
 
-/* 在这里编写本关样式。 */
+/* Write the style of this level here. */

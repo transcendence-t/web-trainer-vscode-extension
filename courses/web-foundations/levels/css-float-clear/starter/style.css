@@ -7,6 +7,6 @@ img, video { max-width: 100%; height: auto; }
 a { color: #125a46; }
 
 .figure-story { display: flow-root; }
-.diagram { width: 124px; height: auto; }
+.diagram { width: 124px; height: 120px; }
 
-/* 在这里编写本关样式。 */
+/* Write the style of this level here. */

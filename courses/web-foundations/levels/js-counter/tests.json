@@ -1,6 +1,6 @@
 [
   {
-    "label": "开始显示 0",
+    "label": "starts showing 0",
     "expect": {
       "type": "text",
       "selector": "#count",
@@ -8,7 +8,7 @@
     }
   },
   {
-    "label": "点击一次显示 1",
+    "label": "Click once to display 1",
     "expect": {
       "type": "text",
       "selector": "#count",
@@ -22,13 +22,13 @@
     ]
   },
   {
-    "label": "连续点击三次显示 3",
+    "label": "Click three times in succession to display 3",
     "expect": {
       "type": "text",
       "selector": "#count",
       "value": "3"
     },
-    "hint": "计数变量应该在回调外保存。",
+    "hint": "Count variable should be saved outside the callback.",
     "actions": [
       {
         "type": "click",

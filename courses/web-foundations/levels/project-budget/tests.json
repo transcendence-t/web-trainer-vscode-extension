@@ -1,13 +1,13 @@
 [
   {
-    "label": "错误提示区域使用 alert 角色",
+    "label": "error prompt area uses alert role",
     "expect": {
       "type": "exists",
       "selector": "#expense-error[role=\"alert\"]"
     }
   },
   {
-    "label": "余额栏实际排在支出栏右边",
+    "label": "The balance column is actually arranged to the right of the expenditure column",
     "expect": {
       "type": "layout",
       "selector": ".remaining-summary",
@@ -16,7 +16,7 @@
     }
   },
   {
-    "label": "两个金额栏实际等宽",
+    "label": "The two amount columns are actually the same width",
     "expect": {
       "type": "layout",
       "selector": ".remaining-summary",
@@ -25,7 +25,7 @@
     }
   },
   {
-    "label": "两栏之间留出 12px",
+    "label": "Leave 12px between the two columns",
     "expect": {
       "type": "style",
       "selector": ".expense-summary",
@@ -34,19 +34,19 @@
     }
   },
   {
-    "label": "开始时还没有支出",
+    "label": "There is no expenditure at the beginning",
     "expect": {
       "type": "text",
       "selector": "#expense-total",
-      "value": "0.00 元"
+      "value": "0.00 yuan"
     }
   },
   {
-    "label": "两笔小数金额都计入总支出",
+    "label": "Both decimal amounts are included in the total expenditure",
     "expect": {
       "type": "text",
       "selector": "#expense-total",
-      "value": "20.00 元"
+      "value": "20.00 yuan"
     },
     "actions": [
       {
@@ -70,11 +70,11 @@
     ]
   },
   {
-    "label": "余额从总预算扣除累计支出",
+    "label": "The balance is deducted from the total budget and accumulated expenses.",
     "expect": {
       "type": "text",
       "selector": "#expense-remaining",
-      "value": "280.00 元"
+      "value": "280.00 yuan"
     },
     "actions": [
       {
@@ -98,11 +98,11 @@
     ]
   },
   {
-    "label": "负数输入不会改变先前的金额",
+    "label": "Negative input will not change the previous amount",
     "expect": {
       "type": "text",
       "selector": "#expense-total",
-      "value": "12.40 元"
+      "value": "12.40 yuan"
     },
     "actions": [
       {
@@ -126,11 +126,11 @@
     ]
   },
   {
-    "label": "超过两位小数时提示错误",
+    "label": "prompts error when more than two decimal places",
     "expect": {
       "type": "text",
       "selector": "#expense-error",
-      "value": "请输入大于 0 且最多两位小数的金额"
+      "value": "Please enter an amount greater than 0 and with up to two decimal places."
     },
     "actions": [
       {
@@ -145,11 +145,11 @@
     ]
   },
   {
-    "label": "空输入时提示错误",
+    "label": "Prompt error when inputting empty space",
     "expect": {
       "type": "text",
       "selector": "#expense-error",
-      "value": "请输入大于 0 且最多两位小数的金额"
+      "value": "Please enter an amount greater than 0 and with up to two decimal places."
     },
     "actions": [
       {
@@ -164,7 +164,7 @@
     ]
   },
   {
-    "label": "改正输入后清除错误提示",
+    "label": "Clear the error message after correcting the input",
     "expect": {
       "type": "text",
       "selector": "#expense-error",
@@ -192,11 +192,11 @@
     ]
   },
   {
-    "label": "超支时显示负余额",
+    "label": "Negative balance displayed when overspending",
     "expect": {
       "type": "text",
       "selector": "#expense-remaining",
-      "value": "-20.00 元"
+      "value": "-20.00 yuan"
     },
     "actions": [
       {

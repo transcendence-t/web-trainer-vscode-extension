@@ -1,10 +1,10 @@
 [
   {
-    "label": "未点击时页面仍等待生成",
+    "label": "The page is still waiting to be generated when not clicked",
     "expect": {
       "type": "text",
       "selector": "#receipt-status",
-      "value": "等待生成"
+      "value": "waiting to be generated"
     },
     "actions": [
       {
@@ -14,11 +14,11 @@
     ]
   },
   {
-    "label": "点击后短时间内呈现等待过程",
+    "label": "The waiting process will appear within a short time after clicking.",
     "expect": {
       "type": "text",
       "selector": "#receipt-status",
-      "value": "正在生成回执"
+      "value": "Generating receipt"
     },
     "actions": [
       {
@@ -32,7 +32,7 @@
     ]
   },
   {
-    "label": "等待期间锁住生成按钮",
+    "label": "Lock the generate button while waiting",
     "expect": {
       "type": "exists",
       "selector": "#generate-receipt[disabled]"
@@ -49,11 +49,11 @@
     ]
   },
   {
-    "label": "延时后出现完成提示",
+    "label": "Completion prompt appears after delay",
     "expect": {
       "type": "text",
       "selector": "#receipt-status",
-      "value": "回执已生成"
+      "value": "receipt has been generated"
     },
     "actions": [
       {
@@ -67,7 +67,7 @@
     ]
   },
   {
-    "label": "回执生成后按钮可重试",
+    "label": "button can be retried after the receipt is generated",
     "expect": {
       "type": "exists",
       "selector": "#generate-receipt:not([disabled])"

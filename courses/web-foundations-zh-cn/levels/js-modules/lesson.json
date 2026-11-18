@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "在页面入口导入回执格式化函数",
+  "goal": "用命名 export 和 import 在两个文件之间共享函数。",
+  "summary": "script.js 负责格式化；index.html 的模块入口负责点击处理。像普通网页一样使用相对导入，练习沙箱会在本地载入 script.js。",
+  "tasks": [
+    "在 script.js 中完成并命名导出 formatReceipt(number)，返回 LAB- 加至少三位的序号，前面补 0。",
+    "在 index.html 已有的内联模块中，从 ./script.js 导入 formatReceipt。点击 #format 时用 #ticket 的值更新 #receipt。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "// script.js\nexport function titleFor(name) { return \"题名：\" + name; }\n\n<!-- index.html -->\n<script type=\"module\">\n  import { titleFor } from \"./script.js\";\n  console.log(titleFor(\"工作台\"));\n</script>",
+    "note": "命名导入使用花括号，名称和导出对应。页面入口要声明 type=\"module\"。"
+  },
+  "hint": "可用 String(number).padStart(3, '0') 补齐。模块里的声明只在所在模块可用，需要显式导入。"
+}

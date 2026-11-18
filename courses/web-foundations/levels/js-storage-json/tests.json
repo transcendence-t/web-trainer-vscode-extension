@@ -1,49 +1,49 @@
 [
   {
-    "label": "初次打开时显示空清单",
+    "label": "displays an empty list when opening it for the first time",
     "expect": {
       "type": "text",
       "selector": "#gear-empty:not([hidden])",
-      "value": "清单为空"
+      "value": "list is empty"
     }
   },
   {
-    "label": "已有两项时重新打开会恢复两项",
+    "label": "When there are already two items, reopening will restore the two items.",
     "expect": {
       "type": "count",
       "selector": "#gear-list > li",
       "value": 2
     },
     "storage": {
-      "fieldGear": "[\"水壶\",\"地图,潮位记录\"]"
+      "fieldGear": "[\"kettle\",\"map, tide record\"]"
     }
   },
   {
-    "label": "恢复时保留名称中的逗号",
+    "label": "Preserve commas in names when restoring",
     "expect": {
       "type": "text",
       "selector": "#gear-list > li:nth-child(2)",
-      "value": "地图,潮位记录"
+      "value": "map, tide record"
     },
     "storage": {
-      "fieldGear": "[\"水壶\",\"地图,潮位记录\"]"
+      "fieldGear": "[\"kettle\",\"map, tide record\"]"
     }
   },
   {
-    "label": "在已有清单末尾添加并保存完整 JSON",
+    "label": "Add and save the complete JSON at the end of the existing list",
     "expect": {
       "type": "storage",
       "key": "fieldGear",
-      "value": "[\"水壶\",\"地图,潮位记录\",\"手电筒\"]"
+      "value": "[\"kettle\",\"map, tide record\",\"flashlight\"]"
     },
     "storage": {
-      "fieldGear": "[\"水壶\",\"地图,潮位记录\"]"
+      "fieldGear": "[\"kettle\",\"map, tide record\"]"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#gear-item",
-        "value": "手电筒"
+        "value": "flashlight"
       },
       {
         "type": "click",
@@ -52,20 +52,20 @@
     ]
   },
   {
-    "label": "追加项目同时更新界面",
+    "label": "Add items and update the interface at the same time",
     "expect": {
       "type": "text",
       "selector": "#gear-list > li:nth-child(3)",
-      "value": "手电筒"
+      "value": "flashlight"
     },
     "storage": {
-      "fieldGear": "[\"水壶\",\"地图,潮位记录\"]"
+      "fieldGear": "[\"kettle\",\"map, tide record\"]"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#gear-item",
-        "value": "手电筒"
+        "value": "flashlight"
       },
       {
         "type": "click",
@@ -74,17 +74,17 @@
     ]
   },
   {
-    "label": "连续添加的两项按顺序保存",
+    "label": "Two items added continuously are saved in order.",
     "expect": {
       "type": "storage",
       "key": "fieldGear",
-      "value": "[\"指南针\",\"防潮袋\"]"
+      "value": "[\"compass\",\"moisture-proof bag\"]"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#gear-item",
-        "value": "指南针"
+        "value": "compass"
       },
       {
         "type": "click",
@@ -93,7 +93,7 @@
       {
         "type": "input",
         "selector": "#gear-item",
-        "value": "防潮袋"
+        "value": "moisture-proof bag"
       },
       {
         "type": "click",
@@ -102,7 +102,7 @@
     ]
   },
   {
-    "label": "空白项目不创建存储记录",
+    "label": "Blank projects do not create storage records",
     "expect": {
       "type": "storage",
       "key": "fieldGear",

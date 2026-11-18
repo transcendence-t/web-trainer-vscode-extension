@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "统一用户输入的展品编号",
-  "goal": "用 trim 和 toUpperCase 规范字符串。",
-  "summary": "标签编号来自手动输入。忽略首尾空白，字母统一为大写，保留编号中部原有的字符。",
+  "title": "Unifies the exhibit number input by the user",
+  "goal": "uses trim and toUpperCase to normalize strings.",
+  "summary": "tag number is entered manually. Ignore the leading and trailing spaces, make the letters uniformly uppercase, and retain the original characters in the middle of the number.",
   "tasks": [
-    "完成 normalizeTag(tag)，去掉首尾空白，并把字母转为大写。",
-    "保留连字符、数字和中间的空格。纯空白返回空字符串。"
+    "completes normalizeTag(tag), removes leading and trailing spaces, and converts letters to uppercase.",
+    "retains hyphens, numbers, and intervening spaces. Pure whitespace returns the empty string."
   ],
   "example": {
     "language": "javascript",
     "code": "'  b-18  '.trim().toUpperCase(); // 'B-18'",
-    "note": "字符串方法返回新字符串，可以把方法连起来调用。"
+    "note": "string method returns a new string, and the methods can be called together."
   },
-  "hint": "trim() 只处理字符串两端，不会删除编号内部的内容。"
+  "hint": "trim() only processes both ends of the string and does not delete the content inside the number."
 }

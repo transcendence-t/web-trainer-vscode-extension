@@ -1,0 +1,38 @@
+[
+  {
+    "label": "暴雨提醒是深橙色",
+    "expect": {
+      "type": "style",
+      "selector": "ul > li:nth-child(2)",
+      "property": "color",
+      "value": "rgb(156, 52, 18)"
+    }
+  },
+  {
+    "label": "下坡提醒是深橙色",
+    "expect": {
+      "type": "style",
+      "selector": "ul > li:nth-child(4)",
+      "property": "color",
+      "value": "rgb(156, 52, 18)"
+    }
+  },
+  {
+    "label": "轮胎检查保留原色",
+    "expect": {
+      "type": "style",
+      "selector": "ul > li:nth-child(1)",
+      "property": "color",
+      "value": "rgb(36, 52, 71)"
+    }
+  },
+  {
+    "label": "联系人事项保留原色",
+    "expect": {
+      "type": "style",
+      "selector": "ul > li:nth-child(3)",
+      "property": "color",
+      "value": "rgb(36, 52, 71)"
+    }
+  }
+]

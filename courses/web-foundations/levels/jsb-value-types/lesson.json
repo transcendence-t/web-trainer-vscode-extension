@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "识别数组、空值与基本类型",
-  "goal": "结合 typeof、严格比较和 Array.isArray 区分常见类型。",
-  "summary": "录入工具接到不同类型的值，需要区分真正的空值、缺少的参数和普通对象。",
+  "title": "Recognizes arrays, null values and basic types",
+  "goal": "Combines typeof, strict comparison, and Array.isArray to distinguish common types.",
+  "summary": "The input tool receives different types of values and needs to distinguish between real null values, missing parameters and ordinary objects.",
   "tasks": [
-    "完成 kindOf(value)，数组返回 \"array\"，null 返回 \"null\"。",
-    "其他输入返回 typeof 的结果。未传参数时返回 \"undefined\"。"
+    "completes kindOf(value), array returns \"array\", null returns \"null\".",
+    "Other inputs return the result of typeof. Returns \"undefined\" when no parameters are passed."
   ],
   "example": {
     "language": "javascript",
     "code": "typeof 12; // 'number'\nArray.isArray([]); // true\nnull === null; // true",
-    "note": "typeof null 和 typeof [] 都会得到 object，先单独处理这两种情况。"
+    "note": "typeof null and typeof [] will both get object, handle these two cases separately first."
   },
-  "hint": "先判断 value === null 和 Array.isArray(value)，再返回 typeof value。"
+  "hint": "first determines value === null and Array.isArray(value), and then returns typeof value."
 }

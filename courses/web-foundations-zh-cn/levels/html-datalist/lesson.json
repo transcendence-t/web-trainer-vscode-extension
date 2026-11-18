@@ -1,0 +1,16 @@
+{
+  "focus": "index.html",
+  "title": "为文本输入提供可编辑的建议",
+  "goal": "将 datalist 绑定到文本输入框，保留自定义输入能力。",
+  "summary": "大多数申请来自三栋常用教学楼。添加候选值方便选择，也允许填写其他楼栋。",
+  "tasks": [
+    "为 #building-input 设置 list=\"building-options\"。",
+    "创建 ID 为 building-options 的 datalist，加入值为「笃行楼」「明德楼」「求知楼」的三个 option。"
+  ],
+  "example": {
+    "language": "html",
+    "code": "<input list=\"campuses\">\n<datalist id=\"campuses\"><option value=\"东区\"></option></datalist>",
+    "note": "list 的值指向 datalist 的 ID。与 select 相比，输入框仍允许填写候选之外的值。"
+  },
+  "hint": "建议值写在 option 的 value 属性里，input 的类型仍为 text。"
+}

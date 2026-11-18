@@ -1,24 +1,24 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>排练曲目选择</title>
+  <title>Rehearsal track selection</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 <main class="sheet">
-  <h1>排练曲目选择</h1>
+  <h1>Rehearsal track selection</h1>
   <ul id="song-list">
-    <li><button type="button" data-title="海边序曲"><span>海边序曲</span></button></li>
-    <li><button type="button" data-title="山间小调"><span>山间小调</span></button></li>
+    <li><button type="button" data-title="Seaside Overture"><span>Seaside Overture</span></button></li>
+    <li><button type="button" data-title="Mountain tune"><span>Mountain tune</span></button></li>
   </ul>
-  <button id="add-song" type="button">加入备用曲目</button>
+  <button id="add-song" type="button">Add backup track</button>
   <template id="extra-song">
-    <li><button type="button" data-title="蓝桥进行曲"><span>蓝桥进行曲</span></button></li>
+    <li><button type="button" data-title="Blue Bridge March"><span>Blue Bridge March</span></button></li>
   </template>
-  <p>当前曲目 <output id="selected-song">尚未选择</output></p>
+  <p>current track <output id="selected-song">Not selected yet</output></p>
 </main>
 </body>
 </html>

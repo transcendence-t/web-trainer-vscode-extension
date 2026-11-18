@@ -1,6 +1,6 @@
 [
   {
-    "label": "累加对象中的重量",
+    "label": "Accumulate the weight in the object",
     "expect": {
       "type": "function",
       "name": "totalGrams",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "支持单条记录",
+    "label": "supports single record",
     "expect": {
       "type": "function",
       "name": "totalGrams",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "label": "零重量保留为有效项",
+    "label": "Zero weight is reserved as a valid item",
     "expect": {
       "type": "function",
       "name": "totalGrams",
@@ -54,7 +54,7 @@
     }
   },
   {
-    "label": "空列表合计为零",
+    "label": "The empty list totals zero",
     "expect": {
       "type": "function",
       "name": "totalGrams",

@@ -3,7 +3,7 @@ function rackLabel(prefix, number) {
     prefix,
     number,
     label() {
-      // 使用本条记录的属性生成标签。
+      // Use the attributes of this record to generate labels.
     },
   };
   return record.label();

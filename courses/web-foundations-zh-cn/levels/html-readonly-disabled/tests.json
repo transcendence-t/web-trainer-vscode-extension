@@ -1,0 +1,36 @@
+[
+  {
+    "label": "编号只读",
+    "expect": {
+      "type": "property",
+      "selector": "#record-id",
+      "name": "readOnly",
+      "value": true
+    }
+  },
+  {
+    "label": "编号仍为启用的提交字段",
+    "expect": {
+      "type": "exists",
+      "selector": "input#record-id:enabled[name=\"recordId\"]"
+    }
+  },
+  {
+    "label": "编号值保留",
+    "expect": {
+      "type": "property",
+      "selector": "#record-id",
+      "name": "value",
+      "value": "A-031"
+    }
+  },
+  {
+    "label": "临时备注已禁用",
+    "expect": {
+      "type": "property",
+      "selector": "#future",
+      "name": "disabled",
+      "value": true
+    }
+  }
+]

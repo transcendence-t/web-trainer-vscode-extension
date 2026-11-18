@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "按字段名称读取相应的数据",
-  "goal": "用方括号按变量提供的名称读取对象属性。",
-  "summary": "记录面板在运行时决定展示哪个字段。字段名里可能含连字符。",
+  "title": "Read the corresponding data according to the field name",
+  "goal": "Use square brackets to read object properties by the name provided by the variable.",
+  "summary": "The record panel decides which fields to display at runtime. Field names may contain hyphens.",
   "tasks": [
-    "完成 readField(record, field)。按 field 指定的键读取 record 中自己的属性。",
-    "字段缺失时返回 null。保留 0、false 和空字符串这些已有值。"
+    "completes readField(record, field). Reads its own properties in record by the key specified by field.",
+    "field is missing. Keep the existing values ​​0, false, and the empty string."
   ],
   "example": {
     "language": "javascript",
     "code": "const item = { 'rack-id': 'B7', count: 0 };\nconst key = 'rack-id';\nitem[key]; // 'B7'",
-    "note": "点号后写的是固定属性名，方括号中可以使用变量或表达式。"
+    "note": "What is written after the dot is the fixed attribute name, and variables or expressions can be used in square brackets."
   },
-  "hint": "可以先调用 Object.hasOwn(record, field)，确保查找的是记录自己的属性。"
+  "hint": "You can call Object.hasOwn(record, field) first to ensure that you are searching for the record's own attributes."
 }

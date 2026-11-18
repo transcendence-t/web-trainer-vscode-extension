@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "让访客可以勾选多项活动",
-  "goal": "用同名且值不同的复选框表示一个可多选的字段。",
-  "summary": "报名表允许同时参加共读和修理工作坊。浏览器提交每项被勾选活动的 value。",
+  "title": "Allows visitors to check multiple activities",
+  "goal": "Use check boxes with the same name and different values ​​to represent a multi-selectable field.",
+  "summary": "registration form allows simultaneous participation in the shared reading and repair workshops. The browser submits the value for each checked activity.",
   "tasks": [
-    "把 #reading 和 #repair 改为复选框。",
-    "保留 name=\"activity\"，两项的 value 分别保持 reading 和 repair，初始都未选中。"
+    "Change #reading and #repair to checkboxes.",
+    "retains name=\"activity\", and the values ​​of the two items remain reading and repair respectively, both of which are initially unselected."
   ],
   "example": {
     "language": "html",
-    "code": "<label><input type=\"checkbox\" name=\"skill\" value=\"design\"> 设计</label>\n<label><input type=\"checkbox\" name=\"skill\" value=\"coding\"> 编程</label>",
-    "note": "每个被选中的复选框都会提交一组同名键值，value 用来区分选项。"
+    "code": "<label><input type=\"checkbox\" name=\"skill\" value=\"design\"> design</label>\n<label><input type=\"checkbox\" name=\"skill\" value=\"coding\"> Programming</label>",
+    "note": "Each selected checkbox will submit a set of key values with the same name, and the value is used to distinguish the options."
   },
-  "hint": "checkbox 可以独立勾选。相同 name 的 radio 则只能选其中一项。"
+  "hint": "checkbox can be checked independently. For radios with the same name, only one of them can be selected."
 }

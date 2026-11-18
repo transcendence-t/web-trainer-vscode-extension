@@ -1,6 +1,6 @@
 [
   {
-    "label": "宽度为零时返回空字符串",
+    "label": "Returns an empty string when the width is zero",
     "expect": {
       "type": "function",
       "name": "receiptDivider",
@@ -11,7 +11,7 @@
     }
   },
   {
-    "label": "宽度为一时只拼接一次",
+    "label": "only splices once when the width is one",
     "expect": {
       "type": "function",
       "name": "receiptDivider",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "label": "宽度为五时返回五个短横线",
+    "label": "returns five dashes when the width is five",
     "expect": {
       "type": "function",
       "name": "receiptDivider",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "label": "宽度为十二时保留完整的分隔线",
+    "label": "retains complete dividing lines when the width is twelve",
     "expect": {
       "type": "function",
       "name": "receiptDivider",

@@ -1,36 +1,36 @@
 [
   {
-    "label": "数量先到也不会与标题交换",
+    "label": "The first quantity will not be exchanged with the title.",
     "expect": {
       "type": "function",
       "name": "catalogCard",
       "args": [
-        "手持电钻",
+        "handheld electric drill",
         3
       ],
       "value": {
-        "title": "手持电钻",
+        "title": "handheld electric drill",
         "total": 3
       }
     }
   },
   {
-    "label": "保留零库存",
+    "label": "keeps zero stock",
     "expect": {
       "type": "function",
       "name": "catalogCard",
       "args": [
-        "护目镜",
+        "goggles",
         0
       ],
       "value": {
-        "title": "护目镜",
+        "title": "goggles",
         "total": 0
       }
     }
   },
   {
-    "label": "第一项拒绝",
+    "label": "The first rejection",
     "expect": {
       "type": "function",
       "name": "catalogCard",
@@ -42,12 +42,12 @@
     }
   },
   {
-    "label": "第二项拒绝",
+    "label": "The second rejection",
     "expect": {
       "type": "function",
       "name": "catalogCard",
       "args": [
-        "钳子",
+        "pliers",
         -1
       ],
       "value": null

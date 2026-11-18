@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>从包裹对象中提取待领取标签</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<main class="sheet">
+  <h1>从包裹对象中提取待领取标签</h1>
+  <p>示例调用 <code>listReadyPickups([{ label: "北柜-03", ready: true }, { label: "南柜-07", ready: false }])</code></p>
+  <p>运行结果 <output id="example-result">待填写函数</output></p>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const result = listReadyPickups([{ label: "北柜-03", ready: true }, { label: "南柜-07", ready: false }]);
+      if (result !== undefined) {
+        document.querySelector('#example-result').textContent = JSON.stringify(result);
+      }
+    });
+  </script>
+</main>
+</body>
+</html>

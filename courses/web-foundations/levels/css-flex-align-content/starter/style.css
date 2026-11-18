@@ -9,4 +9,4 @@ a { color: #125a46; }
 .cabinet { display: flex; flex-wrap: wrap; gap: 12px; width: 216px; height: 160px; background: #edf5f2; }
 .cabinet > div { width: 100px; height: 36px; padding: 4px; background: #b9dfd0; }
 
-/* 在这里编写本关样式。 */
+/* Write the style of this level here. */

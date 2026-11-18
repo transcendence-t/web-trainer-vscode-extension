@@ -1,6 +1,6 @@
 [
   {
-    "label": "展签使用相对定位",
+    "label": "exhibition label uses relative positioning",
     "expect": {
       "type": "style",
       "selector": ".featured-tag",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "展签下移 8px",
+    "label": "Exhibition scroll 8px",
     "expect": {
       "type": "style",
       "selector": ".featured-tag",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "展签右移 16px",
+    "label": "Exhibition label moved right 16px",
     "expect": {
       "type": "style",
       "selector": ".featured-tag",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "第一张展签仍在虚线框内",
+    "label": "The first exhibition label is still within the dotted box",
     "expect": {
       "type": "layout",
       "selector": ".featured-tag",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "编号展签仍在下方",
+    "label": "numbered exhibition label is still below",
     "expect": {
       "type": "layout",
       "selector": ".shelf-note",

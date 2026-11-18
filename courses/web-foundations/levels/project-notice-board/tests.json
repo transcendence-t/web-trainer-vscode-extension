@@ -1,10 +1,10 @@
 [
   {
-    "label": "点击后立即进入等待状态",
+    "label": "immediately enters the waiting state after clicking",
     "expect": {
       "type": "text",
       "selector": "#state",
-      "value": "加载中"
+      "value": "Loading"
     },
     "actions": [
       {
@@ -14,7 +14,7 @@
     ]
   },
   {
-    "label": "等待时防止重复请求",
+    "label": "Prevent repeated requests while waiting",
     "expect": {
       "type": "property",
       "selector": "#refresh",
@@ -29,11 +29,11 @@
     ]
   },
   {
-    "label": "成功反馈数据量",
+    "label": "successful feedback data amount",
     "expect": {
       "type": "text",
       "selector": "#state",
-      "value": "已加载 2 条"
+      "value": "Loaded 2 notices"
     },
     "actions": [
       {
@@ -52,11 +52,11 @@
     ]
   },
   {
-    "label": "含尖括号的标题按文本展示",
+    "label": "Titles containing angle brackets are displayed as text",
     "expect": {
       "type": "text",
       "selector": "#notices li:last-child",
-      "value": "<复核>购置清单 · 设备库"
+      "value": "<Review> Purchase List · Equipment Library"
     },
     "actions": [
       {
@@ -75,11 +75,11 @@
     ]
   },
   {
-    "label": "空数据有自己的提示",
+    "label": "empty data has its own prompt",
     "expect": {
       "type": "text",
       "selector": "#state",
-      "value": "暂无通知"
+      "value": "No notification yet"
     },
     "actions": [
       {
@@ -98,11 +98,11 @@
     ]
   },
   {
-    "label": "错误时提示重新尝试",
+    "label": "Prompt to try again when error occurs",
     "expect": {
       "type": "text",
       "selector": "#state",
-      "value": "无法读取通知，请重试"
+      "value": "Unable to read notification, please try again"
     },
     "actions": [
       {
@@ -121,7 +121,7 @@
     ]
   },
   {
-    "label": "错误时按钮重新可用",
+    "label": "Button is available again in case of error",
     "expect": {
       "type": "property",
       "selector": "#refresh",
@@ -145,7 +145,7 @@
     ]
   },
   {
-    "label": "从错误样例切回后可成功加载",
+    "label": "can be loaded successfully after switching back from the error sample",
     "expect": {
       "type": "count",
       "selector": "#notices li",
@@ -181,7 +181,7 @@
     ]
   },
   {
-    "label": "切到空列表时移除旧通知",
+    "label": "Remove old notifications when switching to empty list",
     "expect": {
       "type": "count",
       "selector": "#notices li",

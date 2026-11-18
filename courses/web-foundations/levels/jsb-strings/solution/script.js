@@ -1,3 +1,3 @@
 function labelTopic(topic) {
-  return '【' + topic + '】';
+  return '[' + topic + ']';
 }

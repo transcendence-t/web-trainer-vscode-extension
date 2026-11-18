@@ -1,0 +1,38 @@
+[
+  {
+    "label": "两列等宽",
+    "expect": {
+      "type": "layout",
+      "selector": "#short",
+      "relativeTo": "#long",
+      "relation": "equal-width"
+    }
+  },
+  {
+    "label": "第二列仍位于容器内",
+    "expect": {
+      "type": "layout",
+      "selector": "#short",
+      "relativeTo": ".documents",
+      "relation": "inside"
+    }
+  },
+  {
+    "label": "文件名可以在中间断行",
+    "expect": {
+      "type": "style",
+      "selector": "#long",
+      "property": "overflow-wrap",
+      "value": "anywhere"
+    }
+  },
+  {
+    "label": "长标题卡宽 130px",
+    "expect": {
+      "type": "style",
+      "selector": "#long",
+      "property": "width",
+      "value": "130px"
+    }
+  }
+]

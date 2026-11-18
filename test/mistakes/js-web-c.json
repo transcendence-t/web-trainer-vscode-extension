@@ -1,30 +1,30 @@
 {
   "js-visibility": {
-    "name": "把 hidden 的值直接填给 aria-expanded，开关状态颠倒",
+    "name": "Fill in the value of hidden directly to aria-expanded, and the switch state is reversed",
     "files": {
       "script.js": "const toggle = document.querySelector('#toggle-guide');\nconst guide = document.querySelector('#loan-guide');\n\ntoggle.addEventListener('click', () => {\n  guide.hidden = !guide.hidden;\n  toggle.setAttribute('aria-expanded', String(guide.hidden));\n});"
     }
   },
   "js-timeout": {
-    "name": "直接调用完成函数，跳过处理中状态",
+    "name": "directly calls the completion function and skips the processing status",
     "files": {
-      "script.js": "const generate = document.querySelector('#generate-receipt');\nconst receipt = document.querySelector('#receipt-status');\n\nfunction showReceipt() {\n  receipt.textContent = '回执已生成';\n  generate.disabled = false;\n}\n\ngenerate.addEventListener('click', () => {\n  receipt.textContent = '正在生成回执';\n  generate.disabled = true;\n  showReceipt();\n});"
+      "script.js": "const generate = document.querySelector('#generate-receipt');\nconst receipt = document.querySelector('#receipt-status');\n\nfunction showReceipt() {\n  receipt.textContent = 'receipt has been generated';\n  generate.disabled = false;\n}\n\ngenerate.addEventListener('click', () => {\n  receipt.textContent = 'Generating receipt';\n  generate.disabled = true;\n  showReceipt();\n});"
     }
   },
   "js-interval": {
-    "name": "更新了停止文字，却遗漏 clearInterval",
+    "name": "updated the stop text but missed clearInterval",
     "files": {
-      "script.js": "const start = document.querySelector('#start-sampling');\nconst stop = document.querySelector('#stop-sampling');\nconst status = document.querySelector('#sampling-status');\nconst log = document.querySelector('#sample-log');\nlet timerId;\n\nfunction recordSample() {\n  const entry = document.createElement('li');\n  entry.textContent = '第 ' + (log.children.length + 1) + ' 次采样';\n  log.append(entry);\n  status.textContent = '正在采样';\n}\n\nstart.addEventListener('click', () => {\n  status.textContent = '正在采样';\n  start.disabled = true;\n  stop.disabled = false;\n  timerId = setInterval(recordSample, 200);\n});\n\nstop.addEventListener('click', () => {\n  status.textContent = '已停止采样';\n  start.disabled = false;\n  stop.disabled = true;\n});"
+      "script.js": "const start = document.querySelector('#start-sampling');\nconst stop = document.querySelector('#stop-sampling');\nconst status = document.querySelector('#sampling-status');\nconst log = document.querySelector('#sample-log');\nlet timerId;\n\nfunction recordSample() {\n  const entry = document.createElement('li');\n  entry.textContent = 'No. ' + (log.children.length + 1) + ' samples';\n  log.append(entry);\n  status.textContent = 'is sampling';\n}\n\nstart.addEventListener('click', () => {\n  status.textContent = 'is sampling';\n  start.disabled = true;\n  stop.disabled = false;\n  timerId = setInterval(recordSample, 200);\n});\n\nstop.addEventListener('click', () => {\n  status.textContent = 'Sampling has stopped';\n  start.disabled = false;\n  stop.disabled = true;\n});"
     }
   },
   "js-storage": {
-    "name": "只保存和更新本页，打开时忘记读取旧昵称",
+    "name": "only saves and updates this page, forgets to read the old nickname when opening it",
     "files": {
       "script.js": "const nicknameInput = document.querySelector('#nickname');\nconst save = document.querySelector('#save-name');\nconst savedName = document.querySelector('#saved-name');\nconst storageKey = 'visitorNickname';\n\nsave.addEventListener('click', () => {\n  const nickname = nicknameInput.value.trim();\n  if (!nickname) return;\n\n  localStorage.setItem(storageKey, nickname);\n  savedName.textContent = nickname;\n});"
     }
   },
   "js-storage-json": {
-    "name": "未做 JSON 转换，直接保存数组",
+    "name": "does not perform JSON conversion and directly saves the array.",
     "files": {
       "script.js": "const gearInput = document.querySelector('#gear-item');\nconst add = document.querySelector('#add-gear');\nconst list = document.querySelector('#gear-list');\nconst empty = document.querySelector('#gear-empty');\nconst storageKey = 'fieldGear';\nconst items = JSON.parse(localStorage.getItem(storageKey) ?? '[]');\n\nfunction renderList() {\n  list.replaceChildren();\n  for (const item of items) {\n    const row = document.createElement('li');\n    row.textContent = item;\n    list.append(row);\n  }\n  empty.hidden = items.length > 0;\n}\n\nadd.addEventListener('click', () => {\n  const item = gearInput.value.trim();\n  if (!item) return;\n\n  items.push(item);\n  localStorage.setItem(storageKey, items);\n  gearInput.value = '';\n  renderList();\n});\n\nrenderList();"
     }

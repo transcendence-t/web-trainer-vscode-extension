@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "只给清单的项目符号改色",
+  "goal": "通过 ::marker 调整列表标记，同时保留正文颜色。",
+  "summary": "登记清单需要保留原有的符号，用深绿色标记项目。文字依然使用页面的正文色。",
+  "tasks": [
+    "把 .gear 直接列表项的 ::marker 设为 #125a46。",
+    "保留列表项正文颜色和原有项目符号。"
+  ],
+  "example": {
+    "language": "css",
+    "code": "ol > li::marker { color: #7c460e; }",
+    "note": "::marker 指向浏览器为列表项目生成的编号或项目符号。"
+  },
+  "hint": "选择 .gear > li，再在末尾添加 ::marker。"
+}

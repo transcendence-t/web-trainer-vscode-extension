@@ -1,10 +1,10 @@
 [
   {
-    "label": "首个工位已核对",
+    "label": "The first station has been verified",
     "expect": {
       "type": "text",
       "selector": "li:first-child",
-      "value": "已核对"
+      "value": "checked"
     },
     "actions": [
       {
@@ -14,11 +14,11 @@
     ]
   },
   {
-    "label": "另一个工位也被更新",
+    "label": "Another station is also updated",
     "expect": {
       "type": "text",
       "selector": "li:last-child",
-      "value": "已核对"
+      "value": "checked"
     },
     "actions": [
       {
@@ -28,11 +28,11 @@
     ]
   },
   {
-    "label": "暂停开放的状态保留",
+    "label": "The temporarily opened status is retained",
     "expect": {
       "type": "text",
       "selector": "li:nth-child(2)",
-      "value": "暂停开放"
+      "value": "temporarily closed"
     },
     "actions": [
       {

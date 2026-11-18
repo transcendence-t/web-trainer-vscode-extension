@@ -1,0 +1,38 @@
+[
+  {
+    "label": "显式首行保持 64px",
+    "expect": {
+      "type": "style",
+      "selector": "#a",
+      "property": "height",
+      "value": "64px"
+    }
+  },
+  {
+    "label": "第二行高 40px",
+    "expect": {
+      "type": "style",
+      "selector": "#c",
+      "property": "height",
+      "value": "40px"
+    }
+  },
+  {
+    "label": "第三行自动遵守高度",
+    "expect": {
+      "type": "style",
+      "selector": "#e",
+      "property": "height",
+      "value": "40px"
+    }
+  },
+  {
+    "label": "第三行仍在第二行之后",
+    "expect": {
+      "type": "layout",
+      "selector": "#e",
+      "relativeTo": "#c",
+      "relation": "below"
+    }
+  }
+]

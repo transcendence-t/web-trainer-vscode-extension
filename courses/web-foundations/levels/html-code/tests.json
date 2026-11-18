@@ -1,6 +1,6 @@
 [
   {
-    "label": "示例放进 pre 里的 code，并保留小于号",
+    "label": "example is put into the code in pre and retains the less than sign",
     "expect": {
       "type": "text",
       "selector": "#sample pre code",
@@ -8,7 +8,7 @@
     }
   },
   {
-    "label": "代码区域的排版保留空格和换行",
+    "label": "Typesetting of code area retains spaces and line breaks",
     "expect": {
       "type": "style",
       "selector": "#sample code",

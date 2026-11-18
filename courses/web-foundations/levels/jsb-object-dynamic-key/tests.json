@@ -1,6 +1,6 @@
 [
   {
-    "label": "读取带连字符的字段",
+    "label": "Read hyphenated fields",
     "expect": {
       "type": "function",
       "name": "readField",
@@ -14,7 +14,7 @@
     }
   },
   {
-    "label": "零是已有值",
+    "label": "zero is an existing value",
     "expect": {
       "type": "function",
       "name": "readField",
@@ -28,7 +28,7 @@
     }
   },
   {
-    "label": "保留 false",
+    "label": "reserved false",
     "expect": {
       "type": "function",
       "name": "readField",
@@ -42,7 +42,7 @@
     }
   },
   {
-    "label": "空字符串也是数据",
+    "label": "empty string is also data",
     "expect": {
       "type": "function",
       "name": "readField",
@@ -56,7 +56,7 @@
     }
   },
   {
-    "label": "不存在的字段",
+    "label": "does not exist field",
     "expect": {
       "type": "function",
       "name": "readField",
@@ -70,7 +70,7 @@
     }
   },
   {
-    "label": "继承的成员不算数据",
+    "label": "Inherited members are not counted as data",
     "expect": {
       "type": "function",
       "name": "readField",

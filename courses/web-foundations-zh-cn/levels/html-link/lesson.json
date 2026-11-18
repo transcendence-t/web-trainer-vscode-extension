@@ -1,0 +1,16 @@
+{
+  "focus": "index.html",
+  "title": "页内导航",
+  "summary": "链接地址以 # 开头时，浏览器用 # 后面的文字查找同名 id，并定位到对应元素。",
+  "tasks": [
+    "给实训室介绍的 section 添加 id=\"lab\"。",
+    "在 nav 中加入 a，链接文字为「查看实训室」，href 指向 #lab。"
+  ],
+  "hint": "点击后没有跳到介绍区时，检查链接的 href 是否写成 #lab，目标区域的 id 是否只写 lab。",
+  "goal": "让读者点击导航链接后定位到本页的实训室介绍。",
+  "example": {
+    "language": "html",
+    "code": "<a href=\"#showtimes\">查看放映时间</a>\n<section id=\"showtimes\">\n  <h2>放映时间</h2>\n  <p>每天 14:00 开始。</p>\n</section>",
+    "note": "这条展览指南链接把读者带到同一页中的放映时间区域。"
+  }
+}

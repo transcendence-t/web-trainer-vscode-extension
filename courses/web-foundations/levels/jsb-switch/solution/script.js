@@ -2,12 +2,12 @@
 function stationName(code) {
   switch (code) {
     case 'S':
-      return '缝纫台';
+      return 'sewing table';
     case 'C':
-      return '裁纸台';
+      return 'cutting table';
     case 'B':
-      return '装订台';
+      return 'binding table';
     default:
-      return '未知工位';
+      return 'Unknown workstation';
   }
 }

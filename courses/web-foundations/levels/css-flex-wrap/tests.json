@@ -1,6 +1,6 @@
 [
   {
-    "label": "容器使用正常顺序换行",
+    "label": "container uses normal order to wrap lines",
     "expect": {
       "type": "style",
       "selector": ".session-list",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "窄窗口前两张卡片仍然并排",
+    "label": "The first two cards in the narrow window are still side by side",
     "expect": {
       "type": "layout",
       "selector": "#friday-pm",
@@ -19,7 +19,7 @@
     "viewport": 320
   },
   {
-    "label": "窄窗口第三张卡片换到第二行",
+    "label": "The third card in the narrow window is moved to the second row",
     "expect": {
       "type": "layout",
       "selector": "#saturday-am",
@@ -29,7 +29,7 @@
     "viewport": 320
   },
   {
-    "label": "窄窗口第三张卡片留在容器内",
+    "label": "Narrow window The third card remains in the container",
     "expect": {
       "type": "layout",
       "selector": "#saturday-am",
@@ -39,7 +39,7 @@
     "viewport": 320
   },
   {
-    "label": "宽窗口第三张卡片接在第二张右侧",
+    "label": "wide window The third card is connected to the right of the second one",
     "expect": {
       "type": "layout",
       "selector": "#saturday-am",

@@ -1,20 +1,20 @@
 [
   {
-    "label": "点击前保留原状态",
+    "label": "Keep the original state before clicking",
     "expect": {
       "type": "text",
       "selector": "#status",
-      "value": "尚未报名"
+      "value": "has not registered yet"
     }
   },
   {
-    "label": "点击后显示报名成功",
+    "label": "Show the registration confirmation after clicking",
     "expect": {
       "type": "text",
       "selector": "#status",
-      "value": "报名成功"
+      "value": "registration successful"
     },
-    "hint": "在 click 回调里更新状态。",
+    "hint": "updates the status in the click callback.",
     "actions": [
       {
         "type": "click",

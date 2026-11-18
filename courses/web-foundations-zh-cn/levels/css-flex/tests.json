@@ -1,0 +1,38 @@
+[
+  {
+    "label": "工具栏采用 Flexbox",
+    "expect": {
+      "type": "style",
+      "selector": ".toolbar",
+      "property": "display",
+      "value": "flex"
+    }
+  },
+  {
+    "label": "项目按水平方向排列",
+    "expect": {
+      "type": "style",
+      "selector": ".toolbar",
+      "property": "flex-direction",
+      "value": "row"
+    }
+  },
+  {
+    "label": "项目间距为 12px",
+    "expect": {
+      "type": "style",
+      "selector": ".toolbar",
+      "property": "column-gap",
+      "value": "12px"
+    }
+  },
+  {
+    "label": "不同高度的项目居中对齐",
+    "expect": {
+      "type": "style",
+      "selector": ".toolbar",
+      "property": "align-items",
+      "value": "center"
+    }
+  }
+]

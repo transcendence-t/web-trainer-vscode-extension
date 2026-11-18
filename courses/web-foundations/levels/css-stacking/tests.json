@@ -1,6 +1,6 @@
 [
   {
-    "label": "标签绘制在较高层",
+    "label": "label is drawn at a higher level",
     "expect": {
       "type": "style",
       "selector": ".status",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "背景卡位于下面一层",
+    "label": "background card is located on the lower floor",
     "expect": {
       "type": "style",
       "selector": ".card-face",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "状态签保留定位",
+    "label": "status label retention positioning",
     "expect": {
       "type": "style",
       "selector": ".status",

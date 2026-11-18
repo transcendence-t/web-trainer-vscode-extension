@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "为登录表单声明自动填充用途",
-  "goal": "用 autocomplete 区分登录标识和现用密码。",
-  "summary": "登录标识使用邮箱，但对自动填充而言它仍是 username。现用密码可以提示浏览器使用已保存的凭证。",
+  "title": "Declare autofill purpose for login form",
+  "goal": "Use autocomplete to distinguish login ID and active password.",
+  "summary": "login ID uses the mailbox, but for autofill purposes it is still the username. Active password prompts the browser to use saved credentials.",
   "tasks": [
-    "给账号邮箱添加 autocomplete=\"username\"。",
-    "给现用密码添加 autocomplete=\"current-password\"，保留控件类型与标签。"
+    "Add autocomplete=\"username\" to the account email.",
+    "Add autocomplete=\"current-password\" to the current password and retain the control type and label."
   ],
   "example": {
     "language": "html",
     "code": "<input name=\"login\" autocomplete=\"username\">\n<input type=\"password\" name=\"pin\" autocomplete=\"current-password\">",
-    "note": "登录页填写已有密码，使用 current-password。注册新账号时才用 new-password。"
+    "note": "Fill in the existing password on the login page, use current-password. Use new-password only when registering a new account."
   },
-  "hint": "type 描述控件接收的值，autocomplete 描述该字段在表单中的用途。"
+  "hint": "type describes the value received by the control, and autocomplete describes the purpose of the field in the form."
 }

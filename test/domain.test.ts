@@ -6,6 +6,7 @@ import { test } from 'node:test';
 import { loadCourse, writeCourse } from '../src/course';
 import { firstUnfinished, isUnlocked } from '../src/progress';
 import { compilePage } from '../src/preview';
+import { language } from '../src/language';
 import type { Course, Level } from '../src/model';
 
 const level: Level = {
@@ -27,7 +28,7 @@ test('教师导出后可以导入独立题面、起始代码和判题规则，�
     const manifest = await writeCourse(course, directory);
     assert.deepEqual(await loadCourse(manifest), course);
     assert.match(await readFile(join(directory, 'demo', 'levels', 'first', 'tests.json'), 'utf8'), /存在标题/);
-    await assert.rejects(writeCourse(course, directory), /已存在/);
+    await assert.rejects(writeCourse(course, directory), /already exists|已存在/u);
     assert.deepEqual(await loadCourse(manifest), course);
   } finally {
     await rm(directory, { recursive: true, force: true });
@@ -40,9 +41,9 @@ test('错误的课程 ID 或判题规则被拒绝，并指明文件', async () =
     const manifest = await writeCourse(course, directory);
     const tests = join(directory, 'demo', 'levels', 'first', 'tests.json');
     await writeFile(tests, JSON.stringify([{ label: '错误的检查', expect: { type: 'script', selector: 'h1' } }]));
-    await assert.rejects(loadCourse(manifest), /first\/tests\.json.*不支持/u);
+    await assert.rejects(loadCourse(manifest), /first\/tests\.json.*(?:Unsupported|不支持)/u);
     await writeFile(tests, JSON.stringify([{ label: '错误的函数名', expect: { type: 'function', name: 'read();', args: [], value: null } }]));
-    await assert.rejects(loadCourse(manifest), /first\/tests\.json.*JavaScript 标识符/u);
+    await assert.rejects(loadCourse(manifest), /first\/tests\.json.*JavaScript (?:identifier|标识符)/u);
     const source = JSON.parse(await readFile(manifest, 'utf8'));
     source.sections[0].levels[0] = '../unrelated';
     await writeFile(manifest, JSON.stringify(source));
@@ -89,5 +90,5 @@ test('自由课程可以直接打开综合练习，导出时保留教学示例�
 test('半写完的 JavaScript 报文件行号，HTML 仍可生成预览', () => {
   const page = compilePage({ ...level.starter, 'script.js': '// 练习\nconst value = ;' }, 'sample-nonce', '');
   assert.match(page.html, /<main>练习<\/main>/u);
-  assert.match(page.issues[0], /^script\.js 第 2 行/u);
+  assert.match(page.issues[0], language === 'en' ? /^script\.js, line 2, column /u : /^script\.js 第 2 行/u);
 });

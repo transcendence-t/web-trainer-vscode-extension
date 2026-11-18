@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "区分当前进度与容量读数",
-  "goal": "为进行中的任务和给定范围内的测量值选用正确元素。",
-  "summary": "上传进度随任务推进，存储用量是固定范围里的一个当前读数。两者看起来都像条形指示器。",
+  "title": "Distinguishes current progress and capacity readings",
+  "goal": "Selects the correct element for the task in progress and the measurements within a given range.",
+  "summary": "The upload progress progresses with the task, and the storage usage is a current reading in a fixed range. Both look like bar indicators.",
   "tasks": [
-    "把 #upload 改为 progress，value 写 6，max 写 10。",
-    "把 #capacity 改为 meter，范围 0 到 100，当前值 65，保留两个标签。"
+    "Change #upload to progress, write value to 6, and write max to 10.",
+    "Change #capacity to meter, range 0 to 100, current value 65, keep two labels."
   ],
   "example": {
     "language": "html",
-    "code": "<label for=\"done\">已检查</label><progress id=\"done\" value=\"3\" max=\"8\">3 / 8</progress>\n<label for=\"level\">电量</label><meter id=\"level\" value=\"70\" min=\"0\" max=\"100\">70%</meter>",
-    "note": "progress 表示正在进行的任务。meter 表示范围已知的读数。"
+    "code": "<label for=\"done\">checked</label><progress id=\"done\" value=\"3\" max=\"8\">3 / 8</progress>\n<label for=\"level\">power</label><meter id=\"level\" value=\"70\" min=\"0\" max=\"100\">70%</meter>",
+    "note": "progress indicates an ongoing task. meter represents a reading with a known range."
   },
-  "hint": "查看标签上的含义，再决定哪一个是任务进度。"
+  "hint": "Look at the meaning of the labels and decide which one is the task progress."
 }

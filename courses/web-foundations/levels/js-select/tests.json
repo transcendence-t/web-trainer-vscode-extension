@@ -1,18 +1,18 @@
 [
   {
-    "label": "请选择场次时显示初始提示",
+    "label": "Please display the initial prompt when selecting a session",
     "expect": {
       "type": "text",
       "selector": "#meeting-point",
-      "value": "请先选择导览场次。"
+      "value": "Please select the tour session first."
     }
   },
   {
-    "label": "选择陶艺馆显示门口集合",
+    "label": "Select the Ceramic Art Museum to display the collection at the door",
     "expect": {
       "type": "text",
       "selector": "#meeting-point",
-      "value": "10:00 在陶艺馆门口集合。"
+      "value": "10:00 Meet at the entrance of the Ceramic Art Museum."
     },
     "actions": [
       {
@@ -23,11 +23,11 @@
     ]
   },
   {
-    "label": "从陶艺馆改到钟表馆后更新地点",
+    "label": "Updated location after changing from Ceramics Museum to Watch and Clock Museum",
     "expect": {
       "type": "text",
       "selector": "#meeting-point",
-      "value": "14:00 在钟表馆咨询台集合。"
+      "value": "14:00 Meet at the information desk of the Clock Museum."
     },
     "actions": [
       {
@@ -43,11 +43,11 @@
     ]
   },
   {
-    "label": "版画馆有自己的集合地点",
+    "label": "The Printmaking Museum has its own meeting place",
     "expect": {
       "type": "text",
       "selector": "#meeting-point",
-      "value": "16:00 在版画馆大厅集合。"
+      "value": "16:00 Gather in the lobby of the Printmaking Gallery."
     },
     "actions": [
       {
@@ -58,11 +58,11 @@
     ]
   },
   {
-    "label": "切回空选项时恢复提示",
+    "label": "Restore prompt when switching back to empty option",
     "expect": {
       "type": "text",
       "selector": "#meeting-point",
-      "value": "请先选择导览场次。"
+      "value": "Please select the tour session first."
     },
     "actions": [
       {

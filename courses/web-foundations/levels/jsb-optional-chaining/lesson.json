@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "安全读取可能缺失的嵌套联系方式",
-  "goal": "用可选链停止读取缺少的中间属性。",
-  "summary": "活动记录可能没有联系人，联系人也可能没有填写电话。无法取得电话时显示「待登记」。",
+  "title": "Safe reading of potentially missing nested contact details",
+  "goal": "Stop reading missing intermediate properties with optional chaining.",
+  "summary": "The activity record may not have a contact person, and the contact person may not have a phone number. \"pending registration\" is displayed when the phone cannot be retrieved.",
   "tasks": [
-    "完成 contactPhone(record)，读取 record.contact.phone。",
-    "record、contact 或 phone 缺少或为 null 时返回「待登记」。已填写的空字符串按原值返回。"
+    "completes contactPhone(record) and reads record.contact.phone.",
+    "Returns \"pending registration\" if record, contact, or phone is missing or null. The filled in empty string is returned as its original value."
   ],
   "example": {
     "language": "javascript",
-    "code": "const room = { owner: null };\nroom.owner?.name ?? '未分配'; // '未分配'",
-    "note": "可选链在左侧为 null 或 undefined 时返回 undefined，用 ?? 提供显示用的默认值。"
+    "code": "const room = { owner: null };\nroom.owner?.name ?? 'not assigned'; // 'Not allocated'",
+    "note": "The optional chain returns undefined when the left side is null or undefined, and uses ?? to provide a default value for display."
   },
-  "hint": "可能为空的每一层都要加 ?.，包括 record 和 record.contact。"
+  "hint": "Each layer that may be empty must be added with ?., including record and record.contact."
 }

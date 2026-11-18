@@ -1,0 +1,28 @@
+[
+  {
+    "label": "地址内恰好有一个换行",
+    "expect": {
+      "type": "count",
+      "selector": "#club-address br",
+      "value": 1
+    },
+    "hint": "检查是否遗漏 br 或重复添加。"
+  },
+  {
+    "label": "换行后是房间号",
+    "expect": {
+      "type": "text",
+      "selector": "address#club-address > span:first-child + br + span:last-child",
+      "value": "实训楼 B 座 204 室"
+    },
+    "hint": "将 br 放在两个 span 之间。"
+  },
+  {
+    "label": "街道地址仍在第一行",
+    "expect": {
+      "type": "text",
+      "selector": "address#club-address > span:first-child",
+      "value": "大学路 16 号"
+    }
+  }
+]

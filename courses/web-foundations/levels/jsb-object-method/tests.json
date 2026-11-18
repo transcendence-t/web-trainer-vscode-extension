@@ -1,6 +1,6 @@
 [
   {
-    "label": "按当前对象拼出标签",
+    "label": "spell out the label according to the current object",
     "expect": {
       "type": "function",
       "name": "rackLabel",
@@ -12,19 +12,19 @@
     }
   },
   {
-    "label": "不同的对象前缀",
+    "label": "different object prefix",
     "expect": {
       "type": "function",
       "name": "rackLabel",
       "args": [
-        "仓库",
+        "Warehouse",
         27
       ],
-      "value": "仓库-27"
+      "value": "Warehouse-27"
     }
   },
   {
-    "label": "保留字符串编码里的前导零",
+    "label": "retains leading zeros in string encoding",
     "expect": {
       "type": "function",
       "name": "rackLabel",

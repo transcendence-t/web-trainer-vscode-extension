@@ -1,7 +1,7 @@
 const cards = [
-  { question: '哪个 HTML 标签表示超链接？', answer: '<a>' },
-  { question: '哪个 CSS 属性设置文字颜色？', answer: 'color' },
-  { question: '数组第一个元素的下标是多少？', answer: '0' },
+  { question: 'Which HTML tag represents a hyperlink?', answer: '<a>' },
+  { question: 'Which CSS property sets text color?', answer: 'color' },
+  { question: 'What is the subscript of the first element of the array?', answer: '0' },
 ];
 const position = document.querySelector('#card-position');
 const question = document.querySelector('#card-question');
@@ -17,8 +17,8 @@ function renderCard() {
   answer.textContent = card.answer;
   question.hidden = answerSide;
   answer.hidden = !answerSide;
-  position.textContent = '第 ' + (cardIndex + 1) + ' / ' + cards.length + ' 张';
-  flip.textContent = answerSide ? '返回题目' : '显示答案';
+  position.textContent = (cardIndex + 1) + ' / ' + cards.length;
+  flip.textContent = answerSide ? 'Return to question' : 'Show answer';
   flip.setAttribute('aria-expanded', String(answerSide));
 }
 

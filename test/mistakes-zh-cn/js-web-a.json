@@ -1,0 +1,32 @@
+{
+  "js-text": {
+    "name": "把状态消息写到了页面主标题上",
+    "files": {
+      "script.js": "const message = '准备就绪';\nconst status = document.querySelector('h1');\nstatus.textContent = message;\n"
+    }
+  },
+  "js-click": {
+    "name": "把更新文字的代码写在点击回调外，页面一打开就显示成功",
+    "files": {
+      "script.js": "const button = document.querySelector('#reserve');\nconst status = document.querySelector('#status');\nbutton.addEventListener('click', () => {\n});\nstatus.textContent = '报名成功';\n"
+    }
+  },
+  "js-class-toggle": {
+    "name": "按钮变回浅色，aria-pressed 仍为 true",
+    "files": {
+      "script.js": "const saveButton = document.querySelector('#save-resource');\n\nsaveButton.addEventListener('click', () => {\n  const saved = saveButton.classList.toggle('is-saved');\n  saveButton.setAttribute('aria-pressed', 'true');\n});"
+    }
+  },
+  "js-counter": {
+    "name": "把计数初始化放进回调，连续点击也一直显示 1",
+    "files": {
+      "script.js": "const button = document.querySelector('#add');\nconst output = document.querySelector('#count');\nbutton.addEventListener('click', () => {\n  let count = 0;\n  count += 1;\n  output.textContent = count;\n});\n"
+    }
+  },
+  "js-input": {
+    "name": "读取原始输入，问候语保留了姓名两侧的空格",
+    "files": {
+      "script.js": "const field = document.querySelector('#student');\nconst greeting = document.querySelector('#greeting');\nfield.addEventListener('input', () => {\n  const name = field.value || '同学';\n  greeting.textContent = `你好，${name}！`;\n});\n"
+    }
+  }
+}

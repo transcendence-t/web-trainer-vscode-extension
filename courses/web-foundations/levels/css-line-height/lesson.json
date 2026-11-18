@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "调整录音棚须知的行高",
-  "goal": "让两种字号的说明文字都采用与各自字号成比例的行高。",
-  "summary": "line-height 决定文字行框的高度。设置不带单位的数字时，浏览器用该数字乘以元素自身的字号。",
+  "title": "Adjust the line height of the recording studio instructions",
+  "goal": "Makes the description text for both font sizes have a line height proportional to their respective font sizes.",
+  "summary": "line-height determines the height of the text line box. When setting a number without units, the browser multiplies the number by the element's own font size.",
   "tasks": [
-    "给两段带 reading-copy 类的说明设置 line-height: 1.75。",
-    "主说明使用现有的 16px 字号，小号备注使用现有的 12px 字号。开放时段一行沿用原来的行高。"
+    "sets line-height: 1.75 for two paragraphs of description with reading-copy class.",
+    "uses the existing 16px font size for the main description and the existing 12px font size for the small notes. A row during the open period will use the original row height."
   ],
   "example": {
     "language": "css",
     "code": ".exhibit-copy {\n  line-height: 1.5;\n}",
-    "note": "展签字号为 18px 时，每行高 27px。沿用这条规则制作 14px 的小展签时，每行高 21px。"
+    "note": "extension number is 18px, each line is 27px high. When using this rule to create a small 14px pavilion, each line will be 21px high."
   },
-  "hint": "直接写 28px 时，两段说明会得到相同的行高。把数值写为 1.75，可让小字按自己的字号计算。"
+  "hint": "When writing 28px directly, the two paragraphs of description will get the same line height. Write the value as 1.75 to allow small text to be calculated at its own font size."
 }

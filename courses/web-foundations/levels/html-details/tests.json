@@ -1,25 +1,25 @@
 [
   {
-    "label": "问题是折叠项开头的 summary",
+    "label": "The problem is the summary at the beginning of the folded item",
     "expect": {
       "type": "text",
       "selector": "details#renew > summary:first-child",
-      "value": "如何延长借阅？"
+      "value": "How to extend the loan?"
     }
   },
   {
-    "label": "打开页面时问答收起",
+    "label": "Q&A close when opening the page",
     "expect": {
       "type": "exists",
       "selector": "details#renew:not([open])"
     }
   },
   {
-    "label": "点击问题后显示容器里的回答",
+    "label": "Click on the question to display the answer in the container",
     "expect": {
       "type": "text",
       "selector": "details#renew[open] p",
-      "value": "在到期前到服务台续借一次。"
+      "value": "Go to the service desk to renew once before expiration."
     },
     "actions": [
       {
@@ -29,7 +29,7 @@
     ]
   },
   {
-    "label": "再次点击问题后问答重新收起",
+    "label": "Click the question again and the Q&A will be closed again.",
     "expect": {
       "type": "exists",
       "selector": "details#renew:not([open])"

@@ -1,35 +1,35 @@
 [
   {
-    "label": "9.9 千克返回普通包装",
+    "label": "9.9 kg Return to normal packaging",
     "expect": {
       "type": "function",
       "name": "packingLabel",
       "args": [
         9.9
       ],
-      "value": "普通包装"
+      "value": "ordinary packaging"
     }
   },
   {
-    "label": "恰好 10 千克返回加固包装",
+    "label": "Exactly 10kg return in reinforced packaging",
     "expect": {
       "type": "function",
       "name": "packingLabel",
       "args": [
         10
       ],
-      "value": "加固包装"
+      "value": "reinforced packaging"
     }
   },
   {
-    "label": "12.5 千克返回加固包装",
+    "label": "12.5kg return reinforced packaging",
     "expect": {
       "type": "function",
       "name": "packingLabel",
       "args": [
         12.5
       ],
-      "value": "加固包装"
+      "value": "reinforced packaging"
     }
   }
 ]

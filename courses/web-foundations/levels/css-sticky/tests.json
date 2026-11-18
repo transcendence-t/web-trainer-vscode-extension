@@ -1,6 +1,6 @@
 [
   {
-    "label": "工具条使用粘性定位",
+    "label": "toolbar uses sticky positioning",
     "expect": {
       "type": "style",
       "selector": ".log-toolbar",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "工具条的吸顶距离为零",
+    "label": "toolbar is zero",
     "expect": {
       "type": "style",
       "selector": ".log-toolbar",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "工具条仍使用网格布局",
+    "label": "toolbar still uses grid layout",
     "expect": {
       "type": "style",
       "selector": ".log-toolbar",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "跳转链接仍在工具条标题右侧",
+    "label": "The jump link is still on the right side of the toolbar title",
     "expect": {
       "type": "layout",
       "selector": ".log-toolbar a",
@@ -42,7 +42,7 @@
     ]
   },
   {
-    "label": "跳转后最新记录进入日志窗口",
+    "label": "The latest record after the jump enters the log window",
     "expect": {
       "type": "layout",
       "selector": "#latest",
@@ -57,7 +57,7 @@
     ]
   },
   {
-    "label": "跳转后最早记录已滚过工具条",
+    "label": "The earliest record after the jump has been scrolled past the toolbar",
     "expect": {
       "type": "layout",
       "selector": ".log-toolbar",
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "label": "跳转后工具条仍留在日志窗口内",
+    "label": "The toolbar remains in the log window after the jump",
     "expect": {
       "type": "layout",
       "selector": ".log-toolbar",

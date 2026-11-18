@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "循环生成列表",
+  "summary": "在点击监听中用 for 创建每一项。每轮用 createElement 创建一个 li，设置文字后把它添加到列表。重新生成前清空旧项目。",
+  "tasks": [
+    "点击 #make-list 后，从 1 循环到 5，每次创建一个 li 并加到 #days。",
+    "五项依次显示「第 1 天」到「第 5 天」。第二次点击时，列表仍然只有五项。"
+  ],
+  "hint": "若第二次点击后出现十项，在点击监听开头用 list.replaceChildren() 清空旧项目。每轮循环都新建一个 li，再写上当天的数字。",
+  "goal": "点击按钮后创建五天的计划列表，重复点击时重新生成同一份列表。",
+  "example": {
+    "language": "javascript",
+    "code": "const lockers = document.querySelector('#locker-numbers');\n\ndocument.querySelector('#show-lockers').addEventListener('click', () => {\n  lockers.replaceChildren();\n  for (let number = 101; number <= 103; number += 1) {\n    const item = document.createElement('li');\n    item.textContent = '储物柜 ' + number;\n    lockers.append(item);\n  }\n});",
+    "note": "点击「显示储物柜」后，页面生成 101 到 103 三个柜号。再次点击会用同一批项目替换旧列表。"
+  }
+}

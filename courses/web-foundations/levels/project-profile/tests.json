@@ -1,30 +1,30 @@
 [
   {
-    "label": "介绍区域有姓名作为主标题",
+    "label": "The introduction area has the name as the main title",
     "expect": {
       "type": "text",
       "selector": "header.profile-intro h1",
-      "value": "林溪"
+      "value": "Linxi"
     }
   },
   {
-    "label": "主体里有关于我小节",
+    "label": "There is a section about me in the main body",
     "expect": {
       "type": "text",
       "selector": "main.profile-content > section#about h2",
-      "value": "关于我"
+      "value": "About me"
     }
   },
   {
-    "label": "主体里有作品小节",
+    "label": "There are sections of works in the main body",
     "expect": {
       "type": "text",
       "selector": "main.profile-content > section#work h2",
-      "value": "作品"
+      "value": "works"
     }
   },
   {
-    "label": "作品清单有两个条目",
+    "label": "works list has two entries",
     "expect": {
       "type": "count",
       "selector": "section#work ul > li",
@@ -32,7 +32,7 @@
     }
   },
   {
-    "label": "点击查看作品定位到作品区",
+    "label": "Click to view the works and locate the works area",
     "expect": {
       "type": "exists",
       "selector": "section#work:target"
@@ -45,7 +45,7 @@
     ]
   },
   {
-    "label": "页首区域采用浅绿背景",
+    "label": "The top area of the page uses a light green background",
     "expect": {
       "type": "style",
       "selector": ".profile-intro",
@@ -54,7 +54,7 @@
     }
   },
   {
-    "label": "页首区域有 20px 上内边距",
+    "label": "The header area has 20px top padding",
     "expect": {
       "type": "style",
       "selector": ".profile-intro",
@@ -63,7 +63,7 @@
     }
   },
   {
-    "label": "页首区域有 20px 右内边距",
+    "label": "The header area has 20px right padding",
     "expect": {
       "type": "style",
       "selector": ".profile-intro",
@@ -72,7 +72,7 @@
     }
   },
   {
-    "label": "页首区域有 20px 下内边距",
+    "label": "The header area has 20px lower padding",
     "expect": {
       "type": "style",
       "selector": ".profile-intro",
@@ -81,7 +81,7 @@
     }
   },
   {
-    "label": "页首区域有 20px 左内边距",
+    "label": "The header area has 20px left padding",
     "expect": {
       "type": "style",
       "selector": ".profile-intro",

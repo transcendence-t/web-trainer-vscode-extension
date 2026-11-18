@@ -1,21 +1,21 @@
 [
   {
-    "label": "尖括号按原文字显示",
+    "label": "Angle brackets are displayed according to the original text",
     "expect": {
       "type": "text",
       "selector": "#literal",
-      "value": "<b>文字</b>"
+      "value": "<b>text</b>"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#draft",
-        "value": "<b>文字</b>"
+        "value": "<b>text</b>"
       }
     ]
   },
   {
-    "label": "不创建用户提供的节点",
+    "label": "Do not create user-supplied nodes",
     "expect": {
       "type": "count",
       "selector": "#literal b",
@@ -25,31 +25,31 @@
       {
         "type": "input",
         "selector": "#draft",
-        "value": "<b>文字</b>"
+        "value": "<b>text</b>"
       }
     ]
   },
   {
-    "label": "保留与号和引号",
+    "label": "retains ampersands and quotation marks",
     "expect": {
       "type": "text",
       "selector": "#literal",
-      "value": "院系 A & \"B\""
+      "value": "Department A & \"B\""
     },
     "actions": [
       {
         "type": "input",
         "selector": "#draft",
-        "value": "院系 A & \"B\""
+        "value": "Department A & \"B\""
       }
     ]
   },
   {
-    "label": "清空时恢复提示",
+    "label": "Recovery prompt when clearing",
     "expect": {
       "type": "text",
       "selector": "#literal",
-      "value": "等待输入"
+      "value": "Waiting for input"
     },
     "actions": [
       {

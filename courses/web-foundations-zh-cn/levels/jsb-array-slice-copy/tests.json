@@ -1,0 +1,79 @@
+[
+  {
+    "label": "按顺序截取前两项",
+    "expect": {
+      "type": "function",
+      "name": "peekLine",
+      "args": [
+        [
+          "A",
+          "B",
+          "C"
+        ],
+        2
+      ],
+      "value": [
+        "A",
+        "B"
+      ]
+    }
+  },
+  {
+    "label": "长度为零",
+    "expect": {
+      "type": "function",
+      "name": "peekLine",
+      "args": [
+        [
+          "A"
+        ],
+        0
+      ],
+      "value": []
+    }
+  },
+  {
+    "label": "长度超过现有项数",
+    "expect": {
+      "type": "function",
+      "name": "peekLine",
+      "args": [
+        [
+          "A",
+          "B"
+        ],
+        8
+      ],
+      "value": [
+        "A",
+        "B"
+      ]
+    }
+  },
+  {
+    "label": "原队列仍保留所有成员",
+    "expect": {
+      "type": "function",
+      "name": "comparePreview",
+      "args": [
+        [
+          "A",
+          "B",
+          "C"
+        ],
+        2
+      ],
+      "value": {
+        "preview": [
+          "A",
+          "B"
+        ],
+        "entries": [
+          "A",
+          "B",
+          "C"
+        ]
+      }
+    }
+  }
+]

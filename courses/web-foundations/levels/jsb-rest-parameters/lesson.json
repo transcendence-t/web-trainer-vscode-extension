@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "接收任意多条出库数量",
-  "goal": "用剩余参数把数量不定的实参收集为数组。",
-  "summary": "一次出库可能只含一批，也可能由多批组成。函数接收各批数量并加上已登记的数量。",
+  "title": "Receives any number of outbound quantities",
+  "goal": "uses the remaining parameters to collect an indefinite number of actual parameters into an array.",
+  "summary": "A shipment may only contain one batch, or it may consist of multiple batches. The function receives each batch quantity and adds the registered quantity.",
   "tasks": [
-    "完成 shippedCount(prior, ...batches)，prior 为已登记数量，剩余参数是每一批的新出库量。",
-    "返回所有数量的合计。没有新增批次时返回 prior。"
+    "completes shippedCount(prior, ...batches), priority is the registered quantity, and the remaining parameters are the new shipment quantity of each batch.",
+    "returns the total of all quantities. Returns prior when there are no new batches."
   ],
   "example": {
     "language": "javascript",
     "code": "function countFrom(start, ...added) {\n  return start + added.length;\n}",
-    "note": "放在末尾的 ...added 会把余下的实参收集成数组。"
+    "note": "...added placed at the end will collect the remaining actual parameters into an array."
   },
-  "hint": "把累加器从 prior 开始，再遍历 batches。"
+  "hint": "Start the accumulator from prior and then traverse batches."
 }

@@ -1,6 +1,6 @@
 [
   {
-    "label": "取货地址链接变为紫色",
+    "label": "The pickup address link turns purple",
     "expect": {
       "type": "style",
       "selector": "#address-link",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "段落里的值班链接也变紫",
+    "label": "The duty link in the paragraph also turns purple",
     "expect": {
       "type": "style",
       "selector": "#hours-link",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "取货地址链接字重为 600",
+    "label": "The word weight of the pickup address link is 600",
     "expect": {
       "type": "style",
       "selector": "#address-link",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "值班链接字重为 600",
+    "label": "The word weight of the duty link is 600",
     "expect": {
       "type": "style",
       "selector": "#hours-link",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "卡片外的链接保留原色",
+    "label": "Links outside the card retain their original color",
     "expect": {
       "type": "style",
       "selector": "#help-link",
@@ -45,7 +45,7 @@
     }
   },
   {
-    "label": "卡片外的链接保留原字重",
+    "label": "Links outside the card retain the original font weight",
     "expect": {
       "type": "style",
       "selector": "#help-link",

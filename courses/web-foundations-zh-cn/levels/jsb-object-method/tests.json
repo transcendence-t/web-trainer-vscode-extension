@@ -1,0 +1,38 @@
+[
+  {
+    "label": "按当前对象拼出标签",
+    "expect": {
+      "type": "function",
+      "name": "rackLabel",
+      "args": [
+        "D",
+        0
+      ],
+      "value": "D-0"
+    }
+  },
+  {
+    "label": "不同的对象前缀",
+    "expect": {
+      "type": "function",
+      "name": "rackLabel",
+      "args": [
+        "仓库",
+        27
+      ],
+      "value": "仓库-27"
+    }
+  },
+  {
+    "label": "保留字符串编码里的前导零",
+    "expect": {
+      "type": "function",
+      "name": "rackLabel",
+      "args": [
+        "M",
+        "007"
+      ],
+      "value": "M-007"
+    }
+  }
+]

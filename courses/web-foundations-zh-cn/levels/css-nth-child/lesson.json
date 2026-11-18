@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "只给数据表的偶数行铺底色",
+  "goal": "结合 tbody 和 :nth-child() 按位置选择表格行。",
+  "summary": "一眼浏览多行设备记录时，交替底色可以帮助对准当前行。表头有独立的样式。",
+  "tasks": [
+    "给 tbody 内第 2、4 等偶数行使用 #e6f4ee。",
+    "奇数行与表头保留已有底色，不增加 HTML 类名。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".schedule li:nth-child(odd) { background-color: #fff5df; }",
+    "note": "nth-child 从 1 开始计数，odd 表示奇数，even 表示偶数。"
+  },
+  "hint": "写 tbody tr:nth-child(even) 可以避免把表头当成数据行。"
+}

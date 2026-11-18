@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "把长记录放进滚动区域",
+  "goal": "在固定高度的盒子中用 overflow-y: auto 容纳超出的内容。",
+  "summary": "温室巡查记录越来越多，旧页面的末尾记录溢出了边框。记录区应只在超出高度时滚动。",
+  "tasks": [
+    "保留 .history 的 124px 高度，让垂直滚动条只在内容超出框时出现。",
+    "点击「跳到最后一条」，观察末尾记录能否滚进框内。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".song-queue {\n  height: 10rem;\n  overflow-y: auto;\n}",
+    "note": "播放队列内容超过 10rem 时，浏览器按需提供垂直滚动条。"
+  },
+  "hint": "固定高度后还需要处理超出的行。overflow-y 的默认值 visible 会让内容继续画在框外，auto 可以按需提供滚动。"
+}

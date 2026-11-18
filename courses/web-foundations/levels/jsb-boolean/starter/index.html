@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>用布尔值表示是否可清空</title>
+  <title>uses a Boolean value to indicate whether it can be cleared</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 <main class="sheet">
-  <h1>用布尔值表示是否可清空</h1>
-  <p>示例调用 <code>canClearNote("放在前台")</code></p>
-  <p>运行结果 <output id="example-result">待填写函数</output></p>
+  <h1>uses a Boolean value to indicate whether it can be cleared</h1>
+  <p>sample call <code>canClearNote("put it on the front desk")</code></p>
+  <p>running results <output id="example-result">Function to be filled in</output></p>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const result = canClearNote("放在前台");
+      const result = canClearNote("placed at the front desk");
       if (result !== undefined) {
         document.querySelector('#example-result').textContent = JSON.stringify(result);
       }

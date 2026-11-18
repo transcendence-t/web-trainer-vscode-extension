@@ -1,6 +1,6 @@
 [
   {
-    "label": "工具栏采用 Flexbox",
+    "label": "toolbar uses Flexbox",
     "expect": {
       "type": "style",
       "selector": ".toolbar",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "项目按水平方向排列",
+    "label": "items are arranged horizontally",
     "expect": {
       "type": "style",
       "selector": ".toolbar",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "项目间距为 12px",
+    "label": "Item spacing is 12px",
     "expect": {
       "type": "style",
       "selector": ".toolbar",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "不同高度的项目居中对齐",
+    "label": "Center alignment of items with different heights",
     "expect": {
       "type": "style",
       "selector": ".toolbar",

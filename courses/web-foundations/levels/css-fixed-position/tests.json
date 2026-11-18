@@ -1,6 +1,6 @@
 [
   {
-    "label": "返回入口固定到视口",
+    "label": "Return entry fixed to viewport",
     "expect": {
       "type": "style",
       "selector": "#back",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "距离右边 12px",
+    "label": "12px from the right",
     "expect": {
       "type": "style",
       "selector": "#back",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "距离底边 12px",
+    "label": "12px from bottom edge",
     "expect": {
       "type": "style",
       "selector": "#back",

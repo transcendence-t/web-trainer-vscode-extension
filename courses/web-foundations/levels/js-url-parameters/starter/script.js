@@ -1,3 +1,3 @@
 function readFilters(query) {
-  // 完成本关函数。
+  // completes this level function.
 }

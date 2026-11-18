@@ -1,18 +1,18 @@
 {
   "focus": "index.html",
-  "title": "设备借用清单搜索",
-  "goal": "组合有标签的搜索框、列表样式与输入事件，实时展示搜索结果和数量。",
-  "summary": "借用设备前，学生可以用名称片段查找。清空搜索框后应回到完整清单。",
+  "title": "Equipment loan list search",
+  "goal": "combines labeled search boxes, list styles and input events to display search results and quantities in real time.",
+  "summary": "Before borrowing a device, students can search it using name fragments. Clearing the search box should return you to the full list.",
   "tasks": [
-    "在 index.html 中把「设备名称」写成 label，用 for 关联 #equipment-query。",
-    "在 style.css 中让 #equipment-results 使用网格，为相邻设备设置 8px 间隔。",
-    "在 script.js 的 input 事件中读取关键词，去掉首尾空格，忽略英文大小写，筛出名称包含关键词的设备。",
-    "把筛选后的数组交给 renderDevices。无匹配时显示 0 件以及提示，清空搜索时恢复全部。"
+    "Write \"device name\" as label in index.html, and use for to associate #equipment-query.",
+    "Make #equipment-results use a grid in style.css, setting an 8px gap between adjacent devices.",
+    "Read keywords in the input event of script.js, remove leading and trailing spaces, ignore English case, and filter out devices whose names contain keywords.",
+    "Pass the filtered array to renderDevices. Show “N devices found” with the number of matches. When there are none, display the empty-state message. Clearing the search restores the full list."
   ],
   "example": {
     "language": "javascript",
-    "code": "const titles = ['CSS 盒模型', 'HTML 表单', 'CSS 布局'];\nconst keyword = ' css '.trim().toLowerCase();\nconst matches = titles.filter((title) => title.toLowerCase().includes(keyword));\n// matches 是 ['CSS 盒模型', 'CSS 布局']",
-    "note": "搜索课程标题时，把关键词和待匹配文本都转成小写。includes 能在标题任意位置查找一个片段。"
+    "code": "const titles = ['CSS box model', 'HTML form', 'CSS layout'];\nconst keyword = ' css '.trim().toLowerCase();\nconst matches = titles.filter((title) => title.toLowerCase().includes(keyword));\n// matches is ['CSS box model', 'CSS layout']",
+    "note": "When searching for course titles, convert keywords and text to be matched into lowercase. includes can find a fragment anywhere in the title."
   },
-  "hint": "startsWith 只能匹配开头，「录音」在「数码录音笔」中间。将设备名和关键词转换为相同大小写后用 includes。"
+  "hint": "startsWith can only match the beginning, \"voice\" in the middle of \"digital voice recorder\". Use includes after converting the device name and keywords to the same case."
 }

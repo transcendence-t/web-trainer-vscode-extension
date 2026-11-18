@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "排出同步任务、微任务和计时器的顺序",
+  "goal": "观察 Promise 回调在当前同步代码之后、计时器回调之前执行。",
+  "summary": "诊断按钮会安排三类操作。日志展示同次点击的实际执行顺序。",
+  "tasks": [
+    "点击 #run 后，将「同步」写成第一项。用 Promise.resolve().then 安排「微任务」，用 setTimeout 安排「计时器」。",
+    "当三项都执行后，让 #order 显示「同步 → 微任务 → 计时器」。每次点击单独记录。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "console.log('同步');\nPromise.resolve().then(() => console.log('微任务'));\nsetTimeout(() => console.log('计时器'), 0);",
+    "note": "0 毫秒计时器也会等待当前任务结束。排入的 Promise 微任务会更早处理。"
+  },
+  "hint": "在点击回调里创建一份新数组，通过专门的记录函数在每次追加后更新页面。"
+}

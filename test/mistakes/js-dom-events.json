@@ -1,74 +1,74 @@
 {
   "js-query-all": {
-    "name": "只改到第一项",
+    "name": "Only change to the first item",
     "files": {
-      "script.js": "document.querySelector('#mark').addEventListener('click', () => {\n  document.querySelector('.pending').textContent = '已核对';\n});\n"
+      "script.js": "document.querySelector('#mark').addEventListener('click', () => {\n  document.querySelector('.pending').textContent = 'checked';\n});\n"
     }
   },
   "js-dataset": {
-    "name": "从 event.target 读 dataset，点击按钮里的文字时拿不到属性",
+    "name": "Read the dataset from event.target, but cannot get the attributes when clicking the text in the button",
     "files": {
-      "script.js": "for (const button of document.querySelectorAll('.room-button')) {\n  button.addEventListener('click', (event) => {\n    document.querySelector('#selection').textContent = '当前展区：' + event.target.dataset.roomCode;\n  });\n}\n"
+      "script.js": "for (const button of document.querySelectorAll('.room-button')) {\n  button.addEventListener('click', (event) => {\n    document.querySelector('#selection').textContent = 'Current area: ' + event.target.dataset.roomCode;\n  });\n}\n"
     }
   },
   "js-safe-text": {
-    "name": "把原始输入设为 innerHTML",
+    "name": "Set original input to innerHTML",
     "files": {
-      "script.js": "const draft = document.querySelector('#draft');\nconst output = document.querySelector('#literal');\ndraft.addEventListener('input', () => { output.innerHTML = draft.value || '等待输入'; });\n"
+      "script.js": "const draft = document.querySelector('#draft');\nconst output = document.querySelector('#literal');\ndraft.addEventListener('input', () => { output.innerHTML = draft.value || 'Waiting for input'; });\n"
     }
   },
   "js-event-flow": {
-    "name": "省略 capture，父捕获回调也在冒泡阶段运行",
+    "name": "If capture is omitted, the parent capture callback also runs in the bubbling phase.",
     "files": {
-      "script.js": "const pad = document.querySelector('#pad');\nconst button = document.querySelector('#tap');\nconst steps = [];\npad.addEventListener('click', () => steps.push('外层捕获'));\nbutton.addEventListener('click', () => steps.push('按钮'));\npad.addEventListener('click', () => {\n  steps.push('外层冒泡');\n  document.querySelector('#trace').textContent = steps.splice(0).join(' → ');\n});\n"
+      "script.js": "const pad = document.querySelector('#pad');\nconst button = document.querySelector('#tap');\nconst steps = [];\npad.addEventListener('click', () => steps.push('outer layer capture'));\nbutton.addEventListener('click', () => steps.push('button'));\npad.addEventListener('click', () => {\n  steps.push('outer layer bubbling');\n  document.querySelector('#trace').textContent = steps.splice(0).join(' → ');\n});\n"
     }
   },
   "js-remove-listener": {
-    "name": "给 removeEventListener 一个新的箭头函数，原监听仍在",
+    "name": "gives removeEventListener a new arrow function, and the original listener is still there",
     "files": {
       "script.js": "const serve = document.querySelector('#serve');\nlet count = 0;\nfunction recordVisit() { document.querySelector('#served').textContent = ++count; }\nserve.addEventListener('click', recordVisit);\ndocument.querySelector('#stop').addEventListener('click', () => serve.removeEventListener('click', () => recordVisit()));\n"
     }
   },
   "js-form-data": {
-    "name": "使用 get 只保留第一个勾选值",
+    "name": "Use get to keep only the first checked value",
     "files": {
-      "script.js": "const form = document.querySelector('#application');\nform.addEventListener('submit', (event) => {\n  event.preventDefault();\n  const data = new FormData(form);\n  document.querySelector('#receipt').textContent = data.get('visitor').trim() + '：' + (data.get('session') || '未选场次');\n});\n"
+      "script.js": "const form = document.querySelector('#application');\nform.addEventListener('submit', (event) => {\n  event.preventDefault();\n  const data = new FormData(form);\n  document.querySelector('#receipt').textContent = data.get('visitor').trim() + ':' + (data.get('session') || 'No sessions selected');\n});\n"
     }
   },
   "js-custom-validity": {
-    "name": "只在确认框输入时更新，修改原口令后错误仍保留",
+    "name": "is only updated when entering in the confirmation box. The error remains after modifying the original password.",
     "files": {
-      "script.js": "const password = document.querySelector('#password');\nconst confirm = document.querySelector('#confirm');\nconfirm.addEventListener('input', () => {\n  const message = confirm.value && confirm.value !== password.value ? '两次口令不一致' : '';\n  confirm.setCustomValidity(message);\n  document.querySelector('#feedback').textContent = message;\n});\n"
+      "script.js": "const password = document.querySelector('#password');\nconst confirm = document.querySelector('#confirm');\nconfirm.addEventListener('input', () => {\n  const message = confirm.value && confirm.value !== password.value ? 'Two passwords are inconsistent' : '';\n  confirm.setCustomValidity(message);\n  document.querySelector('#feedback').textContent = message;\n});\n"
     }
   },
   "js-template-clone": {
-    "name": "重复生成时把卡片接在旧列表之后",
+    "name": "When generating repeatedly, add the card after the old list",
     "files": {
-      "script.js": "const devices = [{ name: '测距仪', code: 'L03' }, { name: '角度尺', code: 'R16' }];\nconst template = document.querySelector('#card-template');\ndocument.querySelector('#build').addEventListener('click', () => {\n  for (const device of devices) {\n    const item = template.content.cloneNode(true);\n    item.querySelector('.model').textContent = device.name;\n    item.querySelector('.code').textContent = device.code;\n    document.querySelector('#cards').append(item);\n  }\n});\n"
+      "script.js": "const devices = [{ name: 'rangefinder', code: 'L03' }, { name: 'angle ruler', code: 'R16' }];\nconst template = document.querySelector('#card-template');\ndocument.querySelector('#build').addEventListener('click', () => {\n  for (const device of devices) {\n    const item = template.content.cloneNode(true);\n    item.querySelector('.model').textContent = device.name;\n    item.querySelector('.code').textContent = device.code;\n    document.querySelector('#cards').append(item);\n  }\n});\n"
     }
   },
   "js-dom-remove": {
-    "name": "只用 matches 检测实际点击目标，点到按钮内文字时无效",
+    "name": "Only uses matches to detect the actual click target. It is invalid when clicking on the text inside the button.",
     "files": {
       "script.js": "document.querySelector('#rows').addEventListener('click', (event) => {\n  if (event.target.matches('button.remove')) event.target.closest('li').remove();\n});\n"
     }
   },
   "js-dialog-focus": {
-    "name": "使用 show()，打开后不是模态窗口",
+    "name": "uses show(), it is not a modal window after opening",
     "files": {
       "script.js": "const openButton = document.querySelector('#open');\nconst dialog = document.querySelector('#rules-dialog');\nconst dismiss = document.querySelector('#dismiss');\nopenButton.addEventListener('click', () => { dialog.show(); dismiss.focus(); });\ndismiss.addEventListener('click', () => dialog.close());\ndialog.addEventListener('close', () => openButton.focus());\n"
     }
   },
   "js-debounce-input": {
-    "name": "每次都开新计时器，短时间内产生多次搜索",
+    "name": "starts a new timer every time, resulting in multiple searches in a short period of time",
     "files": {
       "script.js": "const filter = document.querySelector('#filter');\nlet hits = 0;\nfilter.addEventListener('input', () => setTimeout(() => {\n  document.querySelector('#last-keyword').textContent = filter.value;\n  document.querySelector('#hits').textContent = ++hits;\n}, 220));\n"
     }
   },
   "js-storage-remove": {
-    "name": "用 clear 清掉了用户的其他偏好",
+    "name": "uses clear to clear the user's other preferences.",
     "files": {
-      "script.js": "const density = document.querySelector('#density');\ndensity.textContent = localStorage.getItem('density') ?? '标准';\ndocument.querySelector('#reset-density').addEventListener('click', () => { localStorage.clear(); density.textContent = '标准'; });\n"
+      "script.js": "const density = document.querySelector('#density');\ndensity.textContent = localStorage.getItem('density') ?? 'standard';\ndocument.querySelector('#reset-density').addEventListener('click', () => { localStorage.clear(); density.textContent = 'standard'; });\n"
     }
   }
 }

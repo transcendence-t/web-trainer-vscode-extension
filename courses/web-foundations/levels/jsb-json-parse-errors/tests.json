@@ -1,20 +1,20 @@
 [
   {
-    "label": "合法数组按原内容读取",
+    "label": "The legal array is read according to the original content.",
     "expect": {
       "type": "function",
       "name": "readChecklist",
       "args": [
-        "[\"纸张\",\"笔\"]"
+        "[\"paper\",\"pen\"]"
       ],
       "value": [
-        "纸张",
-        "笔"
+        "paper",
+        "pen"
       ]
     }
   },
   {
-    "label": "不同类型的元素仍保留",
+    "label": "elements of different types remain",
     "expect": {
       "type": "function",
       "name": "readChecklist",
@@ -29,29 +29,29 @@
     }
   },
   {
-    "label": "未闭合文本得到空数组",
+    "label": "Unclosed text gets empty array",
     "expect": {
       "type": "function",
       "name": "readChecklist",
       "args": [
-        "[\"纸张\""
+        "[\"paper\""
       ],
       "value": []
     }
   },
   {
-    "label": "普通对象也不符合导入格式",
+    "label": "Ordinary objects also do not conform to the import format",
     "expect": {
       "type": "function",
       "name": "readChecklist",
       "args": [
-        "{\"name\":\"笔\"}"
+        "{\"name\":\"pen\"}"
       ],
       "value": []
     }
   },
   {
-    "label": "单独的 null 不是数组",
+    "label": "A single null is not an array",
     "expect": {
       "type": "function",
       "name": "readChecklist",

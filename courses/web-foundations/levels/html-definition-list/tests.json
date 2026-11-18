@@ -1,6 +1,6 @@
 [
   {
-    "label": "页面有一个描述列表",
+    "label": "page has a description list",
     "expect": {
       "type": "count",
       "selector": "dl",
@@ -8,7 +8,7 @@
     }
   },
   {
-    "label": "列表包含两个术语",
+    "label": "list contains two terms",
     "expect": {
       "type": "count",
       "selector": "dl > dt, dl > div > dt",
@@ -16,7 +16,7 @@
     }
   },
   {
-    "label": "列表包含两条解释",
+    "label": "list contains two explanations",
     "expect": {
       "type": "count",
       "selector": "dl > dd, dl > div > dd",
@@ -24,35 +24,35 @@
     }
   },
   {
-    "label": "第一个术语是翼展",
+    "label": "The first term is wingspan",
     "expect": {
       "type": "text",
       "selector": "dl > dt:first-of-type, dl > div:first-child > dt",
-      "value": "翼展"
+      "value": "wingspan"
     }
   },
   {
-    "label": "翼展后紧跟它的解释",
+    "label": "Wingspan is followed by its explanation.",
     "expect": {
       "type": "text",
       "selector": "dl > dt:first-of-type + dd, dl > div:first-child > dt + dd",
-      "value": "两翼展开时，两侧翼尖之间的距离。"
+      "value": "The distance between the wing tips on both sides when the wings are unfolded."
     }
   },
   {
-    "label": "第二个术语是留鸟",
+    "label": "The second term is resident bird",
     "expect": {
       "type": "text",
       "selector": "dl > dt:last-of-type, dl > div:last-child > dt",
-      "value": "留鸟"
+      "value": "resident bird"
     }
   },
   {
-    "label": "留鸟后紧跟它的解释",
+    "label": "Explanation of staying behind a bird and following it closely",
     "expect": {
       "type": "text",
       "selector": "dl > dt:last-of-type + dd, dl > div:last-child > dt + dd",
-      "value": "全年留在同一地区生活的鸟。"
+      "value": "A bird that stays in the same area year-round."
     }
   }
 ]

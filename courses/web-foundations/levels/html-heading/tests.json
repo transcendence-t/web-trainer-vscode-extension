@@ -1,20 +1,20 @@
 [
   {
-    "label": "一级标题文字正确",
+    "label": "The first-level title text is correct",
     "expect": {
       "type": "text",
       "selector": "main > h1",
-      "value": "我的第一张网页"
+      "value": "My first webpage"
     },
-    "hint": "在 main 内使用 <h1>。"
+    "hint": "uses <h1> inside main."
   },
   {
-    "label": "段落紧接标题",
+    "label": "Paragraph immediately follows the title",
     "expect": {
       "type": "text",
       "selector": "main > h1 + p",
-      "value": "我正在学习网页设计。"
+      "value": "I am learning web design."
     },
-    "hint": "把 <p> 写在 </h1> 后面，留意句号。"
+    "hint": "Write <p> after </h1> and pay attention to the period."
   }
 ]

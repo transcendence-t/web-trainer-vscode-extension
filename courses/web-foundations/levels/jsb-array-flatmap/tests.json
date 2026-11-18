@@ -1,6 +1,6 @@
 [
   {
-    "label": "教室与内部顺序都保留",
+    "label": "Classroom and internal order are retained",
     "expect": {
       "type": "function",
       "name": "participantNames",
@@ -8,26 +8,26 @@
         [
           {
             "names": [
-              "小方",
-              "小陈"
+              "Xiaofang",
+              "Xiao Chen"
             ]
           },
           {
             "names": [
-              "小周"
+              "Xiao Zhou"
             ]
           }
         ]
       ],
       "value": [
-        "小方",
-        "小陈",
-        "小周"
+        "Xiaofang",
+        "Xiao Chen",
+        "Xiao Zhou"
       ]
     }
   },
   {
-    "label": "空教室不占一个位置",
+    "label": "Empty classroom does not occupy a space",
     "expect": {
       "type": "function",
       "name": "participantNames",
@@ -38,20 +38,20 @@
           },
           {
             "names": [
-              "杨同学",
-              "杨同学"
+              "Yang",
+              "Yang"
             ]
           }
         ]
       ],
       "value": [
-        "杨同学",
-        "杨同学"
+        "Yang",
+        "Yang"
       ]
     }
   },
   {
-    "label": "没有教室时返回空列表",
+    "label": "returns an empty list when there is no classroom",
     "expect": {
       "type": "function",
       "name": "participantNames",

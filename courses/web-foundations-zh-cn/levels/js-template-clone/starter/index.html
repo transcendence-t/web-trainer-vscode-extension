@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>从模板克隆多条器材卡</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="sheet">
+    <h1>从模板克隆多条器材卡</h1>
+    <button type="button" id="build">生成器材卡</button>
+    <ul id="cards"></ul>
+    <template id="card-template">
+      <li><strong class="model"></strong> <span class="code"></span></li>
+    </template>
+  </main>
+</body>
+</html>

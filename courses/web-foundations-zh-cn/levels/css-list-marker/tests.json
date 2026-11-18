@@ -1,0 +1,40 @@
+[
+  {
+    "label": "第一项符号变绿",
+    "expect": {
+      "type": "style",
+      "selector": ".gear li:first-child",
+      "property": "color",
+      "value": "rgb(18, 90, 70)",
+      "pseudo": "::marker"
+    }
+  },
+  {
+    "label": "第二项符号也变绿",
+    "expect": {
+      "type": "style",
+      "selector": ".gear li:last-child",
+      "property": "color",
+      "value": "rgb(18, 90, 70)",
+      "pseudo": "::marker"
+    }
+  },
+  {
+    "label": "正文仍用原来的颜色",
+    "expect": {
+      "type": "style",
+      "selector": ".gear li",
+      "property": "color",
+      "value": "rgb(36, 52, 71)"
+    }
+  },
+  {
+    "label": "保留默认的圆点",
+    "expect": {
+      "type": "style",
+      "selector": ".gear li",
+      "property": "list-style-type",
+      "value": "disc"
+    }
+  }
+]

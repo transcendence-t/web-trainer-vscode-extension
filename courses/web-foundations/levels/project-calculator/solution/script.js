@@ -9,7 +9,7 @@ function calculate(operation) {
   const second = Number(secondText);
 
   if (firstText === '' || secondText === '' || !Number.isFinite(first) || !Number.isFinite(second)) {
-    output.textContent = '请输入两个有效数字。';
+    output.textContent = 'Please enter two valid digits.';
     return;
   }
 

@@ -1,0 +1,17 @@
+{
+  "focus": "script.js",
+  "title": "交给调用方选择计算规则",
+  "goal": "把函数作为参数传入，并在处理当前记录时调用它。",
+  "summary": "服务台可以按配置选择两倍积分或补发 3 分。现成的 scoreFor 演示会选择规则并传给 applyScore。",
+  "tasks": [
+    "完成 applyScore(points, transform)。调用 transform，并把 points 当作它的参数。",
+    "当 transform 未传入时，保留起始文件中的两倍积分回调。",
+    "将回调返回的结果限制为不小于 0，再返回数值。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "function apply(value, convert) { return convert(value); }\napply(3, (value) => value * 4); // 12",
+    "note": "把函数名当参数传递时不加括号。调用发生在接收方。"
+  },
+  "hint": "先获得 transform(points)，再用 Math.max(0, result) 限制下界。"
+}

@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "规定自动生成的网格行高",
-  "goal": "区分 grid-template-rows 的显式行和 grid-auto-rows 的隐式行。",
-  "summary": "值日看板两列。第一行展示长说明，其余项目每增加两个就生成新行。",
+  "title": "Specifies the automatically generated grid row height",
+  "goal": "Distinguish between explicit rows of grid-template-rows and implicit rows of grid-auto-rows.",
+  "summary": "has two columns on the duty board. The first line displays the long description, and each additional line generates a new line for each additional item.",
   "tasks": [
-    "保留第一行 64px 的高度。",
-    "用 grid-auto-rows 把后续自动行设为 40px，保持两列和间距。"
+    "retains the first row’s height of 64px.",
+    "Use grid-auto-rows to set subsequent automatic rows to 40px, maintaining two columns and spacing."
   ],
   "example": {
     "language": "css",
     "code": ".board { grid-template-rows: 60px; grid-auto-rows: 36px; }",
-    "note": "已有显式行填满后，后续项目会排列到隐式行，由 grid-auto-rows 定尺寸。"
+    "note": "After the explicit rows are filled, subsequent items will be arranged into implicit rows, the size of which is determined by grid-auto-rows."
   },
-  "hint": "第一行高度已经给出，只添加控制自动行的属性。"
+  "hint": "The height of the first row has been given, only the properties to control the automatic row are added."
 }

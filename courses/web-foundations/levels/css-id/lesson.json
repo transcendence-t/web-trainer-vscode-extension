@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "突出一条指定通知",
-  "goal": "用 ID 选择器给一组通知中的一条设置专属颜色。",
-  "summary": "选择器以 # 开头，后面跟元素的 id 值。一个页面里的每个 id 值应当唯一。",
+  "title": "Highlights a specified notification",
+  "goal": "Use the ID selector to set a unique color for one notification in a group.",
+  "summary": "selector starts with # followed by the id value of the element. Each id value within a page should be unique.",
   "tasks": [
-    "用 ID 选择器选中 id 为 closure 的闭馆通知。",
-    "把这条通知的文字设为 #754619，背景设为 #fff5da。保留开放时间通知的原样式。"
+    "Use the ID selector to select the closure notification with the id of closure.",
+    "Set the text of this notification to #754619 and the background to #fff5da. Keep the original style of the opening hours notice."
   ],
-  "hint": "两个通知都用了 notice 类。用 # 加目标通知的 id，把改动限定到这一条。",
+  "hint": "Both notifications use the notice class. Use # to add the id of the target notification to limit the changes to this one.",
   "example": {
     "language": "css",
     "code": "#pickup-time {\n  font-weight: 700;\n}",
-    "note": "自提单里，给唯一的取货时间标记 id=\"pickup-time\"，就能按这个 ID 把这行时间加粗。"
+    "note": "In the self-lading bill, if you mark the unique pickup time with id=\"pickup-time\", you can press this ID to bold the time line."
   }
 }

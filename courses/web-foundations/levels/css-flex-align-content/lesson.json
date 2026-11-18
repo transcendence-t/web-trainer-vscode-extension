@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "把多行弹性项目分布到容器上下",
-  "goal": "使用 align-content 布置多行 Flex 轨道。",
-  "summary": "备品柜图示每排两盒，共两排。第一排贴顶，第二排贴底。",
+  "title": "Distribute multi-line flexible items to the top and bottom of the container",
+  "goal": "Use align-content to lay out multi-line Flex tracks.",
+  "summary": "spare parts cabinet picture shows two boxes in each row, two rows in total. The first row is attached to the top and the second row is attached to the bottom.",
   "tasks": [
-    "为 .cabinet 整组行设置 space-between，让多行分布在上下两端。",
-    "保留换行与每盒尺寸。"
+    "sets space-between for the entire set of rows in .cabinet so that multiple rows are distributed at the top and bottom.",
+    "retains line breaks and box size."
   ],
   "example": {
     "language": "css",
     "code": ".shelf { display: flex; flex-wrap: wrap; align-content: space-between; }",
-    "note": "align-content 分配多行之间的额外空间。align-items 则对齐一行内的每个项目。"
+    "note": "align-content allocates extra space between multiple lines. align-items aligns each item in a row."
   },
-  "hint": "这是容器的行分布属性，不写在单个盒子上。"
+  "hint": "This is the row distribution attribute of the container and is not written on individual boxes."
 }

@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "按标签统一段落样式",
-  "goal": "用一个元素选择器给两条实训室开放时间设置相同样式。",
-  "summary": "元素选择器直接写 HTML 标签名。浏览器会给页面上所有同类元素应用这条规则。",
+  "title": "Unify paragraph styles by tags",
+  "goal": "Use an element selector to set the same style for two training room opening times.",
+  "summary": "element selector writes HTML tag name directly. The browser will apply this rule to all similar elements on the page.",
   "tasks": [
-    "用元素选择器 p 选中两段开放时间。",
-    "设置文字颜色为 #125a46、字号为 18px。页面标题保留原色。"
+    "Use element selector p to select two opening times.",
+    "Set the text color to #125a46 and the font size to 18px. The page title remains in its original color."
   ],
-  "hint": "选择器写 p，再把颜色和字号写进花括号。若标题也变色，检查选择器是否选中了它的祖先。",
+  "hint": "Write p in the selector, and then write the color and font size in curly brackets. If the title also changes color, check to see if its ancestor is selected by the selector.",
   "example": {
     "language": "css",
     "code": "figcaption {\n  color: #4a5568;\n  font-size: 14px;\n}",
-    "note": "作品相册用 figcaption 标记每张图下的说明。这个元素选择器可以让所有图片说明采用同一字号和颜色。"
+    "note": "works album uses figcaption to mark the description under each picture. This element selector allows all image captions to use the same font size and color."
   }
 }

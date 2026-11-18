@@ -1,6 +1,6 @@
 [
   {
-    "label": "根据返回数据生成两项",
+    "label": "generates two items based on the returned data",
     "expect": {
       "type": "count",
       "selector": "#events > li",
@@ -18,11 +18,11 @@
     ]
   },
   {
-    "label": "首项文字来自 JSON",
+    "label": "The first text comes from JSON",
     "expect": {
       "type": "text",
       "selector": "#events > li:first-child",
-      "value": "陶艺开放"
+      "value": "Open pottery studio"
     },
     "actions": [
       {
@@ -36,11 +36,11 @@
     ]
   },
   {
-    "label": "空清单有明确反馈",
+    "label": "empty list has clear feedback",
     "expect": {
       "type": "text",
       "selector": "#notice",
-      "value": "暂无活动"
+      "value": "No activities"
     },
     "actions": [
       {
@@ -59,7 +59,7 @@
     ]
   },
   {
-    "label": "切换样例清除旧结果",
+    "label": "Switch sample to clear old results",
     "expect": {
       "type": "count",
       "selector": "#events > li",
@@ -90,11 +90,11 @@
     ]
   },
   {
-    "label": "损坏的 JSON 有失败反馈",
+    "label": "Corrupted JSON has failure feedback",
     "expect": {
       "type": "text",
       "selector": "#notice",
-      "value": "数据无法读取"
+      "value": "data cannot be read"
     },
     "actions": [
       {

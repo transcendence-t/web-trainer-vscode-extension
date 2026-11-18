@@ -1,31 +1,31 @@
 [
   {
-    "label": "输入文字时暂不更新桌牌",
+    "label": "Table cards are not updated temporarily when entering text.",
     "expect": {
       "type": "text",
       "selector": "#table-card",
-      "value": "尚未设置"
+      "value": "has not been set yet"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#table-name",
-        "value": "陶艺桌"
+        "value": "ceramic table"
       }
     ]
   },
   {
-    "label": "按 Enter 后显示新桌牌",
+    "label": "Press Enter to display new table cards",
     "expect": {
       "type": "text",
       "selector": "#table-card",
-      "value": "陶艺桌"
+      "value": "ceramic table"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#table-name",
-        "value": "陶艺桌"
+        "value": "ceramic table"
       },
       {
         "type": "key",
@@ -35,17 +35,17 @@
     ]
   },
   {
-    "label": "按 Escape 时不确认桌牌",
+    "label": "Table cards are not confirmed when pressing Escape",
     "expect": {
       "type": "text",
       "selector": "#table-card",
-      "value": "尚未设置"
+      "value": "has not been set yet"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#table-name",
-        "value": "版画桌"
+        "value": "Printmaking table"
       },
       {
         "type": "key",
@@ -55,17 +55,17 @@
     ]
   },
   {
-    "label": "下一次按字母键时保留上次确认的名字",
+    "label": "Keep the last confirmed name the next time you press the letter key",
     "expect": {
       "type": "text",
       "selector": "#table-card",
-      "value": "木工桌"
+      "value": "carpentry table"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#table-name",
-        "value": "木工桌"
+        "value": "carpentry table"
       },
       {
         "type": "key",
@@ -75,7 +75,7 @@
       {
         "type": "input",
         "selector": "#table-name",
-        "value": "版画桌"
+        "value": "Printmaking table"
       },
       {
         "type": "key",
@@ -85,17 +85,17 @@
     ]
   },
   {
-    "label": "再次按 Enter 后可以更新桌牌",
+    "label": "Press Enter again to update the table cards",
     "expect": {
       "type": "text",
       "selector": "#table-card",
-      "value": "版画桌"
+      "value": "Printmaking table"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#table-name",
-        "value": "木工桌"
+        "value": "carpentry table"
       },
       {
         "type": "key",
@@ -105,7 +105,7 @@
       {
         "type": "input",
         "selector": "#table-name",
-        "value": "版画桌"
+        "value": "Printmaking table"
       },
       {
         "type": "key",

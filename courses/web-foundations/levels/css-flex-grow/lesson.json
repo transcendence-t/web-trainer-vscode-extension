@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "让输入框填满剩余空间",
-  "goal": "在馆藏检索栏里，让输入框占据剩余宽度，查询按钮保持固定宽度。",
-  "summary": "Flexbox 先考虑各项的初始尺寸，再按 flex-grow 分配剩余空间。某个项目的值为 0 时，它不会分到多余的空间。",
+  "title": "Let the input box fill the remaining space",
+  "goal": "In the collection search bar, let the input box occupy the remaining width and the search button maintains a fixed width.",
+  "summary": "Flexbox first considers the initial size of each item, and then presses flex-grow to allocate the remaining space. When an item's value is 0, it is not allocated extra space.",
   "tasks": [
-    "把关键词输入框 #book-query 的 flex-grow 设置为 1。",
-    "让输入框随窗口变宽而增宽，查询按钮维持 80px，原有的 12px 间距继续生效。"
+    "Set the flex-grow of the keyword input box #book-query to 1.",
+    "makes the input box widen as the window becomes wider, the query button maintains 80px, and the original 12px spacing continues to take effect."
   ],
-  "hint": "在要变宽的项目上写 flex-grow。留意查询按钮已有的固定尺寸设置。",
+  "hint": "Write flex-grow on the item to be widened. Note that the query button already has a fixed size setting.",
   "example": {
     "language": "css",
     "code": ".lesson-meta {\n  display: flex;\n  gap: 10px;\n}\n\n.lesson-name {\n  flex-grow: 1;\n}",
-    "note": "课程条目中，课程名称占据多余的宽度，右边只标出课时数。"
+    "note": "course entry, the course name occupies the extra width, and only the number of class hours is marked on the right."
   }
 }

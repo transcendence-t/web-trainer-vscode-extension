@@ -1,17 +1,17 @@
 {
   "focus": "script.js",
-  "title": "记住上次保存的访客昵称",
-  "goal": "用 localStorage 写入字符串，页面再次打开时用同一个键读取。",
-  "summary": "访客可以保存一个昵称。保存按钮更新当前页面，再次打开这一关也能读到同一个值。",
+  "title": "Remember the last saved visitor nickname",
+  "goal": "uses localStorage to write a string, and when the page is opened again, use the same key to read it.",
+  "summary": "Visitors can save a nickname. The save button updates the current page, and you can read the same value when you open this level again.",
   "tasks": [
-    "页面打开时，从 localStorage 读取 visitorNickname，并在 #saved-name 显示它。没有记录时显示「暂无昵称」。",
-    "在点击「保存」时，把输入框去掉首尾空白后的昵称存到 visitorNickname，并更新 #saved-name。",
-    "保留已有的空文本检查，空昵称不覆盖已保存的值。"
+    "page opens, read visitorNickname from localStorage and display it in #saved-name. \"No nickname yet\" is displayed when there is no record.",
+    "When \"Save\" is clicked, the nickname after removing the leading and trailing blanks from the input box is saved to visitorNickname, and #saved-name is updated.",
+    "retains existing empty text checks, and empty nicknames do not overwrite saved values."
   ],
   "example": {
     "language": "javascript",
     "code": "localStorage.setItem('distanceUnit', 'km');\nconst unit = localStorage.getItem('distanceUnit');",
-    "note": "地图页面可以用一个键保存距离单位。setItem 写入文本，getItem 读取同一个键。键从未写入时，getItem 返回 null。"
+    "note": "Map page can save distance units with one key. setItem writes text and getItem reads the same key. getItem returns null when the key has never been written."
   },
-  "hint": "保存后要更新页面，页面加载时也要执行 getItem。只在点击保存时修改文字，重新打开后会回到默认内容。"
+  "hint": "needs to update the page after saving, and getItem must also be executed when the page is loaded. Only modify the text when you click Save, and it will return to the default content after reopening."
 }

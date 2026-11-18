@@ -1,6 +1,6 @@
 [
   {
-    "label": "按钮背景为绿色",
+    "label": "button background is green",
     "expect": {
       "type": "style",
       "selector": ".signup",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "按钮文字为白色",
+    "label": "button text is white",
     "expect": {
       "type": "style",
       "selector": ".signup",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "内边距随方向变化",
+    "label": "Padding changes with direction",
     "expect": {
       "type": "style",
       "selector": ".signup",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "按钮具有胶囊形圆角",
+    "label": "button has capsule rounded corners",
     "expect": {
       "type": "style",
       "selector": ".signup",

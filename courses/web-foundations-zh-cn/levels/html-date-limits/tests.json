@@ -1,0 +1,67 @@
+[
+  {
+    "label": "使用原生日期控件",
+    "expect": {
+      "type": "property",
+      "selector": "#visit-date",
+      "name": "type",
+      "value": "date"
+    }
+  },
+  {
+    "label": "6 月 9 日被拒绝",
+    "expect": {
+      "type": "exists",
+      "selector": "#visit-date:invalid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#visit-date",
+        "value": "2027-06-09"
+      }
+    ]
+  },
+  {
+    "label": "6 月 10 日可选",
+    "expect": {
+      "type": "exists",
+      "selector": "#visit-date:valid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#visit-date",
+        "value": "2027-06-10"
+      }
+    ]
+  },
+  {
+    "label": "6 月 14 日可选",
+    "expect": {
+      "type": "exists",
+      "selector": "#visit-date:valid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#visit-date",
+        "value": "2027-06-14"
+      }
+    ]
+  },
+  {
+    "label": "6 月 15 日被拒绝",
+    "expect": {
+      "type": "exists",
+      "selector": "#visit-date:invalid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#visit-date",
+        "value": "2027-06-15"
+      }
+    ]
+  }
+]

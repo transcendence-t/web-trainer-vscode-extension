@@ -1,48 +1,48 @@
 {
   "css-color": {
-    "name": "用 li 选择器给所有事项上色",
+    "name": "Use li selector to color everything",
     "files": {
-      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n/* 在下面编写本关样式。 */\n\nli {\n  color: #9c3412;\n}\n"
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n/* Write the style of this level below. */\n\nli {\n  color: #9c3412;\n}\n"
     }
   },
   "css-font": {
-    "name": "给通用字体族 monospace 加了引号",
+    "name": "adds quotes to the universal font family monospace",
     "files": {
-      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n/* 在下面编写本关样式。 */\n\n.pickup-code {\n  font-family: \"monospace\";\n}\n"
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n/* Write the style of this level below. */\n\n.pickup-code {\n  font-family: \"monospace\";\n}\n"
     }
   },
   "css-line-height": {
-    "name": "将两种字号的行高固定为 28px",
+    "name": "fixes the line height of both font sizes to 28px",
     "files": {
-      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.fine-print {\n  font-size: 12px;\n}\n\n/* 在下面编写本关样式。 */\n\n.reading-copy {\n  line-height: 28px;\n}\n"
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.fine-print {\n  font-size: 12px;\n}\n\n/* Write the style of this level below. */\n\n.reading-copy {\n  line-height: 28px;\n}\n"
     }
   },
   "css-text-align": {
-    "name": "让栏目标题和段落一起继承居中样式",
+    "name": "Let the column title and paragraph inherit the centering style",
     "files": {
-      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.sheet {\n  text-align: left;\n}\n\n/* 在下面编写本关样式。 */\n\nsection {\n  text-align: center;\n}\n"
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.sheet {\n  text-align: left;\n}\n\n/* Write the style of this level below. */\n\nsection {\n  text-align: center;\n}\n"
     }
   },
   "css-text-decoration": {
-    "name": "把删除线写成下划线",
+    "name": "Write strikethrough as underline",
     "files": {
-      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n/* 在下面编写本关样式。 */\n\n.old-price {\n  text-decoration: underline;\n}\n"
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n/* Write the style of this level below. */\n\n.old-price {\n  text-decoration: underline;\n}\n"
     }
   },
   "css-background": {
-    "name": "把公告底色设成了文字颜色",
+    "name": "sets the background color of the announcement to the text color",
     "files": {
-      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.status {\n  padding: .5em .75em;\n  border-radius: 6px;\n}\n\n/* 在下面编写本关样式。 */\n\n.closure {\n  color: #fff1c2;\n}\n"
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.status {\n  padding: .5em .75em;\n  border-radius: 6px;\n}\n\n/* Write the style of this level below. */\n\n.closure {\n  color: #fff1c2;\n}\n"
     }
   },
   "css-border-style": {
-    "name": "把待清点货签也画成实线",
+    "name": "Draw the label of goods to be counted as a solid line",
     "files": {
-      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.stock-card {\n  margin-top: 1em;\n  padding: .75em 1em;\n  border-width: 2px;\n  border-color: #35746d;\n}\n\n.checked {\n  border-style: solid;\n}\n\n/* 在下面编写本关样式。 */\n\n.pending {\n  border-style: solid;\n}\n"
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.stock-card {\n  margin-top: 1em;\n  padding: .75em 1em;\n  border-width: 2px;\n  border-color: #35746d;\n}\n\n.checked {\n  border-style: solid;\n}\n\n/* Write the style of this level below. */\n\n.pending {\n  border-style: solid;\n}\n"
     }
   },
   "css-box": {
-    "name": "把卡片内边距写成外边距",
+    "name": "Write the inner margin of the card as the outer margin",
     "files": {
       "style.css": "* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  padding: 24px 16px;\n  min-height: 100vh;\n  font: 16px/1.5 system-ui, sans-serif;\n  color: #243447;\n  background: #edf5f2;\n}\n.sheet {\n  max-width: 420px;\n  margin: 0 auto;\n  padding: 22px;\n  border: 1px solid #cddfd8;\n  border-radius: 14px;\n  background: #fff;\n}\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.25; }\nh2 { font-size: 1.125rem; }\np, ul, figure { margin: .6em 0; }\nbutton, input { font: inherit; }\nbutton { cursor: pointer; }\na { color: #125a46; }\n.card { background: #f5faf8; }\n\n.card {\n  margin: 16px;\n  border: 2px solid #3b7d68;\n  border-radius: 12px;\n}\n"
     }

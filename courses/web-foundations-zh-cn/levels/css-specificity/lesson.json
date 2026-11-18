@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "控制冲突样式的优先级",
+  "goal": "用优先级更高的选择器，让指定状态的颜色先写也能生效。",
+  "summary": "同一份普通样式表里的规则同时设置一个属性时，浏览器会先比较选择器优先级。优先级相同，后写的规则生效。",
+  "tasks": [
+    "只编辑 style.css，在注释处添加规则，把「配送延迟」的文字改为 #9a3412。",
+    "让新规则排在 #delivery-alert 原有规则前。保留原有规则，使「配送正常」继续显示为绿色。"
+  ],
+  "hint": "让新选择器同时匹配现有的 ID 和类。只写相同 ID 会和后面的规则同优先级。",
+  "example": {
+    "language": "css",
+    "code": "#credits.footer-note {\n  color: #754619;\n}\n\n#credits {\n  color: #264a7c;\n}",
+    "note": "页尾版权条有 id=\"credits\" 和 class=\"footer-note\"。第一条规则多匹配了一个类，优先级更高，棕色生效。"
+  }
+}

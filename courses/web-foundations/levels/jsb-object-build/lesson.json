@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "把报修参数装进工单对象",
-  "goal": "用对象字面量返回多个命名字段，并保留输入值的类型。",
-  "summary": "报修系统把问题、预计时间和紧急状态交给维修人员。把分开的参数收进同一个工单对象。",
+  "title": "Load repair parameters into the work order object",
+  "goal": "Returns multiple named fields using object literals, preserving the type of the input values.",
+  "summary": "repair reporting system hands the problem, estimated time and emergency status to the maintenance personnel. Collect separate parameters into the same work order object.",
   "tasks": [
-    "完成 makeRepairOrder(issue, minutes, urgent)。返回一个对象，字段名是 issue、minutes、urgent。",
-    "按同名参数填入对应的值。issue 保持字符串，minutes 保持数字，urgent 保持布尔值。"
+    "complete makeRepairOrder(issue, minutes, urgent). Return an object with field names issue, minutes, and urgent.",
+    "Fill in the corresponding value according to the parameter with the same name. issue holds a string, minutes holds a number, and urgent holds a boolean."
   ],
   "example": {
     "language": "javascript",
-    "code": "function createPass(holder, confirmed) {\n  return { holder: holder, confirmed: confirmed };\n}\n// createPass('林淮', true) 返回 { holder: '林淮', confirmed: true }",
-    "note": "冒号左边是字段名，右边填入参数的值。字段和值的变量同名时，可以简写成 { holder, confirmed }。"
+    "code": "function createPass(holder, confirmed) {\n  return { holder: holder, confirmed: confirmed };\n}\n// createPass('Lin Huai', true) returns { holder: 'Lin Huai', confirmed: true }",
+    "note": "The left side of the colon is the field name, and the right side is filled with the parameter value. When the field and value variables have the same name, they can be abbreviated as {holder, confirmed}."
   },
-  "hint": "直接把 urgent 存进对象即可。用引号包起字段值或转换成文字会丢掉布尔类型。"
+  "hint": "Just save urgent into the object directly. Wrapping field values ​​in quotes or converting to literals will lose the Boolean type."
 }

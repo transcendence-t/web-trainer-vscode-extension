@@ -1,6 +1,6 @@
 [
   {
-    "label": "正时区可能归入前一天",
+    "label": "The correct time zone may fall into the previous day",
     "expect": {
       "type": "function",
       "name": "archiveDay",
@@ -11,7 +11,7 @@
     }
   },
   {
-    "label": "负时区可能归入后一天",
+    "label": "Negative time zones may fall into the next day",
     "expect": {
       "type": "function",
       "name": "archiveDay",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "label": "已经是 UTC 时保留日期",
+    "label": "retains the date when it is already UTC",
     "expect": {
       "type": "function",
       "name": "archiveDay",

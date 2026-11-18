@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "让两个发号器各自记住序号",
-  "goal": "用返回的内部函数保存彼此独立的状态。",
-  "summary": "两个窗口分别使用一个发号器。交替取号时，每个窗口只推进自己的序号。",
+  "title": "Let the two serializers remember the serial number respectively",
+  "goal": "uses the returned internal function to save independent states.",
+  "summary": "Two windows use one numberer respectively. When taking numbers alternately, each window only advances its own serial number.",
   "tasks": [
-    "完成 makeTicketQueue(start)，返回一个可反复调用的函数，每次返回当前号并为下一次加一。",
-    "两个独立创建的发号器不能互相影响。保留起始代码里的 showTickets 预览函数。"
+    "completes makeTicketQueue(start) and returns a function that can be called repeatedly. Each time it returns the current number and adds one to the next time.",
+    "Two independently created numberers cannot affect each other. Keep the showTickets preview function in the starting code."
   ],
   "example": {
     "language": "javascript",
     "code": "function makeTicker(initial) {\n  let current = initial;\n  return () => ++current;\n}",
-    "note": "内部函数即使在外部调用，也能读写创建时的局部变量。示例先加再返回，本关先返回当前号。"
+    "note": "Internal functions can read and write local variables when they are created even if they are called externally. The example adds first and then returns. In this level, the current number is returned first."
   },
-  "hint": "每次调用 makeTicketQueue 都在函数内部创建自己的编号变量。不要把变量放到全局。"
+  "hint": "Create a separate ticket number variable inside each call to makeTicketQueue. Keep it out of global scope."
 }

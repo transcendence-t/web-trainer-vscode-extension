@@ -1,6 +1,6 @@
 [
   {
-    "label": "仍使用内嵌的装饰图",
+    "label": "still uses embedded decorative images",
     "expect": {
       "type": "style",
       "selector": ".map-card",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "背景图只显示一次",
+    "label": "background image is only displayed once",
     "expect": {
       "type": "style",
       "selector": ".map-card",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "图位于右下角",
+    "label": "picture is in the lower right corner",
     "expect": {
       "type": "style",
       "selector": ".map-card",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "背景图保持比例并限宽",
+    "label": "background image maintains proportion and limits width",
     "expect": {
       "type": "style",
       "selector": ".map-card",

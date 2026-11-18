@@ -1,30 +1,30 @@
 {
   "js-select": {
-    "name": "用选项的位置查找按代号保存的提示",
+    "name": "Use the location of the option to find the prompt to save by code name",
     "files": {
-      "script.js": "const tour = document.querySelector('#tour');\nconst meeting = document.querySelector('#meeting-point');\nconst meetingPoints = {\n  ceramics: '10:00 在陶艺馆门口集合。',\n  clocks: '14:00 在钟表馆咨询台集合。',\n  prints: '16:00 在版画馆大厅集合。',\n};\n\ntour.addEventListener('change', () => {\n  meeting.textContent = meetingPoints[tour.selectedIndex] ?? '请先选择导览场次。';\n});\n"
+      "script.js": "const tour = document.querySelector('#tour');\nconst meeting = document.querySelector('#meeting-point');\nconst meetingPoints = {\n  ceramics: '10:00 Meet at the entrance of the Ceramic Art Museum.',\n  clocks: '14:00 Meet at the information desk of the Clock Museum.',\n  prints: '16:00 Gather in the lobby of the Printmaking Gallery.',\n};\n\ntour.addEventListener('change', () => {\n  meeting.textContent = meetingPoints[tour.selectedIndex] ?? 'Please select the tour session first.';\n});\n"
     }
   },
   "js-validate": {
-    "name": "直接检查原始输入，空格会被当成标题",
+    "name": "directly checks the original input, and spaces will be treated as titles.",
     "files": {
-      "script.js": "const form = document.querySelector('#submission-form');\nconst titleField = document.querySelector('#work-title');\nconst feedback = document.querySelector('#submission-feedback');\n\nform.addEventListener('submit', (event) => {\n  event.preventDefault();\n  const title = titleField.value;\n  if (title.length === 0) {\n    feedback.textContent = '请填写作品标题。';\n    return;\n  }\n  if (title.length < 3) {\n    feedback.textContent = '标题至少需要 3 个字符。';\n    return;\n  }\n  feedback.textContent = '作品标题《' + title + '》已通过检查。';\n});\n"
+      "script.js": "const form = document.querySelector('#submission-form');\nconst titleField = document.querySelector('#work-title');\nconst feedback = document.querySelector('#submission-feedback');\n\nform.addEventListener('submit', (event) => {\n  event.preventDefault();\n  const title = titleField.value;\n  if (title.length === 0) {\n    feedback.textContent = 'Please fill in the title of the work.';\n    return;\n  }\n  if (title.length < 3) {\n    feedback.textContent = 'Title requires at least 3 characters.';\n    return;\n  }\n  feedback.textContent = 'The title of the work \"' + title + '\" has passed the inspection.';\n});\n"
     }
   },
   "js-keys": {
-    "name": "把每次按键都当作确认操作",
+    "name": "treats each key press as a confirmation operation",
     "files": {
       "script.js": "const tableName = document.querySelector('#table-name');\nconst tableCard = document.querySelector('#table-card');\n\ntableName.addEventListener('keydown', (event) => {\n  tableCard.textContent = tableName.value;\n});\n"
     }
   },
   "js-loop": {
-    "name": "重复点击时继续添加到旧列表",
+    "name": "Continue to add to the old list when clicked repeatedly",
     "files": {
-      "script.js": "const button = document.querySelector('#make-list');\nconst list = document.querySelector('#days');\nbutton.addEventListener('click', () => {\n  for (let day = 1; day <= 5; day++) {\n    const item = document.createElement('li');\n    item.textContent = `第 ${day} 天`;\n    list.append(item);\n  }\n});\n"
+      "script.js": "const button = document.querySelector('#make-list');\nconst list = document.querySelector('#days');\nbutton.addEventListener('click', () => {\n  for (let day = 1; day <= 5; day++) {\n    const item = document.createElement('li');\n    item.textContent = `Day ${day}`;\n    list.append(item);\n  }\n});\n"
     }
   },
   "js-delegation": {
-    "name": "只接受直接点到 button 的事件",
+    "name": "only accepts events that directly click the button",
     "files": {
       "script.js": "const songList = document.querySelector('#song-list');\nconst selectedSong = document.querySelector('#selected-song');\nconst addSong = document.querySelector('#add-song');\nconst extraSong = document.querySelector('#extra-song');\n\naddSong.addEventListener('click', () => {\n  songList.append(extraSong.content.cloneNode(true));\n  addSong.disabled = true;\n});\n\nsongList.addEventListener('click', (event) => {\n  const song = event.target.matches('button[data-title]') ? event.target : null;\n  if (song) {\n    selectedSong.textContent = song.dataset.title;\n  }\n});\n"
     }

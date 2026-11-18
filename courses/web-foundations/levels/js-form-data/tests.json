@@ -1,16 +1,16 @@
 [
   {
-    "label": "两项都写入回执",
+    "label": "Both items are written to the receipt",
     "expect": {
       "type": "text",
       "selector": "#receipt",
-      "value": "小冯：上午、下午"
+      "value": "Xiao Feng: Morning, Afternoon"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#visitor",
-        "value": " 小冯 "
+        "value": " Xiao Feng "
       },
       {
         "type": "click",
@@ -27,17 +27,17 @@
     ]
   },
   {
-    "label": "一项有效",
+    "label": "One item is valid",
     "expect": {
       "type": "text",
       "selector": "#receipt",
-      "value": "小林：下午"
+      "value": "Xiaolin: Afternoon"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#visitor",
-        "value": "小林"
+        "value": "Xiaolin"
       },
       {
         "type": "click",
@@ -50,17 +50,17 @@
     ]
   },
   {
-    "label": "空选择有明确提示",
+    "label": "There is a clear prompt for empty selection",
     "expect": {
       "type": "text",
       "selector": "#receipt",
-      "value": "小林：未选场次"
+      "value": "Xiaolin: No sessions selected"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#visitor",
-        "value": "小林"
+        "value": "Xiaolin"
       },
       {
         "type": "click",
@@ -69,7 +69,7 @@
     ]
   },
   {
-    "label": "脚本拦截默认跳转",
+    "label": "script intercepts default jump",
     "expect": {
       "type": "attribute",
       "selector": "#receipt",
@@ -80,7 +80,7 @@
       {
         "type": "input",
         "selector": "#visitor",
-        "value": "小林"
+        "value": "Xiaolin"
       },
       {
         "type": "click",

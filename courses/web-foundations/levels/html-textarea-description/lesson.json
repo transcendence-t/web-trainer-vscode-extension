@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "给多行说明添加长度限制和填写提示",
-  "goal": "使用 textarea 接收多行文本，并关联可访问的辅助说明。",
-  "summary": "借用目的可能分为几行。标签负责命名，说明段落负责提示长度要求。",
+  "title": "Add length limits and filling tips to multi-line descriptions",
+  "goal": "uses a textarea to receive multiple lines of text and associate accessible auxiliary instructions.",
+  "summary": "The borrowing purpose may be divided into several lines. The tag is responsible for naming, and the description paragraph is responsible for reminding the length requirements.",
   "tasks": [
-    "把 #reason 改为 textarea，保留 label 和 name，设置 4 行、最多 120 个字符、必填。",
-    "用 aria-describedby 关联已有的 #reason-guide。"
+    "Change #reason to textarea, keep label and name, set 4 lines, up to 120 characters, required.",
+    "Use aria-describedby to associate an existing #reason-guide."
   ],
   "example": {
     "language": "html",
-    "code": "<label for=\"note\">备注</label>\n<textarea id=\"note\" rows=\"3\" aria-describedby=\"guide\"></textarea>\n<p id=\"guide\">可以补充领取时间。</p>",
-    "note": "textarea 需要结束标签。aria-describedby 的值是说明元素的 ID，不写 #。"
+    "code": "<label for=\"note\">Remarks</label>\n<textarea id=\"note\" rows=\"3\" aria-describedby=\"guide\"></textarea>\n<p id=\"guide\">can supplement the collection time.</p>",
+    "note": "textarea requires closing tag. The value of aria-describedby is the ID of the description element, without #."
   },
-  "hint": "length 限制对应 maxlength，行数写入 rows。"
+  "hint": "length limit corresponds to maxlength, and the number of rows is written in rows."
 }

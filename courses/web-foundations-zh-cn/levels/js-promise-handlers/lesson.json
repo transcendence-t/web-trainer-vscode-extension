@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "分别处理承诺的成功与失败",
+  "goal": "用 then 与 catch 处理 Promise 的两个结果，并支持后续重试。",
+  "summary": "登记员查询取件窗口。演示按钮分别触发可用和忙碌两种情况。",
+  "tasks": [
+    "监听 #ready 与 #busy 的点击，分别调用 askDesk(true) 和 askDesk(false)。",
+    "成功时在 #desk 显示「请到 窗口 2」。失败时显示 Error 的 message。后续成功要更新旧的失败提示。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "request().then((value) => update(value))\n  .catch((error) => showError(error.message));",
+    "note": "then 接收成功值，catch 接收拒绝原因，也能处理前面回调抛出的异常。"
+  },
+  "hint": "两种按钮可以共用一个参数不同的处理函数，用同一条 Promise 链更新状态。"
+}

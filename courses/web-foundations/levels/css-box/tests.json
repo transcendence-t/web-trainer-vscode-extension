@@ -1,6 +1,6 @@
 [
   {
-    "label": "四边内边距为 16px",
+    "label": "has 16px padding on all sides",
     "expect": {
       "type": "style",
       "selector": ".card",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "四边边框为绿色实线",
+    "label": "has green solid lines on all four sides",
     "expect": {
       "type": "style",
       "selector": ".card",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "四角圆角为 12px",
+    "label": "The four corners are rounded to 12px",
     "expect": {
       "type": "style",
       "selector": ".card",

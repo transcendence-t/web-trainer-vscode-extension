@@ -3,7 +3,7 @@ const secondField = document.querySelector('#second-number');
 const output = document.querySelector('#calc-result');
 
 function calculate(operation) {
-  // 在这里校验两个输入值，计算并显示结果。
+  // Here, two input values are verified, the results are calculated and displayed.
 }
 
 document.querySelector('#calc-add').addEventListener('click', () => calculate('add'));

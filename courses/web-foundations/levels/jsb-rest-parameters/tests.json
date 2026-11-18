@@ -1,6 +1,6 @@
 [
   {
-    "label": "累计不同批次",
+    "label": "accumulated different batches",
     "expect": {
       "type": "function",
       "name": "shippedCount",
@@ -14,7 +14,7 @@
     }
   },
   {
-    "label": "没有新出库时保留登记数量",
+    "label": "Reserve the registered quantity when there is no new shipment",
     "expect": {
       "type": "function",
       "name": "shippedCount",
@@ -25,7 +25,7 @@
     }
   },
   {
-    "label": "可只传一个新批次",
+    "label": "can only transfer a new batch",
     "expect": {
       "type": "function",
       "name": "shippedCount",
@@ -37,7 +37,7 @@
     }
   },
   {
-    "label": "也能处理四个新批次",
+    "label": "can also handle four new batches",
     "expect": {
       "type": "function",
       "name": "shippedCount",

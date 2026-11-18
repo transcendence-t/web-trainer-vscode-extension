@@ -1,0 +1,29 @@
+[
+  {
+    "label": "可领取边框沿用绿色",
+    "expect": {
+      "type": "style",
+      "selector": ".ready",
+      "property": "border",
+      "value": "2px solid rgb(18, 90, 70)"
+    }
+  },
+  {
+    "label": "核对中边框沿用棕色",
+    "expect": {
+      "type": "style",
+      "selector": ".pending",
+      "property": "border",
+      "value": "2px solid rgb(124, 70, 14)"
+    }
+  },
+  {
+    "label": "核对中文案保留原色",
+    "expect": {
+      "type": "style",
+      "selector": ".pending",
+      "property": "color",
+      "value": "rgb(124, 70, 14)"
+    }
+  }
+]

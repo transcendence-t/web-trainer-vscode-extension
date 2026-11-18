@@ -1,0 +1,89 @@
+[
+  {
+    "label": "工具条使用粘性定位",
+    "expect": {
+      "type": "style",
+      "selector": ".log-toolbar",
+      "property": "position",
+      "value": "sticky"
+    }
+  },
+  {
+    "label": "工具条的吸顶距离为零",
+    "expect": {
+      "type": "style",
+      "selector": ".log-toolbar",
+      "property": "top",
+      "value": "0px"
+    }
+  },
+  {
+    "label": "工具条仍使用网格布局",
+    "expect": {
+      "type": "style",
+      "selector": ".log-toolbar",
+      "property": "display",
+      "value": "grid"
+    }
+  },
+  {
+    "label": "跳转链接仍在工具条标题右侧",
+    "expect": {
+      "type": "layout",
+      "selector": ".log-toolbar a",
+      "relativeTo": ".log-toolbar h2",
+      "relation": "right-of"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": ".log-toolbar a[href=\"#latest\"]"
+      }
+    ]
+  },
+  {
+    "label": "跳转后最新记录进入日志窗口",
+    "expect": {
+      "type": "layout",
+      "selector": "#latest",
+      "relativeTo": ".log-panel",
+      "relation": "inside"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": ".log-toolbar a[href=\"#latest\"]"
+      }
+    ]
+  },
+  {
+    "label": "跳转后最早记录已滚过工具条",
+    "expect": {
+      "type": "layout",
+      "selector": ".log-toolbar",
+      "relativeTo": "#first-log",
+      "relation": "below"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": ".log-toolbar a[href=\"#latest\"]"
+      }
+    ]
+  },
+  {
+    "label": "跳转后工具条仍留在日志窗口内",
+    "expect": {
+      "type": "layout",
+      "selector": ".log-toolbar",
+      "relativeTo": ".log-panel",
+      "relation": "inside"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": ".log-toolbar a[href=\"#latest\"]"
+      }
+    ]
+  }
+]

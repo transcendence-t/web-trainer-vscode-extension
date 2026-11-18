@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "让短页面的页脚停在底部",
-  "goal": "用纵向 Flex 和最小高度让正文占据剩余空间。",
-  "summary": "有些页面正文很短，也希望页脚在视口底部。正文变长时让页脚自然排在正文之后。",
+  "title": "Let the footer of short pages stop at the bottom",
+  "goal": "Use vertical Flex and minimum height to let the text occupy the remaining space.",
+  "summary": "Some pages have very short text and want the footer to be at the bottom of the viewport. When the text becomes longer, let the footer naturally follow the text.",
   "tasks": [
-    "将 body 设为纵向 Flex 容器，最小高度为 100vh。",
-    "让 main 填充分配后的多余高度，页脚保持正常文档流。"
+    "Set the body to a vertical Flex container with a minimum height of 100vh.",
+    "Let main fill the excess height after allocation, and the footer maintains normal document flow."
   ],
   "example": {
     "language": "css",
     "code": ".shell { display: flex; flex-direction: column; min-height: 100vh; }\n.content { flex: 1; }",
-    "note": "主体填充剩余空间，可以把页脚推到下方。min-height 允许长内容继续撑高页面。"
+    "note": "The main body fills the remaining space and the footer can be pushed below. min-height allows long content to continue to stretch the page."
   },
-  "hint": "这里的 body 是最外层，main 是需要增长的项目。"
+  "hint": "The body here is the outermost layer, and main is the item that needs to be grown."
 }

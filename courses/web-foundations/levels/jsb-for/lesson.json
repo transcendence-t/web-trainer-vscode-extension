@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "按宽度生成票据分隔线",
-  "goal": "用 for 按给定次数拼接字符。",
-  "summary": "for 的三部分分别是起始值、继续执行的条件和每轮结束后的更新。从 0 开始，每次加 1，在计数小于宽度时继续，循环体就执行 width 次。",
+  "title": "Generate bill separators according to width",
+  "goal": "Use for to concatenate characters a given number of times.",
+  "summary": "for are the starting value, the conditions for continuing execution, and the update after each round. Starting from 0, incrementing by 1 each time, continuing when the count is less than the width, the loop body is executed width times.",
   "tasks": [
-    "补全 receiptDivider(width)，参数 width 是非负整数，表示需要的字符数。",
-    "用 for 每轮向 divider 拼接一个半角短横线 -，循环结束后返回字符串。width 为 0 时返回空字符串。"
+    "completes receiptDivider(width). The parameter width is a non-negative integer, indicating the required number of characters.",
+    "uses for to splice a half-width dash - to the divider in each round, and returns a string after the loop ends. When width is 0, an empty string is returned."
   ],
   "example": {
     "language": "javascript",
     "code": "function tablePlaces(seats) {\n  let plan = '';\n  for (let seat = 0; seat < seats; seat += 1) {\n    plan += '□';\n  }\n  return plan;\n}",
-    "note": "座位速览用一个方框表示一个座位，tablePlaces(3) 会返回三个方框。"
+    "note": "Seat overview uses a box to represent a seat, tablePlaces(3) will return three boxes."
   },
-  "hint": "如果结果总少一个字符，代入 width 为 1 的情况检查循环。计数从 1 开始且条件是小于 1 时，循环体一次也不会执行。"
+  "hint": "If the result always lacks one character, substitute width as 1 to check the loop. When the count starts from 1 and the condition is less than 1, the body of the loop will not be executed even once."
 }

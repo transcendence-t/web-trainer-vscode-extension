@@ -3,4 +3,4 @@ const field = document.querySelector('#task-input');
 const list = document.querySelector('#task-list');
 const template = document.querySelector('#task-template');
 
-// 先实现添加，再在 list 上处理完成和删除按钮。
+// implements adding first, and then handles the completion and deletion buttons on the list.

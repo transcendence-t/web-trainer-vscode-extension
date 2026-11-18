@@ -1,6 +1,6 @@
 [
   {
-    "label": "概况卡片使用 overview 区域",
+    "label": "overview card uses overview area",
     "expect": {
       "type": "style",
       "selector": ".show-overview",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "舞台卡片使用 stage 区域",
+    "label": "stage card uses the stage area",
     "expect": {
       "type": "style",
       "selector": ".stage-crew",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "检票卡片使用 tickets 区域",
+    "label": "Ticket card uses the tickets area",
     "expect": {
       "type": "style",
       "selector": ".front-desk",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "概况卡片占满第一行",
+    "label": "overview card occupies the first row",
     "expect": {
       "type": "layout",
       "selector": ".show-overview",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "舞台卡片位于概况下方",
+    "label": "stage card is located below the overview",
     "expect": {
       "type": "layout",
       "selector": ".stage-crew",
@@ -45,7 +45,7 @@
     }
   },
   {
-    "label": "检票卡片位于舞台卡片右侧",
+    "label": "The ticket check card is located on the right side of the stage card",
     "expect": {
       "type": "layout",
       "selector": ".front-desk",

@@ -1,6 +1,6 @@
 [
   {
-    "label": "2 份有效",
+    "label": "2 copies valid",
     "expect": {
       "type": "exists",
       "selector": "#copies:valid"
@@ -14,7 +14,7 @@
     ]
   },
   {
-    "label": "20 份有效",
+    "label": "20 copies valid",
     "expect": {
       "type": "exists",
       "selector": "#copies:valid"
@@ -28,7 +28,7 @@
     ]
   },
   {
-    "label": "1 份被拒绝",
+    "label": "1 copy rejected",
     "expect": {
       "type": "exists",
       "selector": "#copies:invalid"
@@ -42,7 +42,7 @@
     ]
   },
   {
-    "label": "9 份被拒绝",
+    "label": "9 copies were rejected",
     "expect": {
       "type": "exists",
       "selector": "#copies:invalid"
@@ -56,7 +56,7 @@
     ]
   },
   {
-    "label": "22 份被拒绝",
+    "label": "22 copies rejected",
     "expect": {
       "type": "exists",
       "selector": "#copies:invalid"

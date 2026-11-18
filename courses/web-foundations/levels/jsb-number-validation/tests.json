@@ -1,6 +1,6 @@
 [
   {
-    "label": "左右空格不会影响有效小数",
+    "label": "left and right spaces will not affect valid decimals",
     "expect": {
       "type": "function",
       "name": "readAmount",
@@ -11,7 +11,7 @@
     }
   },
   {
-    "label": "保留零",
+    "label": "Reserved zero",
     "expect": {
       "type": "function",
       "name": "readAmount",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "label": "空白无效",
+    "label": "Blank is invalid",
     "expect": {
       "type": "function",
       "name": "readAmount",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "label": "拒绝仅前部是数字的字符串",
+    "label": "rejects strings that are preceded only by numbers",
     "expect": {
       "type": "function",
       "name": "readAmount",
@@ -44,7 +44,7 @@
     }
   },
   {
-    "label": "Infinity 无效",
+    "label": "Infinity is invalid",
     "expect": {
       "type": "function",
       "name": "readAmount",

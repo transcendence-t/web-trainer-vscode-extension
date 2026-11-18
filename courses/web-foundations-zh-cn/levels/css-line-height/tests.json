@@ -1,0 +1,29 @@
+[
+  {
+    "label": "主说明按 16px 字号计算为 28px",
+    "expect": {
+      "type": "style",
+      "selector": ".reading-copy:not(.fine-print)",
+      "property": "line-height",
+      "value": "28px"
+    }
+  },
+  {
+    "label": "小号备注按 12px 字号计算为 21px",
+    "expect": {
+      "type": "style",
+      "selector": ".fine-print",
+      "property": "line-height",
+      "value": "21px"
+    }
+  },
+  {
+    "label": "开放时段保留原行高",
+    "expect": {
+      "type": "style",
+      "selector": ".opening-hours",
+      "property": "line-height",
+      "value": "25.6px"
+    }
+  }
+]

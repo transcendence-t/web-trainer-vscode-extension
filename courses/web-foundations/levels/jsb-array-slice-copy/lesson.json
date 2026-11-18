@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "提取预览队列而不改动原列表",
-  "goal": "使用 slice 截取一段数组并保留原数据。",
-  "summary": "看板只预览开头几个排队编号，完整队列还要给下一页使用。",
+  "title": "Extract the preview queue without changing the original list",
+  "goal": "uses slice to intercept an array and retain the original data.",
+  "summary": "The board only previews the first few queue numbers, and the complete queue will be used on the next page.",
   "tasks": [
-    "完成 peekLine(entries, count)，返回前 count 项，原数组不变。",
-    "count 是非负整数，可以为 0 或超过列表长度。"
+    "completes peekLine(entries, count), returns the first count items, and the original array remains unchanged.",
+    "count is a nonnegative integer that can be 0 or exceed the list length."
   ],
   "example": {
     "language": "javascript",
-    "code": "const queue = ['A', 'B', 'C'];\nconst preview = queue.slice(0, 2);\n// preview 为 ['A', 'B']，queue 保持三项",
-    "note": "slice 的结束下标不包含在结果内，并返回新的数组。"
+    "code": "const queue = ['A', 'B', 'C'];\nconst preview = queue.slice(0, 2);\n// preview is ['A', 'B'], and the queue holds three items.",
+    "note": "slice is not included in the result, and a new array is returned."
   },
-  "hint": "slice(0, count) 返回前 count 项。splice 会从原数组拿走这些项。"
+  "hint": "slice(0, count) returns the first count items. splice will take these items from the original array."
 }

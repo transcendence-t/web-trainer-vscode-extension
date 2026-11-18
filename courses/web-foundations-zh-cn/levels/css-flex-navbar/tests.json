@@ -1,0 +1,87 @@
+[
+  {
+    "label": "导航栏使用 Flexbox",
+    "expect": {
+      "type": "style",
+      "selector": ".site-nav",
+      "property": "display",
+      "value": "flex"
+    }
+  },
+  {
+    "label": "链接组也使用 Flexbox",
+    "expect": {
+      "type": "style",
+      "selector": ".nav-links",
+      "property": "display",
+      "value": "flex"
+    }
+  },
+  {
+    "label": "导航栏把站名和链接组分到两端",
+    "expect": {
+      "type": "style",
+      "selector": ".site-nav",
+      "property": "justify-content",
+      "value": "space-between"
+    }
+  },
+  {
+    "label": "站名和链接组沿交叉轴居中",
+    "expect": {
+      "type": "style",
+      "selector": ".site-nav",
+      "property": "align-items",
+      "value": "center"
+    }
+  },
+  {
+    "label": "链接之间保持 16px 间距",
+    "expect": {
+      "type": "style",
+      "selector": ".nav-links",
+      "property": "column-gap",
+      "value": "16px"
+    }
+  },
+  {
+    "label": "宽窗口里链接组位于站名右边",
+    "expect": {
+      "type": "layout",
+      "selector": ".nav-links",
+      "relativeTo": "#site-brand",
+      "relation": "right-of"
+    },
+    "viewport": 720
+  },
+  {
+    "label": "窄窗口里链接组仍位于站名右边",
+    "expect": {
+      "type": "layout",
+      "selector": ".nav-links",
+      "relativeTo": "#site-brand",
+      "relation": "right-of"
+    },
+    "viewport": 320
+  },
+  {
+    "label": "窄窗口里作品链接排在活动链接右边",
+    "expect": {
+      "type": "layout",
+      "selector": "#gallery-link",
+      "relativeTo": "#events-link",
+      "relation": "right-of"
+    },
+    "viewport": 320
+  },
+  {
+    "label": "窄窗口里链接组保持在导航栏内",
+    "expect": {
+      "type": "layout",
+      "selector": ".nav-links",
+      "relativeTo": ".site-nav",
+      "relation": "inside"
+    },
+    "viewport": 320
+  }
+]

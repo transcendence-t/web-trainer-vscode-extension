@@ -1,0 +1,38 @@
+[
+  {
+    "label": "状态水平对齐到末端",
+    "expect": {
+      "type": "style",
+      "selector": ".badge",
+      "property": "justify-self",
+      "value": "end"
+    }
+  },
+  {
+    "label": "状态垂直对齐到末端",
+    "expect": {
+      "type": "style",
+      "selector": ".badge",
+      "property": "align-self",
+      "value": "end"
+    }
+  },
+  {
+    "label": "说明仍保留默认对齐",
+    "expect": {
+      "type": "style",
+      "selector": "#note",
+      "property": "align-self",
+      "value": "auto"
+    }
+  },
+  {
+    "label": "状态盒仍在展台内",
+    "expect": {
+      "type": "layout",
+      "selector": ".badge",
+      "relativeTo": ".tray",
+      "relation": "inside"
+    }
+  }
+]

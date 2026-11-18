@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "管理原生对话框的打开、关闭和焦点",
+  "goal": "用 showModal、close 和 focus 提供清晰的键盘操作路径。",
+  "summary": "借用规则用模态对话框展示。开窗时焦点移到「关闭说明」，关窗后回到打开说明按钮。",
+  "tasks": [
+    "点击 #open 时调用 #rules-dialog 的 showModal，并将焦点移到 #dismiss。",
+    "点击 #dismiss 时关闭对话框。对话框发生 close 时把焦点送回 #open。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "openButton.addEventListener('click', () => dialog.showModal());\ndialog.addEventListener('close', () => openButton.focus());",
+    "note": "原生模态对话框把交互限制在当前弹窗。在 close 事件里安排返回焦点，也能覆盖用户按 Esc 的情况。"
+  },
+  "hint": "使用 dialog 的方法操作开关。focus() 用在应接收键盘输入的控件上。"
+}

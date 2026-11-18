@@ -1,9 +1,9 @@
 
 function pageLabels(title, preview) {
-  let label = '归档-' + title;
+  let label = 'Archive-' + title;
   let banner = label;
   if (preview) {
-    // 在块内声明临时标签，再将它赋给 banner。
+    // Declare the temporary label within the block and assign it to the banner.
   }
   return banner + ' / ' + label;
 }

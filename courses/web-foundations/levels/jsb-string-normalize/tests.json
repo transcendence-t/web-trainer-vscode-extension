@@ -1,6 +1,6 @@
 [
   {
-    "label": "同时清理空格与字母",
+    "label": "Clean spaces and letters at the same time",
     "expect": {
       "type": "function",
       "name": "normalizeTag",
@@ -11,7 +11,7 @@
     }
   },
   {
-    "label": "读码时保留编号中部空格",
+    "label": "Keep the space in the middle of the number when reading the code",
     "expect": {
       "type": "function",
       "name": "normalizeTag",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "label": "纯空白返回空字符串",
+    "label": "Pure white space returns an empty string",
     "expect": {
       "type": "function",
       "name": "normalizeTag",
@@ -33,14 +33,14 @@
     }
   },
   {
-    "label": "中文和数字保持",
+    "label": "Preserves punctuation and digits",
     "expect": {
       "type": "function",
       "name": "normalizeTag",
       "args": [
-        "标记09"
+        "-09#"
       ],
-      "value": "标记09"
+      "value": "-09#"
     }
   }
 ]

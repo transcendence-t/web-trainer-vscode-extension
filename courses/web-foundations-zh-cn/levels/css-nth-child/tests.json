@@ -1,0 +1,38 @@
+[
+  {
+    "label": "第二行使用底色",
+    "expect": {
+      "type": "style",
+      "selector": "tbody tr:nth-child(2)",
+      "property": "background-color",
+      "value": "rgb(230, 244, 238)"
+    }
+  },
+  {
+    "label": "第四行也使用底色",
+    "expect": {
+      "type": "style",
+      "selector": "tbody tr:nth-child(4)",
+      "property": "background-color",
+      "value": "rgb(230, 244, 238)"
+    }
+  },
+  {
+    "label": "第一行保持透明",
+    "expect": {
+      "type": "style",
+      "selector": "tbody tr:first-child",
+      "property": "background-color",
+      "value": "rgba(0, 0, 0, 0)"
+    }
+  },
+  {
+    "label": "表头底色不受影响",
+    "expect": {
+      "type": "style",
+      "selector": "thead",
+      "property": "background-color",
+      "value": "rgb(225, 231, 237)"
+    }
+  }
+]

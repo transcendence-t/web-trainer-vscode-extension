@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "让寄件标签与托盘等宽",
-  "goal": "通过 box-sizing 控制元素声明宽度时包含哪些区域。",
-  "summary": "寄件标签已经设为和托盘一样宽，加上边框和内边距后却超出了虚线。",
+  "title": "Make the shipping label the same width as the pallet",
+  "goal": "uses box-sizing to control which areas are included when an element declares its width.",
+  "summary": "The shipping label has been set to be as wide as the pallet, but after adding the border and padding, it exceeds the dotted line.",
   "tasks": [
-    "把 .parcel-label 的盒模型设为 border-box。",
-    "保留 width: 100%、10px 的内边距和 2px 实线边框，让标签的外边框刚好与托盘等宽。"
+    "Set the box model of .parcel-label to border-box.",
+    "retains width: 100%, 10px padding and 2px solid border, so that the outer border of the label is exactly the same width as the tray."
   ],
   "example": {
     "language": "css",
     "code": ".date-stamp {\n  box-sizing: border-box;\n  width: 160px;\n  padding: 8px;\n  border: 2px solid;\n}",
-    "note": "边框盒的 160px 同时包含内容、左右内边距和左右边框。这里中间的内容区为 140px。"
+    "note": "border box includes both content, left and right padding, and left and right borders. The middle content area here is 140px."
   },
-  "hint": "content-box 把 width 用于内容区，边框和内边距会增加盒子的外部宽度。用 border-box 把这些空间计入 width。"
+  "hint": "content-box uses width for the content area, and borders and padding will increase the outer width of the box. Use border-box to include these spaces in width."
 }

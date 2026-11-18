@@ -1,17 +1,17 @@
 {
   "focus": "index.html",
-  "title": "给夜跑集合页划分区域",
-  "goal": "用语义标签标记页眉、导航、正文和页脚，让读者可以按页面区域定位。",
-  "summary": "这张活动页的页眉 header、正文 main 和页脚 footer 位于同一层。页内导航 nav 放在 header 内，方便读者直接跳到正文里的集合点。",
+  "title": "Divide the night running collection page into areas",
+  "goal": "Marks headers, navigation, body text, and footers with semantic tags, allowing readers to locate by page area.",
+  "summary": "The header, main body and footer of this active page are on the same layer. In-page navigation nav is placed in the header to facilitate readers to jump directly to the meeting point in the text.",
   "tasks": [
-    "保留 class=\"sheet\" 的外层 div，把包含标题的 div 改为 header。",
-    "把链接外面的 div 改为 nav，使导航位于 header 内，保留链接文字和 href。",
-    "把包含集合点的 div 改为页面唯一的 main，把包含维护者信息的 div 改为 footer。它们和 header 在同一层，沿用原来的顺序。"
+    "Keep the outer div with class=\"sheet\" and change the div containing the title to header.",
+    "Change the div outside the link to nav so that the navigation is located within the header and retain the link text and href.",
+    "Use main for the section containing the meeting point and footer for the maintenance information. Keep both at the same level as header, in the original order."
   ],
   "example": {
     "language": "html",
-    "code": "<header>\n  <h1>共享工具房</h1>\n  <nav><a href=\"#hours\">查看开放时间</a></nav>\n</header>\n<main>\n  <h2 id=\"hours\">开放时间</h2>\n  <p>周日 10:00 到 16:00。</p>\n</main>\n<footer><p>社区志愿者维护</p></footer>",
-    "note": "工具房页面把开放时间放入 main，把负责维护的人写在同层的 footer 中。"
+    "code": "<header>\n  <h1>shared tool room</h1>\n  <nav><a href=\"#hours\">Check opening hours</a></nav>\n</header>\n<main>\n  <h2 id=\"hours\">opening hours</h2>\n  <p>Sunday 10:00 to 16:00.</p>\n</main>\n<footer><p>Community volunteer maintenance</p></footer>",
+    "note": "tool room page, put the opening hours in main, and write the person responsible for maintenance in the footer on the same layer."
   },
-  "hint": "如果页脚被包进正文，检查 main 的结束标签是否写在 footer 前面。"
+  "hint": "If the footer is included in the main text, check whether the end tag of main is written before footer."
 }

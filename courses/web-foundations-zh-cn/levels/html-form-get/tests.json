@@ -1,0 +1,34 @@
+[
+  {
+    "label": "查询发往规定路径",
+    "expect": {
+      "type": "attribute",
+      "selector": "form#catalog-search",
+      "name": "action",
+      "value": "/catalog"
+    }
+  },
+  {
+    "label": "明确使用 GET",
+    "expect": {
+      "type": "attribute",
+      "selector": "form#catalog-search",
+      "name": "method",
+      "value": "get"
+    }
+  },
+  {
+    "label": "按 q 提交搜索关键字",
+    "expect": {
+      "type": "exists",
+      "selector": "#catalog-search input#query[type=\"search\"][name=\"q\"]"
+    }
+  },
+  {
+    "label": "仍可提交查询",
+    "expect": {
+      "type": "exists",
+      "selector": "#catalog-search button[type=\"submit\"]"
+    }
+  }
+]

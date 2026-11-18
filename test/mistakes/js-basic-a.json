@@ -1,54 +1,54 @@
 {
   "jsb-variables": {
-    "name": "出库一步从初始库存扣除，漏掉本次入库",
+    "name": "is deducted from the initial inventory in the outbound step, and this incoming inventory is omitted.",
     "files": {
       "script.js": "function updateStock(initialStock, received, shipped) {\n  let stock = initialStock;\n  stock = stock + received;\n  stock = initialStock - shipped;\n  return stock;\n}"
     }
   },
   "jsb-strings": {
-    "name": "把参数名放进引号，标签总是显示 topic",
+    "name": "Put the parameter name in quotation marks, and the label will always display topic",
     "files": {
-      "script.js": "function labelTopic(topic) {\n  return '【' + 'topic' + '】';\n}"
+      "script.js": "function labelTopic(topic) {\n  return '[' + 'topic' + ']';\n}"
     }
   },
   "jsb-number": {
-    "name": "只转换第一笔，第二笔仍是字符串",
+    "name": "only converts the first stroke, the second stroke is still a string",
     "files": {
       "script.js": "function sumWeights(firstText, secondText) {\n  const first = Number(firstText);\n  const second = secondText;\n  return first + second;\n}"
     }
   },
   "jsb-boolean": {
-    "name": "把原始备注文本当成布尔结果交出",
+    "name": "Hand over the original note text as a Boolean result",
     "files": {
       "script.js": "function canClearNote(note) {\n  return note;\n}"
     }
   },
   "jsb-template": {
-    "name": "用普通单引号包裹模板，变量占位写法原样显示",
+    "name": "Use ordinary single quotes to wrap the template, and the variable placeholder writing method is displayed as it is.",
     "files": {
-      "script.js": "function seatMessage(roomName, seatsLeft) {\n  return '${roomName}还有 ${seatsLeft} 个空位。';\n}"
+      "script.js": "function seatMessage(roomName, seatsLeft) {\n  return '${roomName} has ${seatsLeft} empty seats.';\n}"
     }
   },
   "jsb-arithmetic": {
-    "name": "把装订费当单页费用，与页数相乘",
+    "name": "Treat the binding fee as the cost of a single page and multiply it by the number of pages",
     "files": {
       "script.js": "function printCost(pagePrice, pages, bindingFee) {\n  return (pagePrice + bindingFee) * pages;\n}"
     }
   },
   "jsb-remainder": {
-    "name": "把除法的商当成分组余数",
+    "name": "Treat the quotient of division as a group remainder",
     "files": {
       "script.js": "function ungroupedCount(volunteers, groupSize) {\n  return volunteers / groupSize;\n}"
     }
   },
   "jsb-compare": {
-    "name": "只检查大于，漏判恰好达标的分数",
+    "name": "only checks if it is greater than or equal to the standard, and misses the score that just meets the standard.",
     "files": {
       "script.js": "function meetsScore(score, minimumScore) {\n  return score > minimumScore;\n}"
     }
   },
   "jsb-logical": {
-    "name": "去掉括号，闭馆时也接受工作证",
+    "name": "Remove the brackets and accept work permits even when the library is closed.",
     "files": {
       "script.js": "function canEnterHall(isOpen, hasTicket, hasStaffPass) {\n  return isOpen && hasTicket || hasStaffPass;\n}"
     }

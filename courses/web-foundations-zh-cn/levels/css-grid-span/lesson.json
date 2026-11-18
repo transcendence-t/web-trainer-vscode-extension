@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "让集合公告横跨两列",
+  "goal": "安排一张通栏公告，在它下面保留路线和装备两张并排卡片。",
+  "summary": "grid-column 指定网格项在列方向占用的范围。span 2 表示跨两列，1 / -1 表示从第一条列线延伸到最后一条列线。",
+  "tasks": [
+    "使用已有的两列 .route-board 网格，让 .route-notice 横跨两列。",
+    "检查路线和装备卡片是否一起排到下一行，路线在左，装备在右。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".menu-board {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  gap: 12px;\n}\n.special-of-the-day {\n  grid-column: span 2;\n}",
+    "note": "餐车菜单的今日特供可以占满两列，下面的普通菜品依次填入各列。"
+  },
+  "hint": "公告只铺满当前一格时，尝试给网格项设置 grid-column: span 2。width: 100% 只会填满分给它的范围。"
+}

@@ -1,17 +1,17 @@
 {
   "focus": "script.js",
-  "title": "制作离线工坊通知板",
-  "goal": "完整呈现异步操作的等待、成功、空列表、失败与重试。",
-  "summary": "工坊资料来自内嵌的本地响应，每次请求等待片刻便于观察状态。切换样例可检查失败能否恢复，旧列表是否清理。",
+  "title": "Create offline workshop notification board",
+  "goal": "completely presents the wait, success, empty list, failure and retry of asynchronous operations.",
+  "summary": "workshop data comes from the embedded local response. Wait for a moment for each request to observe the status. Switching samples can check whether the failure can be recovered and whether the old list is cleared.",
   "tasks": [
-    "点击 #refresh 后，立刻清空旧列表，显示「加载中」并暂时禁用按钮。读取当前样例，通过已有的 simulateWait 和 localUrl 调用 Fetch。",
-    "检查 response.ok 并解析 JSON。成功时安全地逐条输出「标题 · 地点」，显示「已加载 N 条」；空列表显示「暂无通知」。",
-    "读取或解析失败时显示「无法读取通知，请重试」。无论结果如何，完成后重新启用加载按钮。"
+    "After clicking #refresh, the old list will be cleared immediately, \"Loading\" will be displayed and the button will be temporarily disabled. To read the current sample, call Fetch through the existing simulateWait and localUrl.",
+    "On success, display each notice as “TITLE · ROOM” and show “Loaded N notices” with the count. Display “No notification yet” if the list is empty.",
+    "Displays \"Unable to read notification, please try again\" when reading or parsing fails. Regardless of the result, re-enable the loading button when finished."
   ],
   "example": {
     "language": "javascript",
-    "code": "button.disabled = true;\ntry {\n  const result = await fetch(url);\n  // 更新结果\n} finally {\n  button.disabled = false;\n}",
-    "note": "finally 在成功和失败之后都会执行，适合恢复临时禁用的控件。"
+    "code": "button.disabled = true;\ntry {\n  const result = await fetch(url);\n  // update results\n} finally {\n  button.disabled = false;\n}",
+    "note": "finally will be executed after success and failure, suitable for restoring temporarily disabled controls."
   },
-  "hint": "清除旧结果和进入加载状态在 try 之前完成。用 textContent 让通知标题始终按文本显示。"
+  "hint": "Clearing old results and entering loading state is completed before try. Use textContent to always display the notification title as text."
 }

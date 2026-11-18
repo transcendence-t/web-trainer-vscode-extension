@@ -1,7 +1,7 @@
 const fixtures = {
   main: { notices: [
-    { title: '采集体验', room: '摄影室' },
-    { title: '<复核>购置清单', room: '设备库' },
+    { title: 'collection experience', room: 'Photography Studio' },
+    { title: '<Review> Purchase List', room: 'Equipment Library' },
   ] },
   empty: { notices: [] },
 };
@@ -22,22 +22,22 @@ const notices = document.querySelector('#notices');
 
 button.addEventListener('click', async () => {
   button.disabled = true;
-  state.textContent = '加载中';
+  state.textContent = 'Loading';
   notices.replaceChildren();
   const url = localUrl(sample.value);
   try {
     await simulateWait();
     const response = await fetch(url);
-    if (!response.ok) throw new Error('读取失败');
+    if (!response.ok) throw new Error('Reading failed');
     const { notices: records } = await response.json();
     for (const record of records) {
       const item = document.createElement('li');
       item.textContent = record.title + ' · ' + record.room;
       notices.append(item);
     }
-    state.textContent = records.length ? `已加载 ${records.length} 条` : '暂无通知';
+    state.textContent = records.length ? `Loaded ${records.length} notices` : 'No notification yet';
   } catch {
-    state.textContent = '无法读取通知，请重试';
+    state.textContent = 'Unable to read notification, please try again';
   } finally {
     button.disabled = false;
   }

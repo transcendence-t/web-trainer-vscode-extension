@@ -1,6 +1,6 @@
 [
   {
-    "label": "入口标签使用 inline-block",
+    "label": "entry tag uses inline-block",
     "expect": {
       "type": "style",
       "selector": "#entry-ready",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "保持已有的 108px 标签宽度",
+    "label": "maintains the existing 108px label width",
     "expect": {
       "type": "style",
       "selector": "#entry-check",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "保持已有的 34px 标签高度",
+    "label": "maintains the existing 34px label height",
     "expect": {
       "type": "style",
       "selector": "#entry-check",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "第二个标签在同一行的右侧",
+    "label": "The second label is on the right side of the same line",
     "expect": {
       "type": "layout",
       "selector": "#entry-check",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "两块标签的外框等宽",
+    "label": "The outer frames of the two labels are the same width",
     "expect": {
       "type": "layout",
       "selector": "#entry-check",

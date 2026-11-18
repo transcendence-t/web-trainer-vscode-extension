@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "给未归档的记录设置标识色",
-  "goal": "用 :not() 排除指定状态的元素。",
-  "summary": "当前展签使用深绿色，归档的展签保留原有正文色。其他类别的文字也保留默认色。",
+  "title": "Set identification color for unarchived records",
+  "goal": "Use :not() to exclude elements in a specified state.",
+  "summary": "The current exhibition label uses dark green, and the archived exhibition label retains the original text color. Text in other categories also retains the default color.",
   "tasks": [
-    "给所有具有 .entry 类且没有 .archived 类的元素设置 color: #125a46。",
-    "保留归档记录与外部提示的颜色。"
+    "sets color: #125a46 to all elements with an .entry class and without an .archived class.",
+    "Preserves the color of archived records and external prompts."
   ],
   "example": {
     "language": "css",
     "code": "a:not(.external) { font-weight: bold; }",
-    "note": "该规则选择没有 external 类的 a 元素。"
+    "note": "This rule selects a elements that do not have an external class."
   },
-  "hint": "把要排除的类选择器写在 :not() 括号里，再与 .entry 相连。"
+  "hint": "Write the class selector to be excluded in :not() brackets, and then connect it to .entry."
 }

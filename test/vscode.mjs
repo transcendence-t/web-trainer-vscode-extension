@@ -7,6 +7,15 @@ import { basename, dirname, join, resolve } from 'node:path';
 import { setTimeout as delay } from 'node:timers/promises';
 import { chromium } from 'playwright-core';
 
+const language = process.argv[2] ?? 'en';
+if (!['en', 'zh-cn'].includes(language)) throw new Error('Unknown edition: ' + language);
+const chinese = language === 'zh-cn';
+const localized = (english, simplifiedChinese) => chinese ? simplifiedChinese : english;
+const startCommand = localized('Start or Resume', '开始或继续学习');
+const importCommand = localized('Import Course', '导入课程');
+const exportCommand = localized('Export Course', '导出课程');
+const activityLabel = localized(/Web Trainer/, /WEB闯关练习/);
+const nickname = localized('Night heron', '夜鹭');
 const windows = process.platform === 'win32';
 const executable = process.env.WEB_TRAINER_VSCODE || (windows
   ? resolve(dirname(execFileSync('where.exe', ['code.cmd'], { encoding: 'utf8' }).trim().split(/\r?\n/)[0]), '..', 'Code.exe')
@@ -15,13 +24,13 @@ const profile = await mkdtemp(join(tmpdir(), 'web-trainer-vscode-'));
 const userData = join(profile, 'data');
 const extensions = join(profile, 'extensions');
 const release = JSON.parse(await readFile('package.json', 'utf8'));
-const vsix = resolve(`web-trainer-${release.version}.vsix`);
+const vsix = resolve(`web-trainer-${release.version}-${language}.vsix`);
 const legacyVsix = resolve('web-trainer-1.0.0.vsix');
-const builtIn = join('courses', 'web-foundations');
+const builtIn = join('courses', localized('web-foundations', 'web-foundations-zh-cn'));
 const manifest = JSON.parse(await readFile(join(builtIn, 'course.json'), 'utf8'));
 const totalLevels = manifest.sections.reduce((total, section) => total + section.levels.length, 0);
 const launchArgs = ['--user-data-dir', userData, '--extensions-dir', extensions];
-const practice = join(userData, 'User', 'globalStorage', 'webclassroom.web-trainer', 'practice', 'web-foundations');
+const practice = join(userData, 'User', 'globalStorage', 'webclassroom.web-trainer', 'practice', manifest.id);
 let child;
 let browser;
 
@@ -71,7 +80,7 @@ async function launch() {
 }
 
 async function command(page, query) {
-  await page.locator('.activitybar').getByLabel(/网页闯关|WEB闯关练习/).first().waitFor({ timeout: 20_000 });
+  await page.locator('.activitybar').getByLabel(/Web Trainer|网页闯关|WEB闯关练习/).first().waitFor({ timeout: 20_000 });
   await page.keyboard.press(windows || process.platform === 'linux' ? 'Control+Shift+p' : 'Meta+Shift+p');
   const input = page.locator('.quick-input-widget input:visible').first();
   await input.fill(`>${query}`);
@@ -117,7 +126,9 @@ async function answer(id) {
 }
 
 async function checkAnswer(lesson, status) {
-  await lesson.locator('#check').click();
+  const button = lesson.locator('#check');
+  await button.evaluate((element) => element.scrollIntoView({ block: 'center' }));
+  await button.click();
   const result = lesson.locator('#assessment:not([hidden])');
   await result.waitFor({ timeout: 20_000 });
   assert.equal(await result.getAttribute('data-status'), status, await result.innerText());
@@ -145,7 +156,7 @@ async function selectLevel(page, lesson, id) {
   const section = manifest.sections.find((item) => item.levels.includes(id));
   const outline = page.locator('.part.sidebar .monaco-list[role="tree"]').first();
   if (!await outline.isVisible()) {
-    await page.locator('.activitybar').getByLabel(/网页闯关|WEB闯关练习/).first().click();
+    await page.locator('.activitybar').getByLabel(/Web Trainer|网页闯关|WEB闯关练习/).first().click();
   }
   const tree = outline.locator('.monaco-list-row[role="treeitem"]');
   const sectionRow = tree.filter({ has: page.getByText(section.title, { exact: true }) }).first();
@@ -187,7 +198,7 @@ try {
     'update.mode': 'none', 'extensions.autoUpdate': false,
   }));
   const oldAnswer = (await answer('html-heading'))['index.html'];
-  const hasLegacy = await access(legacyVsix).then(() => true, () => false);
+  const hasLegacy = chinese && await access(legacyVsix).then(() => true, () => false);
   if (hasLegacy) {
     install(legacyVsix);
     const oldPage = await launch();
@@ -207,9 +218,11 @@ try {
     }
   });
 
-  await command(page, '开始或继续学习');
+  await command(page, startCommand);
   let lesson = await lessonFrame(page);
   const preview = lesson.frameLocator('#preview-frame');
+  assert.equal(await lesson.locator('html').getAttribute('lang'), localized('en', 'zh-CN'));
+  assert.equal(await lesson.locator('#check').innerText(), localized('Check Answer', '检查答案'));
   assert.equal(await lesson.locator('#progress').evaluate((progress) => progress.max), totalLevels);
   if (hasLegacy) {
     assert.equal(await lesson.locator('#lesson-title').innerText(), '标题与段落');
@@ -230,7 +243,7 @@ try {
     has: page.getByText(`${htmlSection.levels.length + 1}. ${nextLesson.title}`, { exact: true }),
   });
   await nextRow.waitFor({ timeout: 10_000 });
-  await page.locator('.activitybar').getByLabel(/WEB闯关练习/).first().waitFor({ timeout: 10_000 });
+  await page.locator('.activitybar').getByLabel(activityLabel).first().waitFor({ timeout: 10_000 });
 
   const groups = page.locator('.editor-group-container');
   const lessonGroup = groups.filter({ has: page.locator('.tab.active').filter({ hasText: nextLesson.title }) });
@@ -263,7 +276,7 @@ try {
     }
     if (id === 'js-text') {
       await edit(page, lesson, 'script.js', 'const broken = ;');
-      await lesson.locator('#preview-error').filter({ hasText: /script\.js 第 1 行/ }).waitFor({ timeout: 10_000 });
+      await lesson.locator('#preview-error').filter({ hasText: localized(/script\.js, line 1, column /, /script\.js 第 1 行/) }).waitFor({ timeout: 10_000 });
     }
     const files = await answer(id);
     for (const [file, contents] of Object.entries(files)) {
@@ -281,15 +294,15 @@ try {
       await until(() => preview.locator('.card-title').evaluate((element) => getComputedStyle(element).color === 'rgb(18, 90, 70)'), '未保存的 CSS 未实时生效');
     }
     if (id === 'js-text') {
-      await preview.getByText('准备就绪', { exact: true }).waitFor({ timeout: 10_000 });
+      await preview.getByText(localized('Ready', '准备就绪'), { exact: true }).waitFor({ timeout: 10_000 });
     }
     if (id === 'js-fetch-json') {
-      await preview.getByRole('button', { name: '加载活动' }).click();
-      await preview.getByText('陶艺开放', { exact: true }).waitFor({ timeout: 10_000 });
+      await preview.locator('#load').click();
+      await preview.getByText(localized('Open pottery studio', '陶艺开放'), { exact: true }).waitFor({ timeout: 10_000 });
     }
     if (id === 'js-modules') {
       await lesson.locator('#preview-frame').scrollIntoViewIfNeeded({ timeout: 10_000 });
-      await preview.getByRole('button', { name: '格式化' }).click({ timeout: 10_000 });
+      await preview.locator('#format').click({ timeout: 10_000 });
       await preview.getByText('LAB-003', { exact: true }).waitFor({ timeout: 10_000 });
     }
     await checkAnswer(lesson, 'passed');
@@ -297,9 +310,9 @@ try {
       assert.equal((await readFile(join(practice, id, file), 'utf8')).replace(/\r\n/g, '\n'), contents, `${id} 未保存 ${file}`);
     }
     if (id === 'js-storage') {
-      await preview.locator('#nickname').fill('夜鹭');
+      await preview.locator('#nickname').fill(nickname);
       await preview.locator('#save-name').click();
-      await preview.locator('#saved-name').filter({ hasText: '夜鹭' }).waitFor({ timeout: 10_000 });
+      await preview.locator('#saved-name').filter({ hasText: nickname }).waitFor({ timeout: 10_000 });
     }
     console.log(`${id} 桌面判题通过`);
   }
@@ -307,43 +320,43 @@ try {
   const lastTitle = await lesson.locator('#lesson-title').innerText();
   await exitVSCode();
   page = await launch();
-  await command(page, '开始或继续学习');
+  await command(page, startCommand);
   lesson = await lessonFrame(page);
   await lesson.getByRole('heading', { name: lastTitle }).waitFor({ timeout: 10_000 });
   assert.equal(await lesson.locator('#progress').evaluate((progress) => progress.value), samples.length + Number(hasLegacy));
   assert.equal(await lesson.locator('#passed').isVisible(), true);
-  await lesson.frameLocator('#preview-frame').locator('#saved-name').filter({ hasText: '夜鹭' }).waitFor({ timeout: 10_000 });
+  await lesson.frameLocator('#preview-frame').locator('#saved-name').filter({ hasText: nickname }).waitFor({ timeout: 10_000 });
   console.log('重启后恢复自由学习进度、最近关卡及该关的本地存储。');
 
   const teacherDirectory = join(profile, 'teacher');
   await mkdir(teacherDirectory);
-  await command(page, '导出课程');
-  await pickLocalPath(page, '选择「网页设计基础」的导出位置', teacherDirectory);
-  const exported = join(teacherDirectory, 'web-foundations');
+  await command(page, exportCommand);
+  await pickLocalPath(page, localized('Choose where to export “' + manifest.title + '”', '选择「' + manifest.title + '」的导出位置'), teacherDirectory);
+  const exported = join(teacherDirectory, manifest.id);
   const teacherManifest = join(exported, 'course.json');
   await until(() => readFile(teacherManifest, 'utf8').catch(() => false), '导出未生成 course.json');
   const teacherLesson = join(exported, 'levels', 'html-heading', 'lesson.json');
   const editedLesson = JSON.parse(await readFile(teacherLesson, 'utf8'));
-  editedLesson.title = '教师的第一关';
+  editedLesson.title = 'First classroom lesson';
   await writeFile(teacherLesson, JSON.stringify(editedLesson));
-  await writeFile(teacherManifest, JSON.stringify({ ...manifest, id: 'class-demo', title: '教师课堂练习',
+  await writeFile(teacherManifest, JSON.stringify({ ...manifest, id: 'class-demo', title: 'Classroom practice',
     sections: [{ id: 'html', title: 'HTML', levels: ['html-heading'] }],
   }));
 
-  await command(page, '导入课程');
-  await pickLocalPath(page, '选择课程包中的 course.json', teacherManifest);
-  await lesson.getByRole('heading', { name: '教师的第一关' }).waitFor({ timeout: 10_000 });
+  await command(page, importCommand);
+  await pickLocalPath(page, localized('Select course.json from the course package', '选择课程包中的 course.json'), teacherManifest);
+  await lesson.getByRole('heading', { name: 'First classroom lesson' }).waitFor({ timeout: 10_000 });
   assert.equal(await lesson.locator('#progress').evaluate((progress) => progress.value), 0);
   await edit(page, lesson, 'index.html', oldAnswer);
   await checkAnswer(lesson, 'passed');
 
-  editedLesson.title = '更新后的第一关';
+  editedLesson.title = 'Updated classroom lesson';
   await writeFile(teacherLesson, JSON.stringify(editedLesson));
-  await command(page, '导入课程');
-  await pickLocalPath(page, '选择课程包中的 course.json', teacherManifest);
-  await lesson.getByRole('heading', { name: '更新后的第一关' }).waitFor({ timeout: 10_000 });
+  await command(page, importCommand);
+  await pickLocalPath(page, localized('Select course.json from the course package', '选择课程包中的 course.json'), teacherManifest);
+  await lesson.getByRole('heading', { name: 'Updated classroom lesson' }).waitFor({ timeout: 10_000 });
   assert.equal(await lesson.locator('#progress').evaluate((progress) => progress.value), 1);
-  await lesson.frameLocator('#preview-frame').getByRole('heading', { name: '我的第一张网页' }).waitFor({ timeout: 10_000 });
+  await lesson.frameLocator('#preview-frame').getByRole('heading', { name: localized('My first webpage', '我的第一张网页') }).waitFor({ timeout: 10_000 });
   console.log('导出、导入和更新课程通过，教师课程拥有独立进度。');
 } catch (error) {
   console.error(`临时测试配置：${profile}（${basename(executable)}）`);

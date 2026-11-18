@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "把返回入口固定在视口一角",
-  "goal": "用 fixed 把操作入口定位在视口上。",
-  "summary": "页面内容较长，底部入口应始终位于视口右下方，让读者便于返回顶部。",
+  "title": "Fix the return entrance to the corner of the viewport",
+  "goal": "Use fixed to position the operation entrance on the viewport.",
+  "summary": "The page content is long, and the bottom entrance should always be located at the bottom right of the viewport to make it easy for readers to return to the top.",
   "tasks": [
-    "把 #back 固定在视口右下角，右侧和底部各留 12px。",
-    "保留到 #top 的页内链接。"
+    "Fix #back to the lower right corner of the viewport, leaving 12px on the right and bottom.",
+    "Preserve in-page link to #top."
   ],
   "example": {
     "language": "css",
     "code": ".help { position: fixed; right: 8px; bottom: 8px; }",
-    "note": "fixed 元素通常相对于视口定位。页面滚动时，入口继续留在同一位置。"
+    "note": "fixed elements are usually positioned relative to the viewport. The entry continues to stay in the same position as the page scrolls."
   },
-  "hint": "position 填 fixed，再设 right 与 bottom。"
+  "hint": "fill in fixed position, and then set right and bottom."
 }

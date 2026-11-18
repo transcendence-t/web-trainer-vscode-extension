@@ -1,0 +1,135 @@
+[
+  {
+    "label": "三项都有显式的可访问名称",
+    "expect": {
+      "type": "count",
+      "selector": "label[for=\"name\"], label[for=\"email\"], label[for=\"course\"]",
+      "value": 3
+    }
+  },
+  {
+    "label": "反馈区域为状态消息",
+    "expect": {
+      "type": "attribute",
+      "selector": "#reply",
+      "name": "role",
+      "value": "status"
+    }
+  },
+  {
+    "label": "缺少场次时不提交",
+    "expect": {
+      "type": "text",
+      "selector": "#reply",
+      "value": "尚未报名"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#name",
+        "value": "小刘"
+      },
+      {
+        "type": "input",
+        "selector": "#email",
+        "value": "liu@example.org"
+      },
+      {
+        "type": "input",
+        "selector": "#course",
+        "value": ""
+      },
+      {
+        "type": "click",
+        "selector": "#registration button"
+      }
+    ]
+  },
+  {
+    "label": "无效邮箱拒绝报名",
+    "expect": {
+      "type": "text",
+      "selector": "#reply",
+      "value": "尚未报名"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#name",
+        "value": "小刘"
+      },
+      {
+        "type": "input",
+        "selector": "#email",
+        "value": "bad"
+      },
+      {
+        "type": "input",
+        "selector": "#course",
+        "value": "上午场"
+      },
+      {
+        "type": "click",
+        "selector": "#registration button"
+      }
+    ]
+  },
+  {
+    "label": "正常报名取得场次回执",
+    "expect": {
+      "type": "text",
+      "selector": "#reply",
+      "value": "小刘，已报名下午场"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#name",
+        "value": " 小刘 "
+      },
+      {
+        "type": "input",
+        "selector": "#email",
+        "value": "liu@example.org"
+      },
+      {
+        "type": "input",
+        "selector": "#course",
+        "value": "下午场"
+      },
+      {
+        "type": "click",
+        "selector": "#registration button"
+      }
+    ]
+  },
+  {
+    "label": "拒绝只含空格的姓名",
+    "expect": {
+      "type": "text",
+      "selector": "#reply",
+      "value": "请输入有效姓名"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#name",
+        "value": "   "
+      },
+      {
+        "type": "input",
+        "selector": "#email",
+        "value": "liu@example.org"
+      },
+      {
+        "type": "input",
+        "selector": "#course",
+        "value": "上午场"
+      },
+      {
+        "type": "click",
+        "selector": "#registration button"
+      }
+    ]
+  }
+]

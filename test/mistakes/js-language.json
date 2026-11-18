@@ -1,108 +1,108 @@
 {
   "jsb-value-types": {
-    "name": "只返回 typeof，把 null 和数组当作普通对象",
+    "name": "only returns typeof, treating null and arrays as ordinary objects",
     "files": {
       "script.js": "function kindOf(value) { return typeof value; }\n"
     }
   },
   "jsb-number-validation": {
-    "name": "只用 parseFloat，误接受带单位或无限大的值",
+    "name": "only uses parseFloat and mistakenly accepts values with units or infinite values.",
     "files": {
       "script.js": "function readAmount(text) { const amount = parseFloat(text); return Number.isNaN(amount) ? null : amount; }\n"
     }
   },
   "jsb-math-round": {
-    "name": "向下取整，接近下一档的输入也落回上一档",
+    "name": "rounds down, and the input close to the next gear also falls back to the previous gear.",
     "files": {
       "script.js": "function roundPickup(minutes) { return Math.floor(minutes / 5) * 5; }\n"
     }
   },
   "jsb-string-normalize": {
-    "name": "只转为大写，保留了两端的空白",
+    "name": "is only converted to uppercase, retaining the white space at both ends.",
     "files": {
       "script.js": "function normalizeTag(tag) { return tag.toUpperCase(); }\n"
     }
   },
   "jsb-string-slice": {
-    "name": "从固定的正下标截取，票号位数变化时不正确",
+    "name": "is intercepted from a fixed positive subscript, which is incorrect when the number of ticket numbers changes.",
     "files": {
       "script.js": "function lastDigits(ticket) { return ticket.slice(2); }\n"
     }
   },
   "jsb-string-search": {
-    "name": "只规范搜索词，忘了待搜索的标题",
+    "name": "Only standardizes the search terms and forgets the title to be searched",
     "files": {
       "script.js": "function matchesKeyword(text, query) { return text.includes(query.trim().toLowerCase()); }\n"
     }
   },
   "jsb-split-join": {
-    "name": "连接时保留了空标签",
+    "name": "retains empty tags when connecting",
     "files": {
       "script.js": "function labelLine(text) { return text.split(',').map((part) => part.trim()).join(' / '); }\n"
     }
   },
   "jsb-string-replace": {
-    "name": "只替换第一处",
+    "name": "only replaces the first place",
     "files": {
       "script.js": "function fillRoom(template, room) { return template.replace('{room}', () => room); }\n"
     }
   },
   "jsb-strict-equality": {
-    "name": "使用 ==，字符串数字和数字被视为同一编号",
+    "name": "Using ==, string numbers and numbers are treated as the same number",
     "files": {
       "script.js": "function sameSerial(left, right) { return left == right; }\n"
     }
   },
   "jsb-nullish-default": {
-    "name": "用 || 覆盖有效的零",
+    "name": "Cover valid zeros with ||",
     "files": {
       "script.js": "function availableSeats(actual, planned) { return actual || planned; }\n"
     }
   },
   "jsb-ternary": {
-    "name": "边界使用 >= 导致库存为零时仍可领取",
+    "name": "boundary usage >= causes the inventory to still be collected when it is zero",
     "files": {
-      "script.js": "function stockLabel(count) { return count >= 0 ? '可领取' : '待补货'; }\n"
+      "script.js": "function stockLabel(count) { return count >= 0 ? 'can be collected' : 'To be replenished'; }\n"
     }
   },
   "jsb-loop-flow": {
-    "name": "把装不下的情况也写成 continue，错误地继续装后续包裹",
+    "name": "also writes \"continue\" when the package cannot be loaded, and mistakenly continues to load subsequent packages.",
     "files": {
       "script.js": "function fillCrate(volumes, limit) {\n  let total = 0;\n  for (const volume of volumes) {\n    if (volume < 0 || total + volume > limit) continue;\n    total += volume;\n  }\n  return total;\n}\n"
     }
   },
   "jsb-default-parameters": {
-    "name": "用 || 将 0 替换成 1",
+    "name": "Use || to replace 0 with 1",
     "files": {
       "script.js": "function supplyUnits(packs) { return (packs || 1) * 6; }\n"
     }
   },
   "jsb-arrow-functions": {
-    "name": "使用块级函数体但忘了 return",
+    "name": "uses block-level function body but forgets to return",
     "files": {
-      "script.js": "const buildTicket = (id) => { ({ id, status: '待处理' }); };\n"
+      "script.js": "const buildTicket = (id) => { ({ id, status: 'pending' }); };\n"
     }
   },
   "jsb-rest-parameters": {
-    "name": "把第一个参数忽略，只计算新批次",
+    "name": "Ignore the first parameter and only calculate new batches",
     "files": {
       "script.js": "function shippedCount(prior, ...batches) { return batches.reduce((sum, next) => sum + next, 0); }\n"
     }
   },
   "jsb-callback": {
-    "name": "把规则写死在函数里，未调用收到的回调",
+    "name": "The rules are written in the function and the received callback is not called.",
     "files": {
       "script.js": "function scoreFor(points, rule) {\n  const rules = {\n    double: (value) => value * 2,\n    bonus: (value) => value + 3,\n    penalty: (value) => value - 5,\n  };\n  return applyScore(points, rules[rule]);\n}\n\nfunction applyScore(points) { return Math.max(0, points * 2); }\n"
     }
   },
   "jsb-closures": {
-    "name": "先增加再返回，领取的第一个号偏大",
+    "name": "Add first and then return. The first number you received is too large.",
     "files": {
       "script.js": "function makeTicketQueue(start) { let current = start; return () => ++current; }\nfunction showTickets(first, second) {\n  const a = makeTicketQueue(first);\n  const b = makeTicketQueue(second);\n  return [a(), b(), a(), b()];\n}\n"
     }
   },
   "jsb-recursion": {
-    "name": "把结束条件的返回值写成 1，合计多出一件",
+    "name": "Write the return value of the end condition as 1, totaling one more",
     "files": {
       "script.js": "function countBoxes(n) { if (n === 0) return 1; return n + countBoxes(n - 1); }\n"
     }

@@ -1,6 +1,6 @@
 [
   {
-    "label": "相同数字编号",
+    "label": "same number",
     "expect": {
       "type": "function",
       "name": "sameSerial",
@@ -12,7 +12,7 @@
     }
   },
   {
-    "label": "类型不同的编号",
+    "label": "different types of numbers",
     "expect": {
       "type": "function",
       "name": "sameSerial",
@@ -24,7 +24,7 @@
     }
   },
   {
-    "label": "不同的前导零",
+    "label": "different leading zeros",
     "expect": {
       "type": "function",
       "name": "sameSerial",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "相同字符串编号",
+    "label": "Same string number",
     "expect": {
       "type": "function",
       "name": "sameSerial",

@@ -1,6 +1,6 @@
 [
   {
-    "label": "绘制后方标内部是指定颜色",
+    "label": "After drawing, the inside of the subscript is the specified color.",
     "expect": {
       "type": "function",
       "name": "samplePixel",
@@ -23,7 +23,7 @@
     ]
   },
   {
-    "label": "方标接近右下角的内部仍为着色像素",
+    "label": "The inside of the square mark near the lower right corner is still colored pixels",
     "expect": {
       "type": "function",
       "name": "samplePixel",
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "label": "矩形左侧没有绘制",
+    "label": "The left side of the rectangle is not drawn",
     "expect": {
       "type": "function",
       "name": "samplePixel",
@@ -69,7 +69,7 @@
     ]
   },
   {
-    "label": "清除后回到透明",
+    "label": "returns to transparency after clearing",
     "expect": {
       "type": "function",
       "name": "samplePixel",

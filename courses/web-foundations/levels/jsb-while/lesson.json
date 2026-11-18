@@ -1,17 +1,17 @@
 {
   "focus": "script.js",
-  "title": "计算档案整理还需几天",
-  "goal": "用 while 重复推进工作量，直到整理数量达到目标。",
-  "summary": "while 每轮先检查条件，再决定要不要执行循环体。在累计箱数低于目标时，每轮增加三箱，同时记录一天的工作量。",
+  "title": "How many days will it take to sort out the calculation files?",
+  "goal": "Use while to repeatedly advance the workload until the number of sorting reaches the target.",
+  "summary": "while checks the condition first in each round, and then decides whether to execute the loop body. When the cumulative number of boxes is lower than the target, three boxes are added in each round, and the workload of the day is recorded at the same time.",
   "tasks": [
-    "补全 archiveDays(initial, target)。initial 是已整理的箱数，target 是目标箱数，两者均为非负整数。",
-    "工作一天可以整理 3 箱。使用 while 每轮增加 3 箱和 1 天，达到或超过目标后返回新增的天数。",
-    "开始时已达到目标的情况返回数字 0。"
+    "completes archiveDays(initial, target). initial is the number of sorted boxes, target is the target number of boxes, both are non-negative integers.",
+    "can sort 3 boxes in one working day. Use while to add 3 boxes and 1 day each round, returning the added days when the target is met or exceeded.",
+    "Returns the number 0 if the target has been reached initially."
   ],
   "example": {
     "language": "javascript",
     "code": "function tripsNeeded(crates) {\n  let remaining = crates;\n  let trips = 0;\n  while (remaining > 0) {\n    remaining -= 4;\n    trips += 1;\n  }\n  return trips;\n}",
-    "note": "一辆推车每趟最多送 4 箱，9 箱需要用车 3 趟。检查剩余箱数就能知道何时结束。"
+    "note": "A cart can deliver up to 4 boxes per trip, and 9 boxes require 3 trips. You'll know when it's finished by checking the number of boxes left."
   },
-  "hint": "如果刚好达到目标后还多算一天，检查条件是否多写了等号。每轮也要更新已整理箱数，才能推进到结束条件。"
+  "hint": "If an extra day is counted after the target is reached, check whether there is an extra equal sign in the condition. The number of sorted boxes must also be updated in each round to advance to the end condition."
 }

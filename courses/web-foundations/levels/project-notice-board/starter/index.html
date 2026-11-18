@@ -1,23 +1,23 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>制作离线工坊通知板</title>
+  <title>Create offline workshop notification board</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <main class="sheet">
-    <h1>制作离线工坊通知板</h1>
-    <label for="demo">响应样例</label>
+    <h1>Create offline workshop notification board</h1>
+    <label for="demo">response sample</label>
     <select id="demo">
-      <option value="main">本周通知</option>
-      <option value="empty">空列表</option>
-      <option value="error">坏数据</option>
+      <option value="main">Notice this week</option>
+      <option value="empty">empty list</option>
+      <option value="error">bad data</option>
     </select>
-    <button id="refresh" type="button">加载通知</button>
-    <p id="state" role="status">等待加载</p>
+    <button id="refresh" type="button">loading notification</button>
+    <p id="state" role="status">waiting to load</p>
     <ul id="notices"></ul>
   </main>
 </body>

@@ -1,14 +1,14 @@
 [
   {
-    "label": "搜索框关联设备名称标签",
+    "label": "Search box associated device name label",
     "expect": {
       "type": "text",
       "selector": "label[for=\"equipment-query\"]",
-      "value": "设备名称"
+      "value": "device name"
     }
   },
   {
-    "label": "设备列表使用网格布局",
+    "label": "device list uses grid layout",
     "expect": {
       "type": "style",
       "selector": "#equipment-results",
@@ -17,7 +17,7 @@
     }
   },
   {
-    "label": "设备条目之间有 8px 间隔",
+    "label": "device entries have 8px gap between them",
     "expect": {
       "type": "style",
       "selector": "#equipment-results",
@@ -26,7 +26,7 @@
     }
   },
   {
-    "label": "首次打开时显示全部设备",
+    "label": "displays all devices when opening for the first time",
     "expect": {
       "type": "count",
       "selector": "#equipment-results > li",
@@ -34,7 +34,7 @@
     }
   },
   {
-    "label": "忽略大小写和首尾空格后找到两件 USB 设备",
+    "label": "found two USB devices after ignoring case and leading and trailing spaces.",
     "expect": {
       "type": "count",
       "selector": "#equipment-results > li",
@@ -49,11 +49,11 @@
     ]
   },
   {
-    "label": "显示筛选后的数量",
+    "label": "Display the filtered quantity",
     "expect": {
       "type": "text",
       "selector": "#equipment-count",
-      "value": "找到 2 件设备"
+      "value": "2 devices found"
     },
     "actions": [
       {
@@ -64,22 +64,22 @@
     ]
   },
   {
-    "label": "关键词可以出现在名称中间",
+    "label": "keywords can appear in the middle of the name",
     "expect": {
       "type": "text",
       "selector": "#equipment-results > li:only-child",
-      "value": "数码录音笔"
+      "value": "digital voice recorder"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#equipment-query",
-        "value": "录音"
+        "value": "voice"
       }
     ]
   },
   {
-    "label": "无匹配时移除上一轮全部结果",
+    "label": "Remove all results from the previous round when there is no match",
     "expect": {
       "type": "count",
       "selector": "#equipment-results > li",
@@ -94,16 +94,16 @@
       {
         "type": "input",
         "selector": "#equipment-query",
-        "value": "打印机"
+        "value": "printer"
       }
     ]
   },
   {
-    "label": "无匹配时数量更新为 0",
+    "label": "The quantity is updated to 0 when there is no match.",
     "expect": {
       "type": "text",
       "selector": "#equipment-count",
-      "value": "找到 0 件设备"
+      "value": "0 devices found"
     },
     "actions": [
       {
@@ -114,27 +114,27 @@
       {
         "type": "input",
         "selector": "#equipment-query",
-        "value": "打印机"
+        "value": "printer"
       }
     ]
   },
   {
-    "label": "无匹配时显示空结果提示",
+    "label": "Displays an empty result prompt when there is no match",
     "expect": {
       "type": "text",
       "selector": "#equipment-empty:not([hidden])",
-      "value": "没有匹配的设备"
+      "value": "No matching device"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#equipment-query",
-        "value": "打印机"
+        "value": "printer"
       }
     ]
   },
   {
-    "label": "清空输入后恢复四件设备",
+    "label": "Restore four devices after clearing input",
     "expect": {
       "type": "count",
       "selector": "#equipment-results > li",
@@ -144,7 +144,7 @@
       {
         "type": "input",
         "selector": "#equipment-query",
-        "value": "投影"
+        "value": "projection"
       },
       {
         "type": "input",

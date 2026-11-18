@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "把最后一个工具栏按钮推到末端",
+  "goal": "用 Flex 项的自动外边距吸收剩余空间。",
+  "summary": "左侧两个按钮保持紧邻，最后的「导出」放到工具栏另一侧。",
+  "tasks": [
+    "保持 .toolbar 的 Flex 排列与间距不变。",
+    "为 .export 设置起始侧自动外边距，工具栏左右首尾对齐。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".tools { display: flex; gap: 8px; }\n.help { margin-inline-start: auto; }",
+    "note": "主轴仍有空间时，auto 外边距会吸收这段空间。"
+  },
+  "hint": "把 margin-inline-start: auto 加到要推开的最后一个按钮上。"
+}

@@ -1,0 +1,96 @@
+[
+  {
+    "label": "没有保存过昵称时显示占位文字",
+    "expect": {
+      "type": "text",
+      "selector": "#saved-name",
+      "value": "暂无昵称"
+    }
+  },
+  {
+    "label": "输入昵称时还没有写入本地存储",
+    "expect": {
+      "type": "storage",
+      "key": "visitorNickname",
+      "value": null
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#nickname",
+        "value": "白翎"
+      }
+    ]
+  },
+  {
+    "label": "点击保存后写入修剪过的昵称",
+    "expect": {
+      "type": "storage",
+      "key": "visitorNickname",
+      "value": "夜鹭"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#nickname",
+        "value": "  夜鹭  "
+      },
+      {
+        "type": "click",
+        "selector": "#save-name"
+      }
+    ]
+  },
+  {
+    "label": "保存后的页面立即显示昵称",
+    "expect": {
+      "type": "text",
+      "selector": "#saved-name",
+      "value": "春雀"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#nickname",
+        "value": "春雀"
+      },
+      {
+        "type": "click",
+        "selector": "#save-name"
+      }
+    ]
+  },
+  {
+    "label": "打开时会显示上次保存的昵称",
+    "expect": {
+      "type": "text",
+      "selector": "#saved-name",
+      "value": "夜鹭"
+    },
+    "storage": {
+      "visitorNickname": "夜鹭"
+    }
+  },
+  {
+    "label": "输入空白时保留已经保存的值",
+    "expect": {
+      "type": "storage",
+      "key": "visitorNickname",
+      "value": "白翎"
+    },
+    "storage": {
+      "visitorNickname": "白翎"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#nickname",
+        "value": "   "
+      },
+      {
+        "type": "click",
+        "selector": "#save-name"
+      }
+    ]
+  }
+]

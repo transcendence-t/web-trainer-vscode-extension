@@ -1,50 +1,50 @@
 [
   {
-    "label": "对象保存三个原始参数",
+    "label": "object saves three original parameters",
     "expect": {
       "type": "function",
       "name": "makeRepairOrder",
       "args": [
-        "投影无信号",
+        "No signal in projection",
         20,
         true
       ],
       "value": {
-        "issue": "投影无信号",
+        "issue": "No signal in projection",
         "minutes": 20,
         "urgent": true
       }
     }
   },
   {
-    "label": "保留数字 0 和布尔值 false",
+    "label": "retains the number 0 and the Boolean value false",
     "expect": {
       "type": "function",
       "name": "makeRepairOrder",
       "args": [
-        "更换门牌",
+        "Change house number",
         0,
         false
       ],
       "value": {
-        "issue": "更换门牌",
+        "issue": "Change house number",
         "minutes": 0,
         "urgent": false
       }
     }
   },
   {
-    "label": "换一组输入仍匹配三个字段",
+    "label": "Change a set of inputs and still match three fields",
     "expect": {
       "type": "function",
       "name": "makeRepairOrder",
       "args": [
-        "水龙头漏水",
+        "faucet leaking",
         35,
         false
       ],
       "value": {
-        "issue": "水龙头漏水",
+        "issue": "faucet leaking",
         "minutes": 35,
         "urgent": false
       }

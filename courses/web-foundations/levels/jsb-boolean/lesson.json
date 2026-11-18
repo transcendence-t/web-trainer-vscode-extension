@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "用布尔值表示是否可清空",
-  "goal": "根据备注框是否已有字符，给「清空」按钮提供一个布尔值。",
-  "summary": "布尔值只有 true 和 false。Boolean 把空字符串转换为 false，把任何非空字符串转换为 true。",
+  "title": "Uses a Boolean value to indicate whether it can be cleared",
+  "goal": "Provides a Boolean value to the \"Clear\" button based on whether the memo box already contains characters.",
+  "summary": "Boolean values are only true and false. Boolean Converts an empty string to false and any non-empty string to true.",
   "tasks": [
-    "在 canClearNote 的大括号里检查备注框传入的字符串 note。只要框内有字符，哪怕只有一个空格，也可以清空。",
-    "用 return 返回布尔值。框里完全没输入时返回 false，其余情况返回 true。"
+    "Check the string note passed in the note box in the curly brackets of canClearNote. As long as there are characters in the box, even if there is only one space, it can be cleared.",
+    "uses return to return a Boolean value. Returns false if there is no input in the box, and returns true in other cases."
   ],
-  "hint": "检查返回的类型。直接 return note 会把备注内容交出去，Boolean(note) 会得到一个布尔值。",
+  "hint": "Check the returned type. Return note directly will hand over the note content, and Boolean(note) will get a Boolean value.",
   "example": {
     "language": "javascript",
     "code": "const availableSeats = 0;\nconst hasSeats = Boolean(availableSeats);",
-    "note": "预约页面用座位数量得到是否有余位这个布尔值。数值 0 转换成 false，正数转换成 true。"
+    "note": "The reservation page uses the number of seats to get the Boolean value of whether there are seats available. A value of 0 is converted to false, and a positive number is converted to true."
   }
 }

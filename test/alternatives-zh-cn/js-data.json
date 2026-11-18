@@ -1,0 +1,5 @@
+{
+  "jsb-numeric-sort": {
+    "script.js": "function compareOrder(readings) {\n  const sorted = sortReadings(readings);\n  return [sorted, readings];\n}\n\nfunction sortReadings(readings) {\n  return [...readings].sort((left, right) => left - right);\n}\n"
+  }
+}

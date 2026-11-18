@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "拆出展签所需的名称与数量",
-  "goal": "用对象解构给属性重命名，并为缺失属性提供缺省值。",
-  "summary": "上游记录使用 name 和 count；标签输出采用 title 和 quantity。缺少 count 时按 1 件展示。",
+  "title": "The name and quantity required to remove the exhibition tag",
+  "goal": "Use object destructuring to rename properties and provide default values ​​for missing properties.",
+  "summary": "Upstream records use name and count; label output uses title and quantity. If count is missing, display as 1 item.",
   "tasks": [
-    "完成 tagFields(record)。解构取出 name 与 count 并使用本地名称 title、quantity。",
-    "返回 { title, quantity }。count 缺失时为 1；显式写 0 或 null 时保留原值。"
+    "complete tagFields(record). Deconstruct out name and count and use local names title and quantity.",
+    "returns { title, quantity }. 1 when count is missing; retains the original value when explicitly written as 0 or null."
   ],
   "example": {
     "language": "javascript",
-    "code": "const { code: label = '未编号' } = { code: 'M3' };\n// label 为 'M3'",
-    "note": "冒号后面是本地变量名，等号右边是属性值为 undefined 时的默认值。"
+    "code": "const { code: label = 'Unnumbered' } = { code: 'M3' };\n// label is 'M3'",
+    "note": "The colon is followed by the local variable name, and the right side of the equal sign is the default value when the attribute value is undefined."
   },
-  "hint": "写 const { name: title, count: quantity = 1 } = record。"
+  "hint": "writes const { name: title, count: quantity = 1 } = record."
 }

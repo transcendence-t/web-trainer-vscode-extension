@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "给简报划分文章和小节",
-  "goal": "用 article 标出可独立阅读的内容，用 section 和标题组织文章里的主题。",
-  "summary": "邻里简报有一篇种子交换会通知，通知里还要有一节写明参加者需要带什么。",
+  "title": "Divide presentations into articles and sections",
+  "goal": "Use article to mark content that can be read independently, and use sections and titles to organize the topics in the article.",
+  "summary": "Neighborhood Newsletter has a notice of the seed exchange meeting, and there is also a section in the notice stating what participants need to bring.",
   "tasks": [
-    "把 id=\"seed-swap\" 的容器换成 article，保留 h2 标题「种子交换会」。",
-    "把文章内 id=\"bring\" 的容器换成 section，将「请带上什么」设为 h3，保留下面的说明。"
+    "Change the container with id=\"seed-swap\" to article and retain the h2 title \"Seed Exchange Meeting\".",
+    "Change the container with id=\"bring\" in the article to section, set \"What should you bring?\" to h3, and keep the following instructions."
   ],
   "example": {
     "language": "html",
-    "code": "<article>\n  <h2>步道维修记录</h2>\n  <section>\n    <h3>本周进度</h3>\n    <p>北口的三块路牌已经换好。</p>\n  </section>\n</article>",
-    "note": "这个页面已有 h1。独立的维修记录用 h2，记录内的小节用 h3。"
+    "code": "<article>\n  <h2>Trail maintenance record</h2>\n  <section>\n    <h3>This week’s progress</h3>\n    <p>The three street signs at the north entrance have been replaced.</p>\n  </section>\n</article>",
+    "note": "This page already has h1. Use h2 for individual maintenance records and h3 for subsections within the record."
   },
-  "hint": "在小节的结束标签之后再写 </article>。提前结束文章会让小节跑到文章外面。"
+  "hint": "Write </article> after the closing tag of the section. Ending the article early will cause the section to run outside the article."
 }

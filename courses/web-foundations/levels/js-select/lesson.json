@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "切换博物馆导览集合点",
-  "goal": "在下拉框选项变化时，显示新场次的集合地点。",
-  "summary": "选择项变更后，下拉框会触发 change。select.value 是所选 option 的 value，可以用这个值从现有的集合点表中取出提示。",
+  "title": "Switch museum tour meeting point",
+  "goal": "When the drop-down box option changes, the meeting point for the new session is displayed.",
+  "summary": "After the selection item is changed, the drop-down box will trigger change. select.value is the value of the selected option, which can be used to retrieve prompts from the existing rendezvous point table.",
   "tasks": [
-    "在 #tour 上监听 change。每次触发时读取当前的 value，从已有的 meetingPoints 查找相应提示。",
-    "把找到的提示写入 #meeting-point。切回空选项时显示「请先选择导览场次。」。"
+    "listens for changes on #tour. Read the current value each time it is triggered and find the corresponding prompt from the existing meetingPoints.",
+    "Write found tips to #meeting-point. Displays \"Please select the tour session first.\" when switching back to empty options."
   ],
   "example": {
     "language": "javascript",
-    "code": "const serving = document.querySelector('#serving-size');\nconst instructions = document.querySelector('#serving-note');\n\nserving.addEventListener('change', () => {\n  instructions.textContent = '这份食谱按 ' + serving.value + ' 人准备。';\n});",
-    "note": "食谱的下拉框用人数作为选项值。每次切换后，提示会显示新的人数。"
+    "code": "const serving = document.querySelector('#serving-size');\nconst instructions = document.querySelector('#serving-note');\n\nserving.addEventListener('change', () => {\n  instructions.textContent = 'This recipe button ' + serving.value + ' People prepared.';\n});",
+    "note": "The drop-down box of the recipe uses the number of people as the option value. After each switch, the prompt will display a new number of people."
   },
-  "hint": "换了场次仍显示初始提示时，检查取提示时是否用了 selectedIndex。已有集合点表的键是选项的 value。"
+  "hint": "When the initial prompt is still displayed after changing the session, check whether selectedIndex is used when fetching the prompt. The key to the existing rendezvous table is the value of the option."
 }

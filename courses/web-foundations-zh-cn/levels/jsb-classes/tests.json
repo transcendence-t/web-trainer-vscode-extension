@@ -1,0 +1,53 @@
+[
+  {
+    "label": "两箱按各自数量更新",
+    "expect": {
+      "type": "function",
+      "name": "runBoxes",
+      "args": [
+        4,
+        8,
+        3,
+        1
+      ],
+      "value": [
+        9,
+        9
+      ]
+    }
+  },
+  {
+    "label": "两次向第一箱入库",
+    "expect": {
+      "type": "function",
+      "name": "runBoxes",
+      "args": [
+        0,
+        12,
+        6,
+        0
+      ],
+      "value": [
+        8,
+        12
+      ]
+    }
+  },
+  {
+    "label": "第二箱更新不会影响第一箱",
+    "expect": {
+      "type": "function",
+      "name": "runBoxes",
+      "args": [
+        10,
+        0,
+        0,
+        5
+      ],
+      "value": [
+        12,
+        5
+      ]
+    }
+  }
+]

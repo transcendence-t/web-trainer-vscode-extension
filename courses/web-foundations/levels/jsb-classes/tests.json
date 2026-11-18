@@ -1,6 +1,6 @@
 [
   {
-    "label": "两箱按各自数量更新",
+    "label": "Two boxes updated according to their respective quantities",
     "expect": {
       "type": "function",
       "name": "runBoxes",
@@ -17,7 +17,7 @@
     }
   },
   {
-    "label": "两次向第一箱入库",
+    "label": "is stored in the first box twice",
     "expect": {
       "type": "function",
       "name": "runBoxes",
@@ -34,7 +34,7 @@
     }
   },
   {
-    "label": "第二箱更新不会影响第一箱",
+    "label": "The second box update will not affect the first box",
     "expect": {
       "type": "function",
       "name": "runBoxes",

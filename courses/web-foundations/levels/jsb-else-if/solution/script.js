@@ -1,10 +1,10 @@
 
 function seatStatus(seatsLeft) {
   if (seatsLeft === 0) {
-    return '额满';
+    return 'is full';
   } else if (seatsLeft <= 3) {
-    return '即将满员';
+    return 'is almost full';
   } else {
-    return '可报名';
+    return 'can be registered';
   }
 }

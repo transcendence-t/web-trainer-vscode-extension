@@ -1,20 +1,20 @@
 [
   {
-    "label": "保留浏览器的提交校验",
+    "label": "retains browser submission verification",
     "expect": {
       "type": "exists",
       "selector": "form:not([novalidate]) button[type=\"submit\"]:not([formnovalidate])"
     }
   },
   {
-    "label": "取件码留空时无效",
+    "label": "Invalid when the pickup code is left blank",
     "expect": {
       "type": "exists",
       "selector": "form input#pickup-code:required:invalid"
     }
   },
   {
-    "label": "小写字母不符合格式",
+    "label": "lowercase letters do not conform to the format",
     "expect": {
       "type": "exists",
       "selector": "#pickup-code[pattern]:invalid"
@@ -28,7 +28,7 @@
     ]
   },
   {
-    "label": "数字少一位时无效",
+    "label": "is invalid when the number is one less",
     "expect": {
       "type": "exists",
       "selector": "#pickup-code[pattern]:invalid"
@@ -42,7 +42,7 @@
     ]
   },
   {
-    "label": "大写字母加四位数字时有效",
+    "label": "is valid when uppercase letters plus four digits are used",
     "expect": {
       "type": "exists",
       "selector": "#pickup-code[pattern]:valid"

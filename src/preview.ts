@@ -1,6 +1,7 @@
 import { parse as parseJavaScript, type Node } from 'acorn';
 import { full } from 'acorn-walk';
 import { defaultTreeAdapter as tree, html, parse, serialize, type DefaultTreeAdapterTypes } from 'parse5';
+import { localize } from './language';
 import type { PracticeCode, StorageEntries } from './model';
 
 type Element = DefaultTreeAdapterTypes.Element;
@@ -88,8 +89,14 @@ export function compilePage(code: PracticeCode, nonce: string, runner: string, o
       return dataUrl('application/javascript', js);
     } catch (error) {
       const syntax = error as Error & { loc?: { line: number; column: number } };
-      const position = syntax.loc ? ` 第 ${line + syntax.loc.line - 1} 行第 ${syntax.loc.column + 1} 列` : '';
-      issues.push(`${file}${position}：JavaScript 语法错误（${syntax.message.replace(/ \(\d+:\d+\)$/, '')}）`);
+      let position = '';
+      if (syntax.loc) {
+        const sourceLine = line + syntax.loc.line - 1;
+        const sourceColumn = syntax.loc.column + 1;
+        position = localize(`, line ${sourceLine}, column ${sourceColumn}`, ` 第 ${sourceLine} 行第 ${sourceColumn} 列`);
+      }
+      const message = syntax.message.replace(/ \(\d+:\d+\)$/, '');
+      issues.push(localize(`${file}${position}: JavaScript syntax error (${message})`, `${file}${position}：JavaScript 语法错误（${message}）`));
     }
   }
 

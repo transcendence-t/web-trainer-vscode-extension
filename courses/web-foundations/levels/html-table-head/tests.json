@@ -1,14 +1,14 @@
 [
   {
-    "label": "表格内最前面有完整标题",
+    "label": "The table starts with a caption",
     "expect": {
       "type": "text",
       "selector": "table > caption:first-child",
-      "value": "场地开放时间"
+      "value": "Venue opening hours"
     }
   },
   {
-    "label": "thead 有一行列标题",
+    "label": "The thead has one row of column headings",
     "expect": {
       "type": "count",
       "selector": "table > thead > tr",
@@ -16,23 +16,23 @@
     }
   },
   {
-    "label": "第一列标题是场地",
+    "label": "The first column heading identifies the venue",
     "expect": {
       "type": "text",
       "selector": "thead > tr > th[scope=\"col\"]:nth-child(1)",
-      "value": "场地"
+      "value": "venue"
     }
   },
   {
-    "label": "第二列标题是开放时间",
+    "label": "The second column title is opening hours",
     "expect": {
       "type": "text",
       "selector": "thead > tr > th[scope=\"col\"]:nth-child(2)",
-      "value": "开放时间"
+      "value": "opening hours"
     }
   },
   {
-    "label": "tbody 保留两条场地记录",
+    "label": "tbody keeps two venue records",
     "expect": {
       "type": "count",
       "selector": "table > tbody > tr",
@@ -40,15 +40,15 @@
     }
   },
   {
-    "label": "第一行表头是乒乓球室",
+    "label": "The first line header is the table tennis room",
     "expect": {
       "type": "text",
       "selector": "tbody > tr:first-child > th[scope=\"row\"]:first-child",
-      "value": "乒乓球室"
+      "value": "table tennis room"
     }
   },
   {
-    "label": "乒乓球室时间保留在数据单元格",
+    "label": "table tennis room time is retained in the data cell",
     "expect": {
       "type": "text",
       "selector": "tbody > tr:first-child > td:nth-child(2)",
@@ -56,15 +56,15 @@
     }
   },
   {
-    "label": "第二行表头是书画室",
+    "label": "The header of the second row is the painting and calligraphy room",
     "expect": {
       "type": "text",
       "selector": "tbody > tr:last-child > th[scope=\"row\"]:first-child",
-      "value": "书画室"
+      "value": "Painting and Calligraphy Studio"
     }
   },
   {
-    "label": "书画室时间保留在数据单元格",
+    "label": "The calligraphy and painting studio time is retained in the data cell",
     "expect": {
       "type": "text",
       "selector": "tbody > tr:last-child > td:nth-child(2)",

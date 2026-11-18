@@ -1,6 +1,6 @@
 [
   {
-    "label": "几个不同编号按原顺序转换",
+    "label": "Several different numbers are converted in the original order",
     "expect": {
       "type": "function",
       "name": "labelTickets",
@@ -19,7 +19,7 @@
     }
   },
   {
-    "label": "数字 0 也转换为一个标签",
+    "label": "number 0 is also converted to a label",
     "expect": {
       "type": "function",
       "name": "labelTickets",
@@ -34,7 +34,7 @@
     }
   },
   {
-    "label": "重复编号转换成各自的标签",
+    "label": "Duplicate numbers are converted into respective labels",
     "expect": {
       "type": "function",
       "name": "labelTickets",
@@ -51,7 +51,7 @@
     }
   },
   {
-    "label": "没有编号时返回空数组",
+    "label": "Returns an empty array when there is no number",
     "expect": {
       "type": "function",
       "name": "labelTickets",

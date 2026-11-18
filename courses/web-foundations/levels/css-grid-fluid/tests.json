@@ -1,6 +1,6 @@
 [
   {
-    "label": "窄屏上第二张卡片另起一行",
+    "label": "The second card starts on a new line on a narrow screen",
     "expect": {
       "type": "layout",
       "selector": ".produce-stall",
@@ -10,7 +10,7 @@
     "viewport": 320
   },
   {
-    "label": "窄屏上第三张卡片再起一行",
+    "label": "The third card on the narrow screen starts with another line",
     "expect": {
       "type": "layout",
       "selector": ".repair-stall",
@@ -20,7 +20,7 @@
     "viewport": 320
   },
   {
-    "label": "中等宽度下前两张并排",
+    "label": "The first two pictures are side by side in medium width.",
     "expect": {
       "type": "layout",
       "selector": ".produce-stall",
@@ -30,7 +30,7 @@
     "viewport": 460
   },
   {
-    "label": "中等宽度下第三张换行",
+    "label": "The third line wrap in medium width",
     "expect": {
       "type": "layout",
       "selector": ".repair-stall",
@@ -40,7 +40,7 @@
     "viewport": 460
   },
   {
-    "label": "宽屏上第三张与第二张并排",
+    "label": "The third picture and the second picture side by side on the wide screen",
     "expect": {
       "type": "layout",
       "selector": ".repair-stall",
@@ -50,7 +50,7 @@
     "viewport": 1000
   },
   {
-    "label": "宽屏上的三列铺满网格，空列收起",
+    "label": "The three columns on the wide screen are filled with grid, and the empty columns are closed",
     "expect": {
       "type": "style",
       "selector": ".stations",

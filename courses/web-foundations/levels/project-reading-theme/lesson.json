@@ -1,17 +1,17 @@
 {
   "focus": "style.css",
-  "title": "制作能记住选择的阅读主题",
-  "goal": "让 CSS 主题、按钮可访问状态和本地偏好同步。",
-  "summary": "为阅读面板增加深色模式。页面重新打开时恢复上次选择，并用按压状态可访问地表达当前模式。",
+  "title": "Create a reading topic that remembers your choices",
+  "goal": "synchronizes CSS themes, button accessibility states, and local preferences.",
+  "summary": "adds dark mode to the reading panel. Restores the last selection when the page is reopened and expresses the current mode accessible with a pressed state.",
   "tasks": [
-    "在 style.css 里为 #reader[data-theme=\"dark\"] 覆盖 --surface 为 #15243a、--ink 为 #f0f4f8。",
-    "在 script.js 中初始化并切换 #reader 的 data-theme，浅色用 light，深色用 dark。同步 #theme-toggle 的 aria-pressed。",
-    "把选择写入 reader-theme。初次没有记录时使用浅色，启动时恢复保存的主题。"
+    "in style.css is #reader[data-theme=\"dark\"], covering --surface as #15243a and --ink as #f0f4f8.",
+    "Initialize and switch the data-theme of #reader in script.js. Use light for light colors and dark for dark colors. aria-pressed to sync #theme-toggle.",
+    "Write selection to reader-theme. Use a light color when there is no recording for the first time, and restore the saved theme on startup."
   ],
   "example": {
     "language": "css",
     "code": ".panel[data-theme='dark'] { --surface: #15243a; }\npanel.dataset.theme = 'dark';",
-    "note": "自定义属性负责主题视觉。data 属性把当前界面状态交给 CSS，存储键则负责页面关闭后的恢复。"
+    "note": "Custom properties are responsible for theme visuals. The data attribute gives the current interface state to CSS, and the storage key is responsible for restoring the page after it is closed."
   },
-  "hint": "用一个函数同时更新 data-theme 与 aria-pressed，页面初始化以及点击按钮时都调用它。"
+  "hint": "uses a function to update data-theme and aria-pressed at the same time. It is called when the page is initialized and when the button is clicked."
 }

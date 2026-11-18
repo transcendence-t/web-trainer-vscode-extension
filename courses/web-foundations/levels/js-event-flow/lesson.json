@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "观察事件如何经过父容器和按钮",
-  "goal": "借助监听回调识别捕获、目标和冒泡阶段。",
-  "summary": "交互日志会显示同一次点击按什么顺序经过外层和内层。父容器同时监听捕获与冒泡。",
+  "title": "Observe how events pass through the parent container and button",
+  "goal": "identifies capture, target, and bubbling phases with the help of listening callbacks.",
+  "summary": "The interaction log shows the order in which the same click passes through the outer and inner layers. The parent container listens for both capture and bubbling.",
   "tasks": [
-    "在 #pad 上用捕获监听记录「外层捕获」，在 #tap 上用普通监听记录「按钮」。",
-    "在 #pad 上再用普通监听记录「外层冒泡」，将本次顺序用「 → 」连接后写到 #trace，并开始记录下一次。"
+    "is recorded with capture listening on #pad \"outer layer capture\" and on #tap with normal listening \"button\".",
+    "uses normal monitoring to record \"outer layer bubbling\" on #pad, connects this sequence with \" → \" and writes it to #trace, and starts recording the next time."
   ],
   "example": {
     "language": "javascript",
     "code": "parent.addEventListener('click', trackCapture, { capture: true });\nparent.addEventListener('click', trackBubble);",
-    "note": "捕获监听沿路径向内执行，目标上的监听执行后再沿父级冒泡。"
+    "note": "The capture listener is executed inward along the path, and the listener on the target is executed before bubbling along the parent."
   },
-  "hint": "用一个步骤数组收集文字，在父容器的冒泡监听中输出后清空。"
+  "hint": "uses a step array to collect text, output it in the bubbling listener of the parent container and then clear it."
 }

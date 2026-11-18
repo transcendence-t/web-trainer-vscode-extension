@@ -1,26 +1,26 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>影展投稿登记</title>
+  <title>Film Festival Submission Registration</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 <main class="sheet">
-  <h1>影展投稿登记</h1>
+  <h1>Film Festival Submission Registration</h1>
   <form id="submission-form" novalidate>
-    <label for="work-title">作品标题</label>
+    <label for="work-title">Title of Work</label>
     <input id="work-title" name="title" type="text">
-    <button type="submit">提交检查</button>
+    <button type="submit">Submit for inspection</button>
   </form>
-  <p><output id="submission-feedback">填写标题后提交检查。</output></p>
+  <p><output id="submission-feedback">Fill in the title and submit for inspection.</output></p>
   <script>
     document.querySelector('.sheet').addEventListener('submit', (event) => {
       if (!event.defaultPrevented) {
         event.preventDefault();
-        document.querySelector('#submission-feedback').textContent = '请先在 submit 监听中阻止默认提交。';
+        document.querySelector('#submission-feedback').textContent = 'Please prevent default submission in the submit listener first.';
       }
     });
   </script>

@@ -1,0 +1,42 @@
+[
+  {
+    "label": "只有一个主标题",
+    "expect": {
+      "type": "count",
+      "selector": "main h1",
+      "value": 1
+    }
+  },
+  {
+    "label": "两个同级栏目",
+    "expect": {
+      "type": "count",
+      "selector": "main h2",
+      "value": 2
+    }
+  },
+  {
+    "label": "签到是第一个栏目",
+    "expect": {
+      "type": "text",
+      "selector": "main h2",
+      "value": "签到安排"
+    }
+  },
+  {
+    "label": "补签位于两个栏目之间",
+    "expect": {
+      "type": "text",
+      "selector": "h2 + p + h3",
+      "value": "补签"
+    }
+  },
+  {
+    "label": "领卡为下一个同级栏目",
+    "expect": {
+      "type": "text",
+      "selector": "h3 + p + h2",
+      "value": "领卡安排"
+    }
+  }
+]

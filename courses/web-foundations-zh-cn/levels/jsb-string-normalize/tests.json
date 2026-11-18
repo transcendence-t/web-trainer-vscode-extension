@@ -1,0 +1,46 @@
+[
+  {
+    "label": "同时清理空格与字母",
+    "expect": {
+      "type": "function",
+      "name": "normalizeTag",
+      "args": [
+        "  p-13a "
+      ],
+      "value": "P-13A"
+    }
+  },
+  {
+    "label": "读码时保留编号中部空格",
+    "expect": {
+      "type": "function",
+      "name": "normalizeTag",
+      "args": [
+        " x 2 "
+      ],
+      "value": "X 2"
+    }
+  },
+  {
+    "label": "纯空白返回空字符串",
+    "expect": {
+      "type": "function",
+      "name": "normalizeTag",
+      "args": [
+        "  \t"
+      ],
+      "value": ""
+    }
+  },
+  {
+    "label": "中文和数字保持",
+    "expect": {
+      "type": "function",
+      "name": "normalizeTag",
+      "args": [
+        "标记09"
+      ],
+      "value": "标记09"
+    }
+  }
+]

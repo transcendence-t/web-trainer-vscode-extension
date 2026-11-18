@@ -1,18 +1,18 @@
 [
   {
-    "label": "点击前没有启动任务",
+    "label": "No task started before clicking",
     "expect": {
       "type": "text",
       "selector": "#order",
-      "value": "尚未运行"
+      "value": "is not running yet"
     }
   },
   {
-    "label": "同步、微任务和计时器严格依次运行",
+    "label": "synchronization, microtasks and timers run strictly in sequence",
     "expect": {
       "type": "text",
       "selector": "#order",
-      "value": "同步 → 微任务 → 计时器"
+      "value": "synchronization → microtask → timer"
     },
     "actions": [
       {
@@ -26,11 +26,11 @@
     ]
   },
   {
-    "label": "再次点击不会重复累计上一次的步骤",
+    "label": "Clicking again will not repeat the previous accumulated steps.",
     "expect": {
       "type": "text",
       "selector": "#order",
-      "value": "同步 → 微任务 → 计时器"
+      "value": "synchronization → microtask → timer"
     },
     "actions": [
       {

@@ -1,0 +1,242 @@
+[
+  {
+    "label": "第一题有三个可选答案",
+    "expect": {
+      "type": "count",
+      "selector": "#quiz-options button",
+      "value": 3
+    }
+  },
+  {
+    "label": "未回答时点下一题无法跳过第一题",
+    "expect": {
+      "type": "text",
+      "selector": "#quiz-question",
+      "value": "哪个链接地址能跳到 id 为 gallery 的区块？"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#quiz-next"
+      }
+    ]
+  },
+  {
+    "label": "第一题答对给出正确反馈",
+    "expect": {
+      "type": "text",
+      "selector": "#quiz-feedback",
+      "value": "回答正确。"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#quiz-options button[data-choice=\"1\"]"
+      }
+    ]
+  },
+  {
+    "label": "第一题答错时展示正确选项",
+    "expect": {
+      "type": "text",
+      "selector": "#quiz-feedback",
+      "value": "正确答案是「#gallery」。"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#quiz-options button[data-choice=\"0\"]"
+      }
+    ]
+  },
+  {
+    "label": "作答后本题三个选项都禁用",
+    "expect": {
+      "type": "count",
+      "selector": "#quiz-options button:disabled",
+      "value": 3
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#quiz-options button[data-choice=\"1\"]"
+      }
+    ]
+  },
+  {
+    "label": "答错后再点正确答案也不会补分",
+    "expect": {
+      "type": "text",
+      "selector": "#quiz-score",
+      "value": "0"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#quiz-options button[data-choice=\"0\"]"
+      },
+      {
+        "type": "click",
+        "selector": "#quiz-options button[data-choice=\"1\"]"
+      }
+    ]
+  },
+  {
+    "label": "重复点击正确选项也只获得一分",
+    "expect": {
+      "type": "text",
+      "selector": "#quiz-score",
+      "value": "1"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#quiz-options button[data-choice=\"1\"]"
+      },
+      {
+        "type": "click",
+        "selector": "#quiz-options button[data-choice=\"1\"]"
+      }
+    ]
+  },
+  {
+    "label": "下一题换成图片替代文字题",
+    "expect": {
+      "type": "text",
+      "selector": "#quiz-question",
+      "value": "哪个属性为图片提供替代文字？"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#quiz-options button[data-choice=\"1\"]"
+      },
+      {
+        "type": "click",
+        "selector": "#quiz-next"
+      }
+    ]
+  },
+  {
+    "label": "换题后提示重新等待作答",
+    "expect": {
+      "type": "text",
+      "selector": "#quiz-feedback",
+      "value": "请选择一个答案。"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#quiz-options button[data-choice=\"1\"]"
+      },
+      {
+        "type": "click",
+        "selector": "#quiz-next"
+      }
+    ]
+  },
+  {
+    "label": "答对两题后保留累计分数",
+    "expect": {
+      "type": "text",
+      "selector": "#quiz-feedback",
+      "value": "共答对 2 题。"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#quiz-options button[data-choice=\"1\"]"
+      },
+      {
+        "type": "click",
+        "selector": "#quiz-next"
+      },
+      {
+        "type": "click",
+        "selector": "#quiz-options button[data-choice=\"2\"]"
+      },
+      {
+        "type": "click",
+        "selector": "#quiz-next"
+      }
+    ]
+  },
+  {
+    "label": "第一题错第二题对时共计一分",
+    "expect": {
+      "type": "text",
+      "selector": "#quiz-feedback",
+      "value": "共答对 1 题。"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#quiz-options button[data-choice=\"0\"]"
+      },
+      {
+        "type": "click",
+        "selector": "#quiz-next"
+      },
+      {
+        "type": "click",
+        "selector": "#quiz-options button[data-choice=\"2\"]"
+      },
+      {
+        "type": "click",
+        "selector": "#quiz-next"
+      }
+    ]
+  },
+  {
+    "label": "两题都答错也能查看零分结果",
+    "expect": {
+      "type": "text",
+      "selector": "#quiz-feedback",
+      "value": "共答对 0 题。"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#quiz-options button[data-choice=\"0\"]"
+      },
+      {
+        "type": "click",
+        "selector": "#quiz-next"
+      },
+      {
+        "type": "click",
+        "selector": "#quiz-options button[data-choice=\"1\"]"
+      },
+      {
+        "type": "click",
+        "selector": "#quiz-next"
+      }
+    ]
+  },
+  {
+    "label": "查看结果后清空选项",
+    "expect": {
+      "type": "count",
+      "selector": "#quiz-options button",
+      "value": 0
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#quiz-options button[data-choice=\"1\"]"
+      },
+      {
+        "type": "click",
+        "selector": "#quiz-next"
+      },
+      {
+        "type": "click",
+        "selector": "#quiz-options button[data-choice=\"2\"]"
+      },
+      {
+        "type": "click",
+        "selector": "#quiz-next"
+      }
+    ]
+  }
+]

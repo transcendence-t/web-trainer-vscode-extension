@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "把文本标签转换为易读清单",
-  "goal": "用 split 拆分文本、过滤空项，再用 join 合并。",
-  "summary": "活动资料的标签以逗号分隔，录入时可能出现重复逗号或空格。显示时用「 / 」分隔有内容的标签。",
+  "title": "Convert text labels into readable lists",
+  "goal": "Use split to split text, filter out empty items, and then use join to merge.",
+  "summary": "The tags of activity data are separated by commas, and repeated commas or spaces may appear when entering. Use \" / \" to separate tags with content when displayed.",
   "tasks": [
-    "完成 labelLine(text)，按英文逗号拆分并去掉每项的首尾空白。",
-    "移除空项，按原顺序用 \" / \" 重新连接。没有标签时返回空字符串。"
+    "completes labelLine(text), splits it by commas and removes the leading and trailing blanks of each item.",
+    "Remove empty items and reconnect with \" / \" in the original order. Returns an empty string if there is no label."
   ],
   "example": {
     "language": "javascript",
-    "code": "const words = '木工, 绘画'.split(',');\nwords.map((word) => word.trim()).join(' / '); // '木工 / 绘画'",
-    "note": "split 返回数组。join 只把分隔符放在相邻项之间。"
+    "code": "const words = 'Woodworking, Painting'.split(',');\nwords.map((word) => word.trim()).join(' / '); // 'Woodworking/Painting'",
+    "note": "split returns an array. join only places delimiters between adjacent items."
   },
-  "hint": "先 trim 再 filter，否则一项只含空格时可能没有被过滤。"
+  "hint": "Trim first and then filter, otherwise an item containing only spaces may not be filtered."
 }

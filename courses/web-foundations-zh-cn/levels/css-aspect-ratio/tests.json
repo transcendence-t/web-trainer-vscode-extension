@@ -1,0 +1,42 @@
+[
+  {
+    "label": "窄屏宽度为 192px",
+    "expect": {
+      "type": "style",
+      "selector": ".screen",
+      "property": "width",
+      "value": "192px"
+    },
+    "viewport": 384
+  },
+  {
+    "label": "窄屏高度为 108px",
+    "expect": {
+      "type": "style",
+      "selector": ".screen",
+      "property": "height",
+      "value": "108px"
+    },
+    "viewport": 384
+  },
+  {
+    "label": "宽屏宽度为 320px",
+    "expect": {
+      "type": "style",
+      "selector": ".screen",
+      "property": "width",
+      "value": "320px"
+    },
+    "viewport": 740
+  },
+  {
+    "label": "宽屏高度为 180px",
+    "expect": {
+      "type": "style",
+      "selector": ".screen",
+      "property": "height",
+      "value": "180px"
+    },
+    "viewport": 740
+  }
+]

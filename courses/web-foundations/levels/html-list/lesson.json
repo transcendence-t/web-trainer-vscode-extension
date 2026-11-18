@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "三项设备清单",
-  "summary": "无序列表适合展示一组同类项目。",
+  "title": "Three equipment lists",
+  "summary": "Unordered list is suitable for displaying a group of similar items.",
   "tasks": [
-    "在 <ul id=\"equipment\"> 里面添加 3 个 li。",
-    "从上到下依次写「键盘」「鼠标」「显示器」。"
+    "Add 3 li inside <ul id=\"equipment\">.",
+    "Write \"keyboard\" \"mouse\" \"monitor\" from top to bottom."
   ],
-  "hint": "每件设备用自己的 li。若只出现一个圆点，检查是否把几个设备名称写进了同一个 li。",
-  "goal": "把三件同类设备写成可逐项查看的列表。",
+  "hint": "Each device uses its own li. If only one dot appears, check whether several device names are written into the same li.",
+  "goal": "Write three pieces of similar equipment into a list that can be viewed one by one.",
   "example": {
     "language": "html",
-    "code": "<ul>\n  <li>雨伞</li>\n  <li>水壶</li>\n  <li>笔记本</li>\n</ul>",
-    "note": "徒步用品可以分条列在 ul 中，出发前可以按任意顺序清点。"
+    "code": "<ul>\n  <li>umbrella</li>\n  <li>kettle</li>\n  <li>notebook</li>\n</ul>",
+    "note": "Hiking supplies can be listed in ul in separate items and can be counted in any order before departure."
   }
 }

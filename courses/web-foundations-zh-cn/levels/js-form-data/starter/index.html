@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>读取表单中的单值与多值字段</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="sheet">
+    <h1>读取表单中的单值与多值字段</h1>
+    <form id="application">
+      <label for="visitor">姓名</label> <input id="visitor" name="visitor" required>
+      <fieldset><legend>可参加时段</legend>
+        <label><input id="morning" type="checkbox" name="session" value="上午"> 上午</label>
+        <label><input id="afternoon" type="checkbox" name="session" value="下午"> 下午</label>
+      </fieldset>
+      <button type="submit">查看回执</button>
+    </form>
+    <p id="receipt" role="status">尚未提交</p>
+    <script>
+      // 让同页回执能记录提交事件是否已经被拦截。
+      document.querySelector("#application").parentElement.addEventListener("submit", (event) => {
+        document.querySelector("#receipt").dataset.inPlace = String(event.defaultPrevented);
+      });
+    </script>
+  </main>
+</body>
+</html>

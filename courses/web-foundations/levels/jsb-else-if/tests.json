@@ -1,57 +1,57 @@
 [
   {
-    "label": "没有余位时返回额满",
+    "label": "Returns full when there is no remaining space",
     "expect": {
       "type": "function",
       "name": "seatStatus",
       "args": [
         0
       ],
-      "value": "额满"
+      "value": "is full"
     }
   },
   {
-    "label": "还有 1 个名额时返回即将满员",
+    "label": "Returns when there is still 1 place and it will be full.",
     "expect": {
       "type": "function",
       "name": "seatStatus",
       "args": [
         1
       ],
-      "value": "即将满员"
+      "value": "is almost full"
     }
   },
   {
-    "label": "3 个名额仍属于即将满员",
+    "label": "3 places are still about to be filled.",
     "expect": {
       "type": "function",
       "name": "seatStatus",
       "args": [
         3
       ],
-      "value": "即将满员"
+      "value": "is almost full"
     }
   },
   {
-    "label": "4 个名额时返回可报名",
+    "label": "You can register when you return and there are 4 places.",
     "expect": {
       "type": "function",
       "name": "seatStatus",
       "args": [
         4
       ],
-      "value": "可报名"
+      "value": "can be registered"
     }
   },
   {
-    "label": "余位充足时返回可报名",
+    "label": "Return when there are enough seats to register.",
     "expect": {
       "type": "function",
       "name": "seatStatus",
       "args": [
         16
       ],
-      "value": "可报名"
+      "value": "can be registered"
     }
   }
 ]

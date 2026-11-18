@@ -1,6 +1,6 @@
 [
   {
-    "label": "卡片提供定位参照",
+    "label": "card provides positioning reference",
     "expect": {
       "type": "style",
       "selector": ".branch-card",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "角标使用绝对定位",
+    "label": "corner mark uses absolute positioning",
     "expect": {
       "type": "style",
       "selector": ".branch-badge",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "角标距上边 10px",
+    "label": "corner gauge top 10px",
     "expect": {
       "type": "style",
       "selector": ".branch-badge",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "角标距右边 12px",
+    "label": "corner gauge right 12px",
     "expect": {
       "type": "style",
       "selector": ".branch-badge",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "角标实际落在分馆卡片内",
+    "label": "The corner mark actually falls on the branch library card",
     "expect": {
       "type": "layout",
       "selector": ".branch-badge",

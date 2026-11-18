@@ -1,0 +1,47 @@
+[
+  {
+    "label": "页面满足高度下限",
+    "expect": {
+      "type": "style",
+      "selector": "body",
+      "property": "min-height",
+      "value": "360px"
+    }
+  },
+  {
+    "label": "用纵向 Flex 排列页面区域",
+    "expect": {
+      "type": "style",
+      "selector": "body",
+      "property": "flex-direction",
+      "value": "column"
+    }
+  },
+  {
+    "label": "主体可以增长",
+    "expect": {
+      "type": "style",
+      "selector": "main",
+      "property": "flex-grow",
+      "value": "1"
+    }
+  },
+  {
+    "label": "页脚紧随内容且不覆盖",
+    "expect": {
+      "type": "layout",
+      "selector": "footer",
+      "relativeTo": "main",
+      "relation": "below"
+    }
+  },
+  {
+    "label": "页脚仍在普通文档流",
+    "expect": {
+      "type": "style",
+      "selector": "footer",
+      "property": "position",
+      "value": "static"
+    }
+  }
+]

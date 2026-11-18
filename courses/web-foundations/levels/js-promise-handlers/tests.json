@@ -1,10 +1,10 @@
 [
   {
-    "label": "成功后展示窗口",
+    "label": "Display window after success",
     "expect": {
       "type": "text",
       "selector": "#desk",
-      "value": "请到 窗口 2"
+      "value": "Please go to window 2"
     },
     "actions": [
       {
@@ -14,11 +14,11 @@
     ]
   },
   {
-    "label": "失败时展示原因",
+    "label": "Shows the reason when it fails",
     "expect": {
       "type": "text",
       "selector": "#desk",
-      "value": "暂时无法分配"
+      "value": "No service window is available right now"
     },
     "actions": [
       {
@@ -28,11 +28,11 @@
     ]
   },
   {
-    "label": "可以在显示错误之后重试",
+    "label": "can retry after displaying an error",
     "expect": {
       "type": "text",
       "selector": "#desk",
-      "value": "请到 窗口 2"
+      "value": "Please go to window 2"
     },
     "actions": [
       {

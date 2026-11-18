@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "卡片放不下时自动换行",
+  "goal": "让等宽场次卡片根据容器宽度自动分行。",
+  "summary": "flex-wrap 默认为 nowrap。设为 wrap 后，当前行放不下下一项时，浏览器会把它放到新的一行。",
+  "tasks": [
+    "在 .session-list 中启用 Flexbox 换行，保留原有卡片宽度和间距。",
+    "在宽度为 320px 的预览中，让第三张卡片排到第二行。宽度为 720px 时，三张卡片排成一行。"
+  ],
+  "hint": "在 Flexbox 容器上设置 flex-wrap。保留每张卡片的固定宽度，就能清楚看到它在何时换行。",
+  "example": {
+    "language": "css",
+    "code": ".topic-tags {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 6px;\n}",
+    "note": "文章的主题标签可能有多个。列表在手机上变窄时，剩余标签会自然排到下一行。"
+  }
+}

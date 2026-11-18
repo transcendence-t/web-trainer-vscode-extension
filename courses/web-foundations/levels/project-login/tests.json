@@ -1,25 +1,25 @@
 [
   {
-    "label": "密码字段使用带标签的密码控件",
+    "label": "Password field uses labeled password control",
     "expect": {
       "type": "exists",
       "selector": "#login-form:has(label[for=\"login-password\"]) input#login-password[type=\"password\" i]"
     }
   },
   {
-    "label": "初始页面等待用户输入",
+    "label": "initial page waiting for user input",
     "expect": {
       "type": "text",
       "selector": "#login-status",
-      "value": "请输入演示账号和密码。"
+      "value": "Please enter the demo account and password."
     }
   },
   {
-    "label": "直接提交空表单时提示填写",
+    "label": "Prompt to fill in when submitting an empty form directly",
     "expect": {
       "type": "text",
       "selector": "#login-status",
-      "value": "请填写账号和密码。"
+      "value": "Please fill in your account number and password."
     },
     "actions": [
       {
@@ -29,11 +29,11 @@
     ]
   },
   {
-    "label": "只填账号时提示填写密码",
+    "label": "Prompt to fill in the password when only filling in the account number",
     "expect": {
       "type": "text",
       "selector": "#login-status",
-      "value": "请填写账号和密码。"
+      "value": "Please fill in your account number and password."
     },
     "actions": [
       {
@@ -53,11 +53,11 @@
     ]
   },
   {
-    "label": "全空格账号按未填写处理",
+    "label": "Accounts with all spaces will be treated as unfilled.",
     "expect": {
       "type": "text",
       "selector": "#login-status",
-      "value": "请填写账号和密码。"
+      "value": "Please fill in your account number and password."
     },
     "actions": [
       {
@@ -77,11 +77,11 @@
     ]
   },
   {
-    "label": "账号正确但密码错误时拒绝登录",
+    "label": "Denied login when the account number is correct but the password is wrong",
     "expect": {
       "type": "text",
       "selector": "#login-status",
-      "value": "账号或密码有误。"
+      "value": "The account number or password is incorrect."
     },
     "actions": [
       {
@@ -101,11 +101,11 @@
     ]
   },
   {
-    "label": "密码正确但账号错误时拒绝登录",
+    "label": "Refuse to log in when the password is correct but the account number is wrong",
     "expect": {
       "type": "text",
       "selector": "#login-status",
-      "value": "账号或密码有误。"
+      "value": "The account number or password is incorrect."
     },
     "actions": [
       {
@@ -125,11 +125,11 @@
     ]
   },
   {
-    "label": "账号和密码都正确时成功",
+    "label": "Successful when both the account number and password are correct",
     "expect": {
       "type": "text",
       "selector": "#login-status",
-      "value": "登录成功。"
+      "value": "Login successful."
     },
     "actions": [
       {
@@ -149,11 +149,11 @@
     ]
   },
   {
-    "label": "账号两侧的空格不影响匹配",
+    "label": "The spaces on both sides of the account do not affect the matching.",
     "expect": {
       "type": "text",
       "selector": "#login-status",
-      "value": "登录成功。"
+      "value": "Login successful."
     },
     "actions": [
       {
@@ -173,11 +173,11 @@
     ]
   },
   {
-    "label": "密码按原样比较",
+    "label": "passwords are compared as is",
     "expect": {
       "type": "text",
       "selector": "#login-status",
-      "value": "账号或密码有误。"
+      "value": "The account number or password is incorrect."
     },
     "actions": [
       {

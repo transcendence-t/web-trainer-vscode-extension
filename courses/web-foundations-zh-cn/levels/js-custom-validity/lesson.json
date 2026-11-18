@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "把两个口令字段的匹配结果交给浏览器",
+  "goal": "用 setCustomValidity 补充跨字段校验，并在修正后清除旧错误。",
+  "summary": "设置本地设备口令时需要重复输入。任一字段变化后都要重新计算确认框的有效性。",
+  "tasks": [
+    "监听 #password 和 #confirm 的 input。若确认框非空且两值不同，设置自定义错误「两次口令不一致」，并在 #feedback 中显示同一句。",
+    "值匹配或确认框为空时用空字符串清除自定义错误和提示。确认框的 required 仍生效。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const message = amount < minimum ? '数量低于下限' : '';\nfield.setCustomValidity(message);",
+    "note": "传入非空字符串会让控件无效，传入空字符串才会清除自定义错误。"
+  },
+  "hint": "两个输入框可以共用一个检查函数。用 confirm.value 比较，不用访问 HTML 的 value 属性。"
+}

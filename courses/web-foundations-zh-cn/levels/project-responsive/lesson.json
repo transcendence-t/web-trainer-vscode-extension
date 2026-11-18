@@ -1,0 +1,18 @@
+{
+  "focus": "index.html",
+  "title": "制作响应式旧书交换活动页",
+  "goal": "让活动页的区域含义清楚，并适配手机和较宽的屏幕。",
+  "summary": "用 header、nav、main、section 和 footer 描述页面结构。先用窄屏样式保留清晰的阅读顺序，再用媒体查询在宽屏切换导航和内容的排列。",
+  "tasks": [
+    "在 index.html 中把 .site-header、.site-nav、.reading-content 和 .site-footer 改成对应的语义标签。在 nav 加上 aria-label=\"页内导航\"。",
+    "把 #schedule 和 #visit 改成 main 内的两个 section，保留标题、现有类名和导航链接的目标。",
+    "在 style.css 中添加最小宽度 680px 的媒体查询。宽屏上，活动名称与导航左右并排，活动安排和到场方式排成两列等宽。",
+    "检查窄于 680px 的预览，导航区排在站点名称下方，两块正文也上下排列。点击导航链接确认能定位到对应内容。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".photo-notes {\n  display: grid;\n  gap: 12px;\n}\n@media (min-width: 720px) {\n  .photo-notes {\n    grid-template-columns: 2fr 1fr;\n  }\n}",
+    "note": "摄影分享页先用单列显示两块内容。宽度达到 720px 时，照片说明和拍摄参数就能并排阅读。"
+  },
+  "hint": "如果窄屏出现两列，先检查双列规则是否写在 min-width 的媒体查询里。页内链接还需要 href 中的片段与 section 的 id 对应。"
+}

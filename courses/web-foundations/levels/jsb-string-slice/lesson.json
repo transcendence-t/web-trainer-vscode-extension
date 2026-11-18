@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "只显示票号的末四位",
-  "goal": "用 slice 的负向下标截取字符串末尾。",
-  "summary": "票号由英文字母和数字组成。回执上只显示最后四位，旧票不足四位时显示全部。",
+  "title": "Only displays the last four digits of the ticket number",
+  "goal": "Use the negative subscript of slice to truncate the end of the string.",
+  "summary": "The ticket number consists of English letters and numbers. Only the last four digits will be displayed on the receipt, and all old tickets will be displayed if there are less than four digits.",
   "tasks": [
-    "完成 lastDigits(ticket)，返回字符串的最后四个字符。",
-    "不足四个字符时返回整个票号，保留前导零。"
+    "completes lastDigits(ticket) and returns the last four characters of the string.",
+    "is less than four characters, the entire ticket number is returned, with leading zeros retained."
   ],
   "example": {
     "language": "javascript",
     "code": "'AP0128'.slice(-3); // '128'\n'A7'.slice(-3); // 'A7'",
-    "note": "负下标从字符串末尾向前数。slice 的结果仍是字符串。"
+    "note": "Negative subscripts count forward from the end of the string. The result of slice is still a string."
   },
-  "hint": "直接使用 slice(-4)。把票号转成数值会丢掉开头的 0。"
+  "hint": "uses slice(-4) directly. Converting the ticket number to a numerical value will lose the leading 0's."
 }

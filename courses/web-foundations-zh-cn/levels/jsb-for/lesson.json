@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "按宽度生成票据分隔线",
+  "goal": "用 for 按给定次数拼接字符。",
+  "summary": "for 的三部分分别是起始值、继续执行的条件和每轮结束后的更新。从 0 开始，每次加 1，在计数小于宽度时继续，循环体就执行 width 次。",
+  "tasks": [
+    "补全 receiptDivider(width)，参数 width 是非负整数，表示需要的字符数。",
+    "用 for 每轮向 divider 拼接一个半角短横线 -，循环结束后返回字符串。width 为 0 时返回空字符串。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "function tablePlaces(seats) {\n  let plan = '';\n  for (let seat = 0; seat < seats; seat += 1) {\n    plan += '□';\n  }\n  return plan;\n}",
+    "note": "座位速览用一个方框表示一个座位，tablePlaces(3) 会返回三个方框。"
+  },
+  "hint": "如果结果总少一个字符，代入 width 为 1 的情况检查循环。计数从 1 开始且条件是小于 1 时，循环体一次也不会执行。"
+}

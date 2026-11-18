@@ -1,20 +1,20 @@
 [
   {
-    "label": "代码片段显示完整的源码",
+    "label": "code snippet shows complete source code",
     "expect": {
       "type": "text",
       "selector": "p > code#copyright-code",
       "value": "<p>&copy;</p>"
     },
-    "hint": "检查尖括号、& 和分号是否都能在预览里看到。"
+    "hint": "Check whether angle brackets, & and semicolons are all visible in the preview."
   },
   {
-    "label": "代码片段只有文字",
+    "label": "code snippet only has text",
     "expect": {
       "type": "count",
       "selector": "code#copyright-code *",
       "value": 0
     },
-    "hint": "用字符引用显示尖括号，避免片段变成新的元素。"
+    "hint": "Display angle brackets with character references to prevent fragments from becoming new elements."
   }
 ]

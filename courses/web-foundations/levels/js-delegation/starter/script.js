@@ -8,4 +8,4 @@ addSong.addEventListener('click', () => {
   addSong.disabled = true;
 });
 
-// 上面已经实现新增曲目。接下来让列表处理曲目按钮的点击。
+// has added new tracks above. Next let the list handle track button clicks.

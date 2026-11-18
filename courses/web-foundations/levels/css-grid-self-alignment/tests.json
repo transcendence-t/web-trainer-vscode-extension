@@ -1,6 +1,6 @@
 [
   {
-    "label": "状态水平对齐到末端",
+    "label": "status is aligned horizontally to the end",
     "expect": {
       "type": "style",
       "selector": ".badge",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "状态垂直对齐到末端",
+    "label": "status vertically aligned to end",
     "expect": {
       "type": "style",
       "selector": ".badge",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "说明仍保留默认对齐",
+    "label": "Description still retains the default alignment",
     "expect": {
       "type": "style",
       "selector": "#note",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "状态盒仍在展台内",
+    "label": "status box is still in the booth",
     "expect": {
       "type": "layout",
       "selector": ".badge",

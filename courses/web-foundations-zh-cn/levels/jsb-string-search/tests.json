@@ -1,0 +1,50 @@
+[
+  {
+    "label": "包含混合大小写关键字",
+    "expect": {
+      "type": "function",
+      "name": "matchesKeyword",
+      "args": [
+        "Portable Mixer",
+        " MIX "
+      ],
+      "value": true
+    }
+  },
+  {
+    "label": "任意位置可匹配",
+    "expect": {
+      "type": "function",
+      "name": "matchesKeyword",
+      "args": [
+        "DX8-充电模块",
+        "充电"
+      ],
+      "value": true
+    }
+  },
+  {
+    "label": "缺少关键字时为 false",
+    "expect": {
+      "type": "function",
+      "name": "matchesKeyword",
+      "args": [
+        "DX8-充电模块",
+        "按钮"
+      ],
+      "value": false
+    }
+  },
+  {
+    "label": "空白查询显示全部",
+    "expect": {
+      "type": "function",
+      "name": "matchesKeyword",
+      "args": [
+        "Lab Station",
+        " \t"
+      ],
+      "value": true
+    }
+  }
+]

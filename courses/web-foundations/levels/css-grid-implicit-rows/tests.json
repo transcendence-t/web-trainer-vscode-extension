@@ -1,6 +1,6 @@
 [
   {
-    "label": "显式首行保持 64px",
+    "label": "Explicit first line remains 64px",
     "expect": {
       "type": "style",
       "selector": "#a",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "第二行高 40px",
+    "label": "Second line height 40px",
     "expect": {
       "type": "style",
       "selector": "#c",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "第三行自动遵守高度",
+    "label": "The third line automatically obeys the height",
     "expect": {
       "type": "style",
       "selector": "#e",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "第三行仍在第二行之后",
+    "label": "The third line is still after the second line",
     "expect": {
       "type": "layout",
       "selector": "#e",

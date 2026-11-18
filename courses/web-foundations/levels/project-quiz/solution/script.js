@@ -1,11 +1,11 @@
 const questions = [
   {
-    prompt: '哪个链接地址能跳到 id 为 gallery 的区块？',
+    prompt: 'Which link address can jump to the block with the id of gallery?',
     options: ['gallery', '#gallery', '/gallery'],
     correct: 1,
   },
   {
-    prompt: '哪个属性为图片提供替代文字？',
+    prompt: 'Which attribute provides alt text for an image?',
     options: ['title', 'src', 'alt'],
     correct: 2,
   },
@@ -29,8 +29,8 @@ function showQuestion() {
     option.dataset.choice = String(index);
     choices.append(option);
   }
-  feedback.textContent = '请选择一个答案。';
-  nextButton.textContent = questionIndex === questions.length - 1 ? '查看结果' : '下一题';
+  feedback.textContent = 'Please select an answer.';
+  nextButton.textContent = questionIndex === questions.length - 1 ? 'View results' : 'Next question';
   nextButton.disabled = true;
 }
 
@@ -43,9 +43,9 @@ choices.addEventListener('click', (event) => {
   const question = questions[questionIndex];
   if (Number(option.dataset.choice) === question.correct) {
     score += 1;
-    feedback.textContent = '回答正确。';
+    feedback.textContent = 'answered correctly.';
   } else {
-    feedback.textContent = '正确答案是「' + question.options[question.correct] + '」。';
+    feedback.textContent = 'The correct answer is "' + question.options[question.correct] + '".';
   }
   scoreLabel.textContent = String(score);
   for (const button of choices.querySelectorAll('button')) {
@@ -61,8 +61,8 @@ nextButton.addEventListener('click', () => {
     return;
   }
 
-  questionHeading.textContent = '测验结束';
+  questionHeading.textContent = 'test ended';
   choices.replaceChildren();
-  feedback.textContent = '共答对 ' + score + ' 题。';
+  feedback.textContent = 'Score: ' + score + ' / ' + questions.length;
   nextButton.disabled = true;
 });

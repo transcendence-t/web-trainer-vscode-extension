@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "给标题后的第一段设置引言样式",
-  "goal": "用相邻兄弟选择器区分引言和后续段落。",
-  "summary": "每个栏目标题之后紧接的一段是简短引言，其后其他段落按普通正文显示。",
+  "title": "Set the introduction style for the first paragraph after the title",
+  "goal": "Use adjacent sibling selectors to distinguish introductions from subsequent paragraphs.",
+  "summary": "The paragraph immediately following the title of each column is a short introduction, and the other paragraphs thereafter are displayed as ordinary text.",
   "tasks": [
-    "用一条选择器把紧跟 h2 的 p 设为粗细 700。",
-    "保留后续段落和栏目标题的原有样式。"
+    "Use a selector to set the p immediately following h2 to a thickness of 700.",
+    "retains the original styles of subsequent paragraphs and column titles."
   ],
   "example": {
     "language": "css",
     "code": "label + input { margin-left: 8px; }",
-    "note": "加号匹配共享同一个父元素、紧邻前一个元素的第二项。波浪线可选中后面多个兄弟。"
+    "note": "The plus sign matches the second item immediately following the previous element that shares the same parent element. The wavy line can select multiple brothers behind it."
   },
-  "hint": "目标在加号右边。先写 h2，再写想要匹配的 p。"
+  "hint": "The target is to the right of the plus sign. Write h2 first, and then write the p you want to match."
 }

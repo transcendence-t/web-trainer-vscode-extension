@@ -1,0 +1,17 @@
+{
+  "focus": "script.js",
+  "title": "计算茶饮分装量和备用量",
+  "goal": "声明两个可单独调用的函数，让其中一个使用另一个的返回值。",
+  "summary": "函数用参数接收输入，再通过 return 把结果交给调用者。调用子函数所得的结果可以继续参与外层函数的计算。",
+  "tasks": [
+    "补全 drinkVolume(cups, mlPerCup)，接收杯数和每杯的毫升数，返回两者相乘的数值。",
+    "补全 prepareVolume(cups, mlPerCup, spareMl)。将前两个参数交给 drinkVolume，再把备用的毫升数 spareMl 加到结果里并返回。",
+    "参数均为非负整数。保留两个函数名，让它们都可以单独调用。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "function boardsWidth(panelWidth, panels) {\n  return panelWidth * panels;\n}\n\nfunction displayWidth(panelWidth, panels, gapWidth) {\n  return boardsWidth(panelWidth, panels) + gapWidth;\n}",
+    "note": "展板总宽由各块等宽板的宽度与拼接间隙总宽相加。displayWidth 直接使用 boardsWidth 的返回值。"
+  },
+  "hint": "杯数和单杯容量先传给 drinkVolume。第三个参数是备用量，在取得结果后再加进去。"
+}

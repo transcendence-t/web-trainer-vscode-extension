@@ -1,6 +1,6 @@
 [
   {
-    "label": "通知上方留出 24px 外边距",
+    "label": "Leave 24px margin above the notification",
     "expect": {
       "type": "style",
       "selector": ".stop-note",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "通知原有内边距为 12px",
+    "label": "notifies that the original padding is 12px",
     "expect": {
       "type": "style",
       "selector": ".stop-note",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "通知块在卡片内水平居中",
+    "label": "The notification block is centered horizontally within the card",
     "expect": {
       "type": "layout",
       "selector": ".stop-note",

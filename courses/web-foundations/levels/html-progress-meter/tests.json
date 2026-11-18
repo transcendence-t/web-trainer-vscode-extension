@@ -1,20 +1,20 @@
 [
   {
-    "label": "上传使用任务进度元素",
+    "label": "upload using task progress element",
     "expect": {
       "type": "exists",
       "selector": "progress#upload[max=\"10\"][value=\"6\"]"
     }
   },
   {
-    "label": "容量使用固定量程元素",
+    "label": "capacity uses fixed range elements",
     "expect": {
       "type": "exists",
       "selector": "meter#capacity[min=\"0\"][max=\"100\"][value=\"65\"]"
     }
   },
   {
-    "label": "保留两项可访问标签",
+    "label": "retains two accessible tags",
     "expect": {
       "type": "count",
       "selector": "label[for=\"upload\"], label[for=\"capacity\"]",

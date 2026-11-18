@@ -1,3 +1,4 @@
+import { checkAnswer, localize } from './language';
 import { checkTimeout, lessonFiles, sandboxPermissions, type Check, type CheckResult, type HostMessage, type LessonView, type PanelMessage } from './model';
 
 declare function acquireVsCodeApi(): { postMessage(message: PanelMessage): void };
@@ -30,20 +31,22 @@ function updateLesson(lesson: LessonView) {
   activity.hidden = false;
   byId('loading').hidden = true;
   byId('course-title').textContent = `${lesson.courseTitle} / ${lesson.sectionTitle}`;
-  byId('position').textContent = `第 ${lesson.position} / ${lesson.total} 关`;
+  byId('position').textContent = localize(`Lesson ${lesson.position} / ${lesson.total}`, `第 ${lesson.position} / ${lesson.total} 关`);
   const progress = byId<HTMLProgressElement>('progress');
   progress.max = lesson.total;
   progress.value = lesson.completed;
-  progress.setAttribute('aria-valuetext', `已通过 ${lesson.completed} / ${lesson.total} 关`);
+  progress.setAttribute('aria-valuetext', localize(`Passed ${lesson.completed} of ${lesson.total} lessons`, `已通过 ${lesson.completed} / ${lesson.total} 关`));
   byId('lesson-title').textContent = lesson.title;
   byId('goal').hidden = !lesson.goal;
-  byId('goal').textContent = lesson.goal ? `学习目标 · ${lesson.goal}` : '';
+  byId('goal').textContent = lesson.goal ? localize(`Learning goal · ${lesson.goal}`, `学习目标 · ${lesson.goal}`) : '';
   byId('summary').textContent = lesson.summary;
   byId('example').hidden = !lesson.example;
   byId('example-note').textContent = lesson.example?.note ?? '';
   const exampleCode = byId('example-code');
   exampleCode.textContent = lesson.example?.code ?? '';
-  exampleCode.setAttribute('aria-label', lesson.example ? `${lesson.example.language} 示例代码` : '示例代码');
+  exampleCode.setAttribute('aria-label', lesson.example
+    ? localize(`${lesson.example.language} code example`, `${lesson.example.language} 示例代码`)
+    : localize('Code example', '示例代码'));
   byId('tasks').replaceChildren(...lesson.tasks.map((task) => {
     const item = document.createElement('li');
     item.textContent = task;
@@ -67,7 +70,7 @@ function updateLesson(lesson: LessonView) {
     const button = document.createElement('button');
     button.type = 'button';
     button.textContent = file;
-    button.title = `在编辑器中打开 ${file}`;
+    button.title = localize(`Open ${file} in the editor`, `在编辑器中打开 ${file}`);
     button.className = file === lesson.focus ? 'file focus-file' : 'file';
     button.addEventListener('click', () => host.postMessage({ type: 'edit', file }));
     return button;
@@ -81,7 +84,7 @@ function clearCheck() {
   checking?.abort();
   checking = undefined;
   checkButton.disabled = false;
-  checkButton.textContent = '检查答案';
+  checkButton.textContent = checkAnswer;
   assessment.hidden = true;
 }
 
@@ -115,7 +118,10 @@ function runOne(html: string, rule: Check, signal: AbortSignal): Promise<CheckRe
     sandbox.referrerPolicy = 'no-referrer';
     const channel = new MessageChannel();
     let started = false;
-    const timer = setTimeout(() => finish({ passed: false, detail: '页面运行超时，请检查是否有执行时间过长的代码。' }), checkTimeout(rule));
+    const timer = setTimeout(() => finish({ passed: false, detail: localize(
+      'The page timed out. Check for code that takes too long to run.',
+      '页面运行超时，请检查是否有执行时间过长的代码。',
+    ) }), checkTimeout(rule));
     const abort = () => finish(undefined);
     function finish(result: CheckResult | undefined) {
       clearTimeout(timer);
@@ -146,7 +152,7 @@ async function runChecks(message: Extract<HostMessage, { type: 'checking' }>) {
   const run = new AbortController();
   checking = run;
   checkButton.disabled = true;
-  checkButton.textContent = '正在检查…';
+  checkButton.textContent = localize('Checking…', '正在检查…');
   const results: CheckResult[] = [];
   for (const { html, ...rule } of message.tests) {
     const result = await runOne(html ?? message.html, rule, run.signal);
@@ -168,7 +174,7 @@ function showResult(message: Extract<HostMessage, { type: 'result' }>) {
   for (const rule of message.checks) {
     const item = document.createElement('li');
     item.className = rule.passed ? 'check-passed' : 'check-failed';
-    item.textContent = `${rule.passed ? '已通过' : '待修改'} · ${rule.label}`;
+    item.textContent = `${rule.passed ? localize('Passed', '已通过') : localize('Needs work', '待修改')} · ${rule.label}`;
     if (!rule.passed) {
       const detail = document.createElement('div');
       detail.className = 'check-detail';

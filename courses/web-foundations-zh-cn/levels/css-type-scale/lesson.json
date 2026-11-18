@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "用字重和字距区分产品编码",
+  "goal": "在指定字号下控制 font-weight 和 letter-spacing。",
+  "summary": "设备编码需要逐字查看。给编码行提高字重，适当增加字母间距，普通说明保持原样。",
+  "tasks": [
+    "把 .serial 的字号设为 16px，字重设为 600，字距设为 2px。",
+    "说明段落保持原有字重和字距。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".code { font-weight: 600; letter-spacing: .1em; }",
+    "note": "字距是字符间额外的距离，使用 em 可以随字号调整。"
+  },
+  "hint": "控制字距使用 letter-spacing，line-height 用于行距。"
+}

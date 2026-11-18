@@ -1,0 +1,91 @@
+[
+  {
+    "label": "替换中间位置",
+    "expect": {
+      "type": "function",
+      "name": "swapDevice",
+      "args": [
+        [
+          "电源",
+          "小灯",
+          "护具"
+        ],
+        1,
+        "探头"
+      ],
+      "value": [
+        "电源",
+        "探头",
+        "护具"
+      ]
+    }
+  },
+  {
+    "label": "替换第一项",
+    "expect": {
+      "type": "function",
+      "name": "swapDevice",
+      "args": [
+        [
+          "A",
+          "B"
+        ],
+        0,
+        "X"
+      ],
+      "value": [
+        "X",
+        "B"
+      ]
+    }
+  },
+  {
+    "label": "越界不追加",
+    "expect": {
+      "type": "function",
+      "name": "swapDevice",
+      "args": [
+        [
+          "A"
+        ],
+        1,
+        "X"
+      ],
+      "value": [
+        "A"
+      ]
+    }
+  },
+  {
+    "label": "负下标不从末尾替换",
+    "expect": {
+      "type": "function",
+      "name": "swapDevice",
+      "args": [
+        [
+          "A",
+          "B"
+        ],
+        -1,
+        "X"
+      ],
+      "value": [
+        "A",
+        "B"
+      ]
+    }
+  },
+  {
+    "label": "空队列保持为空",
+    "expect": {
+      "type": "function",
+      "name": "swapDevice",
+      "args": [
+        [],
+        0,
+        "X"
+      ],
+      "value": []
+    }
+  }
+]

@@ -1,18 +1,18 @@
 {
   "focus": "index.html",
-  "title": "校园开放日活动板",
-  "goal": "联动活动分类和收藏按钮，把收藏的活动 ID 持久化为 JSON。",
-  "summary": "访客可以按类别浏览当天活动，并标记想参加的场次。切换分类或重新打开时，应恢复已标记的活动。",
+  "title": "Campus Open Day Activity Board",
+  "goal": "links activity classification and collection buttons to persist the collection activity IDs into JSON.",
+  "summary": "Visitors can browse the day's events by category and mark the sessions they want to attend. Flagged activities should be restored when switching categories or reopening.",
   "tasks": [
-    "在 index.html 的活动类别中添加「导览」选项，value 设为 tour。",
-    "在 style.css 给 .favorite-button 的 aria-pressed=\"true\" 状态设置 #125a46 背景和白色文字。",
-    "在 script.js 中根据 #event-category 的选项筛选活动。选「全部」时显示所有活动。",
-    "用 campusEventFavorites 键保存收藏活动 ID 的 JSON 数组。启动时恢复数组，点击同一活动按钮可以新增或移除收藏，并同步 aria-pressed。"
+    "Add the \"Tour\" option in the activity category of index.html, and set the value to tour.",
+    "Set #125a46 background and white text to the aria-pressed=\"true\" state of .favorite-button in style.css.",
+    "Filter events based on #event-category options in script.js. Show all activities when \"All\" is selected.",
+    "Saves a JSON array of favorite event IDs with the key campusEventFavorites. Restore arrays on startup, add or remove favorites by clicking the same activity button, and synchronize aria-pressed."
   ],
   "example": {
     "language": "javascript",
     "code": "const vehicles = [{ id: 'van-7' }, { id: 'truck-2' }];\nconst savedIds = ['van-7'];\nconst selected = vehicles.filter((vehicle) => savedIds.includes(vehicle.id));\nlocalStorage.setItem('fleetSelection', JSON.stringify(savedIds));",
-    "note": "车辆列表可以用稳定的 ID 判断哪些已选择。保存 ID 数组后，列表重新渲染时也能找回同一条记录。"
+    "note": "Vehicle list can use stable ID to determine which ones have been selected. After saving the ID array, the same record can be retrieved when the list is re-rendered."
   },
-  "hint": "重新渲染时用同一个收藏数组判断每个按钮的状态。只存新选中的单个 ID 会覆盖其他收藏，加载时固定用空数组也会丢失恢复状态。"
+  "hint": "uses the same collection array to determine the status of each button when re-rendering. Saving only the newly selected single ID will overwrite other collections, and fixing an empty array during loading will also lose the recovery state."
 }

@@ -1,0 +1,46 @@
+[
+  {
+    "label": "没有盒子",
+    "expect": {
+      "type": "function",
+      "name": "countBoxes",
+      "args": [
+        0
+      ],
+      "value": 0
+    }
+  },
+  {
+    "label": "一个盒子有一件",
+    "expect": {
+      "type": "function",
+      "name": "countBoxes",
+      "args": [
+        1
+      ],
+      "value": 1
+    }
+  },
+  {
+    "label": "五个盒子合计 15",
+    "expect": {
+      "type": "function",
+      "name": "countBoxes",
+      "args": [
+        5
+      ],
+      "value": 15
+    }
+  },
+  {
+    "label": "较多层仍能累加",
+    "expect": {
+      "type": "function",
+      "name": "countBoxes",
+      "args": [
+        12
+      ],
+      "value": 78
+    }
+  }
+]

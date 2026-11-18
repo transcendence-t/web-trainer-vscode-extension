@@ -1,0 +1,23 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 24px 16px;
+  min-height: 100vh;
+  font: 16px/1.5 system-ui, sans-serif;
+  color: #243447;
+  background: #edf5f2;
+}
+.sheet {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 22px;
+  border: 1px solid #cddfd8;
+  border-radius: 14px;
+  background: #fff;
+}
+h1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.25; }
+h2 { font-size: 1.125rem; }
+p, ul, figure { margin: .6em 0; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+a { color: #125a46; }

@@ -1,19 +1,19 @@
 {
   "focus": "script.js",
-  "title": "制作两题网页知识测验",
-  "goal": "实现作答反馈、累计计分和换题，显示完成测验后的成绩。",
-  "summary": "题目数组保存题干、选项和正确选项的下标。用当前题号找到对应题目，用独立的 score 保存整个测验的得分。渲染函数负责换题时更新内容。",
+  "title": "Create a two-question web knowledge test",
+  "goal": "implements answer feedback, cumulative scoring and question change, and displays the results after completing the test.",
+  "summary": "question array stores the question stem, options and the subscripts of the correct options. Use the current question number to find the corresponding question, and use a separate score to save the score of the entire test. The rendering function is responsible for updating the content when changing topics.",
   "tasks": [
-    "在 script.js 中给 #quiz-options 添加点击监听。找到选项按钮，用 Number 把它的 data-choice 转成下标，再和当前题目的 correct 比较。",
-    "答对时给 score 加 1，显示「回答正确。」答错时按“正确答案是「#gallery」。”的格式显示当前题目的正确选项。把总分写入 #quiz-score。",
-    "回答后禁用这题的所有选项，让每题只计一次分。启用「下一题」或「查看结果」按钮。",
-    "点击 #quiz-next 时更新题号。有下一题就调用已有的 showQuestion()，并保留累计得分。",
-    "题目答完后，将题干替换成「测验结束」，清空选项、禁用结果按钮。用「共答对 2 题。」的格式显示实际答对题数。"
+    "Add click monitoring to #quiz-options in script.js. Find the option button, use Number to convert its data-choice into a subscript, and then compare it with the correct of the current question.",
+    "When the answer is correct, add 1 to the score and display \"answered correctly.\". When the answer is wrong, press the format of \"The correct answer is \"#gallery\".\" to display the correct option of the current question. Write the total score as #quiz-score.",
+    "After answering, disable all options for this question so that each question is scored only once. Enables the \"Next question\" or \"View results\" button.",
+    "Update question number when #quiz-next is clicked. When there is the next question, call the existing showQuestion() and retain the accumulated score.",
+    "When the quiz ends, show \"test ended\" in the question heading, clear the options, and disable the result button. Display \"Score: N / 2\", where N is the number of correct answers."
   ],
   "example": {
     "language": "javascript",
     "code": "function sortingPoints(choice, expected, points) {\n  if (choice === expected) {\n    return points + 1;\n  }\n  return points;\n}",
-    "note": "垃圾分类练习传入当前积分。对照正确分类后，函数返回更新过的累计积分。"
+    "note": "Pass in the current points for garbage classification exercise. After checking for correct classification, the function returns the updated cumulative points."
   },
-  "hint": "如果第二题也答对了却只有 1 分，检查是否每次写 score = 1。每答对一道题只在原有分数上加 1，换题时保留该分数。"
+  "hint": "If the second question is also answered correctly but only has 1 point, check whether you write score = 1 each time. Only 1 will be added to the original score for each correct answer, and the score will be retained when changing questions."
 }

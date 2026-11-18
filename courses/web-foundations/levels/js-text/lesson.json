@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "更新状态提示",
-  "summary": "document.querySelector 根据选择器找到第一个匹配的元素。给这个元素的 textContent 赋值，就能更新其中的文字。",
+  "title": "Update status prompt",
+  "summary": "document.querySelector Finds the first matching element based on the selector. Assigning a value to textContent of this element will update the text in it.",
   "tasks": [
-    "在 script.js 用 document.querySelector 找到 #status。",
-    "把它的 textContent 改为变量 message 保存的文字。"
+    "Use document.querySelector to find #status in script.js.",
+    "changes its textContent to the text saved in the variable message."
   ],
-  "hint": "可以用 const status = document.querySelector('#status') 保存元素。",
-  "goal": "找到指定的状态元素，用脚本里的消息替换它的文字。",
+  "hint": "can use const status = document.querySelector('#status') to save elements.",
+  "goal": "Finds the specified status element and replaces its text with the message in the script.",
   "example": {
     "language": "javascript",
-    "code": "const sign = document.querySelector('#arrival-message');\nsign.textContent = '列车已到站';",
-    "note": "站台信息屏用 id 为 arrival-message 的元素显示最新到站消息。"
+    "code": "const sign = document.querySelector('#arrival-message');\nsign.textContent = 'train has arrived at the station';",
+    "note": "platform information screen uses the element with the id of arrival-message to display the latest arrival message."
   }
 }

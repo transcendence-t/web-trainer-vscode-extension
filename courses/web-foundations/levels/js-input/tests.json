@@ -1,46 +1,46 @@
 [
   {
-    "label": "输入姓名后问候对应同学",
+    "label": "Enter the name and greet the corresponding classmate",
     "expect": {
       "type": "text",
       "selector": "#greeting",
-      "value": "你好，小林！"
+      "value": "Hello, Xiaolin!"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#student",
-        "value": "小林"
+        "value": "Xiaolin"
       }
     ]
   },
   {
-    "label": "去掉姓名首尾的空格",
+    "label": "Remove the spaces at the beginning and end of the name",
     "expect": {
       "type": "text",
       "selector": "#greeting",
-      "value": "你好，小周！"
+      "value": "Hello, Xiao Zhou!"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#student",
-        "value": " 小周 "
+        "value": " Xiao Zhou "
       }
     ]
   },
   {
-    "label": "清空后恢复通用问候",
+    "label": "Restore universal greetings after clearing",
     "expect": {
       "type": "text",
       "selector": "#greeting",
-      "value": "你好，同学！"
+      "value": "Hello, classmate!"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#student",
-        "value": "小林"
+        "value": "Xiaolin"
       },
       {
         "type": "input",

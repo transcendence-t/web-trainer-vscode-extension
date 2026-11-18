@@ -1,0 +1,65 @@
+[
+  {
+    "label": "解码空格并读取重复键",
+    "expect": {
+      "type": "function",
+      "name": "readFilters",
+      "args": [
+        "?q=wood+craft&tag=lab&tag=weekend"
+      ],
+      "value": {
+        "q": "wood craft",
+        "tags": [
+          "lab",
+          "weekend"
+        ]
+      }
+    }
+  },
+  {
+    "label": "解码中文与连字符",
+    "expect": {
+      "type": "function",
+      "name": "readFilters",
+      "args": [
+        "tag=A-1&q=%E6%9C%A8%E5%B7%A5"
+      ],
+      "value": {
+        "q": "木工",
+        "tags": [
+          "A-1"
+        ]
+      }
+    }
+  },
+  {
+    "label": "缺少关键字",
+    "expect": {
+      "type": "function",
+      "name": "readFilters",
+      "args": [
+        "tag=lab"
+      ],
+      "value": {
+        "q": "",
+        "tags": [
+          "lab"
+        ]
+      }
+    }
+  },
+  {
+    "label": "空字符串",
+    "expect": {
+      "type": "function",
+      "name": "readFilters",
+      "args": [
+        ""
+      ],
+      "value": {
+        "q": "",
+        "tags": []
+      }
+    }
+  }
+]

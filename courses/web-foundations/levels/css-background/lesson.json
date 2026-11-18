@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "高亮暂时关闭的步道",
-  "goal": "给关闭公告铺上浅黄色背景，让读者能迅速找到受影响的路段。",
-  "summary": "background-color 为元素的背景区域填色，填色也会覆盖内边距所在的区域。",
+  "title": "Highlight temporarily closed trails",
+  "goal": "Adds a light yellow background to closure announcements so that readers can quickly find the affected road sections.",
+  "summary": "background-color fills the background area of the element with color, and the color filling will also cover the area where the padding is located.",
   "tasks": [
-    "把带 closure 类的两条关闭公告的背景颜色设置为 #fff1c2。",
-    "保持普通开放公告的背景和各条公告的文字颜色。"
+    "Set the background color of the two closure announcements with closure class to #fff1c2.",
+    "Keep the background of ordinary open announcements and the text color of each announcement."
   ],
   "example": {
     "language": "css",
     "code": ".reservation-card {\n  background-color: #e4f2ea;\n}",
-    "note": "共享厨房的预约确认卡可以用浅绿底标出。"
+    "note": "The reservation confirmation card for the shared kitchen can be marked with a light green background."
   },
-  "hint": "背景没变、文字却变色时，检查是否写成了 color。给公告底色填色要用 background-color。"
+  "hint": "When the background does not change but the text changes color, check whether color is written. Use background-color to color the announcement background."
 }

@@ -1,6 +1,6 @@
 [
   {
-    "label": "插图向左浮动",
+    "label": "illustration floats to the left",
     "expect": {
       "type": "style",
       "selector": ".diagram",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "图文留有 12px 间隔",
+    "label": "There is a 12px gap between images and text.",
     "expect": {
       "type": "style",
       "selector": ".diagram",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "下一节标题完全在插图下方",
+    "label": "The next section title is completely below the illustration.",
     "expect": {
       "type": "layout",
       "selector": ".next-section",

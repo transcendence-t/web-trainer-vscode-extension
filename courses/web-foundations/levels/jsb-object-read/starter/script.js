@@ -1,3 +1,3 @@
 function readFreeSeats(room) {
-  // 返回空位数，缺少空位记录时返回 null。
+  // returns the number of gaps, and returns null when there is a lack of gap records.
 }

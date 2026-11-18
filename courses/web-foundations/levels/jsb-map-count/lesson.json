@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "统计每种材料的领用次数",
-  "goal": "用 Map 按键累加，并按首次登记顺序输出键值对。",
-  "summary": "扫描记录含有同一种材料的多次领用。保留材料首次出现的顺序，得到每种材料的次数。",
+  "title": "Counts the number of times each material is used",
+  "goal": "uses Map keys to accumulate and output key-value pairs in the order of first registration.",
+  "summary": "scan records multiple uses of the same material. Keep the order in which the materials first appear, and get the number of times each material appears.",
   "tasks": [
-    "完成 countMaterials(names)，将每个材料名出现的次数加一。",
-    "返回形如 [[名称, 次数], …] 的数组。允许任意材料名，包括 \"__proto__\"。"
+    "completes countMaterials(names) and adds one to the number of occurrences of each material name.",
+    "returns an array in the shape of [[name, times], …]. Arbitrary material names are allowed, including \"__proto__\"."
   ],
   "example": {
     "language": "javascript",
-    "code": "const totals = new Map();\ntotals.set('画笔', (totals.get('画笔') ?? 0) + 1);\n[...totals]; // [['画笔', 1]]",
-    "note": "Map 允许把普通字符串当键。get 读取尚未设置的键会返回 undefined。"
+    "code": "const totals = new Map();\ntotals.set('brush', (totals.get('brush') ?? 0) + 1);\n[...totals]; // [['Brush', 1]]",
+    "note": "Map allows ordinary strings to be used as keys. get returns undefined when reading a key that has not yet been set."
   },
-  "hint": "先建一个 Map，每次读取旧次数，没有则从 0 开始。最后将条目展开成数组。"
+  "hint": "First build a Map and read the old times each time. If there is no Map, it will start from 0. Finally expand the entries into an array."
 }

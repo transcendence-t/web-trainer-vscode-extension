@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "观察事件如何经过父容器和按钮",
+  "goal": "借助监听回调识别捕获、目标和冒泡阶段。",
+  "summary": "交互日志会显示同一次点击按什么顺序经过外层和内层。父容器同时监听捕获与冒泡。",
+  "tasks": [
+    "在 #pad 上用捕获监听记录「外层捕获」，在 #tap 上用普通监听记录「按钮」。",
+    "在 #pad 上再用普通监听记录「外层冒泡」，将本次顺序用「 → 」连接后写到 #trace，并开始记录下一次。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "parent.addEventListener('click', trackCapture, { capture: true });\nparent.addEventListener('click', trackBubble);",
+    "note": "捕获监听沿路径向内执行，目标上的监听执行后再沿父级冒泡。"
+  },
+  "hint": "用一个步骤数组收集文字，在父容器的冒泡监听中输出后清空。"
+}

@@ -1,0 +1,214 @@
+[
+  {
+    "label": "点击后立即进入等待状态",
+    "expect": {
+      "type": "text",
+      "selector": "#state",
+      "value": "加载中"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#refresh"
+      }
+    ]
+  },
+  {
+    "label": "等待时防止重复请求",
+    "expect": {
+      "type": "property",
+      "selector": "#refresh",
+      "name": "disabled",
+      "value": true
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#refresh"
+      }
+    ]
+  },
+  {
+    "label": "成功反馈数据量",
+    "expect": {
+      "type": "text",
+      "selector": "#state",
+      "value": "已加载 2 条"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#demo",
+        "value": "main"
+      },
+      {
+        "type": "click",
+        "selector": "#refresh"
+      },
+      {
+        "type": "wait",
+        "ms": 350
+      }
+    ]
+  },
+  {
+    "label": "含尖括号的标题按文本展示",
+    "expect": {
+      "type": "text",
+      "selector": "#notices li:last-child",
+      "value": "<复核>购置清单 · 设备库"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#demo",
+        "value": "main"
+      },
+      {
+        "type": "click",
+        "selector": "#refresh"
+      },
+      {
+        "type": "wait",
+        "ms": 350
+      }
+    ]
+  },
+  {
+    "label": "空数据有自己的提示",
+    "expect": {
+      "type": "text",
+      "selector": "#state",
+      "value": "暂无通知"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#demo",
+        "value": "empty"
+      },
+      {
+        "type": "click",
+        "selector": "#refresh"
+      },
+      {
+        "type": "wait",
+        "ms": 350
+      }
+    ]
+  },
+  {
+    "label": "错误时提示重新尝试",
+    "expect": {
+      "type": "text",
+      "selector": "#state",
+      "value": "无法读取通知，请重试"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#demo",
+        "value": "error"
+      },
+      {
+        "type": "click",
+        "selector": "#refresh"
+      },
+      {
+        "type": "wait",
+        "ms": 350
+      }
+    ]
+  },
+  {
+    "label": "错误时按钮重新可用",
+    "expect": {
+      "type": "property",
+      "selector": "#refresh",
+      "name": "disabled",
+      "value": false
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#demo",
+        "value": "error"
+      },
+      {
+        "type": "click",
+        "selector": "#refresh"
+      },
+      {
+        "type": "wait",
+        "ms": 350
+      }
+    ]
+  },
+  {
+    "label": "从错误样例切回后可成功加载",
+    "expect": {
+      "type": "count",
+      "selector": "#notices li",
+      "value": 2
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#demo",
+        "value": "error"
+      },
+      {
+        "type": "click",
+        "selector": "#refresh"
+      },
+      {
+        "type": "wait",
+        "ms": 350
+      },
+      {
+        "type": "input",
+        "selector": "#demo",
+        "value": "main"
+      },
+      {
+        "type": "click",
+        "selector": "#refresh"
+      },
+      {
+        "type": "wait",
+        "ms": 350
+      }
+    ]
+  },
+  {
+    "label": "切到空列表时移除旧通知",
+    "expect": {
+      "type": "count",
+      "selector": "#notices li",
+      "value": 0
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#refresh"
+      },
+      {
+        "type": "wait",
+        "ms": 350
+      },
+      {
+        "type": "input",
+        "selector": "#demo",
+        "value": "empty"
+      },
+      {
+        "type": "click",
+        "selector": "#refresh"
+      },
+      {
+        "type": "wait",
+        "ms": 350
+      }
+    ]
+  }
+]

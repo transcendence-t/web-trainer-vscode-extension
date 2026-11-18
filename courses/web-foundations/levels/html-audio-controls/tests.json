@@ -1,6 +1,6 @@
 [
   {
-    "label": "显示浏览器播放控件",
+    "label": "Display browser playback controls",
     "expect": {
       "type": "property",
       "selector": "audio#arrival",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "不自动播放",
+    "label": "does not play automatically",
     "expect": {
       "type": "property",
       "selector": "audio#arrival",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "关联声音说明",
+    "label": "associated sound description",
     "expect": {
       "type": "attribute",
       "selector": "audio#arrival",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "保留 WAV 音源",
+    "label": "retains WAV audio source",
     "expect": {
       "type": "exists",
       "selector": "audio#arrival > source[type=\"audio/wav\"][src^=\"data:audio/wav\"]"

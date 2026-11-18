@@ -5,4 +5,4 @@ const equipment = [
   { name: 'Sketch Kit', room: 'design', minutes: 15 },
 ];
 
-// 读取控件并渲染器材清单。
+// reads the control and renders the equipment list.

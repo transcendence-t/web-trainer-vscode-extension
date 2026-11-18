@@ -1,6 +1,6 @@
 [
   {
-    "label": "打印时隐藏导航",
+    "label": "Hide navigation when printing",
     "expect": {
       "type": "style",
       "selector": ".site-nav",
@@ -13,7 +13,7 @@
     }
   },
   {
-    "label": "打印内容用白底",
+    "label": "Use white background for printing content",
     "expect": {
       "type": "style",
       "selector": ".paper",
@@ -26,7 +26,7 @@
     }
   },
   {
-    "label": "屏幕仍显示导航",
+    "label": "screen still displays navigation",
     "expect": {
       "type": "style",
       "selector": ".site-nav",
@@ -39,7 +39,7 @@
     }
   },
   {
-    "label": "屏幕仍有浅绿底色",
+    "label": "screen still has a light green background",
     "expect": {
       "type": "style",
       "selector": ".paper",

@@ -1,0 +1,54 @@
+[
+  {
+    "label": "收取每页打印费和一次装订费",
+    "expect": {
+      "type": "function",
+      "name": "printCost",
+      "args": [
+        20,
+        15,
+        100
+      ],
+      "value": 400
+    }
+  },
+  {
+    "label": "免装订费时只收打印费",
+    "expect": {
+      "type": "function",
+      "name": "printCost",
+      "args": [
+        12,
+        10,
+        0
+      ],
+      "value": 120
+    }
+  },
+  {
+    "label": "打印免费时只收固定装订费",
+    "expect": {
+      "type": "function",
+      "name": "printCost",
+      "args": [
+        0,
+        6,
+        20
+      ],
+      "value": 20
+    }
+  },
+  {
+    "label": "打印一页时两笔费用直接相加",
+    "expect": {
+      "type": "function",
+      "name": "printCost",
+      "args": [
+        15,
+        1,
+        50
+      ],
+      "value": 65
+    }
+  }
+]

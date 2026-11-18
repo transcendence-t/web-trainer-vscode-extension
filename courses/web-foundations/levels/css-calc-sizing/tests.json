@@ -1,6 +1,6 @@
 [
   {
-    "label": "344px 视口扣除 24px",
+    "label": "344px viewport subtraction 24px",
     "expect": {
       "type": "style",
       "selector": ".route",
@@ -10,7 +10,7 @@
     "viewport": 344
   },
   {
-    "label": "700px 视口仍保持限宽",
+    "label": "700px viewport still maintains limited width",
     "expect": {
       "type": "style",
       "selector": ".route",
@@ -20,7 +20,7 @@
     "viewport": 700
   },
   {
-    "label": "宽视口居中",
+    "label": "wide viewport centered",
     "expect": {
       "type": "layout",
       "selector": ".route",

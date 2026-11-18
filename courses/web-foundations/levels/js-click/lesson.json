@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "处理按钮点击",
-  "summary": "用 addEventListener 为按钮注册 click 事件监听。浏览器收到点击后，会运行作为第二个参数传入的函数。",
+  "title": "Handles button clicks",
+  "summary": "Use addEventListener to register a click event listener for the button. When the browser receives the click, it runs the function passed in as the second parameter.",
   "tasks": [
-    "给 #reserve 按钮添加 click 事件监听。",
-    "点击后把 #status 的文字改成「报名成功」。"
+    "Add click event monitoring to the #reserve button.",
+    "Click to change the text of #status to \"registration successful\"."
   ],
-  "hint": "用 button.addEventListener('click', () => { ... }) 注册监听。",
-  "goal": "在用户点击确认报名后，通过状态文本反馈操作结果。",
+  "hint": "Register the listener with button.addEventListener('click', () => { ... }).",
+  "goal": "After the user clicks to confirm the registration, the operation result will be fed back through the status text.",
   "example": {
     "language": "javascript",
-    "code": "const markRead = document.querySelector('#mark-read');\nconst readingStatus = document.querySelector('#reading-status');\n\nmarkRead.addEventListener('click', () => {\n  readingStatus.textContent = '已读';\n});",
-    "note": "阅读页面在用户按下「标为已读」时更新文章状态。"
+    "code": "const markRead = document.querySelector('#mark-read');\nconst readingStatus = document.querySelector('#reading-status');\n\nmarkRead.addEventListener('click', () => {\n  readingStatus.textContent = 'Read';\n});",
+    "note": "Update the article status when the reader presses \"Mark as read\"."
   }
 }

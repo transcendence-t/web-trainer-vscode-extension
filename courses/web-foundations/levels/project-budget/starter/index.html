@@ -1,25 +1,25 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>班级活动预算</title>
+  <title>Class activity budget</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 <main class="sheet">
-  <h1>班级活动预算</h1>
-  <p>预算总额 300.00 元</p>
+  <h1>Class activity budget</h1>
+  <p>Total budget 300.00 yuan</p>
   <div class="expense-field">
-    <label for="expense-amount">支出金额（元）</label>
+    <label for="expense-amount">Expenditure amount (yuan)</label>
     <input id="expense-amount" type="number" min="0.01" step="0.01" required>
-    <button id="add-expense" type="button">记一笔</button>
+    <button id="add-expense" type="button">Make a note</button>
   </div>
   <p id="expense-error"></p>
   <dl class="expense-summary">
-    <div class="spending-summary"><dt>已支出</dt><dd id="expense-total">0.00 元</dd></div>
-    <div class="remaining-summary"><dt>剩余</dt><dd id="expense-remaining">300.00 元</dd></div>
+    <div class="spending-summary"><dt>spent</dt><dd id="expense-total">0.00 yuan</dd></div>
+    <div class="remaining-summary"><dt>remaining</dt><dd id="expense-remaining">300.00 yuan</dd></div>
   </dl>
 </main>
 </body>

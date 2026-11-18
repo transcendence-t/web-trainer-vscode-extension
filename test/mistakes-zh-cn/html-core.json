@@ -1,0 +1,152 @@
+{
+  "html-meta-description": {
+    "name": "把摘要写成 keywords",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>为活动页写页面元数据</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n  <meta name=\"keywords\" content=\"查询校园开放日的日期、地点和参观安排\">\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>为活动页写页面元数据</h1>\n    <p>开放日当天可以参观实训室，并报名参加短时体验。</p>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-heading-outline": {
+    "name": "为补签跳级使用 h4",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>整理新生指南的标题层级</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>整理新生指南的标题层级</h1>\n    <h2>签到安排</h2>\n    <p>新生请先到教学楼大厅领取签到卡。</p>\n    <h4>补签</h4>\n    <p>下午可在服务台办理补签。</p>\n    <h2>领卡安排</h2>\n    <p>凭签到卡到大厅西侧领取资料袋。</p>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-time-abbr": {
+    "name": "把可读日期直接用作 datetime",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>标记报名日期和专业缩写</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>标记报名日期和专业缩写</h1>\n    <p>报名截止到 <time datetime=\"5 月 18 日\">5 月 18 日</time>，活动将在实验室展示 <abbr title=\"计算机辅助设计\">CAD</abbr> 技术。</p>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-quotes": {
+    "name": "将整段和句内引用都写成普通段落",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>标记长引文、短引文和出处</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>标记长引文、短引文和出处</h1>\n    <p>先记录发现，再讨论解释。</p>\n    <p>来自<cite>《社区观察手册》</cite></p>\n    <p>本周主题是<q>留意身边的变化</q>。</p>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-nested-lists": {
+    "name": "用有序列表表达没有先后顺序的子项目",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>把子清单放进检查步骤</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>把子清单放进检查步骤</h1>\n    <ol id=\"checklist\">\n      <li>检查设备\n        <ol>\n          <li>电源线</li>\n          <li>保护套</li>\n        </ol>\n      </li>\n      <li>提交记录</li>\n    </ol>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-link-paths": {
+    "name": "漏掉返回上一级目录的 ../",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>连接站内页面、站外页面和邮箱</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>连接站内页面、站外页面和邮箱</h1>\n    <ul>\n      <li><a id=\"rules\" href=\"./guides/loan.html\">借用规则</a></li>\n      <li><a id=\"library\" href=\"https://example.org/catalog/\">馆藏服务</a></li>\n      <li><a id=\"write\" href=\"mailto:desk@example.org\">发送咨询邮件</a></li>\n    </ul>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-skip-link": {
+    "name": "把链接指向导航内的标题",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>让键盘用户跳过重复导航</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <a id=\"skip\" href=\"#hours\">跳到主要内容</a>\n  <header>\n    <nav aria-label=\"校园服务\"><a href=\"#hours\">开放时间</a> <a href=\"#rules\">借用规则</a></nav>\n  </header>\n  <main class=\"sheet\" id=\"main-content\" tabindex=\"-1\">\n    <h1 id=\"hours\">开放时间</h1>\n    <p>工作日开放。</p>\n    <h2 id=\"rules\">借用规则</h2>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-aside": {
+    "name": "把补充部分仅标记成普通 section",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>标记文章里的延伸阅读</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>标记文章里的延伸阅读</h1>\n    <article>\n      <h2>纸桥的承重实验</h2>\n      <p>折叠纸板能够改变受力方式。</p>\n      <section id=\"extension\">\n        <h3>延伸阅读</h3>\n        <p>试着比较直梁和拱形结构。</p>\n      </section>\n    </article>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-image-sizing": {
+    "name": "给装饰图填写会被朗读的文件名",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>给图片预留空间并处理装饰图</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>给图片预留空间并处理装饰图</h1>\n    <p><img id=\"decoration\" alt=\"marker.png\" width=\"24\" height=\"20\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABUCAYAAAB0mJL5AAACC0lEQVR4AeyUMUoEQRBFmwlNPIIYeghP4RW8hWy0IHgGI8ErGBmYCgbGsrGxBoKhpgMNgkXVzOvdJ1QyUL+/71E7vX99/DgcBlPzD0VAISgdrSlEITACsDpeiEJgBGB1vBCFwAjA6nghByEE9k+OVAdxIa+7t0YYgjiEkMubbSOMQggEYB0QFwJjsmodhayKv39cIT2TVb8oZFX8/eMK6Zms+kUhq+LvHx9JSN9+D78oBCZVIQqBEYDV8UIUAiMAq+OFKARGAFbHC1EIjACsjheiEBgBWB0vRCEwArA6XohCYARgdbwQhfQEzk5OG2H6Zst/QVzI/WbbCLM8/v5FhJC+1uF+UUiN+3CqQsLoahYVUsM1nKqQMLqaRYXUcA2nTtd3t83hMJgeX56bw2HgT1b4x6VmUSE1XMOpCgmjq1kcXsjm/LjNpwbTcql/ClmuRvyli7OjNp94EmNzeCEMjHktFJLHMiVJISkY80IUkscyJUkhKRjzQhSSxzIlSSEpGPNCFJLHMiVJISkY80JWEJJXfh+TFAKzqhCFwAjA6nghCoERgNXxQhQCIwCr44UoBEYAVmdvLgTGNVxHIWF0NYsKqeEaTlVIGF3NokJquIZTFRJGV7OokBqu4VSFhNHVLCqkhms4dXghD7vvNp8wCcji8EKunj7bfHK5Lp82vJDlkdW+qJBavv9O/wUAAP//W7MQVAAAAAZJREFUAwBjHfTSkwKU4QAAAABJRU5ErkJggg==\"> 领取路线图</p>\n    <figure>\n      <img id=\"building\" width=\"144\" height=\"76\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAABMCAYAAACCuj7sAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALESURBVHhe7dKxcRRBEEZhRQShyCQGxUKCmJhYFBkcbutpmBLb0j87u8/4HFW35q7vPf34/eshHfXEP0j/w4DUYkBqMSC1GJBaDEgtBqQWA1KLAanFgNRiQP/w9fn5Dc7IgF5hMDPcvavbB8QwjuD/vJNbBsQAPhLfurrbBMQfOoGf4YouHxB/1BX4ma7kkgHxBzwTftbdXSYg/lA74HfY0dYB8QfZGb/bLrYLiIe/In7nM9siIB74TniLszl1QDzmnfE2Z3G6gHg4vcWbrXSKgHggvR9vmbYsIB5CfbxxQjQgfmF9Ht7+s0QDGnl5eVED75lmQJvjPdMMaHO8Z5oBbY73TDOgzfGeaQa0Od4zzYA2x3umGdDmeM80A9oc75l2+oB+Ph5TnCfOE+c/At8gzhPnqc7ynmkGNNjp4hvEeeI81VneM82ABjtdfIM4T5ynOst7phnQYKeLbxDnifNUZ3nPNAMa7HTxDeI8cZ7qLO+ZZkCDnS6+QZwnzlOd5T3TDGiw08U3iPPEeaqzvGeaAQ12uvgGcZ44T3WW90wzoMFOF98gzhPnqc7ynmkGVGYfjz/vxneOvjnCeaqzvGeaAZVZRjLDd46+OcJ5qrO8Z5oBlVlGMsN3jr45wnmqs7xnmgGVWUYyw3eOvjnCeaqzvGfa6QNKYiQz3F2F90wzoIKRzHB3Fd4zzYAKRjLD3VV4zzQDKhjJDHdX4T3TDKhgJDPcXYX3TDOggpHMcHcV3jPNgApGMsPdVXjPNAMqGMkMd1fhPdMMqGAkM9xdhfdMM6CCkcxwdxXeM82ACkYyw91VeM80AyoYyQx3V+E90wyoYCQz3F2F90wzoIKRzHB3Fd4zzYAKRjLD3VV4zzQDKhjJDHdX4T3TDKhgJDPcXYX3THv68v3bQzrKgNRiQGoxILUYkFoMSC0GpBYDUosBqcWA1PIXDwj3VuNdWsYAAAAASUVORK5CYII=\" alt=\"实训楼的正面示意图\">\n      <figcaption>实训楼示意图</figcaption>\n    </figure>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-responsive-picture": {
+    "name": "用 max-width 导致小屏反而看全景",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>宽窄屏选用不同构图</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>宽窄屏选用不同构图</h1>\n    <figure>\n      <picture>\n        <source media=\"(max-width: 600px)\" srcset=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAABUCAYAAADUKzhSAAAEI0lEQVR4AeyWsWpVQRCGl1tY2FinEu3S2vsUvkJAfYaYKhCw8gG0CViIRTqrgEZQVFLYiSFgJykstBAsLPQOYcJyOOfuPffs7tnd+cRhNjuze2a+2Z9k8f33z38YDKy+gYXjHwQME0AAhodP684hAF6BaQIIwPT4ad6wABg+BPgTiDdgnAC/AYw/AOvtIwDrL8B4/wjA+AOw3j4CsPgC6PmKgGkBfD4/c9jZ1WOwuDAtgKO3r93O433TJgwsPnzt2bQAFALeLgEEYHf2dL4kgACWEPhvh0C3UwTQJcLPpgggAFPjptkugewC+HZx4V6cnCSzboP8HJdAytnJ24hbbfi27AKQko7ev3Mp7NPZV7keS0hAGKeYndyZsOzBq2cRwGA1BCCQmYAhAWQmy+eqIIAAqhgTRaYigABSkeXeKggggCrGRJGpCCCAVGS5twoCCKCKMU0skuODBBDAIBoCFgggAAtTpsdBAghgEA0BCwQQgIUp0+MgAQQwiIZACwRCPSCAECHiTRNAAE2Pl+ZCBBBAiBDxpgkggKbHS3MhAgggRIh40wQaFsB6c9u+ectZtvUotZtlWgD7Ow/d87190yYM2n3e4c5MCyCMh4zWCSCA1idMfysJIICVeAi2TiC7AG5vbbmXu4+S2JP7D1qf13r9JcwSxqnmJ28jYem9V2cXQG8VbEJgJgIIYCbwfLYMAouDw2fu4PDp0nyva9lX0z3f61pzxOten9c9yVPTPd/rWnN8rzHf69rP07XGxPumcfUSk7XvdS37XdOYeN+6efqz5MhavJis+0xifdaXK3vdXNnDLt90mMPi+PSDOz79uDTf61r21XTP97rWHPG61+d1T/LUdM/3utYc32vM97r283StMfG+aVy9xGTte13Lftc0Jt63bp7+LDmyFi8m6z6TWJ/15cpeN1f2sMs3HebAn0Bl/CamikgExl6DAMYSI78pAgigqXHSzFgCCGAssYn5e3dvuFU28XqOjySAAEYCm5p+Z+uau7d9vdckNvV+zo8jgADG8SK7MQINCaCxydBOFgIIIAtmPlIqAQRQ6mSoKwsBBJAFMx8plQACKHUy1JWFAALIgjnxR7h+YwIIYGN0HGyBAAJoYYr0sDEBBLAxOg62QAABtDBFetiYAALYGB0HSyAwtQYEMJUg56smgACqHh/FTyWAAKYS5HzVBBBA1eOj+KkEEMBUgpyvmkDFAqiaO8UXQgABFDIIypiHAAKYhztfLYQAAihkEJQxDwEEMA93vloIAQRQyCBGlUFyNAIIIBpKLqqRAAKocWrUHI0AAoiGkotqJIAAapwaNUcjgACioeSiHARifwMBxCYauO/Lj7/u1fmfXpNY4DjhyAQQQGSgoet23/xyqyx0nnhcAgggLk9uq4wAAqhsYJQbl8B/AAAA//9yKLMIAAAABklEQVQDALv9uGHXpDcIAAAAAElFTkSuQmCC\">\n        <img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABUCAYAAAB0mJL5AAACC0lEQVR4AeyUMUoEQRBFmwlNPIIYeghP4RW8hWy0IHgGI8ErGBmYCgbGsrGxBoKhpgMNgkXVzOvdJ1QyUL+/71E7vX99/DgcBlPzD0VAISgdrSlEITACsDpeiEJgBGB1vBCFwAjA6nghByEE9k+OVAdxIa+7t0YYgjiEkMubbSOMQggEYB0QFwJjsmodhayKv39cIT2TVb8oZFX8/eMK6Zms+kUhq+LvHx9JSN9+D78oBCZVIQqBEYDV8UIUAiMAq+OFKARGAFbHC1EIjACsjheiEBgBWB0vRCEwArA6XohCYARgdbwQhfQEzk5OG2H6Zst/QVzI/WbbCLM8/v5FhJC+1uF+UUiN+3CqQsLoahYVUsM1nKqQMLqaRYXUcA2nTtd3t83hMJgeX56bw2HgT1b4x6VmUSE1XMOpCgmjq1kcXsjm/LjNpwbTcql/ClmuRvyli7OjNp94EmNzeCEMjHktFJLHMiVJISkY80IUkscyJUkhKRjzQhSSxzIlSSEpGPNCFJLHMiVJISkY80JWEJJXfh+TFAKzqhCFwAjA6nghCoERgNXxQhQCIwCr44UoBEYAVmdvLgTGNVxHIWF0NYsKqeEaTlVIGF3NokJquIZTFRJGV7OokBqu4VSFhNHVLCqkhms4dXghD7vvNp8wCcji8EKunj7bfHK5Lp82vJDlkdW+qJBavv9O/wUAAP//W7MQVAAAAAZJREFUAwBjHfTSkwKU4QAAAABJRU5ErkJggg==\" alt=\"校园步道与入口\">\n      </picture>\n      <figcaption>步道入口示意</figcaption>\n    </figure>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-audio-controls": {
+    "name": "误以为 autoplay 与 controls 一样会显示播放器",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>让读者手动播放提示音</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>让读者手动播放提示音</h1>\n    <p>试听报到提示音。</p>\n    <audio id=\"arrival\" autoplay preload=\"metadata\" aria-describedby=\"transcript\">\n      <source src=\"data:audio/wav;base64,UklGRmQGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YUAGAACAgICAgICAgICAgIB/f39/f4CAgIGBgYGBgYGAgH9+fn5+fn+AgYGCgoOCgoGAf35+fX19fX5/gYKDg4SEg4KBf359fHx8fH5/gIKDhIWFhIOBgH58e3t7e31+gIKEhYaGhYSCgH58enp6enx+gIKEhoeHhoWDgH58enl4eXt9f4KFh4iIiIaEgX57eXh3eHl8f4KFh4mJiYeFgn57eXd2d3h7foGFh4mKioiGg397eHZ1dXd5fYGEiIqLi4qHhIB8eHZ0dHZ4fICEiIuMjIuIhYB8eHVzc3R3e3+EiIuNjoyKhoF9eHVzcnN2en6DiIuOj46Lh4J9eHRycXJ0eH2Ch4yOkI+MiIN+eXRxcHFzd3yCh4yPkJCOioV/eXRxb29ydXuBhoyPkZGPi4aAenVxbm5wdHl/houQkpKRjYeBe3Vwbm1vc3h+hYuQk5OSjomCfHVwbWxtcXZ9hIqQk5STkIqEfXZxbWtscHV7g4qPk5WUkYyFfndxbWtrbnN6gYmPlJaWk46Hf3hxbGpqbXJ4gIiOlJaXlI+IgXlybGlpa3B3f4eOk5eYlZGKgnpzbWloam51fYWNk5eYl5KMhHtzbWlnaW1ze4SMk5eZmJSOhn11bmlnaGtyeoKLkpeamZWPh352bmlmZmpweIGKkZeampeRiYB3b2lmZmludn+IkZeam5iTi4J4cGlmZWdtdH2Hj5abnJmUjYN6cWplZGZrcnyFjpabnJuWjoV8cmtmZGVpcXqEjZWanZyXkId9dGxmY2Rob3iCjJSanZ2Zkol/dW1mY2NnbXaAipOanZ2alIuBd25nY2JlbHR+iJKZnZ6blY2DeG9oY2JkanJ8h5CYnZ6cl4+FenBoY2FjaHB6hY+XnZ+dmJGHfHJpZGFiZ294g42WnJ+empKJfnRrZGFiZm12gYyVm5+fm5SLgHVsZWFhZGt0f4qTm5+fnJaNgndtZmFhY2pzfYiSmp6gnZeOhHlvZ2JgYmhxe4aQmZ6gnpmQhntxaGJgYmdveYSOl52gn5qSiH1yaWNgYWZtd4KNlpygn5uUin90a2RgYWRsdYCLlJyfoJyVjIF2bGVhYGRqc36Jk5qfoJ2XjoN4bmZhYGNpcnyHkZmeoJ6Yj4V6cGdiYGJncHqFj5ieoJ6ZkYd8cmljYGJmbniDjZadn5+ak4l+c2pkYWFlbXaBjJWcn5+blIuAdWxlYWFla3R/ipOanp+clYyCd25mYmFkanN9iJGZnp+cl46EeW9oY2FjaXF7hpCYnZ+dmJCGe3FpZGJjaHB5hI6WnJ6dmJGIfXNrZWJjZ254goyUm56dmZKJf3VsZmNjZm12gIqTmZ2dmpOLgXduZ2NjZmx0foiRmJydmpSMg3lwaWRjZmtzfIaPl5ucmpWOhHtyamVkZWpye4SOlZqcm5aPhn1zbGdkZWpxeYOMk5mbmpeQiH51bWhlZmlveIGKkpeampeRiYB3b2lmZmlvdn+IkJaampeSioJ5cWtnZmludX6GjpWYmZeSi4N6cmxoZ2ltdHyFjZOXmZeTjYV8dG5paGltc3uDi5KWmJeTjYZ+dm9raGltcnmBiZCVl5eUjod/eHFsaWpscniAiI6TlpaUj4iBeXJtampscXd/ho2SlZWTj4mCe3RvbGttcXZ9hYuQlJWTj4qDfHZwbWxtcHZ8g4qPk5STkIuEfndybm1tcHV7goiNkZOSkIuFf3lzb25ucHV6gYeMkJKSj4uGgHp1cW9vcXR6f4WLjpGRj4yHgXt2cnBwcXR5foSJjY+Qj4yHgn14dHFwcnR5foOIjI6PjoyIg355dXJxcnV4fYKGio2OjYuIg396dnRyc3V4fIGFiYyNjYuIhIB7eHV0dHV4fICEiIqMjIqIhIB8eXZ1dXZ4fH+Dh4mLi4qIhYF9enh2dnd5e3+ChYiJiomHhYJ+e3l3d3d5e36BhIeIiYiHhYJ/fHp4eHh5e36Bg4WHiIeGhIKAfXt6eXl6fH6AgoSGhoaGhIKAfnx7enp7fH6AgoOFhYWFhIKAf318e3t8fX6AgYKEhISEg4KBf359fHx9fX5/gYKDg4ODgoKBgH9+fn1+fn9/gIGCgoKCgoGAgH9/f39/f3+AgICBgYGBgYCAgICAgICAgICA\" type=\"audio/wav\">\n    </audio>\n    <p id=\"transcript\">声音说明：一次短提示音，表示报到已记录。</p>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-table-spans": {
+    "name": "保留了 rowspan 下方的空 th",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>让两层表头正确对齐</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>让两层表头正确对齐</h1>\n    <table>\n      <caption>周末场馆值班</caption>\n      <thead>\n        <tr><th scope=\"col\" rowspan=\"2\">场馆</th><th colspan=\"2\">周六与周日</th></tr>\n        <tr><th></th><th scope=\"col\">周六</th><th scope=\"col\">周日</th></tr>\n      </thead>\n      <tbody>\n        <tr><th scope=\"row\">木工坊</th><td>上午</td><td>下午</td></tr>\n      </tbody>\n    </table>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-table-footer": {
+    "name": "添加了表格页脚但也在明细里重复汇总",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>把合计放进表格页脚</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>把合计放进表格页脚</h1>\n    <table>\n      <caption>修补材料领用记录</caption>\n      <thead><tr><th scope=\"col\">材料</th><th scope=\"col\">数量</th></tr></thead>\n      <tbody>\n        <tr><th scope=\"row\">帆布</th><td>4</td></tr>\n        <tr><th scope=\"row\">织带</th><td>6</td></tr>\n      <tr><th scope=\"row\">合计</th><td>10</td></tr></tbody>\n      <tfoot>\n        <tr><th scope=\"row\">合计</th><td>10</td></tr>\n      </tfoot>\n    </table>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-video-captions": {
+    "name": "把用于屏幕显示的字幕误标为 metadata",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>为演示视频打开播放控件和字幕</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>为演示视频打开播放控件和字幕</h1>\n    <video id=\"demo\" width=\"192\" height=\"108\" controls preload=\"metadata\" crossorigin=\"anonymous\">\n      <source src=\"data:video/webm;base64,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Jpmjn4EB+wARAgABEBAAGAAaOC736ENYFklQD8BHWvOQAACjj4ICCYAIII4AAfSBti8OUKOMggIdgAgIoO0YncUuo42CAjGACAig66bssYqgo42CAkWACAig67GK8ySKo46CAlmACAig67GK9lyQmKOOggJtgAgIpmSNeyP+NU2jm4ECeAARAgABEBAAGAAZMC736CHjJWmAMp7AAKOQggKBgAgIpmSNezjAPdjygKOMggKVgAgIpmSMdH6jo5CCAqmACAiauz56fw4pQNTlo4qCAr2ACAfGsw7Go4qCAtGACAfGsw7Go4qCAuWACAfGsw7Go5uBAvUAEQIAARAQABgAGTAu9+gh4yVpgDKewACjioIC+YAIB8azDsajioIDDYAIB8azDsajioIDIYAIB8azDsajioIDNYAIB8azDsajioIDSYAIB8azDsajioIDXYAIB8azDsajioIDcYAIB8azDsajm4EDcgDxAQABEBAUYABkwL/QAIgqjYAhzfAAAKOKggOFgAgHxrMOxqOKggOZgAgHxrMOxqOKggOtgAgHxrMOxqOKggPBgAgHxrMOxqOKggPVgAgHxrMOxqOKggPpgAgHxrMOxqOWgQPvANEBAAEQEAAYABhYL/QACIUoAKOKggP9gAgHxrMOxqOKggQRgAgHxrMOxqOKggQlgAgHxrMOxqOKggQ5gAgHxrMOxqOKggRNgAgHxrMOxqOKggRhgAgHxrMOxqOWgQRsANEBAAEQEAAYABhYL/QACIUoAKOKggR1gAgHxrMOxqOKggSJgAgHxrMOxqOKggSdgAgHxrMOxqOKggSxgAgHxrMOxqOKggTFgAgHxrMOxqOKggTZgAgHxrMOxqOKggTtgAgHxrMOxqOKggUBgAgHxrMOxqOKggUVgAgHxrMOxqOKggUpgAgHxrMOxqOKggU9gAgHxrMOxqOKggVRgAgHxrMOxqOKggVlgAgHxrMOxqOKggV5gAgHxrMOxqOKggWNgAgHxrMOxqOKggWhgAgHxrMOxqOKggW1gAgHxrMOxqOKggXJgAgHxrMOxqABAAAAAAAAE6GKggXdAAgHxrMOxnWihADN/mAcU7trAQAAAAAAABG7j7OBB7eK94EB8YIDIvCBEA==\" type=\"video/webm\">\n      <track kind=\"metadata\" srclang=\"zh\" label=\"简体中文\" default src=\"data:text/vtt;charset=utf-8,WEBVTT%0A%0A00%3A00%3A00.250%20--%3E%2000%3A00%3A01.200%0A%5B%E7%9F%AD%E6%8F%90%E7%A4%BA%E9%9F%B3%EF%BC%8C%E6%8C%87%E7%A4%BA%E7%81%AF%E4%BA%AE%E8%B5%B7%5D%0A\">\n      浏览器无法播放时请阅读下方说明。\n    </video>\n    <p>操作成功后，设备发出短提示音，指示灯变绿。</p>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-form-input-types": {
+    "name": "两个字段都使用 email 类型",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>让浏览器检查邮箱和网址格式</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>让浏览器检查邮箱和网址格式</h1>\n    <form>\n      <p><label for=\"email\">联系邮箱</label><br><input id=\"email\" type=\"email\" name=\"email\" required></p>\n      <p><label for=\"work\">作品网址</label><br><input id=\"work\" type=\"email\" name=\"work\" required></p>\n      <button>提交</button>\n    </form>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-number-limits": {
+    "name": "只限制范围，忘了偶数步长",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>限定打印份数的范围和步长</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>限定打印份数的范围和步长</h1>\n    <label for=\"copies\">打印份数</label>\n    <input id=\"copies\" name=\"copies\" type=\"number\" min=\"2\" max=\"20\" required>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-date-limits": {
+    "name": "只限制最早日期",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>把日期限定在参观开放周</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>把日期限定在参观开放周</h1>\n    <label for=\"visit-date\">预计参观日</label>\n    <input id=\"visit-date\" name=\"visit-date\" type=\"date\" min=\"2027-06-10\" required>\n    <p>参观从 6 月 10 日开放到 6 月 14 日。</p>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-autocomplete": {
+    "name": "把登录密码标记成新密码",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>为登录表单声明自动填充用途</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>为登录表单声明自动填充用途</h1>\n    <form>\n      <p><label for=\"account\">账号邮箱</label><br><input id=\"account\" name=\"account\" type=\"email\" autocomplete=\"username\"></p>\n      <p><label for=\"password\">现用密码</label><br><input id=\"password\" name=\"password\" type=\"password\" autocomplete=\"new-password\"></p>\n      <button>登录</button>\n    </form>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-checkbox-group": {
+    "name": "第二个选项重复提交 reading",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>让访客可以勾选多项活动</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>让访客可以勾选多项活动</h1>\n    <fieldset>\n      <legend>你能参加哪些活动</legend>\n      <label><input id=\"reading\" type=\"checkbox\" name=\"activity\" value=\"reading\"> 共读</label>\n      <label><input id=\"repair\" type=\"checkbox\" name=\"activity\" value=\"reading\"> 修理工作坊</label>\n    </fieldset>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-datalist": {
+    "name": "创建了候选清单，但 list 指向了另一个 ID",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>为文本输入提供可编辑的建议</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>为文本输入提供可编辑的建议</h1>\n    <label for=\"building-input\">教学楼</label>\n    <input id=\"building-input\" name=\"building\" type=\"text\" list=\"buildings\">\n    <p>可选择推荐的教学楼，也可手动输入其他地点。</p>\n    <datalist id=\"building-options\">\n      <option value=\"笃行楼\"></option>\n      <option value=\"明德楼\"></option>\n      <option value=\"求知楼\"></option>\n    </datalist>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-textarea-description": {
+    "name": "将说明段落写进 aria-label，覆盖了字段名称",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>给多行说明添加长度限制和填写提示</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>给多行说明添加长度限制和填写提示</h1>\n    <form>\n      <label for=\"reason\">申请说明</label>\n      <p id=\"reason-guide\">说明借用目的，不超过 120 字。</p>\n      <textarea id=\"reason\" name=\"reason\" rows=\"4\" maxlength=\"120\" aria-label=\"说明借用目的，不超过 120 字。\" required></textarea>\n      <button type=\"submit\">提交</button>\n    </form>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-form-get": {
+    "name": "把服务器需要的 q 误写为控件 ID query",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>给搜索表单配置请求地址</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>给搜索表单配置请求地址</h1>\n    <form id=\"catalog-search\" action=\"/catalog\" method=\"get\">\n      <label for=\"query\">馆藏关键字</label>\n      <input id=\"query\" type=\"search\" name=\"query\">\n      <button type=\"submit\">查询</button>\n    </form>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-readonly-disabled": {
+    "name": "把必须提交的编号也设为 disabled",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>保护已分配的编号和停用字段</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>保护已分配的编号和停用字段</h1>\n    <form>\n      <label for=\"record-id\">档案编号</label>\n      <input id=\"record-id\" name=\"recordId\" value=\"A-031\" disabled>\n      <label for=\"future\">校外备注</label>\n      <input id=\"future\" name=\"future\" disabled>\n      <button type=\"submit\">提交</button>\n    </form>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-button-types": {
+    "name": "使用普通 button 类型，无法触发表单重置",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>把恢复按钮设为表单重置</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>把恢复按钮设为表单重置</h1>\n    <form>\n      <label for=\"alias\">展签名称</label>\n      <input id=\"alias\" name=\"alias\" value=\"模型 A\">\n      <button id=\"send\" type=\"submit\">保存</button>\n      <button id=\"restore\" type=\"button\">恢复初始名称</button>\n    </form>\n  </main>\n</body>\n</html>\n"
+    }
+  },
+  "html-progress-meter": {
+    "name": "把固定量程也写成 progress",
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>区分当前进度与容量读数</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>区分当前进度与容量读数</h1>\n    <label for=\"upload\">上传进度</label> <progress id=\"upload\" value=\"6\" max=\"10\">6 / 10</progress>\n    <br>\n    <label for=\"capacity\">存储使用量</label> <progress id=\"capacity\" min=\"0\" max=\"100\" value=\"65\">65 / 100</progress>\n  </main>\n</body>\n</html>\n"
+    }
+  }
+}

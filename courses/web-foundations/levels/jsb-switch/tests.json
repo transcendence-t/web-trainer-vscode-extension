@@ -1,57 +1,57 @@
 [
   {
-    "label": "大写 S 对应缝纫台",
+    "label": "uppercase S corresponds to sewing table",
     "expect": {
       "type": "function",
       "name": "stationName",
       "args": [
         "S"
       ],
-      "value": "缝纫台"
+      "value": "sewing table"
     }
   },
   {
-    "label": "大写 C 对应裁纸台",
+    "label": "capital C corresponds to the cutting table",
     "expect": {
       "type": "function",
       "name": "stationName",
       "args": [
         "C"
       ],
-      "value": "裁纸台"
+      "value": "cutting table"
     }
   },
   {
-    "label": "大写 B 对应装订台",
+    "label": "capital B corresponds to the binding table",
     "expect": {
       "type": "function",
       "name": "stationName",
       "args": [
         "B"
       ],
-      "value": "装订台"
+      "value": "binding table"
     }
   },
   {
-    "label": "小写 c 落入默认分支",
+    "label": "lowercase c falls into the default branch",
     "expect": {
       "type": "function",
       "name": "stationName",
       "args": [
         "c"
       ],
-      "value": "未知工位"
+      "value": "Unknown workstation"
     }
   },
   {
-    "label": "空代号落入默认分支",
+    "label": "empty code number falls into the default branch",
     "expect": {
       "type": "function",
       "name": "stationName",
       "args": [
         ""
       ],
-      "value": "未知工位"
+      "value": "Unknown workstation"
     }
   }
 ]

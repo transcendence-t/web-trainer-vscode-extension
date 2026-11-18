@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "等待预约信息并返回可显示的结果",
-  "goal": "用 async、await 和 try…catch 读取异步结果与错误。",
-  "summary": "现有 queryStatus 返回 Promise。预约状态可用时显示编号和余位，查询失败时返回服务提示。",
+  "title": "Wait for the reservation status and format the result",
+  "goal": "Use async, await and try...catch to read asynchronous results and errors.",
+  "summary": "The provided queryStatus function returns a Promise. Display the reservation number and available seats on success, or show a message when the request fails.",
   "tasks": [
-    "完成 async 函数 reservationLabel(code)，等待 queryStatus(code)。",
-    "成功时返回「编号：余位 N」，失败时返回「查询失败：」加 Error 的 message。"
+    "completes the async function reservationLabel(code) and waits for queryStatus(code).",
+    "On success, return “CODE: Seats left N”, for example “A-6: Seats left 12”. On failure, return “Query failed: ” followed by the error message."
   ],
   "example": {
     "language": "javascript",
     "code": "async function readName() {\n  try {\n    const record = await lookup();\n    return record.name;\n  } catch (error) {\n    return error.message;\n  }\n}",
-    "note": "await 取得成功值，Promise 被拒绝时像异常一样交给 catch。"
+    "note": "await obtains the success value, and when the Promise is rejected, it is handed over to catch like an exception."
   },
-  "hint": "先 await queryStatus 再读取 seats 属性。"
+  "hint": "Await queryStatus before reading the seats property."
 }

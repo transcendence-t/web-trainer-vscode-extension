@@ -1,46 +1,46 @@
 [
   {
-    "label": "包住中文话题",
+    "label": "Preserves the topic as entered",
     "expect": {
       "type": "function",
       "name": "labelTopic",
       "args": [
-        "网页布局"
+        "Web Layout"
       ],
-      "value": "【网页布局】"
+      "value": "[Web Layout]"
     }
   },
   {
-    "label": "文字中的前导零仍可见",
+    "label": "text are still visible",
     "expect": {
       "type": "function",
       "name": "labelTopic",
       "args": [
         "007"
       ],
-      "value": "【007】"
+      "value": "[007]"
     }
   },
   {
-    "label": "空话题也有一对括号",
+    "label": "The empty topic also has a pair of brackets",
     "expect": {
       "type": "function",
       "name": "labelTopic",
       "args": [
         ""
       ],
-      "value": "【】"
+      "value": "[]"
     }
   },
   {
-    "label": "保留话题两侧的空格",
+    "label": "Keep spaces on both sides of the topic",
     "expect": {
       "type": "function",
       "name": "labelTopic",
       "args": [
-        " 展示作业 "
+        " display job "
       ],
-      "value": "【 展示作业 】"
+      "value": "[ display job ]"
     }
   }
 ]

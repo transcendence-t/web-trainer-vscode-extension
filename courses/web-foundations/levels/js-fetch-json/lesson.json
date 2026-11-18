@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "使用 Fetch 加载本地活动清单",
-  "goal": "串联 fetch、Response.ok、Response.json() 与界面渲染。",
-  "summary": "下拉框内置三份 Data URL 数据。fetch 直接读取本地样例，在断网课堂里也能练习一样的解析流程。",
+  "title": "Use Fetch to load local activity list",
+  "goal": "concatenates fetch, Response.ok, Response.json() and interface rendering.",
+  "summary": "has three Data URL data built into the drop-down box. fetch directly reads local samples, and you can practice the same parsing process in offline classes.",
   "tasks": [
-    "点击 #load 时清空 #events，然后 fetch 当前 #dataset 的 value。检查 response.ok，再 await response.json()。",
-    "用返回的 activities 数组渲染 li。成功显示「活动已更新」，空数组显示「暂无活动」，读取或解析失败显示「数据无法读取」。"
+    "clears #events when #load is clicked, and then fetches the value of the current #dataset. Check response.ok, then await response.json().",
+    "renders the li with the returned activities array. Successfully displays \"Activities updated\", empty array displays \"No activities\", and failure in reading or parsing displays \"data cannot be read\"."
   ],
   "example": {
     "language": "javascript",
-    "code": "const response = await fetch(url);\nif (!response.ok) throw new Error('读取失败');\nconst data = await response.json();",
-    "note": "fetch 成功返回 Response。json() 还需独立等待，解析错误可以交给同一个 catch。"
+    "code": "const response = await fetch(url);\nif (!response.ok) throw new Error('Reading failed');\nconst data = await response.json();",
+    "note": "fetch returns Response successfully. json() still needs to wait independently, and parsing errors can be handed over to the same catch."
   },
-  "hint": "用 try…catch 包住请求、状态检查和 JSON 解析；每次加载前清空旧列表。"
+  "hint": "Use try...catch to wrap requests, status checks and JSON parsing; clear the old list before each load."
 }

@@ -1,6 +1,6 @@
 [
   {
-    "label": "head 中只有一条页面摘要",
+    "label": "head",
     "expect": {
       "type": "count",
       "selector": "head meta[name=\"description\"]",
@@ -8,28 +8,28 @@
     }
   },
   {
-    "label": "摘要文本正确",
+    "label": "summary text is correct",
     "expect": {
       "type": "attribute",
       "selector": "head meta[name=\"description\"]",
       "name": "content",
-      "value": "查询校园开放日的日期、地点和参观安排"
+      "value": "Check the date, location and visit schedule of the campus open day"
     }
   },
   {
-    "label": "标签页标题保留",
+    "label": "tab page title reserved",
     "expect": {
       "type": "text",
       "selector": "head title",
-      "value": "为活动页写页面元数据"
+      "value": "Write page metadata for the active page"
     }
   },
   {
-    "label": "正文标题保留",
+    "label": "Text title reserved",
     "expect": {
       "type": "text",
       "selector": "main h1",
-      "value": "为活动页写页面元数据"
+      "value": "Write page metadata for the active page"
     }
   }
 ]

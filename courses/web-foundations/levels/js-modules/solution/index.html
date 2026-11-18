@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>在页面入口导入回执格式化函数</title>
+  <title>Import the receipt formatting function at the page entry</title>
   <link rel="stylesheet" href="style.css">
   <script type="module" src="./script.js"></script>
 </head>
 <body>
   <main class="sheet">
-    <h1>在页面入口导入回执格式化函数</h1>
-    <label for="ticket">回执序号</label> <input id="ticket" type="number" min="0" value="3">
-    <button type="button" id="format">格式化</button>
-    <p id="receipt" role="status">等待格式化</p>
+    <h1>Import the receipt formatting function at the page entry</h1>
+    <label for="ticket">receipt serial number</label> <input id="ticket" type="number" min="0" value="3">
+    <button type="button" id="format">format</button>
+    <p id="receipt" role="status">waiting for formatting</p>
     <script type="module">
       import { formatReceipt } from "./script.js";
 

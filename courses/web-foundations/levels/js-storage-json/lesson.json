@@ -1,17 +1,17 @@
 {
   "focus": "script.js",
-  "title": "保存并恢复装备清单",
-  "goal": "用 JSON.stringify 和 JSON.parse 在数组与可保存的 JSON 字符串之间转换。",
-  "summary": "野外巡查的装备名称需要存成一份清单。再打开页面后，原来的顺序、名称和标点都应恢复。",
+  "title": "Save and restore equipment list",
+  "goal": "Use JSON.stringify and JSON.parse to convert between arrays and saveable JSON strings.",
+  "summary": "The equipment names for field patrol need to be saved in a list. When the page is reopened, the original order, names, and punctuation should be restored.",
   "tasks": [
-    "页面打开时读取 fieldGear，使用 JSON.parse 恢复数组。没有记录时以空数组开始。",
-    "每次添加非空装备后，用 JSON.stringify(items) 转换整个清单并保存到 fieldGear。",
-    "保留现有的界面渲染。输入含逗号的装备名称，确认整段文字仍显示为同一项。"
+    "reads fieldGear when the page is opened and uses JSON.parse to restore the array. Starts with an empty array when there are no records.",
+    "After each addition of non-empty equipment, use JSON.stringify(items) to convert the entire list and save it to fieldGear.",
+    "retains existing interface rendering. Enter the equipment name with commas in it and make sure the entire text still appears as the same item."
   ],
   "example": {
     "language": "javascript",
-    "code": "const cities = ['昆明', '南宁'];\nlocalStorage.setItem('tripCities', JSON.stringify(cities));\nconst saved = localStorage.getItem('tripCities');\nconst trip = JSON.parse(saved ?? '[]');",
-    "note": "路线编辑器会把城市数组存成 JSON 文本，读回后再用 parse 还原数组。没有旧值时解析空数组的文本。"
+    "code": "const cities = ['Kunming', 'Nanning'];\nlocalStorage.setItem('tripCities', JSON.stringify(cities));\nconst saved = localStorage.getItem('tripCities');\nconst trip = JSON.parse(saved ?? '[]');",
+    "note": "route editor will save the city array as JSON text, and then use parse to restore the array after reading it back. Parse the text of an empty array when there are no old values."
   },
-  "hint": "直接把数组传给 setItem 会得到逗号分隔的字符串。使用 JSON.stringify 可以保存每个项目的边界，即使名称本身也有逗号。"
+  "hint": "If you directly pass the array to setItem, you will get a comma-separated string. Using JSON.stringify you can save the bounds of each item, even if the name itself has commas."
 }

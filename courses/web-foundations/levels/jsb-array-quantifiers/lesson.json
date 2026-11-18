@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "判断是否有人签到以及是否全员签到",
-  "goal": "用 some 与 every 表达至少一项和全部满足。",
-  "summary": "签到表保存每个人的布尔状态。班级看板同时需要两种判断。",
+  "title": "Determine whether someone has signed in and whether everyone has signed in",
+  "goal": "Use some and every to express that at least one and all of them are satisfied.",
+  "summary": "The sign-in table saves the Boolean status of each person. The class board requires both judgments.",
   "tasks": [
-    "完成 attendance(states)，返回 { any, all }。any 表示至少一个 true，all 表示每项都为 true。",
-    "空列表的 any 为 false，all 为 true，表示没有任何反例。"
+    "completes attendance(states) and returns { any, all }. any means at least one true, and all means everything is true.",
+    "In the empty list, any is false and all is true, indicating that there is no counterexample."
   ],
   "example": {
     "language": "javascript",
     "code": "const flags = [true, false];\nflags.some((value) => value); // true\nflags.every((value) => value); // false",
-    "note": "some 一到真就能停止。every 一到假就能停止。"
+    "note": "some can stop as soon as it gets true. every can be stopped as soon as it is false."
   },
-  "hint": "分别调用两个数组方法，并把结果放到命名属性中。"
+  "hint": "calls two array methods respectively and puts the results into named properties."
 }

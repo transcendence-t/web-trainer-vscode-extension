@@ -1,0 +1,156 @@
+[
+  {
+    "label": "搜索框关联设备名称标签",
+    "expect": {
+      "type": "text",
+      "selector": "label[for=\"equipment-query\"]",
+      "value": "设备名称"
+    }
+  },
+  {
+    "label": "设备列表使用网格布局",
+    "expect": {
+      "type": "style",
+      "selector": "#equipment-results",
+      "property": "display",
+      "value": "grid"
+    }
+  },
+  {
+    "label": "设备条目之间有 8px 间隔",
+    "expect": {
+      "type": "style",
+      "selector": "#equipment-results",
+      "property": "row-gap",
+      "value": "8px"
+    }
+  },
+  {
+    "label": "首次打开时显示全部设备",
+    "expect": {
+      "type": "count",
+      "selector": "#equipment-results > li",
+      "value": 4
+    }
+  },
+  {
+    "label": "忽略大小写和首尾空格后找到两件 USB 设备",
+    "expect": {
+      "type": "count",
+      "selector": "#equipment-results > li",
+      "value": 2
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#equipment-query",
+        "value": " usb "
+      }
+    ]
+  },
+  {
+    "label": "显示筛选后的数量",
+    "expect": {
+      "type": "text",
+      "selector": "#equipment-count",
+      "value": "找到 2 件设备"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#equipment-query",
+        "value": " usb "
+      }
+    ]
+  },
+  {
+    "label": "关键词可以出现在名称中间",
+    "expect": {
+      "type": "text",
+      "selector": "#equipment-results > li:only-child",
+      "value": "数码录音笔"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#equipment-query",
+        "value": "录音"
+      }
+    ]
+  },
+  {
+    "label": "无匹配时移除上一轮全部结果",
+    "expect": {
+      "type": "count",
+      "selector": "#equipment-results > li",
+      "value": 0
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#equipment-query",
+        "value": "USB"
+      },
+      {
+        "type": "input",
+        "selector": "#equipment-query",
+        "value": "打印机"
+      }
+    ]
+  },
+  {
+    "label": "无匹配时数量更新为 0",
+    "expect": {
+      "type": "text",
+      "selector": "#equipment-count",
+      "value": "找到 0 件设备"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#equipment-query",
+        "value": "USB"
+      },
+      {
+        "type": "input",
+        "selector": "#equipment-query",
+        "value": "打印机"
+      }
+    ]
+  },
+  {
+    "label": "无匹配时显示空结果提示",
+    "expect": {
+      "type": "text",
+      "selector": "#equipment-empty:not([hidden])",
+      "value": "没有匹配的设备"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#equipment-query",
+        "value": "打印机"
+      }
+    ]
+  },
+  {
+    "label": "清空输入后恢复四件设备",
+    "expect": {
+      "type": "count",
+      "selector": "#equipment-results > li",
+      "value": 4
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#equipment-query",
+        "value": "投影"
+      },
+      {
+        "type": "input",
+        "selector": "#equipment-query",
+        "value": ""
+      }
+    ]
+  }
+]

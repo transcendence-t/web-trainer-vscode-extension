@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "从被绑定的按钮读取数据属性",
+  "goal": "结合 event.currentTarget 与 dataset 读取当前操作项。",
+  "summary": "两个展区按钮使用同一个处理函数。编号存放在按钮的 data-room-code，点到按钮内的图标或文字都应得到同一个编号。",
+  "tasks": [
+    "监听每个 .room-button 的点击，通过 event.currentTarget.dataset.roomCode 取得编号。",
+    "把 #selection 更新为「当前展区：」加编号。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "button.addEventListener('click', (event) => {\n  console.log(event.currentTarget.dataset.itemId);\n});",
+    "note": "data-item-id 映射成 dataset.itemId。currentTarget 是绑定监听器的元素。"
+  },
+  "hint": "event.target 有时是按钮内的 span。监听器绑定在 button 上时，用 currentTarget。"
+}

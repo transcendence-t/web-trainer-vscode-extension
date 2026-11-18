@@ -1,6 +1,6 @@
 [
   {
-    "label": "展厅开放且有工作证",
+    "label": "The exhibition hall is open and you have a work permit",
     "expect": {
       "type": "function",
       "name": "canEnterHall",
@@ -13,7 +13,7 @@
     }
   },
   {
-    "label": "展厅开放且有门票",
+    "label": "Exhibition hall is open and tickets are available",
     "expect": {
       "type": "function",
       "name": "canEnterHall",
@@ -26,7 +26,7 @@
     }
   },
   {
-    "label": "展厅开放且两种凭证都有",
+    "label": "showroom is open and both vouchers are available",
     "expect": {
       "type": "function",
       "name": "canEnterHall",
@@ -39,7 +39,7 @@
     }
   },
   {
-    "label": "展厅开放但没有凭证",
+    "label": "The exhibition hall is open but there is no voucher",
     "expect": {
       "type": "function",
       "name": "canEnterHall",
@@ -52,7 +52,7 @@
     }
   },
   {
-    "label": "闭馆时工作证也无法入场",
+    "label": "Even if you have a work permit, you cannot enter the museum when it is closed.",
     "expect": {
       "type": "function",
       "name": "canEnterHall",
@@ -65,7 +65,7 @@
     }
   },
   {
-    "label": "闭馆时门票也无法入场",
+    "label": "Tickets are not available when the museum is closed.",
     "expect": {
       "type": "function",
       "name": "canEnterHall",
@@ -78,7 +78,7 @@
     }
   },
   {
-    "label": "闭馆且两种凭证都有",
+    "label": "is closed and both vouchers are available",
     "expect": {
       "type": "function",
       "name": "canEnterHall",
@@ -91,7 +91,7 @@
     }
   },
   {
-    "label": "闭馆且没有凭证",
+    "label": "closed and no voucher",
     "expect": {
       "type": "function",
       "name": "canEnterHall",

@@ -1,24 +1,24 @@
 [
   {
-    "label": "启动时读取已有偏好",
+    "label": "Read existing preferences at startup",
     "expect": {
       "type": "text",
       "selector": "#density",
-      "value": "紧凑"
+      "value": "Compact"
     },
     "storage": {
-      "density": "紧凑"
+      "density": "Compact"
     }
   },
   {
-    "label": "恢复后立即显示默认",
+    "label": "displays the default immediately after recovery",
     "expect": {
       "type": "text",
       "selector": "#density",
-      "value": "标准"
+      "value": "standard"
     },
     "storage": {
-      "density": "紧凑"
+      "density": "Compact"
     },
     "actions": [
       {
@@ -28,14 +28,14 @@
     ]
   },
   {
-    "label": "恢复后指定键不存在",
+    "label": "The specified key does not exist after recovery",
     "expect": {
       "type": "storage",
       "key": "density",
       "value": null
     },
     "storage": {
-      "density": "紧凑"
+      "density": "Compact"
     },
     "actions": [
       {
@@ -45,14 +45,14 @@
     ]
   },
   {
-    "label": "其他偏好仍然保存",
+    "label": "Other preferences remain saved",
     "expect": {
       "type": "storage",
       "key": "language",
       "value": "zh-CN"
     },
     "storage": {
-      "density": "紧凑",
+      "density": "Compact",
       "language": "zh-CN"
     },
     "actions": [

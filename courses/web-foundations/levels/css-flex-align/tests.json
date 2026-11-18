@@ -1,6 +1,6 @@
 [
   {
-    "label": "面板主轴保持纵向",
+    "label": "panel spindle remains vertical",
     "expect": {
       "type": "style",
       "selector": ".arrival-panel",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "两项作为整体在主轴居中",
+    "label": "The two items as a whole are centered on the main axis",
     "expect": {
       "type": "style",
       "selector": ".arrival-panel",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "保留项目之间的 12px 间距",
+    "label": "preserves 12px spacing between items",
     "expect": {
       "type": "style",
       "selector": ".arrival-panel",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "状态提示水平居中",
+    "label": "status prompt is horizontally centered",
     "expect": {
       "type": "layout",
       "selector": "#arrival-status",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "记录链接水平居中",
+    "label": "record link horizontally centered",
     "expect": {
       "type": "layout",
       "selector": "#arrival-link",
@@ -45,7 +45,7 @@
     }
   },
   {
-    "label": "链接仍排在状态提示下方",
+    "label": "link is still listed below the status prompt",
     "expect": {
       "type": "layout",
       "selector": "#arrival-link",

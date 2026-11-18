@@ -1,0 +1,46 @@
+[
+  {
+    "label": "宽度为零时返回空字符串",
+    "expect": {
+      "type": "function",
+      "name": "receiptDivider",
+      "args": [
+        0
+      ],
+      "value": ""
+    }
+  },
+  {
+    "label": "宽度为一时只拼接一次",
+    "expect": {
+      "type": "function",
+      "name": "receiptDivider",
+      "args": [
+        1
+      ],
+      "value": "-"
+    }
+  },
+  {
+    "label": "宽度为五时返回五个短横线",
+    "expect": {
+      "type": "function",
+      "name": "receiptDivider",
+      "args": [
+        5
+      ],
+      "value": "-----"
+    }
+  },
+  {
+    "label": "宽度为十二时保留完整的分隔线",
+    "expect": {
+      "type": "function",
+      "name": "receiptDivider",
+      "args": [
+        12
+      ],
+      "value": "------------"
+    }
+  }
+]

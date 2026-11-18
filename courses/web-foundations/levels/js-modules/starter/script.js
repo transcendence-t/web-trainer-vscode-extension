@@ -1,3 +1,3 @@
 function formatReceipt(number) {
-  // 返回补齐后的回执编号，并把函数导出。
+  // returns the completed receipt number and exports the function.
 }

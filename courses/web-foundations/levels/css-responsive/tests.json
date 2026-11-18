@@ -1,6 +1,6 @@
 [
   {
-    "label": "手机宽度下第二张卡排在第一张下方",
+    "label": "The second card is arranged below the first card under the width of the mobile phone.",
     "expect": {
       "type": "layout",
       "selector": "#recorder",
@@ -10,7 +10,7 @@
     "viewport": 360
   },
   {
-    "label": "手机宽度下卡片宽度贴合区域",
+    "label": "card width fitting area under mobile phone width",
     "expect": {
       "type": "layout",
       "selector": "#projector",
@@ -20,7 +20,7 @@
     "viewport": 360
   },
   {
-    "label": "平板宽度下卡片区随容器变宽",
+    "label": "The card area becomes wider with the container under the flat width",
     "expect": {
       "type": "layout",
       "selector": ".equipment-grid",
@@ -30,7 +30,7 @@
     "viewport": 560
   },
   {
-    "label": "断点处第二张卡与第一张并排",
+    "label": "The second card at the breakpoint is side by side with the first one",
     "expect": {
       "type": "layout",
       "selector": "#recorder",
@@ -40,7 +40,7 @@
     "viewport": 680
   },
   {
-    "label": "宽窗口的两张设备卡等宽",
+    "label": "Two device cards with wide windows of equal width",
     "expect": {
       "type": "layout",
       "selector": "#recorder",
@@ -50,7 +50,7 @@
     "viewport": 840
   },
   {
-    "label": "宽窗口保留 12px 列间隔",
+    "label": "wide window retains 12px column spacing",
     "expect": {
       "type": "style",
       "selector": ".equipment-grid",
@@ -60,7 +60,7 @@
     "viewport": 840
   },
   {
-    "label": "宽窗口的右侧设备卡完整落在区域内",
+    "label": "The device card on the right side of the wide window completely falls within the area",
     "expect": {
       "type": "layout",
       "selector": "#recorder",

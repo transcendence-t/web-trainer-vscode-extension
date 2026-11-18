@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "把子清单放进检查步骤",
-  "goal": "将无序子清单嵌套在关联的有序列表项内。",
-  "summary": "交接设备有两个操作步骤。电源线和保护套是第一步中的两项检查内容。",
+  "title": "Put sublist into check step",
+  "goal": "Nests an unordered sublist within an associated ordered list item.",
+  "summary": "handover equipment. The power cord and protective case are two things to check in the first step.",
   "tasks": [
-    "让有序列表 #checklist 的直接子项只有「检查设备」和「提交记录」。",
-    "在第一个 li 内添加 ul，其中依序包含「电源线」「保护套」两个 li。"
+    "Let the direct children of the ordered list #checklist be only \"inspection equipment\" and \"Submit record\".",
+    "adds ul in the first li, which contains two li's \"power cord\" \"protective case\" in sequence."
   ],
   "example": {
     "language": "html",
-    "code": "<ol>\n  <li>打包\n    <ul><li>告示牌</li><li>接线板</li></ul>\n  </li>\n  <li>装车</li>\n</ol>",
-    "note": "每个子列表都放在对应的 li 里，子列表本身拥有自己的列表项。"
+    "code": "<ol>\n  <li>packaging\n    <ul><li>notice board</li><li>terminal board</li></ul>\n  </li>\n  <li>loading</li>\n</ol>",
+    "note": "Each sublist is placed in the corresponding li, and the sublist itself has its own list item."
   },
-  "hint": "先找到第一项的结束标签 </li>，把 ul 写在它的前面。"
+  "hint": "First find the end tag </li> of the first item and write ul in front of it."
 }

@@ -1,6 +1,6 @@
 [
   {
-    "label": "宽度包含边框和内边距",
+    "label": "width includes border and padding",
     "expect": {
       "type": "style",
       "selector": ".parcel-label",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "内边距保持 10px",
+    "label": "Keep padding 10px",
     "expect": {
       "type": "style",
       "selector": ".parcel-label",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "保留原有 2px 实线边框",
+    "label": "retains the original 2px solid border",
     "expect": {
       "type": "style",
       "selector": ".parcel-label",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "标签完整落在托盘内",
+    "label": "label completely falls in the pallet",
     "expect": {
       "type": "layout",
       "selector": ".parcel-label",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "标签与托盘实际等宽",
+    "label": "The label is the same width as the actual tray",
     "expect": {
       "type": "layout",
       "selector": ".parcel-label",

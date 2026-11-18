@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "循环生成列表",
-  "summary": "在点击监听中用 for 创建每一项。每轮用 createElement 创建一个 li，设置文字后把它添加到列表。重新生成前清空旧项目。",
+  "title": "Loop generation list",
+  "summary": "Use for to create each item in the click listener. Each round uses createElement to create a li, sets the text and then adds it to the list. Clear the old project before rebuilding.",
   "tasks": [
-    "点击 #make-list 后，从 1 循环到 5，每次创建一个 li 并加到 #days。",
-    "五项依次显示「第 1 天」到「第 5 天」。第二次点击时，列表仍然只有五项。"
+    "After clicking #make-list, it loops from 1 to 5, creating a li each time and adding it to #days.",
+    "display \"Day 1\" to \"Day 5\" in sequence. On the second click, the list still only has five items."
   ],
-  "hint": "若第二次点击后出现十项，在点击监听开头用 list.replaceChildren() 清空旧项目。每轮循环都新建一个 li，再写上当天的数字。",
-  "goal": "点击按钮后创建五天的计划列表，重复点击时重新生成同一份列表。",
+  "hint": "If ten items appear after the second click, use list.replaceChildren() at the beginning of the click listener to clear the old items. Each cycle creates a new li and writes the number of the day.",
+  "goal": "Creates a five-day plan list after clicking the button, and regenerates the same list when clicked repeatedly.",
   "example": {
     "language": "javascript",
-    "code": "const lockers = document.querySelector('#locker-numbers');\n\ndocument.querySelector('#show-lockers').addEventListener('click', () => {\n  lockers.replaceChildren();\n  for (let number = 101; number <= 103; number += 1) {\n    const item = document.createElement('li');\n    item.textContent = '储物柜 ' + number;\n    lockers.append(item);\n  }\n});",
-    "note": "点击「显示储物柜」后，页面生成 101 到 103 三个柜号。再次点击会用同一批项目替换旧列表。"
+    "code": "const lockers = document.querySelector('#locker-numbers');\n\ndocument.querySelector('#show-lockers').addEventListener('click', () => {\n  lockers.replaceChildren();\n  for (let number = 101; number <= 103; number += 1) {\n    const item = document.createElement('li');\n    item.textContent = 'locker ' + number;\n    lockers.append(item);\n  }\n});",
+    "note": "After clicking \"display locker\", the page generates three cabinet numbers from 101 to 103. Clicking again will replace the old list with the same batch of items."
   }
 }

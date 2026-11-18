@@ -1,6 +1,6 @@
 [
   {
-    "label": "首次出现顺序保持不变",
+    "label": "remains unchanged.",
     "expect": {
       "type": "function",
       "name": "uniqueCodes",
@@ -21,7 +21,7 @@
     }
   },
   {
-    "label": "不同类型是不同编码",
+    "label": "Different types have different codes.",
     "expect": {
       "type": "function",
       "name": "uniqueCodes",
@@ -39,7 +39,7 @@
     }
   },
   {
-    "label": "空列表返回空数组",
+    "label": "empty list returns empty array",
     "expect": {
       "type": "function",
       "name": "uniqueCodes",

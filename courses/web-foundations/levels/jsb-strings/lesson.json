@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "拼接话题标签",
-  "goal": "把固定的括号与传入的话题文字拼成一段字符串。",
-  "summary": "在引号里写固定文字。+ 可以把多个字符串按顺序连接，拼接时会保留原有字符。",
+  "title": "Splicing hashtags",
+  "goal": "Combine the fixed brackets and the incoming topic text into a string.",
+  "summary": "Write fixed text in quotation marks. + Multiple strings can be concatenated in sequence, and the original characters will be retained during splicing.",
   "tasks": [
-    "在 labelTopic 的大括号内用 + 连接「【」、参数 topic 和「】」。",
-    "用 return 返回拼好的字符串。原话题的字符、空格和前导零都要保留，空字符串得到「【】」。"
+    "uses + inside the curly brackets of labelTopic to connect \"[\", the parameter topic and \"]\".",
+    "Use return to return the assembled string. The characters, spaces, and leading zeros of the original topic are retained, and the empty string is \"[]\"."
   ],
-  "hint": "括号是固定文字，要加引号。读取参数里的实际内容时直接写 topic。",
+  "hint": "The brackets are fixed text and must be enclosed in quotation marks. When reading the actual content in the parameter, write topic directly.",
   "example": {
     "language": "javascript",
-    "code": "const extension = '204';\nconst phone = '实训室分机 ' + extension;",
-    "note": "通讯录把固定提示和分机号拼在一起，得到「实训室分机 204」。"
+    "code": "const extension = '204';\nconst phone = 'Training room extension ' + extension;",
+    "note": "Address Book puts the fixed prompt and extension number together to get \"Training room extension 204\"."
   }
 }

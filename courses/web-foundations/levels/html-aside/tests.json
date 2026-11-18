@@ -1,25 +1,25 @@
 [
   {
-    "label": "aside 属于实验文章",
+    "label": "aside is an experimental article",
     "expect": {
       "type": "exists",
       "selector": "article > aside#extension"
     }
   },
   {
-    "label": "补充部分有三级标题",
+    "label": "The supplementary part has third-level headings",
     "expect": {
       "type": "text",
       "selector": "#extension > h3",
-      "value": "延伸阅读"
+      "value": "Further reading"
     }
   },
   {
-    "label": "实验主体说明仍在文章直属段落",
+    "label": "The main description of the experiment is still in the paragraph directly under the article.",
     "expect": {
       "type": "text",
       "selector": "article > p",
-      "value": "折叠纸板能够改变受力方式。"
+      "value": "Folding cardboard can change the way force is received."
     }
   }
 ]

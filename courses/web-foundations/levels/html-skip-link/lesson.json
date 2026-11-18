@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "让键盘用户跳过重复导航",
-  "goal": "提供位于导航之前的跳转链接，并标记可接收焦点的正文。",
-  "summary": "用键盘阅读时，一进页面即可通过短链接越过重复的导航项。",
+  "title": "Let keyboard users skip repetitive navigation",
+  "goal": "Provides a jump link before the navigation and marks the main text to receive focus.",
+  "summary": "Keyboard users can follow a short link to skip repeated navigation as soon as they enter the page.",
   "tasks": [
-    "在 header 之前添加链接，ID 为 skip，文字为「跳到主要内容」，href 指向 #main-content。",
-    "给已有 main 设置 ID main-content 和 tabindex=\"-1\"。"
+    "Add a link before header with the ID skip, the text \"Skip to main content\", and an href of #main-content.",
+    "Give the existing main element the ID main-content and set tabindex=\"-1\"."
   ],
   "example": {
     "language": "html",
-    "code": "<a href=\"#article-body\">跳到正文</a>\n<nav aria-label=\"站点\">…</nav>\n<main id=\"article-body\" tabindex=\"-1\">…</main>",
-    "note": "入口在导航前。tabindex=\"-1\" 让正文可接收焦点，同时保持正常 Tab 顺序。"
+    "code": "<a href=\"#article-body\">Skip to text</a>\n<nav aria-label=\"site\">…</nav>\n<main id=\"article-body\" tabindex=\"-1\">…</main>",
+    "note": "entrance is in front of navigation. tabindex=\"-1\" allows the main text to receive focus while maintaining normal tab order."
   },
-  "hint": "href 的 # 只出现在链接目标地址里，正文的 id 不带 #。"
+  "hint": "href only appears in the link target address, and the id of the text does not contain #."
 }

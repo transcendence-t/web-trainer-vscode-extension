@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "给搜索表单配置请求地址",
-  "goal": "设置搜索表单的 action、method 和可提交字段名。",
-  "summary": "服务端约定通过 GET /catalog 接收关键字参数 q。预览会保留在当前练习，判题读取表单配置。",
+  "title": "Configure the request address for the search form",
+  "goal": "Set the action, method and submittable field names of the search form.",
+  "summary": "The server agrees to receive the keyword parameter q through GET /catalog. The preview will remain in the current exercise and question reading form configuration.",
   "tasks": [
-    "将 #catalog-search 的 action 设为 /catalog，显式写 method=\"get\"。",
-    "为 #query 设置 type=\"search\" 和 name=\"q\"，保留标签与提交按钮。"
+    "Set the action of #catalog-search to /catalog and explicitly write method=\"get\".",
+    "Set type=\"search\" and name=\"q\" for #query, keeping the label and submit button."
   ],
   "example": {
     "language": "html",
-    "code": "<form action=\"/find\" method=\"get\">\n  <input type=\"search\" name=\"term\" aria-label=\"查找关键字\">\n  <button type=\"submit\">查找</button>\n</form>",
-    "note": "输入 css 并提交时，查询会成为 /find?term=css。变量名来自 name 属性。"
+    "code": "<form action=\"/find\" method=\"get\">\n  <input type=\"search\" name=\"term\" aria-label=\"search keyword\">\n  <button type=\"submit\">Search</button>\n</form>",
+    "note": "When you enter css and submit, the query becomes /find?term=css. Variable names come from the name attribute."
   },
-  "hint": "id 用来关联标签和定位元素，name 决定提交给服务端的字段名。"
+  "hint": "id is used to associate labels and positioning elements, and name determines the field name submitted to the server."
 }

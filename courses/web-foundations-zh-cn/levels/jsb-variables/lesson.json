@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "用变量记录库存变化",
+  "goal": "用一个能重新赋值的变量保存每一步之后的库存。",
+  "summary": "let 声明的变量可以更新。等号右侧先用当前值算出结果，再把结果存进左边的变量。return 把结果交给调用这段代码的地方。",
+  "tasks": [
+    "在 updateStock 的大括号内，从已有的 stock 开始。先把入库量 received 加进去，再减去出库量 shipped，每一步都更新 stock。",
+    "用 return 返回最终库存。参数都是非负整数，出库量不超过当前可用库存。"
+  ],
+  "hint": "第二次计算时读取已经更新的 stock。若再次读取 initialStock，第一次入库就漏算了。",
+  "example": {
+    "language": "javascript",
+    "code": "const classDuration = 40;\nlet minutesLeft = classDuration;\nminutesLeft = minutesLeft - 5;",
+    "note": "课堂开始五分钟后，把剩余时间更新为 35。classDuration 用 const 保存原定课时，之后无需重新赋值。"
+  }
+}

@@ -1,6 +1,6 @@
 [
   {
-    "label": "只有部分人签到了",
+    "label": "Only some people signed in",
     "expect": {
       "type": "function",
       "name": "attendance",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "全部签到",
+    "label": "All signed in",
     "expect": {
       "type": "function",
       "name": "attendance",
@@ -35,7 +35,7 @@
     }
   },
   {
-    "label": "没人签到",
+    "label": "No one signed in",
     "expect": {
       "type": "function",
       "name": "attendance",
@@ -52,7 +52,7 @@
     }
   },
   {
-    "label": "空列表的逻辑边界",
+    "label": "Logical boundary of empty list",
     "expect": {
       "type": "function",
       "name": "attendance",

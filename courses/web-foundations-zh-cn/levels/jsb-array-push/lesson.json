@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "把访客加入预约名单末尾",
+  "goal": "用 push 追加数组元素，区分追加后的数组和 push 返回的长度。",
+  "summary": "访客登记后要排在预约名单末尾。调用函数的代码需要拿到更新后的整份名单。",
+  "tasks": [
+    "完成 addBooking(bookings, guest)。将访客名 guest 追加到数组 bookings 的末尾。",
+    "返回追加后的名单。空名单也能加入第一位访客，同名访客仍按登记顺序追加。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const supplies = ['纸胶带'];\nconst count = supplies.push('棉线');\n// supplies 是 ['纸胶带', '棉线']，count 是 2",
+    "note": "push 把采购物品写到数组末尾，并返回更新后的元素个数。要拿到两项物品，可以读取 supplies。"
+  },
+  "hint": "return bookings.push(guest) 会把人数交给调用方。先追加访客，再返回 bookings 数组。"
+}

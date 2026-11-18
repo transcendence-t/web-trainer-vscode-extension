@@ -1,0 +1,20 @@
+[
+  {
+    "label": "扫描头的变换仅向右偏移 80px",
+    "expect": {
+      "type": "style",
+      "selector": ".scanner-head",
+      "property": "transform",
+      "value": "matrix(1, 0, 0, 1, 80, 0)"
+    }
+  },
+  {
+    "label": "扫描头的实际外框落进虚线位置",
+    "expect": {
+      "type": "layout",
+      "selector": ".scanner-head",
+      "relativeTo": ".scan-target",
+      "relation": "inside"
+    }
+  }
+]

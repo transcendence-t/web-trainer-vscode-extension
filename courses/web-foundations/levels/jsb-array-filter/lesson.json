@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "筛出可以发货的批次",
-  "goal": "用 filter 按条件保留数组原项，正确处理恰好达到门槛的值。",
-  "summary": "仓库根据每批物品的数量挑出可以发货的批次。满足最小数量的批次都应继续保留。",
+  "title": "Screen out the batches that can be shipped",
+  "goal": "uses filter to retain the original items of the array according to conditions, and correctly handles values ​​that happen to reach the threshold.",
+  "summary": "The warehouse selects batches that can be shipped based on the quantity of each batch of items. Lots that meet the minimum quantity should be retained.",
   "tasks": [
-    "完成 selectReadyBatches(counts, minimum)。counts 保存各批数量，minimum 是允许发货的最小数量。",
-    "返回数量大于等于 minimum 的原值，保留顺序和重复项。没有达标项时返回空数组。"
+    "complete selectReadyBatches(counts, minimum). counts stores the quantity of each batch, and minimum is the minimum quantity allowed to be shipped.",
+    "Returns the original value with a quantity greater than or equal to minimum, preserving order and duplicates. If no items meet the criteria, an empty array is returned."
   ],
   "example": {
     "language": "javascript",
-    "code": "const temperatures = [8, 5, 10, 6];\nconst coolReadings = temperatures.filter((value) => value < 8);\n// coolReadings 是 [5, 6]",
-    "note": "filter 对数组项判断条件，结果为 true 的项按原顺序出现在结果中。"
+    "code": "const temperatures = [8, 5, 10, 6];\nconst coolReadings = temperatures.filter((value) => value < 8);\n// coolReadings is [5, 6]",
+    "note": "filter judges conditions on array items, and items with a true result appear in the result in the original order."
   },
-  "hint": "恰好等于 minimum 的批次也能发货。用 >= 判断可以包含这个边界值。"
+  "hint": "batches that are exactly equal to minimum can also be shipped. Use >= to determine whether this boundary value can be included."
 }

@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "宽窄屏选用不同构图",
-  "goal": "让 picture 按视口选择宽构图或默认的近景构图。",
-  "summary": "较宽的视口可以显示步道全景，小屏用近景突出入口。两张图片已内嵌在源文件里，页面断网也能预览。",
+  "title": "Chooses different compositions for wide and narrow screens",
+  "goal": "Use picture to select a wide image or a default close-up based on the viewport.",
+  "summary": "A wide viewport shows the full path. A close-up highlights the entrance on narrow screens. Both images are embedded so the page works offline.",
   "tasks": [
-    "给 picture 里的 source 添加 media，使浏览器只在视口至少 600px 时选用全景。",
-    "保留 img 作为默认近景，保留它的 alt。"
+    "Add a media attribute to the source inside picture so the browser uses the wide image only at viewport widths of at least 600px.",
+    "Keep img as the default close-up and retain its alt attribute."
   ],
   "example": {
     "language": "html",
-    "code": "<picture>\n  <source media=\"(min-width: 800px)\" srcset=\"hall-wide.jpg\">\n  <img src=\"hall-close.jpg\" alt=\"展厅入口\">\n</picture>",
-    "note": "浏览器依次考虑 source。在没有匹配 source 时使用 img 的默认图片。"
+    "code": "<picture>\n  <source media=\"(min-width: 800px)\" srcset=\"hall-wide.jpg\">\n  <img src=\"hall-close.jpg\" alt=\"Exhibition Hall Entrance\">\n</picture>",
+    "note": "The browser considers source elements in order. If none match, it uses the default image in img."
   },
-  "hint": "判断宽度是否至少为 600px 要用 min-width。"
+  "hint": "Use min-width to match viewports at least 600px wide."
 }

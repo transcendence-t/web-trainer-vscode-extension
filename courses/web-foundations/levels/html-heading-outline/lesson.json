@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "整理新生指南的标题层级",
-  "goal": "使用连续的标题层级表达父子主题。",
-  "summary": "页面的主标题已经写好。签到和领卡是同一级栏目，补签是签到栏目下的话题。",
+  "title": "Organize the title hierarchy of the freshman guide",
+  "goal": "uses a continuous heading hierarchy to express parent-child themes.",
+  "summary": "page has been written. Sign-in and card collection are at the same level, and re-signing is a topic under the sign-in column.",
   "tasks": [
-    "把「签到安排」和「领卡安排」标为 h2，把「补签」标为 h3。",
-    "保留段落与主标题，标题顺序依次是「签到安排」「补签」「领卡安排」。"
+    "marks \"check-in arrangement\" and \"Card collection arrangement\" as h2, and \"re-signing\" as h3.",
+    "retains paragraphs and main titles, and the title order is \"check-in arrangement\" \"re-signing\" \"Card collection arrangement\"."
   ],
   "example": {
     "language": "html",
-    "code": "<h1>志愿者手册</h1>\n<h2>出发前</h2>\n<h3>领取装备</h3>\n<h2>返程后</h2>",
-    "note": "h3 所在的部分属于上一个 h2。根据内容层级选标签，用 CSS 调整外观。"
+    "code": "<h1>Volunteer Manual</h1>\n<h2>Before departure</h2>\n<h3>Receive equipment</h3>\n<h2>After returning</h2>",
+    "note": "h3 is located belongs to the previous h2. Select tags based on content hierarchy and adjust appearance with CSS."
   },
-  "hint": "用 h2 开启同一级栏目，用 h3 标明当前 h2 下的话题。"
+  "hint": "Use h2 to open the column at the same level, and use h3 to mark the topic under the current h2."
 }

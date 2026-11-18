@@ -1,6 +1,6 @@
 [
   {
-    "label": "相邻边框合并",
+    "label": "Adjacent borders merge",
     "expect": {
       "type": "style",
       "selector": "table",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "表头有单元格边框",
+    "label": "There is a cell border in the header",
     "expect": {
       "type": "style",
       "selector": "th",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "数据格留出内边距",
+    "label": "data grid leaves inner margins",
     "expect": {
       "type": "style",
       "selector": "td",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "编号列右对齐",
+    "label": "number column right aligned",
     "expect": {
       "type": "style",
       "selector": "td.code",

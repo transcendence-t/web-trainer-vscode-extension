@@ -1,6 +1,6 @@
 [
   {
-    "label": "保留高于门槛的数量",
+    "label": "retains the quantity above the threshold",
     "expect": {
       "type": "function",
       "name": "selectReadyBatches",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "恰好达标的值按原顺序保留",
+    "label": "The values that exactly meet the standards are retained in the original order.",
     "expect": {
       "type": "function",
       "name": "selectReadyBatches",
@@ -39,7 +39,7 @@
     }
   },
   {
-    "label": "门槛为 0 时也保留数量为 0 的批次",
+    "label": "When the threshold is 0, batches with quantity 0 are also retained.",
     "expect": {
       "type": "function",
       "name": "selectReadyBatches",
@@ -57,7 +57,7 @@
     }
   },
   {
-    "label": "没有一批达标时返回空数组",
+    "label": "Returns an empty array when no batch reaches the standard",
     "expect": {
       "type": "function",
       "name": "selectReadyBatches",
@@ -72,7 +72,7 @@
     }
   },
   {
-    "label": "输入空数组时返回空数组",
+    "label": "returns an empty array when an empty array is input",
     "expect": {
       "type": "function",
       "name": "selectReadyBatches",

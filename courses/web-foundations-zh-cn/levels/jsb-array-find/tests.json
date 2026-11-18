@@ -1,0 +1,77 @@
+[
+  {
+    "label": "重复编号取第一条",
+    "expect": {
+      "type": "function",
+      "name": "findRecord",
+      "args": [
+        [
+          {
+            "id": "A7",
+            "room": "木工坊"
+          },
+          {
+            "id": "A7",
+            "room": "服务台"
+          }
+        ],
+        "A7"
+      ],
+      "value": {
+        "id": "A7",
+        "room": "木工坊"
+      }
+    }
+  },
+  {
+    "label": "按 id 跳过其他记录",
+    "expect": {
+      "type": "function",
+      "name": "findRecord",
+      "args": [
+        [
+          {
+            "id": "B1"
+          },
+          {
+            "id": "B2",
+            "room": "前台"
+          }
+        ],
+        "B2"
+      ],
+      "value": {
+        "id": "B2",
+        "room": "前台"
+      }
+    }
+  },
+  {
+    "label": "未找到返回 null",
+    "expect": {
+      "type": "function",
+      "name": "findRecord",
+      "args": [
+        [
+          {
+            "id": 7
+          }
+        ],
+        "7"
+      ],
+      "value": null
+    }
+  },
+  {
+    "label": "空数组返回 null",
+    "expect": {
+      "type": "function",
+      "name": "findRecord",
+      "args": [
+        [],
+        "A7"
+      ],
+      "value": null
+    }
+  }
+]

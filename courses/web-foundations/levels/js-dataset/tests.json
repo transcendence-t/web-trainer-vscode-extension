@@ -1,10 +1,10 @@
 [
   {
-    "label": "直接点击按钮读取它的编号",
+    "label": "Clicking the button reads its area number",
     "expect": {
       "type": "text",
       "selector": "#selection",
-      "value": "当前展区：A-301"
+      "value": "Current area: A-301"
     },
     "actions": [
       {
@@ -14,11 +14,11 @@
     ]
   },
   {
-    "label": "点击子元素也能得到父按钮数据",
+    "label": "You can also get the parent button data by clicking on the child element.",
     "expect": {
       "type": "text",
       "selector": "#selection",
-      "value": "当前展区：B-105"
+      "value": "Current area: B-105"
     },
     "actions": [
       {
@@ -28,11 +28,11 @@
     ]
   },
   {
-    "label": "切换展区更新原提示",
+    "label": "Switching areas updates the existing message",
     "expect": {
       "type": "text",
       "selector": "#selection",
-      "value": "当前展区：A-301"
+      "value": "Current area: A-301"
     },
     "actions": [
       {

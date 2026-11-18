@@ -1,3 +1,3 @@
 function readStop(stops, index) {
-  // 根据下标返回站名，找不到站点时返回 null。
+  // returns the site name based on the subscript, and returns null if the site cannot be found.
 }

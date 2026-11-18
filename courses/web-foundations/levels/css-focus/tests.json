@@ -1,6 +1,6 @@
 [
   {
-    "label": "未聚焦的主题框保留原轮廓",
+    "label": "The unfocused subject frame retains its original outline",
     "expect": {
       "type": "style",
       "selector": "#topic-filter:not(:focus)",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "主题框聚焦后显示实线轮廓",
+    "label": "The theme box displays a solid outline after focusing",
     "expect": {
       "type": "style",
       "selector": "#topic-filter:focus",
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "label": "主题框的焦点轮廓为绿色",
+    "label": "The focus outline of the theme box is green",
     "expect": {
       "type": "style",
       "selector": "#topic-filter:focus",
@@ -39,7 +39,7 @@
     ]
   },
   {
-    "label": "主题框轮廓向外偏移 4px",
+    "label": "The outline of the theme box is offset outward by 4px",
     "expect": {
       "type": "style",
       "selector": "#topic-filter:focus",
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "label": "焦点可以转到作者框",
+    "label": "focus can go to the author box",
     "expect": {
       "type": "style",
       "selector": "#author-filter:focus",
@@ -73,7 +73,7 @@
     ]
   },
   {
-    "label": "作者框的焦点轮廓为绿色",
+    "label": "The focus outline of the author box is green",
     "expect": {
       "type": "style",
       "selector": "#author-filter:focus",
@@ -88,7 +88,7 @@
     ]
   },
   {
-    "label": "作者框轮廓向外偏移 4px",
+    "label": "Author box outline offset 4px outward",
     "expect": {
       "type": "style",
       "selector": "#author-filter:focus",
@@ -103,7 +103,7 @@
     ]
   },
   {
-    "label": "失去焦点后主题框恢复原轮廓",
+    "label": "The theme frame returns to its original outline after losing focus",
     "expect": {
       "type": "style",
       "selector": "#topic-filter:not(:focus)",

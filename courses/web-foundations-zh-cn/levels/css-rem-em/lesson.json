@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "用 rem 和 em 建立局部排版比例",
+  "goal": "区分以根字号为基准的 rem 与以本元素字号为基准的 em。",
+  "summary": "页面根字号为 16px。两张展签字号不同，但它们的内边距都需要与自己的字号成比例。",
+  "tasks": [
+    "为 .large-label 设置字号 1.5rem，为 .small-label 设置字号 1rem。",
+    "为两张 .size-label 设置内边距 .5em。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".note { font-size: 1.25rem; padding: .5em; }",
+    "note": "根字号为 16px 时，font-size 为 20px，该元素的 padding 为 10px。"
+  },
+  "hint": "padding 的 em 参考应用该声明的元素字号。"
+}

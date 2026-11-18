@@ -1,0 +1,38 @@
+[
+  {
+    "label": "行之间分配空白",
+    "expect": {
+      "type": "style",
+      "selector": ".cabinet",
+      "property": "align-content",
+      "value": "space-between"
+    }
+  },
+  {
+    "label": "前两盒仍在一行",
+    "expect": {
+      "type": "layout",
+      "selector": "#mask",
+      "relativeTo": "#gloves",
+      "relation": "same-row"
+    }
+  },
+  {
+    "label": "第三盒另起一行",
+    "expect": {
+      "type": "layout",
+      "selector": "#cloth",
+      "relativeTo": "#gloves",
+      "relation": "below"
+    }
+  },
+  {
+    "label": "底排保留在柜体内",
+    "expect": {
+      "type": "layout",
+      "selector": "#goggles",
+      "relativeTo": ".cabinet",
+      "relation": "inside"
+    }
+  }
+]

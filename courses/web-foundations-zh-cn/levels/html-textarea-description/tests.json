@@ -1,0 +1,51 @@
+[
+  {
+    "label": "使用四行必填多行输入框",
+    "expect": {
+      "type": "exists",
+      "selector": "textarea#reason[name=\"reason\"][rows=\"4\"][required]"
+    }
+  },
+  {
+    "label": "最多输入 120 字符",
+    "expect": {
+      "type": "property",
+      "selector": "textarea#reason",
+      "name": "maxLength",
+      "value": 120
+    }
+  },
+  {
+    "label": "标签仍关联字段",
+    "expect": {
+      "type": "text",
+      "selector": "label[for=\"reason\"]",
+      "value": "申请说明"
+    }
+  },
+  {
+    "label": "填写提示作为说明",
+    "expect": {
+      "type": "attribute",
+      "selector": "textarea#reason",
+      "name": "aria-describedby",
+      "value": "reason-guide"
+    }
+  },
+  {
+    "label": "可接收多行输入",
+    "expect": {
+      "type": "property",
+      "selector": "#reason",
+      "name": "value",
+      "value": "用途一\n用途二"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#reason",
+        "value": "用途一\n用途二"
+      }
+    ]
+  }
+]

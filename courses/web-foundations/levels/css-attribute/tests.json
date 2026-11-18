@@ -1,6 +1,6 @@
 [
   {
-    "label": "姓名输入框采用浅黄背景",
+    "label": "The name input box has a light yellow background.",
     "expect": {
       "type": "style",
       "selector": "#applicant-name",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "邮箱输入框采用浅黄背景",
+    "label": "Email input box uses light yellow background",
     "expect": {
       "type": "style",
       "selector": "#applicant-email",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "姓名输入框边框变为棕色",
+    "label": "The name input box border turns brown",
     "expect": {
       "type": "style",
       "selector": "#applicant-name",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "邮箱输入框边框变为棕色",
+    "label": "The border of the email input box turns brown",
     "expect": {
       "type": "style",
       "selector": "#applicant-email",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "联系电话输入框背景保留白色",
+    "label": "Contact number input box background remains white",
     "expect": {
       "type": "style",
       "selector": "#phone-number",
@@ -45,7 +45,7 @@
     }
   },
   {
-    "label": "联系电话输入框边框保留原色",
+    "label": "Contact number input box border retains original color",
     "expect": {
       "type": "style",
       "selector": "#phone-number",

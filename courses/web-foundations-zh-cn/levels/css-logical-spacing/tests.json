@@ -1,0 +1,38 @@
+[
+  {
+    "label": "顺向提示线在左侧",
+    "expect": {
+      "type": "style",
+      "selector": "#zh-note",
+      "property": "border-left",
+      "value": "3px solid rgb(18, 90, 70)"
+    }
+  },
+  {
+    "label": "反向提示线在右侧",
+    "expect": {
+      "type": "style",
+      "selector": "#ar-note",
+      "property": "border-right",
+      "value": "3px solid rgb(18, 90, 70)"
+    }
+  },
+  {
+    "label": "顺向留左侧间距",
+    "expect": {
+      "type": "style",
+      "selector": "#zh-note",
+      "property": "padding-left",
+      "value": "12px"
+    }
+  },
+  {
+    "label": "反向留右侧间距",
+    "expect": {
+      "type": "style",
+      "selector": "#ar-note",
+      "property": "padding-right",
+      "value": "12px"
+    }
+  }
+]

@@ -1,29 +1,29 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>制作可在本页反馈的实践课报名表</title>
+  <title>Create a practical course registration form that can be used for feedback on this page</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <main class="sheet">
-    <h1>制作可在本页反馈的实践课报名表</h1>
+    <h1>Create a practical course registration form that can be used for feedback on this page</h1>
     <form id="registration">
-      <p><label for="name">姓名</label> <input id="name" name="name" required></p>
-      <p><label for="email">联系邮箱</label> <input id="email" name="email" type="email" required></p>
+      <p><label for="name">Name</label> <input id="name" name="name" required></p>
+      <p><label for="email">Contact email</label> <input id="email" name="email" type="email" required></p>
       <p>
-        <label for="course">场次</label>
+        <label for="course">sessions</label>
         <select id="course" name="course" required>
-          <option value="">请选择</option>
-          <option>上午场</option>
-          <option>下午场</option>
+          <option value="">Please select</option>
+          <option>Morning session</option>
+          <option>Afternoon session</option>
         </select>
       </p>
-      <button type="submit">报名</button>
+      <button type="submit">Registration</button>
     </form>
-    <p id="reply" role="status">尚未报名</p>
+    <p id="reply" role="status">has not registered yet</p>
   </main>
 </body>
 </html>

@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "用 reduce 合计各份配料重量",
+  "goal": "指定可用的初始累加值，逐项汇总对象里的数值。",
+  "summary": "配料表中每项都有重量 grams，要显示所有配料合计多少克。空表显示 0。",
+  "tasks": [
+    "完成 totalGrams(items)，用 reduce 累加每项的 grams。",
+    "输入数据为非负克数。无配料时返回数字 0。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "[4, 12].reduce((total, next) => total + next, 0); // 16",
+    "note": "回调返回下一轮的累加值。末尾的 0 是初始值，也为空数组提供返回结果。"
+  },
+  "hint": "累加器是数值；当前项是一个对象，因此要读取 item.grams。"
+}

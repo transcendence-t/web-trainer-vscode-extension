@@ -1,0 +1,98 @@
+[
+  {
+    "label": "刚输入时还没有搜索",
+    "expect": {
+      "type": "text",
+      "selector": "#hits",
+      "value": "0"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#filter",
+        "value": "c"
+      }
+    ]
+  },
+  {
+    "label": "连续输入只查一次",
+    "expect": {
+      "type": "text",
+      "selector": "#hits",
+      "value": "1"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#filter",
+        "value": "c"
+      },
+      {
+        "type": "input",
+        "selector": "#filter",
+        "value": "cs"
+      },
+      {
+        "type": "input",
+        "selector": "#filter",
+        "value": "css"
+      },
+      {
+        "type": "wait",
+        "ms": 300
+      }
+    ]
+  },
+  {
+    "label": "使用最后一个关键字",
+    "expect": {
+      "type": "text",
+      "selector": "#last-keyword",
+      "value": "css"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#filter",
+        "value": "c"
+      },
+      {
+        "type": "input",
+        "selector": "#filter",
+        "value": "css"
+      },
+      {
+        "type": "wait",
+        "ms": 300
+      }
+    ]
+  },
+  {
+    "label": "停顿两次产生两次搜索",
+    "expect": {
+      "type": "text",
+      "selector": "#hits",
+      "value": "2"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#filter",
+        "value": "c"
+      },
+      {
+        "type": "wait",
+        "ms": 300
+      },
+      {
+        "type": "input",
+        "selector": "#filter",
+        "value": "css"
+      },
+      {
+        "type": "wait",
+        "ms": 300
+      }
+    ]
+  }
+]

@@ -1,6 +1,6 @@
 [
   {
-    "label": "数值顺序区别于字典序",
+    "label": "numerical order is different from dictionary order",
     "expect": {
       "type": "function",
       "name": "sortReadings",
@@ -21,7 +21,7 @@
     }
   },
   {
-    "label": "排序保留重复值",
+    "label": "sort to retain duplicate values",
     "expect": {
       "type": "function",
       "name": "sortReadings",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "label": "空列表仍返回数组",
+    "label": "An empty list still returns an array",
     "expect": {
       "type": "function",
       "name": "sortReadings",
@@ -51,7 +51,7 @@
     }
   },
   {
-    "label": "排序不会改动原顺序",
+    "label": "sorting will not change the original order",
     "expect": {
       "type": "function",
       "name": "compareOrder",

@@ -1,6 +1,6 @@
 [
   {
-    "label": "阅览灯默认处于暗态",
+    "label": "reading light is dark by default",
     "expect": {
       "type": "style",
       "selector": ".reading-lamp",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "普通状态也为透明度配置了过渡",
+    "label": "Normal state also configures transition for transparency",
     "expect": {
       "type": "style",
       "selector": ".reading-lamp",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "过渡持续 300ms",
+    "label": "transition lasts 300ms",
     "expect": {
       "type": "style",
       "selector": ".reading-lamp",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "过渡使用 ease",
+    "label": "transition use ease",
     "expect": {
       "type": "style",
       "selector": ".reading-lamp",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "点击后阅览灯渐亮到 1",
+    "label": "After clicking, the reading light gradually lights up to 1",
     "expect": {
       "type": "style",
       "selector": ".reading-lamp.is-on",
@@ -55,7 +55,7 @@
     ]
   },
   {
-    "label": "再次点击后阅览灯返回暗态",
+    "label": "The reading light returns to dark state after clicking again.",
     "expect": {
       "type": "style",
       "selector": ".reading-lamp:not(.is-on)",

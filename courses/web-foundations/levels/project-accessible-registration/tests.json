@@ -1,6 +1,6 @@
 [
   {
-    "label": "三项都有显式的可访问名称",
+    "label": "All three items have explicit accessible names",
     "expect": {
       "type": "count",
       "selector": "label[for=\"name\"], label[for=\"email\"], label[for=\"course\"]",
@@ -8,7 +8,7 @@
     }
   },
   {
-    "label": "反馈区域为状态消息",
+    "label": "feedback area is status message",
     "expect": {
       "type": "attribute",
       "selector": "#reply",
@@ -17,17 +17,17 @@
     }
   },
   {
-    "label": "缺少场次时不提交",
+    "label": "Not submitted when there are missing sessions",
     "expect": {
       "type": "text",
       "selector": "#reply",
-      "value": "尚未报名"
+      "value": "has not registered yet"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#name",
-        "value": "小刘"
+        "value": "Xiao Liu"
       },
       {
         "type": "input",
@@ -46,17 +46,17 @@
     ]
   },
   {
-    "label": "无效邮箱拒绝报名",
+    "label": "Invalid email address rejects registration",
     "expect": {
       "type": "text",
       "selector": "#reply",
-      "value": "尚未报名"
+      "value": "has not registered yet"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#name",
-        "value": "小刘"
+        "value": "Xiao Liu"
       },
       {
         "type": "input",
@@ -66,7 +66,7 @@
       {
         "type": "input",
         "selector": "#course",
-        "value": "上午场"
+        "value": "Morning session"
       },
       {
         "type": "click",
@@ -75,17 +75,17 @@
     ]
   },
   {
-    "label": "正常报名取得场次回执",
+    "label": "Register normally and get the show receipt",
     "expect": {
       "type": "text",
       "selector": "#reply",
-      "value": "小刘，已报名下午场"
+      "value": "Xiao Liu, registered for: Afternoon session"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#name",
-        "value": " 小刘 "
+        "value": " Xiao Liu "
       },
       {
         "type": "input",
@@ -95,7 +95,7 @@
       {
         "type": "input",
         "selector": "#course",
-        "value": "下午场"
+        "value": "Afternoon session"
       },
       {
         "type": "click",
@@ -104,11 +104,11 @@
     ]
   },
   {
-    "label": "拒绝只含空格的姓名",
+    "label": "Reject names containing only spaces",
     "expect": {
       "type": "text",
       "selector": "#reply",
-      "value": "请输入有效姓名"
+      "value": "Please enter a valid name"
     },
     "actions": [
       {
@@ -124,7 +124,7 @@
       {
         "type": "input",
         "selector": "#course",
-        "value": "上午场"
+        "value": "Morning session"
       },
       {
         "type": "click",

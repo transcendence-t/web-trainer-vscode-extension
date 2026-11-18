@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "换下队列中指定位置的旧件",
-  "goal": "用 splice 同时删除一项并在原位置插入新项。",
-  "summary": "更换器材分配表里一条记录，前后成员仍保留原位置。",
+  "title": "Replaces the old part at the specified position in the queue",
+  "goal": "Use splice to simultaneously delete an item and insert a new item in its original position.",
+  "summary": "replaces a record in the equipment distribution table, and the front and rear members still retain their original positions.",
   "tasks": [
-    "完成 swapDevice(devices, index, replacement)，有效的数值下标对应一条需要替换的记录。",
-    "允许直接改动 devices，返回调整后的整个数组。下标越界时原样返回。"
+    "completes swapDevice(devices, index, replacement), and the valid numerical subscript corresponds to a record that needs to be replaced.",
+    "allows direct modification of devices and returns the entire adjusted array. When the subscript is out of bounds, it is returned unchanged."
   ],
   "example": {
     "language": "javascript",
-    "code": "const team = ['甲', '乙', '丙'];\nconst removed = team.splice(1, 1, '丁');\n// team 为 ['甲', '丁', '丙']，removed 为 ['乙']",
-    "note": "splice 的第二项是删除数量，之后的参数是在删除位置插入的新值。"
+    "code": "const team = ['A', 'B', 'C'];\nconst removed = team.splice(1, 1, 'Ding');\n// team is ['A', 'D', 'C'], removed is ['B']",
+    "note": "splice is the number of deletions, and the subsequent parameters are the new values inserted at the deleted positions."
   },
-  "hint": "用 index < 0 或 index >= devices.length 判断越界。splice 返回的是被删除的项。"
+  "hint": "uses index < 0 or index >= devices.length to determine out of bounds. splice returns the deleted items."
 }

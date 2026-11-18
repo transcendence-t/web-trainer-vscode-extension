@@ -1,4 +1,4 @@
-const devices = ['USB 麦克风', 'USB 摄像头', '数码录音笔', '便携投影仪'];
+const devices = ['USB microphone', 'USB camera', 'digital voice recorder', 'portable projector'];
 const query = document.querySelector('#equipment-query');
 const list = document.querySelector('#equipment-results');
 const count = document.querySelector('#equipment-count');
@@ -11,7 +11,7 @@ function renderDevices(matches) {
     row.textContent = device;
     list.append(row);
   }
-  count.textContent = '找到 ' + matches.length + ' 件设备';
+  count.textContent = matches.length + ' devices found';
   empty.hidden = matches.length !== 0;
 }
 

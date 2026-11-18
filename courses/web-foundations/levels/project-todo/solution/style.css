@@ -23,7 +23,7 @@ a { color: #125a46; }
 }
 .task-title { min-width: 0; overflow-wrap: anywhere; }
 
-/* 在这里补充已完成待办的样式。 */
+/* Supplement completed to-do styles here. */
 
 .is-done .task-title {
   text-decoration: line-through;

@@ -1,6 +1,6 @@
 [
   {
-    "label": "直接预览使用缺省的两倍积分",
+    "label": "Direct preview uses twice the default points",
     "expect": {
       "type": "function",
       "name": "applyScore",
@@ -11,7 +11,7 @@
     }
   },
   {
-    "label": "缺省规则的结果也保持非负",
+    "label": "The result of the default rule also remains non-negative",
     "expect": {
       "type": "function",
       "name": "applyScore",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "label": "支持积分规则 double",
+    "label": "supports integration rules double",
     "expect": {
       "type": "function",
       "name": "scoreFor",
@@ -34,7 +34,7 @@
     }
   },
   {
-    "label": "支持积分规则 bonus",
+    "label": "supports points rule bonus",
     "expect": {
       "type": "function",
       "name": "scoreFor",
@@ -46,7 +46,7 @@
     }
   },
   {
-    "label": "支持积分规则 penalty",
+    "label": "supports penalty rules",
     "expect": {
       "type": "function",
       "name": "scoreFor",

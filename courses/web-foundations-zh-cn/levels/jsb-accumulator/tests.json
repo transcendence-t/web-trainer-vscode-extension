@@ -1,0 +1,46 @@
+[
+  {
+    "label": "零排的总座位数为零",
+    "expect": {
+      "type": "function",
+      "name": "screeningCapacity",
+      "args": [
+        0
+      ],
+      "value": 0
+    }
+  },
+  {
+    "label": "一排共有四个座位",
+    "expect": {
+      "type": "function",
+      "name": "screeningCapacity",
+      "args": [
+        1
+      ],
+      "value": 4
+    }
+  },
+  {
+    "label": "两排累加为十个座位",
+    "expect": {
+      "type": "function",
+      "name": "screeningCapacity",
+      "args": [
+        2
+      ],
+      "value": 10
+    }
+  },
+  {
+    "label": "四排累加为二十八个座位",
+    "expect": {
+      "type": "function",
+      "name": "screeningCapacity",
+      "args": [
+        4
+      ],
+      "value": 28
+    }
+  }
+]

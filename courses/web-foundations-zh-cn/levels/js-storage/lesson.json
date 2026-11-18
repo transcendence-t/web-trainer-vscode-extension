@@ -1,0 +1,17 @@
+{
+  "focus": "script.js",
+  "title": "记住上次保存的访客昵称",
+  "goal": "用 localStorage 写入字符串，页面再次打开时用同一个键读取。",
+  "summary": "访客可以保存一个昵称。保存按钮更新当前页面，再次打开这一关也能读到同一个值。",
+  "tasks": [
+    "页面打开时，从 localStorage 读取 visitorNickname，并在 #saved-name 显示它。没有记录时显示「暂无昵称」。",
+    "在点击「保存」时，把输入框去掉首尾空白后的昵称存到 visitorNickname，并更新 #saved-name。",
+    "保留已有的空文本检查，空昵称不覆盖已保存的值。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "localStorage.setItem('distanceUnit', 'km');\nconst unit = localStorage.getItem('distanceUnit');",
+    "note": "地图页面可以用一个键保存距离单位。setItem 写入文本，getItem 读取同一个键。键从未写入时，getItem 返回 null。"
+  },
+  "hint": "保存后要更新页面，页面加载时也要执行 getItem。只在点击保存时修改文字，重新打开后会回到默认内容。"
+}

@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "求分组后剩下的人数",
+  "goal": "用余数计算志愿者分成整组后还有几人未成组。",
+  "summary": "% 返回除法的余数。刚好能分完时，余数为 0。总人数不足一组时，余数就是总人数。",
+  "tasks": [
+    "在 ungroupedCount 的大括号里，按 groupSize 人一组来分配 volunteers 人，使用 % 求没有凑成整组的人数。",
+    "用 return 返回余数。志愿者人数可以为 0，每组人数是正整数。"
+  ],
+  "hint": "总人数写在 % 的左边，每组人数写在右边。分完后剩多少由余数决定。",
+  "example": {
+    "language": "javascript",
+    "code": "const totalSeconds = 137;\nconst remainingSeconds = totalSeconds % 60;",
+    "note": "显示视频时长时，137 秒去掉整分钟后还剩 17 秒。"
+  }
+}

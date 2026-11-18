@@ -1,25 +1,25 @@
 [
   {
-    "label": "移动最后一组",
+    "label": "moves the last group",
     "expect": {
       "type": "function",
       "name": "rotateLast",
       "args": [
         [
-          "一组",
-          "二组",
-          "三组"
+          "one set",
+          "Group 2",
+          "three groups"
         ]
       ],
       "value": [
-        "三组",
-        "一组",
-        "二组"
+        "three groups",
+        "one set",
+        "Group 2"
       ]
     }
   },
   {
-    "label": "保留单项",
+    "label": "Reserved single item",
     "expect": {
       "type": "function",
       "name": "rotateLast",
@@ -34,7 +34,7 @@
     }
   },
   {
-    "label": "空队列不插入 undefined",
+    "label": "Empty queue is not inserted undefined",
     "expect": {
       "type": "function",
       "name": "rotateLast",

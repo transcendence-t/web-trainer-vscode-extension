@@ -1,6 +1,6 @@
 [
   {
-    "label": "以字符串编号生成记录",
+    "label": "generates records with string numbers",
     "expect": {
       "type": "function",
       "name": "buildTicket",
@@ -9,12 +9,12 @@
       ],
       "value": {
         "id": "R-28",
-        "status": "待处理"
+        "status": "pending"
       }
     }
   },
   {
-    "label": "数字编号保留数字类型",
+    "label": "digital number reserved digital type",
     "expect": {
       "type": "function",
       "name": "buildTicket",
@@ -23,12 +23,12 @@
       ],
       "value": {
         "id": 24,
-        "status": "待处理"
+        "status": "pending"
       }
     }
   },
   {
-    "label": "零也是有效编号",
+    "label": "zero is also a valid number",
     "expect": {
       "type": "function",
       "name": "buildTicket",
@@ -37,7 +37,7 @@
       ],
       "value": {
         "id": 0,
-        "status": "待处理"
+        "status": "pending"
       }
     }
   }

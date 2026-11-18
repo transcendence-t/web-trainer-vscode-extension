@@ -1,0 +1,57 @@
+[
+  {
+    "label": "忽略中间的空格与大小写",
+    "expect": {
+      "type": "function",
+      "name": "isMirrorCode",
+      "args": [
+        "AB b a"
+      ],
+      "value": true
+    }
+  },
+  {
+    "label": "保留数字参与比较",
+    "expect": {
+      "type": "function",
+      "name": "isMirrorCode",
+      "args": [
+        "R 2 r"
+      ],
+      "value": true
+    }
+  },
+  {
+    "label": "不镜像时为 false",
+    "expect": {
+      "type": "function",
+      "name": "isMirrorCode",
+      "args": [
+        "A-1B"
+      ],
+      "value": false
+    }
+  },
+  {
+    "label": "空白不作为口令",
+    "expect": {
+      "type": "function",
+      "name": "isMirrorCode",
+      "args": [
+        "   "
+      ],
+      "value": false
+    }
+  },
+  {
+    "label": "只含一个有效字符",
+    "expect": {
+      "type": "function",
+      "name": "isMirrorCode",
+      "args": [
+        "X"
+      ],
+      "value": true
+    }
+  }
+]

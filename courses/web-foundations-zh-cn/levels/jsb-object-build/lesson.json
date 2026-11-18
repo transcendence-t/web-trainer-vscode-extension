@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "把报修参数装进工单对象",
+  "goal": "用对象字面量返回多个命名字段，并保留输入值的类型。",
+  "summary": "报修系统把问题、预计时间和紧急状态交给维修人员。把分开的参数收进同一个工单对象。",
+  "tasks": [
+    "完成 makeRepairOrder(issue, minutes, urgent)。返回一个对象，字段名是 issue、minutes、urgent。",
+    "按同名参数填入对应的值。issue 保持字符串，minutes 保持数字，urgent 保持布尔值。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "function createPass(holder, confirmed) {\n  return { holder: holder, confirmed: confirmed };\n}\n// createPass('林淮', true) 返回 { holder: '林淮', confirmed: true }",
+    "note": "冒号左边是字段名，右边填入参数的值。字段和值的变量同名时，可以简写成 { holder, confirmed }。"
+  },
+  "hint": "直接把 urgent 存进对象即可。用引号包起字段值或转换成文字会丢掉布尔类型。"
+}

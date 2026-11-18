@@ -1,6 +1,6 @@
 [
   {
-    "label": "主说明按 16px 字号计算为 28px",
+    "label": "main description is calculated as 28px based on 16px font size",
     "expect": {
       "type": "style",
       "selector": ".reading-copy:not(.fine-print)",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "小号备注按 12px 字号计算为 21px",
+    "label": "Small size remarks are calculated as 21px based on 12px font size",
     "expect": {
       "type": "style",
       "selector": ".fine-print",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "开放时段保留原行高",
+    "label": "retains the original row height during the opening period",
     "expect": {
       "type": "style",
       "selector": ".opening-hours",

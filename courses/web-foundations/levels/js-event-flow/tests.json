@@ -1,10 +1,10 @@
 [
   {
-    "label": "按钮点击按三阶段顺序输出",
+    "label": "button click to output in three stages sequence",
     "expect": {
       "type": "text",
       "selector": "#trace",
-      "value": "外层捕获 → 按钮 → 外层冒泡"
+      "value": "outer layer capture → button → outer layer bubbling"
     },
     "actions": [
       {
@@ -14,11 +14,11 @@
     ]
   },
   {
-    "label": "只点击外层时没有按钮阶段",
+    "label": "There is no button stage when only clicking on the outer layer",
     "expect": {
       "type": "text",
       "selector": "#trace",
-      "value": "外层捕获 → 外层冒泡"
+      "value": "outer layer capture → outer layer bubbling"
     },
     "actions": [
       {
@@ -28,11 +28,11 @@
     ]
   },
   {
-    "label": "重复点击独立记录",
+    "label": "Repeated clicks are recorded independently",
     "expect": {
       "type": "text",
       "selector": "#trace",
-      "value": "外层捕获 → 按钮 → 外层冒泡"
+      "value": "outer layer capture → button → outer layer bubbling"
     },
     "actions": [
       {

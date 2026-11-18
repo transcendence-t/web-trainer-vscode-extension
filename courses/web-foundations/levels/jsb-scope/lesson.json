@@ -1,17 +1,17 @@
 {
   "focus": "script.js",
-  "title": "让预览标签只在分支内生效",
-  "goal": "用块级变量生成临时横幅标签，同时保留编辑页的归档标签。",
-  "summary": "在大括号内用 let 或 const 声明的变量只在该块内可用。块里可以声明同名变量，离开大括号后依然读取外层的变量。",
+  "title": "Make the preview tag only effective within the branch",
+  "goal": "Use block-level variables to generate temporary banner tags while retaining the archive tag of the edit page.",
+  "summary": "Variables declared with let or const within curly braces are only available within the block. Variables with the same name can be declared in the block, and the outer variables can still be read after leaving the curly brackets.",
   "tasks": [
-    "补全 pageLabels(title, preview)。title 是作品名称，preview 是布尔值。使用已有的 label 值作为归档标签。",
-    "preview 为 true 时，在 if 块内声明临时标签，把「预览-」加到作品名称前，再把它赋给 banner。普通模式下 banner 使用归档标签。",
-    "返回「横幅标签 / 归档标签」，用斜杠和两侧各一个空格分隔。预览「春季海报」时返回「预览-春季海报 / 归档-春季海报」。"
+    "completes pageLabels(title, preview). title is the name of the work and preview is a Boolean value. Use the existing label value as the archive label.",
+    "preview is true, declare the temporary label in the if block, add \"Preview-\" before the work name, and then assign it to the banner. In normal mode the banner uses archive tags.",
+    "returns \"banner label/archive label\" separated by a slash and a space on either side. Returns \"Preview-Spring Poster / Archive-Spring Poster\" when previewing \"Spring Poster\"."
   ],
   "example": {
     "language": "javascript",
-    "code": "function seatLimit(rehearsal) {\n  const limit = 40;\n  if (rehearsal) {\n    const limit = 6;\n    console.log('彩排入场人数', limit);\n  }\n  return limit;\n}",
-    "note": "彩排时块内会记录 6 人的临时配额。离开 if 块后，函数返回外层变量中记录的正式容量 40。"
+    "code": "function seatLimit(rehearsal) {\n  const limit = 40;\n  if (rehearsal) {\n    const limit = 6;\n    console.log('Rehearsal attendance', limit);\n  }\n  return limit;\n}",
+    "note": "rehearsal block. After leaving the if block, the function returns the official capacity of 40 recorded in the outer variable."
   },
-  "hint": "若返回的两个标签都变成预览标签，检查 if 内是否直接给外层 label 赋了新值。把临时值声明在块内，再将它交给 banner。"
+  "hint": "If the two returned labels become preview labels, check whether a new value is directly assigned to the outer label in the if. Declare the temporary value inside the block and pass it to the banner."
 }

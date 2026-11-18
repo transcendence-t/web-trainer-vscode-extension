@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "按重量选择包装标签",
-  "goal": "用 if 处理达到重量门槛的包裹。",
-  "summary": "if 的条件为真时会执行大括号中的语句。分支执行 return 后，函数立即结束。其他包裹继续走到函数末尾的 return。",
+  "title": "Select packaging labels by weight",
+  "goal": "Use if to handle packages that reach the weight threshold.",
+  "summary": "The statement in the curly brackets will be executed when the condition of if is true. After the branch executes return, the function ends immediately. Other packages continue to return at the end of the function.",
   "tasks": [
-    "补全 packingLabel(weightKg)，参数是非负的包裹重量，单位为千克。",
-    "如果重量达到 10 千克，返回字符串「加固包装」。低于 10 千克时返回「普通包装」。"
+    "completes packingLabel(weightKg). The parameter is the non-negative package weight in kilograms.",
+    "If the weight reaches 10 kg, the string \"reinforced packaging\" is returned. Returns \"ordinary packaging\" below 10 kg."
   ],
   "example": {
     "language": "javascript",
-    "code": "function printNotice(pages) {\n  if (pages > 20) {\n    return '请分批打印';\n  }\n  return '直接打印';\n}",
-    "note": "打印服务在页数超过 20 时给出分批提醒。刚好 20 页会走到最后一行的 return。"
+    "code": "function printNotice(pages) {\n  if (pages > 20) {\n    return 'Please print in batches';\n  }\n  return 'direct printing';\n}",
+    "note": "printing service gives batch reminder when the number of pages exceeds 20. Exactly 20 pages into the last line of return."
   },
-  "hint": "把 10 代入条件试一下。题目说达到 10 千克就贴加固标签，比较符号要包含等于。"
+  "hint": "Substitute 10 into the condition and try it. The question says that if it reaches 10 kilograms, a reinforcement label should be attached, and the comparison symbol should include equal to."
 }

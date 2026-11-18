@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "按首次出现顺序给编号去重",
-  "goal": "用 Set 保留唯一值并转换回数组。",
-  "summary": "合并多次扫描后会加入重复编号。导入时保留每个编号第一次出现的位置。",
+  "title": "Deduplicate numbers in order of first appearance",
+  "goal": "Use Set to retain unique values ​​and convert back to an array.",
+  "summary": "Duplicate numbers will be added after merging multiple scans. The first occurrence of each number is preserved when importing.",
   "tasks": [
-    "完成 uniqueCodes(codes)，返回只含唯一编码的数组，顺序按首次出现。",
-    "保留字符串和数字本身，\"4\" 与 4 视为不同编码。"
+    "completes uniqueCodes(codes) and returns an array containing only unique codes, in order of first occurrence.",
+    "retains the string and the number itself, \"4\" and 4 are regarded as different encodings."
   ],
   "example": {
     "language": "javascript",
     "code": "const unique = new Set(['A', 'B', 'A']);\n[...unique]; // ['A', 'B']",
-    "note": "Set 的遍历顺序为插入顺序，用展开语法可以得到数组。"
+    "note": "Set is insertion order, and the array can be obtained using expansion syntax."
   },
-  "hint": "直接依据输入构造 new Set(codes)，再把它展开进 []。"
+  "hint": "directly constructs a new Set(codes) based on the input, and then expands it into []."
 }

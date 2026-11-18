@@ -1,20 +1,20 @@
 [
   {
-    "label": "操作警告使用 strong",
+    "label": "operation warning use strong",
     "expect": {
       "type": "text",
       "selector": "p#power-note strong",
-      "value": "切断电源"
+      "value": "cut off the power"
     },
-    "hint": "只用 strong 包住「切断电源」。"
+    "hint": "Just wrap \"cut off the power\" with strong."
   },
   {
-    "label": "盖板方向使用 em",
+    "label": "cover direction use em",
     "expect": {
       "type": "text",
       "selector": "p#cover-note em",
-      "value": "正面"
+      "value": "front"
     },
-    "hint": "只用 em 包住「正面」。"
+    "hint": "Just wrap \"front\" with em."
   }
 ]

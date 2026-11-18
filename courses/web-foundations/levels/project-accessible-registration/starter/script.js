@@ -1,1 +1,1 @@
-// 在这里处理表单提交。
+// handles form submission here.

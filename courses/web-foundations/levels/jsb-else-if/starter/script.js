@@ -1,5 +1,5 @@
 
 function seatStatus(seatsLeft) {
-  // 在这里判断额满和即将满员。
-  return '可报名';
+  // Judge whether the quota is full or about to be full here.
+  return 'can be registered';
 }

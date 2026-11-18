@@ -1,0 +1,38 @@
+[
+  {
+    "label": "公告宽度与网格相同",
+    "expect": {
+      "type": "layout",
+      "selector": ".route-notice",
+      "relativeTo": ".route-board",
+      "relation": "equal-width"
+    }
+  },
+  {
+    "label": "通栏公告仍在网格内部",
+    "expect": {
+      "type": "layout",
+      "selector": ".route-notice",
+      "relativeTo": ".route-board",
+      "relation": "inside"
+    }
+  },
+  {
+    "label": "路线安排位于公告下方",
+    "expect": {
+      "type": "layout",
+      "selector": ".route-map",
+      "relativeTo": ".route-notice",
+      "relation": "below"
+    }
+  },
+  {
+    "label": "装备清单与路线安排并排并靠右",
+    "expect": {
+      "type": "layout",
+      "selector": ".gear-list",
+      "relativeTo": ".route-map",
+      "relation": "right-of"
+    }
+  }
+]

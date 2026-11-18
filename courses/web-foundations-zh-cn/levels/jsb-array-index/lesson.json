@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "按下标读取路线站点",
+  "goal": "理解从 0 开始的数组下标，使用 length 判断位置是否有效。",
+  "summary": "导航界面要从站点数组中读取某个站名。线路尚未录入或下标超出范围时，使用 null 表示没有站点。",
+  "tasks": [
+    "完成 readStop(stops, index)。stops 是站名数组，index 是从 0 开始的整数下标。",
+    "索引有效时返回对应站名。索引为负数或大于等于数组长度时返回 null。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const colors = ['墨绿', '米白', '砖红'];\nconst first = colors[0]; // '墨绿'\nconst last = colors[colors.length - 1]; // '砖红'",
+    "note": "长度表示元素个数。下标从 0 开始，所以三项数组的最后一个下标是 2。"
+  },
+  "hint": "index 等于 stops.length 时已经越过末尾。检查上界时用 >=，这样空数组也会返回 null。"
+}

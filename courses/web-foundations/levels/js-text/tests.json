@@ -1,20 +1,20 @@
 [
   {
-    "label": "页面载入后显示准备就绪",
+    "label": "shows ready after the page is loaded.",
     "expect": {
       "type": "text",
       "selector": "#status",
-      "value": "准备就绪"
+      "value": "Ready"
     },
-    "hint": "检查选择器及 textContent 的赋值。"
+    "hint": "Checks the selector and assignment of textContent."
   },
   {
-    "label": "状态元素在页面中唯一",
+    "label": "status element is the only one on the page",
     "expect": {
       "type": "count",
       "selector": "#status",
       "value": 1
     },
-    "hint": "页面里同一个 id 只出现一次。继续使用已有的状态段落。"
+    "hint": "page. Continue to use the existing status paragraph."
   }
 ]

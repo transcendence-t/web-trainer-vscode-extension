@@ -1,6 +1,6 @@
 [
   {
-    "label": "刚输入时还没有搜索",
+    "label": "Typing does not search immediately",
     "expect": {
       "type": "text",
       "selector": "#hits",
@@ -15,7 +15,7 @@
     ]
   },
   {
-    "label": "连续输入只查一次",
+    "label": "Continuous input only checks once",
     "expect": {
       "type": "text",
       "selector": "#hits",
@@ -44,7 +44,7 @@
     ]
   },
   {
-    "label": "使用最后一个关键字",
+    "label": "The search uses the latest input",
     "expect": {
       "type": "text",
       "selector": "#last-keyword",
@@ -68,7 +68,7 @@
     ]
   },
   {
-    "label": "停顿两次产生两次搜索",
+    "label": "pauses twice to generate two searches",
     "expect": {
       "type": "text",
       "selector": "#hits",

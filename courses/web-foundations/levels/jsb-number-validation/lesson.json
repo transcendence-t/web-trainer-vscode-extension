@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "从输入中取得有效的有限数字",
-  "goal": "在 Number 转换前排除空白，再用 Number.isFinite 判断结果。",
-  "summary": "长度记录接收正负数和小数。空白、非数字文字以及 Infinity 都应提示重新填写。",
+  "title": "Get a valid finite number from the input",
+  "goal": "Exclude blank spaces before Number conversion, and then use Number.isFinite to determine the result.",
+  "summary": "length records accept positive, negative and decimal numbers. Blank spaces, non-numeric text, and Infinity should all prompt for refilling.",
   "tasks": [
-    "完成 readAmount(text)，把非空的有效数字字符串转成数值。",
-    "空字符串、纯空白、无效数字或非有限数字返回 null。数字 0 有效。"
+    "completes readAmount(text) and converts a non-empty string of valid digits into a numerical value.",
+    "Returns null for an empty string, pure white space, invalid number, or non-finite number. The number 0 is valid."
   ],
   "example": {
     "language": "javascript",
     "code": "const number = Number(' 3.25 ');\nNumber.isFinite(number); // true\nNumber.isFinite(Number('3kg')); // false",
-    "note": "Number('') 返回 0。需要先用 trim() 判断输入是不是空白。"
+    "note": "Number('') returns 0. You need to use trim() first to determine whether the input is blank."
   },
-  "hint": "不要用 if (!number) 判断失败，否则数字 0 也会被拒绝。"
+  "hint": "Do not use if (!number) to judge failure, otherwise the number 0 will also be rejected."
 }

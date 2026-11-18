@@ -1,0 +1,17 @@
+{
+  "focus": "style.css",
+  "title": "只在宽窗口显示路线图例",
+  "goal": "用媒体查询按视口宽度启用附加样式。",
+  "summary": "步道路线卡需要在各种窗口下显示基本路线。窗口宽至 640px 时，再显示用来识别路标的图例。",
+  "tasks": [
+    "先把 .walk-legend 隐藏，使窄窗口里的图例不占空间。",
+    "用 @media 在视口达到 640px 时显示图例。",
+    "两种宽度下都保留原有的步道路线卡。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".kiosk-help { display: none; }\n\n@media (min-width: 700px) {\n  .kiosk-help { display: block; }\n}",
+    "note": "缴费页面先使用宽度通用的样式。视口达到 700px 时，查询中的规则才生效，显示额外的办事说明。"
+  },
+  "hint": "min-width: 640px 从 640px 开始匹配。写成 max-width 时规则会用到另一侧。"
+}

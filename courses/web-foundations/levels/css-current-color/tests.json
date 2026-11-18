@@ -1,6 +1,6 @@
 [
   {
-    "label": "可领取边框沿用绿色",
+    "label": "can receive the border in green",
     "expect": {
       "type": "style",
       "selector": ".ready",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "核对中边框沿用棕色",
+    "label": "Check the middle border to use brown",
     "expect": {
       "type": "style",
       "selector": ".pending",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "核对中文案保留原色",
+    "label": "Check the Chinese text and retain the original color",
     "expect": {
       "type": "style",
       "selector": ".pending",

@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "让两个发号器各自记住序号",
+  "goal": "用返回的内部函数保存彼此独立的状态。",
+  "summary": "两个窗口分别使用一个发号器。交替取号时，每个窗口只推进自己的序号。",
+  "tasks": [
+    "完成 makeTicketQueue(start)，返回一个可反复调用的函数，每次返回当前号并为下一次加一。",
+    "两个独立创建的发号器不能互相影响。保留起始代码里的 showTickets 预览函数。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "function makeTicker(initial) {\n  let current = initial;\n  return () => ++current;\n}",
+    "note": "内部函数即使在外部调用，也能读写创建时的局部变量。示例先加再返回，本关先返回当前号。"
+  },
+  "hint": "每次调用 makeTicketQueue 都在函数内部创建自己的编号变量。不要把变量放到全局。"
+}

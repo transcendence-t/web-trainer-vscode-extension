@@ -21,7 +21,7 @@ input {
   background-color: #fff;
 }
 
-/* 在这里添加本关样式。 */
+/* Add this level style here. */
 
 input[required] {
   background-color: #fff9eb;

@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "统计每种材料的领用次数",
+  "goal": "用 Map 按键累加，并按首次登记顺序输出键值对。",
+  "summary": "扫描记录含有同一种材料的多次领用。保留材料首次出现的顺序，得到每种材料的次数。",
+  "tasks": [
+    "完成 countMaterials(names)，将每个材料名出现的次数加一。",
+    "返回形如 [[名称, 次数], …] 的数组。允许任意材料名，包括 \"__proto__\"。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const totals = new Map();\ntotals.set('画笔', (totals.get('画笔') ?? 0) + 1);\n[...totals]; // [['画笔', 1]]",
+    "note": "Map 允许把普通字符串当键。get 读取尚未设置的键会返回 undefined。"
+  },
+  "hint": "先建一个 Map，每次读取旧次数，没有则从 0 开始。最后将条目展开成数组。"
+}

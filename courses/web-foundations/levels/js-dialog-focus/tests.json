@@ -1,6 +1,6 @@
 [
   {
-    "label": "打开原生模态对话框",
+    "label": "Open native modal dialog box",
     "expect": {
       "type": "exists",
       "selector": "#rules-dialog:modal"
@@ -13,7 +13,7 @@
     ]
   },
   {
-    "label": "关闭按钮获得焦点",
+    "label": "Close button gets focus",
     "expect": {
       "type": "exists",
       "selector": "#dismiss:focus"
@@ -30,7 +30,7 @@
     ]
   },
   {
-    "label": "关闭后不再打开",
+    "label": "will not open again after closing",
     "expect": {
       "type": "count",
       "selector": "#rules-dialog[open]",
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "label": "关闭时焦点返回入口",
+    "label": "Focus returns to the entrance when closed",
     "expect": {
       "type": "exists",
       "selector": "#open:focus"

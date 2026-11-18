@@ -1,0 +1,66 @@
+[
+  {
+    "label": "数组单独分类",
+    "expect": {
+      "type": "function",
+      "name": "kindOf",
+      "args": [
+        []
+      ],
+      "value": "array"
+    }
+  },
+  {
+    "label": "null 单独分类",
+    "expect": {
+      "type": "function",
+      "name": "kindOf",
+      "args": [
+        null
+      ],
+      "value": "null"
+    }
+  },
+  {
+    "label": "普通对象",
+    "expect": {
+      "type": "function",
+      "name": "kindOf",
+      "args": [
+        {}
+      ],
+      "value": "object"
+    }
+  },
+  {
+    "label": "没有传入参数",
+    "expect": {
+      "type": "function",
+      "name": "kindOf",
+      "args": [],
+      "value": "undefined"
+    }
+  },
+  {
+    "label": "布尔值",
+    "expect": {
+      "type": "function",
+      "name": "kindOf",
+      "args": [
+        false
+      ],
+      "value": "boolean"
+    }
+  },
+  {
+    "label": "字符串数字仍是字符串",
+    "expect": {
+      "type": "function",
+      "name": "kindOf",
+      "args": [
+        "12"
+      ],
+      "value": "string"
+    }
+  }
+]

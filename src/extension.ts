@@ -2,6 +2,7 @@ import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import * as vscode from 'vscode';
 import { loadCourse, loadImportedCourses } from './course';
+import { extensionName, language, localize } from './language';
 import type { Course, Level, Section } from './model';
 import { isUnlocked, orderedLevels } from './progress';
 import { Session } from './session';
@@ -53,20 +54,24 @@ class CourseTree implements vscode.TreeDataProvider<CourseNode> {
     const passed = completed.includes(node.level.id);
     const unlocked = isUnlocked(node.course, completed, node.level.id);
     item.iconPath = new vscode.ThemeIcon(passed ? 'pass-filled' : unlocked ? 'circle-large-outline' : 'lock');
-    item.description = passed ? '已通关' : unlocked ? '可练习' : '未解锁';
-    item.tooltip = unlocked ? node.level.summary : '通过前面的关卡后解锁。';
+    item.description = passed ? localize('Passed', '已通关') : unlocked ? localize('Available', '可练习') : localize('Locked', '未解锁');
+    item.tooltip = unlocked ? node.level.summary : localize('Pass the preceding lessons to unlock this one.', '通过前面的关卡后解锁。');
     if (unlocked) item.command = {
-      command: 'webTrainer.openLesson', title: '打开关卡', arguments: [node.course.id, node.level.id],
+      command: 'webTrainer.openLesson', title: localize('Open Lesson', '打开关卡'), arguments: [node.course.id, node.level.id],
     };
     return item;
   }
 }
 
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
+  const courseDirectory = language === 'zh-cn' ? 'web-foundations-zh-cn' : 'web-foundations';
   const [builtIn, imported, runner] = await Promise.all([
-    loadCourse(join(context.extensionPath, 'courses', 'web-foundations', 'course.json')),
+    loadCourse(join(context.extensionPath, 'courses', courseDirectory, 'course.json')),
     loadImportedCourses(join(context.globalStorageUri.fsPath, 'courses')).catch((error: Error) => {
-      void vscode.window.showWarningMessage(`网页闯关：无法载入导入的课程（${error.message}）`);
+      void vscode.window.showWarningMessage(localize(
+        `${extensionName}: Could not load imported courses (${error.message})`,
+        `${extensionName}：无法载入导入的课程（${error.message}）`,
+      ));
       return [];
     }),
     readFile(join(context.extensionPath, 'out', 'runner.js'), 'utf8'),

@@ -1,67 +1,67 @@
 [
   {
-    "label": "字段名映射",
+    "label": "field name mapping",
     "expect": {
       "type": "function",
       "name": "tagFields",
       "args": [
         {
-          "name": "网络板",
+          "name": "network board",
           "count": 3
         }
       ],
       "value": {
-        "title": "网络板",
+        "title": "network board",
         "quantity": 3
       }
     }
   },
   {
-    "label": "缺失数量使用 1",
+    "label": "missing quantity use 1",
     "expect": {
       "type": "function",
       "name": "tagFields",
       "args": [
         {
-          "name": "面板"
+          "name": "panel"
         }
       ],
       "value": {
-        "title": "面板",
+        "title": "panel",
         "quantity": 1
       }
     }
   },
   {
-    "label": "显式的零保持为零",
+    "label": "Explicit zero remains zero",
     "expect": {
       "type": "function",
       "name": "tagFields",
       "args": [
         {
-          "name": "底板",
+          "name": "base plate",
           "count": 0
         }
       ],
       "value": {
-        "title": "底板",
+        "title": "base plate",
         "quantity": 0
       }
     }
   },
   {
-    "label": "显式空值不会触发解构默认值",
+    "label": "Explicit null value does not trigger destructuring of default value",
     "expect": {
       "type": "function",
       "name": "tagFields",
       "args": [
         {
-          "name": "底板",
+          "name": "base plate",
           "count": null
         }
       ],
       "value": {
-        "title": "底板",
+        "title": "base plate",
         "quantity": null
       }
     }

@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "从模板克隆多条器材卡",
-  "goal": "用 template.content.cloneNode(true) 重用一份未渲染的 HTML。",
-  "summary": "器材卡的标签结构相同，标题和编号不同。按下按钮后为每条数据克隆一张卡。",
+  "title": "Clone multiple equipment cards from template",
+  "goal": "Use template.content.cloneNode(true) to reuse a copy of non-rendered HTML.",
+  "summary": "equipment card is the same, but the title and number are different. Clone a card for each piece of data after pressing the button.",
   "tasks": [
-    "点击 #build 时先清空 #cards，再根据 devices 为每条记录克隆 #card-template 的完整内容。",
-    "填充 .model 与 .code 后加入列表，重复点击不产生重复卡片。"
+    "When clicking #build, first clear #cards, and then clone the complete content of #card-template for each record according to devices.",
+    "is added to the list after filling in .model and .code. Repeated clicks will not generate duplicate cards."
   ],
   "example": {
     "language": "javascript",
     "code": "const item = template.content.cloneNode(true);\nitem.querySelector('.title').textContent = title;\nlist.append(item);",
-    "note": "template 的内容先存放在片段中，不直接显示。深克隆会复制嵌套子节点。"
+    "note": "template is first stored in the fragment and is not displayed directly. Deep cloning copies nested child nodes."
   },
-  "hint": "每一轮都重新 cloneNode(true)，再把当前记录填到克隆的片段里。"
+  "hint": "cloneNode(true) again in each round, and then fill in the current record into the cloned fragment."
 }

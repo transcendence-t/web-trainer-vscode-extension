@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "把日期限定在参观开放周",
-  "goal": "为日期选择器设定可选日期区间。",
-  "summary": "参观只在 2027 年 6 月 10 日到 14 日开放。使用日期控件限制选择范围。",
+  "title": "Limit the date to the open week",
+  "goal": "Sets the optional date range for the date picker.",
+  "summary": "are only open from June 10 to 14, 2027. Use date controls to limit the selection.",
   "tasks": [
-    "把 #visit-date 改成 date 控件，保留原有标签和必填设置。",
-    "允许 2027-06-10 至 2027-06-14，两天都包含在内。"
+    "Change #visit-date to date control, retaining the original label and required settings.",
+    "allows 2027-06-10 to 2027-06-14, both days inclusive."
   ],
   "example": {
     "language": "html",
     "code": "<input type=\"date\" min=\"2027-05-01\" max=\"2027-05-12\">",
-    "note": "min 和 max 使用年-月-日格式。页面中控件的显示可能随系统语言变化。"
+    "note": "min and max use year-month-day format. The display of controls on the page may vary depending on the system language."
   },
-  "hint": "把结束日期写入 max，起始日期写入 min。"
+  "hint": "Write the end date into max and the start date into min."
 }

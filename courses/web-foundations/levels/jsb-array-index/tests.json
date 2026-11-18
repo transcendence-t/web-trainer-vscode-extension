@@ -1,45 +1,45 @@
 [
   {
-    "label": "下标 0 对应第一个站名",
+    "label": "subscript 0 corresponds to the first station name",
     "expect": {
       "type": "function",
       "name": "readStop",
       "args": [
         [
-          "北桥",
-          "西村",
-          "河湾"
+          "North Bridge",
+          "West Village",
+          "Hewan"
         ],
         0
       ],
-      "value": "北桥"
+      "value": "North Bridge"
     }
   },
   {
-    "label": "长度减一对应最后一个站名",
+    "label": "length minus one corresponds to the last station name",
     "expect": {
       "type": "function",
       "name": "readStop",
       "args": [
         [
-          "北桥",
-          "西村",
-          "河湾"
+          "North Bridge",
+          "West Village",
+          "Hewan"
         ],
         2
       ],
-      "value": "河湾"
+      "value": "Hewan"
     }
   },
   {
-    "label": "下标等于长度时返回 null",
+    "label": "Returns null when the subscript is equal to the length",
     "expect": {
       "type": "function",
       "name": "readStop",
       "args": [
         [
-          "北桥",
-          "西村"
+          "North Bridge",
+          "West Village"
         ],
         2
       ],
@@ -47,7 +47,7 @@
     }
   },
   {
-    "label": "空数组返回 null",
+    "label": "empty array returns null",
     "expect": {
       "type": "function",
       "name": "readStop",
@@ -59,13 +59,13 @@
     }
   },
   {
-    "label": "负数下标返回 null",
+    "label": "Negative subscript returns null",
     "expect": {
       "type": "function",
       "name": "readStop",
       "args": [
         [
-          "北桥"
+          "North Bridge"
         ],
         -1
       ],

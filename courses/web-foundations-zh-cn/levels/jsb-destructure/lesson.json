@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "拆出展签所需的名称与数量",
+  "goal": "用对象解构给属性重命名，并为缺失属性提供缺省值。",
+  "summary": "上游记录使用 name 和 count；标签输出采用 title 和 quantity。缺少 count 时按 1 件展示。",
+  "tasks": [
+    "完成 tagFields(record)。解构取出 name 与 count 并使用本地名称 title、quantity。",
+    "返回 { title, quantity }。count 缺失时为 1；显式写 0 或 null 时保留原值。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const { code: label = '未编号' } = { code: 'M3' };\n// label 为 'M3'",
+    "note": "冒号后面是本地变量名，等号右边是属性值为 undefined 时的默认值。"
+  },
+  "hint": "写 const { name: title, count: quantity = 1 } = record。"
+}

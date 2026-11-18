@@ -1,28 +1,28 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>本地登录演示</title>
+  <title>local login demonstration</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 <main class="sheet">
-  <h1>本地登录演示</h1>
-  <p>演示账号 <code>learner</code>，密码 <code>study123</code>。</p>
+  <h1>local login demonstration</h1>
+  <p>demo account <code>learner</code>, password <code>study123</code>。</p>
   <form id="login-form" novalidate autocomplete="off">
     <div class="field">
-      <label for="login-name">账号</label>
+      <label for="login-name">account</label>
       <input type="text" id="login-name" name="username">
     </div>
     <div class="field">
-      <label for="login-password">密码</label>
+      <label for="login-password">password</label>
       <input type="password" id="login-password" name="password">
     </div>
-    <button id="login-submit" type="submit">登录</button>
+    <button id="login-submit" type="submit">Login</button>
   </form>
-  <p id="login-status" aria-live="polite">请输入演示账号和密码。</p>
+  <p id="login-status" aria-live="polite">Please enter the demo account and password.</p>
 </main>
 </body>
 </html>

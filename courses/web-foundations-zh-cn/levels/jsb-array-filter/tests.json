@@ -1,0 +1,86 @@
+[
+  {
+    "label": "保留高于门槛的数量",
+    "expect": {
+      "type": "function",
+      "name": "selectReadyBatches",
+      "args": [
+        [
+          3,
+          8,
+          2
+        ],
+        5
+      ],
+      "value": [
+        8
+      ]
+    }
+  },
+  {
+    "label": "恰好达标的值按原顺序保留",
+    "expect": {
+      "type": "function",
+      "name": "selectReadyBatches",
+      "args": [
+        [
+          8,
+          5,
+          1,
+          5
+        ],
+        5
+      ],
+      "value": [
+        8,
+        5,
+        5
+      ]
+    }
+  },
+  {
+    "label": "门槛为 0 时也保留数量为 0 的批次",
+    "expect": {
+      "type": "function",
+      "name": "selectReadyBatches",
+      "args": [
+        [
+          0,
+          2
+        ],
+        0
+      ],
+      "value": [
+        0,
+        2
+      ]
+    }
+  },
+  {
+    "label": "没有一批达标时返回空数组",
+    "expect": {
+      "type": "function",
+      "name": "selectReadyBatches",
+      "args": [
+        [
+          1,
+          2
+        ],
+        4
+      ],
+      "value": []
+    }
+  },
+  {
+    "label": "输入空数组时返回空数组",
+    "expect": {
+      "type": "function",
+      "name": "selectReadyBatches",
+      "args": [
+        [],
+        5
+      ],
+      "value": []
+    }
+  }
+]

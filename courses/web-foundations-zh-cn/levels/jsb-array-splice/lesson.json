@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "换下队列中指定位置的旧件",
+  "goal": "用 splice 同时删除一项并在原位置插入新项。",
+  "summary": "更换器材分配表里一条记录，前后成员仍保留原位置。",
+  "tasks": [
+    "完成 swapDevice(devices, index, replacement)，有效的数值下标对应一条需要替换的记录。",
+    "允许直接改动 devices，返回调整后的整个数组。下标越界时原样返回。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const team = ['甲', '乙', '丙'];\nconst removed = team.splice(1, 1, '丁');\n// team 为 ['甲', '丁', '丙']，removed 为 ['乙']",
+    "note": "splice 的第二项是删除数量，之后的参数是在删除位置插入的新值。"
+  },
+  "hint": "用 index < 0 或 index >= devices.length 判断越界。splice 返回的是被删除的项。"
+}

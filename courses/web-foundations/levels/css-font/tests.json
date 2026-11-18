@@ -1,6 +1,6 @@
 [
   {
-    "label": "中庭柜取件码使用等宽字体",
+    "label": "The atrium cabinet pick-up code uses a fixed-width font",
     "expect": {
       "type": "style",
       "selector": "dd:nth-of-type(1) > .pickup-code",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "北门柜取件码使用等宽字体",
+    "label": "North door cabinet pick-up code uses fixed-width font",
     "expect": {
       "type": "style",
       "selector": "dd:nth-of-type(2) > .pickup-code",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "柜名使用原来的字体",
+    "label": "cabinet name uses original font",
     "expect": {
       "type": "style",
       "selector": "dt",

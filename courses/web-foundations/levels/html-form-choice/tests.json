@@ -1,14 +1,14 @@
 [
   {
-    "label": "场次组有 legend 标题",
+    "label": "session group has legend title",
     "expect": {
       "type": "text",
       "selector": "form fieldset > legend:first-child",
-      "value": "到场时段"
+      "value": "arrival time"
     }
   },
   {
-    "label": "组内有两个同名的单选按钮",
+    "label": "group",
     "expect": {
       "type": "count",
       "selector": "form fieldset:has(> legend) input[type=\"radio\"][name=\"slot\"]",
@@ -16,7 +16,7 @@
     }
   },
   {
-    "label": "最后点击的下午场被选中",
+    "label": "The last clicked afternoon session was selected",
     "expect": {
       "type": "exists",
       "selector": "form fieldset input[type=\"radio\"][value=\"afternoon\"]:checked"
@@ -33,7 +33,7 @@
     ]
   },
   {
-    "label": "先后点击两个时段仍只有一项被选中",
+    "label": "After clicking two time periods one after another, only one item is still selected.",
     "expect": {
       "type": "count",
       "selector": "form fieldset input[type=\"radio\"]:checked",

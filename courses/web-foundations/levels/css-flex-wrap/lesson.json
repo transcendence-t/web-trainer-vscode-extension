@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "卡片放不下时自动换行",
-  "goal": "让等宽场次卡片根据容器宽度自动分行。",
-  "summary": "flex-wrap 默认为 nowrap。设为 wrap 后，当前行放不下下一项时，浏览器会把它放到新的一行。",
+  "title": "Automatically wrap lines when the card cannot be placed",
+  "goal": "allows equal-width event cards to be automatically divided into rows according to the width of the container.",
+  "summary": "flex-wrap defaults to nowrap. When set to wrap, if the current line cannot fit the next item, the browser will put it on a new line.",
   "tasks": [
-    "在 .session-list 中启用 Flexbox 换行，保留原有卡片宽度和间距。",
-    "在宽度为 320px 的预览中，让第三张卡片排到第二行。宽度为 720px 时，三张卡片排成一行。"
+    "Enable Flexbox word wrapping in .session-list, retaining original card width and spacing.",
+    "Moves the third card to the second row in the 320px width preview. At a width of 720px, three cards line up."
   ],
-  "hint": "在 Flexbox 容器上设置 flex-wrap。保留每张卡片的固定宽度，就能清楚看到它在何时换行。",
+  "hint": "Set flex-wrap on Flexbox containers. By keeping each card a fixed width, you can clearly see when it wraps.",
   "example": {
     "language": "css",
     "code": ".topic-tags {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 6px;\n}",
-    "note": "文章的主题标签可能有多个。列表在手机上变窄时，剩余标签会自然排到下一行。"
+    "note": "Articles may have multiple topic tags. When the list becomes narrower on mobile phones, the remaining tags will naturally flow to the next line."
   }
 }

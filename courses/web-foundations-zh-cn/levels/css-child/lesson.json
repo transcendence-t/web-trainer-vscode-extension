@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "只装饰一级目录项",
+  "goal": "使用直接子元素选择器，给校园活动的一级目录加上视觉标记。",
+  "summary": "> 左边匹配父元素，右边匹配它直接包含的子元素。嵌套在下一层列表里的项目会保留自己的样式。",
+  "tasks": [
+    "用 > 选中 .agenda 直接包含的 li。",
+    "为一级目录项设置 border-left: 4px solid #264a7c 和 padding-left: 12px。子级项目保持原样。"
+  ],
+  "hint": "一级和二级项目都用了 li。检查选择器中 .agenda 和 li 的连接符。",
+  "example": {
+    "language": "css",
+    "code": ".wall > figure {\n  margin-bottom: 20px;\n}",
+    "note": "展墙中的一级作品卡片直接使用 figure。卡片之间留出间距，嵌套图例还可以保持自己的间距。"
+  }
+}

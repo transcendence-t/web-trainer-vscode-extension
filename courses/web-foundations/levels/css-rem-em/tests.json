@@ -1,6 +1,6 @@
 [
   {
-    "label": "大展签的字号为 24px",
+    "label": "The font size of the exhibition signature is 24px",
     "expect": {
       "type": "style",
       "selector": ".large-label",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "小展签的字号为 16px",
+    "label": "The font size of the small exhibition signature is 16px",
     "expect": {
       "type": "style",
       "selector": ".small-label",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "大展签的半字内边距为 12px",
+    "label": "The half-word inner margin of the large exhibition sign is 12px",
     "expect": {
       "type": "style",
       "selector": ".large-label",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "小展签的半字内边距为 8px",
+    "label": "The half-word inner margin of the small exhibition sign is 8px",
     "expect": {
       "type": "style",
       "selector": ".small-label",

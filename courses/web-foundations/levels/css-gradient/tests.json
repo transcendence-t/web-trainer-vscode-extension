@@ -1,6 +1,6 @@
 [
   {
-    "label": "展板显示指定方向和色标",
+    "label": "display panel displays specified direction and color code",
     "expect": {
       "type": "style",
       "selector": ".banner",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "文字仍采用原深色",
+    "label": "text still uses the original dark color",
     "expect": {
       "type": "style",
       "selector": ".banner",

@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "显示输入焦点",
-  "goal": "用 :focus 给课堂资料筛选框显示一个能随焦点移动的轮廓。",
-  "summary": "通过点击或 Tab 移到输入框时，当前控件会获得焦点。:focus 匹配当前具有焦点的元素。",
+  "title": "Display input focus",
+  "goal": "Use :focus to display an outline that moves with the focus in the class material filter box.",
+  "summary": "When you move to the input box by clicking or Tab, the current control will gain focus. :focus matches the element that currently has focus.",
   "tasks": [
-    "用 input:focus 选中获得焦点的筛选框，设置颜色为 #125a46 的实线轮廓。",
-    "用 outline-offset 把轮廓向外偏移 4px，未聚焦的筛选框保留原来的外观。"
+    "Use input:focus to select the focused filter box and set the solid outline color to #125a46.",
+    "Use outline-offset to offset the outline 4px outward, and the unfocused filter box retains its original appearance."
   ],
-  "hint": "试着在两个框之间按 Tab 切换。始终只有当前可以输入的框显示绿色轮廓。",
+  "hint": "Try pressing Tab between two boxes. Always only the boxes currently available for input are outlined in green.",
   "example": {
     "language": "css",
     "code": "button:focus {\n  outline: 2px solid #264a7c;\n  outline-offset: 3px;\n}",
-    "note": "用键盘在提交按钮和返回按钮之间移动时，焦点轮廓标出当前可以按回车触发的按钮。"
+    "note": "When moving between the submit button and the return button with the keyboard, the focus outline marks the button that can currently be triggered by pressing Enter."
   }
 }

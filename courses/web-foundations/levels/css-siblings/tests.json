@@ -1,6 +1,6 @@
 [
   {
-    "label": "第一个引言加粗",
+    "label": "The first introduction is bold",
     "expect": {
       "type": "style",
       "selector": "#lead-one",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "第二个引言也加粗",
+    "label": "The second introduction is also bolded",
     "expect": {
       "type": "style",
       "selector": "#lead-two",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "正文保持普通粗细",
+    "label": "Keep the text in normal thickness",
     "expect": {
       "type": "style",
       "selector": "#detail",

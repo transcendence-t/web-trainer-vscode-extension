@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "地址中的换行",
-  "goal": "在一段联系地址中控制换行的位置。",
-  "summary": "普通 HTML 文本中的源码换行通常会折叠成空白。br 在同一段内容里换到下一行，常用于地址和诗歌。",
+  "title": "Newline in address",
+  "goal": "controls the position of line breaks in a contact address.",
+  "summary": "Source line breaks in plain HTML text often collapse into whitespace. br Move to the next line within the same paragraph, often used in addresses and poetry.",
   "tasks": [
-    "保留 address 内的两段 span 文字。",
-    "在这两个 span 之间加一个 br，使房间号显示在街道地址下一行。"
+    "retains the two span text in address.",
+    "Add a br between these two spans so that the room number is displayed on the line below the street address."
   ],
-  "hint": "把 <br> 写在第一个 </span> 之后、第二个 <span> 之前。br 本身就表示一次换行。",
+  "hint": "Write <br> after the first </span> and before the second <span>. br itself represents a newline.",
   "example": {
     "language": "html",
-    "code": "<p>夜色落进湖面<br>路灯亮在桥上</p>",
-    "note": "两行短诗属于同一段，br 标记诗行的分界。"
+    "code": "<p>Night falls into the lake<br>Street light on the bridge</p>",
+    "note": "Two lines of short poetry belong to the same paragraph, and br marks the boundary between lines of poetry."
   }
 }

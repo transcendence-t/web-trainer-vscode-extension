@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "空间不足时只收缩文件名",
-  "goal": "用 flex-shrink 分配负空间，并用 min-width: 0 允许内容收缩。",
-  "summary": "文件工具条只有 260px。右侧下载按钮必须留足 120px，左侧文件名缩到剩余空间。",
+  "title": "Only shrink the file name when there is insufficient space",
+  "goal": "uses flex-shrink to allocate negative space and min-width: 0 to allow content to shrink.",
+  "summary": "file toolbar is only 260px. The download button on the right must be 120px long, and the file name on the left must be shortened to the remaining space.",
   "tasks": [
-    "禁止 .download 收缩，保留 120px 宽。",
-    "让 .file-label 可收缩，保留其省略号处理。"
+    "prohibits shrinking of .download, leaving 120px wide.",
+    "Make .file-label shrinkable, retaining its ellipsis handling."
   ],
   "example": {
     "language": "css",
     "code": ".name { min-width: 0; flex-shrink: 1; }\n.action { flex-shrink: 0; }",
-    "note": "长内容的默认最小尺寸可能撑开 Flex 项。min-width: 0 允许布局收缩到分得的空间。"
+    "note": "The default minimum size for long content may stretch flex items. min-width: 0 allows the layout to shrink to the allocated space."
   },
-  "hint": "按钮的 flex-shrink 设为 0。文件名的 min-width 可以比内容本身小。"
+  "hint": "button's flex-shrink is set to 0. The filename's min-width can be smaller than the content itself."
 }

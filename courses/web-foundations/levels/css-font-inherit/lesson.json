@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "让表单控件承接所在区域的字体",
-  "goal": "用 font: inherit 让控件继承父元素的字体设置。",
-  "summary": "登记区和搜索区的文字大小不同，浏览器给原生控件单独设置了字体。让两个区域的控件各自跟随父级。",
+  "title": "Let the form control take over the font of the area",
+  "goal": "Use font: inherit to let the control inherit the font settings of the parent element.",
+  "summary": "The text sizes in the registration area and search area are different, and the browser sets separate fonts for native controls. Let the controls in the two areas follow their parent.",
   "tasks": [
-    "将 #card-form 内的 input 和 button 设置为继承所在区域的 font。",
-    "保留课件中的两种区域字体，思考为什么只写固定字号不能满足两个区域。"
+    "Set the input and button in #card-form to inherit the font of the local area.",
+    "Keep the two regional fonts in the courseware and think about why writing only fixed font sizes cannot satisfy the two regions."
   ],
   "example": {
     "language": "css",
     "code": ".settings { font: 18px/1.5 system-ui; }\n.settings select { font: inherit; }",
-    "note": "inherit 让控件采用父元素的字体计算结果，包括字号、字体族和行高。"
+    "note": "inherit causes the control to adopt the font calculation results of the parent element, including font size, font family and line height."
   },
-  "hint": "这里的起始样式刻意恢复了控件默认 font。用覆盖规则声明 font: inherit。"
+  "hint": "The starting style here deliberately restores the default font of the control. Declare font: inherit with override rules."
 }

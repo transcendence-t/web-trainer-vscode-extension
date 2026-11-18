@@ -1,6 +1,6 @@
 [
   {
-    "label": "急件签的一次动画用时 400ms",
+    "label": "An animation of emergency sign takes 400ms",
     "expect": {
       "type": "style",
       "selector": ".dispatch-stamp",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "暂停在起始关键帧时不透明度为 0.3",
+    "label": "Pause at start keyframe with opacity of 0.3",
     "expect": {
       "type": "style",
       "selector": ".dispatch-stamp",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "暂停在起始关键帧时急件签高出原位 18px",
+    "label": "When paused at the starting key frame, the emergency sign is 18px higher than the original position.",
     "expect": {
       "type": "style",
       "selector": ".dispatch-stamp",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "动画播完后急件签保持完全可见",
+    "label": "The emergency sign remains fully visible after the animation.",
     "expect": {
       "type": "style",
       "selector": ".dispatch-stamp",
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "label": "动画播完后急件签留在虚线框内",
+    "label": "The emergency sign remains in the dotted box after the animation is played.",
     "expect": {
       "type": "layout",
       "selector": ".dispatch-stamp",

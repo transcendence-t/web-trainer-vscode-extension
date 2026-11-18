@@ -1,0 +1,35 @@
+[
+  {
+    "label": "整段引文放在 blockquote 内",
+    "expect": {
+      "type": "text",
+      "selector": "blockquote p",
+      "value": "先记录发现，再讨论解释。"
+    }
+  },
+  {
+    "label": "保留引用源网址",
+    "expect": {
+      "type": "attribute",
+      "selector": "blockquote",
+      "name": "cite",
+      "value": "https://example.org/observation"
+    }
+  },
+  {
+    "label": "标出作品名称",
+    "expect": {
+      "type": "text",
+      "selector": "p cite",
+      "value": "《社区观察手册》"
+    }
+  },
+  {
+    "label": "标出句内短引文",
+    "expect": {
+      "type": "text",
+      "selector": "p q",
+      "value": "留意身边的变化"
+    }
+  }
+]

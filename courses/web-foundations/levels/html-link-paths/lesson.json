@@ -1,17 +1,17 @@
 {
   "focus": "index.html",
-  "title": "连接站内页面、站外页面和邮箱",
-  "goal": "根据目标选择相对路径、完整 URL 或 mailto 链接。",
-  "summary": "假设当前页在 rooms/index.html。站点另有 guides/loan.html，并提供一个站外馆藏入口和咨询邮箱。离线预览用 href 检查地址。",
+  "title": "Connects on-site pages, off-site pages and mailboxes",
+  "goal": "Choose a relative path, full URL, or mailto link based on the target.",
+  "summary": "Assume that the current page is rooms/index.html. The site also has guides/loan.html, and provides an entrance to off-site collections and a consultation email. Offline preview uses href to check the address.",
   "tasks": [
-    "把「借用规则」连到 ../guides/loan.html。",
-    "把「馆藏服务」连到 https://example.org/catalog/。",
-    "把「发送咨询邮件」连到 desk@example.org 的 mailto 地址。"
+    "Link \"borrowing rules\" to ../guides/loan.html.",
+    "connects \"Collection Services\" to https://example.org/catalog/.",
+    "connects \"Send consultation email\" to the mailto address of desk@example.org."
   ],
   "example": {
     "language": "html",
-    "code": "<a href=\"../visits/map.html\">查看地图</a>\n<a href=\"https://example.net/hours/\">校外场馆时段</a>\n<a href=\"mailto:team@example.net\">联系值班队</a>",
-    "note": "../ 先回到上一级目录。以 https:// 开头的地址包含目标站点，mailto: 交给邮件客户端。"
+    "code": "<a href=\"../visits/map.html\">View map</a>\n<a href=\"https://example.net/hours/\">Off-campus venue time slot</a>\n<a href=\"mailto:team@example.net\">Contact the duty team</a>",
+    "note": "../ Return to the previous directory first. Addresses starting with https:// contain the destination site, mailto: is handed to the mail client."
   },
-  "hint": "同一目录下的文件可用 ./，本题的 guides 与 rooms 在同一级。"
+  "hint": "Files in the same directory are available as ./. The guides in this question are at the same level as rooms."
 }

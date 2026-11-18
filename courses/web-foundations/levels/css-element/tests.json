@@ -1,6 +1,6 @@
 [
   {
-    "label": "工作日段落采用绿色",
+    "label": "working day paragraphs are in green",
     "expect": {
       "type": "style",
       "selector": "main > p:first-of-type",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "周五段落采用绿色",
+    "label": "Friday paragraph is in green",
     "expect": {
       "type": "style",
       "selector": "main > p:nth-of-type(2)",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "第一段字号为 18px",
+    "label": "The first paragraph font size is 18px",
     "expect": {
       "type": "style",
       "selector": "main > p:first-of-type",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "第二段字号为 18px",
+    "label": "The second paragraph font size is 18px",
     "expect": {
       "type": "style",
       "selector": "main > p:nth-of-type(2)",
@@ -36,13 +36,13 @@
     }
   },
   {
-    "label": "页面标题保留原色",
+    "label": "page title retains original color",
     "expect": {
       "type": "style",
       "selector": "main > h1",
       "property": "color",
       "value": "rgb(36, 52, 71)"
     },
-    "hint": "把颜色设置在 p 上，避免影响标题。"
+    "hint": "Set the color on p to avoid affecting the title."
   }
 ]

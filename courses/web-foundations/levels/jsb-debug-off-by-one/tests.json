@@ -1,6 +1,6 @@
 [
   {
-    "label": "普通区间包含终点",
+    "label": "ordinary interval includes the end point",
     "expect": {
       "type": "function",
       "name": "labelRange",
@@ -17,7 +17,7 @@
     }
   },
   {
-    "label": "相同端点返回一项",
+    "label": "The same endpoint returns one item",
     "expect": {
       "type": "function",
       "name": "labelRange",
@@ -31,7 +31,7 @@
     }
   },
   {
-    "label": "反向区间没有标签",
+    "label": "reverse interval has no label",
     "expect": {
       "type": "function",
       "name": "labelRange",
@@ -43,7 +43,7 @@
     }
   },
   {
-    "label": "接受从零开始",
+    "label": "accepts starting from scratch",
     "expect": {
       "type": "function",
       "name": "labelRange",

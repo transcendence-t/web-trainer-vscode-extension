@@ -1,36 +1,36 @@
 [
   {
-    "label": "文档声明语言 zh-CN",
+    "label": "Document declaration language en",
     "expect": {
       "type": "exists",
-      "selector": "html[lang=\"zh-CN\" i]"
+      "selector": "html[lang=\"en\" i]"
     },
-    "hint": "将 lang 加在 <html> 的开始标签上。"
+    "hint": "Add lang to the start tag of <html>."
   },
   {
-    "label": "文档头声明 UTF-8",
+    "label": "document header declaration UTF-8",
     "expect": {
       "type": "exists",
       "selector": "html > head > meta[charset=\"utf-8\" i]"
     },
-    "hint": "将带 charset 属性的 meta 写进 head。"
+    "hint": "Write meta with charset attribute into head."
   },
   {
-    "label": "标签页标题正确",
+    "label": "The label page title is correct",
     "expect": {
       "type": "text",
       "selector": "html > head > title",
-      "value": "社区图书角"
+      "value": "Community Book Corner"
     },
-    "hint": "检查 title 的位置和文字。"
+    "hint": "Check the position and text of title."
   },
   {
-    "label": "正文显示开放时间",
+    "label": "Text shows opening hours",
     "expect": {
       "type": "text",
       "selector": "body > main > p",
-      "value": "周六下午开放。"
+      "value": "Open Saturday afternoon."
     },
-    "hint": "保留段落末尾的句号。"
+    "hint": "retains the period at the end of the paragraph."
   }
 ]

@@ -1,0 +1,53 @@
+[
+  {
+    "label": "对象保存三个原始参数",
+    "expect": {
+      "type": "function",
+      "name": "makeRepairOrder",
+      "args": [
+        "投影无信号",
+        20,
+        true
+      ],
+      "value": {
+        "issue": "投影无信号",
+        "minutes": 20,
+        "urgent": true
+      }
+    }
+  },
+  {
+    "label": "保留数字 0 和布尔值 false",
+    "expect": {
+      "type": "function",
+      "name": "makeRepairOrder",
+      "args": [
+        "更换门牌",
+        0,
+        false
+      ],
+      "value": {
+        "issue": "更换门牌",
+        "minutes": 0,
+        "urgent": false
+      }
+    }
+  },
+  {
+    "label": "换一组输入仍匹配三个字段",
+    "expect": {
+      "type": "function",
+      "name": "makeRepairOrder",
+      "args": [
+        "水龙头漏水",
+        35,
+        false
+      ],
+      "value": {
+        "issue": "水龙头漏水",
+        "minutes": 35,
+        "urgent": false
+      }
+    }
+  }
+]

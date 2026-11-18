@@ -1,17 +1,17 @@
 [
   {
-    "label": "介绍区有 lab 锚点",
+    "label": "has a lab anchor in the introduction area",
     "expect": {
       "type": "exists",
       "selector": "main section#lab"
     }
   },
   {
-    "label": "导航链接指向介绍区",
+    "label": "Navigation link points to the introduction area",
     "expect": {
       "type": "text",
       "selector": "nav > a[href='#lab']",
-      "value": "查看实训室"
+      "value": "View training room"
     }
   }
 ]

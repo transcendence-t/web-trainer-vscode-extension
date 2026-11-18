@@ -1,6 +1,6 @@
 [
   {
-    "label": "只使用一个表格",
+    "label": "uses only one table",
     "expect": {
       "type": "count",
       "selector": "table",
@@ -8,7 +8,7 @@
     }
   },
   {
-    "label": "表格有两条记录",
+    "label": "table has two records",
     "expect": {
       "type": "count",
       "selector": "table > tbody > tr",
@@ -16,7 +16,7 @@
     }
   },
   {
-    "label": "两行共有四个数据单元格",
+    "label": "There are four data cells in two rows",
     "expect": {
       "type": "count",
       "selector": "table > tbody > tr > td",
@@ -24,35 +24,35 @@
     }
   },
   {
-    "label": "第一行第一列是薄荷",
+    "label": "The first row and first column are mint",
     "expect": {
       "type": "text",
       "selector": "table > tbody > tr:first-child > td:nth-child(1)",
-      "value": "薄荷"
+      "value": "Mint"
     }
   },
   {
-    "label": "第一行第二列是 6 盆",
+    "label": "The first row and second column are 6 pots",
     "expect": {
       "type": "text",
       "selector": "table > tbody > tr:first-child > td:nth-child(2)",
-      "value": "6 盆"
+      "value": "6 basins"
     }
   },
   {
-    "label": "第二行第一列是罗勒",
+    "label": "The second row and the first column are basil",
     "expect": {
       "type": "text",
       "selector": "table > tbody > tr:last-child > td:nth-child(1)",
-      "value": "罗勒"
+      "value": "Basil"
     }
   },
   {
-    "label": "第二行第二列是 4 盆",
+    "label": "The second row and second column are 4 pots",
     "expect": {
       "type": "text",
       "selector": "table > tbody > tr:last-child > td:nth-child(2)",
-      "value": "4 盆"
+      "value": "4 basins"
     }
   }
 ]

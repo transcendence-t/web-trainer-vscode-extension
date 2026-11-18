@@ -1,0 +1,35 @@
+[
+  {
+    "label": "零库存待补货",
+    "expect": {
+      "type": "function",
+      "name": "stockLabel",
+      "args": [
+        0
+      ],
+      "value": "待补货"
+    }
+  },
+  {
+    "label": "只剩一个也可领取",
+    "expect": {
+      "type": "function",
+      "name": "stockLabel",
+      "args": [
+        1
+      ],
+      "value": "可领取"
+    }
+  },
+  {
+    "label": "多个库存可领取",
+    "expect": {
+      "type": "function",
+      "name": "stockLabel",
+      "args": [
+        27
+      ],
+      "value": "可领取"
+    }
+  }
+]

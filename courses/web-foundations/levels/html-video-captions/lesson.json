@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "为演示视频打开播放控件和字幕",
-  "goal": "通过 video 和 WebVTT track 让操作演示支持手动播放与无声观看。",
-  "summary": "设备操作演示包含短提示音。素材与一条 WebVTT 字幕已经准备好，用视频属性和 track 声明把它们交给浏览器。",
+  "title": "Turn on playback controls and subtitles for demo videos",
+  "goal": "supports manual playback and silent viewing of operation demonstrations through video and WebVTT track.",
+  "summary": "device operation demonstration includes short beeps. The material and a WebVTT subtitle are ready and handed to the browser using the video attribute and track declaration.",
   "tasks": [
-    "给已有 video 添加 controls，保留现成的 source 和 track 地址。",
-    "让 track 使用 kind=\"captions\"、srclang=\"zh\"、label=\"简体中文\"，通过 default 默认启用。"
+    "Add controls to the existing video and retain the existing source and track addresses.",
+    "Set kind=\"captions\", srclang=\"en\", label=\"English\", and default on the track."
   ],
   "example": {
     "language": "html",
-    "code": "<video controls src=\"opening.webm\">\n  <track src=\"opening-zh.vtt\" kind=\"captions\" srclang=\"zh\" label=\"简体中文\" default>\n</video>",
-    "note": "captions 可记录对话和有意义的声音。vtt 文件中每条字幕都规定开始和结束时间。"
+    "code": "<video controls src=\"opening.webm\">\n  <track src=\"opening-en.vtt\" kind=\"captions\" srclang=\"en\" label=\"English\" default>\n</video>",
+    "note": "captions record conversations and meaningful sounds. Each subtitle in the vtt file specifies a start and end time."
   },
-  "hint": "default 写在 track 上，controls 写在 video 上。保留跨域属性，以便浏览器读取本题内嵌的字幕。"
+  "hint": "Set default on track and controls on video. Keep the cross-origin attribute so the browser can load the embedded captions."
 }

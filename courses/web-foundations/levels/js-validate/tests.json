@@ -1,18 +1,18 @@
 [
   {
-    "label": "初始状态提示先填写标题",
+    "label": "The initial state prompts you to fill in the title first",
     "expect": {
       "type": "text",
       "selector": "#submission-feedback",
-      "value": "填写标题后提交检查。"
+      "value": "Fill in the title and submit for inspection."
     }
   },
   {
-    "label": "空输入有专门的提示",
+    "label": "There is a special prompt for empty input",
     "expect": {
       "type": "text",
       "selector": "#submission-feedback",
-      "value": "请填写作品标题。"
+      "value": "Please fill in the title of the work."
     },
     "actions": [
       {
@@ -22,11 +22,11 @@
     ]
   },
   {
-    "label": "全是空白也视为空标题",
+    "label": "is also regarded as an empty title if it is completely blank.",
     "expect": {
       "type": "text",
       "selector": "#submission-feedback",
-      "value": "请填写作品标题。"
+      "value": "Please fill in the title of the work."
     },
     "actions": [
       {
@@ -41,17 +41,17 @@
     ]
   },
   {
-    "label": "两个字符的标题提示长度不足",
+    "label": "The two-character title prompt is not long enough",
     "expect": {
       "type": "text",
       "selector": "#submission-feedback",
-      "value": "标题至少需要 3 个字符。"
+      "value": "Title requires at least 3 characters."
     },
     "actions": [
       {
         "type": "input",
         "selector": "#work-title",
-        "value": "短片"
+        "value": "Up"
       },
       {
         "type": "click",
@@ -60,17 +60,17 @@
     ]
   },
   {
-    "label": "刚好三个字符的标题通过检查",
+    "label": "The title with exactly three characters passed the check",
     "expect": {
       "type": "text",
       "selector": "#submission-feedback",
-      "value": "作品标题《远山集》已通过检查。"
+      "value": "The title of the work \"Sky\" has passed the inspection."
     },
     "actions": [
       {
         "type": "input",
         "selector": "#work-title",
-        "value": "远山集"
+        "value": "Sky"
       },
       {
         "type": "click",
@@ -79,17 +79,17 @@
     ]
   },
   {
-    "label": "修正标题后可重新提交并去掉首尾空白",
+    "label": "You can resubmit after correcting the title and removing the leading and trailing blanks.",
     "expect": {
       "type": "text",
       "selector": "#submission-feedback",
-      "value": "作品标题《秋日短片》已通过检查。"
+      "value": "The title of the work \"Autumn Short Film\" has passed the inspection."
     },
     "actions": [
       {
         "type": "input",
         "selector": "#work-title",
-        "value": "短片"
+        "value": "Up"
       },
       {
         "type": "click",
@@ -98,7 +98,7 @@
       {
         "type": "input",
         "selector": "#work-title",
-        "value": "  秋日短片  "
+        "value": "  Autumn Short Film  "
       },
       {
         "type": "click",

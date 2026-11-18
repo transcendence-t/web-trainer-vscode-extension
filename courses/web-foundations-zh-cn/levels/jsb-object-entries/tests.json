@@ -1,0 +1,50 @@
+[
+  {
+    "label": "过滤零库存并保留数量顺序",
+    "expect": {
+      "type": "function",
+      "name": "inventoryRows",
+      "args": [
+        {
+          "布料": 6,
+          "圆珠笔": 0,
+          "纸张": 13
+        }
+      ],
+      "value": [
+        {
+          "name": "布料",
+          "quantity": 6
+        },
+        {
+          "name": "纸张",
+          "quantity": 13
+        }
+      ]
+    }
+  },
+  {
+    "label": "空对象返回空列表",
+    "expect": {
+      "type": "function",
+      "name": "inventoryRows",
+      "args": [
+        {}
+      ],
+      "value": []
+    }
+  },
+  {
+    "label": "全部为零时无条目",
+    "expect": {
+      "type": "function",
+      "name": "inventoryRows",
+      "args": [
+        {
+          "线轴": 0
+        }
+      ],
+      "value": []
+    }
+  }
+]

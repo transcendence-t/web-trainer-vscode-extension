@@ -1,0 +1,17 @@
+{
+  "focus": "script.js",
+  "title": "计算档案整理还需几天",
+  "goal": "用 while 重复推进工作量，直到整理数量达到目标。",
+  "summary": "while 每轮先检查条件，再决定要不要执行循环体。在累计箱数低于目标时，每轮增加三箱，同时记录一天的工作量。",
+  "tasks": [
+    "补全 archiveDays(initial, target)。initial 是已整理的箱数，target 是目标箱数，两者均为非负整数。",
+    "工作一天可以整理 3 箱。使用 while 每轮增加 3 箱和 1 天，达到或超过目标后返回新增的天数。",
+    "开始时已达到目标的情况返回数字 0。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "function tripsNeeded(crates) {\n  let remaining = crates;\n  let trips = 0;\n  while (remaining > 0) {\n    remaining -= 4;\n    trips += 1;\n  }\n  return trips;\n}",
+    "note": "一辆推车每趟最多送 4 箱，9 箱需要用车 3 趟。检查剩余箱数就能知道何时结束。"
+  },
+  "hint": "如果刚好达到目标后还多算一天，检查条件是否多写了等号。每轮也要更新已整理箱数，才能推进到结束条件。"
+}

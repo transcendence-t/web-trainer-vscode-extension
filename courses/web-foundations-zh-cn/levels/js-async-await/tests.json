@@ -1,0 +1,35 @@
+[
+  {
+    "label": "等待预约查询的实际结果",
+    "expect": {
+      "type": "function",
+      "name": "reservationLabel",
+      "args": [
+        "A-6"
+      ],
+      "value": "A-6：余位 12"
+    }
+  },
+  {
+    "label": "已满也显示数字零",
+    "expect": {
+      "type": "function",
+      "name": "reservationLabel",
+      "args": [
+        "B-1"
+      ],
+      "value": "B-1：余位 0"
+    }
+  },
+  {
+    "label": "拒绝时使用查询原因",
+    "expect": {
+      "type": "function",
+      "name": "reservationLabel",
+      "args": [
+        "F-8"
+      ],
+      "value": "查询失败：没有这条预约"
+    }
+  }
+]

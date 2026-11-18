@@ -1,0 +1,56 @@
+{
+  "js-microtask-order": {
+    "name": "误以为所有异步回调都一样，将微任务也放入较晚的计时器",
+    "files": {
+      "script.js": "document.querySelector('#run').addEventListener('click', () => {\n  const steps = [];\n  function record(step) { steps.push(step); document.querySelector('#order').textContent = steps.join(' → '); }\n  setTimeout(() => record('计时器'), 0);\n  setTimeout(() => record('微任务'), 10);\n  record('同步');\n});\n"
+    }
+  },
+  "js-promise-handlers": {
+    "name": "遗漏 catch，拒绝时没有给出友好反馈",
+    "files": {
+      "script.js": "function askDesk(isAvailable) {\n  if (isAvailable) return Promise.resolve('窗口 2');\n  return Promise.reject(new Error('暂时无法分配'));\n}\nconst desk = document.querySelector('#desk');\nfunction requestDesk(isAvailable) {\n  askDesk(isAvailable).then((name) => { desk.textContent = '请到 ' + name; });\n}\ndocument.querySelector('#ready').addEventListener('click', () => requestDesk(true));\ndocument.querySelector('#busy').addEventListener('click', () => requestDesk(false));\n"
+    }
+  },
+  "js-async-await": {
+    "name": "忘记 await，余位来自 Promise 对象的属性",
+    "files": {
+      "script.js": "function queryStatus(code) {\n  const records = { 'A-6': 12, 'B-1': 0, 'D-3': 4 };\n  if (!Object.hasOwn(records, code)) return Promise.reject(new Error('没有这条预约'));\n  return Promise.resolve({ code, seats: records[code] });\n}\n\nasync function reservationLabel(code) {\n  const record = queryStatus(code);\n  record.catch(() => {});\n  return `${record.code}：余位 ${record.seats}`;\n}\n"
+    }
+  },
+  "js-promise-all": {
+    "name": "以为先完成的数量位于结果数组首项",
+    "files": {
+      "script.js": "function readTitle(title) {\n  if (title === '') return Promise.reject(new Error('标题缺失'));\n  return new Promise((resolve) => setTimeout(() => resolve(title), 35));\n}\nfunction readTotal(total) {\n  if (total < 0) return Promise.reject(new Error('数量无效'));\n  return Promise.resolve(total);\n}\n\nasync function catalogCard(title, total) {\n  try {\n    const [count, name] = await Promise.all([readTitle(title), readTotal(total)]);\n    return { title: name, total: count };\n  } catch { return null; }\n}\n"
+    }
+  },
+  "js-fetch-json": {
+    "name": "读取新样例时留下了之前显示的列表",
+    "files": {
+      "script.js": "const dataset = document.querySelector('#dataset');\nconst events = document.querySelector('#events');\nconst notice = document.querySelector('#notice');\n\ndocument.querySelector('#load').addEventListener('click', async () => {\n  try {\n    const response = await fetch(dataset.value);\n    if (!response.ok) throw new Error('读取失败');\n    const { activities } = await response.json();\n    for (const name of activities) {\n      const item = document.createElement('li');\n      item.textContent = name;\n      events.append(item);\n    }\n    notice.textContent = activities.length ? '活动已更新' : '暂无活动';\n  } catch {\n    notice.textContent = '数据无法读取';\n  }\n});\n"
+    }
+  },
+  "js-response-status": {
+    "name": "状态失败时也尝试解析 JSON",
+    "files": {
+      "script.js": "async function responseMessage(response) {\n  const data = await response.json();\n  return response.ok ? data.message : '读取失败：' + response.status;\n}\nfunction makeResponseMessage(status, body) { return responseMessage(new Response(body, { status })); }\n"
+    }
+  },
+  "js-url-parameters": {
+    "name": "只取一个 tag，其他筛选条件丢失",
+    "files": {
+      "script.js": "function readFilters(query) {\n  const params = new URLSearchParams(query);\n  return { q: params.get('q') ?? '', tags: params.has('tag') ? [params.get('tag')] : [] };\n}\n"
+    }
+  },
+  "js-modules": {
+    "name": "没有补齐不足三位的编号",
+    "files": {
+      "script.js": "export function formatReceipt(number) { return 'LAB-' + number; }\n"
+    }
+  },
+  "js-canvas": {
+    "name": "只描边，矩形内部仍透明",
+    "files": {
+      "script.js": "const canvas = document.querySelector('#badge');\nconst pen = canvas.getContext('2d');\n\n// 读取某点的 RGBA，便于练习时验证绘制位置和清除结果。\nfunction samplePixel(x, y) {\n  return [...pen.getImageData(x, y, 1, 1).data];\n}\n\ndocument.querySelector('#draw').addEventListener('click', () => {\n  pen.strokeStyle = '#125a46';\n  pen.strokeRect(16, 12, 32, 24);\n});\ndocument.querySelector('#clear').addEventListener('click', () => pen.clearRect(0, 0, canvas.width, canvas.height));\n"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 function totalCheckouts(counts) {
   let total = 0;
-  // 遍历 counts，把每项加到 total。
+  // iterates through counts and adds each item to total.
   return total;
 }

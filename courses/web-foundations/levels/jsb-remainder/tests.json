@@ -1,6 +1,6 @@
 [
   {
-    "label": "分出整组后剩下四人",
+    "label": "After dividing the whole group, there are four people left",
     "expect": {
       "type": "function",
       "name": "ungroupedCount",
@@ -12,7 +12,7 @@
     }
   },
   {
-    "label": "人数恰好能分完时返回 0",
+    "label": "Returns 0 when the number of people can be divided enough",
     "expect": {
       "type": "function",
       "name": "ungroupedCount",
@@ -24,7 +24,7 @@
     }
   },
   {
-    "label": "不足一组时保留总人数",
+    "label": "Keep the total number of people when there is less than one group",
     "expect": {
       "type": "function",
       "name": "ungroupedCount",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "没有志愿者时返回 0",
+    "label": "returns 0 when there are no volunteers",
     "expect": {
       "type": "function",
       "name": "ungroupedCount",
@@ -48,7 +48,7 @@
     }
   },
   {
-    "label": "每组一人时总能分完",
+    "label": "Each group can always finish the points when there is only one person in each group",
     "expect": {
       "type": "function",
       "name": "ungroupedCount",

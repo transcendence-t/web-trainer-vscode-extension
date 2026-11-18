@@ -1,0 +1,21 @@
+[
+  {
+    "label": "两条规则冲突时延迟提醒采用橙棕色",
+    "expect": {
+      "type": "style",
+      "selector": "#delivery-alert",
+      "property": "color",
+      "value": "rgb(154, 52, 18)"
+    },
+    "hint": "目标元素同时具有 delivery-alert 的 ID 和 status 类。可以把它们写在同一个选择器中。"
+  },
+  {
+    "label": "正常状态继续显示绿色",
+    "expect": {
+      "type": "style",
+      "selector": "#delivery-ok",
+      "property": "color",
+      "value": "rgb(18, 90, 70)"
+    }
+  }
+]

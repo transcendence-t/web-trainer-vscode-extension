@@ -1,0 +1,18 @@
+{
+  "focus": "index.html",
+  "title": "设备借用清单搜索",
+  "goal": "组合有标签的搜索框、列表样式与输入事件，实时展示搜索结果和数量。",
+  "summary": "借用设备前，学生可以用名称片段查找。清空搜索框后应回到完整清单。",
+  "tasks": [
+    "在 index.html 中把「设备名称」写成 label，用 for 关联 #equipment-query。",
+    "在 style.css 中让 #equipment-results 使用网格，为相邻设备设置 8px 间隔。",
+    "在 script.js 的 input 事件中读取关键词，去掉首尾空格，忽略英文大小写，筛出名称包含关键词的设备。",
+    "把筛选后的数组交给 renderDevices。无匹配时显示 0 件以及提示，清空搜索时恢复全部。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const titles = ['CSS 盒模型', 'HTML 表单', 'CSS 布局'];\nconst keyword = ' css '.trim().toLowerCase();\nconst matches = titles.filter((title) => title.toLowerCase().includes(keyword));\n// matches 是 ['CSS 盒模型', 'CSS 布局']",
+    "note": "搜索课程标题时，把关键词和待匹配文本都转成小写。includes 能在标题任意位置查找一个片段。"
+  },
+  "hint": "startsWith 只能匹配开头，「录音」在「数码录音笔」中间。将设备名和关键词转换为相同大小写后用 includes。"
+}

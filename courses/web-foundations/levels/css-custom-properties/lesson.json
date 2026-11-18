@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "用自定义属性统一状态色",
-  "goal": "用 var() 读取同一组件中可局部覆盖的颜色。",
-  "summary": "两张状态卡由同一条 CSS 规则控制文字与边框颜色。已登记卡有专属主题色，待核对卡使用默认色。",
+  "title": "Unify status colors with custom attributes",
+  "goal": "Use var() to read colors that can be partially overridden in the same component.",
+  "summary": "The text and border colors of the two status cards are controlled by the same CSS rule. Registered cards have exclusive theme colors, and cards to be verified use the default color.",
   "tasks": [
-    "让 .ticket 的文字和边框颜色使用 var(--ticket-color, #243447)。",
-    "为 .registered 定义 --ticket-color: #125a46。保持未定义变量的另一张卡为默认色。"
+    "Let .ticket text and border color use var(--ticket-color, #243447).",
+    "defines --ticket-color: #125a46 for .registered. Leave the other card with undefined variables as the default color."
   ],
   "example": {
     "language": "css",
     "code": ":root { --accent: #7c460e; }\n.card { color: var(--accent, #243447); }",
-    "note": "-- 开头的自定义属性可以像普通属性一样按作用范围覆写，var 的第二项是备用值。"
+    "note": "-- The custom attributes at the beginning can be overridden by scope like ordinary attributes, and the second item of var is the backup value."
   },
-  "hint": "把变量和值写在 .registered 上，让相同的组件规则在两张卡片上分别取值。"
+  "hint": "Write the variables and values ​​in .registered so that the same component rules take values ​​on the two cards."
 }

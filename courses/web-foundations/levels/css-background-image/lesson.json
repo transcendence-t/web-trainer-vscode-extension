@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "把背景图定位到卡片右下角",
-  "goal": "独立设置背景图的重复方式、位置和大小。",
-  "summary": "导览卡已有一张内嵌的装饰图。把它缩小到 96px 宽，放到卡片右下角，只画一次。",
+  "title": "Position the background image to the lower right corner of the card",
+  "goal": "independently sets the repeating mode, position and size of the background image.",
+  "summary": "navigation card already has an embedded decorative image. Shrink it to 96px wide, place it in the lower right corner of the card, and draw it only once.",
   "tasks": [
-    "让 .map-card 的背景图不重复，位置为右下角，宽 96px，高度保持比例。",
-    "保留起始样式中已经写好的 background-image。"
+    "makes the background image of .map-card non-repeating, the position is the lower right corner, the width is 96px, and the height remains proportional.",
+    "retains the background-image already written in the starting style."
   ],
   "example": {
     "language": "css",
     "code": ".ticket {\n  background-repeat: no-repeat;\n  background-position: right top;\n  background-size: 48px auto;\n}",
-    "note": "位置用水平和垂直方向描述。高度设为 auto 时保持原图比例。"
+    "note": "position is described in horizontal and vertical directions. When the height is set to auto, the original image proportions are maintained."
   },
-  "hint": "保留 background-image；用另外三条属性覆盖位置、大小和重复。"
+  "hint": "retains background-image; uses three other properties to cover position, size, and repetition."
 }

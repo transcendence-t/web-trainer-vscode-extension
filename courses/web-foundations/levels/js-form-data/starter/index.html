@@ -1,26 +1,26 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>读取表单中的单值与多值字段</title>
+  <title>Read single-value and multi-value fields in the form</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <main class="sheet">
-    <h1>读取表单中的单值与多值字段</h1>
+    <h1>Read single-value and multi-value fields in the form</h1>
     <form id="application">
-      <label for="visitor">姓名</label> <input id="visitor" name="visitor" required>
-      <fieldset><legend>可参加时段</legend>
-        <label><input id="morning" type="checkbox" name="session" value="上午"> 上午</label>
-        <label><input id="afternoon" type="checkbox" name="session" value="下午"> 下午</label>
+      <label for="visitor">Name</label> <input id="visitor" name="visitor" required>
+      <fieldset><legend>can participate in the period</legend>
+        <label><input id="morning" type="checkbox" name="session" value="Morning"> Morning</label>
+        <label><input id="afternoon" type="checkbox" name="session" value="Afternoon"> Afternoon</label>
       </fieldset>
-      <button type="submit">查看回执</button>
+      <button type="submit">View receipt</button>
     </form>
-    <p id="receipt" role="status">尚未提交</p>
+    <p id="receipt" role="status">has not been submitted yet</p>
     <script>
-      // 让同页回执能记录提交事件是否已经被拦截。
+      // allows the same page receipt to record whether the submission event has been intercepted.
       document.querySelector("#application").parentElement.addEventListener("submit", (event) => {
         document.querySelector("#receipt").dataset.inPlace = String(event.defaultPrevented);
       });

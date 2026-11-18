@@ -1,6 +1,6 @@
 [
   {
-    "label": "模板初始不显示卡片",
+    "label": "template does not display cards initially",
     "expect": {
       "type": "count",
       "selector": "#cards > li",
@@ -8,7 +8,7 @@
     }
   },
   {
-    "label": "生成两张带标题的卡",
+    "label": "generates two cards with titles",
     "expect": {
       "type": "count",
       "selector": "#cards > li .model",
@@ -22,11 +22,11 @@
     ]
   },
   {
-    "label": "第一张卡使用第一个名称",
+    "label": "The first card uses the first name",
     "expect": {
       "type": "text",
       "selector": "#cards > li:first-child .model",
-      "value": "测距仪"
+      "value": "rangefinder"
     },
     "actions": [
       {
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "label": "第二张卡关联正确编号",
+    "label": "The second card is associated with the correct number",
     "expect": {
       "type": "text",
       "selector": "#cards > li:nth-child(2) .code",
@@ -50,7 +50,7 @@
     ]
   },
   {
-    "label": "重复生成后仍是两张卡",
+    "label": "still has two cards after repeated generation",
     "expect": {
       "type": "count",
       "selector": "#cards > li",

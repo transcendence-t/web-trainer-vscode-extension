@@ -1,0 +1,46 @@
+[
+  {
+    "label": "忽略录入产生的空项",
+    "expect": {
+      "type": "function",
+      "name": "labelLine",
+      "args": [
+        " 手作, ,绘画, 光影 "
+      ],
+      "value": "手作 / 绘画 / 光影"
+    }
+  },
+  {
+    "label": "空项全部移除",
+    "expect": {
+      "type": "function",
+      "name": "labelLine",
+      "args": [
+        ", ,"
+      ],
+      "value": ""
+    }
+  },
+  {
+    "label": "只保留一个标签时无分隔符",
+    "expect": {
+      "type": "function",
+      "name": "labelLine",
+      "args": [
+        "图书,"
+      ],
+      "value": "图书"
+    }
+  },
+  {
+    "label": "保留重复标签与顺序",
+    "expect": {
+      "type": "function",
+      "name": "labelLine",
+      "args": [
+        "A,B,A"
+      ],
+      "value": "A / B / A"
+    }
+  }
+]

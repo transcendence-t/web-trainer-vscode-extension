@@ -1,0 +1,34 @@
+[
+  {
+    "label": "场馆列头跨两行",
+    "expect": {
+      "type": "text",
+      "selector": "thead tr:first-child th[scope=\"col\"][rowspan=\"2\"]",
+      "value": "场馆"
+    }
+  },
+  {
+    "label": "日期组标题横跨两列",
+    "expect": {
+      "type": "text",
+      "selector": "thead th[colspan=\"2\"]",
+      "value": "周六与周日"
+    }
+  },
+  {
+    "label": "第二行不重复占位",
+    "expect": {
+      "type": "count",
+      "selector": "thead tr:nth-child(2) > th",
+      "value": 2
+    }
+  },
+  {
+    "label": "日期列头顺序正确",
+    "expect": {
+      "type": "text",
+      "selector": "thead tr:nth-child(2) th:first-child",
+      "value": "周六"
+    }
+  }
+]

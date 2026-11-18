@@ -1,50 +1,50 @@
 [
   {
-    "label": "把室名和座位数插入提示",
+    "label": "Insert room name and number of seats into prompt",
     "expect": {
       "type": "function",
       "name": "seatMessage",
       "args": [
-        "南楼自习室",
+        "South Building Study Room",
         8
       ],
-      "value": "南楼自习室还有 8 个空位。"
+      "value": "South Building Study Room has 8 seats left."
     }
   },
   {
-    "label": "零个空位也显示数字",
+    "label": "Zero vacancies  has display numbers",
     "expect": {
       "type": "function",
       "name": "seatMessage",
       "args": [
-        "北楼阅览室",
+        "North Building Reading Room",
         0
       ],
-      "value": "北楼阅览室还有 0 个空位。"
+      "value": "North Building Reading Room has 0 seats left."
     }
   },
   {
-    "label": "较大的预约空间使用同一模板",
+    "label": "Larger reservation space uses the same template",
     "expect": {
       "type": "function",
       "name": "seatMessage",
       "args": [
-        "二号阅读区",
+        "Reading Area No. 2",
         24
       ],
-      "value": "二号阅读区还有 24 个空位。"
+      "value": "Reading Area No. 2 has 24 seats left."
     }
   },
   {
-    "label": "保留自习室名称中的空格",
+    "label": "Keep spaces in study room names",
     "expect": {
       "type": "function",
       "name": "seatMessage",
       "args": [
-        "A 组自习室",
+        "Group A study room",
         1
       ],
-      "value": "A 组自习室还有 1 个空位。"
+      "value": "Group A study room has 1 seats left."
     }
   }
 ]

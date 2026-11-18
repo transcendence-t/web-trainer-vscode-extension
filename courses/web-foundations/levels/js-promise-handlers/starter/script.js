@@ -1,6 +1,6 @@
 function askDesk(isAvailable) {
-  if (isAvailable) return Promise.resolve('窗口 2');
-  return Promise.reject(new Error('暂时无法分配'));
+  if (isAvailable) return Promise.resolve('window 2');
+  return Promise.reject(new Error('No service window is available right now'));
 }
 
-// 给按钮绑定异步操作。
+// Bind asynchronous operations to buttons.

@@ -1,6 +1,6 @@
 [
   {
-    "label": "东段关闭公告使用浅黄底",
+    "label": "Eastern section closure announcement uses light yellow background",
     "expect": {
       "type": "style",
       "selector": ".status:nth-of-type(1)",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "木栈道关闭公告使用浅黄底",
+    "label": "Boardwalk closure announcement uses light yellow background",
     "expect": {
       "type": "style",
       "selector": ".status:nth-of-type(3)",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "开放公告保持透明背景",
+    "label": "Open announcement maintains transparent background",
     "expect": {
       "type": "style",
       "selector": ".status:nth-of-type(2)",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "关闭公告保留原文字颜色",
+    "label": "Close the announcement and keep the original text color",
     "expect": {
       "type": "style",
       "selector": ".closure",

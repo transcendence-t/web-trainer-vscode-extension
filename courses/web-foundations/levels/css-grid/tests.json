@@ -1,6 +1,6 @@
 [
   {
-    "label": "作品区采用 Grid",
+    "label": "works area uses Grid",
     "expect": {
       "type": "style",
       "selector": ".gallery",
@@ -9,17 +9,17 @@
     }
   },
   {
-    "label": "作品区有两列等宽网格",
+    "label": "There are two equal-width grids in the work area",
     "expect": {
       "type": "style",
       "selector": ".gallery",
       "property": "grid-template-columns",
       "value": "124px 124px"
     },
-    "hint": "在题目给定的 260px 宽度下，两列各 124px，中间留 12px。"
+    "hint": "Under the 260px width given in the question, the two columns are 124px each, leaving 12px in the middle."
   },
   {
-    "label": "行与列的间距均为 12px",
+    "label": "The spacing between rows and columns is 12px",
     "expect": {
       "type": "style",
       "selector": ".gallery",

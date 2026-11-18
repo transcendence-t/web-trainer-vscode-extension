@@ -1,6 +1,6 @@
 [
   {
-    "label": "活动名称使用蓝色",
+    "label": "event name uses blue",
     "expect": {
       "type": "style",
       "selector": "#swap-title",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "活动时间使用蓝色",
+    "label": "uses blue during activity time",
     "expect": {
       "type": "style",
       "selector": "#swap-time",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "活动名称字重为 600",
+    "label": "event name font weight is 600",
     "expect": {
       "type": "style",
       "selector": "#swap-title",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "活动时间字重为 600",
+    "label": "activity time font weight is 600",
     "expect": {
       "type": "style",
       "selector": "#swap-time",
@@ -36,17 +36,17 @@
     }
   },
   {
-    "label": "活动说明保留原色",
+    "label": "activity description retains original color",
     "expect": {
       "type": "style",
       "selector": "#swap-note",
       "property": "color",
       "value": "rgb(36, 52, 71)"
     },
-    "hint": "用 .time-label 选中时间，说明段落也属于 p。"
+    "hint": "uses .time-label to select the time, indicating that the paragraph also belongs to p."
   },
   {
-    "label": "页面主标题保留原色",
+    "label": "The main title of the page retains its original color",
     "expect": {
       "type": "style",
       "selector": "main > h1",

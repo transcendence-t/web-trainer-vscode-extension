@@ -1,0 +1,17 @@
+{
+  "focus": "script.js",
+  "title": "用按钮展开设备借用说明",
+  "goal": "用 hidden 控制显示，并让 aria-expanded 同步表达按钮控制的展开状态。",
+  "summary": "设备借用页面把补充说明收起来。读者可以打开说明看一眼，再把它收回。",
+  "tasks": [
+    "页面打开时让 #loan-guide 隐藏，#toggle-guide 的 aria-expanded 为 false。",
+    "点击按钮时切换说明的 hidden 状态。展开时把按钮的 aria-expanded 设为 true。",
+    "再点一次重新隐藏说明，并把 aria-expanded 恢复为 false。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const details = document.querySelector('#delivery-details');\nconst control = document.querySelector('#delivery-toggle');\n\ncontrol.addEventListener('click', () => {\n  details.hidden = !details.hidden;\n  control.setAttribute('aria-expanded', String(!details.hidden));\n});",
+    "note": "配送说明被隐藏时，按钮的展开状态是 false。读取 hidden 后取反，就能得到按钮应报告的展开状态。"
+  },
+  "hint": "hidden 为 true 表示内容隐藏，所以写 aria-expanded 时要取反。直接填同一个值会让两种状态相反。"
+}

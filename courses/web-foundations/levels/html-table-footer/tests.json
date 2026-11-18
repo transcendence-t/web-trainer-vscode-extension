@@ -1,6 +1,6 @@
 [
   {
-    "label": "表身只有两行明细",
+    "label": "has only two lines of details on the watch body.",
     "expect": {
       "type": "count",
       "selector": "table > tbody > tr",
@@ -8,15 +8,15 @@
     }
   },
   {
-    "label": "表脚合计使用行标题",
+    "label": "Table foot total uses row header",
     "expect": {
       "type": "text",
       "selector": "table > tfoot th[scope=\"row\"]",
-      "value": "合计"
+      "value": "Total"
     }
   },
   {
-    "label": "汇总数字仍然为 10",
+    "label": "summary number is still 10",
     "expect": {
       "type": "text",
       "selector": "table > tfoot td",

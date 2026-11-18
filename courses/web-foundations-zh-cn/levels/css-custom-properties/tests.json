@@ -1,0 +1,38 @@
+[
+  {
+    "label": "已登记卡拥有局部主题变量",
+    "expect": {
+      "type": "style",
+      "selector": ".registered",
+      "property": "--ticket-color",
+      "value": "#125a46"
+    }
+  },
+  {
+    "label": "已登记卡的文字跟随变量",
+    "expect": {
+      "type": "style",
+      "selector": ".registered",
+      "property": "color",
+      "value": "rgb(18, 90, 70)"
+    }
+  },
+  {
+    "label": "已登记卡的边框跟随变量",
+    "expect": {
+      "type": "style",
+      "selector": ".registered",
+      "property": "border-top-color",
+      "value": "rgb(18, 90, 70)"
+    }
+  },
+  {
+    "label": "待核对卡使用默认色",
+    "expect": {
+      "type": "style",
+      "selector": ".waiting",
+      "property": "border-top-color",
+      "value": "rgb(36, 52, 71)"
+    }
+  }
+]

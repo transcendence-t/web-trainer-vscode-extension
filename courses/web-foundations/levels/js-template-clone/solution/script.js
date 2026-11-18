@@ -1,6 +1,6 @@
 const devices = [
-  { name: '测距仪', code: 'L03' },
-  { name: '角度尺', code: 'R16' },
+  { name: 'rangefinder', code: 'L03' },
+  { name: 'angle ruler', code: 'R16' },
 ];
 const template = document.querySelector('#card-template');
 const cards = document.querySelector('#cards');

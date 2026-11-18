@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "为可伸缩示意框保留宽高比",
-  "goal": "在改变宽度时使用 aspect-ratio 推导高度。",
-  "summary": "示意框在窄视口缩小，在宽视口封顶，并始终采用 16:9 的比例。",
+  "title": "Preserve aspect ratio for scalable schematic boxes",
+  "goal": "uses aspect-ratio to derive height when changing width.",
+  "summary": "representation box shrinks in narrow viewports and caps in wide viewports, always using a 16:9 ratio.",
   "tasks": [
-    "保留 .screen 已有的流式宽度。",
-    "设置 16:9 的宽高比，让浏览器计算高度。"
+    "retains the existing streaming width of .screen.",
+    "sets the aspect ratio to 16:9 and lets the browser calculate the height."
   ],
   "example": {
     "language": "css",
     "code": ".frame { width: min(100%, 320px); aspect-ratio: 4 / 3; }",
-    "note": "aspect-ratio 的前项是宽、后项是高。另一维为 auto 时浏览器可按比例计算。"
+    "note": "aspect-ratio is width and the rear term is height. The browser can calculate proportionally when the other dimension is auto."
   },
-  "hint": "只写 aspect-ratio，可以让高度跟随宽度；这里不需要固定 height。"
+  "hint": "only writes aspect-ratio, which allows the height to follow the width; there is no need to fix the height here."
 }

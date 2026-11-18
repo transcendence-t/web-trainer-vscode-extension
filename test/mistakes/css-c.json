@@ -1,48 +1,48 @@
 {
   "css-margin": {
-    "name": "把上方外边距误写成 padding-top",
+    "name": "mistakenly wrote the top margin as padding-top",
     "files": {
       "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.bus-update { margin: 0; }\n.stop-note {\n  width: 200px;\n  max-width: 100%;\n  padding: 12px;\n  border: 1px solid #b6cfc4;\n  border-radius: 8px;\n  background: #edf5f2;\n}\n\n.stop-note { margin: 0 auto; padding-top: 24px; }\n"
     }
   },
   "css-box-sizing": {
-    "name": "使用 content-box 导致标签超出托盘",
+    "name": "Using content-box causes labels to exceed the tray",
     "files": {
       "style.css": "body { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.parcel-slot {\n  width: 230px;\n  max-width: 100%;\n  background: #e9f2ff;\n  outline: 2px dashed #7596b7;\n}\n.parcel-label {\n  width: 100%;\n  padding: 10px;\n  border: 2px solid #355777;\n  background: #f8fbff;\n}\n\n.parcel-label { box-sizing: content-box; }\n"
     }
   },
   "css-display": {
-    "name": "设成 block 后两个标签换行",
+    "name": "is set to block and then the two labels are wrapped.",
     "files": {
       "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.entry-tag {\n  width: 108px;\n  height: 34px;\n  line-height: 34px;\n  text-align: center;\n  border-radius: 6px;\n  background: #e0f1e8;\n  color: #184c3d;\n}\n#entry-check { background: #fff1d6; color: #6c4419; }\n\n.entry-tag { display: block; }\n"
     }
   },
   "css-visibility": {
-    "name": "用 display: none 隐藏后，终点向前移动",
+    "name": "is hidden with display: none, the end point moves forward",
     "files": {
       "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.route-stops { margin: 0; padding: 0; list-style: none; }\n.route-stop {\n  width: 80px;\n  height: 42px;\n  display: inline-block;\n  line-height: 42px;\n  text-align: center;\n  border-radius: 6px;\n  background: #e9f2ff;\n  color: #284b6b;\n}\n\n#middle-stop { display: none; }\n"
     }
   },
   "css-overflow": {
-    "name": "固定高度却让溢出内容继续画在框外",
+    "name": "Fixed height but allows overflow content to continue to be drawn outside the frame",
     "files": {
       "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.history {\n  height: 124px;\n  padding: 4px 12px;\n  border: 1px solid #8dada0;\n  border-radius: 8px;\n  background: #f7fbf9;\n}\n.history p {\n  margin: 0;\n  padding: 8px 0;\n  line-height: 24px;\n  border-bottom: 1px solid #dbe8e1;\n}\n.history p:last-child { border-bottom: 0; }\n\n.history { overflow-y: visible; }\n"
     }
   },
   "css-position-relative": {
-    "name": "把相对定位写成绝对定位，展签移出框",
+    "name": "Write relative positioning as absolute positioning, and move the display label out of the box",
     "files": {
       "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.tag-stack {\n  width: 250px;\n  max-width: 100%;\n  padding: 12px;\n  border: 1px dashed #86a496;\n}\n.shelf-tag {\n  width: 150px;\n  padding: 8px 12px;\n  border-radius: 6px;\n  background: #dcefe5;\n}\n.shelf-note { margin-top: 20px; background: #eaf1f8; }\n\n.featured-tag {\n  position: absolute;\n  top: 8px;\n  left: 16px;\n}\n"
     }
   },
   "css-position-absolute": {
-    "name": "漏掉卡片的定位参照，角标跑到页面边缘",
+    "name": "Missing the positioning reference of the card, the corner mark runs to the edge of the page",
     "files": {
       "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.branch-card {\n  width: 252px;\n  max-width: 100%;\n  min-height: 120px;\n  padding: 16px;\n  border: 1px solid #c0d4cd;\n  border-radius: 8px;\n  background: #f1f8f5;\n}\n.branch-card h2 { margin: 0; font-size: 1.05rem; }\n.branch-card p { margin: 6px 0; }\n.branch-badge {\n  display: inline-block;\n  padding: 2px 8px;\n  border-radius: 8px;\n  background: #dcefe5;\n  color: #184c3d;\n}\n\n.branch-badge {\n  position: absolute;\n  top: 10px;\n  right: 12px;\n}\n"
     }
   },
   "css-button": {
-    "name": "调换了按钮内边距的上下、左右值",
+    "name": "changed the upper, lower, left and right values ​​of the button padding.",
     "files": {
       "style.css": "* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  padding: 24px 16px;\n  min-height: 100vh;\n  font: 16px/1.5 system-ui, sans-serif;\n  color: #243447;\n  background: #edf5f2;\n}\n.sheet {\n  max-width: 420px;\n  margin: 0 auto;\n  padding: 22px;\n  border: 1px solid #cddfd8;\n  border-radius: 14px;\n  background: #fff;\n}\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.25; }\nh2 { font-size: 1.125rem; }\np, ul, figure { margin: .6em 0; }\nbutton, input { font: inherit; }\nbutton { cursor: pointer; }\na { color: #125a46; }\n.signup { border: 0; }\n\n.signup {\n  background-color: #125a46;\n  color: #ffffff;\n  padding: 16px 8px;\n  border-radius: 999px;\n}\n"
     }

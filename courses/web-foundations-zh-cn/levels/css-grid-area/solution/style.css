@@ -1,0 +1,35 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }
+.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }
+h1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+img { max-width: 100%; height: auto; }
+a { color: #125a46; }
+
+.card {
+  padding: 12px;
+  border-radius: 8px;
+  background: #eaf4f0;
+}
+.card h2 { margin: 0 0 .35em; font-size: 1.05rem; }
+.card p { margin: 0; }
+
+.show-board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.show-overview { background: #dceee8; }
+
+/* 在下面编写本关样式。 */
+
+.show-board {
+  grid-template-areas:
+    "overview overview"
+    "stage tickets";
+}
+
+.show-overview { grid-area: overview; }
+.stage-crew { grid-area: stage; }
+.front-desk { grid-area: tickets; }

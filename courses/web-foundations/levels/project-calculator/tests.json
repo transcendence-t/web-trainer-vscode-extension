@@ -1,6 +1,6 @@
 [
   {
-    "label": "窄窗口里两个数字输入框并排",
+    "label": "Two number input boxes side by side in a narrow window",
     "expect": {
       "type": "layout",
       "selector": "#second-number",
@@ -10,7 +10,7 @@
     "viewport": 320
   },
   {
-    "label": "窄窗口里两个数字输入框等宽",
+    "label": "Two number input boxes in a narrow window are of equal width",
     "expect": {
       "type": "layout",
       "selector": "#second-number",
@@ -20,7 +20,7 @@
     "viewport": 320
   },
   {
-    "label": "宽窗口里两个数字输入框仍并排",
+    "label": "Two number input boxes are still side by side in a wide window",
     "expect": {
       "type": "layout",
       "selector": "#second-number",
@@ -30,7 +30,7 @@
     "viewport": 720
   },
   {
-    "label": "两个运算按钮并排",
+    "label": "Two calculation buttons side by side",
     "expect": {
       "type": "layout",
       "selector": "#calc-subtract",
@@ -40,7 +40,7 @@
     "viewport": 320
   },
   {
-    "label": "两个运算按钮等宽",
+    "label": "Two calculation buttons of equal width",
     "expect": {
       "type": "layout",
       "selector": "#calc-subtract",
@@ -50,7 +50,7 @@
     "viewport": 320
   },
   {
-    "label": "结果位于按钮组下方",
+    "label": "results below the button group",
     "expect": {
       "type": "layout",
       "selector": ".result",
@@ -60,7 +60,7 @@
     "viewport": 320
   },
   {
-    "label": "输入组的列间距为 12px",
+    "label": "input group has a column spacing of 12px",
     "expect": {
       "type": "style",
       "selector": ".number-fields",
@@ -69,7 +69,7 @@
     }
   },
   {
-    "label": "按钮组的列间距为 12px",
+    "label": "button group has 12px column spacing",
     "expect": {
       "type": "style",
       "selector": ".operations",
@@ -78,15 +78,15 @@
     }
   },
   {
-    "label": "刚打开时显示等待计算",
+    "label": "displays waiting for calculation when it is first opened.",
     "expect": {
       "type": "text",
       "selector": "#calc-result",
-      "value": "等待计算"
+      "value": "waiting for calculation"
     }
   },
   {
-    "label": "8 加 5 得到 13",
+    "label": "8 plus 5 gets 13",
     "expect": {
       "type": "text",
       "selector": "#calc-result",
@@ -110,7 +110,7 @@
     ]
   },
   {
-    "label": "负数和小数可以相加",
+    "label": "Negative numbers and decimals can be added",
     "expect": {
       "type": "text",
       "selector": "#calc-result",
@@ -134,7 +134,7 @@
     ]
   },
   {
-    "label": "从第一个数中减去第二个数",
+    "label": "Subtract the second number from the first number",
     "expect": {
       "type": "text",
       "selector": "#calc-result",
@@ -158,7 +158,7 @@
     ]
   },
   {
-    "label": "减法可以得到负数",
+    "label": "Subtraction can get negative numbers",
     "expect": {
       "type": "text",
       "selector": "#calc-result",
@@ -182,7 +182,7 @@
     ]
   },
   {
-    "label": "0 是有效输入",
+    "label": "0 is a valid input",
     "expect": {
       "type": "text",
       "selector": "#calc-result",
@@ -206,11 +206,11 @@
     ]
   },
   {
-    "label": "留空时提示输入有效数字",
+    "label": "prompts for valid digits when left blank",
     "expect": {
       "type": "text",
       "selector": "#calc-result",
-      "value": "请输入两个有效数字。"
+      "value": "Please enter two valid digits."
     },
     "actions": [
       {
@@ -230,11 +230,11 @@
     ]
   },
   {
-    "label": "全空格输入也视为空",
+    "label": "input with all spaces is also considered empty",
     "expect": {
       "type": "text",
       "selector": "#calc-result",
-      "value": "请输入两个有效数字。"
+      "value": "Please enter two valid digits."
     },
     "actions": [
       {
@@ -254,11 +254,11 @@
     ]
   },
   {
-    "label": "带字母的数值文本会被拒绝",
+    "label": "Numeric text with letters will be rejected",
     "expect": {
       "type": "text",
       "selector": "#calc-result",
-      "value": "请输入两个有效数字。"
+      "value": "Please enter two valid digits."
     },
     "actions": [
       {
@@ -278,11 +278,11 @@
     ]
   },
   {
-    "label": "无限大的输入会被拒绝",
+    "label": "Infinitely large input will be rejected",
     "expect": {
       "type": "text",
       "selector": "#calc-result",
-      "value": "请输入两个有效数字。"
+      "value": "Please enter two valid digits."
     },
     "actions": [
       {
@@ -302,7 +302,7 @@
     ]
   },
   {
-    "label": "改正无效输入后可以继续运算",
+    "label": "The operation can continue after correcting the invalid input",
     "expect": {
       "type": "text",
       "selector": "#calc-result",

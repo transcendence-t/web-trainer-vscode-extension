@@ -1,0 +1,29 @@
+[
+  {
+    "label": "正在展出的记录变绿",
+    "expect": {
+      "type": "style",
+      "selector": "#new",
+      "property": "color",
+      "value": "rgb(18, 90, 70)"
+    }
+  },
+  {
+    "label": "归档记录保留默认色",
+    "expect": {
+      "type": "style",
+      "selector": "#old",
+      "property": "color",
+      "value": "rgb(36, 52, 71)"
+    }
+  },
+  {
+    "label": "普通提示不受影响",
+    "expect": {
+      "type": "style",
+      "selector": "#plain",
+      "property": "color",
+      "value": "rgb(36, 52, 71)"
+    }
+  }
+]

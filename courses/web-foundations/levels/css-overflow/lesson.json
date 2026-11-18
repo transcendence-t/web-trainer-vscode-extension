@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "把长记录放进滚动区域",
-  "goal": "在固定高度的盒子中用 overflow-y: auto 容纳超出的内容。",
-  "summary": "温室巡查记录越来越多，旧页面的末尾记录溢出了边框。记录区应只在超出高度时滚动。",
+  "title": "Put long records into the scroll area",
+  "goal": "Use overflow-y: auto to accommodate excess content in a fixed-height box.",
+  "summary": "There are more and more greenhouse inspection records, and the records at the end of the old page overflow the border. The recording area should only scroll when the height is exceeded.",
   "tasks": [
-    "保留 .history 的 124px 高度，让垂直滚动条只在内容超出框时出现。",
-    "点击「跳到最后一条」，观察末尾记录能否滚进框内。"
+    "Preserve the 124px height of .history so that the vertical scrollbar only appears when the content exceeds the box.",
+    "Click \"Skip to the last item\" and observe whether the record at the end can be rolled into the box."
   ],
   "example": {
     "language": "css",
     "code": ".song-queue {\n  height: 10rem;\n  overflow-y: auto;\n}",
-    "note": "播放队列内容超过 10rem 时，浏览器按需提供垂直滚动条。"
+    "note": "When the playback queue content exceeds 10rem, the browser provides a vertical scroll bar on demand."
   },
-  "hint": "固定高度后还需要处理超出的行。overflow-y 的默认值 visible 会让内容继续画在框外，auto 可以按需提供滚动。"
+  "hint": "After fixing the height, the excess rows still need to be processed. The default value of overflow-y, visible, will cause content to continue to be drawn outside the box, and auto can provide scrolling on demand."
 }

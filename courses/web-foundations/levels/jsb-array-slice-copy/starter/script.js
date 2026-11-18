@@ -4,5 +4,5 @@ function comparePreview(entries, count) {
 }
 
 function peekLine(entries, count) {
-  // 完成本关函数。
+  // completes this level function.
 }

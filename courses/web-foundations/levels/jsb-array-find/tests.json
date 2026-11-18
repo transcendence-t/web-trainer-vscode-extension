@@ -1,6 +1,6 @@
 [
   {
-    "label": "重复编号取第一条",
+    "label": "For repeated numbers, take the first one",
     "expect": {
       "type": "function",
       "name": "findRecord",
@@ -8,23 +8,23 @@
         [
           {
             "id": "A7",
-            "room": "木工坊"
+            "room": "Wood Workshop"
           },
           {
             "id": "A7",
-            "room": "服务台"
+            "room": "Service Desk"
           }
         ],
         "A7"
       ],
       "value": {
         "id": "A7",
-        "room": "木工坊"
+        "room": "Wood Workshop"
       }
     }
   },
   {
-    "label": "按 id 跳过其他记录",
+    "label": "Skip other records by id",
     "expect": {
       "type": "function",
       "name": "findRecord",
@@ -35,19 +35,19 @@
           },
           {
             "id": "B2",
-            "room": "前台"
+            "room": "front desk"
           }
         ],
         "B2"
       ],
       "value": {
         "id": "B2",
-        "room": "前台"
+        "room": "front desk"
       }
     }
   },
   {
-    "label": "未找到返回 null",
+    "label": "not found returns null",
     "expect": {
       "type": "function",
       "name": "findRecord",
@@ -63,7 +63,7 @@
     }
   },
   {
-    "label": "空数组返回 null",
+    "label": "empty array returns null",
     "expect": {
       "type": "function",
       "name": "findRecord",

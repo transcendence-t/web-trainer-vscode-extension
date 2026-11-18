@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "裁剪图片以填满固定缩略图",
+  "goal": "结合 object-fit 与 object-position 让缩略图保持比例。",
+  "summary": "空间固定的展馆缩略图需要铺满取景框，小部分边缘允许裁切，图像顶部应保留。",
+  "tasks": [
+    "为 .thumbnail 使用 cover 填满已有的 160×100px 盒子。",
+    "把内容对齐到顶部并水平居中。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".portrait { object-fit: cover; object-position: center top; }",
+    "note": "cover 按比例缩放来覆盖盒子。object-position 指定超出盒子的部分如何裁切。"
+  },
+  "hint": "尺寸已经写好，保留它们并增加 object-fit 与 object-position。"
+}

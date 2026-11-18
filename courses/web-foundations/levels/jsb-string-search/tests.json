@@ -1,6 +1,6 @@
 [
   {
-    "label": "包含混合大小写关键字",
+    "label": "contains mixed case keywords",
     "expect": {
       "type": "function",
       "name": "matchesKeyword",
@@ -12,31 +12,31 @@
     }
   },
   {
-    "label": "任意位置可匹配",
+    "label": "can be matched at any position",
     "expect": {
       "type": "function",
       "name": "matchesKeyword",
       "args": [
-        "DX8-充电模块",
-        "充电"
+        "DX8-charging module",
+        "charging"
       ],
       "value": true
     }
   },
   {
-    "label": "缺少关键字时为 false",
+    "label": "is false when the keyword is missing",
     "expect": {
       "type": "function",
       "name": "matchesKeyword",
       "args": [
-        "DX8-充电模块",
-        "按钮"
+        "DX8-charging module",
+        "button"
       ],
       "value": false
     }
   },
   {
-    "label": "空白查询显示全部",
+    "label": "Blank query shows all",
     "expect": {
       "type": "function",
       "name": "matchesKeyword",

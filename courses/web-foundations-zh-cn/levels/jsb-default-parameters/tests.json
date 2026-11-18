@@ -1,0 +1,33 @@
+[
+  {
+    "label": "省略参数时领取一包",
+    "expect": {
+      "type": "function",
+      "name": "supplyUnits",
+      "args": [],
+      "value": 6
+    }
+  },
+  {
+    "label": "两包有十二个",
+    "expect": {
+      "type": "function",
+      "name": "supplyUnits",
+      "args": [
+        2
+      ],
+      "value": 12
+    }
+  },
+  {
+    "label": "明确指定零包",
+    "expect": {
+      "type": "function",
+      "name": "supplyUnits",
+      "args": [
+        0
+      ],
+      "value": 0
+    }
+  }
+]

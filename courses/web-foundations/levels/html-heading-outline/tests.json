@@ -1,6 +1,6 @@
 [
   {
-    "label": "只有一个主标题",
+    "label": "has only one main title",
     "expect": {
       "type": "count",
       "selector": "main h1",
@@ -8,7 +8,7 @@
     }
   },
   {
-    "label": "两个同级栏目",
+    "label": "Two columns at the same level",
     "expect": {
       "type": "count",
       "selector": "main h2",
@@ -16,27 +16,27 @@
     }
   },
   {
-    "label": "签到是第一个栏目",
+    "label": "Sign-in is the first column",
     "expect": {
       "type": "text",
       "selector": "main h2",
-      "value": "签到安排"
+      "value": "check-in arrangement"
     }
   },
   {
-    "label": "补签位于两个栏目之间",
+    "label": "re-signing is located between the two columns",
     "expect": {
       "type": "text",
       "selector": "h2 + p + h3",
-      "value": "补签"
+      "value": "re-signing"
     }
   },
   {
-    "label": "领卡为下一个同级栏目",
+    "label": "Card collection is the next column of the same level",
     "expect": {
       "type": "text",
       "selector": "h3 + p + h2",
-      "value": "领卡安排"
+      "value": "Card collection arrangement"
     }
   }
 ]

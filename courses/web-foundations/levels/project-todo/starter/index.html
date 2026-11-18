@@ -1,28 +1,28 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>小组展示待办</title>
+  <title>Group display to-do</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 <main class="sheet">
-  <h1>小组展示待办</h1>
+  <h1>Group display to-do</h1>
   <form id="todo-form">
-    <label for="task-input">待办事项</label>
+    <label for="task-input">To-do list</label>
     <div class="task-entry">
-      <input id="task-input" name="task" type="text" placeholder="例如，收齐讲解稿">
-      <button id="add-task" type="submit">添加</button>
+      <input id="task-input" name="task" type="text" placeholder="For example, collect all the explanations">
+      <button id="add-task" type="submit">Add</button>
     </div>
   </form>
   <ul id="task-list">
     <li class="task-row">
-      <span class="task-title">核对展示顺序</span>
+      <span class="task-title">Check display order</span>
       <div class="task-actions">
-        <button type="button" data-action="toggle" aria-pressed="false">完成</button>
-        <button type="button" data-action="delete">删除</button>
+        <button type="button" data-action="toggle" aria-pressed="false">completed</button>
+        <button type="button" data-action="delete">Delete</button>
       </div>
     </li>
   </ul>
@@ -30,8 +30,8 @@
     <li class="task-row">
       <span class="task-title"></span>
       <div class="task-actions">
-        <button type="button" data-action="toggle" aria-pressed="false">完成</button>
-        <button type="button" data-action="delete">删除</button>
+        <button type="button" data-action="toggle" aria-pressed="false">completed</button>
+        <button type="button" data-action="delete">Delete</button>
       </div>
     </li>
   </template>

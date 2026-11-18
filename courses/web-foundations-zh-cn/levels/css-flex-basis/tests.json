@@ -1,0 +1,41 @@
+[
+  {
+    "label": "登记起始宽度为 104px",
+    "expect": {
+      "type": "style",
+      "selector": "#step-a",
+      "property": "flex-basis",
+      "value": "104px"
+    }
+  },
+  {
+    "label": "登记实际宽 104px",
+    "expect": {
+      "type": "style",
+      "selector": "#step-a",
+      "property": "width",
+      "value": "104px"
+    },
+    "viewport": 400
+  },
+  {
+    "label": "第二步骤也宽 104px",
+    "expect": {
+      "type": "style",
+      "selector": "#step-b",
+      "property": "width",
+      "value": "104px"
+    },
+    "viewport": 620
+  },
+  {
+    "label": "两个步骤并排",
+    "expect": {
+      "type": "layout",
+      "selector": "#step-b",
+      "relativeTo": "#step-a",
+      "relation": "right-of"
+    },
+    "viewport": 400
+  }
+]

@@ -1,22 +1,22 @@
 [
   {
-    "label": "场馆列头跨两行",
+    "label": "The venue heading spans two rows",
     "expect": {
       "type": "text",
       "selector": "thead tr:first-child th[scope=\"col\"][rowspan=\"2\"]",
-      "value": "场馆"
+      "value": "Venue"
     }
   },
   {
-    "label": "日期组标题横跨两列",
+    "label": "The date group heading spans two columns",
     "expect": {
       "type": "text",
       "selector": "thead th[colspan=\"2\"]",
-      "value": "周六与周日"
+      "value": "Saturday and Sunday"
     }
   },
   {
-    "label": "第二行不重复占位",
+    "label": "The second row has no duplicate placeholder",
     "expect": {
       "type": "count",
       "selector": "thead tr:nth-child(2) > th",
@@ -24,11 +24,11 @@
     }
   },
   {
-    "label": "日期列头顺序正确",
+    "label": "The date column headings are in the correct order",
     "expect": {
       "type": "text",
       "selector": "thead tr:nth-child(2) th:first-child",
-      "value": "周六"
+      "value": "Saturday"
     }
   }
 ]

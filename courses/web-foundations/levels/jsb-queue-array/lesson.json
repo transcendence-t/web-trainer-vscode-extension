@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "把最后一个队列成员移到开头",
-  "goal": "用 pop 与 unshift 更新数组，并处理空队列。",
-  "summary": "两组工作台轮换值班。交接时让排在最后的一组移到最前，其余组顺序不变。",
+  "title": "Move the last queue member to the beginning",
+  "goal": "uses pop and unshift to update arrays and handle empty queues.",
+  "summary": "Two groups of workbenches are on duty in rotation. When handing over, move the last group to the front, and the order of the other groups remains unchanged.",
   "tasks": [
-    "完成 rotateLast(queue)。非空时取出最后一项，放到开头，再返回整个队列。",
-    "允许直接修改原数组。空数组返回空数组。"
+    "complete rotateLast(queue). If it is not empty, take out the last item, put it at the beginning, and then return the entire queue.",
+    "allows direct modification of the original array. Empty array returns an empty array."
   ],
   "example": {
     "language": "javascript",
-    "code": "const slots = ['白班', '夜班'];\nconst last = slots.pop();\nslots.unshift(last); // slots 变为 ['夜班', '白班']",
-    "note": "pop 返回末项，unshift 返回插入后的长度。返回整个队列要用数组本身。"
+    "code": "const slots = ['day shift', 'night shift'];\nconst last = slots.pop();\nslots.unshift(last); // slots become ['night shift', 'day shift']",
+    "note": "pop returns the last item, and unshift returns the length after insertion. To return the entire queue, use the array itself."
   },
-  "hint": "先判断 length。对空数组调用 pop 会得到 undefined。"
+  "hint": "first determines the length. Calling pop on an empty array returns undefined."
 }

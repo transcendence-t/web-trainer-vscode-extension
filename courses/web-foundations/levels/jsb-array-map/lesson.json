@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "给取餐号加上窗口前缀",
-  "goal": "用 map 把每个数组元素转换成对应的值，保留输入的数量和顺序。",
-  "summary": "取餐窗口用 Q- 开头的标签显示号码。拿到一组数字后，生成相同顺序的新标签。",
+  "title": "Add window prefix to the order number",
+  "goal": "Use map to convert each array element into the corresponding value, preserving the number and order of the input.",
+  "summary": "The food pick-up window displays the number with a label starting with Q-. After getting a set of numbers, generate new labels in the same order.",
   "tasks": [
-    "完成 labelTickets(numbers)。把数组里的每个数字转换成 Q- 加原数字的字符串，例如数字 12 对应「Q-12」。",
-    "返回字符串数组。保留顺序和重复项，空数组返回空数组。"
+    "complete labelTickets(numbers). Convert each number in the array into a Q- string plus the original number, for example, the number 12 corresponds to \"Q-12\".",
+    "returns a string array. Preserves order and duplicates, returns an empty array."
   ],
   "example": {
     "language": "javascript",
-    "code": "const amounts = [2, 5, 1];\nconst labels = amounts.map((amount) => amount + ' 升');\n// labels 是 ['2 升', '5 升', '1 升']",
-    "note": "map 为每项调用一次转换函数，把每次返回的值收集到同一个数组。"
+    "code": "const amounts = [2, 5, 1];\nconst labels = amounts.map((amount) => amount + ' Liter');\n// labels are ['2 liters', '5 liters', '1 liters']",
+    "note": "map calls the conversion function once for each item and collects the returned values ​​each time into the same array."
   },
-  "hint": "箭头函数的回调用花括号时，要写 return 才能把转换结果交给 map。省略 return 会让每一项变成 undefined。"
+  "hint": "When the arrow function callback uses curly braces, return must be written to hand the conversion result to the map. Omitting return makes each item undefined."
 }

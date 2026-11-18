@@ -1,6 +1,6 @@
 [
   {
-    "label": "高于达标线时通过",
+    "label": "passes when it is higher than the standard line",
     "expect": {
       "type": "function",
       "name": "meetsScore",
@@ -12,7 +12,7 @@
     }
   },
   {
-    "label": "恰好达到及格线时也通过",
+    "label": "passes even when it reaches the passing line",
     "expect": {
       "type": "function",
       "name": "meetsScore",
@@ -24,7 +24,7 @@
     }
   },
   {
-    "label": "差一分时未达到",
+    "label": "is one minute short of reaching the",
     "expect": {
       "type": "function",
       "name": "meetsScore",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "分数为 0 时可以判为未达标",
+    "label": "When the score is 0, it can be judged as failing to meet the standard.",
     "expect": {
       "type": "function",
       "name": "meetsScore",
@@ -48,7 +48,7 @@
     }
   },
   {
-    "label": "满分门槛也接受相等的分数",
+    "label": "The full score threshold also accepts equal scores.",
     "expect": {
       "type": "function",
       "name": "meetsScore",

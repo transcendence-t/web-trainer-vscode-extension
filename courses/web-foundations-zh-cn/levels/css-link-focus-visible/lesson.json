@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "给链接提供清晰的键盘焦点",
+  "goal": "用 :focus-visible 标记需要看得见的键盘焦点。",
+  "summary": "指南链接已有下划线。为使用 Tab 键的人增加清晰边框，并参考同一规则设置悬停状态。",
+  "tasks": [
+    "让 .guide:focus-visible 显示 3px 实线轮廓，颜色 #125a46，轮廓偏移 3px。",
+    "保留普通状态，允许把 :hover 加入同一组选择器。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".jump:hover,\n.jump:focus-visible { background: #e6f4ee; }",
+    "note": "同一组选择器可以同时照顾指针悬停和需要明显提示的键盘焦点。"
+  },
+  "hint": "用 outline 和 outline-offset。轮廓绘制在盒子外，不改变布局。"
+}

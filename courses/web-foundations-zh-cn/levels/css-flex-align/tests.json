@@ -1,0 +1,56 @@
+[
+  {
+    "label": "面板主轴保持纵向",
+    "expect": {
+      "type": "style",
+      "selector": ".arrival-panel",
+      "property": "flex-direction",
+      "value": "column"
+    }
+  },
+  {
+    "label": "两项作为整体在主轴居中",
+    "expect": {
+      "type": "style",
+      "selector": ".arrival-panel",
+      "property": "justify-content",
+      "value": "center"
+    }
+  },
+  {
+    "label": "保留项目之间的 12px 间距",
+    "expect": {
+      "type": "style",
+      "selector": ".arrival-panel",
+      "property": "row-gap",
+      "value": "12px"
+    }
+  },
+  {
+    "label": "状态提示水平居中",
+    "expect": {
+      "type": "layout",
+      "selector": "#arrival-status",
+      "relativeTo": ".arrival-panel",
+      "relation": "center-x"
+    }
+  },
+  {
+    "label": "记录链接水平居中",
+    "expect": {
+      "type": "layout",
+      "selector": "#arrival-link",
+      "relativeTo": ".arrival-panel",
+      "relation": "center-x"
+    }
+  },
+  {
+    "label": "链接仍排在状态提示下方",
+    "expect": {
+      "type": "layout",
+      "selector": "#arrival-link",
+      "relativeTo": "#arrival-status",
+      "relation": "below"
+    }
+  }
+]

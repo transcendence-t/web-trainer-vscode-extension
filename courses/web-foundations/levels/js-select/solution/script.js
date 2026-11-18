@@ -1,11 +1,11 @@
 const tour = document.querySelector('#tour');
 const meeting = document.querySelector('#meeting-point');
 const meetingPoints = {
-  ceramics: '10:00 在陶艺馆门口集合。',
-  clocks: '14:00 在钟表馆咨询台集合。',
-  prints: '16:00 在版画馆大厅集合。',
+  ceramics: '10:00 Meet at the entrance of the Ceramic Art Museum.',
+  clocks: '14:00 Meet at the information desk of the Clock Museum.',
+  prints: '16:00 Gather in the lobby of the Printmaking Gallery.',
 };
 
 tour.addEventListener('change', () => {
-  meeting.textContent = meetingPoints[tour.value] ?? '请先选择导览场次。';
+  meeting.textContent = meetingPoints[tour.value] ?? 'Please select the tour session first.';
 });

@@ -1,0 +1,8 @@
+{
+  "jsb-if": {
+    "script.js": "\nfunction packingLabel(weightKg) {\n  let label = '普通包装';\n  if (weightKg >= 10) {\n    label = '加固包装';\n  }\n  return label;\n}\n"
+  },
+  "jsb-accumulator": {
+    "script.js": "\nfunction screeningCapacity(rows) {\n  let total = 0;\n  let seats = 4;\n  for (let row = 0; row < rows; row += 1) {\n    total += seats;\n    seats += 2;\n  }\n  return total;\n}\n"
+  }
+}

@@ -1,36 +1,36 @@
 [
   {
-    "label": "正文有独立的页面标题",
+    "label": "The text has an independent page title",
     "expect": {
       "type": "text",
       "selector": ".sheet > main.reading-content > h1",
-      "value": "社区旧书交换日"
+      "value": "Community Used Book Exchange Day"
     }
   },
   {
-    "label": "页眉包含有名称的页内导航",
+    "label": "In-page navigation with name in header",
     "expect": {
       "type": "exists",
-      "selector": ".sheet > header.site-header > nav.site-nav[aria-label=\"页内导航\"]"
+      "selector": ".sheet > header.site-header > nav.site-nav[aria-label=\"In-page navigation\"]"
     }
   },
   {
-    "label": "正文两块内容依次使用 section",
+    "label": "The two parts of the text use section in sequence.",
     "expect": {
       "type": "exists",
       "selector": ".sheet > main .details > section#schedule + section#visit"
     }
   },
   {
-    "label": "页脚保留组织者信息",
+    "label": "Footer retains organizer information",
     "expect": {
       "type": "text",
       "selector": ".sheet > footer.site-footer",
-      "value": "河畔社区图书角组织"
+      "value": "Riverside Community Book Corner Organization"
     }
   },
   {
-    "label": "活动安排链接确实定位到对应内容",
+    "label": "The event arrangement link indeed locates the corresponding content",
     "expect": {
       "type": "exists",
       "selector": "section#schedule:target"
@@ -43,7 +43,7 @@
     ]
   },
   {
-    "label": "到场方式链接确实定位到对应内容",
+    "label": "The arrival method link indeed locates the corresponding content",
     "expect": {
       "type": "exists",
       "selector": "section#visit:target"
@@ -56,7 +56,7 @@
     ]
   },
   {
-    "label": "320px 时导航在站点名称下方",
+    "label": "Navigation below site name when 320px",
     "expect": {
       "type": "layout",
       "selector": ".site-nav",
@@ -66,7 +66,7 @@
     "viewport": 320
   },
   {
-    "label": "320px 时到场方式在活动安排下方",
+    "label": "320px How to arrive is below the event schedule",
     "expect": {
       "type": "layout",
       "selector": "#visit",
@@ -76,7 +76,7 @@
     "viewport": 320
   },
   {
-    "label": "679px 时正文仍然上下排列",
+    "label": "is 679px, the text is still arranged up and down.",
     "expect": {
       "type": "layout",
       "selector": "#visit",
@@ -86,7 +86,7 @@
     "viewport": 679
   },
   {
-    "label": "680px 时到场方式切换到右列",
+    "label": "680px When the scene mode switches to the right column",
     "expect": {
       "type": "layout",
       "selector": "#visit",
@@ -96,7 +96,7 @@
     "viewport": 680
   },
   {
-    "label": "980px 时两张卡片依然左右并排",
+    "label": "is 980px, the two cards are still side by side.",
     "expect": {
       "type": "layout",
       "selector": "#visit",
@@ -106,7 +106,7 @@
     "viewport": 980
   },
   {
-    "label": "980px 时正文两列等宽",
+    "label": "is 980px, the two columns of the text are the same width.",
     "expect": {
       "type": "layout",
       "selector": "#visit",
@@ -116,7 +116,7 @@
     "viewport": 980
   },
   {
-    "label": "980px 时导航位于站点名称右侧",
+    "label": "is 980px, the navigation is located to the right of the site name.",
     "expect": {
       "type": "layout",
       "selector": ".site-nav",

@@ -1,6 +1,6 @@
 [
   {
-    "label": "使用原生日期控件",
+    "label": "Use native date control",
     "expect": {
       "type": "property",
       "selector": "#visit-date",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "6 月 9 日被拒绝",
+    "label": "Rejected June 9",
     "expect": {
       "type": "exists",
       "selector": "#visit-date:invalid"
@@ -23,7 +23,7 @@
     ]
   },
   {
-    "label": "6 月 10 日可选",
+    "label": "Available June 10th",
     "expect": {
       "type": "exists",
       "selector": "#visit-date:valid"
@@ -37,7 +37,7 @@
     ]
   },
   {
-    "label": "6 月 14 日可选",
+    "label": "Available June 14th",
     "expect": {
       "type": "exists",
       "selector": "#visit-date:valid"
@@ -51,7 +51,7 @@
     ]
   },
   {
-    "label": "6 月 15 日被拒绝",
+    "label": "Rejected June 15",
     "expect": {
       "type": "exists",
       "selector": "#visit-date:invalid"

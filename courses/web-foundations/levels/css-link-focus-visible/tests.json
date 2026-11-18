@@ -1,6 +1,6 @@
 [
   {
-    "label": "未聚焦时没有自定义轮廓",
+    "label": "No custom outline when not focused",
     "expect": {
       "type": "style",
       "selector": ".guide",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "聚焦后的轮廓为实线",
+    "label": "The focused outline is a solid line",
     "expect": {
       "type": "style",
       "selector": ".guide",
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "label": "聚焦后轮廓颜色正确",
+    "label": "The outline color is correct after focusing",
     "expect": {
       "type": "style",
       "selector": ".guide",
@@ -39,7 +39,7 @@
     ]
   },
   {
-    "label": "聚焦后的轮廓宽 3px",
+    "label": "The focused outline is 3px wide",
     "expect": {
       "type": "style",
       "selector": ".guide",
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "label": "轮廓与元素相距 3px",
+    "label": "The distance between the outline and the element is 3px",
     "expect": {
       "type": "style",
       "selector": ".guide",

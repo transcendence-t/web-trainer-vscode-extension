@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "在缺少值时才给出默认余位",
-  "goal": "用空值合并区分缺少数据与有效的零。",
-  "summary": "数据源可能没返回余位，也可能明确返回 0。前一种情况用计划余位，后一种要如实显示。",
+  "title": "Gives the default remaining digit when a value is missing",
+  "goal": "Use null merging to distinguish missing data from valid zeros.",
+  "summary": "data source may not return the remaining digits, or it may explicitly return 0. In the former case, use the planned remainder, and in the latter case, it must be displayed truthfully.",
   "tasks": [
-    "完成 availableSeats(actual, planned)，仅当 actual 为 null 或 undefined 时返回 planned。",
-    "actual 为 0 时仍返回 0。"
+    "Completes availableSeats(actual, planned), returning planned only if actual is null or undefined.",
+    "still returns 0 when actual is 0."
   ],
   "example": {
     "language": "javascript",
     "code": "0 ?? 12; // 0\nnull ?? 12; // 12",
-    "note": "?? 的后备值只在左侧是 null 或 undefined 时使用。"
+    "note": "?? is only used when the left side is null or undefined."
   },
-  "hint": "|| 会把 0 也当成需要后备的情况，本题可以用 ??。"
+  "hint": "|| will also regard 0 as a situation that requires backup. You can use ?? for this question."
 }

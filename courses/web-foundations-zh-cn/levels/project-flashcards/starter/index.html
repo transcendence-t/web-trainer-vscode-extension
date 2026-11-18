@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>网页速记卡</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<main class="sheet">
+  <h1>网页速记卡</h1>
+  <p id="card-position"></p>
+  <section class="study-card" aria-label="速记卡片" aria-live="polite">
+    <p id="card-question"></p>
+    <p id="card-answer" hidden></p>
+  </section>
+  <button id="flip-card" type="button" aria-expanded="false">显示答案</button>
+  <button id="next-card" type="button">下一张</button>
+</main>
+</body>
+</html>

@@ -1,7 +1,7 @@
 
 function packingLabel(weightKg) {
   if (weightKg >= 10) {
-    return '加固包装';
+    return 'reinforced packaging';
   }
-  return '普通包装';
+  return 'ordinary packaging';
 }

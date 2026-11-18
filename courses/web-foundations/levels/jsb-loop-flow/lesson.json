@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "跳过无效读数并在满箱时停止",
-  "goal": "用 for…of、continue 和 break 管理循环流程。",
-  "summary": "按顺序读取每个包装的体积，数组里的负数表示作废条目。下个包裹装不下时结束本箱的扫描。",
+  "title": "Skip invalid readings and stop when tank is full",
+  "goal": "uses for…of, continue and break to manage the loop process.",
+  "summary": "reads the volume of each package in sequence. Negative numbers in the array indicate invalid entries. The scanning of this box will end when the next package cannot be loaded.",
   "tasks": [
-    "完成 fillCrate(volumes, limit)。负数跳过，其他值按顺序累加。",
-    "下一项会使总量超过 limit 时立刻停止，返回当前总量。恰好等于容量允许装入。"
+    "complete fillCrate(volumes, limit). Negative numbers are skipped and other values ​​are accumulated sequentially.",
+    "The next item will stop immediately when the total exceeds the limit and return to the current total. Exactly equal to the capacity allowed to be loaded."
   ],
   "example": {
     "language": "javascript",
     "code": "for (const value of numbers) {\n  if (value < 0) continue;\n  if (total + value > limit) break;\n  total += value;\n}",
-    "note": "continue 跳过当前项，break 退出整个循环。两者在本题分别处理不同情况。"
+    "note": "continue skips the current item, break exits the entire loop. The two deal with different situations in this question."
   },
-  "hint": "先跳过作废项，再比较 total + volume 与 limit。"
+  "hint": "Skip the invalid items first, and then compare total + volume and limit."
 }

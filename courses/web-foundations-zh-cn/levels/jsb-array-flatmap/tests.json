@@ -1,0 +1,64 @@
+[
+  {
+    "label": "教室与内部顺序都保留",
+    "expect": {
+      "type": "function",
+      "name": "participantNames",
+      "args": [
+        [
+          {
+            "names": [
+              "小方",
+              "小陈"
+            ]
+          },
+          {
+            "names": [
+              "小周"
+            ]
+          }
+        ]
+      ],
+      "value": [
+        "小方",
+        "小陈",
+        "小周"
+      ]
+    }
+  },
+  {
+    "label": "空教室不占一个位置",
+    "expect": {
+      "type": "function",
+      "name": "participantNames",
+      "args": [
+        [
+          {
+            "names": []
+          },
+          {
+            "names": [
+              "杨同学",
+              "杨同学"
+            ]
+          }
+        ]
+      ],
+      "value": [
+        "杨同学",
+        "杨同学"
+      ]
+    }
+  },
+  {
+    "label": "没有教室时返回空列表",
+    "expect": {
+      "type": "function",
+      "name": "participantNames",
+      "args": [
+        []
+      ],
+      "value": []
+    }
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "label": "只有部分人签到了",
+    "expect": {
+      "type": "function",
+      "name": "attendance",
+      "args": [
+        [
+          true,
+          false,
+          true
+        ]
+      ],
+      "value": {
+        "any": true,
+        "all": false
+      }
+    }
+  },
+  {
+    "label": "全部签到",
+    "expect": {
+      "type": "function",
+      "name": "attendance",
+      "args": [
+        [
+          true,
+          true
+        ]
+      ],
+      "value": {
+        "any": true,
+        "all": true
+      }
+    }
+  },
+  {
+    "label": "没人签到",
+    "expect": {
+      "type": "function",
+      "name": "attendance",
+      "args": [
+        [
+          false,
+          false
+        ]
+      ],
+      "value": {
+        "any": false,
+        "all": false
+      }
+    }
+  },
+  {
+    "label": "空列表的逻辑边界",
+    "expect": {
+      "type": "function",
+      "name": "attendance",
+      "args": [
+        []
+      ],
+      "value": {
+        "any": false,
+        "all": true
+      }
+    }
+  }
+]

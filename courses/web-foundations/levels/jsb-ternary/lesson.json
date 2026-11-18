@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "按条件选择简短状态标签",
-  "goal": "用条件表达式在两个返回值之间选择。",
-  "summary": "物品登记页在库存为正数时显示「可领取」，为零时显示「待补货」。",
+  "title": "Select short status labels based on conditions",
+  "goal": "Use a conditional expression to choose between two return values.",
+  "summary": "The item registration page displays \"can be collected\" when the inventory is positive, and \"To be replenished\" when it is zero.",
   "tasks": [
-    "完成 stockLabel(count)，给定非负整数库存，数量大于 0 时返回「可领取」，否则返回「待补货」。",
-    "用条件表达式把结果作为函数的返回值。"
+    "completes stockLabel(count), given a non-negative integer inventory, returns \"can be collected\" when the quantity is greater than 0, otherwise returns \"To be replenished\".",
+    "Use conditional expressions to use the result as the return value of the function."
   ],
   "example": {
     "language": "javascript",
-    "code": "const label = hasAccess ? '可以进入' : '请登记';",
-    "note": "问号后是条件成立时的值，冒号后是条件不成立时的值。"
+    "code": "const label = hasAccess ? 'can enter' : 'Please register';",
+    "note": "The value after the question mark is the value when the condition is true, and the value after the colon is the value when the condition is not true."
   },
-  "hint": "先写出 count > 0，再补上两个结果。"
+  "hint": "First write count > 0, and then add the two results."
 }

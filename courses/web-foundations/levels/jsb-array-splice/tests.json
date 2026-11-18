@@ -1,27 +1,27 @@
 [
   {
-    "label": "替换中间位置",
+    "label": "replaces the middle position",
     "expect": {
       "type": "function",
       "name": "swapDevice",
       "args": [
         [
-          "电源",
-          "小灯",
-          "护具"
+          "power supply",
+          "small lamp",
+          "protective gear"
         ],
         1,
-        "探头"
+        "probe"
       ],
       "value": [
-        "电源",
-        "探头",
-        "护具"
+        "power supply",
+        "probe",
+        "protective gear"
       ]
     }
   },
   {
-    "label": "替换第一项",
+    "label": "replaces the first item",
     "expect": {
       "type": "function",
       "name": "swapDevice",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "label": "越界不追加",
+    "label": "crosses the boundary and does not add",
     "expect": {
       "type": "function",
       "name": "swapDevice",
@@ -57,7 +57,7 @@
     }
   },
   {
-    "label": "负下标不从末尾替换",
+    "label": "Negative subscripts are not replaced from the end",
     "expect": {
       "type": "function",
       "name": "swapDevice",
@@ -76,7 +76,7 @@
     }
   },
   {
-    "label": "空队列保持为空",
+    "label": "empty queue remains empty",
     "expect": {
       "type": "function",
       "name": "swapDevice",

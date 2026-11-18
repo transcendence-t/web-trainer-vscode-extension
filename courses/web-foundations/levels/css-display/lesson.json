@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "把两个状态标签做成等宽一行",
-  "goal": "使用 inline-block，让行内的标签能设置宽度和高度。",
-  "summary": "入场状态的文字长短不同。已有的宽高没有生效，两个提示需要使用一样宽的背景。",
+  "title": "Make two status labels into one line of equal width",
+  "goal": "uses inline-block to allow inline labels to set width and height.",
+  "summary": "The text length of the entry status is different. The existing width and height do not take effect, and the two prompts need to use the same width background.",
   "tasks": [
-    "把 .entry-tag 的 display 设为 inline-block。",
-    "保留 108px 宽和 34px 高，让「登记后入场」和「直接入场」等宽并排。"
+    "Set the display of .entry-tag to inline-block.",
+    "retains 108px width and 34px height, leaving \"Check in\" and \"Ready\" equal width side by side."
   ],
   "example": {
     "language": "css",
     "code": ".rating-mark {\n  display: inline-block;\n  width: 4rem;\n  text-align: center;\n}",
-    "note": "评分标签可以和前后的文字排在一行，同时按 width 留出固定宽度。"
+    "note": "The rating label can be arranged in one line with the text before and after it, and at the same time, press width to leave a fixed width."
   },
-  "hint": "display: block 让宽度生效，但后面的标签会换行。要使用宽高并保持行内排列，选 inline-block。"
+  "hint": "display: block makes the width effective, but subsequent labels will wrap. To use width and height and maintain inline alignment, select inline-block."
 }

@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "筛出可以发货的批次",
+  "goal": "用 filter 按条件保留数组原项，正确处理恰好达到门槛的值。",
+  "summary": "仓库根据每批物品的数量挑出可以发货的批次。满足最小数量的批次都应继续保留。",
+  "tasks": [
+    "完成 selectReadyBatches(counts, minimum)。counts 保存各批数量，minimum 是允许发货的最小数量。",
+    "返回数量大于等于 minimum 的原值，保留顺序和重复项。没有达标项时返回空数组。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const temperatures = [8, 5, 10, 6];\nconst coolReadings = temperatures.filter((value) => value < 8);\n// coolReadings 是 [5, 6]",
+    "note": "filter 对数组项判断条件，结果为 true 的项按原顺序出现在结果中。"
+  },
+  "hint": "恰好等于 minimum 的批次也能发货。用 >= 判断可以包含这个边界值。"
+}

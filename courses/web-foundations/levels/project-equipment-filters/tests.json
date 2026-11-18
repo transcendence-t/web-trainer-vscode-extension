@@ -1,22 +1,22 @@
 [
   {
-    "label": "首次打开显示全部四项",
+    "label": "opens for the first time and displays all four items.",
     "expect": {
       "type": "text",
       "selector": "#count",
-      "value": "共 4 项"
+      "value": "4 items in total"
     }
   },
   {
-    "label": "首次按用时升序",
+    "label": "First time in ascending order",
     "expect": {
       "type": "text",
       "selector": "#equipment li:first-child",
-      "value": "Tripod Kit · 10 分钟"
+      "value": "Tripod Kit · 10 minutes"
     }
   },
   {
-    "label": "文字搜索保留三个 Kit",
+    "label": "text search retains three Kits",
     "expect": {
       "type": "count",
       "selector": "#equipment li",
@@ -31,11 +31,11 @@
     ]
   },
   {
-    "label": "同时搜索 Kit 和摄影室只出一项",
+    "label": "Searching Kit and Photography Studio at the same time only comes up with one item",
     "expect": {
       "type": "text",
       "selector": "#count",
-      "value": "共 1 项"
+      "value": "1 items in total"
     },
     "actions": [
       {
@@ -51,11 +51,11 @@
     ]
   },
   {
-    "label": "叠加设计室筛选和降序",
+    "label": "overlay design room filtering and descending order",
     "expect": {
       "type": "text",
       "selector": "#equipment li:first-child",
-      "value": "Laser Kit · 35 分钟"
+      "value": "Laser Kit · 35 minutes"
     },
     "actions": [
       {
@@ -76,11 +76,11 @@
     ]
   },
   {
-    "label": "空结果清除列表并提示",
+    "label": "Empty results clear the list and prompt",
     "expect": {
       "type": "text",
       "selector": "#count",
-      "value": "没有匹配器材"
+      "value": "No matching equipment"
     },
     "actions": [
       {
@@ -91,7 +91,7 @@
     ]
   },
   {
-    "label": "清空搜索从原始数据恢复",
+    "label": "Clear search and restore from original data",
     "expect": {
       "type": "count",
       "selector": "#equipment li",

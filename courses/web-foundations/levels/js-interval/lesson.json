@@ -1,17 +1,17 @@
 {
   "focus": "script.js",
-  "title": "启动并停止定时采样",
-  "goal": "用 setInterval 安排重复回调，再用保存的计时器编号清除它。",
-  "summary": "按下「开始采样」后，设备持续写出采样记录。按下「停止采样」后应结束这一轮采样。",
+  "title": "Start and stop scheduled sampling",
+  "goal": "Use setInterval to schedule a repeating callback and then clear it with the saved timer number.",
+  "summary": "After pressing \"starts sampling\", the device continues to write out sampling records. This round of sampling should end after pressing \"stop sampling\".",
   "tasks": [
-    "在开始按钮的事件中每隔 200ms 调用 recordSample，保存 setInterval 返回的编号。",
-    "在停止按钮的事件中把这个编号交给 clearInterval。",
-    "观察两次以上的采样记录，再点击停止。停下后保留已写出的记录和「已停止采样」提示。"
+    "calls recordSample every 200ms in the start button event and saves the number returned by setInterval.",
+    "Give this number to clearInterval in the event of the stop button.",
+    "Observe the sampling records more than twice, and then click to stop. Keep written records and \"Sampling has stopped\" prompts after stopping."
   ],
   "example": {
     "language": "javascript",
-    "code": "const refreshTimer = setInterval(() => {\n  console.log('刷新到站信息');\n}, 1000);\n\nfunction stopRefreshing() {\n  clearInterval(refreshTimer);\n}",
-    "note": "车站屏幕每隔一秒刷新。结束展示时调用 stopRefreshing，把启动时保存的编号传给 clearInterval。"
+    "code": "const refreshTimer = setInterval(() => {\n  console.log('Refresh arrival information');\n}, 1000);\n\nfunction stopRefreshing() {\n  clearInterval(refreshTimer);\n}",
+    "note": "Station screen refreshes every second. When the display ends, call stopRefreshing and pass the number saved at startup to clearInterval."
   },
-  "hint": "修改屏幕上的文字和按钮状态只会更新界面。停止重复回调时，需要调用 clearInterval(timerId)。"
+  "hint": "Modifying the text and button status on the screen will only update the interface. When stopping repeated callbacks, clearInterval(timerId) needs to be called."
 }

@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "让取件码便于逐位核对",
-  "goal": "单独给取件码使用等宽字体，让字母和数字占用相同的宽度。",
-  "summary": "font-family 指定字体族。monospace 是通用等宽字体族，浏览器会从本机字体中选用合适的等宽字体。",
+  "title": "Makes the pickup code easy to check bit by bit",
+  "goal": "Use a single-width font for the pickup code so that letters and numbers occupy the same width.",
+  "summary": "font-family specifies the font family. monospace is a universal monospace font family. The browser will select the appropriate monospace font from the native font.",
   "tasks": [
-    "选中带 pickup-code 类的两个取件码。",
-    "将取件码的 font-family 设置为不带引号的 monospace，保留柜名的字体。"
+    "Select two pickup codes with pickup-code class.",
+    "Set the font-family of the pickup code to monospace without quotation marks, and retain the font of the cabinet name."
   ],
   "example": {
     "language": "css",
     "code": ".device-id {\n  font-family: monospace;\n}",
-    "note": "设备登记页可以给设备编号使用等宽字体，方便逐个核对字符。"
+    "note": "device registration page can use a fixed-width font for the device number, making it easier to check characters one by one."
   },
-  "hint": "检查 monospace 有没有加引号。加引号后，浏览器会把它当作具体的字体家族名称来查找。"
+  "hint": "Check whether monospace is quoted. After adding quotes, the browser will look for it as a specific font family name."
 }

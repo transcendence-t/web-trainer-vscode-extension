@@ -1,3 +1,3 @@
 function contactPhone(record) {
-  return record?.contact?.phone ?? '待登记';
+  return record?.contact?.phone ?? 'pending registration';
 }

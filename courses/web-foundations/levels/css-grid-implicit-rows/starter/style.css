@@ -9,4 +9,4 @@ a { color: #125a46; }
 .duties { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 64px; gap: 8px; }
 .duties > div { background: #e6f4ee; padding: 4px; }
 
-/* 在这里编写本关样式。 */
+/* Write the style of this level here. */

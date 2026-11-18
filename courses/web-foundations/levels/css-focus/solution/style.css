@@ -21,7 +21,7 @@ input {
   background-color: #fff;
 }
 
-/* 在这里添加本关样式。 */
+/* Add this level style here. */
 
 input:focus {
   outline: 2px solid #125a46;

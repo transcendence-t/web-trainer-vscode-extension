@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "页内导航",
-  "summary": "链接地址以 # 开头时，浏览器用 # 后面的文字查找同名 id，并定位到对应元素。",
+  "title": "In-page navigation",
+  "summary": "link address starts with #, the browser uses the text after # to find the id with the same name and locates the corresponding element.",
   "tasks": [
-    "给实训室介绍的 section 添加 id=\"lab\"。",
-    "在 nav 中加入 a，链接文字为「查看实训室」，href 指向 #lab。"
+    "Add id=\"lab\" to the section introduced in the training room.",
+    "Add a to nav, the link text is \"View training room\", and the href points to #lab."
   ],
-  "hint": "点击后没有跳到介绍区时，检查链接的 href 是否写成 #lab，目标区域的 id 是否只写 lab。",
-  "goal": "让读者点击导航链接后定位到本页的实训室介绍。",
+  "hint": "When clicking does not jump to the introduction area, check whether the href of the link is written as #lab, and whether the id of the target area is only written as lab.",
+  "goal": "allows readers to click on the navigation link to locate the training room introduction on this page.",
   "example": {
     "language": "html",
-    "code": "<a href=\"#showtimes\">查看放映时间</a>\n<section id=\"showtimes\">\n  <h2>放映时间</h2>\n  <p>每天 14:00 开始。</p>\n</section>",
-    "note": "这条展览指南链接把读者带到同一页中的放映时间区域。"
+    "code": "<a href=\"#showtimes\">Check show time</a>\n<section id=\"showtimes\">\n  <h2>show time</h2>\n  <p>starts at 14:00 every day.</p>\n</section>",
+    "note": "This show guide link takes readers to the showtimes area on the same page."
   }
 }

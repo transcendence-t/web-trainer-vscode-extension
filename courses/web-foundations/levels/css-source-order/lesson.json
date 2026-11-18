@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "按规则顺序解决同优先级冲突",
-  "goal": "在优先级一致时让后写的声明覆盖同一属性。",
-  "summary": "设备状态卡已有默认底色和内边距。需要在补充样式里只改底色，用相同的 .status 选择器。",
+  "title": "Resolve conflicts with the same priority in the order of rules",
+  "goal": "Let later-written declarations overwrite the same attribute when the priorities are consistent.",
+  "summary": "device status card already has default background color and padding. You need to change only the background color in the supplementary style, using the same .status selector.",
   "tasks": [
-    "把新的 .status 规则写在已有规则之后，将背景色改为 #e6f4ee。",
-    "保留原有的 12px 内边距。"
+    "Write the new .status rule after the existing rule and change the background color to #e6f4ee.",
+    "retains the original 12px padding."
   ],
   "example": {
     "language": "css",
     "code": ".item { color: #243447; }\n.item { color: #125a46; }",
-    "note": "规则来源、重要性和优先级相同，最后出现的 color 生效。"
+    "note": "The rules have the same source, importance and priority, and the color that appears last takes effect."
   },
-  "hint": "已有样式之后的新规则只需声明要覆盖的属性。"
+  "hint": "New rules after existing styles only need to declare the attributes to be overridden."
 }

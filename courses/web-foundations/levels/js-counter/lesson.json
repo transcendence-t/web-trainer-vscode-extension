@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "制作计数器",
-  "summary": "每次点击都会运行一次事件回调。把计数变量放在回调外，回调每次都能在上一次的值上累加。",
+  "title": "Build a counter",
+  "summary": "Each click will run an event callback. Put the count variable outside the callback, and the callback can accumulate the previous value each time.",
   "tasks": [
-    "在脚本中把计数变量初始化为 0。",
-    "每次点击 #add 时，让计数加 1，再把新值写到 #count。"
+    "Initialize the counter variable to 0 in your script.",
+    "Each time #add is clicked, the count is incremented by 1, and the new value is written to #count."
   ],
-  "hint": "把 let count = 0 写在事件回调外，回调中使用 count += 1。",
-  "goal": "在多次点击之间保存累计次数，并把最新次数显示在页面上。",
+  "hint": "Write let count = 0 outside the event callback, and use count += 1 in the callback.",
+  "goal": "Saves the cumulative number of times between multiple clicks and displays the latest number on the page.",
   "example": {
     "language": "javascript",
     "code": "let total = 0;\nconst checkIn = document.querySelector('#check-in');\nconst checkInTotal = document.querySelector('#check-in-total');\n\ncheckIn.addEventListener('click', () => {\n  total += 1;\n  checkInTotal.textContent = total;\n});",
-    "note": "签到台每登记一位参加者就增加一次计数，页面显示当前已到人数。"
+    "note": "Every time a participant is registered at the check-in desk, the count is increased, and the page displays the current number of people who have arrived."
   }
 }

@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "把育苗记录排成两行",
-  "goal": "用 table、tr 和 td 把植物名和数量放进各自的单元格。",
-  "summary": "表格里的每个 tr 是一行，行内每个 td 是一个数据单元格。各行按同样的顺序放入单元格，才能在同一列中比较数据。",
+  "title": "Arrange seedling records in two rows",
+  "goal": "Use table, tr and td to put plant names and quantities into their respective cells.",
+  "summary": "table is a row, and each td in the row is a data cell. Rows must be placed into cells in the same order to compare data in the same column.",
   "tasks": [
-    "用一个 table 替换两段育苗记录，按薄荷、罗勒的顺序各建一个 tr。",
-    "每行放两个 td。薄荷一行写「薄荷」「6 盆」，罗勒一行写「罗勒」「4 盆」。"
+    "Replace two seedling records with a table, and create a tr in the order of mint and basil.",
+    "Put two td cells in each row. Use \"Mint\" and \"6 basins\" for mint, and \"Basil\" and \"4 basins\" for basil."
   ],
   "example": {
     "language": "html",
-    "code": "<table>\n  <tr><td>东门</td><td>2 个车位</td></tr>\n  <tr><td>西门</td><td>5 个车位</td></tr>\n</table>",
-    "note": "车位记录的每一行都先写入口，再写数量，因此数量会在第二列对齐。"
+    "code": "<table>\n  <tr><td>East Gate</td><td>2 parking spaces</td></tr>\n  <tr><td>Ximen</td><td>5 parking spaces</td></tr>\n</table>",
+    "note": "parking space record is written first with the entry and then with the quantity, so the quantity will be aligned in the second column."
   },
-  "hint": "如果预览只有一列，检查每行是否将名称和数量都写进同一个 td。每个 tr 需要两个独立的 td。"
+  "hint": "If only one column appears, check whether the name and quantity share a td. Each tr needs two separate td cells."
 }

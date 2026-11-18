@@ -1,5 +1,5 @@
 function makeTicketQueue(start) {
-  // 返回一个能够更新当前序号的函数。
+  // returns a function that can update the current serial number.
   return () => start;
 }
 

@@ -1,7 +1,7 @@
 const fixtures = {
   main: { notices: [
-    { title: '采集体验', room: '摄影室' },
-    { title: '<复核>购置清单', room: '设备库' },
+    { title: 'collection experience', room: 'Photography Studio' },
+    { title: '<Review> Purchase List', room: 'Equipment Library' },
   ] },
   empty: { notices: [] },
 };
@@ -15,4 +15,4 @@ function simulateWait() {
   return new Promise((resolve) => setTimeout(resolve, 200));
 }
 
-// 编写页面的加载与重试逻辑。
+// Write the loading and retry logic of the page.

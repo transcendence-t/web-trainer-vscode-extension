@@ -1,0 +1,62 @@
+[
+  {
+    "label": "窄屏上第二张卡片另起一行",
+    "expect": {
+      "type": "layout",
+      "selector": ".produce-stall",
+      "relativeTo": ".book-stall",
+      "relation": "below"
+    },
+    "viewport": 320
+  },
+  {
+    "label": "窄屏上第三张卡片再起一行",
+    "expect": {
+      "type": "layout",
+      "selector": ".repair-stall",
+      "relativeTo": ".produce-stall",
+      "relation": "below"
+    },
+    "viewport": 320
+  },
+  {
+    "label": "中等宽度下前两张并排",
+    "expect": {
+      "type": "layout",
+      "selector": ".produce-stall",
+      "relativeTo": ".book-stall",
+      "relation": "right-of"
+    },
+    "viewport": 460
+  },
+  {
+    "label": "中等宽度下第三张换行",
+    "expect": {
+      "type": "layout",
+      "selector": ".repair-stall",
+      "relativeTo": ".book-stall",
+      "relation": "below"
+    },
+    "viewport": 460
+  },
+  {
+    "label": "宽屏上第三张与第二张并排",
+    "expect": {
+      "type": "layout",
+      "selector": ".repair-stall",
+      "relativeTo": ".produce-stall",
+      "relation": "right-of"
+    },
+    "viewport": 1000
+  },
+  {
+    "label": "宽屏上的三列铺满网格，空列收起",
+    "expect": {
+      "type": "style",
+      "selector": ".stations",
+      "property": "grid-template-columns",
+      "value": "232px 232px 232px 0px"
+    },
+    "viewport": 1000
+  }
+]

@@ -3,7 +3,7 @@ const add = document.querySelector('#add-gear');
 const list = document.querySelector('#gear-list');
 const empty = document.querySelector('#gear-empty');
 const storageKey = 'fieldGear';
-const items = []; // 这里改成从存储读取并解析列表。
+const items = []; // This is changed to read and parse the list from storage.
 
 function renderList() {
   list.replaceChildren();
@@ -20,7 +20,7 @@ add.addEventListener('click', () => {
   if (!item) return;
 
   items.push(item);
-  // 将完整数组转换成 JSON 字符串并保存。
+  // Convert the complete array into a JSON string and save it.
   gearInput.value = '';
   renderList();
 });

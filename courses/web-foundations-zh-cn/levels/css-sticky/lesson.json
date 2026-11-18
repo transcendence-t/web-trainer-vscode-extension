@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "让交接日志的工具条吸顶",
+  "goal": "在日志窗口滚动时，把区块标题和跳转入口留在窗口顶部。",
+  "summary": "position: sticky 让工具条先处在原来的布局位置。设定 top: 0 后，工具条滚到最近的滚动容器顶部时会停在该边缘。",
+  "tasks": [
+    "在 .log-toolbar 的布局规则后为它添加 position: sticky 和 top: 0。",
+    "点击「跳到最新记录」，检查日志滚动后工具条仍贴在列表窗口顶部。保留工具条原有的两列布局。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".schedule-window {\n  max-height: 180px;\n  overflow-y: auto;\n}\n.schedule-title {\n  position: sticky;\n  top: 0;\n  background: white;\n}",
+    "note": "预约时刻表滚动时，标题留在窗口的上沿，背景盖住从它下方经过的文字。"
+  },
+  "hint": "如果工具条随着记录一起滚走，检查 top 是否已设为 0。它所在的 .log-panel 已设置独立的滚动区域。"
+}

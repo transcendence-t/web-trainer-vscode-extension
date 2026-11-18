@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "居中开放日的栏目标题",
-  "goal": "让两个栏目标题在各自的区域内居中，保持说明段落的对齐方式。",
-  "summary": "text-align 控制块内文字和其他行内内容的水平对齐。给整个区域设置时，里面的段落也可能继承同样的对齐方式。",
+  "title": "Centered column title for Open Day",
+  "goal": "Center the two column titles within their respective areas, maintaining the alignment of the description paragraphs.",
+  "summary": "text-align controls the horizontal alignment of text and other inline content within the block. When setting the entire range, the paragraphs inside may also inherit the same alignment.",
   "tasks": [
-    "找到带 section-title 类的两个栏目标题，将它们的 text-align 设为 center。",
-    "保持栏目里的说明段落左对齐。"
+    "Find two column titles with section-title class, and set their text-align to center.",
+    "Keep description paragraphs in columns aligned to the left."
   ],
   "example": {
     "language": "css",
     "code": ".amount {\n  text-align: right;\n}",
-    "note": "在收据的金额列使用这条规则，可以让数值的右边缘对齐。"
+    "note": "Use this rule in the amount column of the receipt to align the right edge of the value."
   },
-  "hint": "说明段落也跟着居中时，检查规则是否选中了整个 section。把选择范围缩小到 section-title 类。"
+  "hint": "When the description paragraph is also centered, check whether the rule selects the entire section. Narrow the selection to the section-title class."
 }

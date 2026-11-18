@@ -1,0 +1,62 @@
+[
+  {
+    "label": "遇到第一个超限项后停止",
+    "expect": {
+      "type": "function",
+      "name": "fillCrate",
+      "args": [
+        [
+          4,
+          5,
+          1
+        ],
+        8
+      ],
+      "value": 4
+    }
+  },
+  {
+    "label": "跳过负数，允许恰好装满",
+    "expect": {
+      "type": "function",
+      "name": "fillCrate",
+      "args": [
+        [
+          -1,
+          2,
+          -5,
+          4
+        ],
+        6
+      ],
+      "value": 6
+    }
+  },
+  {
+    "label": "第一项装不下直接结束",
+    "expect": {
+      "type": "function",
+      "name": "fillCrate",
+      "args": [
+        [
+          10,
+          1
+        ],
+        5
+      ],
+      "value": 0
+    }
+  },
+  {
+    "label": "空清单的总量为零",
+    "expect": {
+      "type": "function",
+      "name": "fillCrate",
+      "args": [
+        [],
+        12
+      ],
+      "value": 0
+    }
+  }
+]

@@ -1,50 +1,50 @@
 {
   "jsb-if": {
-    "name": "用大于比较遗漏等于门槛的重量",
+    "name": "uses a weight greater than the comparison omission equal to the threshold",
     "files": {
-      "script.js": "\nfunction packingLabel(weightKg) {\n  if (weightKg > 10) {\n    return '加固包装';\n  }\n  return '普通包装';\n}\n"
+      "script.js": "\nfunction packingLabel(weightKg) {\n  if (weightKg > 10) {\n    return 'reinforced packaging';\n  }\n  return 'ordinary packaging';\n}\n"
     }
   },
   "jsb-else-if": {
-    "name": "将 1 到 3 个余位误判为额满",
+    "name": "misjudges 1 to 3 remaining digits as full quota",
     "files": {
-      "script.js": "\nfunction seatStatus(seatsLeft) {\n  if (seatsLeft <= 3) {\n    return '额满';\n  } else if (seatsLeft <= 3) {\n    return '即将满员';\n  } else {\n    return '可报名';\n  }\n}\n"
+      "script.js": "\nfunction seatStatus(seatsLeft) {\n  if (seatsLeft <= 3) {\n    return 'is full';\n  } else if (seatsLeft <= 3) {\n    return 'is almost full';\n  } else {\n    return 'can be registered';\n  }\n}\n"
     }
   },
   "jsb-switch": {
-    "name": "把裁纸台的 case 写成小写",
+    "name": "Write the case of the cutting table in lowercase",
     "files": {
-      "script.js": "\nfunction stationName(code) {\n  switch (code) {\n    case 'S':\n      return '缝纫台';\n    case 'c':\n      return '裁纸台';\n    case 'B':\n      return '装订台';\n    default:\n      return '未知工位';\n  }\n}\n"
+      "script.js": "\nfunction stationName(code) {\n  switch (code) {\n    case 'S':\n      return 'sewing table';\n    case 'c':\n      return 'cutting table';\n    case 'B':\n      return 'binding table';\n    default:\n      return 'Unknown workstation';\n  }\n}\n"
     }
   },
   "jsb-for": {
-    "name": "从一开始计数但仍限制计数小于宽度",
+    "name": "starts counting from one but still limits count to less than width",
     "files": {
       "script.js": "\nfunction receiptDivider(width) {\n  let divider = '';\n  for (let column = 1; column < width; column += 1) {\n    divider += '-';\n  }\n  return divider;\n}\n"
     }
   },
   "jsb-while": {
-    "name": "达到目标当天仍继续循环",
+    "name": "The cycle continues on the day the target is reached",
     "files": {
       "script.js": "\nfunction archiveDays(initial, target) {\n  let archived = initial;\n  let days = 0;\n  while (archived <= target) {\n    archived += 3;\n    days += 1;\n  }\n  return days;\n}\n"
     }
   },
   "jsb-accumulator": {
-    "name": "每轮覆盖总数导致只保留最后一排",
+    "name": "Covering the total number in each round causes only the last row to be retained",
     "files": {
       "script.js": "\nfunction screeningCapacity(rows) {\n  let total = 0;\n  for (let row = 1; row <= rows; row += 1) {\n    const seats = 4 + (row - 1) * 2;\n    total = seats;\n  }\n  return total;\n}\n"
     }
   },
   "jsb-function": {
-    "name": "把备用量传成每杯容量",
+    "name": "Transfer the spare amount to the capacity of each cup",
     "files": {
       "script.js": "\nfunction drinkVolume(cups, mlPerCup) {\n  return cups * mlPerCup;\n}\n\nfunction prepareVolume(cups, mlPerCup, spareMl) {\n  const servingVolume = drinkVolume(cups, spareMl);\n  return servingVolume + spareMl;\n}\n"
     }
   },
   "jsb-scope": {
-    "name": "在块内直接改写外层归档标签",
+    "name": "directly overwrites the outer archive tag within the block",
     "files": {
-      "script.js": "\nfunction pageLabels(title, preview) {\n  let label = '归档-' + title;\n  let banner = label;\n  if (preview) {\n    label = '预览-' + title;\n    banner = label;\n  }\n  return banner + ' / ' + label;\n}\n"
+      "script.js": "\nfunction pageLabels(title, preview) {\n  let label = 'Archive-' + title;\n  let banner = label;\n  if (preview) {\n    label = 'Preview-' + title;\n    banner = label;\n  }\n  return banner + ' / ' + label;\n}\n"
     }
   }
 }

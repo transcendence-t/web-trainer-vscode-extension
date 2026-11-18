@@ -1,14 +1,14 @@
 [
   {
-    "label": "没有保存过昵称时显示占位文字",
+    "label": "Placeholder text is displayed when the nickname has not been saved.",
     "expect": {
       "type": "text",
       "selector": "#saved-name",
-      "value": "暂无昵称"
+      "value": "No nickname yet"
     }
   },
   {
-    "label": "输入昵称时还没有写入本地存储",
+    "label": "The nickname has not been written to the local storage when entering it.",
     "expect": {
       "type": "storage",
       "key": "visitorNickname",
@@ -18,22 +18,22 @@
       {
         "type": "input",
         "selector": "#nickname",
-        "value": "白翎"
+        "value": "Bai Ling"
       }
     ]
   },
   {
-    "label": "点击保存后写入修剪过的昵称",
+    "label": "Click Save and write the trimmed nickname.",
     "expect": {
       "type": "storage",
       "key": "visitorNickname",
-      "value": "夜鹭"
+      "value": "Night heron"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#nickname",
-        "value": "  夜鹭  "
+        "value": "  Night heron  "
       },
       {
         "type": "click",
@@ -42,17 +42,17 @@
     ]
   },
   {
-    "label": "保存后的页面立即显示昵称",
+    "label": "The nickname will be displayed immediately on the saved page.",
     "expect": {
       "type": "text",
       "selector": "#saved-name",
-      "value": "春雀"
+      "value": "spring bird"
     },
     "actions": [
       {
         "type": "input",
         "selector": "#nickname",
-        "value": "春雀"
+        "value": "spring bird"
       },
       {
         "type": "click",
@@ -61,25 +61,25 @@
     ]
   },
   {
-    "label": "打开时会显示上次保存的昵称",
+    "label": "is opened, the last saved nickname will be displayed.",
     "expect": {
       "type": "text",
       "selector": "#saved-name",
-      "value": "夜鹭"
+      "value": "Night heron"
     },
     "storage": {
-      "visitorNickname": "夜鹭"
+      "visitorNickname": "Night heron"
     }
   },
   {
-    "label": "输入空白时保留已经保存的值",
+    "label": "Keep the saved value when entering blank",
     "expect": {
       "type": "storage",
       "key": "visitorNickname",
-      "value": "白翎"
+      "value": "Bai Ling"
     },
     "storage": {
-      "visitorNickname": "白翎"
+      "visitorNickname": "Bai Ling"
     },
     "actions": [
       {

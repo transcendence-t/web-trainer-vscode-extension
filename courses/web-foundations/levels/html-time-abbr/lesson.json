@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "标记报名日期和专业缩写",
-  "goal": "用 time 和 abbr 提供机器可读日期及术语全称。",
-  "summary": "读者看到简写日期，浏览器和工具可通过 datetime 识别完整日期。CAD 的全称可作为缩写的补充说明。",
+  "title": "Mark registration date and professional abbreviation",
+  "goal": "uses time and abbr to provide a machine-readable date and the full name of the term.",
+  "summary": "Readers see abbreviated dates, but browsers and tools can recognize full dates through datetime. The full name of CAD serves as a supplement to the abbreviation.",
   "tasks": [
-    "用 time 包住「5 月 18 日」，datetime 填 2027-05-18。",
-    "用 abbr 包住「CAD」，title 写「计算机辅助设计」。"
+    "wraps \"May 18\" with time, and fills in datetime with 2027-05-18.",
+    "uses abbr to wrap \"CAD\", and the title is \"computer-aided design\"."
   ],
   "example": {
     "language": "html",
-    "code": "<time datetime=\"2027-09-01\">9 月 1 日</time>\n<abbr title=\"统一资源定位符\">URL</abbr>",
-    "note": "time 的显示文字可面向读者，datetime 使用标准格式。abbr 的内容是缩写，title 可提供全称。"
+    "code": "<time datetime=\"2027-09-01\">September 1</time>\n<abbr title=\"Uniform Resource Locator\">URL</abbr>",
+    "note": "The display text of time can be oriented to readers, and datetime uses standard format. The content of abbr is an abbreviation, and title can provide the full name."
   },
-  "hint": "保留原句，只包住日期与缩写文字。"
+  "hint": "Keep the original sentence and only include the date and abbreviation."
 }

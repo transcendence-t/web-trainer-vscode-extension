@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "删除按钮所在的一条记录",
-  "goal": "用 closest 找到相关记录节点，再用 remove 删除该节点。",
-  "summary": "设备借用列表里每项有自己的移除按钮。点击文字或按钮外壳都只删除当前行。",
+  "title": "Delete a record where the button is located",
+  "goal": "Use closest to find the relevant record node, and then use remove to delete the node.",
+  "summary": "Each item in the equipment borrowing list has its own remove button. Clicking the text or button shell only deletes the current line.",
   "tasks": [
-    "给 #rows 添加点击监听，仅当点击来自 .remove 按钮时处理。",
-    "找到该按钮所属的最近一层 li 并删除。保留其他记录与列表本身。"
+    "Add click monitoring to #rows and handle it only when the click comes from the .remove button.",
+    "Find the nearest li to which the button belongs and delete it. Keep other records with the list itself."
   ],
   "example": {
     "language": "javascript",
     "code": "const action = event.target.closest('button.action');\nif (action) action.closest('li').remove();",
-    "note": "closest 从目标元素自身向上查找第一个符合的元素。"
+    "note": "closest searches for the first matching element upwards from the target element itself."
   },
-  "hint": "先定位可能被点击的按钮，再从该按钮定位列表项。"
+  "hint": "first locates the button that may be clicked, and then locates the list item from the button."
 }

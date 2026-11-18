@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "id": "web-foundations",
-  "title": "网页设计基础",
+  "id": "web-foundations-en",
+  "title": "Web development foundations",
   "navigation": "free",
   "sections": [
     {
       "id": "html",
-      "title": "HTML 基础",
+      "title": "HTML foundations",
       "levels": [
         "html-document",
         "html-meta-description",
@@ -57,7 +57,7 @@
     },
     {
       "id": "css",
-      "title": "CSS 基础",
+      "title": "CSS foundations",
       "levels": [
         "css-element",
         "css-selector",
@@ -108,7 +108,7 @@
     },
     {
       "id": "css-advanced",
-      "title": "CSS 进阶",
+      "title": "Advanced CSS",
       "levels": [
         "css-flex",
         "css-flex-wrap",
@@ -148,7 +148,7 @@
     },
     {
       "id": "js-basics",
-      "title": "JavaScript 基础",
+      "title": "JavaScript foundations",
       "levels": [
         "jsb-variables",
         "jsb-strings",
@@ -219,7 +219,7 @@
     },
     {
       "id": "javascript",
-      "title": "JavaScript 网页交互",
+      "title": "JavaScript in the browser",
       "levels": [
         "js-text",
         "js-query-all",
@@ -261,7 +261,7 @@
     },
     {
       "id": "projects",
-      "title": "综合项目",
+      "title": "Projects",
       "levels": [
         "project-profile",
         "project-login",

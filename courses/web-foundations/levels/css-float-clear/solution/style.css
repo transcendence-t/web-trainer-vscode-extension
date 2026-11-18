@@ -7,7 +7,7 @@ img, video { max-width: 100%; height: auto; }
 a { color: #125a46; }
 
 .figure-story { display: flow-root; }
-.diagram { width: 124px; height: auto; }
+.diagram { width: 124px; height: 120px; }
 
 .diagram { float: left; margin: 0 12px 0 0; }
 .next-section { clear: left; }

@@ -3,7 +3,7 @@
     "script.js": "const updateStock = (initialStock, received, shipped) => {\n  let stock = initialStock;\n  stock += received;\n  stock -= shipped;\n  return stock;\n};"
   },
   "jsb-strings": {
-    "script.js": "function labelTopic(topic) {\n  const tag = '【' + topic + '】';\n  return tag;\n}"
+    "script.js": "function labelTopic(topic) {\n  const tag = '[' + topic + ']';\n  return tag;\n}"
   },
   "jsb-number": {
     "script.js": "function sumWeights(firstText, secondText) {\n  return Number(firstText) + Number(secondText);\n}"
@@ -12,7 +12,7 @@
     "script.js": "function canClearNote(note) {\n  return note.length > 0;\n}"
   },
   "jsb-template": {
-    "script.js": "function seatMessage(roomName, seatsLeft) {\n  return roomName + '还有 ' + seatsLeft + ' 个空位。';\n}"
+    "script.js": "function seatMessage(roomName, seatsLeft) {\n  return roomName + ' has ' + seatsLeft + ' seats left.';\n}"
   },
   "jsb-arithmetic": {
     "script.js": "function printCost(pagePrice, pages, bindingFee) {\n  const printing = pagePrice * pages;\n  return printing + bindingFee;\n}"

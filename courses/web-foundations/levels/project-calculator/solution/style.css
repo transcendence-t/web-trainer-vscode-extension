@@ -50,7 +50,7 @@ a { color: #125a46; }
   font-weight: 700;
 }
 
-/* 在这里设置输入组和按钮组的两列布局。 */
+/* Set the two-column layout of the input group and button group here. */
 
 .number-fields, .operations {
   display: grid;

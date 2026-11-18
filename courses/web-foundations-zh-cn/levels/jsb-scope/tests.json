@@ -1,0 +1,50 @@
+[
+  {
+    "label": "普通模式使用两份归档标签",
+    "expect": {
+      "type": "function",
+      "name": "pageLabels",
+      "args": [
+        "春季海报",
+        false
+      ],
+      "value": "归档-春季海报 / 归档-春季海报"
+    }
+  },
+  {
+    "label": "预览模式同时返回预览与归档标签",
+    "expect": {
+      "type": "function",
+      "name": "pageLabels",
+      "args": [
+        "春季海报",
+        true
+      ],
+      "value": "预览-春季海报 / 归档-春季海报"
+    }
+  },
+  {
+    "label": "第二个作品的预览标签引用实际标题",
+    "expect": {
+      "type": "function",
+      "name": "pageLabels",
+      "args": [
+        "开场节目单",
+        true
+      ],
+      "value": "预览-开场节目单 / 归档-开场节目单"
+    }
+  },
+  {
+    "label": "第二个作品的普通标签引用实际标题",
+    "expect": {
+      "type": "function",
+      "name": "pageLabels",
+      "args": [
+        "开场节目单",
+        false
+      ],
+      "value": "归档-开场节目单 / 归档-开场节目单"
+    }
+  }
+]

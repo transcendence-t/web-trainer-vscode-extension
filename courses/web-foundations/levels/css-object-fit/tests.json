@@ -1,6 +1,6 @@
 [
   {
-    "label": "图片覆盖整个盒子",
+    "label": "picture covers the entire box",
     "expect": {
       "type": "style",
       "selector": ".thumbnail",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "对齐图片顶部",
+    "label": "Align the top of the picture",
     "expect": {
       "type": "style",
       "selector": ".thumbnail",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "盒子宽度保留",
+    "label": "box width reserved",
     "expect": {
       "type": "style",
       "selector": ".thumbnail",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "盒子高度保留",
+    "label": "box height reservation",
     "expect": {
       "type": "style",
       "selector": ".thumbnail",

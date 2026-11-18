@@ -1,0 +1,16 @@
+{
+  "focus": "index.html",
+  "title": "为登录表单声明自动填充用途",
+  "goal": "用 autocomplete 区分登录标识和现用密码。",
+  "summary": "登录标识使用邮箱，但对自动填充而言它仍是 username。现用密码可以提示浏览器使用已保存的凭证。",
+  "tasks": [
+    "给账号邮箱添加 autocomplete=\"username\"。",
+    "给现用密码添加 autocomplete=\"current-password\"，保留控件类型与标签。"
+  ],
+  "example": {
+    "language": "html",
+    "code": "<input name=\"login\" autocomplete=\"username\">\n<input type=\"password\" name=\"pin\" autocomplete=\"current-password\">",
+    "note": "登录页填写已有密码，使用 current-password。注册新账号时才用 new-password。"
+  },
+  "hint": "type 描述控件接收的值，autocomplete 描述该字段在表单中的用途。"
+}

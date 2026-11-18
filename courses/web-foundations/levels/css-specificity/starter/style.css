@@ -11,7 +11,7 @@ a { color: #125a46; }
   color: #125a46;
 }
 
-/* 在这里加一条优先级更高的规则。 */
+/* Add a rule with higher priority here. */
 
 #delivery-alert {
   color: #264a7c;

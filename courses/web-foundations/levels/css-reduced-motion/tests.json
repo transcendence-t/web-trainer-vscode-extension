@@ -1,6 +1,6 @@
 [
   {
-    "label": "减少动效时静态显示",
+    "label": "static display when reducing dynamic effects",
     "expect": {
       "type": "style",
       "selector": ".signal",
@@ -13,7 +13,7 @@
     }
   },
   {
-    "label": "常规状态仍有淡入动画",
+    "label": "Normal state still has fade-in animation",
     "expect": {
       "type": "style",
       "selector": ".signal",
@@ -26,7 +26,7 @@
     }
   },
   {
-    "label": "减少动效时状态保持可读",
+    "label": "Status remains readable when reducing animation effects",
     "expect": {
       "type": "style",
       "selector": ".signal",

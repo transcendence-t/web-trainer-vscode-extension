@@ -1,12 +1,12 @@
 [
   {
-    "label": "值为零的覆盖也生效",
+    "label": "Overrides with a value of zero also take effect",
     "expect": {
       "type": "function",
       "name": "mergeSettings",
       "args": [
         {
-          "mode": "列表",
+          "mode": "list",
           "count": 10
         },
         {
@@ -14,13 +14,13 @@
         }
       ],
       "value": {
-        "mode": "列表",
+        "mode": "list",
         "count": 0
       }
     }
   },
   {
-    "label": "自定义键加入新对象",
+    "label": "Custom key adds new object",
     "expect": {
       "type": "function",
       "name": "mergeSettings",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "label": "允许任一方为空",
+    "label": "allows either side to be empty",
     "expect": {
       "type": "function",
       "name": "mergeSettings",
@@ -56,24 +56,24 @@
     }
   },
   {
-    "label": "合并后默认配置尚未改变",
+    "label": "The default configuration has not changed after the merger.",
     "expect": {
       "type": "function",
       "name": "checkSettings",
       "args": [
         {
-          "mode": "列表"
+          "mode": "list"
         },
         {
-          "mode": "网格"
+          "mode": "grid"
         }
       ],
       "value": {
         "defaults": {
-          "mode": "列表"
+          "mode": "list"
         },
         "merged": {
-          "mode": "网格"
+          "mode": "grid"
         }
       }
     }

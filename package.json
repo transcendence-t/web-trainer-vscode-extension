@@ -1,9 +1,9 @@
 {
   "name": "web-trainer",
-  "displayName": "网页闯关",
-  "description": "在 VS Code 中离线学习 HTML、CSS 和 JavaScript。",
+  "displayName": "Web Trainer",
+  "description": "Learn HTML, CSS, and JavaScript offline in VS Code through 240 hands-on lessons.",
   "publisher": "webclassroom",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "license": "SEE LICENSE IN LICENSE.txt",
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
   "bugs": { "url": "https://github.com/q634875942/web-trainer-vscode-extension/issues" },
   "engines": { "vscode": "^1.96.0" },
   "categories": ["Education"],
-  "keywords": ["html", "css", "javascript", "education", "离线", "闯关"],
+  "keywords": ["html", "css", "javascript", "education", "offline", "exercises"],
   "main": "./out/extension.js",
   "extensionKind": ["ui"],
   "capabilities": {
@@ -23,24 +23,25 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "typecheck": "tsc --noEmit",
-    "test": "npm run build && node --test .test-dist/domain.test.cjs .test-dist/browser.test.cjs",
+    "test": "npm run test:edition -- zh-cn && npm run test:edition -- en",
+    "test:edition": "node scripts/test-edition.mjs",
     "test:vscode": "node test/vscode.mjs",
-    "package": "vsce package --no-dependencies --allow-missing-repository",
+    "package": "npm run typecheck && node scripts/package.mjs",
     "vscode:prepublish": "npm run typecheck && npm run build"
   },
   "contributes": {
     "viewsContainers": {
-      "activitybar": [{ "id": "webTrainer", "title": "WEB闯关练习", "icon": "media/activity.svg" }]
+      "activitybar": [{ "id": "webTrainer", "title": "Web Trainer", "icon": "media/activity.svg" }]
     },
     "views": {
-      "webTrainer": [{ "id": "webTrainer.courses", "name": "课程关卡" }]
+      "webTrainer": [{ "id": "webTrainer.courses", "name": "Course Lessons" }]
     },
     "commands": [
-      { "command": "webTrainer.start", "category": "网页闯关", "title": "开始或继续学习", "icon": "$(play)" },
-      { "command": "webTrainer.check", "category": "网页闯关", "title": "检查答案" },
-      { "command": "webTrainer.importCourse", "category": "网页闯关", "title": "导入课程", "icon": "$(folder-opened)" },
-      { "command": "webTrainer.exportCourse", "category": "网页闯关", "title": "导出课程" },
-      { "command": "webTrainer.revealFiles", "category": "网页闯关", "title": "查看当前练习文件夹" }
+      { "command": "webTrainer.start", "category": "Web Trainer", "title": "Start or Resume", "icon": "$(play)" },
+      { "command": "webTrainer.check", "category": "Web Trainer", "title": "Check Answer" },
+      { "command": "webTrainer.importCourse", "category": "Web Trainer", "title": "Import Course", "icon": "$(folder-opened)" },
+      { "command": "webTrainer.exportCourse", "category": "Web Trainer", "title": "Export Course" },
+      { "command": "webTrainer.revealFiles", "category": "Web Trainer", "title": "Open Practice Folder" }
     ],
     "menus": {
       "view/title": [

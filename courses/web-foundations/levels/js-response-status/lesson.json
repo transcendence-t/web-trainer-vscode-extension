@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "用 HTTP 状态决定是否读取响应正文",
-  "goal": "区分 Promise 已完成、HTTP 请求成功以及 JSON 解析成功。",
-  "summary": "本题用浏览器原生 Response 构造成功、404 和 503 的样本。HTTP 状态出错时应显示状态码，即使正文刚好有合法 JSON。",
+  "title": "Use HTTP status to determine whether to read the response body",
+  "goal": "distinguishes between Promise completion, HTTP request success, and JSON parsing success.",
+  "summary": "This question uses the browser's native Response to construct samples of success, 404 and 503. A status code should be displayed when an HTTP status error occurs, even if the body happens to have valid JSON.",
   "tasks": [
-    "完成 responseMessage(response)。response.ok 为 false 时，直接返回「读取失败：」加 response.status。",
-    "成功时 await response.json()，返回对象里的 message。保留 makeResponseMessage 以便预览几个 HTTP 样本。"
+    "Complete responseMessage(response). If response.ok is false, return “Reading failed: ” followed by response.status.",
+    "When successful, await response.json() returns the message in the object. Keep makeResponseMessage for previewing several HTTP samples."
   ],
   "example": {
     "language": "javascript",
-    "code": "const response = new Response('缺少记录', { status: 404 });\nresponse.ok; // false\nresponse.status; // 404",
-    "note": "fetch 收到 404 或 503 时通常仍获得 Response，检查 ok 就能处理 2xx 之外的状态。"
+    "code": "const response = new Response('missing records', { status: 404 });\nresponse.ok; // false\nresponse.status; // 404",
+    "note": "fetch usually still gets Response when receiving 404 or 503, and can handle status other than 2xx by checking ok."
   },
-  "hint": "先检查状态再解析。失败正文可能是普通文字，不能假定所有正文都能作为 JSON。"
+  "hint": "Check the status first and then parse. The failure body may be plain text, and it cannot be assumed that all bodies will work as JSON."
 }

@@ -1,31 +1,31 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>双数计算器</title>
+  <title>even number calculator</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 <main class="sheet">
-  <h1>双数计算器</h1>
+  <h1>even number calculator</h1>
   <div class="calculator">
     <div class="number-fields">
       <div class="field">
-        <label for="first-number">第一个数</label>
-        <input id="first-number" type="text" inputmode="decimal" placeholder="例如 8">
+        <label for="first-number">first number</label>
+        <input id="first-number" type="text" inputmode="decimal" placeholder="example 8">
       </div>
       <div class="field">
-        <label for="second-number">第二个数</label>
-        <input id="second-number" type="text" inputmode="decimal" placeholder="例如 5">
+        <label for="second-number">second number</label>
+        <input id="second-number" type="text" inputmode="decimal" placeholder="example 5">
       </div>
     </div>
     <div class="operations">
-      <button id="calc-add" type="button">加法</button>
-      <button id="calc-subtract" type="button">减法</button>
+      <button id="calc-add" type="button">addition</button>
+      <button id="calc-subtract" type="button">subtraction</button>
     </div>
-    <p class="result">结果 <output id="calc-result" for="first-number second-number" aria-live="polite">等待计算</output></p>
+    <p class="result">results <output id="calc-result" for="first-number second-number" aria-live="polite">waiting for calculation</output></p>
   </div>
 </main>
 </body>

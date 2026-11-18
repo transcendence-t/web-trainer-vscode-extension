@@ -1,0 +1,56 @@
+[
+  {
+    "label": "版画课原价有删除线",
+    "expect": {
+      "type": "style",
+      "selector": "article:nth-of-type(1) .old-price",
+      "property": "text-decoration-line",
+      "value": "line-through"
+    }
+  },
+  {
+    "label": "纸艺课原价有删除线",
+    "expect": {
+      "type": "style",
+      "selector": "article:nth-of-type(2) .old-price",
+      "property": "text-decoration-line",
+      "value": "line-through"
+    }
+  },
+  {
+    "label": "版画课现价保留原样",
+    "expect": {
+      "type": "style",
+      "selector": "article:nth-of-type(1) .current-price",
+      "property": "text-decoration-line",
+      "value": "none"
+    }
+  },
+  {
+    "label": "纸艺课现价保留原样",
+    "expect": {
+      "type": "style",
+      "selector": "article:nth-of-type(2) .current-price",
+      "property": "text-decoration-line",
+      "value": "none"
+    }
+  },
+  {
+    "label": "版画课价格整行无装饰线",
+    "expect": {
+      "type": "style",
+      "selector": "article:nth-of-type(1) > p",
+      "property": "text-decoration-line",
+      "value": "none"
+    }
+  },
+  {
+    "label": "纸艺课价格整行无装饰线",
+    "expect": {
+      "type": "style",
+      "selector": "article:nth-of-type(2) > p",
+      "property": "text-decoration-line",
+      "value": "none"
+    }
+  }
+]

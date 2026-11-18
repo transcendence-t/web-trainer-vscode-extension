@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "把估计到达时间四舍五入到五分钟",
-  "goal": "用 Math.round 和单位换算将数值舍入到指定步长。",
-  "summary": "接驳车看板按 5 分钟更新。接口给出的预计用时可以是小数秒换算出的分钟数。",
+  "title": "Round estimated arrival time to five minutes",
+  "goal": "uses Math.round and unit conversion to round a value to the specified step size.",
+  "summary": "Shuttle bus signboard is updated every 5 minutes. The estimated time given by the interface can be minutes converted from fractional seconds.",
   "tasks": [
-    "完成 roundPickup(minutes)，将非负分钟数舍入到最接近的 5 的倍数。",
-    "距离上下两项一样时取较大的倍数，0 保持 0。"
+    "Completes roundPickup(minutes), rounding non-negative minutes to the nearest multiple of 5.",
+    "When the distance between the upper and lower two items is the same, take the larger multiple and keep 0."
   ],
   "example": {
     "language": "javascript",
     "code": "Math.round(13 / 10) * 10; // 10\nMath.round(15 / 10) * 10; // 20",
-    "note": "先把数量换算成指定步长的组数，舍入后再乘回步长。"
+    "note": "First convert the quantity into the number of groups with the specified step size, round it off and then multiply it back to the step size."
   },
-  "hint": "Math.round 只会把一个数舍入为整数。先除以 5，再乘以 5。"
+  "hint": "Math.round will only round a number to an integer. First divide by 5, then multiply by 5."
 }

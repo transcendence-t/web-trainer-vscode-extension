@@ -1,0 +1,128 @@
+[
+  {
+    "label": "正文有独立的页面标题",
+    "expect": {
+      "type": "text",
+      "selector": ".sheet > main.reading-content > h1",
+      "value": "社区旧书交换日"
+    }
+  },
+  {
+    "label": "页眉包含有名称的页内导航",
+    "expect": {
+      "type": "exists",
+      "selector": ".sheet > header.site-header > nav.site-nav[aria-label=\"页内导航\"]"
+    }
+  },
+  {
+    "label": "正文两块内容依次使用 section",
+    "expect": {
+      "type": "exists",
+      "selector": ".sheet > main .details > section#schedule + section#visit"
+    }
+  },
+  {
+    "label": "页脚保留组织者信息",
+    "expect": {
+      "type": "text",
+      "selector": ".sheet > footer.site-footer",
+      "value": "河畔社区图书角组织"
+    }
+  },
+  {
+    "label": "活动安排链接确实定位到对应内容",
+    "expect": {
+      "type": "exists",
+      "selector": "section#schedule:target"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "nav a[href=\"#schedule\"]"
+      }
+    ]
+  },
+  {
+    "label": "到场方式链接确实定位到对应内容",
+    "expect": {
+      "type": "exists",
+      "selector": "section#visit:target"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "nav a[href=\"#visit\"]"
+      }
+    ]
+  },
+  {
+    "label": "320px 时导航在站点名称下方",
+    "expect": {
+      "type": "layout",
+      "selector": ".site-nav",
+      "relativeTo": ".site-name",
+      "relation": "below"
+    },
+    "viewport": 320
+  },
+  {
+    "label": "320px 时到场方式在活动安排下方",
+    "expect": {
+      "type": "layout",
+      "selector": "#visit",
+      "relativeTo": "#schedule",
+      "relation": "below"
+    },
+    "viewport": 320
+  },
+  {
+    "label": "679px 时正文仍然上下排列",
+    "expect": {
+      "type": "layout",
+      "selector": "#visit",
+      "relativeTo": "#schedule",
+      "relation": "below"
+    },
+    "viewport": 679
+  },
+  {
+    "label": "680px 时到场方式切换到右列",
+    "expect": {
+      "type": "layout",
+      "selector": "#visit",
+      "relativeTo": "#schedule",
+      "relation": "right-of"
+    },
+    "viewport": 680
+  },
+  {
+    "label": "980px 时两张卡片依然左右并排",
+    "expect": {
+      "type": "layout",
+      "selector": "#visit",
+      "relativeTo": "#schedule",
+      "relation": "right-of"
+    },
+    "viewport": 980
+  },
+  {
+    "label": "980px 时正文两列等宽",
+    "expect": {
+      "type": "layout",
+      "selector": "#visit",
+      "relativeTo": "#schedule",
+      "relation": "equal-width"
+    },
+    "viewport": 980
+  },
+  {
+    "label": "980px 时导航位于站点名称右侧",
+    "expect": {
+      "type": "layout",
+      "selector": ".site-nav",
+      "relativeTo": ".site-name",
+      "relation": "right-of"
+    },
+    "viewport": 980
+  }
+]

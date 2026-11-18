@@ -1,0 +1,34 @@
+[
+  {
+    "label": "装饰图显式使用空 alt",
+    "expect": {
+      "type": "attribute",
+      "selector": "#decoration",
+      "name": "alt",
+      "value": ""
+    }
+  },
+  {
+    "label": "装饰图有预留尺寸",
+    "expect": {
+      "type": "exists",
+      "selector": "img#decoration[width=\"24\"][height=\"20\"]"
+    }
+  },
+  {
+    "label": "内容图保留两项尺寸",
+    "expect": {
+      "type": "exists",
+      "selector": "img#building[width=\"144\"][height=\"76\"]"
+    }
+  },
+  {
+    "label": "保留原有替代文字",
+    "expect": {
+      "type": "attribute",
+      "selector": "#building",
+      "name": "alt",
+      "value": "实训楼的正面示意图"
+    }
+  }
+]

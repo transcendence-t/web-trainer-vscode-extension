@@ -1,42 +1,42 @@
 [
   {
-    "label": "统计次数并保留首次出现顺序",
+    "label": "counts the number of times and retains the order of first occurrence",
     "expect": {
       "type": "function",
       "name": "countMaterials",
       "args": [
         [
-          "绳子",
-          "面料",
-          "绳子",
-          "染料"
+          "rope",
+          "fabric",
+          "rope",
+          "dye"
         ]
       ],
       "value": [
         [
-          "绳子",
+          "rope",
           2
         ],
         [
-          "面料",
+          "fabric",
           1
         ],
         [
-          "染料",
+          "dye",
           1
         ]
       ]
     }
   },
   {
-    "label": "特殊字符串仍是合法材料名",
+    "label": "special string is still a legal material name",
     "expect": {
       "type": "function",
       "name": "countMaterials",
       "args": [
         [
           "__proto__",
-          "纸",
+          "paper",
           "__proto__"
         ]
       ],
@@ -46,14 +46,14 @@
           2
         ],
         [
-          "纸",
+          "paper",
           1
         ]
       ]
     }
   },
   {
-    "label": "材料名为数字字符串时保留登记次序",
+    "label": "The registration order is retained when the material name is a numeric string.",
     "expect": {
       "type": "function",
       "name": "countMaterials",
@@ -77,7 +77,7 @@
     }
   },
   {
-    "label": "空输入",
+    "label": "empty input",
     "expect": {
       "type": "function",
       "name": "countMaterials",

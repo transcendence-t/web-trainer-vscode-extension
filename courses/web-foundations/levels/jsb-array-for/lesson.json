@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "合计各时段借出量",
-  "goal": "用循环遍历数字数组，从初始值 0 开始逐项累加。",
-  "summary": "阅览室记录了各时段借出的书本数。把数字合起来，就能得到当天的借出总量。",
+  "title": "Total loan amount in each period",
+  "goal": "uses a loop to traverse the digital array and accumulate items one by one starting from the initial value 0.",
+  "summary": "The reading room records the number of books borrowed during each period. Add the numbers together to get the total amount lent for the day.",
   "tasks": [
-    "完成 totalCheckouts(counts)。counts 的每一项都是一个时段借出的书本数。",
-    "遍历整个数组并返回所有数字的和。没有记录时返回数字 0。"
+    "complete totalCheckouts(counts). Each item in counts is the number of books borrowed during a period.",
+    "iterates through the entire array and returns the sum of all numbers. Returns the number 0 when there is no record."
   ],
   "example": {
     "language": "javascript",
-    "code": "const boxes = ['灯具', '线材', '标牌'];\nlet labels = '';\nfor (const box of boxes) {\n  labels += '【' + box + '】';\n}\n// labels 是 '【灯具】【线材】【标牌】'",
-    "note": "累积结果的变量放在循环外。每一轮把一个箱子名称接到上一次的结果末尾。"
+    "code": "const boxes = ['lamp', 'wire', 'sign'];\nlet labels = '';\nfor (const box of boxes) {\n  labels += '【' + box + '】';\n}\n// labels is '[Lamp][Wire][Label]'",
+    "note": "The variable of the accumulated result is placed outside the loop. In each round, a box name is appended to the end of the previous result."
   },
-  "hint": "如果用下标遍历，第一轮应从 0 开始，并在下标到达 counts.length 前停止。把求和的初始值设为 0。"
+  "hint": "If traversing with subscripts, the first round should start from 0 and stop before the subscript reaches counts.length. Set the initial value of the sum to 0."
 }

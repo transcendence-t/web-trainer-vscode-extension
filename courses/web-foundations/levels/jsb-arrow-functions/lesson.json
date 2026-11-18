@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "用箭头函数返回一条工单记录",
-  "goal": "使用箭头函数的表达式返回一个对象。",
-  "summary": "创建工单时需要用传入的编号和初始状态生成一条新记录。",
+  "title": "Use arrow function to return a work order record",
+  "goal": "An expression using an arrow function returns an object.",
+  "summary": "When creating a work order, a new record needs to be generated with the passed in number and initial status.",
   "tasks": [
-    "将起始声明改写成名为 buildTicket 的箭头函数。",
-    "返回 { id, status: \"待处理\" }，id 保留传入值及其类型。"
+    "Rewrite the starting statement into an arrow function named buildTicket.",
+    "returns { id, status: \"Pending\" }, id retains the incoming value and its type."
   ],
   "example": {
     "language": "javascript",
     "code": "const createTag = (code) => ({ code, visible: true });",
-    "note": "直接返回对象时用圆括号包住对象字面量，以便与函数体区分。"
+    "note": "When returning an object directly, enclose the object literal in parentheses to distinguish it from the function body."
   },
-  "hint": "也可以在带花括号的函数体里显式写 return。"
+  "hint": "You can also write return explicitly in the function body with curly braces."
 }

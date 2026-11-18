@@ -1,6 +1,6 @@
 [
   {
-    "label": "未启动时等过两个周期也没有记录",
+    "label": "is not started, there is no record after waiting for two cycles.",
     "expect": {
       "type": "count",
       "selector": "#sample-log > li",
@@ -14,7 +14,7 @@
     ]
   },
   {
-    "label": "点击启动后至少产生两条记录",
+    "label": "At least two records will be generated after clicking start.",
     "expect": {
       "type": "exists",
       "selector": "#sample-log > li:nth-child(2)"
@@ -31,7 +31,7 @@
     ]
   },
   {
-    "label": "停止后保留先前的采样记录",
+    "label": "retains previous sampling records after stopping",
     "expect": {
       "type": "exists",
       "selector": "#sample-log > li:nth-child(2)"
@@ -56,11 +56,11 @@
     ]
   },
   {
-    "label": "等待几个采样周期后仍处于停止状态",
+    "label": "is still in the stopped state after waiting for several sampling cycles.",
     "expect": {
       "type": "text",
       "selector": "#sampling-status",
-      "value": "已停止采样"
+      "value": "Sampling has stopped"
     },
     "actions": [
       {
@@ -82,7 +82,7 @@
     ]
   },
   {
-    "label": "停止后可以再开始下一轮",
+    "label": "After stopping, you can start the next round",
     "expect": {
       "type": "exists",
       "selector": "#start-sampling:not([disabled])"

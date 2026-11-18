@@ -1,1 +1,1 @@
-const buildTicket = (id) => ({ id, status: '待处理' });
+const buildTicket = (id) => ({ id, status: 'pending' });

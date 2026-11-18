@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "突出一条指定通知",
+  "goal": "用 ID 选择器给一组通知中的一条设置专属颜色。",
+  "summary": "选择器以 # 开头，后面跟元素的 id 值。一个页面里的每个 id 值应当唯一。",
+  "tasks": [
+    "用 ID 选择器选中 id 为 closure 的闭馆通知。",
+    "把这条通知的文字设为 #754619，背景设为 #fff5da。保留开放时间通知的原样式。"
+  ],
+  "hint": "两个通知都用了 notice 类。用 # 加目标通知的 id，把改动限定到这一条。",
+  "example": {
+    "language": "css",
+    "code": "#pickup-time {\n  font-weight: 700;\n}",
+    "note": "自提单里，给唯一的取货时间标记 id=\"pickup-time\"，就能按这个 ID 把这行时间加粗。"
+  }
+}

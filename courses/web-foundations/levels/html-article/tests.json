@@ -1,26 +1,26 @@
 [
   {
-    "label": "文章的二级标题",
+    "label": "Second-level title of the article",
     "expect": {
       "type": "text",
       "selector": "article#seed-swap > h2, article#seed-swap > header h2",
-      "value": "种子交换会"
+      "value": "Seed Exchange Meeting"
     }
   },
   {
-    "label": "文章内小节的三级标题",
+    "label": "Third-level headings of sections within the article",
     "expect": {
       "type": "text",
       "selector": "article#seed-swap section#bring > h3, article#seed-swap section#bring > header h3",
-      "value": "请带上什么"
+      "value": "What should you bring?"
     }
   },
   {
-    "label": "说明放在该小节内",
+    "label": "Description is placed in this section",
     "expect": {
       "type": "text",
       "selector": "article#seed-swap section#bring p",
-      "value": "带一袋种子，在袋上写明品种。"
+      "value": "Bring a bag of seeds and write the variety on the bag."
     }
   }
 ]

@@ -1,3 +1,3 @@
-const message = '准备就绪';
+const message = 'Ready';
 
-// 在这里更新页面状态。
+// updates page status here.

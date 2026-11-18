@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "在页面入口导入回执格式化函数",
-  "goal": "用命名 export 和 import 在两个文件之间共享函数。",
-  "summary": "script.js 负责格式化；index.html 的模块入口负责点击处理。像普通网页一样使用相对导入，练习沙箱会在本地载入 script.js。",
+  "title": "Import the receipt formatting function at the page entry",
+  "goal": "Use the names export and import to share functions between two files.",
+  "summary": "script.js is responsible for formatting; the module entry of index.html is responsible for click processing. Using relative imports like a normal web page, the practice sandbox will load script.js locally.",
   "tasks": [
-    "在 script.js 中完成并命名导出 formatReceipt(number)，返回 LAB- 加至少三位的序号，前面补 0。",
-    "在 index.html 已有的内联模块中，从 ./script.js 导入 formatReceipt。点击 #format 时用 #ticket 的值更新 #receipt。"
+    "Complete and name the export formatReceipt(number) in script.js, return LAB- plus a serial number of at least three digits, and add 0 in front.",
+    "In the existing inline module of index.html, import formatReceipt from ./script.js. Updates the #receipt with the value of the #ticket when #format is clicked."
   ],
   "example": {
     "language": "javascript",
-    "code": "// script.js\nexport function titleFor(name) { return \"题名：\" + name; }\n\n<!-- index.html -->\n<script type=\"module\">\n  import { titleFor } from \"./script.js\";\n  console.log(titleFor(\"工作台\"));\n</script>",
-    "note": "命名导入使用花括号，名称和导出对应。页面入口要声明 type=\"module\"。"
+    "code": "// script.js\nexport function titleFor(name) { return \"Title:\" + name; }\n\n<!-- index.html -->\n<script type=\"module\">\n  import { titleFor } from \"./script.js\";\n  console.log(titleFor(\"workbench\"));\n</script>",
+    "note": "uses curly brackets to name the import, and the name corresponds to the export. The page entry must declare type=\"module\"."
   },
-  "hint": "可用 String(number).padStart(3, '0') 补齐。模块里的声明只在所在模块可用，需要显式导入。"
+  "hint": "can be padded with String(number).padStart(3, '0'). Declarations in a module are only available in the module where they are located and need to be imported explicitly."
 }

@@ -8,5 +8,5 @@ function scoreFor(points, rule) {
 }
 
 function applyScore(points, transform = (points) => points * 2) {
-  // 完成本关函数。
+  // completes this level function.
 }

@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "只高亮同时具备两个类的通知",
-  "goal": "用无空格的复合选择器匹配同时具备两项特征的元素。",
-  "summary": "部分公告有 notice 类，部分内容带 urgent 类。只有同时具备两者的元素需要警示色。",
+  "title": "Only highlights notifications with two categories at the same time",
+  "goal": "Use a compound selector without spaces to match elements with both characteristics.",
+  "summary": "Some announcements have the notice category, and some content have the urgent category. Only elements that have both require a warning color.",
   "tasks": [
-    "将同时具有 notice 和 urgent 两个类的元素文字设为 #7c460e。",
-    "单独具有 notice 或 urgent 的文字继续使用页面默认颜色。"
+    "Set the text of elements with both classes notice and urgent to #7c460e.",
+    "Text with notice or urgent alone will continue to use the default color of the page."
   ],
   "example": {
     "language": "css",
     "code": ".tag.new { color: #125a46; }",
-    "note": "两个类选择器直接相连，匹配同一个元素。中间加空格会匹配后代。"
+    "note": "The two class selectors are directly connected and match the same element. Adding spaces in between will match descendants."
   },
-  "hint": "分别写出两个类名，再把它们拼成一个没有空格的选择器。"
+  "hint": "Write out two class names respectively, and then combine them into a selector without spaces."
 }

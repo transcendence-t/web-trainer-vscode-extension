@@ -1,0 +1,48 @@
+[
+  {
+    "label": "提供播放控件",
+    "expect": {
+      "type": "property",
+      "selector": "video#demo",
+      "name": "controls",
+      "value": true
+    }
+  },
+  {
+    "label": "视频素材可加载",
+    "expect": {
+      "type": "property",
+      "selector": "video#demo",
+      "name": "videoWidth",
+      "value": 96
+    },
+    "actions": [
+      {
+        "type": "wait",
+        "ms": 350
+      }
+    ]
+  },
+  {
+    "label": "声明默认的中文辅助字幕",
+    "expect": {
+      "type": "exists",
+      "selector": "video#demo > track[kind=\"captions\"][srclang=\"zh\"][label=\"简体中文\"][default]"
+    }
+  },
+  {
+    "label": "字幕资源成功加载",
+    "expect": {
+      "type": "property",
+      "selector": "video#demo > track",
+      "name": "readyState",
+      "value": 2
+    },
+    "actions": [
+      {
+        "type": "wait",
+        "ms": 350
+      }
+    ]
+  }
+]

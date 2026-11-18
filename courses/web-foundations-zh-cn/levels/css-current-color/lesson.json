@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "让状态边框自动跟随文字颜色",
+  "goal": "使用 currentColor 从当前元素的文字颜色取得颜色值。",
+  "summary": "预约状态分别使用绿色和棕色。让卡片边框沿用各自的文字颜色，主题改色时无需重复更新边框。",
+  "tasks": [
+    "为 .badge 增加 2px 实线边框，边框颜色使用 currentColor。",
+    "保留两种状态已有的文字颜色。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".link { color: #125a46; }\n.link span { border-bottom: 1px solid currentColor; }",
+    "note": "currentColor 取当前元素的 color。子元素继承文字颜色时，也能用这个值绘制边框。"
+  },
+  "hint": "保持统一的边框规则，文字颜色仍由两种状态分别设置。"
+}

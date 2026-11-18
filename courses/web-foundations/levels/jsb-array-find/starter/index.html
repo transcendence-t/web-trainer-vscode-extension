@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>取得第一条符合编号的登记记录</title>
+  <title>Obtain the first registration record matching the number</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <main class="sheet">
-    <h1>取得第一条符合编号的登记记录</h1>
-    <p>试一试 <code>findRecord([{"id":"A7","room":"木工坊"},{"id":"A7","room":"服务台"}], "A7")</code></p>
-    <p>运行结果 <output id="example-result" aria-live="polite">待填写函数</output></p>
+    <h1>Obtain the first registration record matching the number</h1>
+    <p>give it a try <code>findRecord([{"id":"A7","room":"Wood Workshop"},{"id":"A7","room":"Service Desk"}], "A7")</code></p>
+    <p>running results <output id="example-result" aria-live="polite">Function to be filled in</output></p>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const result = findRecord([{"id":"A7","room":"木工坊"},{"id":"A7","room":"服务台"}], "A7");
+        const result = findRecord([{"id":"A7","room":"Wood Workshop"},{"id":"A7","room":"Service Desk"}], "A7");
         if (result !== undefined) {
           document.querySelector("#example-result").textContent = JSON.stringify(result);
         }

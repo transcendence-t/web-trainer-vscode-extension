@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "为导览清单提供打印样式",
-  "goal": "用 @media print 移除仅用于屏幕浏览的内容。",
-  "summary": "导览页可直接打印。打印稿保留导览文字和地点，省去导航和装饰底色。",
+  "title": "Provides printing styles for navigation lists",
+  "goal": "Use @media print to remove content for screen viewing only.",
+  "summary": "navigation page can be printed directly. The printed version retains the navigation text and location, omitting the navigation and decorative background colors.",
   "tasks": [
-    "在 @media print 中隐藏 .site-nav，将 .paper 的背景设为白色。",
-    "保持屏幕导航与浅绿底色。"
+    "Hide .site-nav in @media print and set .paper's background to white.",
+    "keeps the screen navigation with light green background color."
   ],
   "example": {
     "language": "css",
     "code": "@media print {\n  .toolbar { display: none; }\n  .content { background: white; }\n}",
-    "note": "print 条件只在浏览器打印或生成打印预览时匹配。"
+    "note": "The print condition only matches when the browser prints or generates a print preview."
   },
-  "hint": "把两条修改都写在打印媒体查询中。"
+  "hint": "Write both modifications in the print media query."
 }

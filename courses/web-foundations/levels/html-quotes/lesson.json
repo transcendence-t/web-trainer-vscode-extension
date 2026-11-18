@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "标记长引文、短引文和出处",
-  "goal": "为整段引用、句内引用和作品名称选用合适标签。",
-  "summary": "社区记录页有一段摘录和一处短引语。给读者显示作品名，并记录整段引文的网址。",
+  "title": "Mark long citations, short citations and sources",
+  "goal": "Use appropriate tags for full citations, in-sentence citations, and work titles.",
+  "summary": "community records page has an excerpt and a short quote. Display the title of the work to readers and record the URL of the entire citation.",
   "tasks": [
-    "用 blockquote 包住「先记录发现，再讨论解释。」所在的段落，并给 blockquote 的 cite 属性填 https://example.org/observation。",
-    "用 cite 元素包住「《社区观察手册》」，用 q 包住「留意身边的变化」。"
+    "Use blockquote to wrap the paragraph where \"Document findings first, discuss explanations later.\" is located, and fill in the cite attribute of blockquote with https://example.org/observation.",
+    "wraps \"\"Community Observation Manual\"\" with cite elements and \"Pay attention to the changes around you\" with q."
   ],
   "example": {
     "language": "html",
-    "code": "<blockquote cite=\"https://example.org/notes\"><p>先核对实物，再写说明。</p></blockquote>\n<p>摘自<cite>《展馆工作记录》</cite>，本章主题是<q>交接</q>。</p>",
-    "note": "blockquote 的 cite 属性记录网址，cite 元素在正文里显示作品名。"
+    "code": "<blockquote cite=\"https://example.org/notes\"><p>Check the actual object first, and then write the description.</p></blockquote>\n<p>excerpted from<cite>\"Exhibition Hall Work Record\"</cite>, the topic of this chapter is<q>handover</q>。</p>",
+    "note": "blockquote records the URL, and the cite element displays the work name in the text."
   },
-  "hint": "blockquote 用来包住块级引文，q 写在原段落内部。"
+  "hint": "blockquote is used to wrap block-level quotations, and q is written inside the original paragraph."
 }

@@ -1,0 +1,60 @@
+[
+  {
+    "label": "直接预览使用缺省的两倍积分",
+    "expect": {
+      "type": "function",
+      "name": "applyScore",
+      "args": [
+        4
+      ],
+      "value": 8
+    }
+  },
+  {
+    "label": "缺省规则的结果也保持非负",
+    "expect": {
+      "type": "function",
+      "name": "applyScore",
+      "args": [
+        -2
+      ],
+      "value": 0
+    }
+  },
+  {
+    "label": "支持积分规则 double",
+    "expect": {
+      "type": "function",
+      "name": "scoreFor",
+      "args": [
+        4,
+        "double"
+      ],
+      "value": 8
+    }
+  },
+  {
+    "label": "支持积分规则 bonus",
+    "expect": {
+      "type": "function",
+      "name": "scoreFor",
+      "args": [
+        4,
+        "bonus"
+      ],
+      "value": 7
+    }
+  },
+  {
+    "label": "支持积分规则 penalty",
+    "expect": {
+      "type": "function",
+      "name": "scoreFor",
+      "args": [
+        2,
+        "penalty"
+      ],
+      "value": 0
+    }
+  }
+]

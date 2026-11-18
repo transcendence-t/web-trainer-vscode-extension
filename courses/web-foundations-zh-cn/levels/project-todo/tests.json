@@ -1,0 +1,362 @@
+[
+  {
+    "label": "已有的展示准备项可以看到",
+    "expect": {
+      "type": "text",
+      "selector": "#task-list > li:nth-child(1) .task-title",
+      "value": "核对展示顺序"
+    }
+  },
+  {
+    "label": "添加后只保留标题本身",
+    "expect": {
+      "type": "text",
+      "selector": "#task-list > li:nth-child(2) .task-title",
+      "value": "准备示意图"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "　 准备示意图  "
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      }
+    ]
+  },
+  {
+    "label": "添加成功后输入框已清空",
+    "expect": {
+      "type": "exists",
+      "selector": "#task-input:placeholder-shown"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "准备示意图"
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      }
+    ]
+  },
+  {
+    "label": "全是空白的条目无法加入",
+    "expect": {
+      "type": "count",
+      "selector": "#task-list > li",
+      "value": 1
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "　   "
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      }
+    ]
+  },
+  {
+    "label": "输入中的标签符号按文字显示",
+    "expect": {
+      "type": "text",
+      "selector": "#task-list > li:nth-child(2) .task-title",
+      "value": "<b>演示</b>"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "<b>演示</b>"
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      }
+    ]
+  },
+  {
+    "label": "三条中只标记中间一条的标题",
+    "expect": {
+      "type": "style",
+      "selector": "#task-list > li:nth-child(2) .task-title",
+      "property": "text-decoration-line",
+      "value": "line-through"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "准备示意图"
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      },
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "检查音响"
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      },
+      {
+        "type": "click",
+        "selector": "#task-list > li:nth-child(2) button[data-action=\"toggle\"]"
+      }
+    ]
+  },
+  {
+    "label": "中间一条的完成按钮报告已按下",
+    "expect": {
+      "type": "attribute",
+      "selector": "#task-list > li:nth-child(2) button[data-action=\"toggle\"]",
+      "name": "aria-pressed",
+      "value": "true"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "准备示意图"
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      },
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "检查音响"
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      },
+      {
+        "type": "click",
+        "selector": "#task-list > li:nth-child(2) button[data-action=\"toggle\"]"
+      }
+    ]
+  },
+  {
+    "label": "中间一条完成时第一条仍是待办",
+    "expect": {
+      "type": "style",
+      "selector": "#task-list > li:nth-child(1) .task-title",
+      "property": "text-decoration-line",
+      "value": "none"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "准备示意图"
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      },
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "检查音响"
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      },
+      {
+        "type": "click",
+        "selector": "#task-list > li:nth-child(2) button[data-action=\"toggle\"]"
+      }
+    ]
+  },
+  {
+    "label": "中间一条完成时第三条仍是待办",
+    "expect": {
+      "type": "attribute",
+      "selector": "#task-list > li:nth-child(3) button[data-action=\"toggle\"]",
+      "name": "aria-pressed",
+      "value": "false"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "准备示意图"
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      },
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "检查音响"
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      },
+      {
+        "type": "click",
+        "selector": "#task-list > li:nth-child(2) button[data-action=\"toggle\"]"
+      }
+    ]
+  },
+  {
+    "label": "再次切换中间一条可去掉删除线",
+    "expect": {
+      "type": "style",
+      "selector": "#task-list > li:nth-child(2) .task-title",
+      "property": "text-decoration-line",
+      "value": "none"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "准备示意图"
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      },
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "检查音响"
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      },
+      {
+        "type": "click",
+        "selector": "#task-list > li:nth-child(2) button[data-action=\"toggle\"]"
+      },
+      {
+        "type": "click",
+        "selector": "#task-list > li:nth-child(2) button[data-action=\"toggle\"]"
+      }
+    ]
+  },
+  {
+    "label": "删除中间一条后还有两项",
+    "expect": {
+      "type": "count",
+      "selector": "#task-list > li",
+      "value": 2
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "准备示意图"
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      },
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "检查音响"
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      },
+      {
+        "type": "click",
+        "selector": "#task-list > li:nth-child(2) button[data-action=\"toggle\"]"
+      },
+      {
+        "type": "click",
+        "selector": "#task-list > li:nth-child(2) button[data-action=\"delete\"]"
+      }
+    ]
+  },
+  {
+    "label": "删除中间一条保留第一项",
+    "expect": {
+      "type": "text",
+      "selector": "#task-list > li:nth-child(1) .task-title",
+      "value": "核对展示顺序"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "准备示意图"
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      },
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "检查音响"
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      },
+      {
+        "type": "click",
+        "selector": "#task-list > li:nth-child(2) button[data-action=\"toggle\"]"
+      },
+      {
+        "type": "click",
+        "selector": "#task-list > li:nth-child(2) button[data-action=\"delete\"]"
+      }
+    ]
+  },
+  {
+    "label": "删除中间一条保留原第三项",
+    "expect": {
+      "type": "text",
+      "selector": "#task-list > li:nth-child(2) .task-title",
+      "value": "检查音响"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "准备示意图"
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      },
+      {
+        "type": "input",
+        "selector": "#task-input",
+        "value": "检查音响"
+      },
+      {
+        "type": "click",
+        "selector": "#add-task"
+      },
+      {
+        "type": "click",
+        "selector": "#task-list > li:nth-child(2) button[data-action=\"toggle\"]"
+      },
+      {
+        "type": "click",
+        "selector": "#task-list > li:nth-child(2) button[data-action=\"delete\"]"
+      }
+    ]
+  }
+]

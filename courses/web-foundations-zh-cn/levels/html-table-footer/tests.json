@@ -1,0 +1,26 @@
+[
+  {
+    "label": "表身只有两行明细",
+    "expect": {
+      "type": "count",
+      "selector": "table > tbody > tr",
+      "value": 2
+    }
+  },
+  {
+    "label": "表脚合计使用行标题",
+    "expect": {
+      "type": "text",
+      "selector": "table > tfoot th[scope=\"row\"]",
+      "value": "合计"
+    }
+  },
+  {
+    "label": "汇总数字仍然为 10",
+    "expect": {
+      "type": "text",
+      "selector": "table > tfoot td",
+      "value": "10"
+    }
+  }
+]

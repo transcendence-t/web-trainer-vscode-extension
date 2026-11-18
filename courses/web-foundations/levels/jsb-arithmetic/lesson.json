@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "计算打印与装订费用",
-  "goal": "按每页单价、页数和一次性装订费计算总费用。",
-  "summary": "乘号 * 计算页数对应的费用，加号 + 把各笔费用合起来。在没有括号改动顺序的表达式中，乘法先于加法。",
+  "title": "Calculate printing and binding costs",
+  "goal": "The total cost is calculated based on the unit price per page, number of pages and one-time binding fee.",
+  "summary": "The multiplication sign * calculates the cost corresponding to the number of pages, and the plus sign + adds up the costs. In expressions without parentheses changing the order, multiplication precedes addition.",
   "tasks": [
-    "在 printCost 的大括号内用 pagePrice 乘以 pages 得出打印费，再加上一次 bindingFee。",
-    "用 return 返回总费用。单价和装订费都用分表示，可以为 0。"
+    "Use pagePrice multiplied by pages within the curly brackets of printCost to get the printing fee, plus bindingFee once.",
+    "uses return to return the total cost. The unit price and binding fee are expressed in cents, which can be 0."
   ],
-  "hint": "先算打印费，再加装订费。若把两种费用加起来才乘以页数，装订费会按页重复收费。",
+  "hint": "The printing fee is calculated first, then the binding fee is added. If the two charges are added up and then multiplied by the number of pages, the binding fee will be charged repeatedly per page.",
   "example": {
     "language": "javascript",
     "code": "const chairsPerRow = 6;\nconst rows = 4;\nconst spareChairs = 2;\nconst totalChairs = chairsPerRow * rows + spareChairs;",
-    "note": "会议室排好四排椅子后再加两把备用椅，共需 26 把。"
+    "note": "The meeting room needs 26 chairs for four rows and two spare chairs."
   }
 }

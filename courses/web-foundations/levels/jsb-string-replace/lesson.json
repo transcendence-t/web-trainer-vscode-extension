@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "填充通知里的每一处占位符",
-  "goal": "用 replaceAll 替换字符串中所有相同标记。",
-  "summary": "批量通知会在题头与正文两次引用场地名称。插入场地时，所有 {room} 占位符都应更新。",
+  "title": "Fills in every placeholder in the notification",
+  "goal": "Use replaceAll to replace all identical tokens in a string.",
+  "summary": "The batch notification will quote the venue name twice in the title and body. When a venue is inserted, all {room} placeholders should update.",
   "tasks": [
-    "完成 fillRoom(template, room)，把文本里的每一处 {room} 换成 room。",
-    "其他内容原样保留，无占位符的文本直接返回。"
+    "completes fillRoom(template, room) and replaces every {room} in the text with room.",
+    "Keep other contents as they are, and text without placeholders is returned directly."
   ],
   "example": {
     "language": "javascript",
-    "code": "'请到#。#上午开放。'.replaceAll('#', '工坊');",
-    "note": "以字符串为匹配条件时，replace 只替换最先出现的一处。"
+    "code": "'Please go to #. #Open in the morning.'.replaceAll('#', 'workshop');",
+    "note": "When a string is used as the matching condition, replace only replaces the first occurrence."
   },
-  "hint": "replaceAll 可以查找固定字符串。若输入可能包含 $，用回调 () => room 按原样插入。"
+  "hint": "replaceAll can find fixed strings. If the input may contain $, use callback () => room to insert it as is."
 }

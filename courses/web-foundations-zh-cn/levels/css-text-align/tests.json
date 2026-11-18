@@ -1,0 +1,38 @@
+[
+  {
+    "label": "导览时间标题居中",
+    "expect": {
+      "type": "style",
+      "selector": "section:nth-of-type(1) > h2",
+      "property": "text-align",
+      "value": "center"
+    }
+  },
+  {
+    "label": "集合地点标题居中",
+    "expect": {
+      "type": "style",
+      "selector": "section:nth-of-type(2) > h2",
+      "property": "text-align",
+      "value": "center"
+    }
+  },
+  {
+    "label": "导览时间说明靠左",
+    "expect": {
+      "type": "style",
+      "selector": "section:nth-of-type(1) > p",
+      "property": "text-align",
+      "value": "left"
+    }
+  },
+  {
+    "label": "集合地点说明靠左",
+    "expect": {
+      "type": "style",
+      "selector": "section:nth-of-type(2) > p",
+      "property": "text-align",
+      "value": "left"
+    }
+  }
+]

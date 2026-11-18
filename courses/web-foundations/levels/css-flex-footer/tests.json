@@ -1,6 +1,6 @@
 [
   {
-    "label": "页面满足高度下限",
+    "label": "page meets the lower height limit",
     "expect": {
       "type": "style",
       "selector": "body",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "用纵向 Flex 排列页面区域",
+    "label": "Use vertical Flex to arrange page areas",
     "expect": {
       "type": "style",
       "selector": "body",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "主体可以增长",
+    "label": "main body can grow",
     "expect": {
       "type": "style",
       "selector": "main",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "页脚紧随内容且不覆盖",
+    "label": "The footer follows the content and does not cover it",
     "expect": {
       "type": "layout",
       "selector": "footer",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "页脚仍在普通文档流",
+    "label": "footer still in normal document flow",
     "expect": {
       "type": "style",
       "selector": "footer",

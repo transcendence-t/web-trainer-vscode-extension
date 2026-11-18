@@ -1,6 +1,6 @@
 [
   {
-    "label": "顺向提示线在左侧",
+    "label": "forward prompt line is on the left",
     "expect": {
       "type": "style",
       "selector": "#zh-note",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "反向提示线在右侧",
+    "label": "reverse prompt line is on the right",
     "expect": {
       "type": "style",
       "selector": "#ar-note",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "顺向留左侧间距",
+    "label": "Leave space on the left side in the direction",
     "expect": {
       "type": "style",
       "selector": "#zh-note",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "反向留右侧间距",
+    "label": "Leave space on the right side in reverse direction",
     "expect": {
       "type": "style",
       "selector": "#ar-note",

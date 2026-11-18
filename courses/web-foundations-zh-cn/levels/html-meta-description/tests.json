@@ -1,0 +1,35 @@
+[
+  {
+    "label": "head 中只有一条页面摘要",
+    "expect": {
+      "type": "count",
+      "selector": "head meta[name=\"description\"]",
+      "value": 1
+    }
+  },
+  {
+    "label": "摘要文本正确",
+    "expect": {
+      "type": "attribute",
+      "selector": "head meta[name=\"description\"]",
+      "name": "content",
+      "value": "查询校园开放日的日期、地点和参观安排"
+    }
+  },
+  {
+    "label": "标签页标题保留",
+    "expect": {
+      "type": "text",
+      "selector": "head title",
+      "value": "为活动页写页面元数据"
+    }
+  },
+  {
+    "label": "正文标题保留",
+    "expect": {
+      "type": "text",
+      "selector": "main h1",
+      "value": "为活动页写页面元数据"
+    }
+  }
+]

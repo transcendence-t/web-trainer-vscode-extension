@@ -1,14 +1,14 @@
 [
   {
-    "label": "整段引文放在 blockquote 内",
+    "label": "The entire quotation is placed in blockquote",
     "expect": {
       "type": "text",
       "selector": "blockquote p",
-      "value": "先记录发现，再讨论解释。"
+      "value": "Document findings first, discuss explanations later."
     }
   },
   {
-    "label": "保留引用源网址",
+    "label": "retains the citation source URL",
     "expect": {
       "type": "attribute",
       "selector": "blockquote",
@@ -17,19 +17,19 @@
     }
   },
   {
-    "label": "标出作品名称",
+    "label": "Mark the title of the work",
     "expect": {
       "type": "text",
       "selector": "p cite",
-      "value": "《社区观察手册》"
+      "value": "\"Community Observation Manual\""
     }
   },
   {
-    "label": "标出句内短引文",
+    "label": "Mark short quotations within sentences",
     "expect": {
       "type": "text",
       "selector": "p q",
-      "value": "留意身边的变化"
+      "value": "Pay attention to the changes around you"
     }
   }
 ]

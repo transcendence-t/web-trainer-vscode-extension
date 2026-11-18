@@ -6,21 +6,21 @@ let timerId;
 
 function recordSample() {
   const entry = document.createElement('li');
-  entry.textContent = '第 ' + (log.children.length + 1) + ' 次采样';
+  entry.textContent = 'No. ' + (log.children.length + 1) + ' samples';
   log.append(entry);
-  status.textContent = '正在采样';
+  status.textContent = 'is sampling';
 }
 
 start.addEventListener('click', () => {
-  status.textContent = '正在采样';
+  status.textContent = 'is sampling';
   start.disabled = true;
   stop.disabled = false;
-  // 每隔 200ms 调用 recordSample，并保存计时器编号。
+  // calls recordSample every 200ms and saves the timer number.
 });
 
 stop.addEventListener('click', () => {
-  // 用计时器编号取消采样。
-  status.textContent = '已停止采样';
+  // Cancel sampling with timer number.
+  status.textContent = 'Sampling has stopped';
   start.disabled = false;
   stop.disabled = true;
 });

@@ -1,0 +1,18 @@
+{
+  "focus": "index.html",
+  "title": "校园开放日活动板",
+  "goal": "联动活动分类和收藏按钮，把收藏的活动 ID 持久化为 JSON。",
+  "summary": "访客可以按类别浏览当天活动，并标记想参加的场次。切换分类或重新打开时，应恢复已标记的活动。",
+  "tasks": [
+    "在 index.html 的活动类别中添加「导览」选项，value 设为 tour。",
+    "在 style.css 给 .favorite-button 的 aria-pressed=\"true\" 状态设置 #125a46 背景和白色文字。",
+    "在 script.js 中根据 #event-category 的选项筛选活动。选「全部」时显示所有活动。",
+    "用 campusEventFavorites 键保存收藏活动 ID 的 JSON 数组。启动时恢复数组，点击同一活动按钮可以新增或移除收藏，并同步 aria-pressed。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const vehicles = [{ id: 'van-7' }, { id: 'truck-2' }];\nconst savedIds = ['van-7'];\nconst selected = vehicles.filter((vehicle) => savedIds.includes(vehicle.id));\nlocalStorage.setItem('fleetSelection', JSON.stringify(savedIds));",
+    "note": "车辆列表可以用稳定的 ID 判断哪些已选择。保存 ID 数组后，列表重新渲染时也能找回同一条记录。"
+  },
+  "hint": "重新渲染时用同一个收藏数组判断每个按钮的状态。只存新选中的单个 ID 会覆盖其他收藏，加载时固定用空数组也会丢失恢复状态。"
+}

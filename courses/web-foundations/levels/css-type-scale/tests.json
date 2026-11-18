@@ -1,6 +1,6 @@
 [
   {
-    "label": "编码字重为 600",
+    "label": "encoding font weight is 600",
     "expect": {
       "type": "style",
       "selector": ".serial",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "字符间隔增加 2px",
+    "label": "character interval increased by 2px",
     "expect": {
       "type": "style",
       "selector": ".serial",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "编码仍为 16px",
+    "label": "encoding is still 16px",
     "expect": {
       "type": "style",
       "selector": ".serial",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "说明不额外增加字距",
+    "label": "indicates that no additional kerning is required.",
     "expect": {
       "type": "style",
       "selector": ".description",

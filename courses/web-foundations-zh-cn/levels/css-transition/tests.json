@@ -1,0 +1,84 @@
+[
+  {
+    "label": "阅览灯默认处于暗态",
+    "expect": {
+      "type": "style",
+      "selector": ".reading-lamp",
+      "property": "opacity",
+      "value": "0.25"
+    }
+  },
+  {
+    "label": "普通状态也为透明度配置了过渡",
+    "expect": {
+      "type": "style",
+      "selector": ".reading-lamp",
+      "property": "transition-property",
+      "value": "opacity"
+    }
+  },
+  {
+    "label": "过渡持续 300ms",
+    "expect": {
+      "type": "style",
+      "selector": ".reading-lamp",
+      "property": "transition-duration",
+      "value": "0.3s"
+    }
+  },
+  {
+    "label": "过渡使用 ease",
+    "expect": {
+      "type": "style",
+      "selector": ".reading-lamp",
+      "property": "transition-timing-function",
+      "value": "ease"
+    }
+  },
+  {
+    "label": "点击后阅览灯渐亮到 1",
+    "expect": {
+      "type": "style",
+      "selector": ".reading-lamp.is-on",
+      "property": "opacity",
+      "value": "1"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#toggle-lamp"
+      },
+      {
+        "type": "finish-motion",
+        "selector": ".reading-lamp"
+      }
+    ]
+  },
+  {
+    "label": "再次点击后阅览灯返回暗态",
+    "expect": {
+      "type": "style",
+      "selector": ".reading-lamp:not(.is-on)",
+      "property": "opacity",
+      "value": "0.25"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#toggle-lamp"
+      },
+      {
+        "type": "finish-motion",
+        "selector": ".reading-lamp"
+      },
+      {
+        "type": "click",
+        "selector": "#toggle-lamp"
+      },
+      {
+        "type": "finish-motion",
+        "selector": ".reading-lamp"
+      }
+    ]
+  }
+]

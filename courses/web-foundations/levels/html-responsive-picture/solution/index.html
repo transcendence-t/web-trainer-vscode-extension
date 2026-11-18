@@ -1,21 +1,21 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>宽窄屏选用不同构图</title>
+  <title>chooses different compositions for wide and narrow screens</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <main class="sheet">
-    <h1>宽窄屏选用不同构图</h1>
+    <h1>chooses different compositions for wide and narrow screens</h1>
     <figure>
       <picture>
         <source media="(min-width: 600px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAABUCAYAAADUKzhSAAAEI0lEQVR4AeyWsWpVQRCGl1tY2FinEu3S2vsUvkJAfYaYKhCw8gG0CViIRTqrgEZQVFLYiSFgJykstBAsLPQOYcJyOOfuPffs7tnd+cRhNjuze2a+2Z9k8f33z38YDKy+gYXjHwQME0AAhodP684hAF6BaQIIwPT4ad6wABg+BPgTiDdgnAC/AYw/AOvtIwDrL8B4/wjA+AOw3j4CsPgC6PmKgGkBfD4/c9jZ1WOwuDAtgKO3r93O433TJgwsPnzt2bQAFALeLgEEYHf2dL4kgACWEPhvh0C3UwTQJcLPpgggAFPjptkugewC+HZx4V6cnCSzboP8HJdAytnJ24hbbfi27AKQko7ev3Mp7NPZV7keS0hAGKeYndyZsOzBq2cRwGA1BCCQmYAhAWQmy+eqIIAAqhgTRaYigABSkeXeKggggCrGRJGpCCCAVGS5twoCCKCKMU0skuODBBDAIBoCFgggAAtTpsdBAghgEA0BCwQQgIUp0+MgAQQwiIZACwRCPSCAECHiTRNAAE2Pl+ZCBBBAiBDxpgkggKbHS3MhAgggRIh40wQaFsB6c9u+ectZtvUotZtlWgD7Ow/d87190yYM2n3e4c5MCyCMh4zWCSCA1idMfysJIICVeAi2TiC7AG5vbbmXu4+S2JP7D1qf13r9JcwSxqnmJ28jYem9V2cXQG8VbEJgJgIIYCbwfLYMAouDw2fu4PDp0nyva9lX0z3f61pzxOten9c9yVPTPd/rWnN8rzHf69rP07XGxPumcfUSk7XvdS37XdOYeN+6efqz5MhavJis+0xifdaXK3vdXNnDLt90mMPi+PSDOz79uDTf61r21XTP97rWHPG61+d1T/LUdM/3utYc32vM97r283StMfG+aVy9xGTte13Lftc0Jt63bp7+LDmyFi8m6z6TWJ/15cpeN1f2sMs3HebAn0Bl/CamikgExl6DAMYSI78pAgigqXHSzFgCCGAssYn5e3dvuFU28XqOjySAAEYCm5p+Z+uau7d9vdckNvV+zo8jgADG8SK7MQINCaCxydBOFgIIIAtmPlIqAQRQ6mSoKwsBBJAFMx8plQACKHUy1JWFAALIgjnxR7h+YwIIYGN0HGyBAAJoYYr0sDEBBLAxOg62QAABtDBFetiYAALYGB0HSyAwtQYEMJUg56smgACqHh/FTyWAAKYS5HzVBBBA1eOj+KkEEMBUgpyvmkDFAqiaO8UXQgABFDIIypiHAAKYhztfLYQAAihkEJQxDwEEMA93vloIAQRQyCBGlUFyNAIIIBpKLqqRAAKocWrUHI0AAoiGkotqJIAAapwaNUcjgACioeSiHARifwMBxCYauO/Lj7/u1fmfXpNY4DjhyAQQQGSgoet23/xyqyx0nnhcAgggLk9uq4wAAqhsYJQbl8B/AAAA//9yKLMIAAAABklEQVQDALv9uGHXpDcIAAAAAElFTkSuQmCC">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABUCAYAAAB0mJL5AAACC0lEQVR4AeyUMUoEQRBFmwlNPIIYeghP4RW8hWy0IHgGI8ErGBmYCgbGsrGxBoKhpgMNgkXVzOvdJ1QyUL+/71E7vX99/DgcBlPzD0VAISgdrSlEITACsDpeiEJgBGB1vBCFwAjA6nghByEE9k+OVAdxIa+7t0YYgjiEkMubbSOMQggEYB0QFwJjsmodhayKv39cIT2TVb8oZFX8/eMK6Zms+kUhq+LvHx9JSN9+D78oBCZVIQqBEYDV8UIUAiMAq+OFKARGAFbHC1EIjACsjheiEBgBWB0vRCEwArA6XohCYARgdbwQhfQEzk5OG2H6Zst/QVzI/WbbCLM8/v5FhJC+1uF+UUiN+3CqQsLoahYVUsM1nKqQMLqaRYXUcA2nTtd3t83hMJgeX56bw2HgT1b4x6VmUSE1XMOpCgmjq1kcXsjm/LjNpwbTcql/ClmuRvyli7OjNp94EmNzeCEMjHktFJLHMiVJISkY80IUkscyJUkhKRjzQhSSxzIlSSEpGPNCFJLHMiVJISkY80JWEJJXfh+TFAKzqhCFwAjA6nghCoERgNXxQhQCIwCr44UoBEYAVmdvLgTGNVxHIWF0NYsKqeEaTlVIGF3NokJquIZTFRJGV7OokBqu4VSFhNHVLCqkhms4dXghD7vvNp8wCcji8EKunj7bfHK5Lp82vJDlkdW+qJBavv9O/wUAAP//W7MQVAAAAAZJREFUAwBjHfTSkwKU4QAAAABJRU5ErkJggg==" alt="校园步道与入口">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABUCAYAAAB0mJL5AAACC0lEQVR4AeyUMUoEQRBFmwlNPIIYeghP4RW8hWy0IHgGI8ErGBmYCgbGsrGxBoKhpgMNgkXVzOvdJ1QyUL+/71E7vX99/DgcBlPzD0VAISgdrSlEITACsDpeiEJgBGB1vBCFwAjA6nghByEE9k+OVAdxIa+7t0YYgjiEkMubbSOMQggEYB0QFwJjsmodhayKv39cIT2TVb8oZFX8/eMK6Zms+kUhq+LvHx9JSN9+D78oBCZVIQqBEYDV8UIUAiMAq+OFKARGAFbHC1EIjACsjheiEBgBWB0vRCEwArA6XohCYARgdbwQhfQEzk5OG2H6Zst/QVzI/WbbCLM8/v5FhJC+1uF+UUiN+3CqQsLoahYVUsM1nKqQMLqaRYXUcA2nTtd3t83hMJgeX56bw2HgT1b4x6VmUSE1XMOpCgmjq1kcXsjm/LjNpwbTcql/ClmuRvyli7OjNp94EmNzeCEMjHktFJLHMiVJISkY80IUkscyJUkhKRjzQhSSxzIlSSEpGPNCFJLHMiVJISkY80JWEJJXfh+TFAKzqhCFwAjA6nghCoERgNXxQhQCIwCr44UoBEYAVmdvLgTGNVxHIWF0NYsKqeEaTlVIGF3NokJquIZTFRJGV7OokBqu4VSFhNHVLCqkhms4dXghD7vvNp8wCcji8EKunj7bfHK5Lp82vJDlkdW+qJBavv9O/wUAAP//W7MQVAAAAAZJREFUAwBjHfTSkwKU4QAAAABJRU5ErkJggg==" alt="Campus trails and entrances">
       </picture>
-      <figcaption>步道入口示意</figcaption>
+      <figcaption>trail entrance indication</figcaption>
     </figure>
   </main>
 </body>

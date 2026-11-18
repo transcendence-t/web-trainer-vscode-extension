@@ -1,17 +1,17 @@
 {
   "focus": "index.html",
-  "title": "只选一个到场时段",
-  "goal": "用 fieldset 和 legend 组织一组选项，并通过相同的 name 实现单选互斥。",
-  "summary": "工作坊的上午和下午目前可以同时选中。给这组时段加上组名并改成二选一。",
+  "title": "Select only one arrival time slot",
+  "goal": "uses fieldset and legend to organize a set of options, and implement single-selection mutual exclusion through the same name.",
+  "summary": "Workshop morning and afternoon sessions can currently be selected at the same time. Add a group name to this group of time periods and change it to Choose One.",
   "tasks": [
-    "用一个 fieldset 包住两个选项，把「到场时段」放进组开头的 legend。",
-    "把两个 radio 的 name 都改为 slot，保留原来的 value。",
-    "在预览里先点上午，再点下午。最后应只选中下午。"
+    "Use a fieldset to wrap the two options, and put \"arrival time\" into the legend at the beginning of the group.",
+    "Change the names of both radios to slot and keep the original values.",
+    "In the preview, click AM first, then PM. Finally only afternoon should be selected."
   ],
   "example": {
     "language": "html",
-    "code": "<fieldset>\n  <legend>座位区域</legend>\n  <label><input type=\"radio\" name=\"seat\" value=\"window\">靠窗</label>\n  <label><input type=\"radio\" name=\"seat\" value=\"aisle\">靠走道</label>\n</fieldset>",
-    "note": "legend 为整组起名。同一张表单里，name 相同的单选按钮会互斥，value 表示选中了哪一项。"
+    "code": "<fieldset>\n  <legend>seating area</legend>\n  <label><input type=\"radio\" name=\"seat\" value=\"window\">Window</label>\n  <label><input type=\"radio\" name=\"seat\" value=\"aisle\">by the aisle</label>\n</fieldset>",
+    "note": "legend Name the entire group. In the same form, radio buttons with the same name will be mutually exclusive, and the value indicates which item is selected."
   },
-  "hint": "fieldset 和 legend 为选项提供分组和组名。要实现二选一，还需要把两个 name 改成相同的值。"
+  "hint": "fieldset and legend provide grouping and group names for options. To select one of the two, you also need to change the two names to the same value."
 }

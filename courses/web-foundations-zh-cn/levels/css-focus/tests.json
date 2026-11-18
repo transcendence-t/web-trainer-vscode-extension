@@ -1,0 +1,124 @@
+[
+  {
+    "label": "未聚焦的主题框保留原轮廓",
+    "expect": {
+      "type": "style",
+      "selector": "#topic-filter:not(:focus)",
+      "property": "outline-style",
+      "value": "none"
+    }
+  },
+  {
+    "label": "主题框聚焦后显示实线轮廓",
+    "expect": {
+      "type": "style",
+      "selector": "#topic-filter:focus",
+      "property": "outline-style",
+      "value": "solid"
+    },
+    "actions": [
+      {
+        "type": "focus",
+        "selector": "#topic-filter"
+      }
+    ]
+  },
+  {
+    "label": "主题框的焦点轮廓为绿色",
+    "expect": {
+      "type": "style",
+      "selector": "#topic-filter:focus",
+      "property": "outline-color",
+      "value": "rgb(18, 90, 70)"
+    },
+    "actions": [
+      {
+        "type": "focus",
+        "selector": "#topic-filter"
+      }
+    ]
+  },
+  {
+    "label": "主题框轮廓向外偏移 4px",
+    "expect": {
+      "type": "style",
+      "selector": "#topic-filter:focus",
+      "property": "outline-offset",
+      "value": "4px"
+    },
+    "actions": [
+      {
+        "type": "focus",
+        "selector": "#topic-filter"
+      }
+    ]
+  },
+  {
+    "label": "焦点可以转到作者框",
+    "expect": {
+      "type": "style",
+      "selector": "#author-filter:focus",
+      "property": "outline-style",
+      "value": "solid"
+    },
+    "actions": [
+      {
+        "type": "focus",
+        "selector": "#topic-filter"
+      },
+      {
+        "type": "focus",
+        "selector": "#author-filter"
+      }
+    ]
+  },
+  {
+    "label": "作者框的焦点轮廓为绿色",
+    "expect": {
+      "type": "style",
+      "selector": "#author-filter:focus",
+      "property": "outline-color",
+      "value": "rgb(18, 90, 70)"
+    },
+    "actions": [
+      {
+        "type": "focus",
+        "selector": "#author-filter"
+      }
+    ]
+  },
+  {
+    "label": "作者框轮廓向外偏移 4px",
+    "expect": {
+      "type": "style",
+      "selector": "#author-filter:focus",
+      "property": "outline-offset",
+      "value": "4px"
+    },
+    "actions": [
+      {
+        "type": "focus",
+        "selector": "#author-filter"
+      }
+    ]
+  },
+  {
+    "label": "失去焦点后主题框恢复原轮廓",
+    "expect": {
+      "type": "style",
+      "selector": "#topic-filter:not(:focus)",
+      "property": "outline-style",
+      "value": "none"
+    },
+    "actions": [
+      {
+        "type": "focus",
+        "selector": "#topic-filter"
+      },
+      {
+        "type": "focus",
+        "selector": "#author-filter"
+      }
+    ]
+  }
+]

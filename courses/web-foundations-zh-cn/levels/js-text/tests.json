@@ -1,0 +1,20 @@
+[
+  {
+    "label": "页面载入后显示准备就绪",
+    "expect": {
+      "type": "text",
+      "selector": "#status",
+      "value": "准备就绪"
+    },
+    "hint": "检查选择器及 textContent 的赋值。"
+  },
+  {
+    "label": "状态元素在页面中唯一",
+    "expect": {
+      "type": "count",
+      "selector": "#status",
+      "value": 1
+    },
+    "hint": "页面里同一个 id 只出现一次。继续使用已有的状态段落。"
+  }
+]

@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "尊重系统的减少动效偏好",
-  "goal": "用 prefers-reduced-motion 为状态提示保留静态替代。",
-  "summary": "归档提示默认有一次淡入动效。读者请求减少动效时直接显示文字与底色。",
+  "title": "Respects the system’s preference for reducing motion effects",
+  "goal": "Use prefers-reduced-motion to preserve static overrides for status prompts.",
+  "summary": "archive prompt has a fade-in effect by default. When the reader requests to reduce the animation, the text and background color are displayed directly.",
   "tasks": [
-    "添加 @media (prefers-reduced-motion: reduce)，关闭 .signal 的动画。",
-    "在没有减少动效偏好时保留 fade-in 动画。"
+    "Add @media (prefers-reduced-motion: reduce) to turn off the animation of .signal.",
+    "Preserve fade-in animation when no reduction animation preference is available."
   ],
   "example": {
     "language": "css",
     "code": "@media (prefers-reduced-motion: reduce) {\n  .stamp { animation: none; }\n}",
-    "note": "动效可作为补充提示。减少动效时可直接展示相同状态，信息仍然可读。"
+    "note": "animation can be used as a supplementary reminder. When the animation is reduced, the same state can be displayed directly, and the information is still readable."
   },
-  "hint": "保留普通的 animation 声明，在媒体查询内覆盖为 none。"
+  "hint": "retains the normal animation declaration, overriding to none within the media query."
 }

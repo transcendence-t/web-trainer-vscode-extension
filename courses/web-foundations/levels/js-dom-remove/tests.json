@@ -1,6 +1,6 @@
 [
   {
-    "label": "可点击内部文字删除对应行",
+    "label": "You can click on the internal text to delete the corresponding line.",
     "expect": {
       "type": "count",
       "selector": "#stand",
@@ -14,7 +14,7 @@
     ]
   },
   {
-    "label": "保留未点击的两行",
+    "label": "Keep the two unclicked lines",
     "expect": {
       "type": "count",
       "selector": "#rows > li",
@@ -28,7 +28,7 @@
     ]
   },
   {
-    "label": "点击普通行文字不会删除",
+    "label": "Clicking on a normal line of text will not delete it",
     "expect": {
       "type": "count",
       "selector": "#rows > li",
@@ -42,7 +42,7 @@
     ]
   },
   {
-    "label": "连续删除只影响相应项目",
+    "label": "Continuous deletion only affects the corresponding items",
     "expect": {
       "type": "count",
       "selector": "#rows > li#stand:only-child",

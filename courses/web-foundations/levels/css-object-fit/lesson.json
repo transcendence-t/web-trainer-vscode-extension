@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "裁剪图片以填满固定缩略图",
-  "goal": "结合 object-fit 与 object-position 让缩略图保持比例。",
-  "summary": "空间固定的展馆缩略图需要铺满取景框，小部分边缘允许裁切，图像顶部应保留。",
+  "title": "Crop image to fill fixed thumbnail",
+  "goal": "combines object-fit and object-position to keep thumbnails in proportion.",
+  "summary": "The thumbnail of the exhibition hall with a fixed space needs to fill the viewfinder frame. A small part of the edge is allowed to be cropped, and the top of the image should be retained.",
   "tasks": [
-    "为 .thumbnail 使用 cover 填满已有的 160×100px 盒子。",
-    "把内容对齐到顶部并水平居中。"
+    "uses cover for .thumbnail to fill an existing 160×100px box.",
+    "Align content to the top and center it horizontally."
   ],
   "example": {
     "language": "css",
     "code": ".portrait { object-fit: cover; object-position: center top; }",
-    "note": "cover 按比例缩放来覆盖盒子。object-position 指定超出盒子的部分如何裁切。"
+    "note": "cover scales to cover the box. object-position specifies how to crop the portion beyond the box."
   },
-  "hint": "尺寸已经写好，保留它们并增加 object-fit 与 object-position。"
+  "hint": "dimensions have been written, keep them and add object-fit and object-position."
 }

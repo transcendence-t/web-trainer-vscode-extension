@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "处理按钮点击",
+  "summary": "用 addEventListener 为按钮注册 click 事件监听。浏览器收到点击后，会运行作为第二个参数传入的函数。",
+  "tasks": [
+    "给 #reserve 按钮添加 click 事件监听。",
+    "点击后把 #status 的文字改成「报名成功」。"
+  ],
+  "hint": "用 button.addEventListener('click', () => { ... }) 注册监听。",
+  "goal": "在用户点击确认报名后，通过状态文本反馈操作结果。",
+  "example": {
+    "language": "javascript",
+    "code": "const markRead = document.querySelector('#mark-read');\nconst readingStatus = document.querySelector('#reading-status');\n\nmarkRead.addEventListener('click', () => {\n  readingStatus.textContent = '已读';\n});",
+    "note": "阅读页面在用户按下「标为已读」时更新文章状态。"
+  }
+}

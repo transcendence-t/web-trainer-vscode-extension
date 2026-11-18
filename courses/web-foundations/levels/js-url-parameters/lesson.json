@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "解析地址里的查询条件",
-  "goal": "用 URLSearchParams 读取查询字符串与重复键。",
-  "summary": "目录链接通过 q 指定关键字，可以添加多个 tag。解析时交给浏览器处理百分号编码和空格。",
+  "title": "Parses the query conditions in the address",
+  "goal": "Use URLSearchParams to read query strings with duplicate keys.",
+  "summary": "directory link specifies keywords through q, and multiple tags can be added. Let the browser handle percent encoding and spaces during parsing.",
   "tasks": [
-    "完成 readFilters(query)，返回 { q, tags }。query 可以带开头的问号。",
-    "缺少 q 时用空字符串，tags 是所有 tag 的数组，保留原顺序。"
+    "completes readFilters(query) and returns { q, tags }. query can be preceded by a question mark.",
+    "Use an empty string when q is missing. tags is an array of all tags, retaining the original order."
   ],
   "example": {
     "language": "javascript",
     "code": "const query = new URLSearchParams('?name=A+B&item=1&item=2');\nquery.get('name'); // 'A B'\nquery.getAll('item'); // ['1', '2']",
-    "note": "get 返回第一个值，getAll 返回相同键的所有值。URLSearchParams 会解码查询参数。"
+    "note": "get returns the first value and getAll returns all values ​​for the same key. URLSearchParams decodes query parameters."
   },
-  "hint": "把整个 query 交给构造器，不需要自己用 & 或 = 拆分。"
+  "hint": "Give the entire query to the constructor, and there is no need to split it with & or = yourself."
 }

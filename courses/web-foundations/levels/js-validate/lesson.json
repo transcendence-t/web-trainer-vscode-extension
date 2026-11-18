@@ -1,17 +1,17 @@
 {
   "focus": "script.js",
-  "title": "检查影展投稿标题",
-  "goal": "在表单提交时检查标题，把结果显示在同一页。",
-  "summary": "监听表单的 submit 事件可以统一处理这次提交。先用 event.preventDefault() 阻止浏览器的默认提交，再用 trim() 去掉标题首尾的空白并检查长度。",
+  "title": "Check the film festival submission title",
+  "goal": "Check the title when the form is submitted and display the results on the same page.",
+  "summary": "listens to the submit event of the form to handle this submission uniformly. First use event.preventDefault() to prevent the browser's default submission, then use trim() to remove the leading and trailing spaces of the title and check the length.",
   "tasks": [
-    "在 #submission-form 上监听 submit。先阻止默认提交，再读取 #work-title 的值并去掉两端空白。",
-    "将反馈写入 #submission-feedback。清理后标题为空时显示「请填写作品标题。」标题有 1 或 2 个字符时显示「标题至少需要 3 个字符。」",
-    "标题至少 3 个字符时显示「作品标题《秋日短片》已通过检查。」用清理后的实际标题替换书名号内的示例。"
+    "listens for submit on #submission-form. First prevent the default submission, then read the value of #work-title and remove the blanks at both ends.",
+    "Write feedback to #submission-feedback. After cleaning, \"Please fill in the title of the work.\" is displayed when the title is empty. \"Title requires at least 3 characters.\" is displayed when the title has 1 or 2 characters. ",
+    "For titles with at least three characters, display “The title of the work \\\"Autumn Short Film\\\" has passed the inspection.” Replace the example title with the trimmed input."
   ],
   "example": {
     "language": "javascript",
-    "code": "const form = document.querySelector('#delivery-form');\nconst note = document.querySelector('#delivery-note');\nconst feedback = document.querySelector('#delivery-feedback');\n\nform.addEventListener('submit', (event) => {\n  event.preventDefault();\n  feedback.textContent = note.value.trim()\n    ? '备注填写完成。'\n    : '请填写配送备注。';\n});",
-    "note": "点提交后，配送备注表用 trim() 判断用户是否填了实际内容，并将结果留在当前页。"
+    "code": "const form = document.querySelector('#delivery-form');\nconst note = document.querySelector('#delivery-note');\nconst feedback = document.querySelector('#delivery-feedback');\n\nform.addEventListener('submit', (event) => {\n  event.preventDefault();\n  feedback.textContent = note.value.trim()\n    ? 'Remarks completed.'\n    : 'Please fill in the delivery notes.';\n});",
+    "note": "After clicking submit, the delivery remarks form uses trim() to determine whether the user has filled in the actual content, and the result is left on the current page."
   },
-  "hint": "如果只填空格也通过检查，确认你用清理后的标题判断空白和长度。两种错误都要显示自己的提示。"
+  "hint": "also passes the check if you only fill in the blanks, make sure you use the cleaned title to judge the blanks and length. Both errors must display their own prompts."
 }

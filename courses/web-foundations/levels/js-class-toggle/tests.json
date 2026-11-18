@@ -1,6 +1,6 @@
 [
   {
-    "label": "起初按钮没有收藏类",
+    "label": "Initially the button does not have a collection category",
     "expect": {
       "type": "count",
       "selector": "#save-resource.is-saved",
@@ -8,7 +8,7 @@
     }
   },
   {
-    "label": "起初按钮处于未按压状态",
+    "label": "The button is not pressed at first",
     "expect": {
       "type": "attribute",
       "selector": "#save-resource",
@@ -17,7 +17,7 @@
     }
   },
   {
-    "label": "起初按钮显示浅色背景",
+    "label": "Initially the button displays a light background",
     "expect": {
       "type": "style",
       "selector": "#save-resource",
@@ -26,7 +26,7 @@
     }
   },
   {
-    "label": "第一次点击添加收藏类",
+    "label": "Click to add favorites for the first time",
     "expect": {
       "type": "exists",
       "selector": "#save-resource.is-saved"
@@ -39,7 +39,7 @@
     ]
   },
   {
-    "label": "收藏后按钮状态记为按压",
+    "label": "After collection, the button status is recorded as pressed.",
     "expect": {
       "type": "attribute",
       "selector": "#save-resource",
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "label": "收藏后按钮背景变为深绿色",
+    "label": "The button background changes to dark green after collection",
     "expect": {
       "type": "style",
       "selector": "#save-resource",
@@ -69,7 +69,7 @@
     ]
   },
   {
-    "label": "第二次点击移除收藏类",
+    "label": "Click for the second time to remove the collection category",
     "expect": {
       "type": "count",
       "selector": "#save-resource.is-saved",
@@ -87,7 +87,7 @@
     ]
   },
   {
-    "label": "取消收藏后恢复未按压状态",
+    "label": "Return to unpressed state after canceling collection",
     "expect": {
       "type": "attribute",
       "selector": "#save-resource",
@@ -106,7 +106,7 @@
     ]
   },
   {
-    "label": "取消收藏后恢复浅色背景",
+    "label": "Restore light background after canceling collection",
     "expect": {
       "type": "style",
       "selector": "#save-resource",

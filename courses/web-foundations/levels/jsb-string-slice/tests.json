@@ -1,6 +1,6 @@
 [
   {
-    "label": "典型六字符票号",
+    "label": "Typical six-character ticket number",
     "expect": {
       "type": "function",
       "name": "lastDigits",
@@ -11,7 +11,7 @@
     }
   },
   {
-    "label": "长票号仍只显示四位",
+    "label": "long ticket number still only shows four digits",
     "expect": {
       "type": "function",
       "name": "lastDigits",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "label": "保留三位旧票号",
+    "label": "retains the three-digit old ticket number",
     "expect": {
       "type": "function",
       "name": "lastDigits",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "label": "空字符串仍为空",
+    "label": "empty string remains empty",
     "expect": {
       "type": "function",
       "name": "lastDigits",

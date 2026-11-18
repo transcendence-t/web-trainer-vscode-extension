@@ -1,3 +1,3 @@
 function seatMessage(roomName, seatsLeft) {
-  return `${roomName}还有 ${seatsLeft} 个空位。`;
+  return `${roomName} has ${seatsLeft} seats left.`;
 }

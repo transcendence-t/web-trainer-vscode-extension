@@ -1,0 +1,58 @@
+[
+  {
+    "label": "保留浏览器的提交校验",
+    "expect": {
+      "type": "exists",
+      "selector": "form:not([novalidate]) button[type=\"submit\"]:not([formnovalidate])"
+    }
+  },
+  {
+    "label": "取件码留空时无效",
+    "expect": {
+      "type": "exists",
+      "selector": "form input#pickup-code:required:invalid"
+    }
+  },
+  {
+    "label": "小写字母不符合格式",
+    "expect": {
+      "type": "exists",
+      "selector": "#pickup-code[pattern]:invalid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#pickup-code",
+        "value": "ab0427"
+      }
+    ]
+  },
+  {
+    "label": "数字少一位时无效",
+    "expect": {
+      "type": "exists",
+      "selector": "#pickup-code[pattern]:invalid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#pickup-code",
+        "value": "AB427"
+      }
+    ]
+  },
+  {
+    "label": "大写字母加四位数字时有效",
+    "expect": {
+      "type": "exists",
+      "selector": "#pickup-code[pattern]:valid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#pickup-code",
+        "value": "ZX2026"
+      }
+    ]
+  }
+]

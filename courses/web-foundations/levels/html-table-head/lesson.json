@@ -1,17 +1,17 @@
 {
   "focus": "index.html",
-  "title": "为开放时间表标记表头",
-  "goal": "给表格写上标题，标出每列的含义和每行对应的场地。",
-  "summary": "caption 是整个表格的标题，thead 容纳列标题所在的行。th 标记表头单元格，scope=\"col\" 表示它对应一列，scope=\"row\" 表示它对应一行。",
+  "title": "Marks header for open schedule",
+  "goal": "Write a title for the table, indicating the meaning of each column and the venue corresponding to each row.",
+  "summary": "caption is the title of the entire table, thead holds the row where the column title is located. th marks the header cell, scope=\"col\" means it corresponds to a column, scope=\"row\" means it corresponds to a row.",
   "tasks": [
-    "在 table 内最前面添加 caption，填写「场地开放时间」。",
-    "把包含「场地」和「开放时间」的第一行移进 thead，将这两个单元格改为 th，分别设置 scope=\"col\"。",
-    "让两条场地记录留在 tbody。把「乒乓球室」和「书画室」所在的单元格改为 th，分别设置 scope=\"row\"，保留时间所在的 td。"
+    "Add caption at the front of the table and fill in \"Venue opening hours\".",
+    "Move the first row containing \"venue\" and \"opening hours\" into thead, change these two cells to th, and set scope=\"col\" respectively.",
+    "Keep both venue records in tbody. Change the cells containing \"table tennis room\" and \"Painting and Calligraphy Studio\" to th elements, set scope=\"row\" on each, and keep the times in td elements."
   ],
   "example": {
     "language": "html",
-    "code": "<table>\n  <caption>今日点心</caption>\n  <thead>\n    <tr><th scope=\"col\">点心</th><th scope=\"col\">价格</th></tr>\n  </thead>\n  <tbody>\n    <tr><th scope=\"row\">芝麻饼</th><td>8 元</td></tr>\n  </tbody>\n</table>",
-    "note": "「价格」标记整列的含义，「芝麻饼」标记 8 元所对应的这一行。"
+    "code": "<table>\n  <caption>Today’s snack</caption>\n  <thead>\n    <tr><th scope=\"col\">Desserts</th><th scope=\"col\">price</th></tr>\n  </thead>\n  <tbody>\n    <tr><th scope=\"row\">sesame cake</th><td>8 yuan</td></tr>\n  </tbody>\n</table>",
+    "note": "\"price\" marks the meaning of the entire column, and \"sesame cake\" marks the row corresponding to 8 yuan."
   },
-  "hint": "单元格变粗只表明外观有变化。检查实际使用的标签和 scope，写在记录开头的场地名需要标记对应的这一行。"
+  "hint": "The thickening of the cells only indicates a change in appearance. Check the actual tags and scope used. The venue name written at the beginning of the record needs to mark the corresponding line."
 }

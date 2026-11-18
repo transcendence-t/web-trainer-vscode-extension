@@ -1,6 +1,6 @@
 
 function receiptDivider(width) {
   let divider = '';
-  // 用 for 循环向 divider 增加短横线。
+  // Use for loop to add dashes to divider.
   return divider;
 }

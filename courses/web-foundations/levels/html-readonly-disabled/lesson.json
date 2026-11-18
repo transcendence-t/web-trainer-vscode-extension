@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "保护已分配的编号和停用字段",
-  "goal": "区分 readonly 控件与 disabled 控件的用途。",
-  "summary": "固定档案编号仍应随表单提交，临时停用的校外备注不应参与表单提交。",
+  "title": "Protect assigned numbers and disabled fields",
+  "goal": "distinguishes the purpose of readonly controls and disabled controls.",
+  "summary": "should still be submitted with the form, and the temporarily disabled off-campus notes should not be included in the form submission.",
   "tasks": [
-    "把 #record-id 设置为只读，保留值 A-031 和 name=\"recordId\"。",
-    "禁用 #future，保留它的 label 和 name。"
+    "Set #record-id to read-only, retaining value A-031 and name=\"recordId\".",
+    "disables #future, retaining its label and name."
   ],
   "example": {
     "language": "html",
     "code": "<input name=\"orderId\" value=\"M-03\" readonly>\n<input name=\"oldComment\" disabled>",
-    "note": "readonly 可用于文本类控件，值仍参与提交。disabled 控件通常无法聚焦，值也不会提交。"
+    "note": "You can use readonly on text controls and still submit their values. Disabled controls generally cannot receive focus and their values are omitted from submission."
   },
-  "hint": "编号使用 readonly，停用字段使用 disabled。两者都是布尔属性。"
+  "hint": "number and disabled for the disabled field. Both are boolean properties."
 }

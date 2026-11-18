@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "图片与替代文字",
-  "summary": "alt 提供可供读屏软件读取的图片描述。figcaption 在页面上显示与图片关联的图注。",
+  "title": "Image and alt text",
+  "summary": "alt provides an image description that can be read by screen reading software. figcaption Displays the legend associated with the image on the page.",
   "tasks": [
-    "给 figure 中的 img 加上 alt，文字为「实训楼示意图」。",
-    "在图片后面添加 figcaption，写上「网页设计实训室」。"
+    "adds alt to the img in the figure, and the text is \"Schematic diagram of training building\".",
+    "Add figcaption after the picture and write \"Web Design Training Room\"."
   ],
-  "hint": "保留 img 上已有的 src，把描述写在同一个标签的 alt 属性中。写成 title 时，alt 属性仍然缺失。",
-  "goal": "为实训楼示意图添加替代文字，并在图下显示图注。",
+  "hint": "Keep the existing src on img and write the description in the alt attribute of the same tag. When written as title, the alt attribute is still missing.",
+  "goal": "Add alternative text to the schematic diagram of the training building and display the legend under the diagram.",
   "example": {
     "language": "html",
-    "code": "<figure>\n  <img src=\"cup.jpg\" alt=\"杯身带有三道蓝色条纹的白色陶杯\">\n  <figcaption>周末陶艺工作坊作品</figcaption>\n</figure>",
-    "note": "cup.jpg 是同一文件夹里的图片。替代文字描述陶杯的外观，图注交代作品的来源。"
+    "code": "<figure>\n  <img src=\"cup.jpg\" alt=\"White ceramic cup with three blue stripes on the body\">\n  <figcaption>Weekend Ceramics Workshop Works</figcaption>\n</figure>",
+    "note": "cup.jpg is a picture in the same folder. Alternate text describes the appearance of the pottery cup, and the illustration explains the origin of the work."
   }
 }

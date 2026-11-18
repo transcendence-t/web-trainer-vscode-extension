@@ -1,6 +1,6 @@
 [
   {
-    "label": "按顺序截取前两项",
+    "label": "intercept the first two items in order",
     "expect": {
       "type": "function",
       "name": "peekLine",
@@ -19,7 +19,7 @@
     }
   },
   {
-    "label": "长度为零",
+    "label": "length is zero",
     "expect": {
       "type": "function",
       "name": "peekLine",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "label": "长度超过现有项数",
+    "label": "length exceeds the number of existing items",
     "expect": {
       "type": "function",
       "name": "peekLine",
@@ -51,7 +51,7 @@
     }
   },
   {
-    "label": "原队列仍保留所有成员",
+    "label": "The original queue still retains all members",
     "expect": {
       "type": "function",
       "name": "comparePreview",

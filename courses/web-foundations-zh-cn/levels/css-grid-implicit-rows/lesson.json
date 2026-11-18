@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "规定自动生成的网格行高",
+  "goal": "区分 grid-template-rows 的显式行和 grid-auto-rows 的隐式行。",
+  "summary": "值日看板两列。第一行展示长说明，其余项目每增加两个就生成新行。",
+  "tasks": [
+    "保留第一行 64px 的高度。",
+    "用 grid-auto-rows 把后续自动行设为 40px，保持两列和间距。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".board { grid-template-rows: 60px; grid-auto-rows: 36px; }",
+    "note": "已有显式行填满后，后续项目会排列到隐式行，由 grid-auto-rows 定尺寸。"
+  },
+  "hint": "第一行高度已经给出，只添加控制自动行的属性。"
+}

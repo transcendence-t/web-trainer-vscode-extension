@@ -1,0 +1,68 @@
+[
+  {
+    "label": "匹配两个大写字母和三个数字",
+    "expect": {
+      "type": "function",
+      "name": "validLabel",
+      "args": [
+        "MP-026"
+      ],
+      "value": true
+    }
+  },
+  {
+    "label": "允许前导零",
+    "expect": {
+      "type": "function",
+      "name": "validLabel",
+      "args": [
+        "AB-000"
+      ],
+      "value": true
+    }
+  },
+  {
+    "label": "拒绝小写",
+    "expect": {
+      "type": "function",
+      "name": "validLabel",
+      "args": [
+        "Ab-209"
+      ],
+      "value": false
+    }
+  },
+  {
+    "label": "拒绝数字位数不足",
+    "expect": {
+      "type": "function",
+      "name": "validLabel",
+      "args": [
+        "AB-29"
+      ],
+      "value": false
+    }
+  },
+  {
+    "label": "拒绝前缀和额外空格",
+    "expect": {
+      "type": "function",
+      "name": "validLabel",
+      "args": [
+        "xAB-209 "
+      ],
+      "value": false
+    }
+  },
+  {
+    "label": "拒绝额外数字",
+    "expect": {
+      "type": "function",
+      "name": "validLabel",
+      "args": [
+        "AB-2001"
+      ],
+      "value": false
+    }
+  }
+]

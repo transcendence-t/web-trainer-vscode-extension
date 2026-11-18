@@ -1,12 +1,12 @@
 function readTitle(title) {
-  if (title === '') return Promise.reject(new Error('标题缺失'));
+  if (title === '') return Promise.reject(new Error('Title is missing'));
   return new Promise((resolve) => setTimeout(() => resolve(title), 35));
 }
 function readTotal(total) {
-  if (total < 0) return Promise.reject(new Error('数量无效'));
+  if (total < 0) return Promise.reject(new Error('Invalid quantity'));
   return Promise.resolve(total);
 }
 
 async function catalogCard(title, total) {
-  // 完成本关函数。
+  // completes this level function.
 }

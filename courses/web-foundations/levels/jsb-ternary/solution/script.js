@@ -1,3 +1,3 @@
 function stockLabel(count) {
-  return count > 0 ? '可领取' : '待补货';
+  return count > 0 ? 'can be collected' : 'To be replenished';
 }

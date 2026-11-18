@@ -1,55 +1,55 @@
 [
   {
-    "label": "页面开始时没有选中曲目",
+    "label": "No track is selected at the beginning of the page",
     "expect": {
       "type": "text",
       "selector": "#selected-song",
-      "value": "尚未选择"
+      "value": "Not selected yet"
     }
   },
   {
-    "label": "直接点击按钮可以选中曲目",
+    "label": "Click the button directly to select the track",
     "expect": {
       "type": "text",
       "selector": "#selected-song",
-      "value": "山间小调"
+      "value": "Mountain tune"
     },
     "actions": [
       {
         "type": "click",
-        "selector": "#song-list button[data-title=\"山间小调\"]"
+        "selector": "#song-list button[data-title=\"Mountain tune\"]"
       }
     ]
   },
   {
-    "label": "点击按钮里的 span 也能选中曲目",
+    "label": "Click the span in the button to select the track",
     "expect": {
       "type": "text",
       "selector": "#selected-song",
-      "value": "海边序曲"
+      "value": "Seaside Overture"
     },
     "actions": [
       {
         "type": "click",
-        "selector": "#song-list button[data-title=\"山间小调\"]"
+        "selector": "#song-list button[data-title=\"Mountain tune\"]"
       },
       {
         "type": "click",
-        "selector": "#song-list button[data-title=\"海边序曲\"] span"
+        "selector": "#song-list button[data-title=\"Seaside Overture\"] span"
       }
     ]
   },
   {
-    "label": "点击列表空白处保留已选曲目",
+    "label": "Click on a blank space in the list to retain the selected track",
     "expect": {
       "type": "text",
       "selector": "#selected-song",
-      "value": "山间小调"
+      "value": "Mountain tune"
     },
     "actions": [
       {
         "type": "click",
-        "selector": "#song-list button[data-title=\"山间小调\"]"
+        "selector": "#song-list button[data-title=\"Mountain tune\"]"
       },
       {
         "type": "click",
@@ -58,11 +58,11 @@
     ]
   },
   {
-    "label": "新增后点击新曲目内层文字可以选中",
+    "label": "After adding, click the inner text of the new track to select it.",
     "expect": {
       "type": "text",
       "selector": "#selected-song",
-      "value": "蓝桥进行曲"
+      "value": "Blue Bridge March"
     },
     "actions": [
       {
@@ -71,7 +71,7 @@
       },
       {
         "type": "click",
-        "selector": "#song-list button[data-title=\"蓝桥进行曲\"] span"
+        "selector": "#song-list button[data-title=\"Blue Bridge March\"] span"
       }
     ]
   }

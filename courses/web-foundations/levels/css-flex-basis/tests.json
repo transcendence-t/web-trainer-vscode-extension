@@ -1,6 +1,6 @@
 [
   {
-    "label": "登记起始宽度为 104px",
+    "label": "registration starting width is 104px",
     "expect": {
       "type": "style",
       "selector": "#step-a",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "登记实际宽 104px",
+    "label": "registered actual width 104px",
     "expect": {
       "type": "style",
       "selector": "#step-a",
@@ -19,7 +19,7 @@
     "viewport": 400
   },
   {
-    "label": "第二步骤也宽 104px",
+    "label": "The second step is also 104px wide",
     "expect": {
       "type": "style",
       "selector": "#step-b",
@@ -29,7 +29,7 @@
     "viewport": 620
   },
   {
-    "label": "两个步骤并排",
+    "label": "two steps side by side",
     "expect": {
       "type": "layout",
       "selector": "#step-b",

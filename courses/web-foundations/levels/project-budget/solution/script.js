@@ -7,7 +7,7 @@ const remaining = document.querySelector('#expense-remaining');
 const error = document.querySelector('#expense-error');
 
 function formatAmount(cents) {
-  return (cents / 100).toFixed(2) + ' 元';
+  return (cents / 100).toFixed(2) + ' yuan';
 }
 
 function renderBudget() {
@@ -21,7 +21,7 @@ function renderBudget() {
 
 addExpense.addEventListener('click', () => {
   if (!amount.checkValidity()) {
-    error.textContent = '请输入大于 0 且最多两位小数的金额';
+    error.textContent = 'Please enter an amount greater than 0 and with up to two decimal places.';
     return;
   }
   const cents = Math.round(Number(amount.value) * 100);

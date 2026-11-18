@@ -1,6 +1,6 @@
 [
   {
-    "label": "末端按钮吸收 88px 剩余空间",
+    "label": "end button absorbs 88px remaining space",
     "expect": {
       "type": "style",
       "selector": ".export",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "第二个仍紧随第一个",
+    "label": "The second one is still following the first one",
     "expect": {
       "type": "style",
       "selector": ".toolbar button:nth-child(2)",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "三个按钮仍一行",
+    "label": "Three buttons are still in one row",
     "expect": {
       "type": "layout",
       "selector": ".export",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "末端按钮仍在工具栏内",
+    "label": "The end button is still in the toolbar",
     "expect": {
       "type": "layout",
       "selector": ".export",

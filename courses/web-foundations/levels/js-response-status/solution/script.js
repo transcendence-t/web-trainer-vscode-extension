@@ -1,5 +1,5 @@
 async function responseMessage(response) {
-  if (!response.ok) return '读取失败：' + response.status;
+  if (!response.ok) return 'Reading failed: ' + response.status;
   const data = await response.json();
   return data.message;
 }

@@ -1,0 +1,337 @@
+[
+  {
+    "label": "窄窗口里两个数字输入框并排",
+    "expect": {
+      "type": "layout",
+      "selector": "#second-number",
+      "relativeTo": "#first-number",
+      "relation": "right-of"
+    },
+    "viewport": 320
+  },
+  {
+    "label": "窄窗口里两个数字输入框等宽",
+    "expect": {
+      "type": "layout",
+      "selector": "#second-number",
+      "relativeTo": "#first-number",
+      "relation": "equal-width"
+    },
+    "viewport": 320
+  },
+  {
+    "label": "宽窗口里两个数字输入框仍并排",
+    "expect": {
+      "type": "layout",
+      "selector": "#second-number",
+      "relativeTo": "#first-number",
+      "relation": "right-of"
+    },
+    "viewport": 720
+  },
+  {
+    "label": "两个运算按钮并排",
+    "expect": {
+      "type": "layout",
+      "selector": "#calc-subtract",
+      "relativeTo": "#calc-add",
+      "relation": "right-of"
+    },
+    "viewport": 320
+  },
+  {
+    "label": "两个运算按钮等宽",
+    "expect": {
+      "type": "layout",
+      "selector": "#calc-subtract",
+      "relativeTo": "#calc-add",
+      "relation": "equal-width"
+    },
+    "viewport": 320
+  },
+  {
+    "label": "结果位于按钮组下方",
+    "expect": {
+      "type": "layout",
+      "selector": ".result",
+      "relativeTo": ".operations",
+      "relation": "below"
+    },
+    "viewport": 320
+  },
+  {
+    "label": "输入组的列间距为 12px",
+    "expect": {
+      "type": "style",
+      "selector": ".number-fields",
+      "property": "column-gap",
+      "value": "12px"
+    }
+  },
+  {
+    "label": "按钮组的列间距为 12px",
+    "expect": {
+      "type": "style",
+      "selector": ".operations",
+      "property": "column-gap",
+      "value": "12px"
+    }
+  },
+  {
+    "label": "刚打开时显示等待计算",
+    "expect": {
+      "type": "text",
+      "selector": "#calc-result",
+      "value": "等待计算"
+    }
+  },
+  {
+    "label": "8 加 5 得到 13",
+    "expect": {
+      "type": "text",
+      "selector": "#calc-result",
+      "value": "13"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#first-number",
+        "value": "8"
+      },
+      {
+        "type": "input",
+        "selector": "#second-number",
+        "value": "5"
+      },
+      {
+        "type": "click",
+        "selector": "#calc-add"
+      }
+    ]
+  },
+  {
+    "label": "负数和小数可以相加",
+    "expect": {
+      "type": "text",
+      "selector": "#calc-result",
+      "value": "-0.5"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#first-number",
+        "value": " -2 "
+      },
+      {
+        "type": "input",
+        "selector": "#second-number",
+        "value": "1.5"
+      },
+      {
+        "type": "click",
+        "selector": "#calc-add"
+      }
+    ]
+  },
+  {
+    "label": "从第一个数中减去第二个数",
+    "expect": {
+      "type": "text",
+      "selector": "#calc-result",
+      "value": "7"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#first-number",
+        "value": "9"
+      },
+      {
+        "type": "input",
+        "selector": "#second-number",
+        "value": "2"
+      },
+      {
+        "type": "click",
+        "selector": "#calc-subtract"
+      }
+    ]
+  },
+  {
+    "label": "减法可以得到负数",
+    "expect": {
+      "type": "text",
+      "selector": "#calc-result",
+      "value": "-5"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#first-number",
+        "value": "3"
+      },
+      {
+        "type": "input",
+        "selector": "#second-number",
+        "value": "8"
+      },
+      {
+        "type": "click",
+        "selector": "#calc-subtract"
+      }
+    ]
+  },
+  {
+    "label": "0 是有效输入",
+    "expect": {
+      "type": "text",
+      "selector": "#calc-result",
+      "value": "0"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#first-number",
+        "value": "0"
+      },
+      {
+        "type": "input",
+        "selector": "#second-number",
+        "value": "0"
+      },
+      {
+        "type": "click",
+        "selector": "#calc-add"
+      }
+    ]
+  },
+  {
+    "label": "留空时提示输入有效数字",
+    "expect": {
+      "type": "text",
+      "selector": "#calc-result",
+      "value": "请输入两个有效数字。"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#first-number",
+        "value": ""
+      },
+      {
+        "type": "input",
+        "selector": "#second-number",
+        "value": "4"
+      },
+      {
+        "type": "click",
+        "selector": "#calc-add"
+      }
+    ]
+  },
+  {
+    "label": "全空格输入也视为空",
+    "expect": {
+      "type": "text",
+      "selector": "#calc-result",
+      "value": "请输入两个有效数字。"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#first-number",
+        "value": "4"
+      },
+      {
+        "type": "input",
+        "selector": "#second-number",
+        "value": "   "
+      },
+      {
+        "type": "click",
+        "selector": "#calc-subtract"
+      }
+    ]
+  },
+  {
+    "label": "带字母的数值文本会被拒绝",
+    "expect": {
+      "type": "text",
+      "selector": "#calc-result",
+      "value": "请输入两个有效数字。"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#first-number",
+        "value": "15px"
+      },
+      {
+        "type": "input",
+        "selector": "#second-number",
+        "value": "2"
+      },
+      {
+        "type": "click",
+        "selector": "#calc-add"
+      }
+    ]
+  },
+  {
+    "label": "无限大的输入会被拒绝",
+    "expect": {
+      "type": "text",
+      "selector": "#calc-result",
+      "value": "请输入两个有效数字。"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#first-number",
+        "value": "1"
+      },
+      {
+        "type": "input",
+        "selector": "#second-number",
+        "value": "Infinity"
+      },
+      {
+        "type": "click",
+        "selector": "#calc-subtract"
+      }
+    ]
+  },
+  {
+    "label": "改正无效输入后可以继续运算",
+    "expect": {
+      "type": "text",
+      "selector": "#calc-result",
+      "value": "5"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#first-number",
+        "value": "4px"
+      },
+      {
+        "type": "input",
+        "selector": "#second-number",
+        "value": "1"
+      },
+      {
+        "type": "click",
+        "selector": "#calc-add"
+      },
+      {
+        "type": "input",
+        "selector": "#first-number",
+        "value": "4"
+      },
+      {
+        "type": "click",
+        "selector": "#calc-add"
+      }
+    ]
+  }
+]

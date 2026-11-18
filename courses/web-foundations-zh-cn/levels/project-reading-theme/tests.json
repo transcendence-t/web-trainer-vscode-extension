@@ -1,0 +1,99 @@
+[
+  {
+    "label": "默认使用浅色底",
+    "expect": {
+      "type": "style",
+      "selector": "#reader",
+      "property": "background-color",
+      "value": "rgb(255, 255, 255)"
+    }
+  },
+  {
+    "label": "点击后切换深色底",
+    "expect": {
+      "type": "style",
+      "selector": "#reader",
+      "property": "background-color",
+      "value": "rgb(21, 36, 58)"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#theme-toggle"
+      }
+    ]
+  },
+  {
+    "label": "深色模式保留清楚的正文",
+    "expect": {
+      "type": "style",
+      "selector": "#reader",
+      "property": "color",
+      "value": "rgb(240, 244, 248)"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#theme-toggle"
+      }
+    ]
+  },
+  {
+    "label": "按压状态和深色选择同步",
+    "expect": {
+      "type": "attribute",
+      "selector": "#theme-toggle",
+      "name": "aria-pressed",
+      "value": "true"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#theme-toggle"
+      }
+    ]
+  },
+  {
+    "label": "深色选择保存在本关",
+    "expect": {
+      "type": "storage",
+      "key": "reader-theme",
+      "value": "dark"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#theme-toggle"
+      }
+    ]
+  },
+  {
+    "label": "已保存的深色主题在打开时恢复",
+    "expect": {
+      "type": "attribute",
+      "selector": "#theme-toggle",
+      "name": "aria-pressed",
+      "value": "true"
+    },
+    "storage": {
+      "reader-theme": "dark"
+    }
+  },
+  {
+    "label": "再次点击可保存浅色选择",
+    "expect": {
+      "type": "storage",
+      "key": "reader-theme",
+      "value": "light"
+    },
+    "storage": {
+      "reader-theme": "dark"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#theme-toggle"
+      }
+    ]
+  }
+]

@@ -1,35 +1,35 @@
 [
   {
-    "label": "零库存待补货",
+    "label": "Zero stock to be replenished",
     "expect": {
       "type": "function",
       "name": "stockLabel",
       "args": [
         0
       ],
-      "value": "待补货"
+      "value": "To be replenished"
     }
   },
   {
-    "label": "只剩一个也可领取",
+    "label": "Only one left can be collected.",
     "expect": {
       "type": "function",
       "name": "stockLabel",
       "args": [
         1
       ],
-      "value": "可领取"
+      "value": "can be collected"
     }
   },
   {
-    "label": "多个库存可领取",
+    "label": "Multiple stocks available for collection",
     "expect": {
       "type": "function",
       "name": "stockLabel",
       "args": [
         27
       ],
-      "value": "可领取"
+      "value": "can be collected"
     }
   }
 ]

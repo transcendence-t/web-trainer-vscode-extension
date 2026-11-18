@@ -1,6 +1,6 @@
 [
   {
-    "label": "记录区域保持指定高度",
+    "label": "recording area maintains the specified height",
     "expect": {
       "type": "style",
       "selector": ".history",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "内容超出时允许垂直滚动",
+    "label": "Allow vertical scrolling when content exceeds",
     "expect": {
       "type": "style",
       "selector": ".history",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "点击链接后最后一条记录进入框内",
+    "label": "The last record enters the box after clicking the link",
     "expect": {
       "type": "layout",
       "selector": "#last-record",

@@ -1,6 +1,6 @@
 [
   {
-    "label": "数组单独分类",
+    "label": "arrays are classified separately",
     "expect": {
       "type": "function",
       "name": "kindOf",
@@ -11,7 +11,7 @@
     }
   },
   {
-    "label": "null 单独分类",
+    "label": "null separate classification",
     "expect": {
       "type": "function",
       "name": "kindOf",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "label": "普通对象",
+    "label": "common object",
     "expect": {
       "type": "function",
       "name": "kindOf",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "label": "没有传入参数",
+    "label": "No parameters passed in",
     "expect": {
       "type": "function",
       "name": "kindOf",
@@ -42,7 +42,7 @@
     }
   },
   {
-    "label": "布尔值",
+    "label": "Boolean value",
     "expect": {
       "type": "function",
       "name": "kindOf",
@@ -53,7 +53,7 @@
     }
   },
   {
-    "label": "字符串数字仍是字符串",
+    "label": "string numbers are still strings",
     "expect": {
       "type": "function",
       "name": "kindOf",

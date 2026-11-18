@@ -1,17 +1,17 @@
 {
   "focus": "style.css",
-  "title": "让阅览灯渐亮和渐暗",
-  "goal": "在普通状态声明 CSS 过渡，让类名变化时平滑切换透明度。",
-  "summary": "切换按钮会给阅览灯添加或移除 is-on。设置开灯状态，并给两个切换方向加上过渡。",
+  "title": "Makes the reading light gradually brighter and darker",
+  "goal": "Declare CSS transition in the normal state to smoothly switch transparency when the class name changes.",
+  "summary": "toggle button will add or remove is-on for the reading light. Set the light-on state and add transitions to the two switching directions.",
   "tasks": [
-    "普通状态保持 0.25 不透明度，把 .reading-lamp.is-on 的 opacity 设为 1。",
-    "在 .reading-lamp 上为 opacity 添加 300ms 的过渡，缓动使用 ease。",
-    "点「切换阅览灯」观察点亮，再点一次观察熄灭。"
+    "maintains 0.25 opacity in normal state, and sets the opacity of .reading-lamp.is-on to 1.",
+    "Add 300ms transition for opacity on .reading-lamp, use ease for easing.",
+    "Click \"switching reading light\" to observe that it lights up, and click again to observe that it goes out."
   ],
   "example": {
     "language": "css",
     "code": ".payment-message {\n  background-color: #f3f4ef;\n  transition: background-color 200ms ease;\n}\n.payment-message.is-warning { background-color: #ffdcad; }",
-    "note": "缴费提示进入或离开警告状态时，背景色都会过渡。普通状态上的 transition 会在两个方向生效。"
+    "note": "When the payment prompt enters or leaves the warning state, the background color will transition. Transitions in the normal state will take effect in both directions."
   },
-  "hint": "只在 .is-on 上声明 transition 时，移除类名会同时移除过渡。把声明放在 .reading-lamp 的基础规则里。"
+  "hint": "When transition is declared only on .is-on, removing the class name also removes the transition. Place the declaration in the .reading-lamp base rule."
 }

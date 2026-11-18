@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "修复连续标签漏掉最后一号的问题",
-  "goal": "通过单项和反向区间定位循环的边界错误。",
-  "summary": "程序生成一组从 first 到 last 的标签号。现有实现漏掉最后一个编号，小范围时最容易看出。",
+  "title": "Fixed the problem of missing the last number of consecutive labels",
+  "goal": "Boundary error in positioning loops by single term and reverse interval.",
+  "summary": "program generates a set of tag numbers from first to last. The existing implementation misses the last number, which is most easily seen at small ranges.",
   "tasks": [
-    "检查 labelRange(first, last) 的循环条件，返回从 first 到 last 的整数数组，包含两个端点。",
-    "first 等于 last 时返回一项，first 大于 last 时返回空数组。"
+    "checks the loop condition of labelRange(first, last) and returns an integer array from first to last, containing both endpoints.",
+    "Returns one item when first is equal to last, and returns an empty array when first is greater than last."
   ],
   "example": {
     "language": "javascript",
-    "code": "for (let n = 2; n <= 4; n++) {\n  console.log(n);\n}\n// 逐次看到 2、3、4",
-    "note": "需要处理右端点时，检查循环是否允许 n 恰好等于终点。"
+    "code": "for (let n = 2; n <= 4; n++) {\n  console.log(n);\n}\n// sees 2, 3, 4 one after another",
+    "note": "When the right endpoint needs to be processed, check whether the loop allows n to be exactly equal to the endpoint."
   },
-  "hint": "只调整决定何时结束的条件。用 first 和 last 都等于 4 的输入复查。"
+  "hint": "only adjusts the conditions that determine when to end. Review with an input where first and last are both equal to 4."
 }

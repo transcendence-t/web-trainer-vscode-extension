@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "让摊位卡片随宽度换行",
-  "goal": "让摊位卡片按可用宽度自动换行，并在宽屏上铺满一行。",
-  "summary": "repeat 结合 auto-fit 会根据容器宽度安排尽可能多的列。minmax(160px, 1fr) 让每列至少有 160px 的空间，再由有卡片的列均分剩余空间。",
+  "title": "Allows booth cards to wrap with width",
+  "goal": "makes booth cards automatically wrap according to the available width and fill a full line on wide screens.",
+  "summary": "repeat combined with auto-fit will arrange as many columns as possible according to the width of the container. minmax(160px, 1fr) allows each column to have at least 160px of space, and then divides the remaining space equally among the columns with cards.",
   "tasks": [
-    "给 .stations 设置 grid-template-columns: repeat(auto-fit, minmax(160px, 1fr))，沿用卡片之间的 12px 间距。",
-    "缩放预览宽度，检查卡片会从一列变成两列、三列。宽屏上三张卡片应铺满整行。"
+    "Set grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) for .stations, using the 12px spacing between cards.",
+    "Zoom preview width, check card will change from one column to two or three columns. On a wide screen the three cards should fill the entire row."
   ],
   "example": {
     "language": "css",
     "code": ".photo-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));\n  gap: 8px;\n}",
-    "note": "相册容器宽 250px 时可并排放两张照片，空间变窄时照片会排到下一行。"
+    "note": "album container is 250px wide, two photos can be placed side by side. When the space becomes narrower, the photos will be arranged on the next row."
   },
-  "hint": "宽屏右侧空出一整列时，检查是否把 auto-fit 写成了 auto-fill。auto-fit 会收起空列，让现有卡片铺满行。"
+  "hint": "When there is a whole column empty on the right side of the wide screen, check whether auto-fit is written as auto-fill. auto-fit will collapse empty columns so that existing cards fill the rows."
 }

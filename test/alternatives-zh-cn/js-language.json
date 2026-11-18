@@ -1,0 +1,5 @@
+{
+  "jsb-split-join": {
+    "script.js": "function labelLine(text) {\n  const parts = [];\n  for (const raw of text.split(',')) {\n    const word = raw.trim();\n    if (word) parts.push(word);\n  }\n  return parts.join(' / ');\n}\n"
+  }
+}

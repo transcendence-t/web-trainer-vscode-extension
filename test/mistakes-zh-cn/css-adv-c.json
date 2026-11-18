@@ -1,0 +1,32 @@
+{
+  "css-media": {
+    "name": "把 min-width 写成 max-width，图例在窄窗口出现",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.walk-card {\n  padding: 14px;\n  border: 1px solid #b6cfc4;\n  border-radius: 8px;\n  background: #f5faf7;\n}\n.walk-card h2 { margin: 0; font-size: 1.125rem; }\n.walk-card p { margin: 6px 0 0; }\n.walk-legend {\n  margin-top: 12px;\n  padding: 8px 12px;\n  border-left: 3px solid #579176;\n  background: #e2f0e8;\n}\n\n.walk-legend { display: none; }\n\n@media (max-width: 640px) {\n  .walk-legend { display: block; }\n}\n"
+    }
+  },
+  "css-responsive": {
+    "name": "两列各占 50%，加间隔后右侧设备卡溢出",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.equipment-grid {\n  display: grid;\n  grid-template-columns: 1fr;\n  gap: 12px;\n  width: 100%;\n}\n.equipment-card {\n  min-width: 0;\n  padding: 12px;\n  border: 1px solid #b9cadb;\n  border-radius: 8px;\n  background: #edf4fc;\n}\n.equipment-card h2 { margin: 0; font-size: 1.125rem; }\n.equipment-card p { margin: 4px 0 0; }\n\n@media (min-width: 680px) {\n  .equipment-grid { grid-template-columns: 50% 50%; }\n}\n"
+    }
+  },
+  "css-transform": {
+    "name": "误用 translateY，扫描头沿纵向偏移",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.scanner-lane {\n  position: relative;\n  width: 228px;\n  max-width: 100%;\n  padding: 8px;\n  border-radius: 6px;\n  background: #e9f1f8;\n}\n.scan-target {\n  position: absolute;\n  top: 8px;\n  left: 88px;\n  width: 60px;\n  height: 38px;\n  outline: 2px dashed #6285a5;\n  border-radius: 6px;\n}\n.scanner-head {\n  width: 60px;\n  height: 38px;\n  line-height: 38px;\n  text-align: center;\n  border-radius: 6px;\n  background: #2a5379;\n  color: white;\n}\n\n.scanner-head { transform: translateY(80px); }\n"
+    }
+  },
+  "css-transition": {
+    "name": "只给亮态加过渡，关灯时丢失配置",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.reading-lamp {\n  display: inline-block;\n  margin-top: 12px;\n  padding: 8px 14px;\n  border-radius: 8px;\n  background: #ffdf91;\n  color: #513a13;\n  opacity: 0.25;\n}\n.reading-lamp.is-on { opacity: 1; transition: opacity 300ms ease; }\n"
+    }
+  },
+  "css-animation": {
+    "name": "漏掉 forwards，动画结束后急件签退回原样",
+    "files": {
+      "style.css": "* { box-sizing: border-box; }\nbody { margin: 0; padding: 20px 14px; background: #edf5f2; color: #243447; font: 16px/1.6 system-ui, sans-serif; }\n.sheet { max-width: 760px; margin: 0 auto; padding: 20px; border-radius: 12px; background: white; }\nh1 { margin: 0 0 .5em; font-size: 1.5rem; line-height: 1.3; }\nbutton, input, select, textarea { font: inherit; }\nbutton { cursor: pointer; }\nimg { max-width: 100%; height: auto; }\na { color: #125a46; }\n\n.stamp-stage {\n  width: 220px;\n  max-width: 100%;\n  margin-top: 12px;\n  padding: 30px 12px 12px;\n  border: 1px solid #dfcba9;\n  border-radius: 8px;\n  background: #fff8e9;\n}\n.stamp-slot { display: inline-block; outline: 1px dashed #8f6f37; border-radius: 5px; }\n.dispatch-stamp {\n  display: block;\n  padding: 4px 10px;\n  border-radius: 5px;\n  background: #846031;\n  color: white;\n  opacity: 0.55;\n  transform: translateY(-8px);\n}\n.stamp-stage .dispatch-stamp { animation-play-state: paused; }\n\n@keyframes settle-stamp {\n  from { opacity: 0.3; transform: translateY(-18px); }\n  to { opacity: 1; transform: translateY(0); }\n}\n.dispatch-stamp { animation: settle-stamp 400ms ease-out; }\n"
+    }
+  }
+}

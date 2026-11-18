@@ -1,0 +1,17 @@
+{
+  "focus": "script.js",
+  "title": "从包裹对象中提取待领取标签",
+  "goal": "从对象数组中选出符合条件的记录，再读取每条记录的指定属性。",
+  "summary": "取件屏只展示已经备好的包裹标签。每条包裹记录同时保存了标签和备货状态。",
+  "tasks": [
+    "完成 listReadyPickups(parcels)。每条记录有字符串 label 和布尔值 ready。",
+    "找出 ready 为 true 的记录，返回这些记录的 label 组成的字符串数组。",
+    "保留原顺序和重复标签。没有准备好的包裹时返回空数组。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const agenda = [\n  { name: '版画体验', confirmed: true },\n  { name: '陶艺讲座', confirmed: false },\n];\nconst scheduled = agenda.filter((entry) => entry.confirmed);\nconst names = scheduled.map((entry) => entry.name);\n// names 是 ['版画体验']",
+    "note": "先用对象的 confirmed 字段筛出已确认的活动，再用 map 取出这些活动的 name。"
+  },
+  "hint": "筛选结束后，数组里仍是完整对象。再取每个对象的 label，就能得到取件屏需要的字符串数组。"
+}

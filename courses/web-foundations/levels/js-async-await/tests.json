@@ -1,35 +1,35 @@
 [
   {
-    "label": "等待预约查询的实际结果",
+    "label": "Waiting for the actual result of reservation query",
     "expect": {
       "type": "function",
       "name": "reservationLabel",
       "args": [
         "A-6"
       ],
-      "value": "A-6：余位 12"
+      "value": "A-6: Seats left 12"
     }
   },
   {
-    "label": "已满也显示数字零",
+    "label": "is full but also displays the number zero.",
     "expect": {
       "type": "function",
       "name": "reservationLabel",
       "args": [
         "B-1"
       ],
-      "value": "B-1：余位 0"
+      "value": "B-1: Seats left 0"
     }
   },
   {
-    "label": "拒绝时使用查询原因",
+    "label": "Use query reason when rejecting",
     "expect": {
       "type": "function",
       "name": "reservationLabel",
       "args": [
         "F-8"
       ],
-      "value": "查询失败：没有这条预约"
+      "value": "Query failed: There is no such reservation"
     }
   }
 ]

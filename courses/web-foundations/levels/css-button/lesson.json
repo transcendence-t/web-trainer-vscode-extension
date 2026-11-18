@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "按钮圆角",
-  "summary": "用背景色和圆角突出页面上的主要操作。",
+  "title": "Button rounded corners",
+  "summary": "Use background color and rounded corners to highlight the main actions on the page.",
   "tasks": [
-    "给 .signup 设置 #125a46 背景和 #ffffff 文字。",
-    "设置上下内边距 8px、左右内边距 16px，圆角 999px。"
+    "gives .signup a #125a46 background and #ffffff text.",
+    "sets the top and bottom padding to 8px, the left and right padding to 16px, and the rounded corners to 999px."
   ],
-  "hint": "padding 的第一个值控制上下，第二个值控制左右。调换 8px 和 16px 后，按钮会变得更高更窄。",
-  "goal": "结合按钮的颜色、内边距和圆角突出页面的主要操作。",
+  "hint": "padding controls up and down, and the second value controls left and right. Swapping 8px and 16px makes the button taller and narrower.",
+  "goal": "combines button color, padding, and rounded corners to highlight the main action of the page.",
   "example": {
     "language": "css",
     "code": ".print-ticket {\n  background: #284d6d;\n  color: #fff;\n  padding: 6px 14px;\n  border-radius: 20px;\n}",
-    "note": "给打印凭证按钮设亮色文字与深色背景。内边距的两个值分别控制上下和左右。"
+    "note": "Set bright text and dark background for the print voucher button. The two padding values ​​control the top, bottom and left and right respectively."
   }
 }

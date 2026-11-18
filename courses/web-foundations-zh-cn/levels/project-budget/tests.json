@@ -1,0 +1,213 @@
+[
+  {
+    "label": "错误提示区域使用 alert 角色",
+    "expect": {
+      "type": "exists",
+      "selector": "#expense-error[role=\"alert\"]"
+    }
+  },
+  {
+    "label": "余额栏实际排在支出栏右边",
+    "expect": {
+      "type": "layout",
+      "selector": ".remaining-summary",
+      "relativeTo": ".spending-summary",
+      "relation": "right-of"
+    }
+  },
+  {
+    "label": "两个金额栏实际等宽",
+    "expect": {
+      "type": "layout",
+      "selector": ".remaining-summary",
+      "relativeTo": ".spending-summary",
+      "relation": "equal-width"
+    }
+  },
+  {
+    "label": "两栏之间留出 12px",
+    "expect": {
+      "type": "style",
+      "selector": ".expense-summary",
+      "property": "column-gap",
+      "value": "12px"
+    }
+  },
+  {
+    "label": "开始时还没有支出",
+    "expect": {
+      "type": "text",
+      "selector": "#expense-total",
+      "value": "0.00 元"
+    }
+  },
+  {
+    "label": "两笔小数金额都计入总支出",
+    "expect": {
+      "type": "text",
+      "selector": "#expense-total",
+      "value": "20.00 元"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#expense-amount",
+        "value": "12.40"
+      },
+      {
+        "type": "click",
+        "selector": "#add-expense"
+      },
+      {
+        "type": "input",
+        "selector": "#expense-amount",
+        "value": "7.60"
+      },
+      {
+        "type": "click",
+        "selector": "#add-expense"
+      }
+    ]
+  },
+  {
+    "label": "余额从总预算扣除累计支出",
+    "expect": {
+      "type": "text",
+      "selector": "#expense-remaining",
+      "value": "280.00 元"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#expense-amount",
+        "value": "12.40"
+      },
+      {
+        "type": "click",
+        "selector": "#add-expense"
+      },
+      {
+        "type": "input",
+        "selector": "#expense-amount",
+        "value": "7.60"
+      },
+      {
+        "type": "click",
+        "selector": "#add-expense"
+      }
+    ]
+  },
+  {
+    "label": "负数输入不会改变先前的金额",
+    "expect": {
+      "type": "text",
+      "selector": "#expense-total",
+      "value": "12.40 元"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#expense-amount",
+        "value": "12.40"
+      },
+      {
+        "type": "click",
+        "selector": "#add-expense"
+      },
+      {
+        "type": "input",
+        "selector": "#expense-amount",
+        "value": "-3"
+      },
+      {
+        "type": "click",
+        "selector": "#add-expense"
+      }
+    ]
+  },
+  {
+    "label": "超过两位小数时提示错误",
+    "expect": {
+      "type": "text",
+      "selector": "#expense-error",
+      "value": "请输入大于 0 且最多两位小数的金额"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#expense-amount",
+        "value": "4.135"
+      },
+      {
+        "type": "click",
+        "selector": "#add-expense"
+      }
+    ]
+  },
+  {
+    "label": "空输入时提示错误",
+    "expect": {
+      "type": "text",
+      "selector": "#expense-error",
+      "value": "请输入大于 0 且最多两位小数的金额"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#expense-amount",
+        "value": ""
+      },
+      {
+        "type": "click",
+        "selector": "#add-expense"
+      }
+    ]
+  },
+  {
+    "label": "改正输入后清除错误提示",
+    "expect": {
+      "type": "text",
+      "selector": "#expense-error",
+      "value": ""
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#expense-amount",
+        "value": "-3"
+      },
+      {
+        "type": "click",
+        "selector": "#add-expense"
+      },
+      {
+        "type": "input",
+        "selector": "#expense-amount",
+        "value": "6.50"
+      },
+      {
+        "type": "click",
+        "selector": "#add-expense"
+      }
+    ]
+  },
+  {
+    "label": "超支时显示负余额",
+    "expect": {
+      "type": "text",
+      "selector": "#expense-remaining",
+      "value": "-20.00 元"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#expense-amount",
+        "value": "320"
+      },
+      {
+        "type": "click",
+        "selector": "#add-expense"
+      }
+    ]
+  }
+]

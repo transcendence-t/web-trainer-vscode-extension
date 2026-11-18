@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "用类创建独立的库存对象",
-  "goal": "在 constructor 初始化实例状态，通过方法更新并读取状态。",
-  "summary": "两个实训室分别登记备品数量。每个库存对象有自己的数量与入库方法。",
+  "title": "Create independent inventory objects using classes",
+  "goal": "Initialize the instance state in the constructor, update and read the state through methods.",
+  "summary": "Two training rooms track spare supplies separately. Each inventory object has its own quantity and restocking method.",
   "tasks": [
-    "完成 SupplyBox 类的 constructor(initial)、receive(count) 和 total()。",
-    "每次 receive 增加该实例的数量，total 返回当前数量。保留 runBoxes 函数来预览两箱的结果。"
+    "Complete constructor(initial), receive(count), and total() in the SupplyBox class.",
+    "Each call to receive adds to the instance's quantity. total returns its current quantity. Keep runBoxes to preview the results for both boxes."
   ],
   "example": {
     "language": "javascript",
-    "code": "class Board {\n  constructor(title) { this.title = title; }\n  readTitle() { return this.title; }\n}\nconst board = new Board('器材登记');",
-    "note": "new 创建实例并调用 constructor。方法可通过 this 访问当前实例。"
+    "code": "class Board {\n  constructor(title) { this.title = title; }\n  readTitle() { return this.title; }\n}\nconst board = new Board('Equipment Registration');",
+    "note": "new creates an instance and calls its constructor. Methods can access the current instance through this."
   },
-  "hint": "数量保存在 this 上，让两个对象各有一份数据。receive 应在原数量上累加。"
+  "hint": "Store the quantity on this so each object has its own value. receive adds to the existing quantity."
 }

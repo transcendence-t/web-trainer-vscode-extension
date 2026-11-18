@@ -1,6 +1,6 @@
 [
   {
-    "label": "忽略中间的空格与大小写",
+    "label": "Ignore intermediate spaces and capitalization",
     "expect": {
       "type": "function",
       "name": "isMirrorCode",
@@ -11,7 +11,7 @@
     }
   },
   {
-    "label": "保留数字参与比较",
+    "label": "Reserve numbers to participate in comparison",
     "expect": {
       "type": "function",
       "name": "isMirrorCode",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "label": "不镜像时为 false",
+    "label": "is false when not mirroring",
     "expect": {
       "type": "function",
       "name": "isMirrorCode",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "label": "空白不作为口令",
+    "label": "Blank is not used as a password",
     "expect": {
       "type": "function",
       "name": "isMirrorCode",
@@ -44,7 +44,7 @@
     }
   },
   {
-    "label": "只含一个有效字符",
+    "label": "contains only one valid character",
     "expect": {
       "type": "function",
       "name": "isMirrorCode",

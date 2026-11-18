@@ -1,17 +1,17 @@
 {
   "focus": "index.html",
-  "title": "给观鸟词典配上释义",
-  "goal": "用 dl、dt 和 dd 把每个术语与它的解释配成一组。",
-  "summary": "dl 是描述列表，可以用来编排词典。dt 标记术语，紧随其后的 dd 给出对应的解释。",
+  "title": "Add definitions to bird watching dictionary",
+  "goal": "Use dl, dt, and dd to pair each term with its explanation.",
+  "summary": "dl is a description list that can be used to compile dictionaries. dt marks the term, followed by dd giving the corresponding explanation.",
   "tasks": [
-    "将标题下的两段文字改为一个 dl 描述列表。",
-    "第一组用 dt 写「翼展」，随后用 dd 写「两翼展开时，两侧翼尖之间的距离。」",
-    "第二组用 dt 写「留鸟」，随后用 dd 写「全年留在同一地区生活的鸟。」"
+    "Change the two paragraphs of text under the title to a dl description list.",
+    "The first group uses dt to write \"wingspan\", and then uses dd to write \"The distance between the wing tips on both sides when the wings are unfolded.\"",
+    "The second group uses dt to write \"resident bird\", and then uses dd to write \"A bird that stays in the same area year-round.\""
   ],
   "example": {
     "language": "html",
-    "code": "<dl>\n  <dt>醒面</dt>\n  <dd>把和好的面团静置一段时间。</dd>\n</dl>",
-    "note": "这份烘焙词典在「醒面」后面紧跟它的解释。"
+    "code": "<dl>\n  <dt>Wake up noodles</dt>\n  <dd>Let the mixed dough rest for a while.</dd>\n</dl>",
+    "note": "This baking dictionary follows \"Wake up noodles\" with its explanation."
   },
-  "hint": "释义错位时，检查每个 dd 是否紧跟对应的 dt。把所有术语集中写在前面会打乱配对。"
+  "hint": "When the interpretation is misplaced, check whether each dd follows the corresponding dt. Putting all the terms together at the front will mess up the pairing."
 }

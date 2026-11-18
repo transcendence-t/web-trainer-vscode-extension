@@ -6,13 +6,13 @@ let timerId;
 
 function recordSample() {
   const entry = document.createElement('li');
-  entry.textContent = '第 ' + (log.children.length + 1) + ' 次采样';
+  entry.textContent = 'No. ' + (log.children.length + 1) + ' samples';
   log.append(entry);
-  status.textContent = '正在采样';
+  status.textContent = 'is sampling';
 }
 
 start.addEventListener('click', () => {
-  status.textContent = '正在采样';
+  status.textContent = 'is sampling';
   start.disabled = true;
   stop.disabled = false;
   timerId = setInterval(recordSample, 200);
@@ -20,7 +20,7 @@ start.addEventListener('click', () => {
 
 stop.addEventListener('click', () => {
   clearInterval(timerId);
-  status.textContent = '已停止采样';
+  status.textContent = 'Sampling has stopped';
   start.disabled = false;
   stop.disabled = true;
 });

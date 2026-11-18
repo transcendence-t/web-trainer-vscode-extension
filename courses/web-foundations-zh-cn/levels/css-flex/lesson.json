@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "横向排列",
+  "summary": "Flexbox 适合把按钮排在一行。",
+  "tasks": [
+    "让 .toolbar 使用 Flexbox 横向排列。",
+    "把项目之间的间距设为 12px，并让项目在垂直方向居中。"
+  ],
+  "hint": "可以用 display: flex、gap 和 align-items。",
+  "goal": "把文件操作按钮排成一行，让不同高度的按钮垂直居中。",
+  "example": {
+    "language": "css",
+    "code": ".order-summary {\n  display: flex;\n  gap: 8px;\n  align-items: center;\n}",
+    "note": "订单摘要把订单编号和状态排在一行。即使状态标签更高，两项的垂直中心也能对齐。"
+  }
+}

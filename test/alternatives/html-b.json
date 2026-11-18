@@ -1,5 +1,5 @@
 {
   "html-definition-list": {
-    "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>观鸟术语表</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>观鸟术语表</h1>\n  <dl>\n    <div>\n      <dt>翼展</dt>\n      <dd>两翼展开时，两侧翼尖之间的距离。</dd>\n    </div>\n    <div>\n      <dt>留鸟</dt>\n      <dd>全年留在同一地区生活的鸟。</dd>\n    </div>\n  </dl>\n</main>\n</body>\n</html>\n"
+    "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Glossary of Birding Terms</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>Glossary of Birding Terms</h1>\n  <dl>\n    <div>\n      <dt>wingspan</dt>\n      <dd>The distance between the wing tips on both sides when the wings are unfolded.</dd>\n    </div>\n    <div>\n      <dt>resident bird</dt>\n      <dd>A bird that stays in the same area year-round.</dd>\n    </div>\n  </dl>\n</main>\n</body>\n</html>\n"
   }
 }

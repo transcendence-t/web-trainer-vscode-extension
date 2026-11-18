@@ -1,17 +1,17 @@
 {
   "focus": "script.js",
-  "title": "计算茶饮分装量和备用量",
-  "goal": "声明两个可单独调用的函数，让其中一个使用另一个的返回值。",
-  "summary": "函数用参数接收输入，再通过 return 把结果交给调用者。调用子函数所得的结果可以继续参与外层函数的计算。",
+  "title": "Calculate tea filling volume and reserve volume",
+  "goal": "declares two functions that can be called separately, allowing one to use the return value of the other.",
+  "summary": "function receives input using parameters, and then passes the result to the caller through return. The result obtained by calling the sub-function can continue to participate in the calculation of the outer function.",
   "tasks": [
-    "补全 drinkVolume(cups, mlPerCup)，接收杯数和每杯的毫升数，返回两者相乘的数值。",
-    "补全 prepareVolume(cups, mlPerCup, spareMl)。将前两个参数交给 drinkVolume，再把备用的毫升数 spareMl 加到结果里并返回。",
-    "参数均为非负整数。保留两个函数名，让它们都可以单独调用。"
+    "completes drinkVolume(cups, mlPerCup), receives the number of cups and the number of milliliters per cup, and returns the value multiplied by the two.",
+    "completes prepareVolume(cups, mlPerCup, spareMl). Give the first two parameters to drinkVolume, then add the spare milliliters spareMl to the result and return it.",
+    "parameters are all non-negative integers. Reserve both function names so that they can both be called independently."
   ],
   "example": {
     "language": "javascript",
     "code": "function boardsWidth(panelWidth, panels) {\n  return panelWidth * panels;\n}\n\nfunction displayWidth(panelWidth, panels, gapWidth) {\n  return boardsWidth(panelWidth, panels) + gapWidth;\n}",
-    "note": "展板总宽由各块等宽板的宽度与拼接间隙总宽相加。displayWidth 直接使用 boardsWidth 的返回值。"
+    "note": "exhibition panel is the sum of the width of each equal-width board and the total width of the splicing gap. displayWidth directly uses the return value of boardsWidth."
   },
-  "hint": "杯数和单杯容量先传给 drinkVolume。第三个参数是备用量，在取得结果后再加进去。"
+  "hint": "The number of cups and single cup capacity are first passed to drinkVolume. The third parameter is the reserve amount, which is added after the result is obtained."
 }

@@ -1,6 +1,6 @@
 [
   {
-    "label": "起点等于目标时无须继续",
+    "label": "No need to continue when the starting point is equal to the target",
     "expect": {
       "type": "function",
       "name": "archiveDays",
@@ -12,7 +12,7 @@
     }
   },
   {
-    "label": "起点超过目标时无须继续",
+    "label": "No need to continue when the starting point exceeds the target",
     "expect": {
       "type": "function",
       "name": "archiveDays",
@@ -24,7 +24,7 @@
     }
   },
   {
-    "label": "还差一箱时需要一天",
+    "label": "It takes one day when there is still one box left.",
     "expect": {
       "type": "function",
       "name": "archiveDays",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "三天刚好达到目标",
+    "label": "Just reached the goal in three days",
     "expect": {
       "type": "function",
       "name": "archiveDays",
@@ -48,7 +48,7 @@
     }
   },
   {
-    "label": "最后一天超过目标也结束",
+    "label": "The last day exceeds the target and ends",
     "expect": {
       "type": "function",
       "name": "archiveDays",

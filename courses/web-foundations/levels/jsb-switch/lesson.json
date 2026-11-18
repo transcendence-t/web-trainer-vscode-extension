@@ -1,17 +1,17 @@
 {
   "focus": "script.js",
-  "title": "按工位代号显示名称",
-  "goal": "用 switch 将三种工位代号转换成可读的名称，并处理未知代号。",
-  "summary": "switch 用严格相等的方式匹配 case。命中的分支可以用 return 直接返回结果，匹配不到时会走到 default。",
+  "title": "Display name according to station code",
+  "goal": "uses switch to convert the three station codes into readable names and handle unknown codes.",
+  "summary": "switch matches cases with strict equality. The hit branch can use return to directly return the result. If no match is found, it will go to default.",
   "tasks": [
-    "补全 stationName(code)，参数是字符串，使用 switch 按代号选择结果。",
-    "代号 S 返回「缝纫台」，C 返回「裁纸台」，B 返回「装订台」。",
-    "在 default 中返回「未知工位」，用于空字符串、小写字母等未列出的代号。"
+    "completes stationName(code), the parameter is a string, use switch to select the result by code.",
+    "code S returns \"sewing table\", C returns \"cutting table\", and B returns \"binding table\".",
+    "returns \"Unknown workstation\" in default, which is used for unlisted codenames such as empty strings and lowercase letters."
   ],
   "example": {
     "language": "javascript",
-    "code": "function audioFormatLabel(format) {\n  switch (format) {\n    case 'wav':\n      return 'WAV 音频';\n    case 'mp3':\n      return 'MP3 音频';\n    default:\n      return '其他格式';\n  }\n}",
-    "note": "音频列表根据文件扩展名返回对应标签，没匹配到的扩展名统一归为「其他格式」。"
+    "code": "function audioFormatLabel(format) {\n  switch (format) {\n    case 'wav':\n      return 'WAV audio';\n    case 'mp3':\n      return 'MP3 Audio';\n    default:\n      return 'other formats';\n  }\n}",
+    "note": "audio list returns the corresponding tag according to the file extension. Unmatched extensions are collectively classified as \"other formats\"."
   },
-  "hint": "如果 C 未匹配，检查 case 的字母大小写。严格匹配会把 C 和 c 视为两个不同的字符串。"
+  "hint": "If C does not match, check case case. A strict match would treat C and c as two different strings."
 }

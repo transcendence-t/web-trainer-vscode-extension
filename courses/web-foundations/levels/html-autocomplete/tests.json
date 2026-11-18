@@ -1,20 +1,20 @@
 [
   {
-    "label": "账号邮箱作为登录标识",
+    "label": "account email as login ID",
     "expect": {
       "type": "exists",
       "selector": "input#account[type=\"email\"][autocomplete=\"username\"]"
     }
   },
   {
-    "label": "密码字段提示填充现用密码",
+    "label": "Password field prompts to fill in the current password",
     "expect": {
       "type": "exists",
       "selector": "input#password[type=\"password\"][autocomplete=\"current-password\"]"
     }
   },
   {
-    "label": "两个字段保留明确标签",
+    "label": "Two fields retain explicit labels",
     "expect": {
       "type": "count",
       "selector": "label[for=\"account\"], label[for=\"password\"]",

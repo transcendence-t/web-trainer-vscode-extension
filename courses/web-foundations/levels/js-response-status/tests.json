@@ -1,30 +1,30 @@
 [
   {
-    "label": "读取 200 的有效 JSON",
+    "label": "reads valid JSON of 200",
     "expect": {
       "type": "function",
       "name": "makeResponseMessage",
       "args": [
         200,
-        "{\"message\":\"记录已更新\"}"
+        "{\"message\":\"record updated\"}"
       ],
-      "value": "记录已更新"
+      "value": "record updated"
     }
   },
   {
-    "label": "其他 2xx 成功状态同样读取",
+    "label": "Other 2xx success status is also read",
     "expect": {
       "type": "function",
       "name": "makeResponseMessage",
       "args": [
         201,
-        "{\"message\":\"已添加\"}"
+        "{\"message\":\"added\"}"
       ],
-      "value": "已添加"
+      "value": "added"
     }
   },
   {
-    "label": "404 无需读取非 JSON 正文",
+    "label": "404 No need to read non-JSON text",
     "expect": {
       "type": "function",
       "name": "makeResponseMessage",
@@ -32,19 +32,19 @@
         404,
         "missing"
       ],
-      "value": "读取失败：404"
+      "value": "Reading failed: 404"
     }
   },
   {
-    "label": "503 即使正文合法也显示状态码",
+    "label": "503 status code is displayed even if the text is legal",
     "expect": {
       "type": "function",
       "name": "makeResponseMessage",
       "args": [
         503,
-        "{\"message\":\"稍后再试\"}"
+        "{\"message\":\"Try again later\"}"
       ],
-      "value": "读取失败：503"
+      "value": "Reading failed: 503"
     }
   }
 ]

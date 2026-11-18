@@ -1,0 +1,65 @@
+[
+  {
+    "label": "启动时读取已有偏好",
+    "expect": {
+      "type": "text",
+      "selector": "#density",
+      "value": "紧凑"
+    },
+    "storage": {
+      "density": "紧凑"
+    }
+  },
+  {
+    "label": "恢复后立即显示默认",
+    "expect": {
+      "type": "text",
+      "selector": "#density",
+      "value": "标准"
+    },
+    "storage": {
+      "density": "紧凑"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#reset-density"
+      }
+    ]
+  },
+  {
+    "label": "恢复后指定键不存在",
+    "expect": {
+      "type": "storage",
+      "key": "density",
+      "value": null
+    },
+    "storage": {
+      "density": "紧凑"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#reset-density"
+      }
+    ]
+  },
+  {
+    "label": "其他偏好仍然保存",
+    "expect": {
+      "type": "storage",
+      "key": "language",
+      "value": "zh-CN"
+    },
+    "storage": {
+      "density": "紧凑",
+      "language": "zh-CN"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#reset-density"
+      }
+    ]
+  }
+]

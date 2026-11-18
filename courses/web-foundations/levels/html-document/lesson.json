@@ -1,17 +1,17 @@
 {
   "focus": "index.html",
-  "title": "HTML 文档骨架",
-  "goal": "写出带语言、字符编码和标签页标题的 HTML 文档。",
-  "summary": "文件开头的 <!doctype html> 让浏览器按标准模式渲染。head 存放页面信息，body 存放页面中展示的内容。",
+  "title": "HTML document skeleton",
+  "goal": "writes HTML documents with language, character encoding, and tab titles.",
+  "summary": "The doctype tells the browser to render in standards mode. The head stores page information, and the body stores the content displayed on the page.",
   "tasks": [
-    "为 <html> 添加 lang 属性，值为 zh-CN。",
-    "在 <head> 中用 meta 声明 UTF-8 字符编码，用 title 把标签页标题设为「社区图书角」。",
-    "在 <body> 内已有的段落中写「周六下午开放。」。"
+    "Add the lang attribute to <html> with the value en.",
+    "Use meta in <head> to declare UTF-8 character encoding, and use title to set the tab title to \"Community Book Corner\".",
+    "Write \"Open Saturday afternoon.\" in an existing paragraph within <body>."
   ],
-  "hint": "标签页标题放在 head 的 title 中。开放时间写在 body 的 p 中，读者就能直接在页面看到它。",
+  "hint": "tab title is placed in the title of the head. The opening time is written in the p of the body, so readers can see it directly on the page.",
   "example": {
     "language": "html",
     "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Park map</title>\n</head>\n<body>\n  <p>The north gate opens at 8:00.</p>\n</body>\n</html>",
-    "note": "公园地图用 lang=\"en\" 声明正文为英语。打开页面后，标签页显示 Park map，页面显示开门时间。"
+    "note": "Park map uses lang=\"en\" to declare that the text is in English. After opening the page, the tab page displays the Park map, and the page displays the opening hours."
   }
 }

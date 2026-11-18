@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "实时问候",
-  "summary": "用户打字、粘贴或删除内容时会触发 input 事件。在回调里读取输入框的 value，就能拿到当前文字。",
+  "title": "Real-time greetings",
+  "summary": "The input event is triggered when the user types, pastes or deletes content. Read the value of the input box in the callback to get the current text.",
   "tasks": [
-    "监听 #student 输入框的 input 事件，读取去掉首尾空格的姓名。",
-    "把 #greeting 改成「你好，姓名！」。姓名为空时显示「你好，同学！」。"
+    "listens to the input event of the #student input box and reads the name with the leading and trailing spaces removed.",
+    "Set #greeting to “Hello, NAME!” using the trimmed name. Use “Hello, classmate!” when the field is empty."
   ],
-  "hint": "用 field.value.trim() 取得姓名，用 if 或 || 处理空内容。留意全角标点。",
-  "goal": "让问候文字随输入框实时更新，清空时恢复通用问候。",
+  "hint": "Use field.value.trim() to get the name, and use if or || to handle empty content. Pay attention to full-width punctuation.",
+  "goal": "allows the greeting text to be updated in real time with the input box, and the general greeting will be restored when cleared.",
   "example": {
     "language": "javascript",
-    "code": "const teamField = document.querySelector('#team-name');\nconst teamCaption = document.querySelector('#team-caption');\n\nteamField.addEventListener('input', () => {\n  teamCaption.textContent = teamField.value.trim() || '未命名队伍';\n});",
-    "note": "报名页随输入更新队名预览。清空队名后，预览显示「未命名队伍」。"
+    "code": "const teamField = document.querySelector('#team-name');\nconst teamCaption = document.querySelector('#team-caption');\n\nteamField.addEventListener('input', () => {\n  teamCaption.textContent = teamField.value.trim() || 'Unnamed team';\n});",
+    "note": "The registration page updates the team name preview as you enter. After clearing the team name, the preview shows \"Unnamed team\"."
   }
 }

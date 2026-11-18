@@ -1,9 +1,9 @@
 class SupplyBox {
   constructor(initial) {
-    // 保存初始数量。
+    // saves the initial quantity.
   }
   receive(count) {
-    // 增加入库数量。
+    // Increase the warehousing quantity.
   }
   total() {
     return 0;

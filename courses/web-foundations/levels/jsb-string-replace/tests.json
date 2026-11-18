@@ -1,38 +1,38 @@
 [
   {
-    "label": "两处名称都被更新",
+    "label": "Both names have been updated",
     "expect": {
       "type": "function",
       "name": "fillRoom",
       "args": [
-        "{room}今天开放。请到{room}签到。",
-        "光影室"
+        "{room} is open today. Please go to {room} to sign in.",
+        "Light and Shadow Room"
       ],
-      "value": "光影室今天开放。请到光影室签到。"
+      "value": "Light and Shadow Room is open today. Please go to Light and Shadow Room to sign in."
     }
   },
   {
-    "label": "普通通知保持原样",
+    "label": "Normal notifications remain as they are",
     "expect": {
       "type": "function",
       "name": "fillRoom",
       "args": [
-        "今日暂停预约",
-        "光影室"
+        "Appointments suspended today",
+        "light and shadow room"
       ],
-      "value": "今日暂停预约"
+      "value": "Appointments suspended today"
     }
   },
   {
-    "label": "替换内容按字面插入",
+    "label": "replacement content is inserted literally",
     "expect": {
       "type": "function",
       "name": "fillRoom",
       "args": [
-        "当前{room}",
+        "Current {room}",
         "A$&B"
       ],
-      "value": "当前A$&B"
+      "value": "Current A$&B"
     }
   }
 ]

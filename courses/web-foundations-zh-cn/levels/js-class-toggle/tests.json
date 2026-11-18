@@ -1,0 +1,127 @@
+[
+  {
+    "label": "起初按钮没有收藏类",
+    "expect": {
+      "type": "count",
+      "selector": "#save-resource.is-saved",
+      "value": 0
+    }
+  },
+  {
+    "label": "起初按钮处于未按压状态",
+    "expect": {
+      "type": "attribute",
+      "selector": "#save-resource",
+      "name": "aria-pressed",
+      "value": "false"
+    }
+  },
+  {
+    "label": "起初按钮显示浅色背景",
+    "expect": {
+      "type": "style",
+      "selector": "#save-resource",
+      "property": "background-color",
+      "value": "rgb(226, 241, 235)"
+    }
+  },
+  {
+    "label": "第一次点击添加收藏类",
+    "expect": {
+      "type": "exists",
+      "selector": "#save-resource.is-saved"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#save-resource"
+      }
+    ]
+  },
+  {
+    "label": "收藏后按钮状态记为按压",
+    "expect": {
+      "type": "attribute",
+      "selector": "#save-resource",
+      "name": "aria-pressed",
+      "value": "true"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#save-resource"
+      }
+    ]
+  },
+  {
+    "label": "收藏后按钮背景变为深绿色",
+    "expect": {
+      "type": "style",
+      "selector": "#save-resource",
+      "property": "background-color",
+      "value": "rgb(18, 90, 70)"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#save-resource"
+      }
+    ]
+  },
+  {
+    "label": "第二次点击移除收藏类",
+    "expect": {
+      "type": "count",
+      "selector": "#save-resource.is-saved",
+      "value": 0
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#save-resource"
+      },
+      {
+        "type": "click",
+        "selector": "#save-resource"
+      }
+    ]
+  },
+  {
+    "label": "取消收藏后恢复未按压状态",
+    "expect": {
+      "type": "attribute",
+      "selector": "#save-resource",
+      "name": "aria-pressed",
+      "value": "false"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#save-resource"
+      },
+      {
+        "type": "click",
+        "selector": "#save-resource"
+      }
+    ]
+  },
+  {
+    "label": "取消收藏后恢复浅色背景",
+    "expect": {
+      "type": "style",
+      "selector": "#save-resource",
+      "property": "background-color",
+      "value": "rgb(226, 241, 235)"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#save-resource"
+      },
+      {
+        "type": "click",
+        "selector": "#save-resource"
+      }
+    ]
+  }
+]

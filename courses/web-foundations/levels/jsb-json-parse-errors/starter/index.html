@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>处理格式错误或类型不符的 JSON</title>
+  <title>Handling malformed or inconsistent JSON</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <main class="sheet">
-    <h1>处理格式错误或类型不符的 JSON</h1>
-    <p>试一试 <code>readChecklist("[\"纸张\", \"笔\"]")</code></p>
-    <p>运行结果 <output id="example-result" aria-live="polite">待填写函数</output></p>
+    <h1>Handling malformed or inconsistent JSON</h1>
+    <p>give it a try <code>readChecklist("[\"paper\", \"pen\"]")</code></p>
+    <p>running results <output id="example-result" aria-live="polite">Function to be filled in</output></p>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const result = readChecklist("[\"纸张\", \"笔\"]");
+        const result = readChecklist("[\"paper\",\"pen\"]");
         if (result !== undefined) {
           document.querySelector("#example-result").textContent = JSON.stringify(result);
         }

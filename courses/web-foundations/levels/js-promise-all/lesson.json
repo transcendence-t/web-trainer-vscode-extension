@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "并行取得标题和可借数量",
-  "goal": "用 Promise.all 一起等待多项独立结果，处理其中任一失败。",
-  "summary": "资料卡要从两个接口取得标题和数量。练习用本地 Promise 模拟不同的返回先后。",
+  "title": "Obtain title and loan quantity in parallel",
+  "goal": "Use Promise.all to wait for multiple independent results together and handle any failure.",
+  "summary": "data card needs to obtain the title and quantity from two interfaces. Practice using local Promise to simulate different return sequences.",
   "tasks": [
-    "完成 catalogCard(title, total)，并行启动 readTitle(title) 与 readTotal(total)。",
-    "返回 { title, total }，顺序与接口完成先后无关。任何一项失败时返回 null。"
+    "completes catalogCard(title, total) and starts readTitle(title) and readTotal(total) in parallel.",
+    "returns { title, total }, the order has nothing to do with the completion of the interface. Returns null if any of them fail."
   ],
   "example": {
     "language": "javascript",
     "code": "const [user, tasks] = await Promise.all([loadUser(), loadTasks()]);",
-    "note": "输入是几个 Promise，完成后的数组按传入顺序排列。任一 Promise 被拒绝时，整个等待也被拒绝。"
+    "note": "is several Promises, and the completed array is arranged in the order passed in. When any Promise is rejected, the entire wait is also rejected."
   },
-  "hint": "将两次调用放在同一个 Promise.all 数组中，用解构按固定顺序取值。"
+  "hint": "Put the two calls in the same Promise.all array, and use destructuring to get the values ​​in a fixed order."
 }

@@ -1,0 +1,79 @@
+[
+  {
+    "label": "存在语义页眉与目录",
+    "expect": {
+      "type": "exists",
+      "selector": "main > header#top + nav#links"
+    }
+  },
+  {
+    "label": "窄屏内容在目录下方",
+    "expect": {
+      "type": "layout",
+      "selector": "#status",
+      "relativeTo": "#links",
+      "relation": "below"
+    },
+    "viewport": 380
+  },
+  {
+    "label": "窄屏两张卡片上下排",
+    "expect": {
+      "type": "layout",
+      "selector": "#model",
+      "relativeTo": "#wood",
+      "relation": "below"
+    },
+    "viewport": 380
+  },
+  {
+    "label": "宽屏目录宽 160px",
+    "expect": {
+      "type": "style",
+      "selector": "#links",
+      "property": "width",
+      "value": "160px"
+    },
+    "viewport": 820
+  },
+  {
+    "label": "宽屏状态区在目录右侧",
+    "expect": {
+      "type": "layout",
+      "selector": "#status",
+      "relativeTo": "#links",
+      "relation": "right-of"
+    },
+    "viewport": 820
+  },
+  {
+    "label": "宽屏页眉覆盖整个看板宽度",
+    "expect": {
+      "type": "layout",
+      "selector": "#top",
+      "relativeTo": ".dashboard",
+      "relation": "equal-width"
+    },
+    "viewport": 820
+  },
+  {
+    "label": "宽屏卡片并排",
+    "expect": {
+      "type": "layout",
+      "selector": "#model",
+      "relativeTo": "#wood",
+      "relation": "right-of"
+    },
+    "viewport": 820
+  },
+  {
+    "label": "宽屏卡片等宽",
+    "expect": {
+      "type": "layout",
+      "selector": "#model",
+      "relativeTo": "#wood",
+      "relation": "equal-width"
+    },
+    "viewport": 820
+  }
+]

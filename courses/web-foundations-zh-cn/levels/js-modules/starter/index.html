@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>在页面入口导入回执格式化函数</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="./script.js"></script>
+</head>
+<body>
+  <main class="sheet">
+    <h1>在页面入口导入回执格式化函数</h1>
+    <label for="ticket">回执序号</label> <input id="ticket" type="number" min="0" value="3">
+    <button type="button" id="format">格式化</button>
+    <p id="receipt" role="status">等待格式化</p>
+    <script type="module">
+      // 在这里导入 formatReceipt，并绑定按钮的点击事件。
+    </script>
+  </main>
+</body>
+</html>

@@ -1,0 +1,47 @@
+[
+  {
+    "label": "入口标签使用 inline-block",
+    "expect": {
+      "type": "style",
+      "selector": "#entry-ready",
+      "property": "display",
+      "value": "inline-block"
+    }
+  },
+  {
+    "label": "保持已有的 108px 标签宽度",
+    "expect": {
+      "type": "style",
+      "selector": "#entry-check",
+      "property": "width",
+      "value": "108px"
+    }
+  },
+  {
+    "label": "保持已有的 34px 标签高度",
+    "expect": {
+      "type": "style",
+      "selector": "#entry-check",
+      "property": "height",
+      "value": "34px"
+    }
+  },
+  {
+    "label": "第二个标签在同一行的右侧",
+    "expect": {
+      "type": "layout",
+      "selector": "#entry-check",
+      "relativeTo": "#entry-ready",
+      "relation": "right-of"
+    }
+  },
+  {
+    "label": "两块标签的外框等宽",
+    "expect": {
+      "type": "layout",
+      "selector": "#entry-check",
+      "relativeTo": "#entry-ready",
+      "relation": "equal-width"
+    }
+  }
+]

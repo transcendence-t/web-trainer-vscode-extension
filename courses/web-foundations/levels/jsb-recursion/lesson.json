@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "递归清点套在一起的小盒",
-  "goal": "定义递归的结束条件，并用更小的输入继续计算。",
-  "summary": "活动物料保存在一组套盒里。最外层是 n 号盒，里面依序还有 n-1 号直到 1 号，每盒装了与编号相等的材料。",
+  "title": "Recursive counting of small boxes nested together",
+  "goal": "defines the end condition of the recursion and continues the calculation with smaller inputs.",
+  "summary": "activity materials are stored in a set of boxes. The outermost layer is box No. n, and inside are boxes No. n-1 to No. 1. Each box contains materials equal to the number.",
   "tasks": [
-    "完成 countBoxes(n)，以递归方式计算从 n 到 1 的材料总数。",
-    "n 为 0 至 40 的整数。没有盒子时总数为 0。"
+    "Completes countBoxes(n), recursively counting the total number of materials from n to 1.",
+    "n is an integer from 0 to 40. The total is 0 when there are no boxes."
   ],
   "example": {
     "language": "javascript",
-    "code": "function countdown(n) {\n  if (n === 0) return '结束';\n  return countdown(n - 1);\n}",
-    "note": "递归函数需要一个能直接返回的情况，其他分支把问题缩小后再次调用自身。"
+    "code": "function countdown(n) {\n  if (n === 0) return 'End';\n  return countdown(n - 1);\n}",
+    "note": "The recursive function needs a situation that can return directly, and other branches call themselves again after narrowing the problem."
   },
-  "hint": "n 为 0 时结束。其他情况将 n 与 countBoxes(n - 1) 的返回值相加。"
+  "hint": "ends when n is 0. Otherwise add n to the return value of countBoxes(n - 1)."
 }

@@ -1,6 +1,6 @@
 [
   {
-    "label": "扫描头的变换仅向右偏移 80px",
+    "label": "The transformation of the scan head is only shifted to the right by 80px",
     "expect": {
       "type": "style",
       "selector": ".scanner-head",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "扫描头的实际外框落进虚线位置",
+    "label": "The actual frame of the scan head falls into the dotted line position",
     "expect": {
       "type": "layout",
       "selector": ".scanner-head",

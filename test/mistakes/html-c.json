@@ -1,44 +1,44 @@
 {
   "html-article": {
-    "name": "把说明小节放在文章外",
+    "name": "Place the explanatory section outside the article",
     "files": {
-      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>邻里简报</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>邻里简报</h1>\n  <article id=\"seed-swap\">\n    <h2>种子交换会</h2>\n    <p>周六上午，我们会在社区花园交换当季种子。</p>\n  </article>\n  <section id=\"bring\">\n      <h3>请带上什么</h3>\n      <p>带一袋种子，在袋上写明品种。</p>\n  </section>\n</main>\n</body>\n</html>\n"
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Neighborhood Briefing</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>Neighborhood Briefing</h1>\n  <article id=\"seed-swap\">\n    <h2>Seed Exchange Meeting</h2>\n    <p>On Saturday mornings we exchange seasonal seeds at the community garden.</p>\n  </article>\n  <section id=\"bring\">\n      <h3>What should you bring?</h3>\n      <p>Bring a bag of seeds and write the variety on the bag.</p>\n  </section>\n</main>\n</body>\n</html>\n"
     }
   },
   "html-code": {
-    "name": "只用行内 code 导致缩进折叠",
+    "name": "Only using inline code causes indentation and folding",
     "files": {
-      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>展示代码示例</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>展示代码示例</h1>\n  <div id=\"sample\">\n    <code>if (count &lt; 3) {\n  console.log(count);\n}</code>\n  </div>\n</main>\n</body>\n</html>\n"
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>display code example</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>display code example</h1>\n  <div id=\"sample\">\n    <code>if (count &lt; 3) {\n  console.log(count);\n}</code>\n  </div>\n</main>\n</body>\n</html>\n"
     }
   },
   "html-form": {
-    "name": "用字段名连接标签，标签点不到文本框",
+    "name": "Use field names to connect labels, but the label cannot reach the text box.",
     "files": {
-      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>报名表单</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>实训报名</h1>\n    <form>\n      <label for=\"student\">姓名</label>\n      <input type=\"text\" id=\"student-name\" name=\"student\" required>\n      <button type=\"submit\">提交报名</button>\n    </form>\n  </main>\n</body>\n</html>\n"
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>registration form</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"sheet\">\n    <h1>practical training registration</h1>\n    <form>\n      <label for=\"student\">Name</label>\n      <input type=\"text\" id=\"student-name\" name=\"student\" required>\n      <button type=\"submit\">Submit registration</button>\n    </form>\n  </main>\n</body>\n</html>\n"
     }
   },
   "html-form-choice": {
-    "name": "给下午场使用了不同的 name",
+    "name": "used a different name for the afternoon session",
     "files": {
-      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>木工工作坊签到</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>木工工作坊签到</h1>\n  <form>\n    <fieldset>\n      <legend>到场时段</legend>\n      <label><input type=\"radio\" name=\"slot\" value=\"morning\">上午（09:00）</label>\n      <label><input type=\"radio\" name=\"afternoon\" value=\"afternoon\">下午（14:00）</label>\n    </fieldset>\n  </form>\n</main>\n</body>\n</html>\n"
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Woodworking workshop sign-in</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>Woodworking workshop sign-in</h1>\n  <form>\n    <fieldset>\n      <legend>arrival time</legend>\n      <label><input type=\"radio\" name=\"slot\" value=\"morning\">Morning (09:00)</label>\n      <label><input type=\"radio\" name=\"afternoon\" value=\"afternoon\">Afternoon (14:00)</label>\n    </fieldset>\n  </form>\n</main>\n</body>\n</html>\n"
     }
   },
   "html-form-select": {
-    "name": "漏写 selected 导致默认显示木工台",
+    "name": "omission of writing selected causes the carpentry bench to be displayed by default",
     "files": {
-      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>维修角预约</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>维修角预约</h1>\n  <form>\n    <label for=\"bench\">维修工位</label>\n    <select id=\"bench\" name=\"bench\">\n      <option value=\"wood\">木工台</option>\n      <option value=\"electronics\">电子台</option>\n      <option value=\"bike\">自行车台</option>\n    </select>\n  </form>\n</main>\n</body>\n</html>\n"
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Maintenance Corner Appointment</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>Maintenance Corner Appointment</h1>\n  <form>\n    <label for=\"bench\">maintenance station</label>\n    <select id=\"bench\" name=\"bench\">\n      <option value=\"wood\">woodworking bench</option>\n      <option value=\"electronics\">electronic station</option>\n      <option value=\"bike\">bicycle platform</option>\n    </select>\n  </form>\n</main>\n</body>\n</html>\n"
     }
   },
   "html-form-validation": {
-    "name": "把四位数字写成可接受三至四位数字",
+    "name": "Write a four-digit number that accepts three to four digits",
     "files": {
-      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>自助取件</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>自助取件</h1>\n  <form>\n    <label for=\"pickup-code\">取件码</label>\n    <input type=\"text\" id=\"pickup-code\" name=\"pickup\" required pattern=\"[A-Z]{2}[0-9]{3,4}\">\n    <p>取件码由两位大写英文字母和四位数字组成，如 AB0427。</p>\n    <button type=\"submit\">核对</button>\n  </form>\n</main>\n</body>\n</html>\n"
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Self-service pickup</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>Self-service pickup</h1>\n  <form>\n    <label for=\"pickup-code\">pickup code</label>\n    <input type=\"text\" id=\"pickup-code\" name=\"pickup\" required pattern=\"[A-Z]{2}[0-9]{3,4}\">\n    <p>pickup code consists of two uppercase English letters and four digits, such as AB0427.</p>\n    <button type=\"submit\">Check</button>\n  </form>\n</main>\n</body>\n</html>\n"
     }
   },
   "html-details": {
-    "name": "用 open=\"false\" 导致折叠项初始展开",
+    "name": "Using open=\"false\" causes the collapsed item to be initially expanded",
     "files": {
-      "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>阅览室问答</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>阅览室问答</h1>\n  <details id=\"renew\" open=\"false\">\n    <summary>如何延长借阅？</summary>\n    <p>在到期前到服务台续借一次。</p>\n  </details>\n</main>\n</body>\n</html>\n"
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Reading Room Q&A</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>Reading Room Q&A</h1>\n  <details id=\"renew\" open=\"false\">\n    <summary>How to extend the loan?</summary>\n    <p>Go to the service desk to renew once before expiration.</p>\n  </details>\n</main>\n</body>\n</html>\n"
     }
   }
 }

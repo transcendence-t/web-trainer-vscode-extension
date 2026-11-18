@@ -1,6 +1,6 @@
 [
   {
-    "label": "可连续两次累加",
+    "label": "can accumulate twice continuously",
     "expect": {
       "type": "text",
       "selector": "#served",
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "label": "结束后保持原计数",
+    "label": "ends",
     "expect": {
       "type": "text",
       "selector": "#served",
@@ -40,7 +40,7 @@
     ]
   },
   {
-    "label": "可在未取阅时结束",
+    "label": "can end without picking up the book",
     "expect": {
       "type": "text",
       "selector": "#served",

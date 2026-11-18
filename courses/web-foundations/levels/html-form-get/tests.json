@@ -1,6 +1,6 @@
 [
   {
-    "label": "查询发往规定路径",
+    "label": "Inquiry is sent to the specified path",
     "expect": {
       "type": "attribute",
       "selector": "form#catalog-search",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "明确使用 GET",
+    "label": "explicitly uses GET",
     "expect": {
       "type": "attribute",
       "selector": "form#catalog-search",
@@ -18,14 +18,14 @@
     }
   },
   {
-    "label": "按 q 提交搜索关键字",
+    "label": "Press q to submit search keywords",
     "expect": {
       "type": "exists",
       "selector": "#catalog-search input#query[type=\"search\"][name=\"q\"]"
     }
   },
   {
-    "label": "仍可提交查询",
+    "label": "can still submit inquiries",
     "expect": {
       "type": "exists",
       "selector": "#catalog-search button[type=\"submit\"]"

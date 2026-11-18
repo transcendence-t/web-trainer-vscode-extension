@@ -1,7 +1,7 @@
 **
 !package.json
 !README.md
-!README.en.md
+!README.zh-CN.md
 !LICENSE.txt
 !THIRD_PARTY_NOTICES.txt
 !out/extension.js
@@ -9,3 +9,4 @@
 !out/runner.js
 !media/**
 !courses/**
+courses/web-foundations-zh-cn/**

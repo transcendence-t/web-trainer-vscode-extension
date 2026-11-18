@@ -1,0 +1,117 @@
+[
+  {
+    "label": "输入文字时暂不更新桌牌",
+    "expect": {
+      "type": "text",
+      "selector": "#table-card",
+      "value": "尚未设置"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#table-name",
+        "value": "陶艺桌"
+      }
+    ]
+  },
+  {
+    "label": "按 Enter 后显示新桌牌",
+    "expect": {
+      "type": "text",
+      "selector": "#table-card",
+      "value": "陶艺桌"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#table-name",
+        "value": "陶艺桌"
+      },
+      {
+        "type": "key",
+        "selector": "#table-name",
+        "key": "Enter"
+      }
+    ]
+  },
+  {
+    "label": "按 Escape 时不确认桌牌",
+    "expect": {
+      "type": "text",
+      "selector": "#table-card",
+      "value": "尚未设置"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#table-name",
+        "value": "版画桌"
+      },
+      {
+        "type": "key",
+        "selector": "#table-name",
+        "key": "Escape"
+      }
+    ]
+  },
+  {
+    "label": "下一次按字母键时保留上次确认的名字",
+    "expect": {
+      "type": "text",
+      "selector": "#table-card",
+      "value": "木工桌"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#table-name",
+        "value": "木工桌"
+      },
+      {
+        "type": "key",
+        "selector": "#table-name",
+        "key": "Enter"
+      },
+      {
+        "type": "input",
+        "selector": "#table-name",
+        "value": "版画桌"
+      },
+      {
+        "type": "key",
+        "selector": "#table-name",
+        "key": "a"
+      }
+    ]
+  },
+  {
+    "label": "再次按 Enter 后可以更新桌牌",
+    "expect": {
+      "type": "text",
+      "selector": "#table-card",
+      "value": "版画桌"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#table-name",
+        "value": "木工桌"
+      },
+      {
+        "type": "key",
+        "selector": "#table-name",
+        "key": "Enter"
+      },
+      {
+        "type": "input",
+        "selector": "#table-name",
+        "value": "版画桌"
+      },
+      {
+        "type": "key",
+        "selector": "#table-name",
+        "key": "Enter"
+      }
+    ]
+  }
+]

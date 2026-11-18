@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "用伪元素画出装饰短条",
-  "goal": "用 ::before 和 content 为标题生成装饰盒。",
-  "summary": "标题已用文字说明状态。旁边加一枚纯装饰的色标即可，不需要增加 HTML 内容。",
+  "title": "Use pseudo elements to draw short decorative strips",
+  "goal": "Use ::before and content to generate decorative boxes for titles.",
+  "summary": "The title has text describing the status. Just add a purely decorative color mark next to it, without adding HTML content.",
   "tasks": [
-    "为 .notice-title 的 ::before 生成空内容，使用 inline-block 做成 6×16px 的矩形。",
-    "短条背景 #125a46，右外边距 8px，标题文字原样保留。"
+    "generates empty content for ::before of .notice-title, and uses inline-block to make a 6×16px rectangle.",
+    "short strip background #125a46, right margin 8px, keep the title text as it is."
   ],
   "example": {
     "language": "css",
     "code": ".caption::before {\n  content: \"\";\n  display: inline-block;\n  width: 10px;\n  height: 10px;\n  background: #7c460e;\n}",
-    "note": "content 为空字符串也会生成伪元素。inline-block 允许在同一行指定尺寸。"
+    "note": "content will also generate pseudo elements if it is an empty string. inline-block allows specifying dimensions on the same line."
   },
-  "hint": "content: \"\" 生成可被赋予尺寸和背景色的盒子。"
+  "hint": "content: \"\" Generates a box that can be assigned a size and background color."
 }

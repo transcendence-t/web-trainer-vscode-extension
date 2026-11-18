@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "等输入暂停再执行本地搜索",
-  "goal": "用 clearTimeout 与 setTimeout 把高频输入合并成一次操作。",
-  "summary": "搜索框每输入一个字符就会触发事件。用户暂停 220 毫秒后再用最后一次输入执行查询。",
+  "title": "Debounce a local search until typing pauses",
+  "goal": "uses clearTimeout and setTimeout to combine high-frequency inputs into one operation.",
+  "summary": "The event will be triggered every time a character is entered in the search box. The user pauses for 220 milliseconds before executing the query with the last input.",
   "tasks": [
-    "监听 #filter 的 input。每次输入先取消上一个计时器，再安排 220 毫秒后运行现有的 runSearch。",
-    "查询文字采用最新输入。连续输入只查询一次，停顿后再输入可以发起新查询。"
+    "Listen for input on #filter. On each change, cancel the previous timer and schedule the existing runSearch function for 220 milliseconds later.",
+    "Use the latest input as the query. Continuous typing triggers one search. Typing again after a pause can trigger another one."
   ],
   "example": {
     "language": "javascript",
     "code": "let timeoutId;\ninput.addEventListener('input', () => {\n  clearTimeout(timeoutId);\n  timeoutId = setTimeout(update, 200);\n});",
-    "note": "计时器编号需要保存在回调外，这样下一次事件才能取消上一次安排。"
+    "note": "The timer number needs to be saved outside the callback so that the next event can cancel the previous schedule."
   },
-  "hint": "把数组筛选或结果更新放在延时回调内。每次输入都更新保存的计时器编号。"
+  "hint": "Put array filtering or result update in delayed callback. Each input updates the saved timer number."
 }

@@ -1,0 +1,46 @@
+[
+  {
+    "label": "22 分钟更近于 20",
+    "expect": {
+      "type": "function",
+      "name": "roundPickup",
+      "args": [
+        22
+      ],
+      "value": 20
+    }
+  },
+  {
+    "label": "23 分钟更近于 25",
+    "expect": {
+      "type": "function",
+      "name": "roundPickup",
+      "args": [
+        23
+      ],
+      "value": 25
+    }
+  },
+  {
+    "label": "中点按较大的五分钟档",
+    "expect": {
+      "type": "function",
+      "name": "roundPickup",
+      "args": [
+        2.5
+      ],
+      "value": 5
+    }
+  },
+  {
+    "label": "零保持为零",
+    "expect": {
+      "type": "function",
+      "name": "roundPickup",
+      "args": [
+        0
+      ],
+      "value": 0
+    }
+  }
+]

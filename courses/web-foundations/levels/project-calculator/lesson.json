@@ -1,17 +1,17 @@
 {
   "focus": "style.css",
-  "title": "制作双数计算器",
-  "goal": "做出有两列操作区的计算器，支持加减法并在输入无效时给出提示。",
-  "summary": "用 CSS 把两个数字输入框和运算按钮分别排成一行。在 JavaScript 中读取当前输入、检查数值，再按按钮选择的方式计算并显示结果。",
+  "title": "Make even number calculator",
+  "goal": "makes a calculator with two columns of operating areas, supports addition and subtraction and gives prompts when the input is invalid.",
+  "summary": "Use CSS to arrange two number input boxes and operation buttons in a row. Read the current input in JavaScript, check the value, calculate and display the result via button selection.",
   "tasks": [
-    "在 style.css 将 .number-fields 和 .operations 分别排成两列，每列等宽，左右相隔 12px。结果区域放在两组控件下方。",
-    "在 script.js 补全 calculate。读取两个输入并去掉首尾空格，用 Number 转成数字。任何一项为空或无法转为有限数值时，显示「请输入两个有效数字。」。",
-    "点击加法按钮时显示两个数相加的结果。点击减法按钮时显示第一个数减第二个数。结果输出在 #calc-result。"
+    "Arrange .number-fields and .operations into two columns in style.css, each column has the same width and is 12px apart from the left and right. The results area is placed below the two sets of controls.",
+    "completes calculate in script.js. Read two inputs, remove leading and trailing spaces, and use Number to convert them into numbers. When any item is empty or cannot be converted to a finite value, \"Please enter two valid digits.\" is displayed.",
+    "When the Add button is clicked, the result of adding two numbers is displayed. When the subtraction button is clicked, the first number minus the second number is displayed. The results are output in #calc-result."
   ],
-  "hint": "Number 会把空字符串转为数值 0。先识别空输入，再用 Number.isFinite 验证数值。用 3 减 8 可以核对减法操作数的顺序。",
+  "hint": "Number will convert the empty string to the value 0. First identify empty input, then use Number.isFinite to validate the value. Subtract 3 from 8 to check the order of the subtraction operands.",
   "example": {
     "language": "css",
     "code": ".ticket-options {\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  gap: 12px;\n}",
-    "note": "订票页把两种票的选项排成等宽两列。minmax(0, 1fr) 让两列在窄窗口里也能一起缩小。"
+    "note": "The ticket booking page arranges the two ticket options into two columns of equal width. minmax(0, 1fr) allows two columns to be reduced together in a narrow window."
   }
 }

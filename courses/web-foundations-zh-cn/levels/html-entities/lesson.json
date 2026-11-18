@@ -1,0 +1,16 @@
+{
+  "focus": "index.html",
+  "title": "在页面上显示标签字符",
+  "goal": "用 HTML 字符引用展示一行可供读者抄写的源码。",
+  "summary": "浏览器会解析标签和形如 &amp; 的字符引用。用 &lt;、&gt;、&amp; 可以在页面上显示 <、>、&。",
+  "tasks": [
+    "在已有的 code 中显示这段源码「<p>&copy;</p>」。",
+    "用字符引用保留标签尖括号和 &，让 code 内只有这段文字。"
+  ],
+  "hint": "要让读者看到 &copy; 这六个字符，用 &amp; 写其中的 &，再接上 copy;。",
+  "example": {
+    "language": "html",
+    "code": "<p>操作对象 <code>&lt;file&gt; &amp; &lt;folder&gt;</code></p>",
+    "note": "软件说明中的占位符会显示为 <file> & <folder>。读者可以看到它们的尖括号和连接符号。"
+  }
+}

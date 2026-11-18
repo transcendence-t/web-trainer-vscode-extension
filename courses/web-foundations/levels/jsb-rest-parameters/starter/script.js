@@ -1,3 +1,3 @@
 function shippedCount(prior, ...batches) {
-  // 完成本关函数。
+  // completes this level function.
 }

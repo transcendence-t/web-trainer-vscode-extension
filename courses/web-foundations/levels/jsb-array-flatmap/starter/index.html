@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>合并教室分组的参会名单</title>
+  <title>Merged classroom group participant list</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <main class="sheet">
-    <h1>合并教室分组的参会名单</h1>
-    <p>试一试 <code>participantNames([{"names":["小方","小陈"]},{"names":["小周"]}])</code></p>
-    <p>运行结果 <output id="example-result" aria-live="polite">待填写函数</output></p>
+    <h1>Merged classroom group participant list</h1>
+    <p>give it a try <code>participantNames([{"names":["Xiao Fang","Xiao Chen"]},{"names":["Xiao Zhou"]}])</code></p>
+    <p>running results <output id="example-result" aria-live="polite">Function to be filled in</output></p>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const result = participantNames([{"names":["小方","小陈"]},{"names":["小周"]}]);
+        const result = participantNames([{"names":["Xiaofang","Xiao Chen"]},{"names":["Xiao Zhou"]}]);
         if (result !== undefined) {
           document.querySelector("#example-result").textContent = JSON.stringify(result);
         }

@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "结束统计后移除点击监听",
-  "goal": "对同一个事件和同一个函数引用调用 removeEventListener。",
-  "summary": "取阅桌按点击累计发出的表单数。结束本轮后，取阅按钮仍显示但点击不再修改计数。",
+  "title": "Remove click monitoring after ending statistics",
+  "goal": "calls removeEventListener on the same event and the same function reference.",
+  "summary": "Get the cumulative number of forms issued by clicks on the reading table. After this round ends, the access button will still be displayed but clicking will no longer modify the count.",
   "tasks": [
-    "点击 #serve 时将 #served 显示的数字加一。",
-    "点击 #stop 移除已注册的取阅监听，此后任何点击都不再增记。"
+    "Increase the number displayed by #served by one when #serve is clicked.",
+    "Click #stop to remove the registered reading monitoring. Any clicks thereafter will not be added to the record."
   ],
   "example": {
     "language": "javascript",
     "code": "start.addEventListener('click', record);\nstart.removeEventListener('click', record);",
-    "note": "添加与移除要引用同一个函数，即使两个不同函数的代码完全相同也不能互换。"
+    "note": "Adding and removing refer to the same function. Even if the codes of two different functions are exactly the same, they cannot be interchanged."
   },
-  "hint": "声明一个具名函数，再把同一个函数分别交给 addEventListener 和 removeEventListener。"
+  "hint": "Declare a named function, and then give the same function to addEventListener and removeEventListener respectively."
 }

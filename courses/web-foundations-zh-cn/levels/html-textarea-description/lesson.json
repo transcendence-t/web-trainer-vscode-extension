@@ -1,0 +1,16 @@
+{
+  "focus": "index.html",
+  "title": "给多行说明添加长度限制和填写提示",
+  "goal": "使用 textarea 接收多行文本，并关联可访问的辅助说明。",
+  "summary": "借用目的可能分为几行。标签负责命名，说明段落负责提示长度要求。",
+  "tasks": [
+    "把 #reason 改为 textarea，保留 label 和 name，设置 4 行、最多 120 个字符、必填。",
+    "用 aria-describedby 关联已有的 #reason-guide。"
+  ],
+  "example": {
+    "language": "html",
+    "code": "<label for=\"note\">备注</label>\n<textarea id=\"note\" rows=\"3\" aria-describedby=\"guide\"></textarea>\n<p id=\"guide\">可以补充领取时间。</p>",
+    "note": "textarea 需要结束标签。aria-describedby 的值是说明元素的 ID，不写 #。"
+  },
+  "hint": "length 限制对应 maxlength，行数写入 rows。"
+}

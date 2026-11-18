@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "限定打印份数的范围和步长",
-  "goal": "用 min、max 和 step 定义数字控件的有效值。",
-  "summary": "双页资料按成对份数分发。每次至少两份，至多二十份，只能选偶数。",
+  "title": "Limit the range and step size of the number of print copies",
+  "goal": "uses min, max and step to define the valid values ​​of numeric controls.",
+  "summary": "Double page information is distributed in paired copies. At least two servings at a time, and at most twenty servings, and you can only choose an even number.",
   "tasks": [
-    "为数字输入框 #copies 设置最小值 2、最大值 20、步长 2。",
-    "保留 required，验证 2、20 可以通过，1、9、22 会被拒绝。"
+    "Set the minimum value 2, the maximum value 20, and the step size 2 for the number input box #copies.",
+    "is reserved as required. Verifications 2 and 20 can pass, but verifications 1, 9, and 22 will be rejected."
   ],
   "example": {
     "language": "html",
     "code": "<input type=\"number\" min=\"5\" max=\"20\" step=\"5\">",
-    "note": "浏览器从 min 作为步长基准。这个控件接收 5、10、15 和 20。"
+    "note": "browser starts from min as the step base. This control accepts 5, 10, 15, and 20."
   },
-  "hint": "最小值和最大值都包含在允许范围内，step 表示两个相邻有效值之间的差。"
+  "hint": "The minimum value and maximum value are both included in the allowable range, and step represents the difference between two adjacent valid values."
 }

@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "使用两层 Flexbox 排列导航栏",
-  "goal": "让站名和链接组各占导航栏一端，链接组内部保持横排。",
-  "summary": "Flexbox 只参与排列容器的直接子元素。要单独控制链接组内部的排列，可以让它也成为 Flexbox 容器。",
+  "title": "Use two layers of Flexbox to arrange the navigation bar",
+  "goal": "Let the station name and link group occupy one end of the navigation bar, and keep the link group horizontally.",
+  "summary": "Flexbox only participates in arranging the direct child elements of the container. To individually control the arrangement within a link group, make it a Flexbox container as well.",
   "tasks": [
-    "让 .site-nav 使用 Flexbox，使站名与链接组横排、分别靠两端，并垂直居中。",
-    "再用 Flexbox 横排 .nav-links 内的链接，让两项之间留出 16px。"
+    "Let .site-nav use Flexbox so that the site name and link group are arranged horizontally, on both ends, and vertically centered.",
+    "Use Flexbox to arrange the links in .nav-links horizontally, leaving 16px between the two items."
   ],
-  "hint": "先处理导航栏的两个直接子元素，再把排列链接的规则写到 .nav-links 上。",
+  "hint": "first processes the two direct sub-elements of the navigation bar, and then writes the rules for arranging links to .nav-links.",
   "example": {
     "language": "css",
     "code": ".checkout {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.payment-buttons {\n  display: flex;\n  gap: 8px;\n}",
-    "note": "结算条左端显示总价，右端放支付按钮组。按钮组使用自己的 Flexbox 来控制每个按钮之间的空隙。"
+    "note": "The total price is displayed on the left end of the settlement bar, and the payment button group is placed on the right end. Button groups use their own Flexbox to control the spacing between each button."
   }
 }

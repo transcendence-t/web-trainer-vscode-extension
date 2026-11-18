@@ -1,0 +1,17 @@
+{
+  "focus": "index.html",
+  "title": "制作个人主页",
+  "goal": "把个人介绍和作品清单做成一张有清晰结构、可跳转的主页。",
+  "summary": "用 header 收纳姓名和开场介绍，用 main 标记主体，再用 section 区分不同主题。页内链接通过片段标识定位到作品区，CSS 让介绍区域更易辨认。",
+  "tasks": [
+    "在 index.html 把 .profile-intro 改成 header，把 .profile-content 改成 main。保留页首姓名「林溪」。",
+    "将「关于我」和「作品」分别放入 main 下的 section，沿用 about 和 work 两个 ID。保留两条作品名组成的列表。",
+    "让「查看作品」跳转到作品区。在 style.css 给 .profile-intro 加 #e2f1eb 背景和四周 20px 内边距。"
+  ],
+  "hint": "开始标签和结束标签需要一起替换。链接的 href 用 # 加目标 id，点击之后看地址片段是否指向作品区。",
+  "example": {
+    "language": "html",
+    "code": "<header>\n  <h1>摄影社招新</h1>\n  <a href=\"#schedule\">查看活动时间</a>\n</header>\n<main>\n  <section id=\"schedule\">\n    <h2>活动时间</h2>\n    <p>周六上午十点在活动中心集合。</p>\n  </section>\n</main>",
+    "note": "招新页把介绍和内容分成两个区域。点击链接会定位到 ID 为 schedule 的活动区。"
+  }
+}

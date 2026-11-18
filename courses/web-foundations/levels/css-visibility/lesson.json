@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "隐藏临时停用的接驳站",
-  "goal": "用 visibility: hidden 隐藏元素并保留它在排版中的位置。",
-  "summary": "接驳线路中间一站检修，暂停显示站名。终点仍要留在第三个位置。",
+  "title": "Hide temporarily disabled terminals",
+  "goal": "Use visibility: hidden to hide an element and preserve its position in the typography.",
+  "summary": "The middle station of the connecting line is under maintenance, and the station name is temporarily displayed. The finish line remains in third position.",
   "tasks": [
-    "用 visibility 隐藏 #middle-stop 的文字和背景，保留中间一站原本占据的空间。",
-    "确认起点、终点仍在同一行，中间保留一个站点的空位。"
+    "Use visibility to hide the text and background of #middle-stop, retaining the space originally occupied by the middle stop.",
+    "Confirm that the starting point and end point are still on the same line, leaving a blank space in the middle."
   ],
   "example": {
     "language": "css",
     "code": ".schedule-pending {\n  visibility: hidden;\n}",
-    "note": "日历上的待发布时间可以先隐藏。页面仍会给它留出原有的格子，后面时段继续对齐。"
+    "note": "The time to be released on the calendar can be hidden first. The page will still leave the original grid for it, and subsequent periods will continue to be aligned."
   },
-  "hint": "display: none 会把元素的盒子从布局中移除。使用 visibility: hidden 可以留住站点的空位。"
+  "hint": "display: none will remove the element's box from the layout. Use visibility: hidden to leave the site empty."
 }

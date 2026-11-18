@@ -1,13 +1,13 @@
 [
   {
-    "label": "存在语义页眉与目录",
+    "label": "has semantic header and table of contents",
     "expect": {
       "type": "exists",
       "selector": "main > header#top + nav#links"
     }
   },
   {
-    "label": "窄屏内容在目录下方",
+    "label": "narrow screen content is at the bottom of the directory",
     "expect": {
       "type": "layout",
       "selector": "#status",
@@ -17,7 +17,7 @@
     "viewport": 380
   },
   {
-    "label": "窄屏两张卡片上下排",
+    "label": "narrow screen two cards arranged on top and bottom",
     "expect": {
       "type": "layout",
       "selector": "#model",
@@ -27,7 +27,7 @@
     "viewport": 380
   },
   {
-    "label": "宽屏目录宽 160px",
+    "label": "widescreen catalog width 160px",
     "expect": {
       "type": "style",
       "selector": "#links",
@@ -37,7 +37,7 @@
     "viewport": 820
   },
   {
-    "label": "宽屏状态区在目录右侧",
+    "label": "widescreen status area is on the right side of the directory",
     "expect": {
       "type": "layout",
       "selector": "#status",
@@ -47,7 +47,7 @@
     "viewport": 820
   },
   {
-    "label": "宽屏页眉覆盖整个看板宽度",
+    "label": "widescreen header covers the entire board width",
     "expect": {
       "type": "layout",
       "selector": "#top",
@@ -57,7 +57,7 @@
     "viewport": 820
   },
   {
-    "label": "宽屏卡片并排",
+    "label": "widescreen cards side by side",
     "expect": {
       "type": "layout",
       "selector": "#model",
@@ -67,7 +67,7 @@
     "viewport": 820
   },
   {
-    "label": "宽屏卡片等宽",
+    "label": "widescreen card equal width",
     "expect": {
       "type": "layout",
       "selector": "#model",

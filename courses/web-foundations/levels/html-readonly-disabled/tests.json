@@ -1,6 +1,6 @@
 [
   {
-    "label": "编号只读",
+    "label": "number read only",
     "expect": {
       "type": "property",
       "selector": "#record-id",
@@ -9,14 +9,14 @@
     }
   },
   {
-    "label": "编号仍为启用的提交字段",
+    "label": "number is still an enabled submission field",
     "expect": {
       "type": "exists",
       "selector": "input#record-id:enabled[name=\"recordId\"]"
     }
   },
   {
-    "label": "编号值保留",
+    "label": "number value reserved",
     "expect": {
       "type": "property",
       "selector": "#record-id",
@@ -25,7 +25,7 @@
     }
   },
   {
-    "label": "临时备注已禁用",
+    "label": "Temporary remarks are disabled",
     "expect": {
       "type": "property",
       "selector": "#future",

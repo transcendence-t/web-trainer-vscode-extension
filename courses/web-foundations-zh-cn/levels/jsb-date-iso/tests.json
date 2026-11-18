@@ -1,0 +1,35 @@
+[
+  {
+    "label": "正时区可能归入前一天",
+    "expect": {
+      "type": "function",
+      "name": "archiveDay",
+      "args": [
+        "2027-03-10T01:00:00+08:00"
+      ],
+      "value": "2027-03-09"
+    }
+  },
+  {
+    "label": "负时区可能归入后一天",
+    "expect": {
+      "type": "function",
+      "name": "archiveDay",
+      "args": [
+        "2027-03-10T23:20:00-05:00"
+      ],
+      "value": "2027-03-11"
+    }
+  },
+  {
+    "label": "已经是 UTC 时保留日期",
+    "expect": {
+      "type": "function",
+      "name": "archiveDay",
+      "args": [
+        "2028-02-29T04:00:00Z"
+      ],
+      "value": "2028-02-29"
+    }
+  }
+]

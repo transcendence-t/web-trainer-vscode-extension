@@ -1,6 +1,6 @@
 [
   {
-    "label": "符合两个类时使用警示色",
+    "label": "uses warning colors when it meets two categories",
     "expect": {
       "type": "style",
       "selector": "#urgent-notice",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "普通公告仍用默认色",
+    "label": "Ordinary announcements still use the default color",
     "expect": {
       "type": "style",
       "selector": "#plain-notice",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "单独的 urgent 不受影响",
+    "label": "single urgent is not affected",
     "expect": {
       "type": "style",
       "selector": "#plain-urgent",

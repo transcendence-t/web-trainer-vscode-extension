@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "用 calc 为图卡扣除两侧留白",
-  "goal": "在 CSS 计算中组合百分比与固定长度。",
-  "summary": "导览图卡在小屏需要两侧各留 12px，屏幕较宽时宽度最大 360px。",
+  "title": "Use calc to deduct the white space on both sides of the picture card",
+  "goal": "Combine percentages with fixed lengths in CSS calculations.",
+  "summary": "The navigation map needs to leave 12px on both sides when it is stuck on a small screen, and the maximum width is 360px when the screen is wide.",
   "tasks": [
-    "使用 calc 让 .route 的宽度为可用宽度减去 24px。",
-    "保持左右居中，最大宽度为 360px。"
+    "Use calc to make the width of .route the available width minus 24px.",
+    "remains centered left and right, with a maximum width of 360px."
   ],
   "example": {
     "language": "css",
     "code": ".card { width: calc(100% - 2rem); max-width: 32rem; margin-inline: auto; }",
-    "note": "calc 可以混合百分比和长度。加号、减号的两边需要空格。"
+    "note": "calc can mix percentages and lengths. Spaces are required on both sides of the plus and minus signs."
   },
-  "hint": "两侧留白合计 24px。用 max-width 设上限，用自动外边距居中。"
+  "hint": "The total white space on both sides is 24px. Use max-width to cap, and auto-margins to center."
 }

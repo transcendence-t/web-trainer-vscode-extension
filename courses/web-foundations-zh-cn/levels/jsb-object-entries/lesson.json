@@ -1,0 +1,16 @@
+{
+  "focus": "script.js",
+  "title": "把物料数字表转换为可渲染记录",
+  "goal": "通过 Object.entries 同时遍历对象自己的键和值。",
+  "summary": "汇总接口返回由材料名到现存数量的对应表，列表组件需要按给定顺序得到一组记录。",
+  "tasks": [
+    "完成 inventoryRows(inventory)，每个正数库存生成一个 { name, quantity } 对象。",
+    "保留 Object.entries 返回的顺序。数量为 0 的物料不加入结果。"
+  ],
+  "example": {
+    "language": "javascript",
+    "code": "const stock = { 画笔: 4, 颜料: 2 };\nObject.entries(stock); // [['画笔', 4], ['颜料', 2]]",
+    "note": "entries 把每个属性变成一对 [名称, 数量]，可以用数组解构来读取。"
+  },
+  "hint": "先过滤数量为零的键值对，再把剩下的 [name, quantity] 转为对象。"
+}

@@ -1,8 +1,8 @@
 {
   "html-document": {
-    "index.html": "<!doctype html>\n<html lang=\"zh-cn\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>社区图书角</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"sheet\">\n    <p>周六下午开放。</p>\n  </main>\n</body>\n</html>"
+    "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Community Book Corner</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"sheet\">\n    <p>Open Saturday afternoon.</p>\n  </main>\n</body>\n</html>"
   },
   "html-entities": {
-    "index.html": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>版权代码速查</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>版权代码速查</h1>\n  <p>页脚的版权代码 <code id=\"copyright-code\">&#60;p&#62;&#38;copy;&#60;/p&#62;</code></p>\n</main>\n</body>\n</html>\n"
+    "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Copyright code quick check</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n<main class=\"sheet\">\n  <h1>Copyright code quick check</h1>\n  <p>Copyright code for footer <code id=\"copyright-code\">&#60;p&#62;&#38;copy;&#60;/p&#62;</code></p>\n</main>\n</body>\n</html>\n"
   }
 }

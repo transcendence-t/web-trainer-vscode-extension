@@ -1,22 +1,22 @@
 [
   {
-    "label": "页眉保留页面标题",
+    "label": "Header retains page title",
     "expect": {
       "type": "text",
       "selector": ".sheet > header h1",
-      "value": "河畔夜跑"
+      "value": "Riverside night run"
     }
   },
   {
-    "label": "页眉内的导航链接指向集合点",
+    "label": "Navigation link within header points to rendezvous point",
     "expect": {
       "type": "text",
       "selector": ".sheet > header nav a[href=\"#meeting\"]",
-      "value": "查看集合点"
+      "value": "View meeting point"
     }
   },
   {
-    "label": "页面有一个 main",
+    "label": "page has a main",
     "expect": {
       "type": "count",
       "selector": "main",
@@ -24,19 +24,19 @@
     }
   },
   {
-    "label": "正文里的集合点保留锚点",
+    "label": "The assembly point in the text retains the anchor point",
     "expect": {
       "type": "text",
       "selector": ".sheet > header + main h2#meeting",
-      "value": "集合点"
+      "value": "meeting point"
     }
   },
   {
-    "label": "页脚紧随正文并保留维护者信息",
+    "label": "The footer follows the main text and retains the maintainer information.",
     "expect": {
       "type": "text",
       "selector": ".sheet > main + footer p",
-      "value": "河畔跑团维护"
+      "value": "Riverside Running Group Maintenance"
     }
   }
 ]

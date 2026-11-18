@@ -1,0 +1,62 @@
+[
+  {
+    "label": "以空内容生成伪元素",
+    "expect": {
+      "type": "style",
+      "selector": ".notice-title",
+      "property": "content",
+      "value": "\"\"",
+      "pseudo": "::before"
+    }
+  },
+  {
+    "label": "可指定行内盒尺寸",
+    "expect": {
+      "type": "style",
+      "selector": ".notice-title",
+      "property": "display",
+      "value": "inline-block",
+      "pseudo": "::before"
+    }
+  },
+  {
+    "label": "短条宽 6px",
+    "expect": {
+      "type": "style",
+      "selector": ".notice-title",
+      "property": "width",
+      "value": "6px",
+      "pseudo": "::before"
+    }
+  },
+  {
+    "label": "短条高 16px",
+    "expect": {
+      "type": "style",
+      "selector": ".notice-title",
+      "property": "height",
+      "value": "16px",
+      "pseudo": "::before"
+    }
+  },
+  {
+    "label": "短条拥有指定底色",
+    "expect": {
+      "type": "style",
+      "selector": ".notice-title",
+      "property": "background-color",
+      "value": "rgb(18, 90, 70)",
+      "pseudo": "::before"
+    }
+  },
+  {
+    "label": "与标题留 8px 间隙",
+    "expect": {
+      "type": "style",
+      "selector": ".notice-title",
+      "property": "margin-right",
+      "value": "8px",
+      "pseudo": "::before"
+    }
+  }
+]

@@ -1,19 +1,19 @@
 {
   "focus": "script.js",
-  "title": "制作小组展示待办清单",
-  "goal": "做一份能添加、切换完成状态和删除的待办清单。",
-  "summary": "表单负责读取新事项，行模板提供每项的文字和按钮。列表的点击监听通过离按钮最近的待办行来处理完成和删除，适用于已有行和新行。",
+  "title": "Production team shows to-do list",
+  "goal": "Make a to-do list that can be added, switched to completion status and deleted.",
+  "summary": "form is responsible for reading new items, and the row template provides the text and buttons for each item. The list's click listener handles completion and deletion through the to-do row closest to the button, and applies to existing rows and new rows.",
   "tasks": [
-    "在 script.js 中监听 #todo-form 的 submit，阻止默认提交并清理输入两端的空白。空白内容保持原来的清单。",
-    "从 #task-template 克隆一行，用 textContent 填入标题，追加到 #task-list。添加成功后清空输入框。",
-    "在 #task-list 上监听 click。通过按钮的 data-action 判断操作，再找到该按钮所在的 .task-row。点击删除只移除这一行。",
-    "点击完成时切换这一行的 is-done 类，并将按钮的 aria-pressed 更新为 true 或 false。完成按钮可以再次点击来恢复待办。",
-    "在 style.css 中为 .is-done 行的 .task-title 添加删除线，便于从清单中辨认可继续处理的事项。"
+    "listens to the submit of #todo-form in script.js, prevents default submission and cleans up the blanks at both ends of the input. Empty content retains the original list.",
+    "Clone a row from #task-template, fill in the title with textContent, and append to #task-list. Clear the input box after successful addition.",
+    "listens for clicks on #task-list. Determine the operation through the data-action of the button, and then find the .task-row where the button is located. Click Delete to remove only this row.",
+    "Toggles this row's is-done class when clicked and updates the button's aria-pressed to true or false. The Done button can be clicked again to resume the to-do.",
+    "Add a strikethrough to the .task-title of the .is-done line in style.css to make it easier to identify things that can be continued from the list."
   ],
   "example": {
     "language": "javascript",
     "code": "const queue = document.querySelector('#reading-queue');\n\nqueue.addEventListener('click', (event) => {\n  const button = event.target.closest('button[data-remove]');\n  if (button) {\n    button.closest('li').remove();\n  }\n});",
-    "note": "阅读清单用一个监听器处理移除按钮。按钮所在的 li 决定要移除哪一本书。"
+    "note": "The reading list uses a listener to handle the remove button. The li the button is in determines which book to remove."
   },
-  "hint": "如果操作总落在第一条上，检查是不是从整个列表查找 .task-row。应从刚点击的按钮向上找最近的行。完成状态也要写回该行的按钮。"
+  "hint": "If the operation always falls on the first row, check whether the .task-row is searched from the entire list. The closest row should be found starting from the button just clicked upwards. The completion status should also be written back to the row's button."
 }

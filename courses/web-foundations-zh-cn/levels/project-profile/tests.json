@@ -1,0 +1,92 @@
+[
+  {
+    "label": "介绍区域有姓名作为主标题",
+    "expect": {
+      "type": "text",
+      "selector": "header.profile-intro h1",
+      "value": "林溪"
+    }
+  },
+  {
+    "label": "主体里有关于我小节",
+    "expect": {
+      "type": "text",
+      "selector": "main.profile-content > section#about h2",
+      "value": "关于我"
+    }
+  },
+  {
+    "label": "主体里有作品小节",
+    "expect": {
+      "type": "text",
+      "selector": "main.profile-content > section#work h2",
+      "value": "作品"
+    }
+  },
+  {
+    "label": "作品清单有两个条目",
+    "expect": {
+      "type": "count",
+      "selector": "section#work ul > li",
+      "value": 2
+    }
+  },
+  {
+    "label": "点击查看作品定位到作品区",
+    "expect": {
+      "type": "exists",
+      "selector": "section#work:target"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "#work-link"
+      }
+    ]
+  },
+  {
+    "label": "页首区域采用浅绿背景",
+    "expect": {
+      "type": "style",
+      "selector": ".profile-intro",
+      "property": "background-color",
+      "value": "rgb(226, 241, 235)"
+    }
+  },
+  {
+    "label": "页首区域有 20px 上内边距",
+    "expect": {
+      "type": "style",
+      "selector": ".profile-intro",
+      "property": "padding-top",
+      "value": "20px"
+    }
+  },
+  {
+    "label": "页首区域有 20px 右内边距",
+    "expect": {
+      "type": "style",
+      "selector": ".profile-intro",
+      "property": "padding-right",
+      "value": "20px"
+    }
+  },
+  {
+    "label": "页首区域有 20px 下内边距",
+    "expect": {
+      "type": "style",
+      "selector": ".profile-intro",
+      "property": "padding-bottom",
+      "value": "20px"
+    }
+  },
+  {
+    "label": "页首区域有 20px 左内边距",
+    "expect": {
+      "type": "style",
+      "selector": ".profile-intro",
+      "property": "padding-left",
+      "value": "20px"
+    }
+  }
+]

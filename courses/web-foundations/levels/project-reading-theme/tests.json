@@ -1,6 +1,6 @@
 [
   {
-    "label": "默认使用浅色底",
+    "label": "uses light color base by default",
     "expect": {
       "type": "style",
       "selector": "#reader",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "点击后切换深色底",
+    "label": "Click to switch to dark background",
     "expect": {
       "type": "style",
       "selector": "#reader",
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "label": "深色模式保留清楚的正文",
+    "label": "Dark mode retains clear text",
     "expect": {
       "type": "style",
       "selector": "#reader",
@@ -39,7 +39,7 @@
     ]
   },
   {
-    "label": "按压状态和深色选择同步",
+    "label": "pressed state and dark color selection synchronization",
     "expect": {
       "type": "attribute",
       "selector": "#theme-toggle",
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "label": "深色选择保存在本关",
+    "label": "Dark color selection is saved in this level",
     "expect": {
       "type": "storage",
       "key": "reader-theme",
@@ -68,7 +68,7 @@
     ]
   },
   {
-    "label": "已保存的深色主题在打开时恢复",
+    "label": "Saved dark theme restored on open",
     "expect": {
       "type": "attribute",
       "selector": "#theme-toggle",
@@ -80,7 +80,7 @@
     }
   },
   {
-    "label": "再次点击可保存浅色选择",
+    "label": "Click again to save light color selection",
     "expect": {
       "type": "storage",
       "key": "reader-theme",

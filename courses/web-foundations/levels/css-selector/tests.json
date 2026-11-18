@@ -1,6 +1,6 @@
 [
   {
-    "label": "课程标题变为绿色",
+    "label": "course title turns green",
     "expect": {
       "type": "style",
       "selector": ".card-title",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "课程标题字号为 24px",
+    "label": "course title font size is 24px",
     "expect": {
       "type": "style",
       "selector": ".card-title",
@@ -18,13 +18,13 @@
     }
   },
   {
-    "label": "说明标题保留原颜色",
+    "label": "Description title retains original color",
     "expect": {
       "type": "style",
       "selector": ".guide-title",
       "property": "color",
       "value": "rgb(36, 52, 71)"
     },
-    "hint": "用类选择器限定修改范围。"
+    "hint": "Use class selectors to limit the modification scope."
   }
 ]

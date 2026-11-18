@@ -1,17 +1,17 @@
 {
   "focus": "index.html",
-  "title": "校验取件码的格式",
-  "goal": "使用 required 和 pattern 检查文本框是否填写，以及内容是否符合格式。",
-  "summary": "自助取件页面要求输入两位大写英文字母和四位数字。给输入框加上浏览器能识别的校验规则。",
+  "title": "Verification pickup code format",
+  "goal": "uses required and pattern to check whether the text box is filled in and whether the content conforms to the format.",
+  "summary": "The self-service pickup page requires two uppercase English letters and four digits. Add validation rules that the browser can recognize to the input box.",
   "tasks": [
-    "把取件码输入框设为必填。",
-    "用 pattern 限制取件码的格式。开头恰好两位大写英文字母，后面恰好四位数字。",
-    "试着留空、输入 ab0427 和输入 AB0427，分别点击「核对」观察原生校验提示。"
+    "Make the pickup code input box required.",
+    "uses pattern to limit the format of the pickup code. It starts with exactly two capital letters, followed by exactly four digits.",
+    "Try leaving it blank, entering ab0427 and entering AB0427, respectively, click \"Check\" to observe the native verification prompt."
   ],
   "example": {
     "language": "html",
-    "code": "<label for=\"seat-number\">座位号（如 C12）</label>\n<input id=\"seat-number\" name=\"seat\" required pattern=\"[A-Z][0-9]{2}\">",
-    "note": "pattern 匹配整个值。方括号描述可选字符，花括号指定个数。required 另外拒绝空值。"
+    "code": "<label for=\"seat-number\">seat number (such as C12)</label>\n<input id=\"seat-number\" name=\"seat\" required pattern=\"[A-Z][0-9]{2}\">",
+    "note": "pattern matches the entire value. Square brackets describe optional characters, and curly braces specify the number. required additionally rejects null values."
   },
-  "hint": "仅写 pattern 时空值仍能通过格式检查。加上 required，再用 {2} 和 {4} 分别限定字母和数字的数量。"
+  "hint": "The space value can still pass the format check when only pattern is written. Add required, and use {2} and {4} to limit the number of letters and numbers respectively."
 }

@@ -1,68 +1,68 @@
 [
   {
-    "label": "准备好的包裹返回标签字符串",
+    "label": "Prepared package returns label string",
     "expect": {
       "type": "function",
       "name": "listReadyPickups",
       "args": [
         [
           {
-            "label": "北柜-03",
+            "label": "North cabinet-03",
             "ready": true
           },
           {
-            "label": "北柜-04",
+            "label": "North cabinet-04",
             "ready": false
           },
           {
-            "label": "南柜-12",
+            "label": "South cabinet-12",
             "ready": true
           }
         ]
       ],
       "value": [
-        "北柜-03",
-        "南柜-12"
+        "North cabinet-03",
+        "South cabinet-12"
       ]
     }
   },
   {
-    "label": "保留顺序和同名标签",
+    "label": "preserves order and labels with the same name",
     "expect": {
       "type": "function",
       "name": "listReadyPickups",
       "args": [
         [
           {
-            "label": "西柜-08",
+            "label": "West Cabinet-08",
             "ready": true
           },
           {
-            "label": "西柜-01",
+            "label": "West Cabinet-01",
             "ready": true
           },
           {
-            "label": "西柜-08",
+            "label": "West Cabinet-08",
             "ready": true
           }
         ]
       ],
       "value": [
-        "西柜-08",
-        "西柜-01",
-        "西柜-08"
+        "West Cabinet-08",
+        "West Cabinet-01",
+        "West Cabinet-08"
       ]
     }
   },
   {
-    "label": "都在备货时返回空列表",
+    "label": "returns an empty list when stocking",
     "expect": {
       "type": "function",
       "name": "listReadyPickups",
       "args": [
         [
           {
-            "label": "东柜-01",
+            "label": "East cabinet-01",
             "ready": false
           }
         ]
@@ -71,7 +71,7 @@
     }
   },
   {
-    "label": "空包裹列表返回空标签列表",
+    "label": "Empty package list returns empty label list",
     "expect": {
       "type": "function",
       "name": "listReadyPickups",

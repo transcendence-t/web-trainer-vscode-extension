@@ -1,6 +1,6 @@
 [
   {
-    "label": "第二行使用底色",
+    "label": "Use background color in the second row",
     "expect": {
       "type": "style",
       "selector": "tbody tr:nth-child(2)",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "第四行也使用底色",
+    "label": "The fourth row also uses the background color",
     "expect": {
       "type": "style",
       "selector": "tbody tr:nth-child(4)",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "第一行保持透明",
+    "label": "The first line remains transparent",
     "expect": {
       "type": "style",
       "selector": "tbody tr:first-child",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "表头底色不受影响",
+    "label": "The background color of the meter head is not affected",
     "expect": {
       "type": "style",
       "selector": "thead",

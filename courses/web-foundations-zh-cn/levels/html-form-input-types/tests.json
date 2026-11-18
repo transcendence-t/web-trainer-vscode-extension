@@ -1,0 +1,66 @@
+[
+  {
+    "label": "两个输入框仍保留标签和名称",
+    "expect": {
+      "type": "count",
+      "selector": "label[for=\"email\"], label[for=\"work\"], input[name=\"email\"][required], input[name=\"work\"][required]",
+      "value": 4
+    }
+  },
+  {
+    "label": "邮箱拒绝缺少 @ 的输入",
+    "expect": {
+      "type": "exists",
+      "selector": "#email:invalid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#email",
+        "value": "student.example.org"
+      }
+    ]
+  },
+  {
+    "label": "正常邮箱有效",
+    "expect": {
+      "type": "exists",
+      "selector": "#email:valid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#email",
+        "value": "student@example.org"
+      }
+    ]
+  },
+  {
+    "label": "网址拒绝站内相对地址",
+    "expect": {
+      "type": "exists",
+      "selector": "#work:invalid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#work",
+        "value": "/gallery/item"
+      }
+    ]
+  },
+  {
+    "label": "完整网址有效",
+    "expect": {
+      "type": "exists",
+      "selector": "#work:valid"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#work",
+        "value": "https://example.org/gallery"
+      }
+    ]
+  }
+]

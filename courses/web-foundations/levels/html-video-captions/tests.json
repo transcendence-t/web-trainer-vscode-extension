@@ -1,6 +1,6 @@
 [
   {
-    "label": "提供播放控件",
+    "label": "provides playback controls",
     "expect": {
       "type": "property",
       "selector": "video#demo",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "视频素材可加载",
+    "label": "video material can be loaded",
     "expect": {
       "type": "property",
       "selector": "video#demo",
@@ -24,14 +24,14 @@
     ]
   },
   {
-    "label": "声明默认的中文辅助字幕",
+    "label": "declares default English captions",
     "expect": {
       "type": "exists",
-      "selector": "video#demo > track[kind=\"captions\"][srclang=\"zh\"][label=\"简体中文\"][default]"
+      "selector": "video#demo > track[kind=\"captions\"][srclang=\"en\"][label=\"English\"][default]"
     }
   },
   {
-    "label": "字幕资源成功加载",
+    "label": "subtitle resources loaded successfully",
     "expect": {
       "type": "property",
       "selector": "video#demo > track",

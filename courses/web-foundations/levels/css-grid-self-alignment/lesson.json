@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "把单枚标签对齐到网格区域右下角",
-  "goal": "用 justify-self 和 align-self 调整单个 Grid 项。",
-  "summary": "模型展台用网格显示说明和状态。说明保持在上方，状态标签只对齐自己的单元格。",
+  "title": "Align a single label to the lower right corner of the grid area",
+  "goal": "Use justify-self and align-self to adjust individual Grid items.",
+  "summary": "model stand uses a grid to display instructions and status. The description remains above and the status label is just aligned to its own cell.",
   "tasks": [
-    "将 .badge 沿网格行内轴与块轴都对齐到末端。",
-    "不改网格容器的默认对齐，说明的位置保持原样。"
+    "Align the .badge to the end along both the inline axis and the block axis of the grid.",
+    "does not change the default alignment of the grid container, and the position of the description remains the same."
   ],
   "example": {
     "language": "css",
     "code": ".label { place-self: end; }",
-    "note": "place-self 同时设置 align-self 和 justify-self，可以只作用到一个项目。"
+    "note": "place-self sets align-self and justify-self at the same time, which can only affect one item."
   },
-  "hint": "也可分别写 justify-self: end 与 align-self: end。"
+  "hint": "can also write justify-self: end and align-self: end respectively."
 }

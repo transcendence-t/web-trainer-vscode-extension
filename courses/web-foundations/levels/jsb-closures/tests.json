@@ -1,6 +1,6 @@
 [
   {
-    "label": "交替取号独立增加",
+    "label": "Alternate number taking and independent increase",
     "expect": {
       "type": "function",
       "name": "showTickets",
@@ -17,7 +17,7 @@
     }
   },
   {
-    "label": "两个初始号相同也各自增长",
+    "label": "The two initial numbers are the same and will grow separately.",
     "expect": {
       "type": "function",
       "name": "showTickets",
@@ -34,7 +34,7 @@
     }
   },
   {
-    "label": "可从零开始编号",
+    "label": "can be numbered from zero",
     "expect": {
       "type": "function",
       "name": "showTickets",

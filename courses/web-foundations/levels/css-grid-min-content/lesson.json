@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "让长标题在等宽网格中换行",
-  "goal": "限制网格轨道的最小尺寸，避免长字串撑破布局。",
-  "summary": "某份档案的英文文件名没有空格。两张档案卡必须等宽，而且文件名不可溢出卡片。",
+  "title": "Make long titles wrap in a fixed-width grid",
+  "goal": "limits the minimum size of the grid track to prevent long strings from breaking the layout.",
+  "summary": "The English file name of a certain file has no spaces. The two file cards must be of equal width, and the file name must not overflow the card.",
   "tasks": [
-    "用两个最小宽度为 0、最大为 1fr 的轨道保持等宽。",
-    "允许 .document 内的长字串就地换行。"
+    "uses two tracks with a minimum width of 0 and a maximum of 1fr to maintain equal width.",
+    "allows in-place line wrapping of long strings within .document."
   ],
   "example": {
     "language": "css",
     "code": ".rows { grid-template-columns: repeat(2, minmax(0, 1fr)); }\n.file { overflow-wrap: anywhere; }",
-    "note": "minmax(0, 1fr) 允许列小于内容的固有最小尺寸。anywhere 为长词提供断行机会。"
+    "note": "minmax(0, 1fr) Allows columns to be smaller than the inherent minimum size of the content. anywhere provides line breaking opportunities for long words."
   },
-  "hint": "调整定义列宽的属性；将断行规则写在卡片上。"
+  "hint": "Adjust the properties that define column width; write the line breaking rules on the card."
 }

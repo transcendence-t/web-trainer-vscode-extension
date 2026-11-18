@@ -1,17 +1,17 @@
 [
   {
-    "label": "普通备注可以清空",
+    "label": "Ordinary remarks can be cleared",
     "expect": {
       "type": "function",
       "name": "canClearNote",
       "args": [
-        "放在前台"
+        "placed at the front desk"
       ],
       "value": true
     }
   },
   {
-    "label": "空字符串返回 false",
+    "label": "empty string returns false",
     "expect": {
       "type": "function",
       "name": "canClearNote",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "label": "字符串 0 也是已经输入的字符",
+    "label": "string 0 is also the character that has been entered",
     "expect": {
       "type": "function",
       "name": "canClearNote",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "label": "仅有空格时仍可清空",
+    "label": "can still be cleared when there are only spaces",
     "expect": {
       "type": "function",
       "name": "canClearNote",
@@ -44,7 +44,7 @@
     }
   },
   {
-    "label": "字符串 false 也是已经输入的文字",
+    "label": "string false is also the text that has been entered",
     "expect": {
       "type": "function",
       "name": "canClearNote",

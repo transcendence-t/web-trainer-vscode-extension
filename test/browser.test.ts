@@ -5,6 +5,7 @@ import { after, before, test } from 'node:test';
 import { chromium, type Browser, type Page } from 'playwright-core';
 import { compilePage } from '../src/preview';
 import { loadCourse } from '../src/course';
+import { language, localize } from '../src/language';
 import { checkTimeout, sandboxPermissions, type Check, type CheckResult, type PracticeCode } from '../src/model';
 
 const nonce = 'test-web-trainer-nonce';
@@ -26,17 +27,22 @@ before(async () => {
     }
   }
   browser = await chromium.launch({ executablePath, headless: true, args: ['--force-device-scale-factor=1.25'] });
+  runner = await readFile(join('out', 'runner.js'), 'utf8');
+  await openAssessmentPage();
+});
+after(async () => { await browser?.close(); });
+
+async function openAssessmentPage() {
+  await page?.context().close();
   const context = await browser.newContext();
   page = await context.newPage();
-  runner = await readFile(join('out', 'runner.js'), 'utf8');
   await page.route('https://web-trainer.test/', (route) => route.fulfill({ body:
     `<meta http-equiv="Content-Security-Policy" content="default-src 'none'; frame-src 'self' about:; script-src 'nonce-${nonce}'; style-src 'unsafe-inline' data:; img-src data:; media-src data:; connect-src data:">`,
     contentType: 'text/html',
   }));
   await page.goto('https://web-trainer.test/');
   await context.setOffline(true);
-});
-after(async () => { await browser?.close(); });
+}
 
 async function check(code: PracticeCode, rule: Check, initialWidth?: number): Promise<CheckResult> {
   const compiled = compilePage(code, nonce, runner, {
@@ -226,7 +232,7 @@ test('语法正确但运行失败或循环无终点时，给出可继续编辑�
   const rule: Check = { label: '存在标题', expect: { type: 'exists', selector: 'h1' } };
   for (const [script, message] of [
     ['document.querySelector("#missing").textContent = "x";', /script\.js.*null/u],
-    ['while (true) { /* 忘了写退出条件 */ }', /循环.*结束条件/u],
+    ['while (true) { /* No exit condition */ }', language === 'en' ? /loop.*exit condition/u : /循环.*结束条件/u],
   ] as const) {
     const result = await check({ ...code, 'script.js': script }, rule);
     assert.equal(result.passed, false);
@@ -255,31 +261,34 @@ test('表单可执行浏览器的 required 校验与提交事件', async () => {
   }
 });
 
-const coursePath = join('courses', 'web-foundations', 'course.json');
+const courseDirectory = join('courses', localize('web-foundations', 'web-foundations-zh-cn'));
+const coursePath = join(courseDirectory, 'course.json');
 const modules = [
-  ['html', 'HTML 基础'], ['css', 'CSS 基础'], ['css-advanced', 'CSS 进阶'],
-  ['js-basics', 'JavaScript 基础'], ['javascript', 'JavaScript 网页交互'], ['projects', '综合项目'],
+  ['html', localize('HTML foundations', 'HTML 基础')], ['css', localize('CSS foundations', 'CSS 基础')],
+  ['css-advanced', localize('Advanced CSS', 'CSS 进阶')], ['js-basics', localize('JavaScript foundations', 'JavaScript 基础')],
+  ['javascript', localize('JavaScript in the browser', 'JavaScript 网页交互')], ['projects', localize('Projects', '综合项目')],
 ] as const;
 
 async function fixtures<T>(kind: string): Promise<Record<string, T>> {
-  const directory = join('test', kind);
+  const directory = join('test', kind + localize('', '-zh-cn'));
   const paths = (await readdir(directory)).filter((name) => name.endsWith('.json'));
   const entries = await Promise.all(paths.map(async (file) => JSON.parse(await readFile(join(directory, file), 'utf8'))));
   return Object.assign({}, ...entries);
 }
 
-test('内置课程的六模块顺序和自由学习模式正确，关卡均已收录', async () => {
+test('The built-in course lists every lesson in the expected order and allows free navigation', async () => {
   const course = await loadCourse(coursePath);
-  assert.equal(course.id, 'web-foundations');
+  assert.equal(course.id, localize('web-foundations-en', 'web-foundations'));
   assert.equal(course.navigation, 'free');
   assert.deepEqual(course.sections.map(({ id, title }) => [id, title]), modules);
-  const onDisk = await readdir(join('courses', 'web-foundations', 'levels'), { withFileTypes: true });
+  const onDisk = await readdir(join(courseDirectory, 'levels'), { withFileTypes: true });
   assert.deepEqual(course.sections.flatMap(({ levels }) => levels.map(({ id }) => id)).sort(),
     onDisk.filter((entry) => entry.isDirectory()).map(({ name }) => name).sort());
 });
 
 for (const [id, title] of modules) {
-  test(`课程 ${title}`, async (t) => {
+  test(`Course: ${title}`, async (t) => {
+    await openAssessmentPage();
     const course = await loadCourse(coursePath);
     const section = course.sections.find((entry) => entry.id === id);
     assert.ok(section);
@@ -309,7 +318,12 @@ for (const [id, title] of modules) {
         const wrong = await run({ ...answer, ...mistake.files });
         assert.ok(wrong.some((result) => !result.passed), `未拦截典型错误「${mistake.name}」`);
         const alternate = alternatives[level.id];
-        if (alternate) assert.ok((await run({ ...answer, ...alternate })).every((result) => result.passed), '合理的其他写法被误判');
+        if (alternate) {
+          const alternativeResults = await run({ ...answer, ...alternate });
+          assert.ok(alternativeResults.every((result) => result.passed), alternativeResults
+            .map((result, i) => result.passed ? '' : `Alternative answer: ${level.tests[i].label} ${result.detail}`)
+            .filter(Boolean).join('\n'));
+        }
       });
     }
     assert.ok(section.levels.some((level) => alternatives[level.id]), '模块未验证其他正确写法');

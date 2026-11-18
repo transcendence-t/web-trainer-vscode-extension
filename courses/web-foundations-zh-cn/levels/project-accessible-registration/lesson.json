@@ -1,0 +1,17 @@
+{
+  "focus": "index.html",
+  "title": "制作可在本页反馈的实践课报名表",
+  "goal": "组合可访问标签、原生格式校验与同页状态提示。",
+  "summary": "实践课提供两个场次。补齐表单语义和本地回执流程，让报名者能用键盘完成操作并收到明确反馈。",
+  "tasks": [
+    "关联三个 label，为 #name、#email 和 #course 添加 name 及 required。邮箱使用 email 类型。",
+    "给 #reply 设置 role=\"status\"，用于发布提交结果。",
+    "在 script.js 中拦截正常提交，通过 FormData 取得字段。去掉姓名首尾空白，姓名只含空白时显示「请输入有效姓名」，其他情况显示「姓名，已报名场次」。"
+  ],
+  "example": {
+    "language": "html",
+    "code": "<label for=\"contact\">联系邮箱</label>\n<input id=\"contact\" name=\"contact\" type=\"email\" required>\n<p id=\"result\" role=\"status\"></p>",
+    "note": "label 绑定控件，name 用于提交。role=\"status\" 适合读出一般的结果反馈。"
+  },
+  "hint": "浏览器通过原生校验后才会触发 submit，寻找 FormData 中对应的三个字段名。"
+}

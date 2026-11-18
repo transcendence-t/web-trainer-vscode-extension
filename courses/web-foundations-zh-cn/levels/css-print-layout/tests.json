@@ -1,0 +1,54 @@
+[
+  {
+    "label": "打印时隐藏导航",
+    "expect": {
+      "type": "style",
+      "selector": ".site-nav",
+      "property": "display",
+      "value": "none",
+      "media": {
+        "query": "print",
+        "matches": true
+      }
+    }
+  },
+  {
+    "label": "打印内容用白底",
+    "expect": {
+      "type": "style",
+      "selector": ".paper",
+      "property": "background-color",
+      "value": "rgb(255, 255, 255)",
+      "media": {
+        "query": "print",
+        "matches": true
+      }
+    }
+  },
+  {
+    "label": "屏幕仍显示导航",
+    "expect": {
+      "type": "style",
+      "selector": ".site-nav",
+      "property": "display",
+      "value": "block",
+      "media": {
+        "query": "print",
+        "matches": false
+      }
+    }
+  },
+  {
+    "label": "屏幕仍有浅绿底色",
+    "expect": {
+      "type": "style",
+      "selector": ".paper",
+      "property": "background-color",
+      "value": "rgb(230, 244, 238)",
+      "media": {
+        "query": "print",
+        "matches": false
+      }
+    }
+  }
+]

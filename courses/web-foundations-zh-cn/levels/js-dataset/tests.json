@@ -1,0 +1,48 @@
+[
+  {
+    "label": "直接点击按钮读取它的编号",
+    "expect": {
+      "type": "text",
+      "selector": "#selection",
+      "value": "当前展区：A-301"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": ".room-button[data-room-code=\"A-301\"]"
+      }
+    ]
+  },
+  {
+    "label": "点击子元素也能得到父按钮数据",
+    "expect": {
+      "type": "text",
+      "selector": "#selection",
+      "value": "当前展区：B-105"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": ".room-button[data-room-code=\"B-105\"] span"
+      }
+    ]
+  },
+  {
+    "label": "切换展区更新原提示",
+    "expect": {
+      "type": "text",
+      "selector": "#selection",
+      "value": "当前展区：A-301"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": ".room-button[data-room-code=\"B-105\"]"
+      },
+      {
+        "type": "click",
+        "selector": ".room-button[data-room-code=\"A-301\"] span"
+      }
+    ]
+  }
+]

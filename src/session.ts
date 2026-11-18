@@ -3,6 +3,7 @@ import { join } from 'node:path';
 import debounce from 'debounce';
 import * as vscode from 'vscode';
 import { loadCourse, storeImportedCourse, writeCourse } from './course';
+import { extensionName, language, localize } from './language';
 import { lessonFiles, storageFits, type CheckResult, type Course, type LessonFile, type Level, type PanelMessage, type StorageEntries } from './model';
 import { LessonPanel } from './panel';
 import { compilePage } from './preview';
@@ -22,7 +23,7 @@ interface PendingCheck {
   documents: vscode.TextDocument[];
 }
 
-const lastKey = 'lastLesson';
+const lastKey = language === 'zh-cn' ? 'lastLesson' : 'lastLesson.en';
 type LessonLocation = { course: string; level: string };
 
 export class Session implements vscode.Disposable {
@@ -66,7 +67,7 @@ export class Session implements vscode.Disposable {
   run(action: () => Promise<void>): Promise<void> {
     this.queue = this.queue.then(action).catch((error: unknown) => {
       const message = error instanceof Error ? error.message : String(error);
-      void vscode.window.showErrorMessage(`网页闯关：${message}`);
+      void vscode.window.showErrorMessage(localize(`${extensionName}: ${message}`, `${extensionName}：${message}`));
       if (this.pending) {
         this.pending = undefined;
         void this.panel?.post({ type: 'result', status: 'error', message });
@@ -90,7 +91,7 @@ export class Session implements vscode.Disposable {
     if (!course) return;
     const level = orderedLevels(course).find((entry) => entry.id === levelId);
     if (!level || !isUnlocked(course, this.completed(courseId), levelId)) {
-      void vscode.window.showInformationMessage('请先通过前面的关卡。');
+      void vscode.window.showInformationMessage(localize('Pass the preceding lessons first.', '请先通过前面的关卡。'));
       return;
     }
     const directory = join(this.context.globalStorageUri.fsPath, 'practice', course.id, level.id);
@@ -226,7 +227,9 @@ export class Session implements vscode.Disposable {
     await panel.post({ type: 'preview', key: active.key, revision, ...compiled });
     if (this.revision !== revision || this.panel !== panel) return;
     if (compiled.issues.length) {
-      await panel.post({ type: 'result', status: 'error', message: '请先修复预览区显示的 JavaScript 错误。' });
+      await panel.post({ type: 'result', status: 'error', message: localize(
+        'Fix the JavaScript errors shown in the preview first.', '请先修复预览区显示的 JavaScript 错误。',
+      ) });
       return;
     }
     const id = ++this.checkId;
@@ -252,7 +255,7 @@ export class Session implements vscode.Disposable {
     }));
     if (checks.some((rule) => !rule.passed)) {
       this.pending = undefined;
-      await panel.post({ type: 'result', status: 'failed', message: '还有一些地方需要修改。', checks });
+      await panel.post({ type: 'result', status: 'failed', message: localize('Some checks still need work.', '还有一些地方需要修改。'), checks });
       return;
     }
 
@@ -260,7 +263,9 @@ export class Session implements vscode.Disposable {
     if (check.revision !== this.revision || this.panel !== panel) return;
     if (saved.includes(false)) {
       this.pending = undefined;
-      await panel.post({ type: 'result', status: 'error', message: '练习文件保存失败，请保存后重新检查。' });
+      await panel.post({ type: 'result', status: 'error', message: localize(
+        'Could not save the practice files. Save them before checking again.', '练习文件保存失败，请保存后重新检查。',
+      ) });
       return;
     }
     const completed = new Set(this.completed(course.id));
@@ -270,16 +275,20 @@ export class Session implements vscode.Disposable {
     this.change.fire();
     await this.present();
     const allDone = orderedLevels(course).every((entry) => completed.has(entry.id));
-    await panel.post({ type: 'result', status: 'passed', message: allDone ? '课程全部通关！' : '本关通过，代码已保存。', checks });
+    const message = allDone
+      ? localize('Course complete!', '课程全部通关！')
+      : localize('You passed this lesson. Your code was saved.', '本关通过，代码已保存。');
+    await panel.post({ type: 'result', status: 'passed', message, checks });
   }
 
   async importCourse() {
     const [manifest] = (await vscode.window.showOpenDialog({
-      title: '选择课程包中的 course.json', openLabel: '导入课程', canSelectMany: false,
-      filters: { '课程 JSON': ['json'] },
+      title: localize('Select course.json from the course package', '选择课程包中的 course.json'),
+      openLabel: localize('Import Course', '导入课程'), canSelectMany: false,
+      filters: { [localize('Course JSON', '课程 JSON')]: ['json'] },
     })) ?? [];
     if (!manifest) return;
-    if (manifest.scheme !== 'file') throw new Error('请选择本地课程文件。');
+    if (manifest.scheme !== 'file') throw new Error(localize('Select a local course file.', '请选择本地课程文件。'));
     const course = await loadCourse(manifest.fsPath);
     await storeImportedCourse(join(this.context.globalStorageUri.fsPath, 'courses'), course);
     const updated = this.catalog.has(course.id);
@@ -289,24 +298,29 @@ export class Session implements vscode.Disposable {
     const completed = this.completed(course.id);
     const next = firstUnfinished(course, completed) ?? orderedLevels(course).at(-1)!;
     await this.open(course.id, currentLevel && isUnlocked(course, completed, currentLevel) ? currentLevel : next.id);
-    void vscode.window.showInformationMessage(`「${course.title}」${updated ? '已更新' : '已导入'}。`);
+    void vscode.window.showInformationMessage(updated
+      ? localize(`Updated “${course.title}”.`, `「${course.title}」已更新。`)
+      : localize(`Imported “${course.title}”.`, `「${course.title}」已导入。`));
   }
 
   async exportCourse() {
     const course = this.active?.course ?? this.courses()[0];
     const [parent] = (await vscode.window.showOpenDialog({
-      title: `选择「${course.title}」的导出位置`, openLabel: '导出课程',
+      title: localize(`Choose where to export “${course.title}”`, `选择「${course.title}」的导出位置`),
+      openLabel: localize('Export Course', '导出课程'),
       canSelectFiles: false, canSelectFolders: true, canSelectMany: false,
     })) ?? [];
     if (!parent) return;
-    if (parent.scheme !== 'file') throw new Error('请选择本地目录。');
+    if (parent.scheme !== 'file') throw new Error(localize('Select a local folder.', '请选择本地目录。'));
     await writeCourse(course, parent.fsPath);
-    void vscode.window.showInformationMessage(`课程已导出到「${course.id}」子目录。`);
+    void vscode.window.showInformationMessage(localize(
+      `Exported the course to the “${course.id}” subfolder.`, `课程已导出到「${course.id}」子目录。`,
+    ));
   }
 
   async revealFiles() {
     if (!this.active) {
-      void vscode.window.showInformationMessage('请先打开一个练习关卡。');
+      void vscode.window.showInformationMessage(localize('Open a practice lesson first.', '请先打开一个练习关卡。'));
       return;
     }
     await vscode.commands.executeCommand('revealFileInOS', this.uri(this.active, this.active.level.focus));

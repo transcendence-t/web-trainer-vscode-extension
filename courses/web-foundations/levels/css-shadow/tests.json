@@ -1,6 +1,6 @@
 [
   {
-    "label": "阴影的偏移、模糊与透明度正确",
+    "label": "Shadow offset, blur and transparency are correct",
     "expect": {
       "type": "style",
       "selector": ".raised",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "卡片本身保持不透明",
+    "label": "The card itself remains opaque",
     "expect": {
       "type": "style",
       "selector": ".raised",

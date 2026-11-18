@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "把访客加入预约名单末尾",
-  "goal": "用 push 追加数组元素，区分追加后的数组和 push 返回的长度。",
-  "summary": "访客登记后要排在预约名单末尾。调用函数的代码需要拿到更新后的整份名单。",
+  "title": "Add visitors to the end of the reservation list",
+  "goal": "uses push to append array elements, distinguishing between the appended array and the length returned by push.",
+  "summary": "Visitors must be placed at the end of the reservation list after registration. The code calling the function needs to get the entire updated list.",
   "tasks": [
-    "完成 addBooking(bookings, guest)。将访客名 guest 追加到数组 bookings 的末尾。",
-    "返回追加后的名单。空名单也能加入第一位访客，同名访客仍按登记顺序追加。"
+    "complete addBooking(bookings, guest). Append the guest name guest to the end of the bookings array.",
+    "returns the appended list. The first visitor can also be added to the empty list, and visitors with the same name will still be added in the order of registration."
   ],
   "example": {
     "language": "javascript",
-    "code": "const supplies = ['纸胶带'];\nconst count = supplies.push('棉线');\n// supplies 是 ['纸胶带', '棉线']，count 是 2",
-    "note": "push 把采购物品写到数组末尾，并返回更新后的元素个数。要拿到两项物品，可以读取 supplies。"
+    "code": "const supplies = ['paper tape'];\nconst count = supplies.push('cotton thread');\n// supplies is ['paper tape', 'cotton thread'], count is 2",
+    "note": "push writes the purchased items to the end of the array and returns the updated number of elements. To get two items, read supplies."
   },
-  "hint": "return bookings.push(guest) 会把人数交给调用方。先追加访客，再返回 bookings 数组。"
+  "hint": "return bookings.push(guest) will hand over the number of guests to the caller. First append the visitor and then return the bookings array."
 }

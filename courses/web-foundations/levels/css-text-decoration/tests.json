@@ -1,6 +1,6 @@
 [
   {
-    "label": "版画课原价有删除线",
+    "label": "The original price of the printmaking course has strikethroughs.",
     "expect": {
       "type": "style",
       "selector": "article:nth-of-type(1) .old-price",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "纸艺课原价有删除线",
+    "label": "Paper art class original price has strikethrough",
     "expect": {
       "type": "style",
       "selector": "article:nth-of-type(2) .old-price",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "版画课现价保留原样",
+    "label": "Printmaking class current price remains as is",
     "expect": {
       "type": "style",
       "selector": "article:nth-of-type(1) .current-price",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "label": "纸艺课现价保留原样",
+    "label": "paper art class current price remains as is",
     "expect": {
       "type": "style",
       "selector": "article:nth-of-type(2) .current-price",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "版画课价格整行无装饰线",
+    "label": "Printmaking class price The entire line has no decorative lines",
     "expect": {
       "type": "style",
       "selector": "article:nth-of-type(1) > p",
@@ -45,7 +45,7 @@
     }
   },
   {
-    "label": "纸艺课价格整行无装饰线",
+    "label": "paper art class price whole row without decorative lines",
     "expect": {
       "type": "style",
       "selector": "article:nth-of-type(2) > p",

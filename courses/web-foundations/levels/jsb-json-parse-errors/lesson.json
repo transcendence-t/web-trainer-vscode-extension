@@ -1,16 +1,16 @@
 {
   "focus": "script.js",
-  "title": "处理格式错误或类型不符的 JSON",
-  "goal": "用 try…catch 处理 JSON.parse 的异常，并检查解析结果。",
-  "summary": "导入功能接收 JSON 文本。只接受数组数据，其余格式返回空清单。",
+  "title": "Handling malformed or inconsistent JSON",
+  "goal": "Use try...catch to handle JSON.parse exceptions and check the parsing results.",
+  "summary": "import function accepts JSON text. Only accepts array data, other formats return an empty list.",
   "tasks": [
-    "完成 readChecklist(text)，将可解析成数组的 JSON 文本转换为数组。",
-    "JSON 损坏或解析结果不是数组时返回 []。"
+    "completes readChecklist(text), converting JSON text that can be parsed into an array into an array.",
+    "[] is returned when the JSON is corrupted or the parsed result is not an array."
   ],
   "example": {
     "language": "javascript",
-    "code": "try {\n  const data = JSON.parse(text);\n  console.log(data);\n} catch (error) {\n  console.log('读取失败');\n}",
-    "note": "JSON.parse 解析失败会抛出异常。解析成功只代表格式有效，还可以检查数据类型。"
+    "code": "try {\n  const data = JSON.parse(text);\n  console.log(data);\n} catch (error) {\n  console.log('Reading failed');\n}",
+    "note": "JSON.parse will throw an exception if it fails to parse. Successful parsing only means that the format is valid, and the data type can also be checked."
   },
-  "hint": "把 JSON.parse 写在 try 内。用 Array.isArray 区分数组和其他 JSON 值。"
+  "hint": "Write JSON.parse in try. Use Array.isArray to distinguish arrays from other JSON values."
 }

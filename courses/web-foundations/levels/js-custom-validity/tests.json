@@ -1,6 +1,6 @@
 [
   {
-    "label": "不同口令使确认控件无效",
+    "label": "Different passwords invalidate the confirmation control",
     "expect": {
       "type": "exists",
       "selector": "#confirm:invalid"
@@ -19,11 +19,11 @@
     ]
   },
   {
-    "label": "指出不一致的原因",
+    "label": "points out the reason for the inconsistency",
     "expect": {
       "type": "text",
       "selector": "#feedback",
-      "value": "两次口令不一致"
+      "value": "Two passwords are inconsistent"
     },
     "actions": [
       {
@@ -39,7 +39,7 @@
     ]
   },
   {
-    "label": "修改第一项后立即重新检查",
+    "label": "Recheck immediately after modifying the first item",
     "expect": {
       "type": "exists",
       "selector": "#confirm:valid"
@@ -63,7 +63,7 @@
     ]
   },
   {
-    "label": "清空确认框时保留原生必填",
+    "label": "Keep the original required fields when clearing the confirmation box",
     "expect": {
       "type": "exists",
       "selector": "#confirm:invalid"
@@ -87,7 +87,7 @@
     ]
   },
   {
-    "label": "清空后没有旧的匹配错误",
+    "label": "No old matching errors after clearing",
     "expect": {
       "type": "text",
       "selector": "#feedback",

@@ -1,16 +1,16 @@
 {
   "focus": "index.html",
-  "title": "给图片预留空间并处理装饰图",
-  "goal": "用 width 和 height 确定图片比例，并用空 alt 标记纯装饰图片。",
-  "summary": "「领取路线图」旁边的图标仅做装饰；实训楼示意图传达信息。提前写出尺寸，让浏览器尽早知道需要预留的空间。",
+  "title": "Reserve space for pictures and process decorative pictures",
+  "goal": "uses width and height to determine the image proportions, and uses empty alt to mark purely decorative images.",
+  "summary": "\"Get the route map\" are for decoration only; the schematic diagram of the training building conveys information. Write the size in advance so that the browser knows the space that needs to be reserved as early as possible.",
   "tasks": [
-    "给 #decoration 添加空 alt，以及 width=\"24\" 和 height=\"20\"。",
-    "给 #building 添加其原图尺寸 144×76，保留现有的非空 alt。"
+    "Add empty alt to #decoration, as well as width=\"24\" and height=\"20\".",
+    "Adds the #building to its original size of 144×76, retaining the existing non-empty alt."
   ],
   "example": {
     "language": "html",
-    "code": "<img src=\"spark.png\" alt=\"\" width=\"20\" height=\"20\">\n<img src=\"bridge.jpg\" alt=\"三号桥的北入口\" width=\"320\" height=\"180\">",
-    "note": "纯装饰图的 alt=\"\" 表示可跳过。内容图的替代文字描述它传达的信息。"
+    "code": "<img src=\"spark.png\" alt=\"\" width=\"20\" height=\"20\">\n<img src=\"bridge.jpg\" alt=\"North entrance of Bridge No. 3\" width=\"320\" height=\"180\">",
+    "note": "pure decorative image means it can be skipped. The content image's alt text describes the information it conveys."
   },
-  "hint": "width 和 height 的 HTML 值写数字，px 适用于 CSS。"
+  "hint": "HTML values ​​for width and height are written as numbers, px for CSS."
 }

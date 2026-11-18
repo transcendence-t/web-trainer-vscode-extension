@@ -1,6 +1,6 @@
 [
   {
-    "label": "四杯饮料计算出分装量",
+    "label": "Calculate the filling volume of four drinks",
     "expect": {
       "type": "function",
       "name": "drinkVolume",
@@ -12,7 +12,7 @@
     }
   },
   {
-    "label": "零杯的分装量为零",
+    "label": "The filling volume of zero cup is zero",
     "expect": {
       "type": "function",
       "name": "drinkVolume",
@@ -24,7 +24,7 @@
     }
   },
   {
-    "label": "一杯的分装量等于单杯容量",
+    "label": "The filling volume of one cup is equal to the capacity of a single cup",
     "expect": {
       "type": "function",
       "name": "drinkVolume",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "八杯分装量再加 200 毫升备用",
+    "label": "For eight cups, add 200 ml for later use",
     "expect": {
       "type": "function",
       "name": "prepareVolume",
@@ -49,7 +49,7 @@
     }
   },
   {
-    "label": "零杯时仍然计入备用量",
+    "label": "Zero cup is still included in the reserve amount",
     "expect": {
       "type": "function",
       "name": "prepareVolume",
@@ -62,7 +62,7 @@
     }
   },
   {
-    "label": "备用量为零时只计算分装量",
+    "label": "When the reserve quantity is zero, only the filling quantity is calculated.",
     "expect": {
       "type": "function",
       "name": "prepareVolume",
@@ -75,7 +75,7 @@
     }
   },
   {
-    "label": "一杯的分装量与备用量分别计入",
+    "label": "The filling amount and spare amount of one cup are included separately.",
     "expect": {
       "type": "function",
       "name": "prepareVolume",

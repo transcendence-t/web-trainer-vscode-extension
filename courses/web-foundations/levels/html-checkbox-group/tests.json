@@ -1,6 +1,6 @@
 [
   {
-    "label": "两个选项都属于 activity 字段",
+    "label": "Both options belong to the activity field",
     "expect": {
       "type": "count",
       "selector": "input[type=\"checkbox\"][name=\"activity\"]",
@@ -8,7 +8,7 @@
     }
   },
   {
-    "label": "共读的提交值正确",
+    "label": "The submitted value read in total is correct",
     "expect": {
       "type": "attribute",
       "selector": "#reading",
@@ -17,7 +17,7 @@
     }
   },
   {
-    "label": "工作坊的提交值正确",
+    "label": "Workshop submission value is correct",
     "expect": {
       "type": "attribute",
       "selector": "#repair",
@@ -26,7 +26,7 @@
     }
   },
   {
-    "label": "两个选项初始均未勾选",
+    "label": "Both options are initially unchecked.",
     "expect": {
       "type": "count",
       "selector": "fieldset input:checked",
@@ -34,7 +34,7 @@
     }
   },
   {
-    "label": "两次点击后可同时选中",
+    "label": "can be selected simultaneously after two clicks",
     "expect": {
       "type": "count",
       "selector": "fieldset input:checked",

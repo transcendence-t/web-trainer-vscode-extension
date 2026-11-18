@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "只装饰一级目录项",
-  "goal": "使用直接子元素选择器，给校园活动的一级目录加上视觉标记。",
-  "summary": "> 左边匹配父元素，右边匹配它直接包含的子元素。嵌套在下一层列表里的项目会保留自己的样式。",
+  "title": "Only decorates first-level directory items",
+  "goal": "Use the direct child element selector to add visual markup to a first-level directory of campus activities.",
+  "summary": "> The left side matches the parent element, and the right side matches the child elements it directly contains. Items nested in lower-level lists retain their own styles.",
   "tasks": [
-    "用 > 选中 .agenda 直接包含的 li。",
-    "为一级目录项设置 border-left: 4px solid #264a7c 和 padding-left: 12px。子级项目保持原样。"
+    "Use > to select the li directly included in .agenda.",
+    "sets border-left: 4px solid #264a7c and padding-left: 12px for first-level directory items. Child projects remain as is."
   ],
-  "hint": "一级和二级项目都用了 li。检查选择器中 .agenda 和 li 的连接符。",
+  "hint": "Both the first and second level projects use li. Check the concatenation of .agenda and li in the selector.",
   "example": {
     "language": "css",
     "code": ".wall > figure {\n  margin-bottom: 20px;\n}",
-    "note": "展墙中的一级作品卡片直接使用 figure。卡片之间留出间距，嵌套图例还可以保持自己的间距。"
+    "note": "exhibition wall directly uses figure. Leave space between cards, and nested legends can maintain their own spacing."
   }
 }

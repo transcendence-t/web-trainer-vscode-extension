@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "网格布局",
-  "summary": "display: grid 建立网格，grid-template-columns 定义列。两列都用 1fr 时，两列平分扣除列间距后的可用空间。",
+  "title": "Grid layout",
+  "summary": "display: grid creates a grid, grid-template-columns defines columns. When both columns use 1fr, the available space after deducting the column spacing is divided equally between the two columns.",
   "tasks": [
-    "让 .gallery 使用 Grid 布局。",
-    "设置两列等宽，行与列的间距都设为 12px。"
+    "Let .gallery use Grid layout.",
+    "Set the two columns to have the same width, and set the spacing between rows and columns to 12px."
   ],
-  "hint": "gap 只填一个 12px，两种间距都会使用这个值。repeat(2, 1fr) 表示重复两次相同的列宽。",
-  "goal": "把四件课程作品均匀地排成两列，给每行和每列留出相同的间距。",
+  "hint": "gap only fills in a 12px, this value will be used for both spacings. repeat(2, 1fr) means repeating the same column width twice.",
+  "goal": "Arrange the four course pieces evenly into two columns, leaving equal spacing between rows and columns.",
   "example": {
     "language": "css",
     "code": ".room-links {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 8px;\n}",
-    "note": "图书馆的阅览室入口可以排成三列，每行和每列都留出 8px 的间距。"
+    "note": "The library's reading room entrance can be arranged in three columns, with 8px spacing between each row and column."
   }
 }

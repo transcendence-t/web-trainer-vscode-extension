@@ -1,6 +1,6 @@
 [
   {
-    "label": "初始说明收起",
+    "label": "Initial descriptionCollapse",
     "expect": {
       "type": "style",
       "selector": "#loan-guide[hidden]",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "初始按钮报告收起",
+    "label": "Initial button reportCollapse",
     "expect": {
       "type": "attribute",
       "selector": "#toggle-guide",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "label": "点击按钮后说明可见",
+    "label": "The description is visible after clicking the button",
     "expect": {
       "type": "style",
       "selector": "#loan-guide:not([hidden])",
@@ -33,7 +33,7 @@
     ]
   },
   {
-    "label": "打开后按钮报告展开",
+    "label": "button report expands after opening",
     "expect": {
       "type": "attribute",
       "selector": "#toggle-guide",
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "label": "再次点击后说明收起",
+    "label": "Click again to close the description.",
     "expect": {
       "type": "style",
       "selector": "#loan-guide[hidden]",
@@ -67,7 +67,7 @@
     ]
   },
   {
-    "label": "收起后同步恢复按钮状态",
+    "label": "synchronizes the recovery button state after collapsing",
     "expect": {
       "type": "attribute",
       "selector": "#toggle-guide",

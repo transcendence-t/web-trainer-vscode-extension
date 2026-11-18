@@ -1,3 +1,3 @@
 function participantNames(rooms) {
-  // 完成本关函数。
+  // completes this level function.
 }

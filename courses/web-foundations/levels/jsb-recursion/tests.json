@@ -1,6 +1,6 @@
 [
   {
-    "label": "没有盒子",
+    "label": "without box",
     "expect": {
       "type": "function",
       "name": "countBoxes",
@@ -11,7 +11,7 @@
     }
   },
   {
-    "label": "一个盒子有一件",
+    "label": "One box has one piece",
     "expect": {
       "type": "function",
       "name": "countBoxes",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "label": "五个盒子合计 15",
+    "label": "Five boxes total 15",
     "expect": {
       "type": "function",
       "name": "countBoxes",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "label": "较多层仍能累加",
+    "label": "More layers can still be accumulated",
     "expect": {
       "type": "function",
       "name": "countBoxes",

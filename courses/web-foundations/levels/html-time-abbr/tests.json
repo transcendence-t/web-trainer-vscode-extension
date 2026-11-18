@@ -1,14 +1,14 @@
 [
   {
-    "label": "日期使用 time 且文字保留",
+    "label": "date uses time and the text is retained",
     "expect": {
       "type": "text",
       "selector": "time",
-      "value": "5 月 18 日"
+      "value": "May 18"
     }
   },
   {
-    "label": "日期用 ISO 格式",
+    "label": "date in ISO format",
     "expect": {
       "type": "attribute",
       "selector": "time",
@@ -17,7 +17,7 @@
     }
   },
   {
-    "label": "CAD 使用 abbr",
+    "label": "CAD using abbr",
     "expect": {
       "type": "text",
       "selector": "abbr",
@@ -25,12 +25,12 @@
     }
   },
   {
-    "label": "提供缩写全称",
+    "label": "provides the full abbreviation",
     "expect": {
       "type": "attribute",
       "selector": "abbr",
       "name": "title",
-      "value": "计算机辅助设计"
+      "value": "computer-aided design"
     }
   }
 ]

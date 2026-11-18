@@ -1,17 +1,17 @@
 {
   "focus": "script.js",
-  "title": "累加露天放映的座位",
-  "goal": "把每排的座位数加进总数，计算放映区能容纳的人数。",
-  "summary": "累加变量在循环开始前设为 0。用 += 把这一轮的数量加入已有总数，所有轮次结束后再返回总数。",
+  "title": "Accumulating seats for open-air screenings",
+  "goal": "Add the number of seats in each row to the total to calculate the number of people the screening area can accommodate.",
+  "summary": "The accumulated variable is set to 0 before the loop starts. Use += to add the number of this round to the existing total, and then return the total after all rounds are completed.",
   "tasks": [
-    "补全 screeningCapacity(rows)，rows 是非负整数，表示座位排数，函数返回数字。",
-    "第一排有 4 个座位，后面每排比前一排多 2 个。第 row 排的座位数是 4 + (row - 1) * 2。",
-    "用循环把每排的座位数加进 total。排数为 0 时返回 0。"
+    "completes screeningCapacity(rows), rows is a non-negative integer, indicating the number of seat rows, and the function returns a number.",
+    "has 4 seats in the first row, and each subsequent row has 2 more seats than the previous row. The number of seats in row row is 4 + (row - 1) * 2.",
+    "Use a loop to add the number of seats in each row to total. Returns 0 when row number is 0."
   ],
   "example": {
     "language": "javascript",
     "code": "function shiftMinutes(shifts, minutesPerShift) {\n  let total = 0;\n  for (let shift = 0; shift < shifts; shift += 1) {\n    total += minutesPerShift;\n  }\n  return total;\n}",
-    "note": "三个 45 分钟的签到班次每轮向 total 加 45，最后返回 135 分钟。"
+    "note": "Three 45-minute check-in shifts each adding 45 to total, returning 135 minutes at the end."
   },
-  "hint": "如果结果等于最后一排的座位数，检查循环里是否只给 total 赋了本轮的值。每轮需要在原总数上加当前数量。"
+  "hint": "If the result is equal to the number of seats in the last row, check whether only the value of this round is assigned to total in the loop. Each round needs to add the current amount to the original total."
 }

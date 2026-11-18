@@ -1,6 +1,6 @@
 [
   {
-    "label": "零个余位必须保留",
+    "label": "Zero remaining digits must be reserved",
     "expect": {
       "type": "function",
       "name": "availableSeats",
@@ -12,7 +12,7 @@
     }
   },
   {
-    "label": "空值使用计划数",
+    "label": "Number of null value usage plans",
     "expect": {
       "type": "function",
       "name": "availableSeats",
@@ -24,7 +24,7 @@
     }
   },
   {
-    "label": "已记录数量优先",
+    "label": "The number of records has priority",
     "expect": {
       "type": "function",
       "name": "availableSeats",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "label": "两项都未记录时可返回 null",
+    "label": "can return null when neither item is recorded",
     "expect": {
       "type": "function",
       "name": "availableSeats",

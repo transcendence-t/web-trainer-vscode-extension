@@ -1,50 +1,50 @@
 [
   {
-    "label": "普通模式使用两份归档标签",
+    "label": "Normal mode uses two archive tags",
     "expect": {
       "type": "function",
       "name": "pageLabels",
       "args": [
-        "春季海报",
+        "Spring Poster",
         false
       ],
-      "value": "归档-春季海报 / 归档-春季海报"
+      "value": "Archive-Spring Poster / Archive-Spring Poster"
     }
   },
   {
-    "label": "预览模式同时返回预览与归档标签",
+    "label": "Preview mode returns preview and archive tags at the same time",
     "expect": {
       "type": "function",
       "name": "pageLabels",
       "args": [
-        "春季海报",
+        "Spring Poster",
         true
       ],
-      "value": "预览-春季海报 / 归档-春季海报"
+      "value": "Preview-Spring Poster / Archive-Spring Poster"
     }
   },
   {
-    "label": "第二个作品的预览标签引用实际标题",
+    "label": "The preview tag of the second piece refers to the actual title",
     "expect": {
       "type": "function",
       "name": "pageLabels",
       "args": [
-        "开场节目单",
+        "Opening Program",
         true
       ],
-      "value": "预览-开场节目单 / 归档-开场节目单"
+      "value": "Preview-Opening Program / Archive-Opening Program"
     }
   },
   {
-    "label": "第二个作品的普通标签引用实际标题",
+    "label": "The second work's normal tag refers to the actual title",
     "expect": {
       "type": "function",
       "name": "pageLabels",
       "args": [
-        "开场节目单",
+        "Opening Program",
         false
       ],
-      "value": "归档-开场节目单 / 归档-开场节目单"
+      "value": "Archive-Opening Program / Archive-Opening Program"
     }
   }
 ]

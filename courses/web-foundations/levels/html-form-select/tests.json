@@ -1,14 +1,14 @@
 [
   {
-    "label": "标签指向工位下拉框",
+    "label": "label points to the workstation drop-down box",
     "expect": {
       "type": "text",
       "selector": "form label[for=\"bench\"]",
-      "value": "维修工位"
+      "value": "maintenance station"
     }
   },
   {
-    "label": "下拉框包含三个可供单选的项目",
+    "label": "The drop-down box contains three items for single selection",
     "expect": {
       "type": "count",
       "selector": "form select#bench[name=\"bench\"]:not([multiple]) option",
@@ -16,27 +16,27 @@
     }
   },
   {
-    "label": "木工台有对应的值",
+    "label": "woodworking bench has corresponding values",
     "expect": {
       "type": "text",
       "selector": "#bench option[value=\"wood\"]",
-      "value": "木工台"
+      "value": "woodworking bench"
     }
   },
   {
-    "label": "电子台有对应的值并且打开时选中",
+    "label": "electronic station has corresponding value and is selected when opening",
     "expect": {
       "type": "text",
       "selector": "#bench option[value=\"electronics\"][selected]:checked",
-      "value": "电子台"
+      "value": "electronic station"
     }
   },
   {
-    "label": "自行车台有对应的值",
+    "label": "bicycle platform has corresponding values",
     "expect": {
       "type": "text",
       "selector": "#bench option[value=\"bike\"]",
-      "value": "自行车台"
+      "value": "bicycle platform"
     }
   }
 ]

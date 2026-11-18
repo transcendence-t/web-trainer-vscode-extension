@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>从包裹对象中提取待领取标签</title>
+  <title>Extract the label to be collected from the package object</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 <main class="sheet">
-  <h1>从包裹对象中提取待领取标签</h1>
-  <p>示例调用 <code>listReadyPickups([{ label: "北柜-03", ready: true }, { label: "南柜-07", ready: false }])</code></p>
-  <p>运行结果 <output id="example-result">待填写函数</output></p>
+  <h1>Extract the label to be collected from the package object</h1>
+  <p>sample call <code>listReadyPickups([{ label: "North Cabinet-03", ready: true }, { label: "South Cabinet-07", ready: false }])</code></p>
+  <p>running results <output id="example-result">Function to be filled in</output></p>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const result = listReadyPickups([{ label: "北柜-03", ready: true }, { label: "南柜-07", ready: false }]);
+      const result = listReadyPickups([{ label: "North cabinet-03", ready: true }, { label: "South cabinet-07", ready: false }]);
       if (result !== undefined) {
         document.querySelector('#example-result').textContent = JSON.stringify(result);
       }

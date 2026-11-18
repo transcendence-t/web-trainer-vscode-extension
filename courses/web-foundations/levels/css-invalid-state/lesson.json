@@ -1,16 +1,16 @@
 {
   "focus": "style.css",
-  "title": "随格式状态调整必填输入框",
-  "goal": "用控件的 :invalid 状态提供可见的格式提示。",
-  "summary": "检定表的邮箱必填。无效的邮箱框用深棕色边框并保留文字说明，输入有效邮箱时恢复原有边框。",
+  "title": "Required input box adjusted according to format status",
+  "goal": "Provides visible formatting hints using the control's :invalid state.",
+  "summary": "The email address of the calibration form is required. The invalid email box has a dark brown border and retains the text description. When entering a valid email box, the original border is restored.",
   "tasks": [
-    "用选择器找到无效的 #contact，边框颜色设为 #7c460e。",
-    "有效时边框仍是 #9aa9b5，下面的提示文字保留。"
+    "Use the selector to find an invalid #contact and set the border color to #7c460e.",
+    "is valid, the border is still #9aa9b5, and the prompt text below is retained."
   ],
   "example": {
     "language": "css",
     "code": "input:invalid { border-color: #7c460e; }",
-    "note": "匹配结果随输入更新。只改边框颜色能保留原有宽度和形状。"
+    "note": "matching results are updated with input. Changing only the border color retains the original width and shape."
   },
-  "hint": "状态变化来自浏览器的原生格式检查；用 :invalid 描述该状态。"
+  "hint": "status change comes from the browser's native format check; use :invalid to describe this status."
 }

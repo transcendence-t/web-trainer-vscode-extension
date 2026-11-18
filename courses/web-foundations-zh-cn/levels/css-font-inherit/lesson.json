@@ -1,0 +1,16 @@
+{
+  "focus": "style.css",
+  "title": "让表单控件承接所在区域的字体",
+  "goal": "用 font: inherit 让控件继承父元素的字体设置。",
+  "summary": "登记区和搜索区的文字大小不同，浏览器给原生控件单独设置了字体。让两个区域的控件各自跟随父级。",
+  "tasks": [
+    "将 #card-form 内的 input 和 button 设置为继承所在区域的 font。",
+    "保留课件中的两种区域字体，思考为什么只写固定字号不能满足两个区域。"
+  ],
+  "example": {
+    "language": "css",
+    "code": ".settings { font: 18px/1.5 system-ui; }\n.settings select { font: inherit; }",
+    "note": "inherit 让控件采用父元素的字体计算结果，包括字号、字体族和行高。"
+  },
+  "hint": "这里的起始样式刻意恢复了控件默认 font。用覆盖规则声明 font: inherit。"
+}

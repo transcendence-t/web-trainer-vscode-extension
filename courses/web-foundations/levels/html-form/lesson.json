@@ -1,17 +1,17 @@
 {
   "focus": "index.html",
-  "title": "报名表单",
-  "summary": "表单标签告诉用户该填什么，required 提醒用户填写必填项。",
+  "title": "Registration form",
+  "summary": "form label tells the user what to fill in, and required reminds the user to fill in the required fields.",
   "tasks": [
-    "在 form 中添加 label，文字为「姓名」，for 值为 student-name。",
-    "添加文本输入框，设置 id=\"student-name\"、name=\"student\" 和 required。",
-    "添加提交按钮，设置 type=\"submit\"，文字为「提交报名」。"
+    "Add label in form, the text is \"Name\", and the for value is student-name.",
+    "Add a text input box and set id=\"student-name\", name=\"student\" and required.",
+    "Add a submit button, set type=\"submit\", and the text is \"Submit registration\"."
   ],
-  "hint": "label 的 for 要和输入框的 id 相同。name 是表单提交时使用的字段名。",
-  "goal": "给报名表添加有标签的必填文本框和提交按钮。",
+  "hint": "label must be the same as the id of the input box. name is the field name used when submitting the form.",
+  "goal": "Add a labeled required text box and submit button to the registration form.",
   "example": {
     "language": "html",
-    "code": "<form>\n  <label for=\"book-title\">书名</label>\n  <input type=\"text\" id=\"book-title\" name=\"title\" required>\n  <button type=\"submit\">加入书单</button>\n</form>",
-    "note": "点击标签可以聚焦对应的输入框。留空并提交时，浏览器会提示填写书名。"
+    "code": "<form>\n  <label for=\"book-title\">book title</label>\n  <input type=\"text\" id=\"book-title\" name=\"title\" required>\n  <button type=\"submit\">Add to book list</button>\n</form>",
+    "note": "Click the label to focus on the corresponding input box. When you leave it blank and submit, the browser will prompt you to fill in the book title."
   }
 }

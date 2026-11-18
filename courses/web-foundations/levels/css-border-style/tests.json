@@ -1,6 +1,6 @@
 [
   {
-    "label": "待清点货签是绿色虚线",
+    "label": "The label for goods to be counted is a green dotted line",
     "expect": {
       "type": "style",
       "selector": ".pending",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "label": "已清点货签保留绿色实线",
+    "label": "The counted goods label retains the green solid line",
     "expect": {
       "type": "style",
       "selector": ".checked",

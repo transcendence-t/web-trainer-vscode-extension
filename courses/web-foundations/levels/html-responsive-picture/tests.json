@@ -1,15 +1,15 @@
 [
   {
-    "label": "默认图片仍有替代文字",
+    "label": "The default image still has alternative text",
     "expect": {
       "type": "attribute",
       "selector": "picture img",
       "name": "alt",
-      "value": "校园步道与入口"
+      "value": "Campus trails and entrances"
     }
   },
   {
-    "label": "小屏加载 100px 近景",
+    "label": "Small screen loading 100px close shot",
     "expect": {
       "type": "property",
       "selector": "picture img",
@@ -19,7 +19,7 @@
     "viewport": 390
   },
   {
-    "label": "600px 起加载 192px 全景",
+    "label": "600px minimum loading 192px panorama",
     "expect": {
       "type": "property",
       "selector": "picture img",
@@ -29,7 +29,7 @@
     "viewport": 600
   },
   {
-    "label": "宽屏仍使用全景",
+    "label": "widescreen still uses panorama",
     "expect": {
       "type": "property",
       "selector": "picture img",

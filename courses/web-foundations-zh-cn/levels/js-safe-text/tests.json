@@ -1,0 +1,67 @@
+[
+  {
+    "label": "尖括号按原文字显示",
+    "expect": {
+      "type": "text",
+      "selector": "#literal",
+      "value": "<b>文字</b>"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#draft",
+        "value": "<b>文字</b>"
+      }
+    ]
+  },
+  {
+    "label": "不创建用户提供的节点",
+    "expect": {
+      "type": "count",
+      "selector": "#literal b",
+      "value": 0
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#draft",
+        "value": "<b>文字</b>"
+      }
+    ]
+  },
+  {
+    "label": "保留与号和引号",
+    "expect": {
+      "type": "text",
+      "selector": "#literal",
+      "value": "院系 A & \"B\""
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#draft",
+        "value": "院系 A & \"B\""
+      }
+    ]
+  },
+  {
+    "label": "清空时恢复提示",
+    "expect": {
+      "type": "text",
+      "selector": "#literal",
+      "value": "等待输入"
+    },
+    "actions": [
+      {
+        "type": "input",
+        "selector": "#draft",
+        "value": "hi"
+      },
+      {
+        "type": "input",
+        "selector": "#draft",
+        "value": ""
+      }
+    ]
+  }
+]
